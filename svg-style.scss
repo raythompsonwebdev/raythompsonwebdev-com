@@ -1,0 +1,460 @@
+
+@mixin transformerorigin( $transformerorigin) {
+      transform-origin: $transformerorigin;
+      -webkit-transform-origin: $transformerorigin;
+      -moz-transform-origin: $transformerorigin;
+      -o-transform-origin: $transformerorigin;
+}
+
+@mixin Timing( $timing) {
+      animation-timing-function: $timing;
+      -webkit-animation-timing-function: $timing;
+      -moz-animation-timing-function: $timing;
+      -o-animation-timing-function: $timing;
+}
+
+@mixin delayer( $delayer) {
+      animation-delay: $delayer;
+      -webkit-animation-delay: $delayer;
+      -moz-animation-delay: $delayer;
+      -o-animation-animation-delay: $delayer;
+}
+
+@mixin durationer( $durationer) {
+      animation-duration: $durationer;
+      -webkit-animation-duration: $durationer;
+      -moz-animation-duration: $durationer;
+      -o-animation-duration: $durationer;
+}
+
+@mixin transformerscale( $transformerscale) {
+      transform:scale($transformerscale);
+      -webkit-transform:scale( $transformerscale);
+      -moz-transform:scale( $transformerscale);
+      -o-transform:scale( $transformerscale);
+}
+
+@mixin transformerrotate( $transformerrotate) {
+      transform:rotate($transformerrotate);
+      -webkit-transform:rotate( $transformerrotate);
+      -moz-transform:rotate($transformerrotate);
+      -o-transform:rotate( $transformerrotate);
+}
+
+@mixin directions( $directions) {
+      animation-direction: $directions;
+      -webkit-animation-direction: $directions;
+      -moz-animation-direction: $directions;
+      -o-animation-direction: $directions;
+}
+
+@mixin fillermode( $fillermode) {
+      animation-fill-mode: $fillermode;
+      -webkit-animation-fill-mode: $fillermode;
+      -moz-animation-fill-mode: $fillermode;
+      -o-animation-fill-mode: $fillermode;
+}
+
+@mixin keyframes( $name ) {
+
+      @-webkit-keyframes #{ $name } {
+            @content;
+      }
+      @-moz-keyframes #{ $name } {
+            @content;
+      }
+      @-o-keyframes #{ $name } {
+            @content;
+      }
+      @keyframes #{ $name } {
+            @content;
+      }
+}
+
+g#layer8 {
+
+    position:absolute;
+    opacity: 0;
+    left:-100px;
+
+    animation: slide ;
+    -webkit-animation: slide;
+    -moz-animation: slide;
+    -o-animation: slide;
+
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 1s );
+    @include durationer( 2s );
+    @include transformerscale( 0 );
+    @include fillermode( both );
+}
+
+@include keyframes( slide ) {
+    50%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0;  opacity:0; transform: scale(1);}
+}
+
+g#layer9 {
+    position:absolute;
+    opacity: 0;
+        
+    animation: slider ;
+    -webkit-animation: slider;
+    -moz-animation: slider;
+    -o-animation: slider;
+
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 4s );
+    @include durationer( 2s );
+    @include transformerscale( 0 );
+    @include fillermode( both );
+}
+
+@include keyframes( slider ) {
+    50%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0;  opacity:0; transform: scale(1);}
+}
+
+g#layer10 {
+    position:absolute;
+    opacity: 0;
+   
+    animation: sliders ;
+    -webkit-animation: sliders;
+    -moz-animation: sliders;
+    -o-animation: sliders;
+
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 7s );
+    @include durationer( 2s );
+    @include transformerscale( 0 );
+    @include fillermode( both );
+}
+
+@include keyframes( sliders ) {
+    50%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0;  opacity:0; transform: scale(1);}
+}
+
+g#layer2 {
+    position:absolute;
+    opacity: 0;
+    
+    animation: slid ;
+    -webkit-animation: slid ;
+    -moz-animation: slid ;
+    -o-animation: slid ;
+    
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 10s );
+    @include durationer( 2s );
+    @include transformerscale( 0 );
+    @include fillermode( both );
+}
+
+@include keyframes( slid ) {
+    50%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0; opacity:1;transform: scale(1);}
+}
+
+
+
+text#text4276{
+  position:absolute;
+  opacity: 0;
+  
+  animation: pictitle ;
+  -webkit-animation: pictitle ;
+  -moz-animation: pictitle ;
+  -o-animation: pictitle ;
+
+  @include transformerorigin( 272px 190px );
+  @include Timing( ease-in-out );
+  @include delayer( 10s );
+  @include durationer( 6s );
+  @include transformerscale( 0 );
+  @include fillermode( both );
+}
+
+@include keyframes( pictitle ) {
+    25%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0;opacity:0;  transform: scale(0);}
+}
+
+
+
+g#layer13{
+  
+    position:absolute;
+    opacity: 0;
+
+    animation: buttons ;
+    -webkit-animation: buttons ;
+    -moz-animation: buttons ;
+    -o-animation: buttons ;
+
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 10s );
+    @include durationer( 6s );
+    @include transformerscale( 0 );
+    @include fillermode( both );
+
+    
+}
+
+@include keyframes( buttons ) {
+    25%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0; opacity:1;  transform: scale(1);}
+}
+
+
+/*g#layer3 image#image4793{
+    position:absolute;
+    opacity: 0;
+}
+
+g#layer3 image#image4804{
+    position:absolute;
+    opacity: 0;
+}*/
+
+g#layer4 {
+
+    position:absolute;
+    opacity: 0;
+
+    animation: coveronea ;
+    -webkit-animation: coveronea ;
+    -moz-animation: coveronea ;
+    -o-animation: coveronea ;
+
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 17s );
+    @include durationer( 2s );
+    
+    @include fillermode( both );
+}
+
+@include keyframes( coveronea ) {
+  0%{ opacity:0;   } 
+  100% { left: 0;  opacity:1; }
+}
+
+/*g#layer4 image#image4826{
+   
+}*/
+
+/*g#layer4 image#image4837{
+    position:absolute;
+    opacity: 0;
+}*/
+
+text#text4276-3{
+  position:absolute;
+  opacity: 0;
+  
+  animation: pictitler ;
+  -webkit-animation: pictitler ;
+  -moz-animation: pictitler ;
+  -o-animation: pictitler ;
+
+  @include transformerorigin( 272px 190px );
+  @include Timing( ease-in-out );
+  @include delayer( 17s );
+  @include durationer( 6s );
+  @include transformerscale( 0 );
+  @include fillermode( both );
+}
+
+@include keyframes( pictitler ) {
+    25%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0;opacity:0;  transform: scale(0);}
+}
+
+g#layer5 {
+
+    position:absolute;
+    opacity: 0;
+
+    animation: coveroneb ;
+    -webkit-animation: coveroneb ;
+    -moz-animation: coveroneb ;
+    -o-animation: coveroneb ;
+
+    @include transformerorigin( 272px 190px );
+    @include Timing( ease-in-out );
+    @include delayer( 24s );
+    @include durationer( 2s );
+    @include fillermode( both );
+    
+}
+
+@include keyframes( coveroneb ) {
+  0%{ opacity:0;   } 
+  100% { left: 0;  opacity:1; }
+}
+
+text#text4276-3-6{
+  position:absolute;
+  opacity: 0;
+  
+  animation: pictitles ;
+  -webkit-animation: pictitles ;
+  -moz-animation: pictitles ;
+  -o-animation: pictitles ;
+
+  @include transformerorigin( 272px 190px );
+  @include Timing( ease-in-out );
+  @include delayer( 24s );
+  @include durationer( 6s );
+  @include transformerscale( 0 );
+  @include fillermode( both );
+}
+
+@include keyframes( pictitles ) {
+    25%{ opacity:1;  transform: scale(1); } 
+    75%{opacity:1; transform: scale(1);}
+    100% { left: 0;opacity:1;  transform: scale(1);}
+}
+
+/*g#layer5 image#image4896{
+    position:absolute;
+    opacity: 0;
+}
+g#layer5 image#image4907{
+    position:absolute;
+    opacity: 0;
+}*/
+
+
+
+/*Coding standards~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#Layer_5{
+
+  position:absolute;
+  opacity: 0;
+  
+  animation: jquerypic ;
+  -webkit-animation: jquerypic ;
+  -moz-animation: jquerypic ;
+  -o-animation: jquerypic ;
+
+  @include transformerorigin( 0 0);
+  
+  @include Timing( ease-in-out );
+  @include delayer( 2s );
+  @include durationer( 2s );
+  @include fillermode( both );
+}
+
+@include keyframes( jquerypic ) {
+  0%{ left:0; opacity:0; }    
+  100% { left: 0;  opacity:1; }
+}
+
+g#Layer_2{
+
+    position:absolute;
+    opacity: 0;
+
+    animation: phppic ;
+    -webkit-animation: phppic ;
+    -moz-animation: phppic ;
+    -o-animation: phppic ;
+
+    @include transformerorigin( 0 0 );
+    
+    @include Timing( ease-in-out );
+    @include delayer( 4s );
+    @include durationer( 2s );
+    @include fillermode( both );
+}
+
+@include keyframes( phppic ) {
+  0%{ left:0; opacity:0; } 
+  100% { left: 0;  opacity:1; }
+}
+
+g#g5138{
+
+    position:absolute;
+    opacity: 0;
+
+    animation: htmlpic ;
+    -webkit-animation: htmlpic ;
+    -moz-animation: htmlpic ;
+    -o-animation: phtmlpic ;
+
+    @include transformerorigin( 0 0 );
+    
+    @include Timing( ease-in-out );
+    @include delayer( 6s );
+    @include durationer( 2s );
+    @include fillermode( both );
+}
+
+@include keyframes( htmlpic ) {
+  0%{ left:0; opacity:0; } 
+  100% { left: 0;  opacity:1; }
+}
+
+
+g#g5228{ 
+
+    position:absolute;
+    opacity: 0;
+
+    animation: csspic ;
+    -webkit-animation: csspic ;
+    -moz-animation: csspic ;
+    -o-animation: csspic ;
+
+    @include transformerorigin( 0 0 );
+    
+    @include Timing( ease-in-out );
+    @include delayer( 8s );
+    @include durationer( 2s );
+    @include fillermode( both );
+}
+
+@include keyframes( csspic ) {
+    
+    100% { left: 0;  opacity:1; }
+}
+
+
+g#g5296{
+
+    position:absolute;
+    opacity: 0;
+
+     animation: wordpic ;
+    -webkit-animation: wordpic ;
+    -moz-animation: wordpic ;
+    -o-animation: wordpic ;
+
+    @include transformerorigin( 0 0 );
+    @include Timing( ease-in-out );
+    @include delayer( 10s );
+    @include durationer( 2s );
+    @include fillermode( both );
+}
+
+@include keyframes( wordpic ) {
+    
+    100% { left: 0;  opacity:1; }
+}
+
