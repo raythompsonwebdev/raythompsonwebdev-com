@@ -83,11 +83,11 @@ Template Name: websites
         <h1>Description:</h1>
 
            
-            <p>Website for people with little or no prior experience of going camping and would like to learn more about camping&#46;</p>
+            <p>Website for 18-35 year olds with little or no prior experience of camping and would like to learn more about camping&#46;</p>
 
             <h1>Development Technologies:</h1>
 
-          <p>Bootstrap&#44; Jquery&#44; CSS3&#44; PHP , MySQLi and Responsive Web Design that adapts to most mobile devices&#46;</p>
+          <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP , MySQLi and Responsive Web Design that adapts to most mobile devices&#46;</p>
 
       
 
@@ -133,7 +133,7 @@ Template Name: websites
 
           <h1>Description:</h1>
 
-            <p>Website for company Mannering Music advertising Jazz, Hip Hop and Country music albums for sale&#46; You can search for favourite music, listen to music and watch latest music videos&#46;</p>
+            <p>Website for a company called Mannering Music who advertising Jazz, Hip Hop and Country music albums for sale on-line&#46;</p>
 
               <h1>Development Technologies:</h1>
 
@@ -191,7 +191,7 @@ Template Name: websites
 
             <h1>Development Technologies:</h1>
 
-           <p>Zurb Foundation &#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#46; Javascript and Responsive Web Design that adapts to most mobile devices&#46;</p>
+           <p>Foundation 5&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#46; Javascript and Responsive Web Design that adapts to most mobile devices&#46;</p>
 
             
 
@@ -241,7 +241,7 @@ Template Name: websites
 
         <h1>Description</h1>
 
-          <p>E&#45;commerce website built from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>. advertising Men&#44; Women and Childens shoes for sale &#46; Also sold are accessories like hats&#44; scarfs and bags&#46;</p>
+          <p>E&#45;commerce website built from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>. advertising Men&#44; Women and Childens shoes for sale &#46; Also accessories like hats&#44; scarfs and bags&#46;</p>
 
           <h1>Development Technologies:</h1>
 
@@ -293,12 +293,12 @@ Template Name: websites
 
         <h1>Description:</h1>
 
-          <p>As a member of a local recycling company &#34;GreenFootPrints&#34; based in Essex and I had been asked to build a website advertising what company have to offer as part of an city and guilds exam&#46; Web content provided by company&#46;</p> 
+          <p>Website for a local recycling company &#34;GreenFootPrints&#34; based in Essex wanted a website to advertising what company have to offer in terms of help and advice on Household waste recyling &#46;</p> 
          
 
             <h1>Development Technologies:</h1>
 
-          <p>HTML5&#44; CSS3 and Jquery&#46; Responsive Web Design in progress&#46;</p> 
+          <p>HTML5&#44; CSS3&#46; Responsive Web Design in progress&#46;</p> 
 
    
 

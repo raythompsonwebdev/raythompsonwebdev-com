@@ -13,5 +13,8 @@
 <?php endif; ?>
 
 </article>
+<article class="blogbox"> 
+
+</article>
 
 </aside>    

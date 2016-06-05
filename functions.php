@@ -3,7 +3,7 @@
 function fix_ie8() {if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");}}
 add_action('bb_send_headers','fix_ie8');  // for bbPress
 add_action('send_headers','fix_ie8');    // for WordPress
-add_filter( 'wp_title', 'filter_wp_title' );
+
 
 add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
@@ -20,7 +20,7 @@ function filter_wp_title( $title ) {
 	$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s', 'raythompwebdesign-com' ), max( $paged, $page ) ) : '';
 	return $filtered_title;
 }
-
+add_filter( 'wp_title', 'filter_wp_title' );
 
 //set content width
 if ( ! isset( $content_width ) ) {$content_width = 600;};

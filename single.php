@@ -27,6 +27,7 @@
 
 <p class='right'><a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%')?></a></p>
 </section>
+<?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
  </article><!--end of post group-->
 
  <!--navigation-->
