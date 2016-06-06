@@ -24,17 +24,17 @@
 	<p> My name is Raymond and I like spending my spare time creating websites and other website design and development projects.</p>
 
 	<ul class="webskills">
-		<li><span class="fa fa-mobile"></span>Responsive Websites&#44;</li>
-		<li><span class="fa fa-wordpress"></span>Wordpress themes&#44;</li>
-		<li><span class="fa fa-database"></span>Database Driven Websites&#44;</li>
-		<li><span class="fa fa-file-image-o"></span>Code Snippets&#44;</li>
+		<li><span class="fa fa-mobile"></span>Mobile Friendly Websites&#44;</li>
+		<li><span class="fa fa-wordpress"></span>Responsive Wordpress Themes&#44;</li>
+		<li><span class="fa fa-database"></span>E-Commerce Websites&#44;</li>
+		<li><span class="fa fa-file-image-o"></span>User Interface Elements&#44;</li>
 	</ul>
 	  
-	<p>Each web project is built following current and latest web standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; Beautiful  page designs and great user experience&#46;</p>
+	<p>Each of my web project are built following existing and latest web standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; Beautiful page designs and great user experience&#46;</p>
 
 	<p>I aim to ensure each website is semantically coded and validated to ensure it can be found by search engines and can be viewed within most modern web browsers&#46;</p>
 
-	<p>Hover over image on right and click button to view some of my work&#46;</p>
+	<p>Click button on right to view some of my work&#46;</p>
 
 	<br/>
 </article>

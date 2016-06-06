@@ -10,14 +10,15 @@
 <?php while ( have_posts() ) : the_post(); ?>
  				
 
-<article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
-<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+<h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+
 <section class="byline"> Date: <?php the_date('jS F Y') ?> at <?php the_time('g:i a'); ?><br />
 Written by <?php the_author() ?></section>
 
 <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>";>
-<figure class="featuredImage"><?php the_post_thumbnail('custom');?></figure>
+<figure class="featuredImage"><?php the_post_thumbnail('featured-image');?></figure>
 </a>
 
 <section class="newsExcerpt"><?php the_excerpt();?></section>

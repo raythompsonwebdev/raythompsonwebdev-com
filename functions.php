@@ -37,6 +37,9 @@ load_theme_textdomain('raythompwebdesign-com', get_template_directory() . '/lang
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
 add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 100, 100, true );
+add_image_size( 'featured-image', 783, 9999 );
+
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header');
 add_theme_support( 'custom-background');
@@ -135,7 +138,7 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 function ie_scripts() {
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
+	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/css/ie.css', array(), '1.0' );
 	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lte IE 9' );
 	
 	// Load the html5 shiv.
@@ -193,6 +196,8 @@ if ( function_exists( 'register_sidebar' ) ) {
 }
 
 
+
+
 function map_widgets_init() {
 	register_sidebar( array(
 		'name' => 'map',
@@ -232,12 +237,10 @@ register_sidebar( array(
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
 
-
 ?>
 
 
-
-<?php add_action('wp_head','add_google_analytics');//Google Analytics
+<?php add_action('wp_footer','add_google_analytics');//Google Analytics
 function add_google_analytics() {
 ?>
 <script>

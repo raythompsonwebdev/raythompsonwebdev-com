@@ -11,6 +11,8 @@ Template Name: contact
 
 <h1>Contact Page</h1>
 
+<p>I am available to help with any small scale web development project</p>
+
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
@@ -37,7 +39,7 @@ Template Name: contact
 
 <article class="social_media_container">
 
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('social')) : ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('map')) : ?>
 
 			[ do default stuff if no widgets ]
 

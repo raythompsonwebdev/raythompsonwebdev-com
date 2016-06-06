@@ -14,7 +14,8 @@ $photographer = get_post_meta($post->ID, 'raythompwebdesign-com_name', true);
 $photographerurl = get_post_meta($post->ID, 'raythompwebdesign-com_url', true);
 ?>
 <article class="post group" <?php post_class(); ?> <?php the_ID(); ?>>
-<h1><?php the_title(); ?></h1>
+<h1><a href="<?php the_permalink();
+?>"><?php the_title(); ?></a></h1>
 
 <section class="byline"><span><?php echo $photographer; ?></span><a href="<?php echo $photographerurl ?>" target="_blank" class="photographerurl"><?php echo $photographerurl ?></a></section><!--end of by line-->
 
