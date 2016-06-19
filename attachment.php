@@ -35,6 +35,7 @@ $photographerurl = get_post_meta($post->ID, 'raythompwebdesign-com_url', true);
 
 <article class="contact-wide">
 <h2>Send Comment</h2>
+<?php comments_template(); ?>
 </article>
 	
 </section>

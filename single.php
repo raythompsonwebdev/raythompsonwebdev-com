@@ -14,7 +14,7 @@
 <h1><?php the_title(); ?></h1>
 
 <section class="byline">
- by <?php the_author_posts_link(); ?> on <span class="date"><?php the_date('l F d, Y'); ?></span><br/>
+ Posted by <?php the_author_posts_link(); ?> on <span class="date"><?php the_date('l F d, Y'); ?></span><br/>
  Posted in: <?php the_category(', '); ?> | <?php the_tags('Tagged with: ', ', '); ?>
 </section><!--end of by line-->
 
@@ -23,10 +23,12 @@
 </a>
 
 <?php the_content(); ?>
+
 <section class="byline">
 
 <p class='right'><a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%')?></a></p>
 </section>
+
 <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
  </article><!--end of post group-->
 

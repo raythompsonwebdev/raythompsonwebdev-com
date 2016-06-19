@@ -39,7 +39,11 @@
 
 jQuery(document).ready(function($){
 
- $('.fancybox').fancybox();
+ $('.fancybox').fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic'
+
+    });
 
 });
 

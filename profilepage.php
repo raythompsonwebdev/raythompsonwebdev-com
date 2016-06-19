@@ -20,17 +20,17 @@ Template Name: Profile
 
     <h1>My name is Raymond Thompson and I live in London&#46;</h1>
 
-    <p>I am in my mid forties, I recently became a granddad and I love Hip Hop Music.</p>
+    <p>I am in my mid forties, I recently became a granddad, I love 90's Hip Hop and Reggae Dancehall Music and .</p>
 
-    <p>I am currently not working within the web industry, I work within public sector as a Benefits Advisor, but have a very keen interest in getting into website design and development.</p>
+    <p>I currently am not working within the web industry, I work within public sector for a Local Authority as Benefits Advisor, but I have a extremely keen interest in website design and development.</p>
 
-    <p>I became interested in web design and web development in late 2011 after attending a 8 month certificated web design course at East London Advanced Technology Training in east london&#46; where I was taught how to use HTML&#44; CSS&#44; Javascript&#44; PHP and MYSQL&#46; to created static and dynamic websites&#44; using Photoshop, Dreamweaver and Flash.</p>
+    <p>My interested in web design and web development started late 2011 after attending a short City & Guilds website design course at East London Advanced Technology Training in East London.</p>
+
+    <p> I learnt how websites are built using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML, CSS2, PHP, MYSQL, Javascript and other web design tools.</p>
     
-    <p>I also learnt how to plan, research, wireframe and prototype, build, test and launch a commercial website. I Also create animations, graphics and images for the web and worked as part of a team to create a web site for a client.</p> 
+    <p>I also learnt how to plan, research, wireframe, prototype, build, test and launch a commercial website. Including creating animations, graphics images and copy for the web and worked as part of a team to create a web site for a client.</p> 
 
-    <p>Upon completing website design course I gained City and Guilds in basic and advanced website design and development and Adobe certificates (see table right).</p>
-
-    <p> I wanted to learn more about web development so started teaching myself, enquire about projects I could possibly work on to get experience and build my own personal website design projects&#46;</p>
+    <p>Upon completing website design course and gaining certificates (see table right) I realised I needed to learn more about web development so started a combination of attending courses and self teaching&#46;</p>
   </article>
 
  <article class="prof_cont"><!--prof cont-->
@@ -105,7 +105,7 @@ Template Name: Profile
 
       </figure>
 
-      <h3>City and Gulds ITQ Level 1 - Web Design</h3>
+      <h3>City & Gulds ITQ Level 1 - Web Design</h3>
       <p>Topics:</p>
       <p> Improving productivity using IT&#44; IT Communication Fundementals&#44; Website Software&#44;IT User fundementals&#44; Using the Internet&#46; </p>
 
@@ -126,7 +126,7 @@ Template Name: Profile
 
       </figure>
 
-      <h3>City and Gulds ITQ Level 2 - Web Design</h3>
+      <h3>City & Gulds ITQ Level 2 - Web Design</h3>
       <p>Topics:</p>
       <p>Database software&#44; Design Software&#44; Imaging Software&#44; Website Software&#44;Improving Productivity using IT3</p>
 
@@ -147,7 +147,7 @@ Template Name: Profile
 
       </figure>
 
-      <h3>City and Gulds ITQ Level 3 - Web Design</h3>
+      <h3>City & Gulds ITQ Level 3 - Web Design</h3>
       <p>Topics:</p>
       <p>Database Software&#44; Website Software&#44; Imaging Software&#44;Design Software&#44; Using Internet&#46;</p>
 
@@ -252,17 +252,13 @@ Template Name: Profile
 <div class="front_panel"><!--front panel--> 
 
   <article class="intro-text">
- <p> I have a fairly good understanding of how to use languages HTML5&#44; CSS3&#44; Javascript and Jquery to create nice looking, clean, standards compliant websites&#46;</p>
+ <p>Over the past Four years I consider myself to have developed fairly good understanding of how to use coding languages HTML5&#44; CSS3&#44; Javascript and Jquery to create clean, standards compliant , easy to use websites&#46;</p>
 
-    <p>I have developed fairly good knowledge of coding and designing websites by spending any spare time I have reading web development books , watching video tutorials &#44; listening to podcasts and attending a few of local Meet-ups.</p>
+    <p>Through spending any spare time I have reading web development books , watching web development video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet-ups I have been able to create this website and the others featured on this website.</p>
+ 
+    <p>I like to coding websites from scratch but do use frameworks like Foundation, Bootstrap, build tools Grunt and Sass and version control system GitHub to help speed up workflow and organising code. I am in process of creating my own css framework.</p>
 
-   <p> I like using Jquery , Ajax&#44; PHP and MYSQL. I am able to create simple scripts to communicate with databases to create, update, read, delete and retrieve data i.e. E-commerce websites, Contact Forms, Wordpress Themes&#46;</p>
-
-    <p>I like to hand code websites from scratch but do use frameworks like Foundation and Bootstrap when creating website prototypes. I am in process of creating my own framework.</p>
-
-    <p>I have recently started using build tools Grunt and Sass and version control system GitHub to help with speeding up workflow and organising code.</p>
-
-    <p>I am not a graphic designer but I can use software programs Photoshop, Inkscape and Illustrator to create website designs, edit existing images and create simple logos.</p>
+    <p>I am not a designer, graphic or otherwise but I am able use software programs Photoshop, Inkscape and Illustrator to create website layouts, edit existing images and create simple logos and graphics.</p>
 
     <br/> 
   </article>
