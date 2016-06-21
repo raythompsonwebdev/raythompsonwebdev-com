@@ -12,7 +12,7 @@ Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
 */
 @font-face { font-family: Kelson Sans; src: url("/fonts/Kelson Sans Regular.otf") format opentype; }
-*, *:before, *:after { box-sizing: border-box; }
+*, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 * html { font-size: 1em; margin: 0; padding: 0; outline: none; }
 
@@ -44,7 +44,7 @@ img { width: 100%; max-width: 100%; height: auto; border: 0; }
 /*end of images*/
 .fixed-side-social-container { left: 0; width: 60px; position: fixed; top: 150px; background-repeat: no-repeat; z-index: 10; }
 .fixed-side-social-container span { width: 60px; height: 60px; }
-.fixed-side-social-container .social-icon { float: left; width: 60px; filter: alpha(opacity=75); moz-opacity: .75; -khtml-opacity: 0.75; opacity: 0.75; display: block; background-repeat: no-repeat; height: 60px; -webkit-transition: all ease 0.2s; transition: all ease 0.2s; background-position: 0 0; }
+.fixed-side-social-container .social-icon { float: left; width: 60px; filter: alpha(opacity=75); moz-opacity: .75; -khtml-opacity: 0.75; opacity: 0.75; display: block; background-repeat: no-repeat; height: 60px; -webkit-transition: all ease 0.2s; -moz-transition: all ease 0.2s; -o-transition: all ease 0.2s; -ms-transition: all ease 0.2s; transition: all ease 0.2s; background-position: 0 0; }
 .fixed-side-social-container .social-icon:hover { filter: alpha(opacity=99); moz-opacity: .99; -khtml-opacity: .99; opacity: .99; }
 .fixed-side-social-container .linkedin-icon { background-position: 0 0; }
 .fixed-side-social-container .linkedin-icon span .fa-linkedin { width: 100%; height: 100%; text-align: center; font-size: 200%; line-height: 60px; background-color: #CCD3DE; color: #062351; }
@@ -56,7 +56,7 @@ img { width: 100%; max-width: 100%; height: auto; border: 0; }
 .fixed-side-social-container .google-icon span .fa-github { width: 100%; height: 100%; text-align: center; font-size: 200%; line-height: 60px; background-color: #CCD3DE; color: #062351; }
 
 /*Global*/
-a.nav-toggle { height: 60px; width: 60px; float: right; /*background-size:60px auto, auto auto;*/ display: none; text-align: center; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; background-color: #CCD3DE; }
+a.nav-toggle { height: 60px; width: 60px; float: right; /*background-size:60px auto, auto auto;*/ display: none; text-align: center; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; background-color: #CCD3DE; }
 
 a.nav-toggle:hover { float: right; background-color: #062351; color: #fff; }
 
@@ -78,7 +78,7 @@ p { font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; color: #062351;
 
 ul { font-size: 1em; padding: 0; margin: 0; }
 
-li { -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; list-style: none; font-size: 1em; margin: 0; }
+li { -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; list-style: none; font-size: 1em; margin: 0; }
 
 figure { margin: 0; padding: 0; }
 
@@ -96,13 +96,13 @@ button:hover { color: #062351; background-color: #CCD3DE; }
 
 .cookie-notice-container { font-size: 0.9em; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; }
 
-#cookie-notice .button.wp-default { margin: 0; height: 100%; list-style: none; background-color: #062351; width: 23.9652349%; color: #CCD3DE; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; letter-spacing: 0.1em; border: none; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; font-size: 1em; border: none; }
+#cookie-notice .button.wp-default { margin: 0; height: 100%; list-style: none; background-color: #062351; width: 23.9652349%; color: #CCD3DE; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; letter-spacing: 0.1em; border: none; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; font-size: 1em; border: none; }
 
 #wpadminbar { display: block; }
 
 .container { width: 38.729257%; float: right; margin: 0% 1% 1% 2%; }
 
-.social_media_container { float: left; width: 40.7293%; display: block; margin: 1%; height: 250px; }
+.social_media_container { float: left; width: 40.7293%; display: block; margin: 1%; height: auto; }
 
 .bypostauthor { font-size: 1em; }
 
@@ -115,7 +115,7 @@ body { background: #c0c9dd; font-size: medium; font-family: "Kelson Sans", Sawas
 #wrapper_container .fancybox-custom .fancybox-skin { box-shadow: 0 0 50px #222; }
 
 /*Header*/
-#wrapper_container header { width: 100%; height: 80px; background-color: #c0c9dd; margin: 0; padding: 0 /*Logo*/ /*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/ /*Navigation*/ /*Mobile-Navigation*/ }
+#wrapper_container header { width: 100%; height: 90px; background-color: #c0c9dd; margin: 0; padding: 0; /*Logo*/ /*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/ /*Navigation*/ /*Mobile-Navigation*/ }
 #wrapper_container header #logo { font-size: 1.9em; width: 30%; height: 40px; margin: 0; font-weight: bold; line-height: 40px; color: #CCD3DE; text-shadow: 1px 1px 2px #444; letter-spacing: 0.01em; }
 #wrapper_container header #logo span { height: 40px; padding: 0; margin: 0; color: #fff; text-align: left; }
 #wrapper_container header #logo span:last-of-type { height: 40px; padding: 0; margin: 0; color: #062351; }
@@ -135,7 +135,7 @@ body { background: #c0c9dd; font-size: medium; font-family: "Kelson Sans", Sawas
 #wrapper_container header nav #mobile-nav { display: none; }
 
 /*main-content box*/
-#wrapper_container #main-content { height: auto; margin: 0; padding: 0; font-size: 1em; min-height: 740px /* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/ /*Right-side*/ /*Left-side*/ /*Contact form */ /*Front-page-Panel */ }
+#wrapper_container #main-content { height: auto; margin: 0; padding: 0; font-size: 1em; min-height: 740px; /* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/ /*Right-side*/ /*Left-side*/ /*Contact form */ /*Front-page-Panel */ }
 #wrapper_container #main-content hgroup { margin: 0; padding: 0; }
 #wrapper_container #main-content h1 { font-size: 1.5em; padding: 0; color: #062351; width: 98%; letter-spacing: 0.05em; line-height: 35px; margin: 0 0 0.1em 0; height: 35px; clear: both; }
 #wrapper_container #main-content h2 { font-size: 1.4em; margin: 0 0 0 0; padding: 0; color: #062351; width: 98%; letter-spacing: 0.05em; font-weight: 500; line-height: 35px; height: 35px; }
@@ -145,13 +145,13 @@ body { background: #c0c9dd; font-size: medium; font-family: "Kelson Sans", Sawas
 #wrapper_container #main-content ul li a:hover { color: #575A5E; }
 #wrapper_container #main-content #blogrightside { padding-top: 1%; height: auto; width: 24%; float: left; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; display: inline-block; margin: 0; }
 #wrapper_container #main-content #blogrightside h2 { width: 96%; height: 40px; margin: 0px; padding: 0px; font-size: 1.2em; line-height: 40px; background-color: #575A5E; color: #fff; letter-spacing: 0.1em; text-align: center; margin: auto; font-weight: 700; }
-#wrapper_container #main-content #blogrightside .blogbox { display: block; height: auto; width: 96%; margin: auto /*Search Box*/ }
+#wrapper_container #main-content #blogrightside .blogbox { display: block; height: auto; width: 96%; margin: auto; /*Search Box*/ }
 #wrapper_container #main-content #blogrightside .blogbox .social-1 { height: 30px; margin: 3% auto; width: 96%; display: block; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; }
 #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform { text-align: left; max-width: 100%; margin: 0px; padding: 0px; float: right; height: 100%; display: block; }
 #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div { margin: 0; padding: 0; width: 100%; height: 100%; display: block; }
 #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div label { width: 25%; height: 100%; font-size: 0.8em; display: inline-block; float: left; line-height: 30px; height: 30px; padding: 0; }
 #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input { width: 50%; height: 30px; font-size: 1em; margin: 0px; padding: 0px; display: inline-block; font-size: 1.5em; float: left; border: none; line-height: 30px; }
-#wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input[type=submit] { margin: 0; height: 30px; list-style: none; background-color: #062351; width: 25%; color: #CCD3DE; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; letter-spacing: 0.1em; border: none; font-size: 0.9em; border: none; }
+#wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input[type=submit] { margin: 0; height: 30px; list-style: none; background-color: #062351; width: 25%; color: #CCD3DE; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; letter-spacing: 0.1em; border: none; font-size: 0.9em; border: none; }
 #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input[type=submit]:hover { color: #062351; background-color: #CCD3DE; }
 #wrapper_container #main-content #blogrightside .blogbox #social h2 { width: 100%; }
 #wrapper_container #main-content #blogrightside .blogbox .tagcloud { width: 90%; margin: auto; font-size: 100%; display: block; }
@@ -163,11 +163,11 @@ body { background: #c0c9dd; font-size: medium; font-family: "Kelson Sans", Sawas
 #wrapper_container #main-content #blogrightside .blogbox .widget ul li a:hover { color: #fff; background-color: #062351; font-size: 1em; }
 #wrapper_container #main-content #blogrightside .blogbox .widget ul li.recentcomments a { display: block; background-color: #CCD3DE; }
 #wrapper_container #main-content #blogrightside .blogbox .widget ul li .comment-author-link a { display: block; background-color: #CCD3DE; }
-#wrapper_container #main-content #blogleftside { height: auto; width: 75%; font-size: 1em; float: left /*content wide containers*/ /*Comment section end*/ }
+#wrapper_container #main-content #blogleftside { height: auto; width: 75%; font-size: 1em; float: left; /*content wide containers*/ /*Comment section end*/ }
 #wrapper_container #main-content #blogleftside article .imagebox .box .slide-caption p { font-size: 100%; width: 98%; }
 #wrapper_container #main-content #blogleftside .left-col { /*Posts*/ /*post pagination*/ }
 #wrapper_container #main-content #blogleftside .left-col h1 { font-size: 1.6em; margin: 1% 0; padding: 0px; letter-spacing: 0.05em; width: 100%; height: 50px; line-height: 50px; }
-#wrapper_container #main-content #blogleftside .left-col .post { background-color: #fff; padding: 1% 0; width: 100%; margin: 1% 0 /*Social media share buttons*/ }
+#wrapper_container #main-content #blogleftside .left-col .post { background-color: #fff; padding: 1% 0; width: 100%; margin: 1% 0; /*Social media share buttons*/ }
 #wrapper_container #main-content #blogleftside .left-col .post h1 { font-size: 1.35em; margin: 0 auto; padding: 0; letter-spacing: 0.05em; width: 98%; font-weight: 600; line-height: 40px; height: 40px; }
 #wrapper_container #main-content #blogleftside .left-col .post h2 { text-indent: 0px; font-size: 1.2em; margin: 0.5em auto; padding: 0px; letter-spacing: 0.05em; width: 98%; background-color: #fff; color: #062351; line-height: 40px; height: 40px; }
 #wrapper_container #main-content #blogleftside .left-col .post h3 { margin: 1% auto; height: 40px; line-height: 30px; font-size: 1.15em; text-indent: 0%; width: 98%; }
@@ -179,15 +179,15 @@ body { background: #c0c9dd; font-size: medium; font-family: "Kelson Sans", Sawas
 #wrapper_container #main-content #blogleftside .left-col .post .byline p { width: 80%; margin: 0px; display: inline-block; padding: 0; }
 #wrapper_container #main-content #blogleftside .left-col .post .byline a { font-size: 0.95em; color: #062351; margin: auto; width: 96%; }
 #wrapper_container #main-content #blogleftside .left-col .post .newsExcerpt { height: auto; }
-#wrapper_container #main-content #blogleftside .left-col .post ul { line-height: 1.5em; font-size: 0.9em; text-indent: 0; width: 98%; margin: 1% auto; display: inline-block; }
-#wrapper_container #main-content #blogleftside .left-col .post ul li { width: 100%; margin: 0px 0px 0px 1em; font-size: 1em; }
-#wrapper_container #main-content #blogleftside .left-col .post ul li a { margin-left: 15px; }
+#wrapper_container #main-content #blogleftside .left-col .post ul { line-height: 1.5em; font-size: 0.9em; text-indent: 0; width: 98%; margin: 1% auto; display: block; }
+#wrapper_container #main-content #blogleftside .left-col .post ul li { width: 100%; margin: 0px; font-size: 1em; }
+#wrapper_container #main-content #blogleftside .left-col .post ul li a { margin-left: 0px; }
 #wrapper_container #main-content #blogleftside .left-col .post p { width: 98%; margin: 1% 0% 1% 1%; font-size: 0.85em; color: #000; font-weight: 350; line-height: 1.75em; letter-spacing: 0.05em; }
-#wrapper_container #main-content #blogleftside .left-col .post p.right { width: 5%; float: right; font-size: 1em; height: 40px; background-color: #CCD3DE; margin: 0; }
-#wrapper_container #main-content #blogleftside .left-col .post p.right:hover { background-color: #062351; }
-#wrapper_container #main-content #blogleftside .left-col .post .right .comments-count { position: relative; top: 15%; left: 40%; text-align: center; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; }
+#wrapper_container #main-content #blogleftside .left-col .post p.right { width: 5%; float: right; font-size: 1.5em; height: 40px; background-color: #CCD3DE; margin: 0; }
+#wrapper_container #main-content #blogleftside .left-col .post p.right:hover { background-color: #062351; color: #fff; }
+#wrapper_container #main-content #blogleftside .left-col .post .right .comments-count { position: relative; top: 0%; left: 0%; text-align: center; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; display: block; height: 100%; line-height: 40px; }
 #wrapper_container #main-content #blogleftside .left-col .post .right .comments-count:hover { color: #fff; }
-#wrapper_container #main-content #blogleftside .left-col .post .read_more { font-size: 0.9em; margin: 0% 0 0 1%; padding: 1%; height: 35px; line-height: 1.5em; list-style: none; background-color: #CCD3DE; width: 13.9652349%; color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; letter-spacing: 0.05em; display: block; }
+#wrapper_container #main-content #blogleftside .left-col .post .read_more { font-size: 0.9em; margin: 0% 0 0 1%; padding: 1%; height: 35px; line-height: 1.5em; list-style: none; background-color: #CCD3DE; width: 13.9652349%; color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; letter-spacing: 0.05em; display: block; }
 #wrapper_container #main-content #blogleftside .left-col .post .read_more:hover { color: #fff; background-color: #062351; font-weight: bold; }
 #wrapper_container #main-content #blogleftside .left-col .post .sd-content { margin-top: 2%; }
 #wrapper_container #main-content #blogleftside .left-col .post .sd-content ul { line-height: 1.5em; font-size: 1em; text-indent: 0; width: 100%; height: 35px; display: block; margin: 0 !important; }
@@ -198,54 +198,56 @@ body { background: #c0c9dd; font-size: medium; font-family: "Kelson Sans", Sawas
 #wrapper_container #main-content #blogleftside .left-col .post h2.entry-title a { color: #fff; font-size: 70%; height: 100%; line-height: 1em; }
 #wrapper_container #main-content #blogleftside .left-col .post .entry-attachment { width: 40%; margin: 1em auto; }
 #wrapper_container #main-content #blogleftside .left-col .navi { width: 100%; height: 40px; }
-#wrapper_container #main-content #blogleftside .left-col .navi .right { width: 45%; float: left; display: inline-block; margin-left: 0.5%; font-size: 1em; font-weight: 500; height: 40px; line-height: 30px; color: #000; }
+#wrapper_container #main-content #blogleftside .left-col .navi .right { width: 45%; float: left; display: inline-block; margin-left: 0.5%; font-size: 1em; font-weight: 500; height: 40px; line-height: 40px; color: #000; }
 #wrapper_container #main-content #blogleftside .left-col .navi .right a { display: inline-block; font-weight: bold; height: 30px; margin: 0; }
 #wrapper_container #main-content #blogleftside .left-col .navi .right a:hover { color: #fff; }
-#wrapper_container #main-content #blogleftside .contact-wide { width: 100%; height: auto; background-color: #fff; float: left /*Comment Form*/ }
+#wrapper_container #main-content #blogleftside .contact-wide { width: 100%; height: auto; background-color: #fff; float: left; /*Comment Form*/ }
 #wrapper_container #main-content #blogleftside .contact-wide h2 { width: 100%; height: 60px; margin: 0; padding: 0; font-size: 1.3em; line-height: 60px; background-color: #575A5E; color: #fff; text-indent: 1%; letter-spacing: 0.1em; }
-#wrapper_container #main-content #blogleftside .contact-wide h3#reply-title { width: 100%; margin: 1% auto; padding: 0; font-size: 1.1em; line-height: 44.5px; color: #062351; letter-spacing: 0.1em; line-height: 1.5em; text-indent: 1%; }
-#wrapper_container #main-content #blogleftside .contact-wide .navigation { height: 50px; }
-#wrapper_container #main-content #blogleftside .contact-wide .comment-content { width: 98%; margin: 2% auto; font-size: 1em; }
-#wrapper_container #main-content #blogleftside .contact-wide .comment-reply-title, #wrapper_container #main-content #blogleftside .contact-wide #comments { margin: 0; min-height: 100px; line-height: 1.5em; text-indent: 1%; }
-#wrapper_container #main-content #blogleftside .contact-wide .comment-response #submit { height: 32px; list-style: outside none none; background-color: #062351; width: 23.9652%; color: #CCD3DE; -webkit-transition: background 0.3s linear 0s, color 0.3s linear 0s; transition: background 0.3s linear 0s, color 0.3s linear 0s; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; font-size: 1em; margin: 0px auto; border: medium none; }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist { padding-left: 0px; }
+#wrapper_container #main-content #blogleftside .contact-wide h3#reply-title { width: 96%; margin: 1% auto; padding: 0; font-size: 1em; line-height: 44.5px; color: #062351; letter-spacing: 0.1em; line-height: 1.5em; text-indent: 0; }
+#wrapper_container #main-content #blogleftside .contact-wide .navigation { height: 50px; background-color: #000; width: 98%; margin: 1% auto; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-content { width: 96%; margin: 2% auto; font-size: 1em; min-height: 100px; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-content p { width: 100%; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-reply-title, #wrapper_container #main-content #blogleftside .contact-wide #comments { margin: 0; height: 35px; min-height: 35px; line-height: 35px; text-indent: 1%; width: 96%; font-size: 1em; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-response #submit { height: 32px; list-style: outside none none; background-color: #062351; width: 23.9652%; color: #CCD3DE; -webkit-transition: background 0.3s linear 0s, color 0.3s linear 0s; -moz-transition: background 0.3s linear 0s, color 0.3s linear 0s; -o-transition: background 0.3s linear 0s, color 0.3s linear 0s; -ms-transition: background 0.3s linear 0s, color 0.3s linear 0s; transition: background 0.3s linear 0s, color 0.3s linear 0s; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; font-size: 1em; margin: 0px auto; border: medium none; }
+#wrapper_container #main-content #blogleftside .contact-wide .commentlist { padding-left: 0px; margin: 0; }
 #wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta { display: block; background-color: #575A5E; height: auto; font-size: 0.9em; text-indent: 5px; }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-author { display: block; line-height: 30px; height: 30px; }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-metadata { display: block; line-height: 30px; height: 30px; }
+#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-author { display: block; line-height: 30px; height: 30px; padding: 0; }
+#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-metadata { display: block; line-height: 30px; height: 30px; padding: 0; }
 #wrapper_container #main-content #blogleftside .contact-wide .commentlist li ul { width: 100%; margin-left: 0; }
 #wrapper_container #main-content #blogleftside .contact-wide .commentlist li { padding: 0; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-form { width: 80%; height: auto; margin: auto; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; padding: 10px 0; font-size: 100%; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-form input { width: 100%; height: 35px; }
-#wrapper_container #main-content #blogleftside .contact-wide .comment-form input[type=text], #wrapper_container #main-content #blogleftside .contact-wide .comment-form textarea, #wrapper_container #main-content #blogleftside .contact-wide .comment-form select { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width: 100%; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-form input[type=text], #wrapper_container #main-content #blogleftside .contact-wide .comment-form textarea, #wrapper_container #main-content #blogleftside .contact-wide .comment-form select { -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width: 100%; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-form label { height: 30px; line-height: 30px; width: 30px; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-form input[type=text]:focus, #wrapper_container #main-content #blogleftside .contact-wide .comment-form textarea:focus { box-shadow: 0 0 5px #51cbee; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #51cbee; }
-#wrapper_container #main-content #blogleftside .contact-wide .comment-form input[type="submit"] { height: 35px; list-style: none; width: 25%; background-color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0; border: none; color: #CCD3DE; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-form input[type="submit"] { height: 35px; list-style: none; width: 25%; background-color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0; border: none; color: #CCD3DE; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-form input[type="submit"]:hover { background-color: #CCD3DE; color: #062351; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-form .form-submit { margin: 2% 0; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-meta { height: 65px; color: #fff; letter-spacing: 0.1em; padding: 1%; width: 100%; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-meta img { width: 37px; height: 37px; }
 #wrapper_container #main-content #blogleftside .contact-wide .comment-meta a { color: #fff; }
-#wrapper_container #main-content #blogleftside .contact-wide .reply { width: 96%; min-height: 100px; }
-#wrapper_container #main-content #blogleftside .contact-wide .reply a { margin: 0 1%; }
-#wrapper_container #main-content #blogleftside .contact-wide .reply a:hover { color: #CCD3DE; }
+#wrapper_container #main-content #blogleftside .contact-wide .comment-meta .edit-link { display: inline; padding: 10px; }
+#wrapper_container #main-content #blogleftside .contact-wide .reply { width: 98%; min-height: 35px; margin: 2% auto; }
+#wrapper_container #main-content #blogleftside .contact-wide .reply a { margin: 0; display: block; height: 35px; list-style: none; width: 10%; background-color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0; border: none; color: #CCD3DE; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; line-height: 35px; text-align: center; }
+#wrapper_container #main-content #blogleftside .contact-wide .reply a:hover { background-color: #CCD3DE; color: #062351; }
 #wrapper_container #main-content #contactform { float: right; width: 50%; height: auto; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; padding: 10px 0; font-size: 100%; }
 #wrapper_container #main-content #contactform p { font-size: 1em; margin: 1% 0; }
 #wrapper_container #main-content #contactform input { width: 95%; height: 35px; }
 #wrapper_container #main-content #contactform label { height: 30px; line-height: 30px; }
-#wrapper_container #main-content #contactform input[type="submit"] { height: 35px; list-style: none; width: 20%; background-color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0; border: none; color: #CCD3DE; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; display: block; }
+#wrapper_container #main-content #contactform input[type="submit"] { height: 35px; list-style: none; width: 20%; background-color: #062351; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0; border: none; color: #CCD3DE; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; display: block; }
 #wrapper_container #main-content #contactform input[type="submit"]:hover { background-color: #CCD3DE; color: #062351; }
-#wrapper_container #main-content #contactform input[type=text], #wrapper_container #main-content #contactform textarea, #wrapper_container #main-content #contactform select { -webkit-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width: 95%; }
+#wrapper_container #main-content #contactform input[type=text], #wrapper_container #main-content #contactform textarea, #wrapper_container #main-content #contactform select { -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width: 95%; }
 #wrapper_container #main-content #contactform input[type=text]:focus, #wrapper_container #main-content #contactform textarea:focus, #wrapper_container #main-content #contactform select:focus { box-shadow: 0 0 5px #51cbee; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #51cbee; }
-#wrapper_container #main-content .front_panel { width: 100%; display: block; height: 480px; /*new*/ min-height: 480px; /*new*/ margin: 0; padding: 0; clear: both /*Intro Container*/ /*front-page container*/ /*profile-page_container*/ }
+#wrapper_container #main-content .front_panel { width: 100%; display: block; height: 490px; /*new*/ min-height: 490px; /*new*/ margin: 0; padding: 0; clear: both; /*Intro Container*/ /*front-page container*/ /*profile-page_container*/ }
 #wrapper_container #main-content .front_panel .intro-text { width: 48%; display: inline-block; padding: 0; float: left; margin: 0 1.5% 0 0; height: auto; }
 #wrapper_container #main-content .front_panel .intro-text h1 { font-size: 0.95em; margin: 0 0 0.05em 0; padding: 0; color: #062351; letter-spacing: 0.1em; width: 100%; display: block; height: 35px; line-height: 35px; }
 #wrapper_container #main-content .front_panel .intro-text p { width: 100%; line-height: 1.75em; font-size: 0.9em; font-weight: 350; margin: 0; letter-spacing: 0.07em; margin: 0 0 1% 0; }
 #wrapper_container #main-content .front_panel .intro-text .introimg { width: 15.729257%; float: left; margin: 0% 1% 1% 10%; height: auto; display: inline-block; }
-#wrapper_container #main-content .front_panel .frontpage_cont { width: 50%; height: 100%; margin: 0px; float: left; display: inline-block; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif /* Content Section Leftbox contentboxes Image Box Style */ /*.imagebox .box:hover .image-4 #image-5 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
+#wrapper_container #main-content .front_panel .frontpage_cont { width: 50%; height: 100%; margin: 0px; float: left; display: inline-block; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; /* Content Section Leftbox contentboxes Image Box Style */ /*.imagebox .box:hover .image-4 #image-5 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
 .imagebox .box:hover .image-4 #image-4 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
 /* Content Section Leftbox contentboxes Caption Common Style */ /** Caption 4: Slide **/ /*.wrapper_container #main-content article .imagebox .box .slide-caption h3{font-size:100%; color:$color4; margin:0px; height:30px; padding:2%; width:96%; background-color:#c90;}*/ /** Slide Caption :hover Behaviour **/ /*.imagebox .box:hover .slide-caption { background-color: $color4; -moz-transform: translateX(-100%); -o-transform: translateX(-100%); -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); opacity: 1;}*/ }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox { width: 100%; height: 89.0190909%; margin: 0 auto; }
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox a { outline: none; text-decoration: none; display: inline-block; width: 30%; height: 35px; text-align: center; margin: 0 auto; background-color: #CCD3DE; color: #062351; font-size: 0.9em; line-height: 35px; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; float: none; }
+#wrapper_container #main-content .front_panel .frontpage_cont .imagebox a { outline: none; text-decoration: none; display: inline-block; width: 30%; height: 35px; text-align: center; margin: 0 auto; background-color: #CCD3DE; color: #062351; font-size: 0.9em; line-height: 35px; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; float: none; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox a:hover { color: #fff; background-color: #062351; font-weight: normal; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box { border: 0px solid #fff; cursor: pointer; height: 100%; float: left; position: relative; overflow: hidden; width: 100%; /*-webkit-box-shadow: 1px 1px 1px 1px #ccc;
 -moz-box-shadow: 1px 1px 1px 1px #ccc;
@@ -253,14 +255,14 @@ box-shadow: 1px 1px 1px 1px #ccc;*/ margin-top: 0; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box #image-6 { display: none; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box #image-7 { display: none; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 { border: 0px solid #fff; cursor: pointer; float: left; margin: 0px; position: relative; overflow: hidden; width: 100%; height: 100%; margin: 0; }
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-4 { position: absolute; left: 0; -webkit-transition: all 300ms ease-out; transition: all 300ms ease-out; width: 100%; max-width: 100%; height: 100%; text-decoration: none; border: none; margin-top: 0px; overflow: hidden; }
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-5 { position: absolute; left: 0; -webkit-transition: all 300ms ease-out; transition: all 300ms ease-out; width: 100%; max-width: 100%; height: 100%; text-decoration: none; border: none; margin-top: 0px; overflow: hidden; }
+#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-4 { position: absolute; left: 0; -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; width: 100%; max-width: 100%; height: 100%; text-decoration: none; border: none; margin-top: 0px; overflow: hidden; }
+#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-5 { position: absolute; left: 0; -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out; width: 100%; max-width: 100%; height: 100%; text-decoration: none; border: none; margin-top: 0px; overflow: hidden; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .caption { background-color: #fff; position: absolute; color: #fff; z-index: 100; /* -webkit-transition: all 300ms ease-out; -moz-transition: all 300ms ease-out; -o-transition: all 300ms ease-out; -ms-transition: all 300ms ease-out; transition: all 300ms ease-out;*/ width: 100%; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption { width: 100%; height: 100%; text-align: left; padding: 0; left: 100%; background-color: #c0c9dd; display: block; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p { font-size: 0.9em; color: #062351; margin: 0px auto; padding: 0; width: 100%; text-align: center; line-height: 60px; min-height: 40px; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p:last-of-type { font-size: 100%; }
 #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .profile .sectionleftbox caption { /*coordinated marking to match cell's padding*/ margin-bottom: .5em; /*centered so it doesn't blend in to other content*/ text-align: center; }
-#wrapper_container #main-content .front_panel .prof_cont { width: 50%; /*new*/ height: 100%; background-color: #fff; margin: 0; display: inline-block; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; border: 2px #CCD3DE solid /*chart*/ /* End of chart*/ /*Hero Slider*/ /* END OF Hero Slider*/ }
+#wrapper_container #main-content .front_panel .prof_cont { width: 50%; /*new*/ height: 100%; background-color: #fff; margin: 0; display: inline-block; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; border: 2px #CCD3DE solid; /*chart*/ /* End of chart*/ /*Hero Slider*/ /* END OF Hero Slider*/ }
 #wrapper_container #main-content .front_panel .prof_cont h2 { width: 100%; height: 50px; margin: 0px; padding: 0px; font-size: 1.2em; line-height: 50px; background-color: #575A5E; color: #fff; text-indent: 1.5%; letter-spacing: 0.05em; font-weight: 500; }
 #wrapper_container #main-content .front_panel .prof_cont #social { width: 50%; display: block; float: left; margin-top: 0px; }
 #wrapper_container #main-content .front_panel .prof_cont #social h3 { width: 100%; margin: 2% 0px; }
@@ -280,17 +282,17 @@ box-shadow: 1px 1px 1px 1px #ccc;*/ margin-top: 0; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask { float: left; width: 72%; height: 390px; /*new*/ margin: 5px 0 0 10px; overflow: hidden; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel { font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; width: 100%; height: 390px; /*new*/ text-align: left; background-color: #fff; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel h2 { padding: 0; color: #fff; line-height: 40px; text-indent: 1.5%; height: 40px; background-color: #062351; letter-spacing: 0.0em; font-size: 1.05em; font-weight: bold; }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel .abobe { float: none; /*new*/ width: 170px; /*new*/ height: 131px; /*new*/ margin: 1% auto; /*new*/ outline: 0; display: block /*new*/ }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel .cert { float: none; /*new*/ width: 116px; /*new*/ height: 166px; /*new*/ margin: 1% auto; /*new*/ display: block /*new*/ }
+#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel .abobe { float: none; /*new*/ width: 170px; /*new*/ height: 131px; /*new*/ margin: 1% auto; /*new*/ outline: 0; display: block; /*new*/ }
+#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel .cert { float: none; /*new*/ width: 116px; /*new*/ height: 166px; /*new*/ margin: 1% auto; /*new*/ display: block; /*new*/ }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel h3 { font-size: 0.91em; width: auto; margin: 0; text-indent: 0px; margin-top: 1%; letter-spacing: 0.03em; line-height: 1.4em; font-weight: bold; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel p { font-size: 0.85em; /*new*/ width: 100%; /*new*/ margin-top: 1%; font-weight: 300; color: #062351; display: inline-block; line-height: 1.6em; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel p:first-child { font-weight: bold; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel p i { font-size: 0.85em; color: #062351; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider ul { margin: 0; list-style: outside none none; float: left; height: 380px; /*new*/ width: 25%; padding: 0px; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider ul li { margin: 5px 0 5px 0; width: 100%; color: #fff; height: 38px; }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider ul li a { height: 100%; outline: none; text-decoration: none; border: 0; display: block; width: 100%; text-align: center; margin: 0 auto; letter-spacing: 0.02em; background-color: #CCD3DE; color: #062351; font-size: 0.80em; line-height: 38px; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; }
+#wrapper_container #main-content .front_panel .prof_cont .hero-slider ul li a { height: 100%; outline: none; text-decoration: none; border: 0; display: block; width: 100%; text-align: center; margin: 0 auto; letter-spacing: 0.02em; background-color: #CCD3DE; color: #062351; font-size: 0.80em; line-height: 38px; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; }
 #wrapper_container #main-content .front_panel .prof_cont .hero-slider ul a:hover { background-color: #062351; color: #fff; font-weight: 700; }
-#wrapper_container #main-content button.text-btn-a, #wrapper_container #main-content button.text-btn-b, #wrapper_container #main-content button.text-btn-c, #wrapper_container #main-content button.text-btn-d, #wrapper_container #main-content button.text-btn-e, #wrapper_container #main-content button.text-btn-f, #wrapper_container #main-content button.text-btn-g, #wrapper_container #main-content button.text-btn-h, #wrapper_container #main-content button.text-btn-i { position: absolute; top: 85%; left: 0%; z-index: 2; display: block; height: 15%; width: 92%; outline: none; border: none; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; font-size: 1em; color: #fff; background-color: #062351; }
+#wrapper_container #main-content button.text-btn-a, #wrapper_container #main-content button.text-btn-b, #wrapper_container #main-content button.text-btn-c, #wrapper_container #main-content button.text-btn-d, #wrapper_container #main-content button.text-btn-e, #wrapper_container #main-content button.text-btn-f, #wrapper_container #main-content button.text-btn-g, #wrapper_container #main-content button.text-btn-h, #wrapper_container #main-content button.text-btn-i { position: absolute; top: 85%; left: 0%; z-index: 2; display: block; height: 15%; width: 92%; outline: none; border: none; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; font-size: 1em; color: #fff; background-color: #062351; }
 #wrapper_container #main-content button:hover { color: #062351; background-color: #CCD3DE; cursor: pointer; z-index: 2; }
 #wrapper_container #main-content .skills { list-style: none; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; margin: 5% 0px 5% 0%; padding: 0px; width: 45%; display: inline-block; }
 #wrapper_container #main-content .skills li { width: 100%; margin: 0; font-size: 0.9em; color: #062351; font-style: italic; text-indent: 1%; height: 25px; line-height: 25px; }
@@ -308,24 +310,24 @@ box-shadow: 1px 1px 1px 1px #ccc;*/ margin-top: 0; }
 #wrapper_container #main-content #photocontainer h3 { margin: 5px 0px 5px 0px; }
 #wrapper_container #main-content #photocontainer .content .menuSwitch { text-align: left; margin: 0; width: 100%; }
 #wrapper_container #main-content #photocontainer .content .menuSwitch ul { padding-left: 0; }
-#wrapper_container #main-content #photocontainer .content .menuSwitch ul li { list-style-type: none; display: inline-block; padding: 10px 20px; border-radius: 4px; cursor: pointer; color: #062351; -webkit-transition: background-color 0.3s ease-in; transition: background-color 0.3s ease-in; font-size: 1.1em; margin-right: 1%; }
+#wrapper_container #main-content #photocontainer .content .menuSwitch ul li { list-style-type: none; display: inline-block; padding: 10px 20px; border-radius: 4px; cursor: pointer; color: #062351; -webkit-transition: background-color 0.3s ease-in; -moz-transition: background-color 0.3s ease-in; -o-transition: background-color 0.3s ease-in; -ms-transition: background-color 0.3s ease-in; transition: background-color 0.3s ease-in; font-size: 1.1em; margin-right: 1%; }
 #wrapper_container #main-content #photocontainer .content .menuSwitch ul li:hover { background-color: #062351; color: #fff; }
 #wrapper_container #main-content #photocontainer .content .menuSwitch ul li.cat-active { background-color: #062351; color: #fff; }
 #wrapper_container #main-content #photocontainer .content { clear: both; position: relative; top: 10px; padding: 0px; overflow: hidden; }
-#wrapper_container #main-content #photocontainer .content #panel, #wrapper_container #main-content #photocontainer #panel2, #wrapper_container #main-content #photocontainer #panel3, #wrapper_container #main-content #photocontainer #panel4, #wrapper_container #main-content #photocontainer #panel5, #wrapper_container #main-content #photocontainer #panel6, #wrapper_container #main-content #photocontainer #panel7 { position: relative; top: 2px; overflow: hidden; width: 24.5%; /*new*/ display: inline-block; margin: 3% 0; z-index: 4; height: 305px /*new*/ }
+#wrapper_container #main-content #photocontainer .content #panel, #wrapper_container #main-content #photocontainer #panel2, #wrapper_container #main-content #photocontainer #panel3, #wrapper_container #main-content #photocontainer #panel4, #wrapper_container #main-content #photocontainer #panel5, #wrapper_container #main-content #photocontainer #panel6, #wrapper_container #main-content #photocontainer #panel7 { position: relative; top: 2px; overflow: hidden; width: 24.5%; /*new*/ display: inline-block; margin: 3% 0; z-index: 4; height: 305px; /*new*/ }
 #wrapper_container #main-content #photocontainer .showcase { margin-top: 10px; width: 55%; }
 #wrapper_container #main-content #photocontainer .showcase-img { float: left; width: 250px; /*new*/ height: 320px; /*new*/ margin: 0 1% 0 0; display: inline-block; }
 #wrapper_container #main-content #photocontainer .showcase-img img { height: auto; }
 #wrapper_container #main-content #photocontainer .showcase-img figcaption { height: 100%; display: block; }
-#wrapper_container #main-content #photocontainer .showcase-img figcaption div.mask { position: absolute; z-index: 1; top: 0px; left: 0px; margin: 0px; width: 91%; opacity: 0; display: block; height: 100%; overflow: visible; -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; -webkit--transform: scale(0.5); -moz--transform: scale(0.5); -o--transform: scale(0.5); -ms--transform: scale(0.5); -webkit-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); }
-#wrapper_container #main-content #photocontainer .showcase-img figcaption div.mask:hover { opacity: 1; -webkit--transform: scale(1); -moz--transform: scale(1); -o--transform: scale(1); -ms--transform: scale(1); -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); border: 125px solid rgba(0, 0, 0, 0.5); }
-#wrapper_container #main-content #photocontainer .showcase-img figcaption div.mask .info { position: relative; top: -8px; opacity: 0; background: url("/wordpress/wp-content/themes/raythompwebdesign-com/graphics/link1.png") center no-repeat; display: block; text-decoration: none; padding: 5%; width: 50px; height: 50px; left: -20px; -webkit-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; z-index: 99; color: #fff; text-indent: -9999px; }
-#wrapper_container #main-content #photocontainer .showcase-img figcaption .mask .info:hover { opacity: 1; text-decoration: none; padding: 0; -webkit--transform: scale(1, 1); -moz--transform: scale(1, 1); -o--transform: scale(1, 1); -ms--transform: scale(1, 1); -webkit-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1); text-indent: -9999px; }
+#wrapper_container #main-content #photocontainer .showcase-img figcaption div.mask { position: absolute; z-index: 1; top: 0px; left: 0px; margin: 0px; width: 91%; opacity: 0; display: block; height: 100%; overflow: visible; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; -webkit--transform: scale(0.5); -moz--transform: scale(0.5); -o--transform: scale(0.5); -ms--transform: scale(0.5); transform: scale(0.5); }
+#wrapper_container #main-content #photocontainer .showcase-img figcaption div.mask:hover { opacity: 1; -webkit--transform: scale(1); -moz--transform: scale(1); -o--transform: scale(1); -ms--transform: scale(1); transform: scale(1); border: 125px solid rgba(0, 0, 0, 0.5); }
+#wrapper_container #main-content #photocontainer .showcase-img figcaption div.mask .info { position: relative; top: -8px; opacity: 0; background: url("/wordpress/wp-content/themes/raythompwebdesign-com/graphics/link1.png") center no-repeat; display: block; text-decoration: none; padding: 5%; width: 50px; height: 50px; left: -20px; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; -ms-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out; z-index: 99; color: #fff; text-indent: -9999px; }
+#wrapper_container #main-content #photocontainer .showcase-img figcaption .mask .info:hover { opacity: 1; text-decoration: none; padding: 0; -webkit--transform: scale(1, 1); -moz--transform: scale(1, 1); -o--transform: scale(1, 1); -ms--transform: scale(1, 1); transform: scale(1, 1); text-indent: -9999px; }
 #wrapper_container #main-content #photocontainer .showcase-content { display: none; width: 99.5%; /*new*/ background-color: #fff; padding: 1%; border: 2px #CCD3DE solid; position: absolute; z-index: 10; left: 0; height: 84%; top: 0; }
 #wrapper_container #main-content #photocontainer .showcase-content h1 { text-indent: 0px; font-size: 0.85em; width: 100%; color: #062351; line-height: 20px; width: 100%; margin: 0; height: 20px; }
 #wrapper_container #main-content #photocontainer .showcase-content p { font-size: 0.75em; width: 100%; margin: 0; letter-spacing: 0.05em; line-height: 1.6em; }
 #wrapper_container #main-content #photocontainer .showcase-content .links { height: 40px; margin: 0; display: inline-block; width: 100%; }
-#wrapper_container #main-content #photocontainer .showcase-content .links a { height: 30px; list-style: none; background-color: #CCD3DE; width: 45%; color: #062351; letter-spacing: 0.1em; border: none; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; font-size: 0.85em; line-height: 30px; padding: 0.5%; margin: 1% 1% 1% 0; display: inline-block; text-align: center; -webkit-transition: background 0.2s linear 0s; transition: background 0.2s linear 0s; }
+#wrapper_container #main-content #photocontainer .showcase-content .links a { height: 30px; list-style: none; background-color: #CCD3DE; width: 45%; color: #062351; letter-spacing: 0.1em; border: none; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; font-size: 0.85em; line-height: 30px; padding: 0.5%; margin: 1% 1% 1% 0; display: inline-block; text-align: center; -webkit-transition: background 0.2s linear 0s; -moz-transition: background 0.2s linear 0s; -o-transition: background 0.2s linear 0s; -ms-transition: background 0.2s linear 0s; transition: background 0.2s linear 0s; }
 #wrapper_container #main-content #photocontainer .showcase-content .links a:hover { color: #fff; background-color: #062351; font-weight: bold; }
 #wrapper_container #main-content #photocontainer .showcase-content .links a.fancybox { font-size: 0.9em; height: 30px; display: block; line-height: 30px; text-align: center; margin: 0; padding: 0; }
 
@@ -333,7 +335,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
 
 /*Portfolio gallery*/
 /*transistion*/
-.dbox { margin-bottom: 30px; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+.dbox { margin-bottom: 30px; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .dbox .itemCont { overflow: hidden; display: inline-block; }
 .dbox .itemCont a { display: block; padding-bottom: 5px; }
 .dbox .itemCont a:hover { background-color: #00ACE9; color: white; }
@@ -360,11 +362,11 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
 
 /*end*/
 /*Footer*/
-#wrapper_container footer { width: 100%; height: 120px; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif /* footer social images*/ }
+#wrapper_container footer { width: 100%; height: 120px; font-family: "Kelson Sans", Sawasdee, Helvetica, sans-serif; /* footer social images*/ }
 #wrapper_container footer .socialpics { display: none; }
 #wrapper_container footer ul { width: 45%; margin: 0; padding: 0.5%; text-align: left; float: left; height: 100%; }
 #wrapper_container footer ul li { height: 22.2%; list-style: none; width: 100%; margin: 0; text-indent: 0px; font-size: 1em; }
-#wrapper_container footer ul li a { width: 40%; text-decoration: none; color: #062351; margin: 0px; padding: 0; font-size: 0.85em; display: block; line-height: 1.5em; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+#wrapper_container footer ul li a { width: 40%; text-decoration: none; color: #062351; margin: 0px; padding: 0; font-size: 0.85em; display: block; line-height: 1.5em; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 #wrapper_container footer ul li a:hover { color: #fff; margin: 0; font-size: 0.90em; line-height: 1.5em; }
 
 @media (max-width: 1280px) { #wrapper_container header nav #mobile-nav { display: none; }
@@ -401,7 +403,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input[type="submit"] { font-size: 0.8em; }
   #wrapper_container #main-content #blogrightside .blogbox .widget ul li a { font-size: 0.85em; }
   #wrapper_container #main-content #blogrightside .blogbox .widget ul li a:hover { font-size: 0.90em; }
-  #wrapper_container #main-content #blogleftside { height: auto; width: 75% /*blog* end*/ }
+  #wrapper_container #main-content #blogleftside { height: auto; width: 75%; /*blog* end*/ }
   #wrapper_container #main-content #blogleftside .left-col h1 { font-size: 1.4em; margin: 1% auto; padding: 0px; letter-spacing: 0.1em; width: 98%; }
   #wrapper_container #main-content #blogleftside .left-col .post h1 { margin: 0 auto; padding: 0px; color: #062351; letter-spacing: 0.1em; }
   #wrapper_container #main-content #blogleftside .left-col .post h2 { text-indent: 0px; font-size: 1.05em; padding: 0px; letter-spacing: 0.1em; width: 98%; background-color: #fff; color: #062351; margin: 0 auto; }
@@ -472,7 +474,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content .webskills li a { width: 100%; }
   #wrapper_container #main-content .webskills li a:hover { width: 100%; color: #9DA3AB; }
   #wrapper_container footer .socialpics { display: block; float: right; margin: 1%; height: 40%; padding-left: 0px; width: 25%; }
-  #wrapper_container footer .socialpics .social-icon { float: left; margin-left: 4%; display: inline-block; width: 20%; background-repeat: no-repeat; -webkit-transition: all ease .2s; transition: all ease .2s; height: 100%; background-color: #CCD3DE; }
+  #wrapper_container footer .socialpics .social-icon { float: left; margin-left: 4%; display: inline-block; width: 20%; background-repeat: no-repeat; -webkit-transition: all ease .2s; -moz-transition: all ease .2s; -o-transition: all ease .2s; -ms-transition: all ease .2s; transition: all ease .2s; height: 100%; background-color: #CCD3DE; }
   #wrapper_container footer .socialpics .social-icon:hover { filter: alpha(opacity=75); moz-opacity: .75; -khtml-opacity: .75; opacity: .75; }
   #wrapper_container footer .socialpics .socialpics span { display: inline-block; width: 100%; height: 100%; }
   #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin { width: 100%; height: 100%; text-align: center; font-size: 200%; background-color: #CCD3DE; color: #062351; line-height: 1.5em; }
@@ -637,7 +639,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p:last-of-type { font-size: 0.9em; }
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .slide-caption p:last-of-type a { font-size: 0.95em; width: 35%; font-weight: normal; }
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .slide-caption p:last-of-type a:hover { font-weight: bold; font-size: 0.95em; background-color: #062351; }
-  #wrapper_container #main-content .front_panel .prof_cont { display: inline-block; width: 80%; float: none; margin: 1em 4em /*Hero Slider*/ /*Hero Slider End*/ }
+  #wrapper_container #main-content .front_panel .prof_cont { display: inline-block; width: 80%; float: none; margin: 1em 4em; /*Hero Slider*/ /*Hero Slider End*/ }
   #wrapper_container #main-content .front_panel .prof_cont h2 { font-size: 1.2em; }
   #wrapper_container #main-content .front_panel .prof_cont #chart { width: 95%; display: block; margin: 4% auto; }
   #wrapper_container #main-content .front_panel .prof_cont #chart #numbers { width: 10%; height: 376px; }
@@ -689,7 +691,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container header p { font-size: 0.65em; }
   #wrapper_container header nav #mobile-nav { display: none; }
   #wrapper_container header nav #innernav .menu-main-container { width: 100%; left: 44.3%; }
-  #wrapper_container #main-content { padding: 0px /*post*/ }
+  #wrapper_container #main-content { padding: 0px; /*post*/ }
   #wrapper_container #main-content h1 { margin: 0px 0px 0.1em; }
   #wrapper_container #main-content p { font-size: 0.80em; line-height: 1.5em; }
   #wrapper_container #main-content h2 { font-size: 0.90em; padding: 0px; color: #062351; letter-spacing: 0.1em; width: 99.5458%; }
@@ -704,7 +706,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content #blogrightside .blogbox .widget ul li { list-style: none; line-height: 30px; background-color: #CCD3DE; width: 96%; margin: 1% auto; text-align: center; }
   #wrapper_container #main-content #blogrightside .blogbox .widget ul li a { width: 100%; font-size: 0.75em; }
   #wrapper_container #main-content #blogrightside .blogbox .widget ul li a:hover { color: #fff; font-size: 0.80em; }
-  #wrapper_container #main-content #blogleftside { height: auto; width: 75% /*end of post*/ }
+  #wrapper_container #main-content #blogleftside { height: auto; width: 75%; /*end of post*/ }
   #wrapper_container #main-content #blogleftside .left-col h1 { font-size: 1.4em; margin: 5px; padding: 0px; letter-spacing: 0.1em; width: 100%; line-height: 40px; }
   #wrapper_container #main-content #blogleftside .left-col .post h1 { font-size: 1em; padding: 0px; color: #062351; letter-spacing: 0.1em; width: 98%; }
   #wrapper_container #main-content #blogleftside .left-col .post h2 { text-indent: 0px; font-size: 0.95em; margin: 1% auto; padding: 0px; letter-spacing: 0.1em; width: 96%; background-color: #fff; color: #062351; }
@@ -736,7 +738,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox a { font-size: 0.80em; width: 35%; }
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox a:hover { color: #fff; background-color: #CCD3DE; font-weight: normal; }
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p { font-size: 0.9em; margin: 0px; width: 100%; line-height: 60px; }
-  #wrapper_container #main-content .front_panel .prof_cont { width: 80%; margin: 1em 4.5em; display: inline-block /*Hero Slider*/ /*Hero Slider End*/ }
+  #wrapper_container #main-content .front_panel .prof_cont { width: 80%; margin: 1em 4.5em; display: inline-block; /*Hero Slider*/ /*Hero Slider End*/ }
   #wrapper_container #main-content .front_panel .prof_cont #chart #numbers { font-size: 0.8em; }
   #wrapper_container #main-content .front_panel .prof_cont #chart #numbers li { height: 21.95000%; }
   #wrapper_container #main-content .front_panel .prof_cont #chart #numbers li span { font-size: 0.95em; }
@@ -772,13 +774,13 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container footer ul li a { text-decoration: none; color: #062351; margin: 0; padding: 0; font-size: 0.75em; height: 100%; line-height: 25px; }
   #wrapper_container footer ul li a:hover { margin: 0; font-size: 0.75em; line-height: 25px; } }
 /*i-phone 6 landscape*/
-@media (max-width: 667px) { button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i { position: absolute; top: 0%; left: 90%; display: block; height: 100%; width: 10%; outline: none; border: none; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; font-size: 0.85em; text-align: center; }
+@media (max-width: 667px) { button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i { position: absolute; top: 0%; left: 90%; display: block; height: 100%; width: 10%; outline: none; border: none; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; font-size: 0.85em; text-align: center; }
   button:hover { color: #062351; background-color: #CCD3DE; cursor: pointer; }
   .fixed-side-social-container { display: none; }
   a.nav-toggle { display: block; line-height: 60px; margin-right: 1%; }
   a.nav-toggle:hover { line-height: 60px; }
   #wrapper_container { width: 96%; height: auto; margin: 5px auto; }
-  #wrapper_container header { width: 100%; height: 62px /*Mobile-Navigation*/ }
+  #wrapper_container header { width: 100%; height: 62px; /*Mobile-Navigation*/ }
   #wrapper_container header #logo { font-size: 1.45em; width: 80%; margin: 0; text-indent: 0%; }
   #wrapper_container header #logo-blog { font-size: 1.45em; width: 80%; margin: 0; text-indent: 0%; }
   #wrapper_container header p { margin: 0; width: 80%; font-size: 0.65em; display: block; float: none; height: 15px; line-height: 15px; text-align: left; }
@@ -791,7 +793,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container header nav #mobile-nav li a:hover { line-height: 60px; font-weight: bold; color: #fff; }
   #wrapper_container header nav #mobile-nav li:hover { background-color: #062351; }
   /*turn each column to list vertically instead of horizontally */
-  #wrapper_container #main-content { width: 100%; height: auto; margin-bottom: 5px; padding: 0px /*post*/ /*Photocontainer*/ }
+  #wrapper_container #main-content { width: 100%; height: auto; margin-bottom: 5px; padding: 0px; /*post*/ /*Photocontainer*/ }
   #wrapper_container #main-content h1 { margin: 0; width: 100%; font-size: 1.3em; }
   #wrapper_container #main-content h2 { margin: 0 2%; width: 98%; font-size: 1.2em; }
   #wrapper_container #main-content h3 { font-size: 1.1em; }
@@ -888,7 +890,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i { font-size: 0.85em; text-align: center; }
   a.nav-toggle { display: block; height: 60px; line-height: 60px; width: 60px; }
   #wrapper_container { width: 96%; height: auto; margin: 0 auto; }
-  #wrapper_container header { width: 100%; height: 62px /*Mobile-Navigation*/ /*end*/ }
+  #wrapper_container header { width: 100%; height: 62px; /*Mobile-Navigation*/ /*end*/ }
   #wrapper_container header #logo { font-size: 1.6em; text-indent: 0%; }
   #wrapper_container header #logo-blog { font-size: 1.6em; text-indent: 0%; }
   #wrapper_container header p { margin: 0; font-size: 0.75em; height: 15px; line-height: 15px; text-indent: 0%; font-size: 0.65em; }
@@ -899,7 +901,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container header nav #mobile-nav li a { width: 100%; height: 100%; text-decoration: none; line-height: 60px; color: #062351; margin: 0; letter-spacing: 0.1em; font-size: 1em; text-align: center; display: block; }
   #wrapper_container header nav #mobile-nav li a:hover { line-height: 60px; font-weight: bold; color: #fff; }
   #wrapper_container header nav #mobile-nav li:hover { background-color: #062351; }
-  #wrapper_container #main-content { width: 100%; height: auto; margin-bottom: 5px; padding: 0px /*Photocontainer*/ /*Photocontainer end*/ }
+  #wrapper_container #main-content { width: 100%; height: auto; margin-bottom: 5px; padding: 0px; /*Photocontainer*/ /*Photocontainer end*/ }
   #wrapper_container #main-content h1 { width: 100%; text-indent: 0px; font-size: 1.15em; }
   #wrapper_container #main-content h2 { margin: 0px; width: 100%; text-indent: 0px; font-size: 1em; }
   #wrapper_container #main-content h3 { text-indent: 15px; }
@@ -918,7 +920,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div label { font-size: 0.9em; width: 24%; line-height: 30px; }
   #wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input[type="submit"] { font-size: 0.85em; }
   #wrapper_container #main-content #blogrightside .blogbox .widget ul li { font-size: 1em; }
-  #wrapper_container #main-content #blogleftside { height: auto; width: 100%; float: none /*post*/ /*end of post*/ }
+  #wrapper_container #main-content #blogleftside { height: auto; width: 100%; float: none; /*post*/ /*end of post*/ }
   #wrapper_container #main-content #blogleftside .left-col h1 { font-size: 1.5em; }
   #wrapper_container #main-content #blogleftside .left-col .meta { font-size: 10px; }
   #wrapper_container #main-content #blogleftside .left-col .post h3 { width: 98%; font-size: 1.4em; }
@@ -943,7 +945,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox a:hover { font-size: 0.95em; }
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption { height: 290px; }
   #wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p { font-size: 0.95em; line-height: 55px; }
-  #wrapper_container #main-content .front_panel .prof_cont { width: 98%; margin: 1em auto /*Chart*/ /*Chart end*/ /*Hero Slider*/ /*Hero Slider End*/ }
+  #wrapper_container #main-content .front_panel .prof_cont { width: 98%; margin: 1em auto; /*Chart*/ /*Chart end*/ /*Hero Slider*/ /*Hero Slider End*/ }
   #wrapper_container #main-content .front_panel .prof_cont h2 { font-size: 1.35em; }
   #wrapper_container #main-content .front_panel .prof_cont #chart #bars { height: 100%; }
   #wrapper_container #main-content .front_panel .prof_cont #chart #bars li .bar { display: block; margin-left: 2px; background: none repeat scroll 0% 0% #062351; position: absolute; bottom: 0px; }
@@ -986,7 +988,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   a.nav-toggle:hover { line-height: 60px; }
   .fixed-side-social-container { display: none; }
   #wrapper_container { width: 96%; }
-  #wrapper_container header { height: 62px /*Mobile-Navigation*/ /*end*/ }
+  #wrapper_container header { height: 62px; /*Mobile-Navigation*/ /*end*/ }
   #wrapper_container header #logo { font-size: 1.4em; }
   #wrapper_container header #logo-blog { font-size: 1.4em; }
   #wrapper_container header p { display: block; float: none; height: 15px; line-height: 15px; font-size: 0.6em; }
@@ -1062,7 +1064,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   .fixed-side-social-container { display: none; }
   a.nav-toggle { display: block; height: 60px; line-height: 60px; background-size: 50px auto, auto auto; width: 50px; }
   a.nav-toggle:hover { background-size: 50px auto, auto auto; }
-  #wrapper_container header { height: 62px /*Mobile-Navigation*/ /*end*/ }
+  #wrapper_container header { height: 62px; /*Mobile-Navigation*/ /*end*/ }
   #wrapper_container header #logo { font-size: 1.4em; height: 30px; line-height: 30px; text-align: left; }
   #wrapper_container header #logo-blog { font-size: 1.4em; height: 30px; line-height: 30px; text-align: left; }
   #wrapper_container header p { display: block; float: none; height: 15px; line-height: 15px; width: 78%; font-size: 0.65em; text-align: left; }
@@ -1153,7 +1155,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   a.nav-toggle { display: block; height: 60px; line-height: 60px; width: 50px; }
   .fixed-side-social-container { display: none; }
   #wrapper_container { width: 98%; }
-  #wrapper_container header { height: 62px /*Mobile-Navigation*/ /*end*/ }
+  #wrapper_container header { height: 62px; /*Mobile-Navigation*/ /*end*/ }
   #wrapper_container header #logo { font-size: 1.4em; width: 80%; height: 30px; line-height: 30px; text-align: left; }
   #wrapper_container header #logo-blog { font-size: 1.4em; width: 80%; height: 30px; line-height: 30px; text-align: left; }
   #wrapper_container header p { text-align: left; font-size: 0.60em; width: 72%; display: block; float: none; height: 15px; line-height: 15px; }
@@ -1236,11 +1238,11 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
   #wrapper_container footer ul { width: 40%; margin: 0px; padding: 4px; } }
 /*I-phone 5, 4,3*/
 @media (max-width: 360px) { a.nav-toggle { height: 60px; line-height: 60px; width: 50px; }
-  button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i { position: absolute; top: 0%; left: 85%; background-color: #062351; display: block; height: 100%; width: 15%; outline: none; border: none; font-size: 0.9em; text-align: left; color: #fff; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0.4%; }
+  button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i { position: absolute; top: 0%; left: 85%; background-color: #062351; display: block; height: 100%; width: 15%; outline: none; border: none; font-size: 0.9em; text-align: left; color: #fff; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0.4%; }
   button:hover { color: #062351; background-color: #CCD3DE; }
   .fixed-side-social-container { display: none; }
   #wrapper_container { width: 98%; }
-  #wrapper_container header { height: 62px /*Mobile-Navigation*/ /*end*/ }
+  #wrapper_container header { height: 62px; /*Mobile-Navigation*/ /*end*/ }
   #wrapper_container header #logo { font-size: 1.3em; width: 80%; }
   #wrapper_container header #logo-blog { font-size: 1.3em; width: 80%; }
   #wrapper_container header p { font-size: 0.60em; width: 72%; display: block; float: none; height: 15px; line-height: 15px; }
@@ -1327,7 +1329,7 @@ div.wpcf7 img.ajax-loader { border: medium none; vertical-align: middle; margin-
 /* Blackberry */
 @media (max-width: 320px) { button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i { position: absolute; top: 0%; left: 85%; background-color: #062351; display: block; height: 100%; width: 15%; outline: none; border: none; font-size: 0.85em; text-align: left; color: #fff; }
   #wrapper_container { width: 98%; }
-  #wrapper_container header { width: 100% /*Mobile-Navigation*/ }
+  #wrapper_container header { width: 100%; /*Mobile-Navigation*/ }
   #wrapper_container header #logo { font-size: 1.3em; height: 30px; line-height: 30px; width: 80%; }
   #wrapper_container header #logo-blog { font-size: 1.3em; height: 30px; line-height: 30px; width: 80%; }
   #wrapper_container header p { font-size: 0.50em; display: block; float: none; height: 15px; line-height: 15px; width: 70%; }

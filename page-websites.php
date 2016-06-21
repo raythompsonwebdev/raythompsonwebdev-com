@@ -2,7 +2,7 @@
 
 /*
 
-Template Name: websites 
+Template Name: Websites 
 
 */
 

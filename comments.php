@@ -23,8 +23,8 @@ if ( post_password_required() ) { ?>
 if ( have_comments() ) : ?>
     <h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses');?> <?php printf('to "%s"', the_title('', '', false)); ?></h3>
         <div class="navigation">
-            <div class="alignleft"><?php previous_comments_link() ?></div>
-            <div class="alignright"><?php next_comments_link() ?></div>
+            <div class="right"><?php previous_comments_link() ?></div>
+            <div class="right"><?php next_comments_link() ?></div>
         </div>
     <ol class="commentlist">
      <?php

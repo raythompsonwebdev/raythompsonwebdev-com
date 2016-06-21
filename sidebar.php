@@ -14,7 +14,7 @@
 
 </article>
 <article class="blogbox"> 
-
+<h2>Tag Cloud</h2> 
 <ul class="tagcloud"><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
 
 </article>

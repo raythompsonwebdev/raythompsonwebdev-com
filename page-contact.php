@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: contact 
+Template Name: Contact 
 */
 ?>
 
@@ -46,19 +46,7 @@ Template Name: contact
 				<?php endif; ?>
 
 </article>
-		<br/>
-			
-
-			
-<article class="contact-wide">
-	
-			
-
-
-		</article>
-
-
-    	<br/>
+<div class="clearfix"></div>				
 
 </section>
 

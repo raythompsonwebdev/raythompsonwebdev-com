@@ -14,25 +14,25 @@
 
 
 <section id="main-content" class="group" role="main">
-<h1></h1>
+<h1>Hello</h1>
 <div class="front_panel"> 
 
 	<article class="intro-text">
 
 	<h1>Welcome to raythompwebdev.com&#46;</h1>
 
-	<p> My name is Raymond and this is my website. I like spending my spare time creating websites and other web design and web development projects.</p>
+	<p> My name is Raymond and this is my website about building websites and web applications. I like spending my spare time creating websites and other web applications like;.</p>
 
 	<ul class="webskills">
-		<li><span class="fa fa-mobile"></span>Mobile Friendly Websites&#44;</li>
-		<li><span class="fa fa-wordpress"></span>Responsive Wordpress Themes&#44;</li>
+		<li><span class="fa fa-mobile"></span>Audio & Video Websites&#44;</li>
+		<li><span class="fa fa-wordpress"></span>Wordpress Themes&#44;</li>
 		<li><span class="fa fa-database"></span>E-Commerce Websites&#44;</li>
-		<li><span class="fa fa-file-image-o"></span>User Interface Elements&#44;</li>
+		<li><span class="fa fa-file-image-o"></span>Video and Image Galleries&#44;</li>
 	</ul>
 	  
-	<p>Each of my web projects are built following the latest coding standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; Beautiful solid designs and great user experience&#46;</p>
+	<p>Each of my web projects are built following the latest coding standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; Beautiful robust designs and great user experience&#46;</p>
 
-	<p>I also aim to ensure each website is accessible, simple to use and code validated to ensure that it can be found by search engines and viewed within most modern web browsers&#46;</p>
+	<p>I also aim to ensure each website is accessible, simple to use and code validated and optimised to ensure that it can be found by search engines and viewed within most modern web browsers&#46;</p>
 
 	<p>Click button on right to view some of my work&#46;</p>
 
@@ -72,14 +72,14 @@
 
 <h1>Are you a self-taught web developer who enjoys coding&#63;</h1>
 
-<p>Check out my blog posts where&#44;I will be sharing links to tutorials&#44; articles&#44; blog post and all sorts of useful information I have come across on my journey to becoming a great a better web developer&#46;</p>
+<p>Check out my blog posts where&#44;I will be sharing links to tutorials&#44; articles&#44; blog post and all sorts of useful information I have come across on my mission to becoming a great web developer&#46;</p>
 <ul class="webskills">
 		<li><span class="fa fa-mobile"></span>Video Tutorials&#44;</li>
 		<li><span class="fa fa-wordpress"></span>Blog Tutorials&#44;</li>
 		<li><span class="fa fa-database"></span>Website Template Downloads&#44;</li>
 		<li><span class="fa fa-file-image-o"></span>Code examples&#44;</li>
 	</ul>
-<p>All types of resources I hope you will find useful in helping you improve your own work as it has helped in helping me with mine&#44; especially if you are like me and fairly new to website design and web development&#46; </p>
+<p>All types of resources I hope you will find useful in helping increase your own understanding of web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
 
 <br/>
 

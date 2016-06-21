@@ -161,7 +161,7 @@ button:hover{color:$color1; background-color:$color2;}
 
 .container {width:38.729257%;float:right; margin:0% 1% 1% 2%; }
 
-.social_media_container {float:left; width: 40.7293%; display: block;  margin: 1% ; height:250px}
+.social_media_container {float:left; width: 40.7293%; display: block;  margin: 1% ; height:auto;}
 
 .bypostauthor{ font-size:1em;}
 .newExcerpt{ display:block; padding:1% 0; margin:0;}
@@ -187,7 +187,7 @@ body{
 /*Header*/
 #wrapper_container header { 
 	width: 100%;  
-	height: 80px; 
+	height: 90px; 
 	background-color: $color3; 
 	margin:0;
 	padding:0; 
@@ -361,15 +361,15 @@ body{
 				
 				.newsExcerpt{ height:auto;}
 								
-				ul{line-height: 1.5em;font-size: 0.9em; text-indent:0; width:98%; margin: 1% auto;display: inline-block;}
-				ul li{  width: 100%; margin:0px 0px 0px 1em; font-size:1em; }
-				ul li a{  margin-left:15px;}
+				ul{line-height: 1.5em;font-size: 0.9em; text-indent:0; width:98%; margin: 1% auto;display:block;}
+				ul li{  width: 100%; margin:0px; font-size:1em; }
+				ul li a{  margin-left:0px;}
 				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.85em; color:$color8; font-weight:350; line-height:1.75em;letter-spacing:0.05em;}
 
-				p.right{width:5%; float:right; font-size:1em; height:40px; background-color:$color2; margin:0; }
-				p.right:hover{ background-color:$color1;}
+				p.right{width:5%; float:right; font-size:1.5em; height:40px; background-color:$color2; margin:0; }
+				p.right:hover{ background-color:$color1; color:$color4;}
 
-				.right .comments-count{position:relative; top:15%;left:40%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
+				.right .comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:block; height:100%; line-height:40px;}
 				.right .comments-count:hover{color:$color4;}
 
 				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:35px; line-height:1.5em; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
@@ -405,7 +405,7 @@ body{
 					font-size:1em; 
 					font-weight:500; 
 					height:40px; 
-					line-height:30px; 
+					line-height:40px; 
 					color:$color8;
 					a{display:inline-block;  font-weight:bold; height:30px; margin:0;}
 					a:hover{color:$color4;}
@@ -422,21 +422,28 @@ body{
 			float:left;
 
 			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em;}
-			h3#reply-title {width:100%; margin:1% auto; padding:0; font-size:1.1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:1%;}
+			h3#reply-title {width:96%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
 
-			.navigation{height:50px;}
+			.navigation{height:50px; background-color:#000; width:98%; margin:1% auto;}
 			
 			/*Comment Form*/
 
-			.comment-content{width:98%; margin:2% auto; font-size:1em;}
-			.comment-reply-title, #comments {margin:0; min-height: 100px; line-height: 1.5em; text-indent: 1%;}
+			.comment-content{
+				width:96%; 
+				margin:2% auto; 
+				font-size:1em;
+				min-height:100px;
+				p{width:100%;}
+			}
+			.comment-reply-title, #comments {margin:0;height: 35px; min-height: 35px; line-height: 35px; text-indent: 1%;width: 96%; font-size:1em;}
 			.comment-response #submit {  height: 32px;  list-style: outside none none;  background-color: $color1;  width: 23.9652%;  color: $color2;  @include Transition(background 0.3s linear 0s, color 0.3s linear 0s ); font-family:($FontStyle);  font-size: 1em; margin: 0px auto;  border: medium none;}
 			
 			.commentlist { 
 				padding-left: 0px;
+				margin:0;
 				.comment-meta { display:block; background-color:$color7; height:auto; font-size:0.9em; text-indent:5px; }
-				.comment-meta .comment-author { display:block; line-height: 30px; height: 30px;}
-				.comment-meta .comment-metadata{ display:block; line-height: 30px; height: 30px;}
+				.comment-meta .comment-author { display:block; line-height: 30px; height: 30px; padding:0;}
+				.comment-meta .comment-metadata{ display:block; line-height: 30px; height: 30px; padding:0;}
 				li ul{width:100%; margin-left:0;}
 				li {padding:0;}
 			}
@@ -465,14 +472,16 @@ body{
 				padding:1%; 
 				width:100%;
 				img{width:37px; height:37px;}
-				a{color:$color4;}
+				a{color:$color4; }
+				.edit-link{display:inline; padding:10px;}
 			}
 					
 			.reply{ 
-				width: 96%; 
-				min-height:100px;
-				a{ margin:0 1%;}
-				a:hover{ color:$color2; } 
+				width: 98%; 
+				min-height:35px;
+				margin:2% auto;
+				a{ margin:0; display:block; height:35px; list-style:none; width:10%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color2; font-family:($FontStyle); line-height:35px; text-align:center;}
+				a:hover{ background-color:$color2; color:$color1;  } 
 			}
 
 		}/*Comment section end*/
@@ -504,8 +513,8 @@ body{
 	.front_panel{
 		width:100%;
 		display:block;
-		height: 480px;/*new*/
-    	min-height: 480px;/*new*/
+		height: 490px;/*new*/
+    	min-height: 490px;/*new*/
 		margin:0;
 		padding:0;
 		clear:both;
