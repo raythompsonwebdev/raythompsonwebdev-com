@@ -56,9 +56,9 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
-    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/02/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">
+    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/campingadvice-website.jpg" alt="CampingAdvice.com website home page" >
+      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/campingadvice-website.jpg" alt="CampingAdvice.com website home page" >
 
         <figcaption>
 
@@ -107,9 +107,9 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg2">
 
-    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/02/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">
+    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/manneringmusic-website.jpg" alt="Mannering Music website home page">
+      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/manneringmusic-website.jpg" alt="Mannering Music website home page">
 
         <figcaption>
 
@@ -157,9 +157,9 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg3">
 
-    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/02/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">
+    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/Car-Rental-website.jpg" alt="Car Rental website home page">
+      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Car-Rental-website.jpg" alt="Car Rental website home page">
 
         <figcaption>
 
@@ -213,9 +213,9 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg4">
 
-    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/02/shoestore-website-large.jpg"  title="Shoestore website home page">
+    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/shoestore-website-large.jpg"  title="Shoestore website home page">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/shoestore-website-small.jpg" alt="Shoestore website home page">
+      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/shoestore-website-small.jpg" alt="Shoestore website home page">
 
         <figcaption>
 
@@ -265,9 +265,9 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg5">
 
-    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/02/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">
+    <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/greenfootprints-website.jpg" alt="Greenfootprints home page">
+      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/greenfootprints-website.jpg" alt="Greenfootprints home page">
 
         <figcaption>
 
@@ -318,9 +318,9 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
-    <a href="/wordpress/wp-content/uploads/2016/02/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">
+    <a href="/wordpress/wp-content/uploads/2016/06/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/TravelAgency-website.jpg"  alt="Travel Agency website home page" >
+      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/TravelAgency-website.jpg"  alt="Travel Agency website home page" >
 
         <figcaption>
 
@@ -371,7 +371,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg7">
 
-    <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/portfolio-graphics-mixtape.gif" alt="Image of mixtape cover" >
+    <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/portfolio-graphics-mixtape.gif" alt="Image of mixtape cover" >
 
   </figure>
 
@@ -385,7 +385,7 @@ Template Name: Websites
 
       <p><strong>Mixtape Cover-</strong>Mixtape cover for an idea I had for a mixtape of various reggae artists over Wu-Tang Clan instrumentals like C.R.E.A.M. &#44; Triumph and more&#46; Mixtape coming soon to Mr Bullitan you tube channel&#46;</p>
 
-    <div class="links"><a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/Mixtape-cover.jpg" class="fancybox" title="Mixtape cover " >See Image</a></div>
+    <div class="links"><a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Mixtape-cover.jpg" class="fancybox" title="Mixtape cover " >See Image</a></div>
 
   </article>
 
@@ -401,7 +401,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg8">
 
-    <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/image-not-available.gif" alt="">
+    <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/image-not-available.gif" alt="">
 
   </figure>
 
@@ -423,7 +423,7 @@ Template Name: Websites
 
         <div class="links">
 
-      <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/02/image-not-available.gif"  title="">LINK</a>
+      <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/image-not-available.gif"  title="">LINK</a>
 
     </div>
 

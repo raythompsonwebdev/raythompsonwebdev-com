@@ -57,9 +57,9 @@ Template Name: Profile
 
       <figure class="abobe">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/02/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/Small-photoshop-Certicate-300x232.jpg" alt="Adobe-Photoshop-Certificate">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Small-photoshop-Certicate-300x232.jpg" alt="Adobe-Photoshop-Certificate">
 
       </a>
 
@@ -99,7 +99,7 @@ Template Name: Profile
 
       <a href="http://localhost/wordpress/wp-content/uploads//2016/02/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
       </a>
 
@@ -118,9 +118,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
+      <a href="http://localhost/wordpress/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
 
       </a>
 
@@ -139,9 +139,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -160,9 +160,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -181,9 +181,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -202,9 +202,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/themes/raythompwebdesign-com/graphics/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-      <img src="http://localhost/wordpress/wp-content/themes/raythompwebdesign-com/graphics/Digital-Marketing-Certificate-Foundation.jpg" alt="Digital-Marketing-Certificate-Foundation">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-1.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
       </a>
 
@@ -223,9 +223,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/02/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-1.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
       </a>
 
