@@ -109,7 +109,7 @@ Template Name: Websites
 
     <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">
 
-      <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/manneringmusic-website.jpg" alt="Mannering Music website home page">
+      <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/mannering-music-website.jpg" alt="Mannering Music website home page">
 
         <figcaption>
 

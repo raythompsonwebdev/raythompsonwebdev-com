@@ -21,28 +21,27 @@ if ( post_password_required() ) { ?>
  
 // Display Comments Section
 if ( have_comments() ) : ?>
-    <h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses');?> <?php printf('to "%s"', the_title('', '', false)); ?></h3>
-        <div class="navigation">
-            <div class="right"><?php previous_comments_link() ?></div>
-            <div class="right"><?php next_comments_link() ?></div>
-        </div>
-    <ol class="commentlist">
+    <h3 id="comments">
+      <?php comments_number('No Responses', 'One Response', '% Responses');?> <?php printf('to "%s"', the_title('', '', false)); ?></h3>
+         <ol class="commentlist">
+    
      <?php
      wp_list_comments(array(
-      // see http://codex.wordpress.org/Function_Reference/wp_list_comments
-      // 'login_text'        => 'Login to reply',
-      // 'callback'          => null,
-      // 'end-callback'      => null,
-      // 'type'              => 'all',
-      // 'avatar_size'       => 32,
-      // 'reverse_top_level' => null,
-      // 'reverse_children'  =>
+       //see http://codex.wordpress.org/Function_Reference/wp_list_comments
+       //'login_text'        => 'Login to reply',
+       //'callback'          => null,
+       //'end-callback'      => null,
+       //'type'              => 'all',
+       //'avatar_size'       => 32,
+       //'reverse_top_level' => null,
+       //'reverse_children'  =>
       ));
       ?>
     </ol>
         <div class="navigation">
-            <div class="alignleft"><?php previous_comments_link() ?></div>
-            <div class="alignright"><?php next_comments_link() ?></div>
+            <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'raythompwebdesign-com' ); ?></h1>
+            <div class="right"><?php previous_comments_link(__( '&larr; Older Comments', 'raythompwebdesign-com' )) ?></div>
+            <div class="right"><?php next_comments_link(__( 'Newer Comments &rarr;', 'raythompwebdesign-com' )) ?></div>
         </div>
     <?php
     if ( ! comments_open() ) : // There are comments but comments are now closed
@@ -62,7 +61,7 @@ endif;
 comment_form(array(
   // see codex http://codex.wordpress.org/Function_Reference/comment_form for default values
   // tutorial here http://blogaliving.com/wordpress-adding-comment_form-theme/
-  'comment_field' => '<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" aria-required="true"></textarea></p>',
+  'comment_field' => '<p><textarea name="comment" id="comment" cols="58" rows="7" tabindex="4" aria-required="true"></textarea></p>',
   'label_submit' => 'Submit Comment',
   'comment_notes_after' => ''
   ));

@@ -22,15 +22,15 @@ Template Name: Profile
 
     <p>I am in my mid forties&#44; I recently became a granddad&#44; I love 90&#39;s Hip Hop and Reggae Dancehall Music and Quentin Tarintino Movies&#46;</p>
 
-    <p>I currently am not working full&#45;time within the web industry&#44; but I am very much interested in doing so&#46;</p>
+    <p>I have not had any work experience within the web industry&#44; My day job is as Benefits Advisor for a Local Authority, but I am very much interested in transistioning in to web development&#46;</p>
 
-    <p>My interested in web design and web development started late 2011 after attending a short City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;</p>
+    <p>I started learning web design and web development late 2011 first attending a short City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46; then self learning</p>
 
-    <p>I learnt how websites are built using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS2&#44; PHP&#44; MYSQL&#44; Javascript and other web design tools&#46;</p>
+    <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS2&#44; PHP&#44; MYSQL&#44; Javascript and other web design tools&#46;</p>
     
-    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a client&#46;</p> 
+    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients and real clients&#46;</p> 
 
-    <p>Upon completing website design course and gaining certificates &#40;see table right&#41; I realised I needed to learn more about web development so started a combination of attending courses and self teaching&#46;</p>
+    <p>Since completing course in 2012 and gaining certificates &#40;see table right&#41; I needed to learn more about web development and started a combination of attending courses, meet-ups and self teaching&#46;</p>
   </article>
 
  <article class="prof_cont"><!--prof cont-->

@@ -21,7 +21,7 @@
 
 	<h1>Welcome to raythompwebdev.com&#46;</h1>
 
-	<p> My name is Raymond and this is my website about building websites and web applications. I like spending my spare time creating websites and other web applications like;.</p>
+	<p> My name is Raymond and this is my website about website coding and web design. I spend a lot my spare time learning how to create websites and building web sites and other web projects.</p>
 
 	<ul class="webskills">
 		<li><span class="fa fa-mobile"></span>Audio & Video Websites&#44;</li>
@@ -30,9 +30,9 @@
 		<li><span class="fa fa-file-image-o"></span>Video and Image Galleries&#44;</li>
 	</ul>
 	  
-	<p>Each of my web projects are built following the latest coding standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; Beautiful robust designs and great user experience&#46;</p>
+	<p>Each of my websites and web projects are built following the latest coding standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#46;</p> 
 
-	<p>I also aim to ensure each website is accessible, simple to use and code validated and optimised to ensure that it can be found by search engines and viewed within most modern web browsers&#46;</p>
+	<p>I aim to ensure each website is accessible, simple to use, code validated and optimised to ensure that it can be found by search engines and viewed within most modern web browsers&#46;</p>
 
 	<p>Click button on right to view some of my work&#46;</p>
 

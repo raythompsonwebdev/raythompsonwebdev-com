@@ -11,7 +11,7 @@ Template Name: Contact
 
 <h1>Contact Page</h1>
 
-<p>I am available to help with any small scale web development project</p>
+<p>Any queries about website please either complete form on the right <br/> or e-mail me at e-mail addressess below.</p>
 
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
