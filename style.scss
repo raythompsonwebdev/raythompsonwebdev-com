@@ -202,39 +202,39 @@ body{
 	margin:0;
 	padding:0; 
 
-	hgroup{ 
-		width:40%;
-		/*Logo*/
-		h1#logo{
-			font-size:2em; 
-			width:40%; 
-			height:45px; 
-			margin:0 ; 
-			font-weight:bold; 
-			line-height:45px; 
-			color:$color2; 
-			text-shadow:1px 1px 2px #444;     
-			letter-spacing: 0.01em;
-			span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
-			span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
-		}
-		h1#logo-blog{
-			font-size:2em; 
-			width:40%; 
-			height:45px; 
-			margin:0 ; 
-			font-weight:bold; 
-			line-height:45px; 
-			color:$color2; 
-			text-shadow:1px 1px 2px #444; 
-			behavior:url(PIE.htc); 
-			span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
-			span:last-of-type{height:40px; padding:0; margin:0; color:$color1;}
-		}
-		h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; }
-		#title { float:left; min-width:280px; max-width:350px; margin-left:0; }
+	/*Logo*/
+	#logo{
+		font-size:2em; 
+		width:40%; 
+		height:45px; 
+		margin:0 ; 
+		font-weight:bold; 
+		line-height:45px; 
+		color:$color2; 
+		text-shadow:1px 1px 2px #444;     
+		letter-spacing: 0.01em;
+		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
+		span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
 	}
 
+	#logo-blog{
+		font-size:2em; 
+		width:40%; 
+		height:45px; 
+		margin:0 ; 
+		font-weight:bold; 
+		line-height:45px; 
+		color:$color2; 
+		text-shadow:1px 1px 2px #444; 
+		behavior:url(PIE.htc); 
+		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
+		span:last-of-type{height:40px; padding:0; margin:0; color:$color1;}
+	}
+	
+	p{float:left; display:inline-block; width:100%; height:20px; margin: 0; padding:0; line-height:20px; font-size:0.70em; }
+	#title { float:left; min-width:280px; max-width:350px; margin-left:0; }
+
+	
 	/*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/	
 	
 	/*Navigation*/
@@ -667,7 +667,7 @@ body{
 					display: inline-block;  
 					float: left; 
 					color:$color1;
-					li { text-align: left;  list-style: none;  height: 23.40%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
+					li { text-align: left;  list-style: none;  height: 23.56%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
 					li:first-child{border-top: 1px solid #444;  }
 					li:last-child {  height: 9.48657%;  border:none; font-size:1em; }
 					li span {   color:$color1; position: absolute;  bottom: 0; line-height:inherit;  font-size:0.9em;display:inline-block; width:100%; text-align:left; height:100%;}
@@ -794,7 +794,7 @@ body{
 		}
 		
     	.content{clear: both; position: relative;top: 10px;padding: 0px;overflow: hidden; }
-    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 363px;/*new*/ }
+    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 305px;/*new*/ }
 
     	.showcase{margin-top: 10px; width:55%;}
 
@@ -805,7 +805,7 @@ body{
     		height:320px;/*new*/ 
     		margin:0 1% 0 0;  
     		display:inline-block;
-    		
+    		@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
     		img{height:auto;  width: 100%; left: 0;}
     		img:hover {}
 
@@ -939,34 +939,33 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  	width: 100%;  
  	height:100px;
 
- 	hgroup{
-	 	h1#logo{
-	 		font-size:1.9em; 
-	 		width:40%; 
-	 		height:40px; 
-	 		margin:0 0 0 0.4%; 
-	 		font-weight:bold; 
-	 		line-height:40px; 
-	 		color:$color2; 
-	 		text-shadow:1px 1px 2px #444; 
-	 	}
-		h1#logo-blog{
-			font-size:1.9em; 
-			width:40%; 
-			height:35px; 
-			margin:0 0 0 0.4%; 
-			font-weight:bold; 
-			line-height:40px; 
-			color:$color2; 
-			text-shadow:1px 1px 2px #444; 
-		}
-		h2 { margin: 0px 0px 0px 0.5%; font-size:0.65em;}
+ 	#logo{
+ 		font-size:1.9em; 
+ 		width:40%; 
+ 		height:40px; 
+ 		margin:0 0 0 0.4%; 
+ 		font-weight:bold; 
+ 		line-height:40px; 
+ 		color:$color2; 
+ 		text-shadow:1px 1px 2px #444; 
+ 	}
+
+	#logo-blog{
+		font-size:1.9em; 
+		width:40%; 
+		height:35px; 
+		margin:0 0 0 0.4%; 
+		font-weight:bold; 
+		line-height:40px; 
+		color:$color2; 
+		text-shadow:1px 1px 2px #444; 
 	}
+	p {   margin: 0px 0px 0px 0.5%; font-size:0.65em;}
 
 	nav {
 		#mobile-nav { display:none;}
 		#innernav li a{ font-size:0.7em;}
-		#innernav .menu-main-container { width: 100%; left: 51.3%;}
+		#innernav .menu-main-container {    width: 100%;    left: 51.3%;}
 	} 
 	 
 	
@@ -1254,15 +1253,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header {
 
-	hgroup{
-		h1#logo { font-size: 1.8em; width:42%;}
-		h1#logo-blog { font-size: 1.8em; width:42%;}
-		h2 {font-size: 0.65em; margin:0 ;}
-	}
-
+	#logo {    font-size: 1.8em; width:42%;}
+	#logo-blog {    font-size: 1.8em; width:42%;}
+	
+	p {    font-size: 0.65em; margin:0 ;}
+	
 	nav #innernav li a{font-size:0.70em;}
 	nav #mobile-nav { display:none; }
-	nav #innernav .menu-main-container {width: 100%; left: 51.3%;}
+	nav #innernav .menu-main-container {    width: 100%;   left: 51.3%;}
 	
 }
  
@@ -1485,17 +1483,15 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container header { 
 	width: 100%;
 
-	hgroup{
-		 h1#logo {font-size: 1.7em; width: 45%; }
-		 h1#logo-blog {font-size: 1.7em;  width:45%; }
-		 h2 {font-size: 0.60em; }
-	}
+	 #logo {   font-size: 1.7em; width: 45%; }
+	 #logo-blog {  font-size: 1.7em;  width:45%; }
+	 p {    font-size: 0.60em; }
 
 	nav {  
 		width: 42%;
-		#innernav li a {font-size: 0.65em;}
-		#innernav li a:hover {font-size: 0.70em;}
-		#innernav .menu-main-container { width: 100%; left: 44.3%;}
+		#innernav li a {  font-size: 0.65em;}
+		#innernav li a:hover {  font-size: 0.70em;}
+		#innernav .menu-main-container {    width: 100%;    left: 44.3%;}
 		#mobile-nav { display:none; }
 	}
 	
@@ -1779,12 +1775,10 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 #wrapper_container header {
 
-	hgroup{
-		h1#logo { font-size: 1.6em; width:45%; }
-		h1#logo-blog { font-size: 1.6em;  width:45%;}
-		.search-box { width: 30%;font-size: 0.75em;}
-		h2 { font-size: 0.65em; }
-	}
+	#logo { font-size: 1.6em; width:45%; }
+	#logo-blog {  font-size: 1.6em;  width:45%;}
+	.search-box {    width: 30%;    font-size: 0.75em;}
+	p {    font-size: 0.65em; }
 	nav #mobile-nav { display:none; }
 	nav #innernav .menu-main-container {    width: 100%;    left: 44.3%;}
 	
@@ -2055,11 +2049,11 @@ a.nav-toggle:hover{line-height:60px; }
 	width: 100%;   
 	height:62px;
 
-	hgroup{
-		h1#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
-		h1#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
-		h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
-	}
+	#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
+
+	#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
+	p {    margin: 0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
+
 	
 	/*Mobile-Navigation*/
 	nav {
@@ -2344,11 +2338,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	width: 100%;    
 	height:62px;    
 	
-	hgroup{
-		h1#logo { font-size: 1.9em;  text-indent:0%; }
-		h1#logo-blog { font-size: 1.9em;  text-indent:0%;}
-		h2{    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
-	}
+	#logo { font-size: 1.9em;  text-indent:0%; }
+	#logo-blog { font-size: 1.9em;  text-indent:0%;}
+	p {    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
+	
 	/*Mobile-Navigation*/
 	nav {
 
@@ -2608,12 +2601,10 @@ a.nav-toggle:hover{ line-height:60px;}
 	header {
 
 		height:62px;
-
-		hgroup{
-			h1#logo {  font-size:1.8em;}
-			h1#logo-blog {  font-size:1.8em; }
-			h2{ display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
-		}
+		#logo {  font-size:1.8em;}
+		#logo-blog {  font-size:1.8em; }
+		p { display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
+		
 		/*Mobile-Navigation*/
 		nav {
 
@@ -2774,14 +2765,12 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 #wrapper_container {
 		header {
-		    width: 100%;
-		    height:62px;
-		    
-		    hgroup{
-				h1#logo { width: 78%;  }
-				h1#logo-blog {  width: 78%;  }
-				p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
-			}
+	    width: 100%;
+	    height:62px;
+	    
+		#logo { width: 78%;  }
+		#logo-blog {  width: 78%;  }
+		p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
 		}
 
 		#main-content {
@@ -2861,11 +2850,10 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 	height:62px;
 
-	hgroup{
-		h1#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
-		h1#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
-		h2{  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
-	}
+	#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
+	#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
+	p {  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
+		
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3119,11 +3107,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 	
 	height:62px;
 
-	hgroup{
-		h1#logo { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px;  text-align:left;   }
-		h1#logo-blog { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px; text-align:left;  }
-		h2{ text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; height:15px; line-height:15px;}
-	}
+	#logo { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px;  text-align:left;   }
+	#logo-blog { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px; text-align:left;  }
+	p { text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; height:15px; line-height:15px;}
+
 	
 	/*Mobile-Navigation*/
 	nav{
@@ -3353,12 +3340,11 @@ button:hover{color:$color1; background-color:$color2;}
 #wrapper_container header{
 	
 	height:62px;
+
+	#logo { font-size: 1.4em; width: 80%;    }
+	#logo-blog { font-size: 1.4em; width: 80%; }
+	p {   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
 	
-	hgroup{
-	h1#logo { font-size: 1.4em; width: 80%;    }
-	h1#logo-blog { font-size: 1.4em; width: 80%; }
-	h2{   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
-	}
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3570,13 +3556,11 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 	width:100%;
 
-	hgroup{
+	#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
+	#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
+	p {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
 	
-		h1#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
-		h1#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
-		h2 {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
-	
-	}
+
 	/*Mobile-Navigation*/
 	nav {
 

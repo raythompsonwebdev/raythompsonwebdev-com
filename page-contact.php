@@ -11,7 +11,11 @@ Template Name: Contact
 
 <h1>Contact Page</h1>
 
+
 <p>Any queries about website please either complete form on the right <br/> or e-mail me at e-mail addressess below. You can also hit me up on social media</p>
+
+<p>Any queries about website please either complete form on the right <br/> or e-mail me at e-mail addressess below.</p>
+
 
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>

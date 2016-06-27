@@ -7,10 +7,10 @@ Template Name: Terms
 <?php get_header(); ?>
 <section id="main-content" class="group" role="main">
 
-<h1>Terms & Conditions</h1>
+<h1>Terms &amp; Conditions</h1>
 <br/>
 <p><strong>In using this website you are deemed to have read and agreed to the following terms and conditions:</strong></p>
-<p>The following terminology applies to these Terms & Conditions&#44; Privacy Statement and Disclaimer Notice and any or all Agreements:&#34;Client"&#44; &#34;You&#34;and&#34;Your&#34;refers to you&#44;the person accessing this website and accepting the Company&#39;s terms and conditions&#46; The&#34; Company&#34;&#44; &#34;Ourselves&#34;&#44; &#34;We&#34; and &#34;Us&#34;&#44; refers to our Company&#46;  &#34;Party&#44; &#34;Parties&#44; or &#34;Us&#44; refers to both the Client and ourselves&#44; or either the Client or ourselves&#46;  All terms refer to the offer&#44; acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner&#44; whether by formal meetings of a fixed duration&#44; or any other means&#44; for the express purpose of meeting the Client&#39;s needs in respect of provision of the Company&#39;s stated services&#47;products&#44; in accordance with and subject to&#44; prevailing English Law&#46;  Any use of the above terminology or other words in the singular&#44; plural&#44; capitalisation and&#47;or he&#47;she or they&#44; are taken as interchangeable and therefore as referring to same&#46; </p>
+<p>The following terminology applies to these Terms and Conditions&#44; Privacy Statement and Disclaimer Notice and any or all Agreements:&#34;Client"&#44; &#34;You&#34;and&#34;Your&#34;refers to you&#44;the person accessing this website and accepting the Company&#39;s terms and conditions&#46; The&#34; Company&#34;&#44; &#34;Ourselves&#34;&#44; &#34;We&#34; and &#34;Us&#34;&#44; refers to our Company&#46;  &#34;Party&#44; &#34;Parties&#44; or &#34;Us&#44; refers to both the Client and ourselves&#44; or either the Client or ourselves&#46;  All terms refer to the offer&#44; acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner&#44; whether by formal meetings of a fixed duration&#44; or any other means&#44; for the express purpose of meeting the Client&#39;s needs in respect of provision of the Company&#39;s stated services&#47;products&#44; in accordance with and subject to&#44; prevailing English Law&#46;  Any use of the above terminology or other words in the singular&#44; plural&#44; capitalisation and&#47;or he&#47;she or they&#44; are taken as interchangeable and therefore as referring to same&#46; </p>
 <br/>
 <h2>Privacy Statement</h2>
 <p>We are committed to protecting your privacy&#46;Authorized employees within the company on a need to know basis only use any information collected from individual user&#46;  We constantly review our systems and data to ensure the best possible service to our users &#46; </p>
@@ -68,10 +68,10 @@ Template Name: Terms
 <br/>
 
 <h2>Notification of Changes</h2>
-<p>The Company reserves the right to change these Terms & Conditions from time to time as it sees fit and your continued use of the site will signify your acceptance of any adjustment to these terms&#46;  If there are any changes to our privacy policy&#44; we will announce that these changes have been made on our home page and on other key pages on our site&#46;  If there are any changes in how we use our site customers&#39; Personally Identifiable Information&#44; notification by e-mail or postal mail will be made to those affected by this change&#46;  Any changes to our privacy policy will be posted on our web site 30 days prior to these changes taking place&#46;  You are therefore advised to re-read this statement on a regular basis</p>
+<p>The Company reserves the right to change these conditions from time to time as it sees fit and your continued use of the site will signify your acceptance of any adjustment to these terms&#46;  If there are any changes to our privacy policy&#44; we will announce that these changes have been made on our home page and on other key pages on our site&#46;  If there are any changes in how we use our site customers&#39; Personally Identifiable Information&#44; notification by e-mail or postal mail will be made to those affected by this change&#46;  Any changes to our privacy policy will be posted on our web site 30 days prior to these changes taking place&#46;  You are therefore advised to re-read this statement on a regular basis</p>
 <p>These terms and conditions form part of the Agreement between the Client and ourselves&#46;  Your accessing of this website and&#47;or undertaking of a booking or Agreement indicates your understanding&#44; agreement to and acceptance&#44; of the Disclaimer Notice and the full Terms and Conditions contained herein&#46;  Your statutory Consumer Rights are unaffected&#46;  </p>
 <br/>
-<br/> 
+<br/>   		
 
 </section>
 <div class="clearfix"></div>

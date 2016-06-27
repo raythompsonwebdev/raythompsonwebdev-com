@@ -18,19 +18,19 @@ Template Name: Profile
 
   <article class="intro-text">
 
-    <h1>I build websites and love web development&#46;</h1>
+    <h1>My name is Raymond Thompson and I live in London&#46;</h1>
 
-    <p>I am in my mid forties&#44; I recently became a granddad&#44; I love 90&#39;s Hip Hop and web design and web development, particularly front-end development and Search Engine Optimisation&#46;</p>
+    <p>I am in my mid forties&#44; I recently became a granddad&#44; I love 90&#39;s Hip Hop and Reggae Dancehall Music and Quentin Tarintino Movies&#46;</p>
 
-    <p>I have not had any actual work experience within the web industry&#44; My day job is as Benefits Advisor for a Local Authority, but I am very much interested in web design and web development&#46;</p>
+    <p>I have not had any work experience within the web industry&#44; My day job is as Benefits Advisor for a Local Authority, but I am very much interested in transistioning in to web development&#46;</p>
 
-    <p>I started learning how to build websites late 2011 after attending a 7 Month part-time City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;</p>
+    <p>I started learning web design and web development late 2011 first attending a short City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46; then self learning</p>
 
     <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS2&#44; PHP&#44; MYSQL&#44; Javascript and other web design tools&#46;</p>
     
     <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients and real clients&#46;</p> 
 
-    <p>Since completing course in 2012 and gaining certificates &#40;see table right&#41; I needed to learn more about how to build websites and started a combination of learning through on-line courses, meet-ups, reading books and tutorials&#46;</p>
+    <p>Since completing course in 2012 and gaining certificates &#40;see table right&#41; I needed to learn more about web development and started a combination of attending courses, meet-ups and self teaching&#46;</p>
   </article>
 
  <article class="prof_cont"><!--prof cont-->
@@ -57,9 +57,9 @@ Template Name: Profile
 
       <figure class="abobe">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Large-Photoshop-Certicate-Large.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Photoshop-Certicate-Small.jpg" alt="Adobe-Photoshop-Certificate">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Small-photoshop-Certicate-300x232.jpg" alt="Adobe-Photoshop-Certificate">
 
       </a>
 
@@ -79,8 +79,8 @@ Template Name: Profile
 
       <figure class="abobe">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads//2016/06/Large-Dreamweaver-Certicate-Large.jpg" class="fancybox" title="Adobe Certificate in Communication">
-      <img src="<?php bloginfo('url');?>/wp-content/uploads//2016/06/Dreamweaver-Certicate-Small.jpg" alt="Adobe-Deamweaver-Certificate"></a>
+      <a href="http://localhost/wordpress/wp-content/uploads//2016/02/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
+      <img src="http://localhost/wordpress/wp-content/uploads//2016/02/Small-Dreamweaver-Certicate-300x232.jpg" alt="Adobe-Deamweaver-Certificate"></a>
 
       </figure>
 
@@ -97,9 +97,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads//2016/06/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City & Guilds Level One">
+      <a href="http://localhost/wordpress/wp-content/uploads//2016/02/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ITQ-USERS-LEVEL1-SMALL.gif" alt="City & Guilds-Level-One">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
       </a>
 
@@ -118,9 +118,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City & Guilds Level Two">
+      <a href="http://localhost/wordpress/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-&-Guilds-Level-Two">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
 
       </a>
 
@@ -139,9 +139,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City & Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-SMALL.gif" alt="City & Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -160,9 +160,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Large-Udemy-Certicate-Large.jpg" class="fancybox" title="Udemy-Web-Development-Certificate">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Udemy-Certicate-Small.jpg" alt="Udemy-Web-Development-Certificate">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -170,7 +170,7 @@ Template Name: Profile
 
       <h3>Udemy &#45; Various</h3>
       <p>Topics&#58;</p>
-      <p>Google Analytics&#44; Rich Snippets&#44; Basics of Agile/Scrum&#44;SEO for Wordpress&#44;SASS Workflow&#44; Web Development Fundamentals Using Javascript&#44; Lean Canvas Course&#44; Learn AJAX with PHP from Scratch using Jquery&#46;</p>
+      <p>Google Analytics&#44; Rich Snippets&#44; Basics of Agile/Scrum&#44;SEO for Wordpress&#44;SASS Workflow&#44; Web Development Fundementals Using Javascript&#44; Lean Canvas Course&#44; Learn AJAX with PHP from Scratch using Jquery&#46;</p>
 
       <p><strong><i>Click Image to Enlarge&#46;</i></strong></p>
     </article>
@@ -181,9 +181,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -202,9 +202,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Shaw-Academy-Digital-Marketing-Certificate-Foundation">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Small.jpg" alt="Shaw-Academy-Digital-Marketing-Certificate-Foundation">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-1.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
       </a>
 
@@ -223,9 +223,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Shaw-Academy-Digital-Marketing-Certificate-Foundation">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Large.png" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-      <img src="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-Small.jpg" alt="Shaw-Academy-Digital-Marketing-Certificate-Foundation">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/06/Digital-Marketing-Certificate-Foundation-1.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
       </a>
 
@@ -252,18 +252,14 @@ Template Name: Profile
 <div class="front_panel"><!--front panel--> 
 
   <article class="intro-text">
+ <p>Over the past Four years I consider myself to have developed fairly good understanding of how to use coding languages HTML5&#44; CSS3&#44; Javascript and Jquery to create clean&#44; standards compliant&#44; easy to use websites&#46;</p>
 
-    <p>Through spending my spare time reading web development books &#44; watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups I have been able to create this website and the others web projects&#46;</p>
-
- <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax to be able to create clean&#44; standards compliant&#44; easy to use websites&#46;</p>
+    <p>Through spending any spare time I have reading web development books &#44; watching web development video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups I have been able to create this website and the others featured on this website&#46;</p>
  
-    <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap&#44; build tools Grunt and Sass and version control system GitHub, which help speed up workflow and organising code&#46; </p>
+    <p>I like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap&#44; build tools Grunt and Sass and version control system GitHub to help speed up workflow and organising code&#46; I am in process of creating my own css framework&#46;</p>
 
-     <p> I also use various web based and standalone tools like Keyword Planner to carry out Keyword research and get content ideas, WC3 Validator to validate code and Google analytics for conversions rates among other tools.</p>
+    <p>I am not a designer&#44; graphic or otherwise but I am able use software programs Photoshop&#44; Inkscape and Illustrator to create website layouts&#44; edit existing images and create simple logos and graphics&#46;</p>
 
-    <p>I use software programs Photoshop&#44; Inkscape and Illustrator to create website layouts and wireframes&#44; edit existing images and create simple logos and graphics&#46;</p>
-
-   
     <br/> 
   </article>
 
