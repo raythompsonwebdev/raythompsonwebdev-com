@@ -12,6 +12,7 @@ Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
 */
 
+
 $color1:#062351;
 $color2:#CCD3DE;
 $color3:#c0c9dd;
@@ -20,8 +21,9 @@ $color5:#6e757f;
 $color6:#9DA3AB;
 $color7:#575A5E;
 $color8:#000;
+$color9:#65686B;
 
-$FontStyle: 'Kelson Sans',Sawasdee, Helvetica,sans-serif ;
+$FontStyle: 'Titillium Web','Kelson Sans', Verdana, sans-serif ;
 
 
 @mixin Transition( $move... ) {
@@ -50,9 +52,18 @@ $FontStyle: 'Kelson Sans',Sawasdee, Helvetica,sans-serif ;
           box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
 }
 
+@mixin boxShadow( $shadow... ) {
+      -webkit-box-shadow: $shadow;
+      -moz-box-shadow: $shadow;
+      -o-box-shadow: $shadow;
+      box-shadow: $shadow;
+}
+
+
 @charset "utf-8";
 
-@font-face{font-family:Kelson Sans;src:url('/fonts/Kelson Sans Regular.otf') format (opentype); }
+/*@font-face{font-family:Kelson Sans;src:url('/fonts/Kelson Sans Regular.otf') format (opentype); }*/
+
 
 *, *:before, *:after{@include box-sizing($type:border-box);}
 * html { font-size: 1em; margin:0; padding:0; outline:none;}
@@ -119,7 +130,6 @@ a{
 	color:$color1; 
 	font-size:1em;
 	img{border:0px; outline:none;}
-	
 	&:visited {color: $color7;}
 	&:focus {color: $color2;}
 	&:active{color: $color5;}
@@ -141,7 +151,7 @@ pre {
 
 
 hr{background-color:$color6; height:1px; margin:5% auto; width:80%; }
-h1, h2, h3 #blogrightside {font-family:($FontStyle); color:$color1; font-size:1em; font-weight:700; padding:0; margin:0;}
+h1, h2, h3 {font-family:($FontStyle); color:$color1; font-size:1em; font-weight:700; padding:0; margin:0;}
 p{font-family:($FontStyle); color:$color1; line-height: 1.5em; font-size: 1em; font-weight:500;padding:0;margin:0; }
 ul{ font-size:1em; padding:0; margin:0;}
 li{ @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); list-style:none; font-size:1em; margin:0;}
@@ -161,7 +171,7 @@ button:hover{color:$color1; background-color:$color2;}
 
 .container {width:38.729257%;float:right; margin:0% 1% 1% 2%; }
 
-.social_media_container {float:left; width: 40.7293%; display: block;  margin: 1% ; height:250px}
+.social_media_container {float:left; width: 40.7293%; display: block;  margin: 1% ; height:auto;}
 
 .bypostauthor{ font-size:1em;}
 .newExcerpt{ display:block; padding:1% 0; margin:0;}
@@ -187,19 +197,19 @@ body{
 /*Header*/
 #wrapper_container header { 
 	width: 100%;  
-	height: 80px; 
+	height: 90px; 
 	background-color: $color3; 
 	margin:0;
 	padding:0; 
 
 	/*Logo*/
 	#logo{
-		font-size:1.9em; 
-		width:30%; 
-		height:40px; 
+		font-size:2em; 
+		width:40%; 
+		height:45px; 
 		margin:0 ; 
 		font-weight:bold; 
-		line-height:40px; 
+		line-height:45px; 
 		color:$color2; 
 		text-shadow:1px 1px 2px #444;     
 		letter-spacing: 0.01em;
@@ -208,12 +218,12 @@ body{
 	}
 
 	#logo-blog{
-		font-size:1.9em; 
-		width:30%; 
-		height:40px; 
+		font-size:2em; 
+		width:40%; 
+		height:45px; 
 		margin:0 ; 
 		font-weight:bold; 
-		line-height:40px; 
+		line-height:45px; 
 		color:$color2; 
 		text-shadow:1px 1px 2px #444; 
 		behavior:url(PIE.htc); 
@@ -242,8 +252,8 @@ body{
 		#innernav .menu-main-container #menu-main{width:100%; display:block;}
 		#innernav .menu-item {width:20%;float:left; height:35px; list-style:none;margin:0; padding:0; text-align:center; display:inline-block;}
 		#innernav li.menu-item:hover { background-color: $color1; }
-		#innernav li a { width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0; letter-spacing:0.1em;  font-size:0.75em; display:block;}
-		#innernav li a:hover { line-height:35px; font-weight:bold;color:$color4; font-size:0.80em;}
+		#innernav li a {font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0; letter-spacing:0.1em;  font-size:0.85em; display:block;}
+		#innernav li a:hover { line-height:35px; font-weight:bold;color:$color4; font-size:0.90em;}
 		#mobile-nav { display:none; }
 	} 
 		 
@@ -261,9 +271,9 @@ body{
 	min-height:740px;
 	
 	hgroup{margin:0; padding:0;}
-	h1{font-size:1.5em; padding:0; color:$color1; width:98%;letter-spacing: 0.05em; line-height:35px; margin:0 0 0.1em 0;height:35px; clear:both;}
-	h2{font-size:1.4em;  margin:0 0 0 0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height:35px; height:35px;}
-	h3{font-size:1.3em;  margin:0 0 0 0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height:35px; height:35px;}
+	h1{font-size:1.5em; padding:0; color:$color1; width:98%;letter-spacing: 0.05em; line-height:35px; margin:0;height:35px; clear:both;}
+	h2{font-size:1.4em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height:35px; height:35px;}
+	h3{font-size:1.3em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height:35px; height:35px;}
 	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}
 	/* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
 	ul{ list-style: none; }
@@ -272,21 +282,23 @@ body{
 
 	/*Right-side*/
 	#blogrightside{ 
-		padding-top:1%;
+		padding-top:0;
 		height:auto; 
-		width:24%; 
+		width:22%; 
 		float:left;
 		font-family:($FontStyle); 
 		display:inline-block; 
-		margin:0; 
-		h2{width: 96%;height: 40px;margin: 0px;padding: 0px;font-size: 1.2em;line-height:40px;background-color: $color7;color: $color4;letter-spacing: 0.1em;text-align: center; margin:auto; font-weight:700;}
+		margin:0.75% 0 0 0; 
+		
+		h2{ width: 96%;height: 40px;margin: 0px;padding: 0px;font-size: 1.2em;line-height:40px;background-color: $color7;color: $color4;letter-spacing: 0.1em;text-align: center; margin:auto; font-weight:700;}
+		
 
 		.blogbox{
 
 			display:block;
 			height:auto;
-			width: 96%;
-			margin: auto;
+			width: 100%;
+			margin:2% 0 0 0;
 
 				/*Search Box*/
 			.social-1 {
@@ -297,7 +309,7 @@ body{
 				font-family:($FontStyle);
 				form.searchform { text-align: left; max-width: 100%; margin: 0px; padding:0px; float:right; height:100%; display:block;}
 				form.searchform div{ margin:0; padding:0; width:100%;  height:100%; display:block;}
-				form.searchform div label{width: 25%; height:100%; font-size: 0.8em; display: inline-block; float:left; line-height:30px; height:30px; padding:0;}
+				form.searchform div label{width: 25%; height:100%; font-size: 0.8em; display: inline-block; float:left; line-height:30px; height:30px; padding:0; color:$color1;}
 				form.searchform div input {width:50%;height:30px; font-size:1em; margin:0px; padding:0px; display:inline-block;font-size: 1.5em; float:left;border: none;line-height:30px; }
 				form.searchform div input[type=submit]{margin: 0 ; height:30px; list-style:none; background-color:$color1; width:25%; color:$color2; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.1em; border:none; font-size:0.9em;border:none; }
 				form.searchform div input[type=submit]:hover{ color:$color1; background-color:$color2; }
@@ -305,16 +317,16 @@ body{
 
 			
 			#social h2{width:100%;}
-			.tagcloud{width:96%; margin:auto; font-size:100%; }
+			.tagcloud{width:90%; margin:auto; font-size:100%; display:block; }
 			.widget { 
 				display:block;   
 				font-family:($FontStyle);
-				padding-top:3%;
-				ul{width:100%; height:auto; display:inline-block; margin:1% 0;}
+				padding:0;
+				ul{width:100%; height:auto; display:inline-block; margin:0;}
 				ul.children > li{background-color:$color2; margin:1% auto;}
-				ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:1% auto; text-align:center;}
-				ul li a{ width:100%; display:inline-block; font-weight:400; letter-spacing:0.02em; font-size:0.9em; line-height:35px;}
-				ul li a:hover{color:$color4; background-color:$color1; font-size:1em;}
+				ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:4% auto; text-align:center;}
+				ul li a{ width:100%; display:block; font-weight:400; letter-spacing:0.02em; font-size:0.9em; line-height:35px; background-color:$color2;}
+				ul li a:hover{color:$color1; background-color:$color4; font-size:1em;}
 				ul li.recentcomments a{display:block; background-color:$color2;}
 				ul li .comment-author-link a{display:block; background-color:$color2;} 
 			}
@@ -327,7 +339,9 @@ body{
 		height:auto; 
 		width:75%; 
 		font-size:1em; 
-		float:left; 
+		float:left;
+		margin-right:2%;
+		 
 		article .imagebox .box .slide-caption p {  font-size: 100%;     width: 98%;}
 
 		.left-col{
@@ -341,38 +355,52 @@ body{
 				padding: 1% 0; 
 				width: 100%; 
 				margin: 1% 0;
+				
+				
 				h1{font-size: 1.35em; margin:0 auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 40px; height: 40px;}
 				h2{text-indent:0px; font-size: 1.2em;margin: 0.5em auto; padding: 0px;letter-spacing: 0.05em;width: 98%; background-color:$color4; color:$color1; line-height: 40px; height: 40px;}
 				h3{margin: 1% auto; height: 40px;line-height: 30px;font-size: 1.15em; text-indent:0%; width:98%;}
 				h3 a{ padding-left:0;  height:100%; }
+				ul{line-height: 1.5em;font-size: 0.9em; text-indent:0; width:98%; margin: 1% auto;display:block;}
+				ul li{  width: 100%; margin:0px; font-size:1em; }
+				ul li a{  margin-left:0px;}
+				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.85em; color:$color8; font-weight:350; line-height:1.75em;letter-spacing:0.05em;}
+				
 				.thumb{width: 58%; height:auto; margin: 1% auto; display:block; clear:both;}
 				.postimg{width:29%; margin: 1% auto;}
 				.featuredImage{height:auto; width:90%; margin:1em auto;}
-				
-				.byline{
+
+
+				header.byline{
 					width:98%; 
 					margin:auto; 
-					height:50px; 
+					height:60px; 
 					font-size:0.9em; 
 					line-height:1.5em;
-					p{width:80%; margin: 0px; display: inline-block; padding:0;}
-					a{font-size: 0.95em; color: $color1; margin:auto; width:96%; }
+					background-color: #fff;
+					p{width:auto; margin: 0px; display: inline-block; padding:0;}
+					a{font-size: 0.95em; color: $color1; margin:auto; width:100%; }
+				}
+
+				footer.byline{
+					width:98%; 
+					margin:auto; 
+					height:70px; 
+					font-size:0.9em; 
+					line-height:1.5em;
+					p{ margin: 0px; display: inline-block; padding: 0; width:auto;}
+					a{font-size: 0.95em; color: $color1; margin:auto; width:100%; }
+					p.right{width:10%; float:right; font-size:1.3em; height:40px; background-color:$color2; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%;}
+					p.right a.comments-count:hover{color:$color4;}
+
 				}
 				
 				.newsExcerpt{ height:auto;}
 								
-				ul{line-height: 1.5em;font-size: 0.9em; text-indent:0; width:98%; margin: 1% auto;display: inline-block;}
-				ul li{  width: 100%; margin:0px 0px 0px 1em; font-size:1em; }
-				ul li a{  margin-left:15px;}
-				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.85em; color:$color8; font-weight:350; line-height:1.75em;letter-spacing:0.05em;}
-
-				p.right{width:5%; float:right; font-size:1em; height:40px; background-color:$color2; margin:0; }
-				p.right:hover{ background-color:$color1;}
-
-				.right .comments-count{position:relative; top:15%;left:40%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
-				.right .comments-count:hover{color:$color4;}
-
-				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:35px; line-height:1.5em; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
+				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:30px; line-height:15px; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
 				.read_more:hover{ color:$color4; background-color:$color1; font-weight:bold; }
 				/*Social media share buttons*/
 				.sd-content{
@@ -405,7 +433,7 @@ body{
 					font-size:1em; 
 					font-weight:500; 
 					height:40px; 
-					line-height:30px; 
+					line-height:40px; 
 					color:$color8;
 					a{display:inline-block;  font-weight:bold; height:30px; margin:0;}
 					a:hover{color:$color4;}
@@ -420,23 +448,31 @@ body{
 			height:auto; 
 			background-color:$color4; 
 			float:left;
+			@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
 
 			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em;}
-			h3#reply-title {width:100%; margin:1% auto; padding:0; font-size:1.1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:1%;}
+			h3#reply-title {width:96%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
 
-			.navigation{height:50px;}
+			.navigation{height:50px; width:98%; margin:1% auto;}
 			
 			/*Comment Form*/
 
-			.comment-content{width:98%; margin:2% auto; font-size:1em;}
-			.comment-reply-title, #comments {margin:0; min-height: 100px; line-height: 1.5em; text-indent: 1%;}
+			.comment-content{
+				width:96%; 
+				margin:2% auto; 
+				font-size:1em;
+				min-height:100px;
+				p{width:100%;}
+			}
+			.comment-reply-title, #comments {margin:0;height: 35px; min-height: 35px; line-height: 35px; text-indent: 1%;width: 96%; font-size:1em;}
 			.comment-response #submit {  height: 32px;  list-style: outside none none;  background-color: $color1;  width: 23.9652%;  color: $color2;  @include Transition(background 0.3s linear 0s, color 0.3s linear 0s ); font-family:($FontStyle);  font-size: 1em; margin: 0px auto;  border: medium none;}
 			
 			.commentlist { 
 				padding-left: 0px;
+				margin:0;
 				.comment-meta { display:block; background-color:$color7; height:auto; font-size:0.9em; text-indent:5px; }
-				.comment-meta .comment-author { display:block; line-height: 30px; height: 30px;}
-				.comment-meta .comment-metadata{ display:block; line-height: 30px; height: 30px;}
+				.comment-meta .comment-author { display:block; line-height: 50px; height: 50px; padding:0;}
+				.comment-meta .comment-metadata{ display:block; line-height: 30px; height: 30px; padding:0;}
 				li ul{width:100%; margin-left:0;}
 				li {padding:0;}
 			}
@@ -464,15 +500,17 @@ body{
 				letter-spacing:0.1em;  
 				padding:1%; 
 				width:100%;
-				img{width:37px; height:37px;}
-				a{color:$color4;}
+				img{width:5%; height:85%;}
+				a{color:$color4; }
+				.edit-link{display:inline; padding:10px;}
 			}
 					
 			.reply{ 
-				width: 96%; 
-				min-height:100px;
-				a{ margin:0 1%;}
-				a:hover{ color:$color2; } 
+				width: 98%; 
+				min-height:35px;
+				margin:2% auto;
+				a{ margin:0; display:block; height:35px; list-style:none; width:10%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color2; font-family:($FontStyle); line-height:35px; text-align:center;}
+				a:hover{ background-color:$color2; color:$color1;  } 
 			}
 
 		}/*Comment section end*/
@@ -504,8 +542,8 @@ body{
 	.front_panel{
 		width:100%;
 		display:block;
-		height: 510px;/*new*/
-    	min-height: 510px;/*new*/
+		height: 490px;/*new*/
+    	min-height: 490px;/*new*/
 		margin:0;
 		padding:0;
 		clear:both;
@@ -581,6 +619,8 @@ body{
 			/*.imagebox .box:hover .image-4 #image-5 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
 			.imagebox .box:hover .image-4 #image-4 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
 			/* Content Section Leftbox contentboxes Caption Common Style */
+
+
 		
 			 
 			/** Caption 4: Slide **/
@@ -598,14 +638,15 @@ body{
 		.prof_cont{ 
 
 			width: 50%;/*new*/ 	
-			height: 100%; 
+			height: 97%; 
 			background-color:$color4;  
 			margin:0;
 			display:inline-block;
 			font-family:($FontStyle);
-			border:2px #CCD3DE solid;
+			
+			
 
-			h2 { width: 100%; height: 50px; margin: 0px; padding: 0px;   font-size: 1.2em; line-height: 50px; background-color: $color7;   color: $color4; text-indent: 1.5%; letter-spacing: 0.05em; font-weight:500;}
+			h2 { width: 100%; height: 50px; margin: 0px; padding: 0px;   font-size: 1.4em; line-height: 50px; background-color: $color7;   color: $color4; text-indent: 1.5%; letter-spacing: 0.05em; font-weight:500;}
 			#social { width:50%; display:block; float:left; margin-top:0px;}
 			#social h3{width:100%; margin:2% 0px;}
 
@@ -626,7 +667,7 @@ body{
 					display: inline-block;  
 					float: left; 
 					color:$color1;
-					li { text-align: left;  list-style: none;  height: 21.99%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
+					li { text-align: left;  list-style: none;  height: 23.56%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
 					li:first-child{border-top: 1px solid #444;  }
 					li:last-child {  height: 9.48657%;  border:none; font-size:1em; }
 					li span {   color:$color1; position: absolute;  bottom: 0; line-height:inherit;  font-size:0.9em;display:inline-block; width:100%; text-align:left; height:100%;}
@@ -664,10 +705,10 @@ body{
 
 				.mask { 
 					float:left; 
-					width:72%; 
+					width:73%; 
 					height: 390px;
 					/*new*/ 
-					margin:5px 0 0 10px;
+					margin:1% 0 0 1%;
 					overflow:hidden;
 					div.slider-body{
 						.panel { 
@@ -679,8 +720,8 @@ body{
 							
 							h2 { padding:0 ; color:$color4; line-height:40px; text-indent:1.5%; height:40px; background-color: $color1; letter-spacing: 0.0em;font-size: 1.05em; font-weight: bold;}
 
-							.abobe{float: none;/*new*/ width: 170px;/*new*/ height:131px;/*new*/  margin: 1% auto;/*new*/    outline: 0;   display: block;/*new*/ }
-							.cert{float: none;/*new*/   width: 116px;/*new*/height:166px;/*new*/      margin: 1% auto;/*new*/   display: block;/*new*/}
+							.abobe{float: none;/*new*/ width: 43.589743%;/*new*/ height:33.630272%;/*new*/  margin: 1% auto;/*new*/    outline: 0;   display: block;/*new*/ }
+							.cert{float: none;/*new*/   width: 29.780471%;/*new*/height:42.564102%;/*new*/      margin: 1% auto;/*new*/   display: block;/*new*/}
 							h3 {font-size:0.91em; width:auto; margin:0; text-indent: 0px; margin-top:1%;letter-spacing: 0.03em; line-height:1.4em; font-weight:bold;}
 							p {font-size: 0.85em;/*new*/  width: 100%;/*new*/ margin-top:1%; font-weight:300; color:$color1; display:inline-block; line-height: 1.6em;}
 							p:first-child { font-weight:bold;}
@@ -753,46 +794,62 @@ body{
 		}
 		
     	.content{clear: both; position: relative;top: 10px;padding: 0px;overflow: hidden; }
-    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 305px;/*new*/}
+    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 305px;/*new*/ }
 
     	.showcase{margin-top: 10px; width:55%;}
+
+    	
     	.showcase-img{
     		float: left; 
     		width: 250px;/*new*/   
     		height:320px;/*new*/ 
     		margin:0 1% 0 0;  
     		display:inline-block;
-    		img{height:auto;}
-    		figcaption{height:100%; display:block;}
-    		figcaption div.mask{ position:absolute; z-index:1; top:0px; left:0px; margin:0px; width: 91%; opacity:0; display:block;  height:100%; overflow:visible;  @include Transition(all 0.4s ease-in-out ); @include TransScale(scale(0.5)); }
+    		@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
+    		img{height:auto;  width: 100%; left: 0;}
+    		img:hover {}
+
+    		/*figcaption div.mask{ position:absolute; z-index:1; top:0px; left:0px; margin:0px; width: 91%; opacity:0; display:block;  height:100%; overflow:visible;  @include Transition(all 0.4s ease-in-out ); @include TransScale(scale(0.5)); }
     		figcaption div.mask:hover{ opacity: 1; @include TransScale(scale(1)); border:125px solid rgba(0,0,0,0.5); }  
     		figcaption div.mask .info {position:relative;	top: -8px;	opacity:0;	 background:url('/wordpress/wp-content/themes/raythompwebdesign-com/graphics/link1.png') center no-repeat;  display: block; text-decoration: none;  padding:5%;  width: 50px; height: 50px;  left: -20px; @include Transition(all 0.4s ease-in-out ); z-index:99;  color:$color4; text-indent:-9999px;  } 
     		figcaption .mask .info:hover {  opacity:1; text-decoration: none;   padding:0; @include TransScale(scale(1,1));  text-indent:-9999px; }
+
+    		.port-8.effect-1 img{transition: 0.5s;}
+			.port-8.effect-1:hover img{transform: scale(1.1);}
+			.port-8.effect-1 .text-desc{left: 0; position: absolute; top: 0; width: 100%; height: 100%; transform: scale(0);  backface-visibility: hidden;}
+			.port-8.effect-1:hover .text-desc{opacity: 1; transform: scale(1); border-radius: 20%;}
+
+    		*/
+    		.showcase-content{ 
+	    		height:100%; 
+	    		display:none;  
+	    		width: 92%;/*new*/  
+	    		background-color:$color4; 
+	    		padding:1%; 
+	    		border:2px $color2 solid; 
+	    		position:absolute; 
+	    		z-index:10; 
+	    		left:0px; 
+	    		height: 85%; 
+	    		top:0;
+	    		h1{text-indent:0px; font-size:0.95em; width:100%; color:$color1;line-height: 25px; width:100%; margin:0; height:25px;}
+	    		p{font-size:0.75em; width:100%; margin:1% 0; letter-spacing:0.05em; line-height:1.6em;}
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:block;
+	    			width:100%;
+	    			a{ height:30px; list-style:none; background-color:$color2; width: 49%; color:$color1;  letter-spacing:0.1em; border:none; font-family: ($FontStyle); font-size: 0.85em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; display:inline-block; text-align:center; @include Transition(background 0.2s linear 0s );}
+	    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
+	    			a.fancybox { font-size:0.85em; height:30px; display:inline-block; line-height: 30px; text-align: center; margin:1% 1% 1% 0; padding:0.5%; float:left; width: 49%;}
+	    			a.fancybox:hover{ color:$color4; background-color:$color1; font-weight:bold; }
+	    		}
+    		}
+
+
     	}
      
-    	.showcase-content{ 
-    		display:none;  
-    		width: 99.5%;/*new*/  
-    		background-color:#fff; 
-    		padding:1%; 
-    		border:2px #CCD3DE solid; 
-    		position:absolute; 
-    		z-index:10; 
-    		left:0; 
-    		height: 84%; 
-    		top:0;
-    		h1{text-indent:0px; font-size:0.85em; width:100%; color:$color1;line-height: 20px; width:100%; margin:0; height:20px;}
-    		p{font-size:0.75em; width:100%; margin:0; letter-spacing:0.05em; line-height:1.6em;}
-    		.links {
-    			height:40px; 
-    			margin:0; 
-    			display:inline-block;
-    			width:100%;
-    			a{ height:30px; list-style:none; background-color:$color2; width:45%; color:$color1;  letter-spacing:0.1em; border:none; font-family: ($FontStyle); font-size: 0.85em; line-height:30px;  padding:0.5%; margin:1% 1% 1% 0; display:inline-block; text-align:center; @include Transition(background 0.2s linear 0s );}
-    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
-    			a.fancybox { font-size:0.9em; height:30px; display:block; line-height: 30px; text-align: center; margin:0; padding:0;}
-    		}
-    	}
+    	
 
 	}
 }
@@ -883,23 +940,23 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  	height:100px;
 
  	#logo{
- 		font-size:1.8em; 
+ 		font-size:1.9em; 
  		width:40%; 
- 		height:35px; 
+ 		height:40px; 
  		margin:0 0 0 0.4%; 
  		font-weight:bold; 
- 		line-height:35px; 
+ 		line-height:40px; 
  		color:$color2; 
  		text-shadow:1px 1px 2px #444; 
  	}
 
 	#logo-blog{
-		font-size:1.8em; 
+		font-size:1.9em; 
 		width:40%; 
 		height:35px; 
 		margin:0 0 0 0.4%; 
 		font-weight:bold; 
-		line-height:35px; 
+		line-height:40px; 
 		color:$color2; 
 		text-shadow:1px 1px 2px #444; 
 	}
@@ -907,6 +964,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	nav {
 		#mobile-nav { display:none;}
+		#innernav li a{ font-size:0.7em;}
 		#innernav .menu-main-container {    width: 100%;    left: 51.3%;}
 	} 
 	 
@@ -980,8 +1038,29 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.thumb{width:15%; margin-left:20px; }
 				p{ font-size:0.80em; }
 				.newExcerpt{}
-				.read_more{ margin-left:1%; padding:5px; height:25px; list-style:none; width:14.9652349%; font-size:0.85em; }
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.90em;}
+				header.byline{
+					 
+					font-size:0.8em; 
+					line-height:1.5em;
+					
+					a{font-size: 0.85em;  }
+				}
+
+				footer.byline{
+					 
+					font-size:0.8em; 
+					line-height:1.5em;
+					p{ margin: 0px; padding: 0;}
+					a{font-size: 0.85em;  }
+					p.right{ font-size:1.2em; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{ line-height:40px; }
+					p.right a.comments-count:hover{color:$color4;}
+
+				}
+				.read_more{ margin-left:1%; padding:5px; height:30px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 30px; }
+				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.90em; line-height: 30px;}
 				.sd-content ul li {  width: 5%;}
 				.bypostauthor{ font-size:1em;}
 			}
@@ -1011,11 +1090,13 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.front_panel {
 		
 		clear:both;
+		height:520px;
+		min-height:520px;
     	  	    	   	
     	.intro-text{
 
-    		p {   width: 99%;   margin: 0 ;   font-size: 0.85em; line-height: 1.85em; }
-    		h1 {   line-height:30px;}
+    		p {   width: 99%;   margin: 0 ;   font-size: 0.80em; line-height: 1.85em; }
+    		h1 {   line-height:30px; font-size: 0.9em;}
     		.introimg {   width: 14%;}
     	} 
     	
@@ -1035,11 +1116,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		}
 				
 		.prof_cont{ 
-			width:47.2%; 
+			width:49%; 
 			background-color:$color4; 
-			margin:3px;	
+			margin:0.5%;
 			display:inline-block;
-			h2 {    font-size: 1.1em; line-height:45.6667px  }
+			h2 {    font-size: 1.1em; line-height:47.6667px  }
 
 			#chart {
 
@@ -1052,7 +1133,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 				#bars {
 
-					li {  height: 343px;}
+					li {  height: 353px;}
 					span {   font-size:0.75em ;}
 				}
 				
@@ -1066,21 +1147,25 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 				.mask { 
 					float: left; 
-					width: 72%;  
+					width: 73%;  
 					overflow: hidden;
-					.panel {  
+					div.slider-body{
+						.panel {  
 
-						text-align: left; 
-						background-color: $color4; 
-						width:100%;
-						h2 { font-size: 0.9em; text-indent:5px;  }
-						h3 {    font-size:0.90em; margin: 0;}
-						p { font-size:0.80em; margin-top: 0.5%; line-height: 1.5em;  }
+							text-align: left; 
+							background-color: $color4; 
+							width:100%;
+							.abobe{ height:28.630272%;/*new*/  margin: 1% auto;/*new*/  }
+							.cert{float: none;/*new*/ height:37.564%;/*new*/   }
+							h2 { font-size: 0.9em; text-indent:5px;  }
+							h3 {    font-size:0.83em; margin: 0;}
+							p { font-size:0.78em; margin-top: 0.5%; line-height: 1.5em;  }
+						}
 					}
 				}
 
 				ul {   padding: 3px;width: 23.9914%;margin: 0;}
-				ul li a {  font-size:0.8em; line-height:37px; }
+				ul li a {  font-size:0.76em; line-height:38px; }
 			}
 			
 		}
@@ -1094,21 +1179,37 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		margin:auto;
 		h3 { margin: 5px 0px; width:100%; }
 		.content .menuSwitch ul li { font-size:1em;}
-		.showcase-img{float: left;clear: both;  margin-top:0; width:92%;}
-		.showcase-img figcaption div.mask { left:0px; }
-		.showcase-img figcaption div.mask:hover{border:110px solid rgba(0,0,0,0.5); }
-		.showcase-img figcaption div.mask .info {   left: -25px;   }
-		.showcase-content h1 {   text-indent: 0px;   font-size: 0.8em; line-height: 20px;height: 20px;}
-		.showcase-content h3{text-indent:0px;}
-		.showcase-content p { width:100%;  font-size: 0.70em;}
-		.links { width:100%; margin:1% 0;}
-		.links a {  font-size: 0.8em;}
-		.links a:hover{ color:$color4; background-color:$color1; font-weight:bold;}
+		.showcase-img{
+			float: left;
+			clear: both;  
+			margin-top:0; 
+			width:92%;
+
+			.showcase-content{ 
+	    		  
+	    		width: 92%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.90em; }
+	    		p{font-size:0.70em; }
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{  font-size: 0.80em;  margin:1% 1% 1% 0; }
+	    			a:hover{ color:$color4; background-color:$color1;  }
+	    			a.fancybox { font-size:0.80em;  padding:0.5%; }
+	    		}
+    		}
+
+		}
+		
 	}
 	
 	.webskills{
 
-		li{  font-size:0.85em; }
+		li{  font-size:0.78em; }
 		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1em; text-align: center; }
 		li a{width:100%; }
 		li a:hover{width:100%;color:$color6; }
@@ -1137,8 +1238,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
 	}
 	ul{width:45%; margin:0; padding:5px; text-align:left;  float:left;  }
-	ul li{ text-indent:10px;  }
-	ul li a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.8em; line-height: 25px;}
+	ul li{ text-indent:0px;  }
+	ul li a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.78em; line-height: 25px;}
 	ul li a:hover{  margin:0; font-size:0.8em;line-height: 25px;}
 }
 
@@ -1152,8 +1253,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header {
 
-	#logo {    font-size: 1.7em; width:40%;}
-	#logo-blog {    font-size: 1.7em; width:40%;}
+	#logo {    font-size: 1.8em; width:42%;}
+	#logo-blog {    font-size: 1.8em; width:42%;}
 	
 	p {    font-size: 0.65em; margin:0 ;}
 	
@@ -1193,12 +1294,12 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		
 		.prof_cont{
 
-			h2 {    font-size: 1em;  text-indent: 2.5%; }
+			h2 {    font-size: 1.2em;  text-indent: 2.5%; }
 
 			#chart {
 				margin: 6% auto;
-				#numbers li {height: 21.93%;}
-				#numbers li span {   font-size: 0.70em; }
+				#numbers li {height: 23.58%;}
+				#numbers li span {   font-size: 0.80em; }
 				#bars li span{ font-size: 0.60em;text-align: center;}
 			}
 					
@@ -1208,15 +1309,22 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				width: 95%;
 				ul li a { font-size:0.70em;}
 				ul li a:hover { font-size:0.75em;}
-				.panel{
+				.mask {
 
-					h2 {   font-size: 0.9em; text-indent:5px;   }
-					h3{font-size:0.85em;}
-					p {   font-size: 0.75em;     }
-					
-				} 
+					div.slider-body{
+
+						.panel{
+
+							.abobe {height: 27.630272%;}
+							.cert {height: 36.564102%;}
+							h2 {   font-size: 0.9em; text-indent:5px;   }
+							h3 {    font-size:0.81em; margin: 0; line-height:35px;}
+							p {   font-size: 0.75em;     }
+						
+						}
+					} 
+				}
 			}
-
 		} 
 	}
 
@@ -1248,6 +1356,27 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				p{font-size:0.80em; width: 98%;}
 				.byline {font-size:0.85em;}
 				.postimg {     margin: 1% auto;}
+				header.byline{
+					 
+					font-size:0.75em; 
+					line-height:1.5em;
+					
+					a{font-size: 0.80em;  }
+				}
+
+				footer.byline{
+					 
+					font-size:0.8em; 
+					line-height:1.5em;
+					p{ margin: 0px; padding: 0;}
+					a{font-size: 0.80em;  }
+					p.right{ font-size:1.15em; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{ line-height:40px; }
+					p.right a.comments-count:hover{color:$color4;}
+
+				}
 				.read_more{font-size:0.8em; width: 15.9652%;}
 				.sd-content ul li {  width: 5%;}
 			}
@@ -1280,28 +1409,29 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.content .menuSwitch ul li {font-size: 100%;}
 		.showcase-img { 
 			width: 92%;
-			figcaption div.mask { left:0px;  }
-			figcaption div.mask:hover{ border:106px solid rgba(0,0,0,0.5);}
-			figcaption div.mask .info {  left: -20px;  top: -8px;  } 
+			.showcase-content{ 
+	    		  
+	    		width: 92%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.80em; }
+	    		p{font-size:0.70em; }
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{  font-size: 0.75em;  }
+	    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
+	    			a.fancybox { font-size:0.75em;  padding:0.5%; }
+	    		}
+    		}
+			
 		}
-		
-		.showcase-content { 
-			width: 100%; 
-			padding-top:0; 
-			padding-bottom: 0px; 
-			padding-right:0; 
-			padding:0.5%;
-			p {    font-size: 0.65em;}
-			h1 {   text-indent: 0px;   }
-			h3 {   text-indent: 0px; font-size:0.8em;}
-			.links a {font-size:0.70em;}
-			.links a:hover{ color:$color4; background-color:$color1; font-weight:bold;}
-		}
-	
-		
+						
 	}
 
-	.webskills > li{  font-size:0.80em; }
+	.webskills > li{  font-size:0.75em; }
 	.webskills > li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1em; text-align: center; }
 
 	.webskills > li a{width:100%; }
@@ -1353,13 +1483,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container header { 
 	width: 100%;
 
-	 #logo {   font-size: 1.6em; width: 50%; }
-	 #logo-blog {  font-size: 1.6em;  width:50%; }
+	 #logo {   font-size: 1.7em; width: 45%; }
+	 #logo-blog {  font-size: 1.7em;  width:45%; }
 	 p {    font-size: 0.60em; }
 
 	nav {  
 		width: 42%;
-		#innernav li a {  font-size: 0.60em;}
+		#innernav li a {  font-size: 0.65em;}
+		#innernav li a:hover {  font-size: 0.70em;}
 		#innernav .menu-main-container {    width: 100%;    left: 44.3%;}
 		#mobile-nav { display:none; }
 	}
@@ -1369,9 +1500,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container #main-content {
 
-	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.75em;}
+	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
 
-	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
+	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2; font-size:0.9em;}
 
 	p {    font-size: 0.80em; width:100%; line-height:1.5em;}
 	h1 {   margin: 0px 0px 0.1em; font-size:1.2em;   padding: 0px; width:100%;}
@@ -1383,7 +1514,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	blockquote { font-size:0.80em;}
 	.webskills{ 
 		
-		li{ text-align:center;}
+		li{ text-align:left;}
 		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.2em; text-align: center; }
 		li a{width:100%; }
 		li a:hover{width:100%;color:$color6; }
@@ -1426,6 +1557,27 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.byline a{font-size: 1em; color: $color1; }
 				.postimg {    margin: 1% auto;}
 				p{ margin:1% auto; }
+				header.byline{
+					 
+					font-size:0.75em; 
+					line-height:1.5em;
+					
+					a{font-size: 0.80em;  }
+				}
+
+				footer.byline{
+					 
+					font-size:0.75em; 
+					line-height:1.5em;
+					p{ margin: 0px; padding: 0;}
+					a{font-size: 0.80em;  }
+					p.right{ font-size:1.1em; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{ line-height:40px; }
+					p.right a.comments-count:hover{color:$color4;}
+
+				}
 				.read_more{font-size:0.8em;}
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.8em;}
 				.sd-content ul li {   width: 5.5%;}
@@ -1459,9 +1611,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			margin:0; 
 			padding: 0;
 
-			h1 {  font-size: 0.95em;}
+			h1 {  font-size: 0.85em;}
 			h2 {    font-size: 1em;}
-			p {    font-size: 0.85em;}
+			p {    font-size: 0.82em;}
 			.introimg {   width: 13%;}
 		}
 		
@@ -1507,7 +1659,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			 		li:last-child {    height: 7.487%;}
 			 		li span {    font-size: 0.85em;  }
 			 	}
-
+				 #bars li {height:330px;}
 			 	#bars li span {   font-size: 0.75em;    text-align: center;}
 
 			 }
@@ -1520,24 +1672,29 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				height: 78.1429%;
 				.mask {
 					float: left;
-					width: 71%;  
-					margin: 5px 0px 0px 5px; 
+									 
 					overflow: hidden;
-					.panel { 
-						text-align: left;
-						background-color: $color4;   
-						width: 100%;
-						h2 { font-size: 1em;  text-indent:5px; font-weight:bold; }
-						h3 {    font-size:1em;} 
-						p {font-size: 0.85em;  width: 100%;   margin: 5px 0 0 0; line-height:1.5em;}
-						.cert { }
-					}
 
+					div.slider-body{
+
+						.panel{
+							text-align: left;
+							background-color: $color4;   
+							width: 100%;
+
+							.abobe {height: 35.630272%; width: 41.589743%;}
+							.cert {height: 42.564102%; width: 27.780471%;}
+							h2 {   font-size: 1em;  text-indent:5px; font-weight:bold;  }
+							h3 {    font-size:0.81em; margin: 0; line-height:35px;}
+							p {   font-size: 0.75em;     }
+						
+						}
+					} 
 				}
 
 				ul {   padding: 1px;   margin: 0px; height:100%; width: 26%; }
-				ul li a { font-size: 0.85em;  font-weight:bold;}
-				ul li a:hover{font-size: 0.90em;}
+				ul li a { font-size: 0.80em;  font-weight:bold;}
+				ul li a:hover{font-size: 0.85em;}
 
 			}
 			/*Hero Slider End*/
@@ -1548,30 +1705,35 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	#photocontainer{
 
 		h2 {  font-size: 1.6em;  width: 98%;   margin:auto 1%;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; height: 255px;}
+		.content {clear: both;position: relative; top: 0px; padding: 0px; overflow: hidden; }
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32.5%; height: 332px;}
 		.content .menuSwitch {text-align: left;margin: 10px 0 0px 0; width:100%;}
 		.content .menuSwitch ul li {  list-style-type: none;  display: inline-block;  }
 		.ca-style figure {  height: 90%;}
-		
-		.showcase-content { 
-			padding: 0.5%;
-			p { width: 100%; margin-bottom: 0px; letter-spacing: 0.1em;    line-height: 1.5em;font-size: 0.68em; } 
-			h1 {font-size:0.8em; height: 21px;line-height: 21px;}
-
-		}
+				
 		.showcase-img {  
 			float: left;  
 			width:92%;  
 			margin: 0;
-			figcaption div.mask { left: 0px; }
-			figcaption div.mask:hover{  border:89px solid rgba(0,0,0,0.5); }
-			figcaption div.mask .info { left: -20px;  top: -8px; }
-			.links a {height:25px; margin: 0.5% 0.5% 0.5% 0px;line-height:25px; padding: 0; }
+			.showcase-content{ 
+	    		  
+	    		width: 92%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.9em; }
+	    		p{font-size:0.75em; }
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{  font-size: 0.80em;  }
+	    			a:hover{ color:$color4; background-color:$color1;  }
+	    			a.fancybox { font-size:0.75em;  padding:0.5%; }
+	    		}
+    		}
 		
 		}
-	
-		
-		.content {clear: both;position: relative; top: 0px; padding: 0px; overflow: hidden; }
 		
 	} 
 
@@ -1613,8 +1775,8 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 #wrapper_container header {
 
-	#logo { font-size: 1.5em; width:45%; }
-	#logo-blog {  font-size: 1.5em;  width:48%;}
+	#logo { font-size: 1.6em; width:45%; }
+	#logo-blog {  font-size: 1.6em;  width:45%;}
 	.search-box {    width: 30%;    font-size: 0.75em;}
 	p {    font-size: 0.65em; }
 	nav #mobile-nav { display:none; }
@@ -1680,8 +1842,30 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 				.byline{ margin:auto; width:98%; font-size:0.75em; line-height: 1.9em; }
 				.byline a{font-size: 0.95em; color: $color1; }
 				.thumb{width:15%; margin-left:12px; }
-				.read_more:hover{ color:$color4; background-color:$color1; }
+				header.byline{
+					 
+					font-size:0.75em; 
+					line-height:1.5em;
+					
+					a{font-size: 0.80em;  }
+				}
+
+				footer.byline{
+					 
+					font-size:0.75em; 
+					line-height:1.5em;
+					p{ margin: 0px; padding: 0;}
+					a{font-size: 0.80em;  }
+					p.right{ font-size:1.1em; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{ line-height:40px; }
+					p.right a.comments-count:hover{color:$color4;}
+
+				}
 				.read_more{  font-size:0.75em;  }
+				.read_more:hover{ color:$color4; background-color:$color1; }
+				
 				.sd-content ul li {   width: 6%;}
 			} 
 			
@@ -1762,41 +1946,53 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 					float: left;  
 					width: 72%;    
 					overflow: hidden; 
-					margin: 5px 0px 0px 5px;
-					.panel {    
-						text-align: left;  
-						background-color: $color4;   
-						width: 100%;
-						h2 {   font-size: 1.1em; }
-						h3 {    font-size: 0.85em;  margin-top: 1%;}
-						p {  font-size: 0.75em;   margin-top: 5px; text-indent:0;}
+					margin: 1% 0 0 1%;
+					div.slider-body{
+						.panel {    
+							text-align: left;  
+							background-color: $color4;   
+							width: 100%;
+							h2 {   font-size: 1.1em; }
+							h3 {    font-size: 0.85em;  margin-top: 1%;}
+							p {  font-size: 0.75em;   margin-top: 5px; text-indent:0;}
+						}
 					}
 				}
 
 				ul {   padding: 1px;   margin: 0px; width: 26%; }
-				ul li a {   font-size: 0.9em;   }
+				ul li a {   font-size: 0.8em;   }
+				ul li a:hover {   font-size: 0.85em;   }
 			}/*Hero Slider End*/
 		}
     }
 
 	#photocontainer {
-
+	
 		.content .menuSwitch ul li {font-size:100%;}
 		.ca-style figure {  height: 90%;}
-
-		.showcase-content {    
-			padding-right: 0px;
-			h1 {    font-size: 0.8em; height:20px; line-height:20px;}
-			p {      margin-bottom: 0px;    letter-spacing: 0.1em;   font-size: 0.67em;}  
-		}
-		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32.5%; height: 322px;}
 		.showcase-img {  
 			float: left;  
 			width:92%;  
 			margin:0 0.5% 0 0;
-			figcaption div.mask { left: 0px;  }
-			figcaption div.mask:hover{  border:92px solid rgba(0,0,0,0.5); }
-			figcaption div.mask .info {     }
+			.showcase-content{ 
+	    		  
+	    		width: 92%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.9em; }
+	    		p{font-size:0.75em; }
+	    		.links {
+	    			height:40px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{ font-size: 0.80em;  }
+	    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
+	    			a.fancybox { font-size:0.75em;  padding:0.5%; }
+	    		}
+    		}
+			
 		}
 	}
 }	
@@ -1853,9 +2049,9 @@ a.nav-toggle:hover{line-height:60px; }
 	width: 100%;   
 	height:62px;
 
-	#logo { font-size: 1.45em; width: 80%; margin:0; text-indent: 0%;  }
+	#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
 
-	#logo-blog { font-size: 1.45em; width: 80%;  margin:0 ; text-indent: 0%; }
+	#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
 	p {    margin: 0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
 
 	
@@ -1885,11 +2081,11 @@ a.nav-toggle:hover{line-height:60px; }
 	margin-bottom: 5px;   
 	padding: 0px;
 
-	h1 { margin: 0; width: 100%; font-size:1.3em;}
-	h2 { margin: 0 2%; width: 98%; font-size: 1.2em;}
-	h3{font-size: 1.1em;}
+	h1 { margin: 0; width: 100%; font-size:1.1em;}
+	h2 { margin: 0 2%; width: 98%; font-size: 1em;}
+	h3{font-size: 0.95em;}
 	#slider { width: 64%; background: none repeat scroll 0% 0% $color2;  margin: auto ; height:300px; float: none;}
-	p { font-size: 0.75em; width: 95.5458%; margin-left: 2%; letter-spacing: 0.1em;}
+	p { font-size: 0.75em; width: 95.5458%; margin-left: 0%; letter-spacing: 0.1em;}
 	li {    margin: 1%;  }
 	
 
@@ -1934,15 +2130,32 @@ a.nav-toggle:hover{line-height:60px; }
 				h1{font-size:1em; margin: 0 auto;}
 				h2{text-indent:0; font-size: 0.95em;margin: 1.5% auto; width: 96%; }
 				h3 { width:98%; font-size:0.9em;}
-				.byline { font-size: 0.75em;}
+				header.byline{
+					font-size:0.75em; 
+					line-height:1.5em;
+					a{font-size: 0.80em;  }
+				}
+
+				footer.byline{
+					font-size:0.95em; 
+					line-height:1.5em;
+					p{ margin: 0px; padding: 0;}
+					a{font-size: 0.85em;  }
+					p.right{ font-size:1.1em; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{ line-height:40px; }
+					p.right a.comments-count:hover{color:$color4;}
+
+				}
 				p { font-size:0.80em;  margin: 1% auto;}
 				p.right { font-size:1.2em;}
 				.sd-content ul {height:45px;}
 				.sd-content ul li {    width: 5%;}
 				.sd-content ul li a {top:3px; }
 
-				.read_more{ font-size:0.8em;width:15%;margin-left: 1%; height:35px; line-height:35px;}
-				.read_more:hover { margin-left: 1%; height:35px; line-height:35px;}
+				.read_more{ font-size:0.8em;width:15%;margin-left: 1%; height:30px; line-height:30px;}
+				.read_more:hover { margin-left: 1%; height:30px; line-height:30px;}
 				.meta{font-size:10px;}
 				.visit { margin: 0px 0px 0px 20px;}
 
@@ -1985,7 +2198,7 @@ a.nav-toggle:hover{line-height:60px; }
 		
 		.prof_cont { 
 
-			#chart #numbers > li {   height: 21.92000%;}
+			#chart #numbers > li {   height: 21.82000%;}
 			#chart #numbers li span {   font-size: 0.95em;}
 			#chart #bars li span {bottom:-1.5em;}
 
@@ -1997,21 +2210,27 @@ a.nav-toggle:hover{line-height:60px; }
 				.mask {   
 					float: left;  
 					width: 73%;    
-					margin: 5px 0px 0px 10px;   
+					margin: 1% 0 0 1%;   
 					overflow: hidden;
-					.panel {    
-						text-align: left;  
-						background-color: $color4;   
-						width: 100%;
-						h2 {   font-size: 1em; }
-						h3 {    font-size: 0.8em;}
-						p {  font-size: 0.75em;    margin-top: 1%;}
+					div.slider-body{
+
+						.panel {    
+							text-align: left;  
+							background-color: $color4;   
+							width: 100%;
+							.abobe {    height: 35.630272%;}
+							.cert {    height: 37.564102%;}
+
+							h2 {   font-size: 1em; }
+							h3 {    font-size: 0.8em;}
+							p {  font-size: 0.75em; margin: 1% 0 0 0;}
+						}
 					}
 				}
 
 				ul {   padding: 3px;   width: 23.9914%;   margin: 0px;   }
-				ul li a {   font-size: 0.75em; line-height:40px;  }
-				ul li a:hover {   font-size: 0.85em; line-height:40px; }
+				ul li a {   font-size: 0.70em; line-height:40px;  }
+				ul li a:hover {   font-size: 0.75em; line-height:40px; }
 
 			}/*Hero Slider End*/
 
@@ -2025,7 +2244,7 @@ a.nav-toggle:hover{line-height:60px; }
 	#photocontainer{
 
 		
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.75em; width:100%; text-align:center;}
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.80em; width:100%; text-align:center;}
 
 		button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2; width:100%;}
 
@@ -2033,28 +2252,32 @@ a.nav-toggle:hover{line-height:60px; }
 		h1 {   font-size: 1em; height: 27px; line-height: 27px;}
 		h3 { margin: 1% ; text-indent: 0; width:98%;  }
 		
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 0; height: 229px;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 0; height: 302px;}
 		.content .menuSwitch { text-align: left;  font-size:100%; margin: 10px 0px 0px;   width: 100%;}
 		
 		.links { width:100%; margin:1% auto; height:30px; line-height:30px;}
-		.showcase-content {  
-			padding-right:0px; 
-			margin-top:0px;  
-			width: 85%;
-			position:absolute; 
-			z-index:9999; 
-			top:0; 
-			display:none; 
-			height:100%;
-			p {    font-size: 0.80em; width:100%; margin:2px 0 ; line-height:1.6em;}
-			.links a {    width: 25%; line-height:25px; }
-
-		}
-	
+			
 		.showcase-img { 
 			width:100%;
-			figcaption div.mask { left:0%; width:91%;}
-			figcaption div.mask:hover{  border:80px solid rgba(0,0,0,0.5); } 
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.8em; line-height:20px; height:20px; }
+	    		p{font-size:0.70em; }
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{ height:30px; font-size: 0.75em;  margin:1% 0 1% 0.5%; }
+	    			a:hover{ color:$color4; background-color:$color1; font-weight:normal; font-size:0.75em; }
+	    			a.fancybox { font-size:0.75em;  margin:1% 0.5% 1% 0; padding:0.5%; }
+
+	    		}
+    		}
+			
 		}
 
 		
@@ -2115,8 +2338,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	width: 100%;    
 	height:62px;    
 	
-	#logo { font-size: 1.6em;  text-indent:0%; }
-	#logo-blog { font-size: 1.6em;  text-indent:0%;}
+	#logo { font-size: 1.9em;  text-indent:0%; }
+	#logo-blog { font-size: 1.9em;  text-indent:0%;}
 	p {    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
 	
 	/*Mobile-Navigation*/
@@ -2143,8 +2366,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	margin-bottom: 5px;   
 	padding: 0px;
 	
-	h1 { width: 100%; text-indent: 0px; font-size:1.15em; }
-	h2 { margin: 0px; width: 100%;text-indent: 0px; font-size: 1em;}
+	h1 { width: 100%; text-indent: 0px; font-size:1.2em; }
+	h2 { margin: 0px; width: 100%;text-indent: 0px; font-size: 0.95em;}
 	h3 {  text-indent: 15px;  }
 	p { font-size: 0.8em; width: 100%; margin-left: 0; letter-spacing: 0.1em;}
 	li {    margin: 0px; font-size:1.1em;  }
@@ -2195,7 +2418,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 				h3 { width:98%; font-size:1.4em;}
 				p { font-size:0.75em;}
-				.byline { font-size: 0.75em;}
+				
 				.postimg {   margin: 1% auto;}
 				.read_more {    font-size: 0.8em;    width: 16%;}
 				
@@ -2254,12 +2477,13 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 			#chart {
 				#bars { 
 					height: 100%;
+					li {  height: 331px;}
 					li .bar {   display: block;   margin-left: 2px;   background: none repeat scroll 0% 0% $color1;    position: absolute;    bottom: 0px;}
 					li span { font-size:0.70em; bottom: -1.5em;}
 				}
 				#numbers {
-					li {   height: 22.79%; text-align:left;}
-					 li span { font-size:0.85em; }
+					li {   height: 22%; text-align:left;}
+					li span { font-size:0.85em; }
 				} 
 			}/*Chart end*/
 			
@@ -2276,20 +2500,23 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 					width: 73%;     
 					margin: 5px 0px 0px 10px;   
 					overflow: hidden;
-					.panel {   
-						text-align: left;  
-						background-color: $color4;   
-						width: 100%;
-						h2 {   font-size: 0.9em; }
-						h3 {   font-size: 0.80em; width:65%;}
-						p {  font-size: 0.70em;  margin-top: 1% ; line-height: 1.7em;}
+
+					div.slider-body{
+						.panel {   
+							text-align: left;  
+							background-color: $color4;   
+							width: 100%;
+							h2 {   font-size: 1em; }
+							h3 {   font-size: 0.9em; }
+							p {  font-size: 0.75em;  margin-top: 1% ; line-height: 1.7em;}
+						}
 					}
 				}
 
 				ul {   padding: 3px;   width: 24.5%;   margin: 0px;   }
 				ul li {  margin: 0px 0px 5px; width: 100%;  color: $color4; font-size:0.9em;} 
-				ul li a {   font-size: 0.9em; line-height:45px;  }
-				ul li a:hover {   font-size: 1em;   }  
+				ul li a {   font-size: 0.8em; line-height:45px;  }
+				ul li a:hover {   font-size: 0.85em;   }  
 			}/*Hero Slider End*/
 		}
 			
@@ -2303,26 +2530,30 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0;  width:32%; height:288px;}
 		.content .menuSwitch { text-align: left;   margin: 10px 0px 0px;   width: 100%;}
 		.content .menuSwitch { font-size:100%;}
-		.links { width:100%; margin:0;}
-		
-		.showcase-content {  
-			margin-top: 0px;  
-			padding-right: 0px;   
-			width: 90%;
-			h1 {   font-size: 0.75em; height: 25px; line-height: 25px;}
-			h3 {   text-indent: 0; width: 98%;}
-			p {    font-size: 0.65em; width:100%; margin:2px 0 ; line-height:1.5em;}
-			.links a {    width: 25.9652%; line-height:25px; }
-		}
-		
+						
 		.showcase-img {   
 			float: left; 
 			width:100%; 
 			display:inline-block; 
 			margin:0;
-			figcaption div.mask { width: 100%; }
-			figcaption div.mask:hover{  border:109px solid rgba(0,0,0,0.5); }
-			figcaption div.mask .info { visibility:none;  left: -21px; top: -19px;}
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.8em; line-height:20px; height:20px; }
+	    		p{font-size:0.70em; }
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{ height:30px; font-size: 0.70em;  margin:1% 0.5% 1% 0; }
+	    			a:hover{ color:$color4; background-color:$color1; font-weight:normal; font-size:0.70em; }
+	    			a.fancybox { font-size:0.75em; margin:1% 0 1% 0.5%; padding:0.5%; }
+	    		}
+    		}
+			
 		}
 		
 		
@@ -2360,7 +2591,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ font-size:0.80em; text-align: center;}
 button:hover{color:$color1; background-color:$color2;}
-a.nav-toggle { height:60px; line-height:60px; width:50px;}
+a.nav-toggle { height:60px; line-height:60px; width:60px; margin-right:2%;}
 a.nav-toggle:hover{ line-height:60px;}
 .fixed-side-social-container{display:none;}
 
@@ -2370,9 +2601,9 @@ a.nav-toggle:hover{ line-height:60px;}
 	header {
 
 		height:62px;
-		#logo {  font-size:1.4em;}
-		#logo-blog {  font-size:1.4em; }
-		p { display:block; float:none; height:15px; line-height:15px; font-size:0.6em;}
+		#logo {  font-size:1.8em;}
+		#logo-blog {  font-size:1.8em; }
+		p { display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -2393,10 +2624,10 @@ a.nav-toggle:hover{ line-height:60px;}
 	}
 
 	#main-content {
-
+	h1 {font-size:1.2em;}
 	h2 {   font-size: 1.3em; }
 	.webskills li {    text-align: left;}
-
+	
 	#blogrightside{
 
 		#blogbox{
@@ -2463,16 +2694,18 @@ a.nav-toggle:hover{ line-height:60px;}
 				.mask {    
 					float: left;    
 					width: 72%;
-					.panel { 
+					div.slider-body{
+						.panel { 
 
-						h3 {    font-size: 0.90em;}
-						p {   font-size: 0.85em; }
+							h3 {    font-size: 0.90em;}
+							p {   font-size: 0.75em; }
+						}
 					}
 
 				}
 
-				ul li a {      font-size: 0.8em;}
-				ul li a :hover{     font-size: 0.85em;}
+				ul li a { font-size: 0.7em;}
+				ul li a :hover{ font-size: 0.8em;}
 
 			} 
 
@@ -2486,20 +2719,26 @@ a.nav-toggle:hover{ line-height:60px;}
 		.content .menuSwitch ul li {  margin:0.5%; font-size: 95%;}
 		.showcase-img {     
 			margin: 0;
-			figcaption div.mask {     width: 100%;}
-			figcaption div.mask:hover{  border:96px solid rgba(0,0,0,0.5); }
-			figcaption div.mask .info {  left: -22px; top: -3px;}
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.75em; line-height:20px; height:20px; }
+	    		p{font-size:0.65em; }
+	    		.links {
+	    			height:30px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{ height:30px; font-size: 0.65em;   }
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.65em; }
+	    			a.fancybox { font-size:0.70em; padding:0.5%; }
+	    		}
+    		}
 		}
-		.showcase-content {
-			padding-right: 0px;   
-			margin-top: 0px;    
-			width: 100%;
-			h1 {    font-size: 0.75em; height:20px; line-height:20px;}
-			p {    font-size: 0.70em;}
-		}
-	
-		.links a {    width: 50.9652%;}
-
+			
+		
 	} 
 
 	}
@@ -2536,19 +2775,7 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 		#main-content {
 
-			.front_panel {
-
-				.intro-text {
-					.introimg {    width: 10%;}
-				}
-				
-			} 
-
-			.prof_cont {
-
-				#chart #numbers > li {    height: 23.09%;}
-
-			}
+						
 
 			#blogleftside{
 
@@ -2556,32 +2783,54 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 					.post {
 						p {   font-size: 0.80em;}
-						.read_more { font-size: 0.75em;    width: 17%;}
-						.read_more:hover {font-size: 0.8em;    width: 17%;}
+						.read_more { font-size: 0.75em; line-height: 30px; height:30px;   width: 17%;}
+						.read_more:hover {font-size: 0.8em;  line-height: 30px;  width: 17%;}
 						.sd-content ul li { width: 6%;}
 						.sd-content ul li a { }
 					}
 				}
 			}
 
+			.front_panel {
+
+				.intro-text {
+					.introimg {    width: 10%;}
+				}
+
+				.prof_cont {
+
+					#chart #numbers > li {    height: 21.9%;}
+					#chart #bars li span {    font-size: 0.75em;}
+					#chart #bars li {    height: 331px;}
+
+				}
+				
+			} 
+
 			#photocontainer {
 
-				.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{  height:263px;}
+				.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{  height:280px;}
 				.content .menuSwitch ul li {  margin:0.5%; font-size: 0.9em;}
 
 				.showcase-img {     
 					margin: 0;
-					figcaption div.mask {     width: 100%;}
-					figcaption div.mask:hover{  border:94px solid rgba(0,0,0,0.5); }
-					figcaption div.mask .info {  left: -22px; top: -3px;}
-				}
-				
-				.showcase-content {   
-					padding-right: 0px;   
-					margin-top: 0px;    
-					width: 100%;
-					h1 {    font-size: 0.75em; height:20px; line-height:20px;}
-					p {    font-size: 0.70em;}
+					.showcase-content{ 
+	    		  
+			    		width: 100%;/*new*/  
+			    		padding:1%; 
+			    		
+			    		h1{text-indent:0px; font-size:0.75em; line-height:20px; height:20px; }
+			    		p{font-size:0.65em; }
+			    		.links {
+			    			height:30px; 
+			    			margin:0; 
+			    			display:inline-block;
+			    			width:100%;
+			    			a{ height:30px; font-size: 0.65em;  margin:1% 1% 1% 0; }
+			    			a:hover{ color:$color4; background-color:$color1; font-size:0.65em; }
+			    			a.fancybox { font-size:0.70em; margin:1% 1% 1% 0; padding:0.5%; }
+			    		}
+    				}
 				}
 			} 
 		}
@@ -2601,8 +2850,8 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 	height:62px;
 
-	#logo { font-size: 1.4em;  height: 30px;  line-height: 30px; text-align:left; }
-	#logo-blog { font-size: 1.4em;  height: 30px;  line-height: 30px;text-align:left; }
+	#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
+	#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
 	p {  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
 		
 	/*Mobile-Navigation*/
@@ -2663,8 +2912,8 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 				h1 {    font-size: 1.25em;}
 				h3 {    width:98%; font-size:1.3em;}
-				.postimg {    margin: 1% auto;}
 				p {    font-size: 0.8em;}
+				.postimg {    margin: 1% auto;}
 				.read_more {   margin-left: 1%; width:17.9652%; font-size:0.75em;}
 				.sd-content ul li {    width: 12%;}
 				.sd-content ul li a {   margin: 20%;}
@@ -2710,7 +2959,7 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 			
 			h2 {    font-size: 1.1em;}
 			#chart {   
-				margin: 5% auto;   
+				   
 				display: block;
 				#numbers { 
 					width: 10%; 
@@ -2722,7 +2971,7 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 				}
 				#bars {
 					li .bar {    display: block;   }
-					li { width: 590px;  margin: 0px; height: 323px;}
+					li { width: 590px;  margin: 0px; height: 324px;}
 					li span { font-size:0.65em;  }
 				}
 			}
@@ -2731,17 +2980,22 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 				.mask {    
 					width: 72%;   
-					margin: 5px 0px 0px 10px;  
+					  
 					overflow: hidden;
-					.hero-slider .panel {
-						h2 {   font-size: 0.9em;    }
-						h3 {    font-size: 0.85em; clear: both; width: 98%;}
-						p{font-size: 0.75em; width:98%;}
+
+					div.slider-body{
+
+						.panel {
+							h2 {   font-size: 0.9em;    }
+							h3 {    font-size: 0.75em; clear: both; width: 98%;}
+							p{font-size: 0.70em; width:98%;}
+						}
+
 					}
 				}
 				ul li {  width: 100%; color: $color4; }
-				ul li a {  font-size: 0.8em;     }
-				ul li a:hover {    font-size: 0.85em;}
+				ul li a {  font-size: 0.68em;     }
+				ul li a:hover {    font-size: 0.74em;}
 			}
 			
 		}
@@ -2751,7 +3005,7 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 	
 	#photocontainer {
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 0 0 4% 0; height:220px;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 0 0 4% 0; height:260px;}
 		.content .menuSwitch ul li { margin:0.5%; font-size: 0.7em;}
 		.showcase-content {
 
@@ -2766,15 +3020,24 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 			float: left;   
 			display: inline-block;   
 			width: 100%;
-			figcaption div.mask {       width: 100%;}
-			figcaption div.mask:hover{  border:90px solid rgba(0,0,0,0.5); }
-			figcaption div.mask .info {   left: -38px; top: -20px;}
-			.links {   
-				width: 100%;   
-				margin: 0;
-				a {    line-height:25px;   padding:0; display:block;}
-				a:hover{font-weight:bold;}
-			}
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.6em; line-height:20px; height:20px; }
+	    		p{font-size:0.55em; }
+	    		.links {
+	    			height:25px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{ height:25px; font-size: 0.60em;  line-height:25px;}
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.60em; }
+	    			a.fancybox { font-size:0.60em;height:25px; padding:0.5%;line-height:25px; }
+	    			a.fancybox:hover{line-height:25px;height:25px;}
+	    		}
+    		}
 		}
 	}
 		
@@ -2914,8 +3177,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 				h1 {    font-size: 1em;}
 				ul {    font-size: 0.9em;}
-				.read_more {    font-size: 0.8em; width:27%;}
-				.read_more:hover {    font-size: 0.85em; width:27%;}
+				.read_more {  line-height: 25px;  font-size: 0.8em; width:27%;}
+				.read_more:hover {  line-height: 25px;  font-size: 0.85em; width:27%;}
 				.sd-content ul li {    width: 10%;  }
 				.sd-content ul li a {   margin: 6%;}
 				p {font-size:0.75em;}
@@ -2958,10 +3221,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 			width: 99%; 
 			margin: 5% 0;
-			h2 {    font-size: 0.9em;}
+			h2 {    font-size: 1em;}
 			#numbers li span {font-size:0.75em;}
 			#chart #bars li span {font-size:0.60em;}
-			.hero-slider .panel { }
+
 			.hero-slider {
 
 				margin: 1% auto;    
@@ -2969,21 +3232,28 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 				ul {   padding: 1px;   margin: 0px;    width: 25%;}
 				ul li { font-size:0.8em;}
 				ul li a:hover { font-weight:normal;}
+
 				.mask {  
-
-					margin: 5px 0px 0px 5px;   
 					overflow: hidden; 
-					width:73%;
-					.panel {
+					width:72%;
+					div.slider-body{
+						.panel {
+							.abobe { width: 52.589743%;   height: 26.630272%;}
+							.cert {width: 35.780471%; height: 35.564102%;}
 
-						h2 { font-size: 1em;}
-						h3 { font-size: 0.85em; width:100%; clear:both;}
-						p { font-size: 0.75em; width:99%;}
+							h2 { font-size: 0.9em;}
+							h3 { font-size: 0.80em; width:100%; clear:both; height:auto; line-height:20px;}
+							p { font-size: 0.75em; width:99%;}
+						}
 					}
 				}
 			}
 		}
+
+
 	}
+
+	.webskills li { font-size:0.7em;   text-align: left;}
 
 	
 	#photocontainer { 
@@ -2994,16 +3264,33 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
 		.content .menuSwitch { text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:80%;}
 		.content .menuSwitch ul li {   font-size: 0.9em; padding: 10px 10px;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; height:260px; width: 48.5%;}
-		.showcase-content { padding-left: 3px; margin-top:0px;  width: 100%;  display:none;}
-		.showcase-content p{font-size:0.61em; margin:0;}
-		.showcase-content h1 {   font-size: 0.75em; width:98%; margin:0; display:block; height:20px; line-height:20px;}
-		.showcase-img figcaption div.mask .info {    left: -34px;    top: -13px;}
-		.showcase-img { margin: 0;   float: left;     width: 100%; display:inline-block;}
-		.showcase-img figcaption div.mask { left: 0; width:100%;}
-		.showcase-img figcaption div.mask:hover{ border: 85px solid rgba(0,0,0, 0.5);}
-		.links a { width: 35.9652%; line-height:26px; font-size:0.70em;}
-		.links a:hover{font-size:0.75em;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% auto; height:343px; width: 65%; display:block;float:none;}
+		
+		.showcase-img { 
+			margin: 0;   
+			float: left;
+			width: 100%; 
+			display:inline-block;
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:1%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.9em; line-height:20px; height:20px; }
+	    		p{font-size:0.80em; }
+	    		.links {
+	    			height:25px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{  font-size: 0.80em;  }
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.80em; }
+	    			a.fancybox { font-size:0.80em; padding:0.5%; }
+	    			
+	    		}
+    		}
+		}
+		
 	}
 
 }
@@ -3054,8 +3341,8 @@ button:hover{color:$color1; background-color:$color2;}
 	
 	height:62px;
 
-	#logo { font-size: 1.3em; width: 80%;    }
-	#logo-blog { font-size: 1.3em; width: 80%; }
+	#logo { font-size: 1.4em; width: 80%;    }
+	#logo-blog { font-size: 1.4em; width: 80%; }
 	p {   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
 	
 	/*Mobile-Navigation*/
@@ -3130,14 +3417,15 @@ button:hover{color:$color1; background-color:$color2;}
 				h2{text-indent:0px; font-size: 0.9em;margin: 10px auto; padding: 0px;letter-spacing: 0.1em;width: 96%; background-color:$color4; color:$color1;}
 				h3 {   width: 96%;   font-size: 0.8em; margin-bottom:0;}
 				h3 a {   padding-left: 0px; }
-				.read_more {width: 27%; margin: 0% 0px 0px 1%; line-height:35px;}
-				.read_more:hover {width: 27%; margin: 0% 0px 0px 1%; line-height:35px;}
-				p.right {    width: 10%; font-size:1.6em;}
 				ul {    font-size: 0.9em;}
-				.navi .right {    width: 100%;}
+				.read_more {width: 27%; margin: 0% 0px 0px 1%; }
+				.read_more:hover {width: 27%; margin: 0% 0px 0px 1%; }
+				p.right {    width: 10%; font-size:1.6em;}
 				.sd-content ul li {    width: 12%;  }
 				.sd-content ul li a {   margin: 10%;}
-			} 
+			}
+
+			 .navi .right {    width: 100%;}
 
 		}
 		
@@ -3186,16 +3474,19 @@ button:hover{color:$color1; background-color:$color2;}
 			.hero-slider {
 
 				ul { width:24.9914%; padding:0px;}
-				ul li a {font-size: 0.85em;}
-				ul li a:hover {font-size: 0.90em;}
+				ul li a {font-size: 0.7em;}
+				ul li a:hover {font-size: 0.75em;}
+
 				.mask {
+					width: 72%;
 
-					width: 73%;
-					.panel {
+					div.slider-body{
+						.panel {
 
-						h2 {    font-size: 0.9em;}
-						h3 { width: 99%; font-size: 0.75em;  }
-						p {   font-size: 0.65em;width: 99%;}
+							h2 {    font-size: 0.9em;}
+							h3 { width: 99%; font-size: 0.75em;  }
+							p {   font-size: 0.65em;width: 99%;}
+						}
 					}
 				}
 			}
@@ -3210,15 +3501,31 @@ button:hover{color:$color1; background-color:$color2;}
 		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; }
 		.content .menuSwitch ul li { font-size: 0.85em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; height: 243px;}
-		.showcase-content {    padding-right:0px; margin-top:0px;  width: 90%; position:absolute; z-index:9999; top:0; display:none;}
-		.showcase-content h1 {   font-size: 0.85em; width:100%; margin:0; display:block; line-height: 17px; height: 17px;}
-		.showcase-img { margin: 0;   float: left;     width: 100%; display:inline-block;}
-		.showcase-img figcaption div.mask { left: 0; width:100%;}
-		.showcase-img figcaption div.mask:hover{ border: 84px solid rgba(0,0,0, 0.5);}
-		.showcase-img figcaption div.mask .info {    left: -26px;    top: -8px;}
-		.showcase-content p {   line-height: 1.5em;    font-size: 0.75em;   }
-		.links a {  line-height:25px; font-size:0.8em; }
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% auto; display:block; float:none; height:328px; }
+		.showcase-img { 
+			margin: 0;   
+			float: left;     
+			width: 100%; 
+			display:inline-block;
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:2.5%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.85em; line-height:20px; height:20px; }
+	    		p{font-size:0.75em; }
+	    		.links {
+	    			height:25px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{  font-size: 0.80em;  }
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.80em; }
+	    			a.fancybox { font-size:0.80em; padding:0.5%; }
+	    			
+	    		}
+    		}
+		}
 	}
 		
 	#contactform {  
@@ -3249,8 +3556,8 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 	width:100%;
 
-	#logo { font-size: 1.3em;  height: 30px;  line-height: 30px;width: 80%; }
-	#logo-blog { font-size: 1.3em;  height: 30px;  line-height: 30px;  width: 80%; }
+	#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
+	#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
 	p {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
 	
 
@@ -3277,7 +3584,7 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 	padding: 2px;
 
 	h1 {    margin:0; width:100%; font-size: 1em;}
-	h2 {   width: 99.5458%;  margin-left:0; text-indent:1%; font-size: 1em;}
+	h2 {   width: 99.5458%;  margin-left:0; text-indent:1%; font-size: 0.9em;}
 	p { width: 100%;   letter-spacing: 0.1em;  margin-left:0;}
 	.skills li {   font-size: 1em;}
 
@@ -3332,7 +3639,7 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 			width: 100%;   
 			float: left;   
 			display: block;   
-			padding: 1%;
+			padding: 0%;
 			h2 {  font-size: 0.9em;}
 			p {   width: 100%;   margin: 2% auto;  }
 			.introimg {  float: left;  margin: 3% 2% 0px 0px;   width: 24%; }
@@ -3364,23 +3671,25 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 			
 			.hero-slider{
 
-				ul {   padding: 0px;   width: 25%;    margin: 0px; height:100%;}
+				ul {   padding: 0px;   width: 28%;    margin: 0px; height:100%;}
 				ul li a {font-size:0.70em; font-weight:bold;}
-				ul li a:hover {font-size:0.75em;}
+				ul li a:hover {font-size:0.65em;}
 
 				.mask { 
-					width:73%; 
-					margin: 5px 0px 0px 5px;
-					.panel {
-						text-align: left;
-						background-color: $color4;
-						width: 100%;
-						h2 {   }
-						h3 { width: 99%;  }
-						p {  width: 99%;}
-						.abobe {   display:block;}
-						.cert {   display:block;}
+					width:71%; 
+					
+					div.slider-body{
+						.panel {
+							text-align: left;
+							background-color: $color4;
+							width: 100%;
+							h2 {   }
+							h3 { width: 99%;  }
+							p {  width: 99%;}
+							.abobe {   height: 25.630272%; width: 56.780471%;}
+							.cert {  height: 35.564102%; width: 42.589743%;}
 
+						}
 					}
 				}
 			} 
@@ -3389,16 +3698,33 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 	#photocontainer {
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; height:214px;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width:70%; margin: 3% auto; height: 319px;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:1em;}
 		.content .menuSwitch ul li {   font-size: 0.75em;}
-		.showcase-content {    padding-right:0px; margin-top:0px;  width: 90%;  display:none; z-index:9999;}
-		.showcase-content h1 {   font-size: 0.85em; line-height: 20px; height: 20px;}
-		.showcase-img { margin: 0;   float: left;     width: 100%; display:inline-block;}
-		.showcase-img figcaption div.mask { left: 0; width:100%;}
-		.showcase-img figcaption div.mask:hover{ border: 80px solid rgba(0,0,0, 0.5);}
-		.showcase-content p {   line-height: 1.5em;  }
-		.links a { width: 50.9652%; line-height:25px; font-size:0.8em; }
+		.showcase-img { 
+			margin: 0;   
+			float: left;     
+			width: 100%; 
+			display:inline-block;
+			.showcase-content{ 
+	    		  
+	    		width: 100%;/*new*/  
+	    		padding:2.5%; 
+	    		
+	    		h1{text-indent:0px; font-size:0.85em; line-height:20px; height:20px; }
+	    		p{font-size:0.75em; }
+	    		.links {
+	    			height:25px; 
+	    			margin:0; 
+	    			display:inline-block;
+	    			width:100%;
+	    			a{  font-size: 0.80em;  }
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.80em; }
+	    			a.fancybox { font-size:0.80em; padding:0.5%; }
+	    			
+	    		}
+			}
+		}
 	} 
 	
 	#contactform p {   font-size:0.95em; }

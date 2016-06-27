@@ -21,25 +21,39 @@
 
 	<h1>Welcome to raythompwebdev.com&#46;</h1>
 
+<<<<<<< HEAD
+=======
+	<p> My name is Raymond and this is my website about website coding and web design. I spend a lot my spare time learning how to create websites and building web sites and other web projects.</p>
+>>>>>>> origin/master
 
 	<p> My name is Raymond and this is my website about web design and web development, particularly front end web development. I spend a lot my spare time building websites and learning about web design and web development&#46; </p>
 
 <p> I create the following types of websites:</p>
 	<ul class="webskills">
+<<<<<<< HEAD
 
 		<li><span class="fa fa-mobile"></span>HTML5/CSS3 Website Templates&#44;</li>
 
 		<li><span class="fa fa-mobile"></span>Audio & Video Websites&#44;</li>
 
+=======
+		<li><span class="fa fa-mobile"></span>Audio & Video Websites&#44;</li>
+>>>>>>> origin/master
 		<li><span class="fa fa-wordpress"></span>Wordpress Themes&#44;</li>
 		<li><span class="fa fa-database"></span>E-Commerce Websites&#44;</li>
 		<li><span class="fa fa-file-image-o"></span>Video and Image Galleries&#44;</li>
 	</ul>
 	  
+<<<<<<< HEAD
 
 <p>Each of my websites are built following the latest web design and web development standards and best practices and fully optimised to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#46;</p>
 
 <p>Each of my websites are built following the latest coding standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device and are search engine optimised to ensure they can be found on most search engines&#46;</p> 
+=======
+	<p>Each of my websites and web projects are built following the latest coding standards and best practices to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#46;</p> 
+
+	<p>I aim to ensure each website is accessible, simple to use, code validated and optimised to ensure that it can be found by search engines and viewed within most modern web browsers&#46;</p>
+>>>>>>> origin/master
 
 <p>I aim to ensure each website is fully accessible , easy to use and code validated to ensure it can be viewed within most modern web browsers and provide a great user experience&#46;</p>
 
@@ -80,6 +94,7 @@
 
 <article class="intro-text">
 
+<<<<<<< HEAD
 
 <h1>Are you into web design and web development &#63;</h1>
 
@@ -87,12 +102,18 @@
 
 
 
+=======
+<h1>Are you a self-taught web developer who enjoys coding&#63;</h1>
+
+<p>Check out my blog posts where&#44;I will be sharing links to tutorials&#44; articles&#44; blog post and all sorts of useful information I have come across on my mission to becoming a great web developer&#46;</p>
+>>>>>>> origin/master
 <ul class="webskills">
 		<li><span class="fa fa-mobile"></span>Video Tutorials&#44;</li>
 		<li><span class="fa fa-wordpress"></span>Blog Tutorials&#44;</li>
 		<li><span class="fa fa-database"></span>Website Template Downloads&#44;</li>
 		<li><span class="fa fa-file-image-o"></span>Code examples&#44;</li>
 	</ul>
+<<<<<<< HEAD
 
 <p>All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
 
@@ -103,6 +124,9 @@
 
 <p>All types of resources I hope you will find useful in helping increase your own understanding of web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
 
+=======
+<p>All types of resources I hope you will find useful in helping increase your own understanding of web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
+>>>>>>> origin/master
 
 <br/>
 

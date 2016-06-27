@@ -59,7 +59,10 @@ add_image_size('small', 100, 9999);
 add_image_size('medium', 320, 9999);
 add_image_size('largest', 1800, 9999);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header');
