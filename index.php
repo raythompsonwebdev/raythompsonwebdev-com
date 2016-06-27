@@ -14,8 +14,11 @@
 
 <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
-<section class="byline"> Date: <?php the_date('jS F Y') ?> at <?php the_time('g:i a'); ?><br />
-Written by <?php the_author() ?></section>
+<header class="byline"> 
+Date: <?php the_date('jS F Y') ?> at <?php the_time('g:i a'); ?> <br />
+Written by <?php the_author() ?> </header>
+
+
 
 <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>";>
 <figure class="featuredImage"><?php the_post_thumbnail('featured-image');?></figure>
@@ -25,7 +28,7 @@ Written by <?php the_author() ?></section>
 
 <br/>
 
-<section class="byline">
+<footer class="byline">
 Posted in <?php the_category(', ') ?> | <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 
 <p class='right'>
@@ -39,7 +42,7 @@ Posted in <?php the_category(', ') ?> | <?php comments_popup_link('No Comments &
 			}?>
 </p>
 
-</section>
+</footer>
 </article>
 <?php endwhile; ?>
 <?php else: ?>

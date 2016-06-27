@@ -15,7 +15,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />
-<link media="all" rel="stylesheet" type="text/css" href="<?php get_stylesheet_directory_uri(); ?>" />
+<link media="all" rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?> 
 
@@ -50,6 +50,7 @@
 
 </nav>
 <?php  if ( is_front_page() || is_page()) : ?>
+<hgroup>	
 <h1 id="logo"><span>RAYTHOMP</span><span >WEBDESIGN</span>.COM </h1>
 <?php else : ?>
 <h1 id="logo-blog"><span >RAYTHOMP</span><span >WEBDESIGN</span>BLOG</h1>            
@@ -58,8 +59,8 @@
 $description = get_bloginfo( 'description', 'display' );
 if ( $description || is_customize_preview() ) : ?>
 
-<p class="site-description"><?php echo $description; ?></p>
-
+<h2 class="site-description"><?php echo $description; ?></h2>
+</hgroup>
 <?php endif; ?>
 
 

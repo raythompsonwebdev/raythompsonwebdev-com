@@ -17,7 +17,7 @@ $photographerurl = get_post_meta($post->ID, 'raythompwebdesign-com_url', true);
 <h1><a href="<?php the_permalink();
 ?>"><?php the_title(); ?></a></h1>
 
-<section class="byline"><span><?php echo $photographer; ?></span><a href="<?php echo $photographerurl ?>" target="_blank" class="photographerurl"><?php echo $photographerurl ?></a></section><!--end of by line-->
+<header class="byline"><span><?php echo $photographer; ?></span><a href="<?php echo $photographerurl ?>" target="_blank" class="photographerurl"><?php echo $photographerurl ?></a></header><!--end of by line-->
 
 <div class="entry-attachment">
 <?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "full"); ?>
@@ -38,7 +38,7 @@ $photographerurl = get_post_meta($post->ID, 'raythompwebdesign-com_url', true);
 
 <article class="contact-wide">
 <h2>Send Comment</h2>
-  <?php comments_template(); ?> 
+<?php comments_template(); ?> 
 <br/>
 </article>
 	

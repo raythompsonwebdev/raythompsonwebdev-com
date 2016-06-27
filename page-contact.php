@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: contact 
+Template Name: Contact 
 */
 ?>
 
@@ -11,7 +11,7 @@ Template Name: contact
 
 <h1>Contact Page</h1>
 
-<p>I am available to help with any small scale web development project</p>
+<p>Any queries about website please either complete form on the right <br/> or e-mail me at e-mail addressess below. You can also hit me up on social media</p>
 
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
@@ -46,19 +46,7 @@ Template Name: contact
 				<?php endif; ?>
 
 </article>
-		<br/>
-			
-
-			
-<article class="contact-wide">
-	
-			
-
-
-		</article>
-
-
-    	<br/>
+<div class="clearfix"></div>				
 
 </section>
 

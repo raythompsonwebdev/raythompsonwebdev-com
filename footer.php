@@ -39,7 +39,11 @@
 
 jQuery(document).ready(function($){
 
- $('.fancybox').fancybox();
+ $('.fancybox').fancybox({
+      openEffect  : 'elastic',
+      closeEffect : 'elastic'
+
+    });
 
 });
 
@@ -102,7 +106,7 @@ jQuery(document).ready(function($){
   
  $('button.text-btn-a').bind().click(function(){
      
-      $('.showcase-a').toggle('fast');
+      $('.showcase-a ').slideToggle('fast').css('left','0');
  
 
     }),
@@ -111,7 +115,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-b').toggle('fast');
+      $('.showcase-b').slideToggle('fast');
 
     }),
 
@@ -119,7 +123,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-c').toggle('fast');
+      $('.showcase-c').slideToggle('fast');
 
     }),
 
@@ -127,7 +131,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-d').toggle('fast');
+      $('.showcase-d').slideToggle('fast');
 
     }),
 
@@ -135,7 +139,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-e').toggle('fast');
+      $('.showcase-e').slideToggle('fast');
 
     }),
 
@@ -143,7 +147,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-f').toggle('fast');
+      $('.showcase-f').slideToggle('fast');
 
     }),
 
@@ -151,7 +155,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-g').toggle('fast');
+      $('.showcase-g').slideToggle('fast');
 
     }),
 
@@ -159,7 +163,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-h').toggle('fast');
+      $('.showcase-h').slideToggle('fast');
 
     }),
 
@@ -167,7 +171,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-i').toggle('fast');
+      $('.showcase-i').slideToggle('fast');
 
     })
 

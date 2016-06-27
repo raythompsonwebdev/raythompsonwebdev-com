@@ -2,31 +2,34 @@
 <?php get_header(); ?>
 
 <section id="main-content" class="group" role="main">   	
-<h1></h1>	
+<h1>Single</h1>	
 <section id="blogleftside">       	       	      	
 			
 <article id="blog" class="left-col">
 	
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
-<article class="post group" <?php post_class(); ?> <?php the_ID(); ?>>
-
+<article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 <h1><?php the_title(); ?></h1>
 
-<section class="byline">
- by <?php the_author_posts_link(); ?> on <span class="date"><?php the_date('l F d, Y'); ?></span><br/>
+<header class="byline">
+ Posted by <?php the_author_posts_link(); ?> on <span class="date"><?php the_date('l F d, Y'); ?></span><br/>
  Posted in: <?php the_category(', '); ?> | <?php the_tags('Tagged with: ', ', '); ?>
-</section><!--end of by line-->
+</header><!--end of by line-->
+
+
 
 <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>";>
 <figure class="featuredImage"><?php the_post_thumbnail('custom');?></figure>
 </a>
 
 <?php the_content(); ?>
-<section class="byline">
+
+<footer class="byline">
 
 <p class='right'><a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%')?></a></p>
-</section>
+</footer>
+
 <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
  </article><!--end of post group-->
 
