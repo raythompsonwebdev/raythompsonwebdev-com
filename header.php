@@ -50,7 +50,7 @@
 
 </nav>
 <?php  if ( is_front_page() || is_page()) : ?>
-<hgroup>	
+	
 <h1 id="logo"><span>RAYTHOMP</span><span >WEBDESIGN</span>.COM </h1>
 <?php else : ?>
 <h1 id="logo-blog"><span >RAYTHOMP</span><span >WEBDESIGN</span>BLOG</h1>            
@@ -60,7 +60,7 @@ $description = get_bloginfo( 'description', 'display' );
 if ( $description || is_customize_preview() ) : ?>
 
 <h2 class="site-description"><?php echo $description; ?></h2>
-</hgroup>
+
 <?php endif; ?>
 
 

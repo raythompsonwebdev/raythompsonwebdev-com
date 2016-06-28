@@ -18,19 +18,10 @@ Template Name: Websites
 
 <section id="main-content" class="group" role="main">
 
-<<<<<<< HEAD
-
 <h1>Websites</h1>
 
 <p>These are websites I have built over the past four years. websites These are I have built over the past four years These are I have built over the past four years These are I have built over the past four years These are I have built over the past four years.</p>
 
-<h1>Website Projects</h1>
-
-
-=======
-<h1>Website Projects</h1>
-
->>>>>>> origin/master
 <br/>
 
 <div class="clear"></div>
@@ -66,16 +57,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/Portfolio-Campingadvice-website.jpg" alt="CampingAdvice.com website home page" 
-  >
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/campingadvice-website.jpg" alt="CampingAdvice.com website home page" >
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/campingadvice-website.jpg" alt="CampingAdvice.com website home page" >
->>>>>>> origin/master
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Campingadvice-Website-Small.jpg" alt="CampingAdvice.com website home page" >
 
   <figcaption class="showcase-content showcase-a">
   <h1>Website:</h1>
@@ -84,16 +66,9 @@ Template Name: Websites
   <p>Information portal website for those with little or no prior experience of camping and would like to learn more about camping&#46;</p>
   <h1>Development Technologies:</h1>
   <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP , MySQLi&#46;</p>
-  <p></p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <figure class="links"> <a class="fancybox" href="<?php bloginfo('url');?>/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
-=======
-  <figure class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <figure class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
->>>>>>> origin/master
+  <h1>Formats</h1>
+  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
+  <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
   <a href="http://www.raythompwebdesign.com/campingadvice-com">Visit Website</a></figure>
   </figcaption>
   </figure>
@@ -107,15 +82,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg2">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/Portfolio-mannering-music-website.jpg" alt="Mannering Music website home page">
-=======
   <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/mannering-music-website.jpg" alt="Mannering Music website home page">
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/mannering-music-website.jpg" alt="Mannering Music website home page">
->>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-b">
   <h1>Website:</h1>
@@ -124,15 +91,9 @@ Template Name: Websites
   <p>Website for company called Mannering Music who advertising Jazz, Hip Hop and Country music albums for sale from thier vast collection of classic and new music&#46;</p>
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46;</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div class="links"> <a class="fancybox" href="/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">See Image</a>
-=======
+  <h1>Formats</h1>
+  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
   <div class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">See Image</a>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <div class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">See Image</a>
->>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/mannering">Visit Website</a></div>
   </figcaption>
   </figure>
@@ -146,15 +107,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg3">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/Portfolio-Car-Rental-Website.jpg" alt="Car Rental website home page">
-=======
   <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Car-Rental-website.jpg" alt="Car Rental website home page">
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Car-Rental-website.jpg" alt="Car Rental website home page">
->>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-c">
   <h1>Website:</h1>
@@ -163,15 +116,9 @@ Template Name: Websites
   <p>Car&#45;Rental booking website created from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46; </p>
   <h1>Development Technologies:</h1>
   <p>Foundation 5&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#46; Javascript&#46;</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div class="links"><a class="fancybox" href="/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">See Image</a>
-=======
+  <h1>Formats</h1>
+  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
   <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">See Image</a>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">See Image</a>
->>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/car-rental">Visit Website</a></div>
   </figcaption>
 
@@ -186,15 +133,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg4">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/portfolio-shoestore-website.jpg" alt="Shoestore website home page">
-=======
   <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/shoestore-website-small.jpg" alt="Shoestore website home page">
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/shoestore-website-small.jpg" alt="Shoestore website home page">
->>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-e">
   <h1>Website:</h1>
@@ -202,16 +141,10 @@ Template Name: Websites
   <h1>Description</h1>
   <p>E&#45;commerce website built from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>. advertising Men&#44; Women and Childens shoes for sale for a company called shoestore&#46;</p>
   <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3 and Jquery&#46;</p> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div class="links"><a class="fancybox" href="/wp-content/uploads/2016/06/shoestore-website-Large.jpg"  title="Shoestore website home page">See Image</a>
-=======
+  <p>HTML5&#44; CSS3 and Jquery&#46;</p>
+  <h1>Formats</h1>
+  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p> 
   <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/shoestore-website-large.jpg"  title="Shoestore website home page">See Image</a>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/shoestore-website-large.jpg"  title="Shoestore website home page">See Image</a>
->>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/shoestore">Visit Website</a></div>
   </figcaption>
 
@@ -226,15 +159,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg5">
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/Portfolio-Greenfootprints-Website.jpg" alt="Greenfootprints home page">
-=======
   <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/greenfootprints-website.jpg" alt="Greenfootprints home page">
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/greenfootprints-website.jpg" alt="Greenfootprints home page">
->>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-f">
   <h1>Website:</h1>
@@ -242,16 +167,10 @@ Template Name: Websites
   <h1>Description:</h1>
   <p>Website for local recycling company &#34;GreenFootPrints&#34; based in Essex providing help and advice to the general public on recyling waste&#44; particularly household waste&#46;</p> 
   <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3&#46; </p> 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div class="links"><a class="fancybox" href="/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
-=======
+  <p>HTML5&#44; CSS3&#46; </p>
+  <h1>Formats</h1>
+  <p><span class="fa fa-desktop"></p> 
   <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
->>>>>>> origin/master
   </figcaption>
 
   </figure>
@@ -265,15 +184,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/TravelAgency-website.jpg"  alt="Travel Agency website home page" >
-=======
   <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/TravelAgency-website.jpg"  alt="Travel Agency website home page" >
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/TravelAgency-website.jpg"  alt="Travel Agency website home page" >
->>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-g">
   <h1>Website:</h1>
@@ -281,16 +192,10 @@ Template Name: Websites
   <h1>Description:</h1>
   <p>Holiday booking website built from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
   <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3 and Jquery&#46; </p>     
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <div class="links"><a href="<?php echo home_url();?>/wp-content/uploads/2016/06/Travel-Agency-Home-Page-Large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
-=======
+  <p>HTML5&#44; CSS3 and Jquery&#46; </p>
+  <h1>Formats</h1>
+  <p><span class="fa fa-desktop"></p>     
   <div class="links"><a href="/wordpress/wp-content/uploads/2016/06/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <div class="links"><a href="/wordpress/wp-content/uploads/2016/06/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
->>>>>>> origin/master
   </figcaption>
 
   </figure>
@@ -304,15 +209,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg7">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/portfolio-mixtape-raythompweb.gif" alt="Image of mixtape cover" >
-=======
   <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/portfolio-graphics-mixtape.gif" alt="Image of mixtape cover" >
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/portfolio-graphics-mixtape.gif" alt="Image of mixtape cover" >
->>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-h" >
 
@@ -325,15 +222,7 @@ Template Name: Websites
   <p><strong>Mixtape Cover-</strong>Mixtape cover for an idea I had for a mixtape of various reggae artists over Wu-Tang Clan instrumentals like C.R.E.A.M. &#44; Triumph and more&#46; Mixtape coming soon to Mr Bullitan you tube channel&#46;</p>
 
   <div class="links">
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <a href="<?php echo home_url();?>/wp-content/uploads/2016/06/raythomp-web-design-mixtape-cover-Large.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
-=======
   <a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Mixtape-cover.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Mixtape-cover.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
->>>>>>> origin/master
 
   </figcaption>
   </figure>
@@ -347,15 +236,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg8">
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/image-not-available.gif" alt="">
-=======
   <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/image-not-available.gif" alt="">
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/image-not-available.gif" alt="">
->>>>>>> origin/master
   <figcaption class="showcase-content showcase-i">
 
   <h1>Graphic:</h1>
@@ -369,15 +250,7 @@ Template Name: Websites
   <br/><br/>
 
   <div class="links">
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/06/image-not-available.gif"  title="">LINK</a>
-=======
   <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/image-not-available.gif"  title="">LINK</a>
->>>>>>> 3acea89b6f4d155ed58ee4e0a1aba5245df8a3db
-=======
-  <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/image-not-available.gif"  title="">LINK</a>
->>>>>>> origin/master
   </div>
 
   </figcaption>

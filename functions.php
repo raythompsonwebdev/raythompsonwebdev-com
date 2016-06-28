@@ -48,10 +48,6 @@ load_theme_textdomain('raythompwebdesign-com', get_template_directory() . '/lang
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
 add_theme_support( 'post-thumbnails' );
-
-set_post_thumbnail_size( 150, 170, true );
-add_image_size( 'custom', 583, 9999 );
-
 set_post_thumbnail_size( 100, 100, true );
 add_image_size( 'featured-image', 783, 9999 );
 // Create three new image sizes
@@ -59,10 +55,6 @@ add_image_size('small', 100, 9999);
 add_image_size('medium', 320, 9999);
 add_image_size('largest', 1800, 9999);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header');
@@ -212,8 +204,6 @@ add_filter('the_excerpt', 'excerpt_read_more_link');
  * Register our sidebars and widgetized areas.
  *
  */
-
-
 
 /****Sidebar!******/
 if ( function_exists( 'register_sidebar' ) ) {

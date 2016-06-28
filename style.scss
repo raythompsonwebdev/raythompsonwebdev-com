@@ -202,8 +202,8 @@ body{
 	margin:0;
 	padding:0; 
 
-	/*Logo*/
-	#logo{
+	
+	h1#logo{
 		font-size:2em; 
 		width:40%; 
 		height:45px; 
@@ -213,11 +213,13 @@ body{
 		color:$color2; 
 		text-shadow:1px 1px 2px #444;     
 		letter-spacing: 0.01em;
+		behavior:url(PIE.htc);
 		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
 		span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
 	}
 
-	#logo-blog{
+	
+	h1#logo-blog{
 		font-size:2em; 
 		width:40%; 
 		height:45px; 
@@ -231,9 +233,11 @@ body{
 		span:last-of-type{height:40px; padding:0; margin:0; color:$color1;}
 	}
 	
-	p{float:left; display:inline-block; width:100%; height:20px; margin: 0; padding:0; line-height:20px; font-size:0.70em; }
+	h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; }
 	#title { float:left; min-width:280px; max-width:350px; margin-left:0; }
 
+
+	
 	
 	/*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/	
 	
@@ -252,8 +256,8 @@ body{
 		#innernav .menu-main-container #menu-main{width:100%; display:block;}
 		#innernav .menu-item {width:20%;float:left; height:35px; list-style:none;margin:0; padding:0; text-align:center; display:inline-block;}
 		#innernav li.menu-item:hover { background-color: $color1; }
-		#innernav li a {font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0; letter-spacing:0.1em;  font-size:0.85em; display:block;}
-		#innernav li a:hover { line-height:35px; font-weight:bold;color:$color4; font-size:0.90em;}
+		#innernav li a {font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0; letter-spacing:0.1em;  font-size:0.80em; display:block;}
+		#innernav li a:hover { line-height:35px; color:$color4; font-size:0.85em;}
 		#mobile-nav { display:none; }
 	} 
 		 
@@ -400,7 +404,7 @@ body{
 				
 				.newsExcerpt{ height:auto;}
 								
-				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:30px; line-height:15px; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
+				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:35px; line-height:35px; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
 				.read_more:hover{ color:$color4; background-color:$color1; font-weight:bold; }
 				/*Social media share buttons*/
 				.sd-content{
@@ -451,7 +455,7 @@ body{
 			@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
 
 			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em;}
-			h3#reply-title {width:96%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
+			h3#reply-title {width:97%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
 
 			.navigation{height:50px; width:98%; margin:1% auto;}
 			
@@ -462,7 +466,7 @@ body{
 				margin:2% auto; 
 				font-size:1em;
 				min-height:100px;
-				p{width:100%;}
+				p{width:100%; font-size: 1em; line-height:1.5em;}
 			}
 			.comment-reply-title, #comments {margin:0;height: 35px; min-height: 35px; line-height: 35px; text-indent: 1%;width: 96%; font-size:1em;}
 			.comment-response #submit {  height: 32px;  list-style: outside none none;  background-color: $color1;  width: 23.9652%;  color: $color2;  @include Transition(background 0.3s linear 0s, color 0.3s linear 0s ); font-family:($FontStyle);  font-size: 1em; margin: 0px auto;  border: medium none;}
@@ -512,6 +516,8 @@ body{
 				a{ margin:0; display:block; height:35px; list-style:none; width:10%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color2; font-family:($FontStyle); line-height:35px; text-align:center;}
 				a:hover{ background-color:$color2; color:$color1;  } 
 			}
+			p.must-log-in{width:100%; text-indent:2%;}
+
 
 		}/*Comment section end*/
 	}
@@ -615,22 +621,7 @@ body{
 				.profile .sectionleftbox caption { /*coordinated marking to match cell's padding*/  margin-bottom:.5em;  /*centered so it doesn't blend in to other content*/  text-align:center; }
 			}
 		
-			
-			/*.imagebox .box:hover .image-4 #image-5 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
-			.imagebox .box:hover .image-4 #image-4 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
-			/* Content Section Leftbox contentboxes Caption Common Style */
-
-
-		
-			 
-			/** Caption 4: Slide **/
-			
-			/*.wrapper_container #main-content article .imagebox .box .slide-caption h3{font-size:100%; color:$color4; margin:0px; height:30px; padding:2%; width:96%; background-color:#c90;}*/
-
-			/** Slide Caption :hover Behaviour **/
-			/*.imagebox .box:hover .slide-caption { background-color: $color4; -moz-transform: translateX(-100%); -o-transform: translateX(-100%); -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); opacity: 1;}*/
-			
-			
+				
 		}
 
 
@@ -667,7 +658,7 @@ body{
 					display: inline-block;  
 					float: left; 
 					color:$color1;
-					li { text-align: left;  list-style: none;  height: 23.56%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
+					li { text-align: left;  list-style: none;  height: 23.40%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
 					li:first-child{border-top: 1px solid #444;  }
 					li:last-child {  height: 9.48657%;  border:none; font-size:1em; }
 					li span {   color:$color1; position: absolute;  bottom: 0; line-height:inherit;  font-size:0.9em;display:inline-block; width:100%; text-align:left; height:100%;}
@@ -739,13 +730,12 @@ body{
 	}
 
 	
-	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:92%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color4; background-color:$color1;}
-	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}	
+		
 
 	.skills{ 
 		list-style: none; 
 		font-family:($FontStyle); 
-		margin:5% 0px 5% 0%; 
+		margin:1% 0px 5% 0%; 
 		padding:0px; 
 		width:45%; 
 		display:inline-block;
@@ -777,6 +767,8 @@ body{
 
 
 	#photocontainer{
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:92%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color4; background-color:$color1;}
+		button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
 		width:96%; 
 		height:auto; 
 		font-family:($FontStyle); 
@@ -794,7 +786,7 @@ body{
 		}
 		
     	.content{clear: both; position: relative;top: 10px;padding: 0px;overflow: hidden; }
-    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 305px;/*new*/ }
+    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 370px;/*new*/ }
 
     	.showcase{margin-top: 10px; width:55%;}
 
@@ -805,21 +797,10 @@ body{
     		height:320px;/*new*/ 
     		margin:0 1% 0 0;  
     		display:inline-block;
-    		@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
+    		
     		img{height:auto;  width: 100%; left: 0;}
     		img:hover {}
 
-    		/*figcaption div.mask{ position:absolute; z-index:1; top:0px; left:0px; margin:0px; width: 91%; opacity:0; display:block;  height:100%; overflow:visible;  @include Transition(all 0.4s ease-in-out ); @include TransScale(scale(0.5)); }
-    		figcaption div.mask:hover{ opacity: 1; @include TransScale(scale(1)); border:125px solid rgba(0,0,0,0.5); }  
-    		figcaption div.mask .info {position:relative;	top: -8px;	opacity:0;	 background:url('/wordpress/wp-content/themes/raythompwebdesign-com/graphics/link1.png') center no-repeat;  display: block; text-decoration: none;  padding:5%;  width: 50px; height: 50px;  left: -20px; @include Transition(all 0.4s ease-in-out ); z-index:99;  color:$color4; text-indent:-9999px;  } 
-    		figcaption .mask .info:hover {  opacity:1; text-decoration: none;   padding:0; @include TransScale(scale(1,1));  text-indent:-9999px; }
-
-    		.port-8.effect-1 img{transition: 0.5s;}
-			.port-8.effect-1:hover img{transform: scale(1.1);}
-			.port-8.effect-1 .text-desc{left: 0; position: absolute; top: 0; width: 100%; height: 100%; transform: scale(0);  backface-visibility: hidden;}
-			.port-8.effect-1:hover .text-desc{opacity: 1; transform: scale(1); border-radius: 20%;}
-
-    		*/
     		.showcase-content{ 
 	    		height:100%; 
 	    		display:none;  
@@ -832,8 +813,25 @@ body{
 	    		left:0px; 
 	    		height: 85%; 
 	    		top:0;
+
+	    		
 	    		h1{text-indent:0px; font-size:0.95em; width:100%; color:$color1;line-height: 25px; width:100%; margin:0; height:25px;}
-	    		p{font-size:0.75em; width:100%; margin:1% 0; letter-spacing:0.05em; line-height:1.6em;}
+	    		p{
+	    			font-size:0.75em; 
+	    			width:100%; 
+	    			margin:1% 0; 
+	    			letter-spacing:0.05em; 
+	    			line-height:1.6em;
+	    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+	    				font-size:1.5em;
+	    				width:33%;
+	    				display:inline-block;
+	    				text-align:center;
+	    				height:30px;
+	    				line-height:30px;
+	    			}
+	    		}
+
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -939,7 +937,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  	width: 100%;  
  	height:100px;
 
- 	#logo{
+ 	
+ 	h1#logo{
  		font-size:1.9em; 
  		width:40%; 
  		height:40px; 
@@ -949,8 +948,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  		color:$color2; 
  		text-shadow:1px 1px 2px #444; 
  	}
-
-	#logo-blog{
+	h1#logo-blog{
 		font-size:1.9em; 
 		width:40%; 
 		height:35px; 
@@ -960,12 +958,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		color:$color2; 
 		text-shadow:1px 1px 2px #444; 
 	}
-	p {   margin: 0px 0px 0px 0.5%; font-size:0.65em;}
+	h2 { margin: 0px 0px 0px 0.5%; font-size:0.65em;}
+	
 
 	nav {
 		#mobile-nav { display:none;}
 		#innernav li a{ font-size:0.7em;}
-		#innernav .menu-main-container {    width: 100%;    left: 51.3%;}
+		#innernav li a:hover{ font-size:0.8em;}
+		#innernav .menu-main-container { width: 100%; left: 51.3%;}
 	} 
 	 
 	
@@ -974,9 +974,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container #main-content { 
 
-	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
-	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
+	
 	padding: 5px;
+
 
 
 	.introimg { height: auto;}
@@ -1004,7 +1004,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				margin:3% auto;  
 				width:96%; 
 				display:block;
-				form.searchform div label {   line-height: 30px; font-size: 0.7em; }
+				form.searchform div label {   line-height: 15px; font-size: 0.7em; }
 				form.searchform div input {    width: 50%;}
 				form.searchform div input[type="submit"] {font-size:0.8em;}
 			}
@@ -1059,7 +1059,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					p.right a.comments-count:hover{color:$color4;}
 
 				}
-				.read_more{ margin-left:1%; padding:5px; height:30px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 30px; }
+				.read_more{ margin-left:1%; padding:5px; height:35px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 35px; }
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.90em; line-height: 30px;}
 				.sd-content ul li {  width: 5%;}
 				.bypostauthor{ font-size:1em;}
@@ -1078,6 +1078,13 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			.comment-content{width:96%; margin:2% auto; font-size:0.9em;}
 			.comment-form p {font-size:0.8em;}
 			.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
+			.reply{ 
+				
+				a{  width:20%; background-color:$color1; ine-height:35px; }
+				a:hover{ background-color:$color2; color:$color1;  } 
+			}
+			
+
 
 		}
 	}
@@ -1173,6 +1180,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	
 	
 	#photocontainer{
+	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em;}
+	button:hover{color:$color1; background-color:$color2;font-size:1em; }
+
+	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width: 31.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 370px;/*new*/ }
 		width:100%; 
 		height:auto; 
 		font-family:($FontStyle); 
@@ -1191,7 +1202,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	    		padding:1%; 
 	    		
 	    		h1{text-indent:0px; font-size:0.90em; }
-	    		p{font-size:0.70em; }
+	    		p{font-size:0.75em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -1253,32 +1264,34 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header {
 
-	#logo {    font-size: 1.8em; width:42%;}
-	#logo-blog {    font-size: 1.8em; width:42%;}
 	
-	p {    font-size: 0.65em; margin:0 ;}
-	
+	h1#logo { font-size: 1.8em; width:42%;}
+	h1#logo-blog { font-size: 1.8em; width:42%;}
+	h2 {font-size: 0.65em; margin:0 ;}
+
+
 	nav #innernav li a{font-size:0.70em;}
+	nav #innernav li a:hover{font-size:0.75em;}
 	nav #mobile-nav { display:none; }
-	nav #innernav .menu-main-container {    width: 100%;   left: 51.3%;}
+	nav #innernav .menu-main-container {width: 100%; left: 51.3%;}
 	
 }
  
 #wrapper_container #main-content {
 
-	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
-	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
+	
 	
 	h1{font-size:1.35em; margin:0;}
 	h2 { font-size: 1.2em;  text-indent: 1.5%;}
 	h3 { font-size: 1.1em;  }
+	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}}
 
 	.front_panel {
 
 		
 		.intro-text {
-			h1 {  font-size: 0.85em; height:auto;}
-			p {  font-size: 0.80em;}
+			h1 {  font-size: 0.95em; height:auto;}
+			p {  font-size: 0.85em;}
 			.introimg {    width: 13%;}
 		} 
 
@@ -1337,8 +1350,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.social-1 form.searchform div label { font-size: 0.7em; line-height:1.4em; }
 				.social-1 form.searchform div input {  width: 50%;}
 				.social-1 form.searchform div input[type="submit"] {font-size:0.7em;}
-				.widget ul li a{font-size:0.90em;}
-				.widget ul li a:hover{font-size:0.95em;}
+				.widget ul li a{font-size:0.80em;}
+				.widget ul li a:hover{font-size:0.90em;}
 			}
 	}
 
@@ -1351,7 +1364,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			
 			.post {
 				h1 { font-size:1.15em;}
-				h2 { font-size:1.05em;}
+				h2 { font-size:1em;}
 				h3{font-size:1em;}
 				p{font-size:0.80em; width: 98%;}
 				.byline {font-size:0.85em;}
@@ -1377,7 +1390,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					p.right a.comments-count:hover{color:$color4;}
 
 				}
-				.read_more{font-size:0.8em; width: 15.9652%;}
+				.read_more{font-size:0.8em; width: 15.9652%; line-height: 28px;}
+				.read_more:hover{ width: 15.9652%; }
 				.sd-content ul li {  width: 5%;}
 			}
 		
@@ -1405,17 +1419,19 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	#photocontainer { 
 
 		width: 100%;
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; }
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em; width:96%;}
+		button:hover{color:$color1; background-color:$color2; font-size:1em;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32%;height: 375px; }
 		.content .menuSwitch ul li {font-size: 100%;}
 		.showcase-img { 
-			width: 92%;
+			width: 96%;
 			.showcase-content{ 
 	    		  
-	    		width: 92%;/*new*/  
+	    		width: 96%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.80em; }
-	    		p{font-size:0.70em; }
+	    		h1{text-indent:0px; font-size:0.90em; }
+	    		p{font-size:0.80em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -1483,15 +1499,17 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container header { 
 	width: 100%;
 
-	 #logo {   font-size: 1.7em; width: 45%; }
-	 #logo-blog {  font-size: 1.7em;  width:45%; }
-	 p {    font-size: 0.60em; }
+	
+	h1#logo {font-size: 1.7em; width: 45%; }
+	h1#logo-blog {font-size: 1.7em;  width:45%; }
+	h2 {font-size: 0.60em; }
+	
 
 	nav {  
 		width: 42%;
-		#innernav li a {  font-size: 0.65em;}
-		#innernav li a:hover {  font-size: 0.70em;}
-		#innernav .menu-main-container {    width: 100%;    left: 44.3%;}
+		#innernav li a {font-size: 0.65em;}
+		#innernav li a:hover {font-size: 0.70em;}
+		#innernav .menu-main-container { width: 100%; left: 44.3%;}
 		#mobile-nav { display:none; }
 	}
 	
@@ -1500,10 +1518,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container #main-content {
 
-	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
-
-	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2; font-size:0.9em;}
-
+	
 	p {    font-size: 0.80em; width:100%; line-height:1.5em;}
 	h1 {   margin: 0px 0px 0.1em; font-size:1.2em;   padding: 0px; width:100%;}
 	h2 {   font-size: 1em; padding: 0px;    color: $color1;    letter-spacing: 0.1em;   width: 99.5458%;}
@@ -1704,24 +1719,29 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		
 	#photocontainer{
 
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
+
+		button:hover{color:$color1; background-color:$color2;  font-size:1em;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:31.5%;height: 337px; }
+
 		h2 {  font-size: 1.6em;  width: 98%;   margin:auto 1%;}
 		.content {clear: both;position: relative; top: 0px; padding: 0px; overflow: hidden; }
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32.5%; height: 332px;}
+		
 		.content .menuSwitch {text-align: left;margin: 10px 0 0px 0; width:100%;}
 		.content .menuSwitch ul li {  list-style-type: none;  display: inline-block;  }
 		.ca-style figure {  height: 90%;}
 				
 		.showcase-img {  
 			float: left;  
-			width:92%;  
+			width:96%;  
 			margin: 0;
 			.showcase-content{ 
 	    		  
-	    		width: 92%;/*new*/  
+	    		width: 96%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.9em; }
-	    		p{font-size:0.75em; }
+	    		h1{text-indent:0px; font-size:0.80em; }
+	    		p{font-size:0.70em; margin: 0; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -1771,14 +1791,16 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 /* iPads (landscape) ----------- */
 
 @media (max-width : 768px) {
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g { display:none; }
+
 
 #wrapper_container header {
 
-	#logo { font-size: 1.6em; width:45%; }
-	#logo-blog {  font-size: 1.6em;  width:45%;}
-	.search-box {    width: 30%;    font-size: 0.75em;}
-	p {    font-size: 0.65em; }
+	
+	h1#logo { font-size: 1.6em; width:45%; }
+	h1#logo-blog { font-size: 1.6em;  width:45%;}
+	.search-box { width: 30%;font-size: 0.75em;}
+	h2 { font-size: 0.65em; }
+	
 	nav #mobile-nav { display:none; }
 	nav #innernav .menu-main-container {    width: 100%;    left: 44.3%;}
 	
@@ -1967,21 +1989,26 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
     }
 
 	#photocontainer {
+
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
+
+		button:hover{color:$color1; background-color:$color2;  font-size:1em;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:31.5%;height: 337px; }
 	
 		.content .menuSwitch ul li {font-size:100%;}
 		.ca-style figure {  height: 90%;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32.5%; height: 322px;}
+		
 		.showcase-img {  
 			float: left;  
-			width:92%;  
+			width:96%;  
 			margin:0 0.5% 0 0;
 			.showcase-content{ 
 	    		  
-	    		width: 92%;/*new*/  
+	    		width: 96%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.9em; }
-	    		p{font-size:0.75em; }
+	    		h1{text-indent:0px; font-size:0.8em; }
+	    		p{font-size:0.70em; }
 	    		.links {
 	    			height:40px; 
 	    			margin:0; 
@@ -2034,8 +2061,6 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 
 @media (max-width : 667px) {
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:90%; display:block; height:100%; width:10%; outline:none; border:none; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; font-size:0.85em; text-align: center;}
-button:hover{color:$color1; background-color:$color2; cursor:pointer;}
 
 .fixed-side-social-container{display:none;}
 
@@ -2049,11 +2074,11 @@ a.nav-toggle:hover{line-height:60px; }
 	width: 100%;   
 	height:62px;
 
-	#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
-
-	#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
-	p {    margin: 0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
-
+	
+	h1#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
+	h1#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
+	h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
+	
 	
 	/*Mobile-Navigation*/
 	nav {
@@ -2243,16 +2268,16 @@ a.nav-toggle:hover{line-height:60px; }
 	/*Photocontainer*/
 	#photocontainer{
 
-		
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.80em; width:100%; text-align:center;}
+		h1 {   font-size: 1em; height: 27px; line-height: 27px;}
+		h3 { margin: 1% ; text-indent: 0; width:98%;  }
+
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ width:100%; text-align:center;}
 
 		button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2; width:100%;}
 
-		
-		h1 {   font-size: 1em; height: 27px; line-height: 27px;}
-		h3 { margin: 1% ; text-indent: 0; width:98%;  }
-		
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 0; height: 302px;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 376px; width: 40.5%;}
+
+				
 		.content .menuSwitch { text-align: left;  font-size:100%; margin: 10px 0px 0px;   width: 100%;}
 		
 		.links { width:100%; margin:1% auto; height:30px; line-height:30px;}
@@ -2264,8 +2289,8 @@ a.nav-toggle:hover{line-height:60px; }
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.8em; line-height:20px; height:20px; }
-	    		p{font-size:0.70em; }
+	    		h1{text-indent:0px; font-size:0.90em; line-height:25px; height:25px; }
+	    		p{font-size:0.80em;  }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -2329,7 +2354,7 @@ a.nav-toggle:hover{line-height:60px; }
 @media (max-width : 640px) and (orientation : landscape){
 
 .fixed-side-social-container{display:none;}
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ font-size:0.85em; text-align: center;}
+
 a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 #wrapper_container { width: 96%; height: auto; margin: 0 auto; }
 
@@ -2338,10 +2363,11 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	width: 100%;    
 	height:62px;    
 	
-	#logo { font-size: 1.9em;  text-indent:0%; }
-	#logo-blog { font-size: 1.9em;  text-indent:0%;}
-	p {    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
 	
+	h1#logo { font-size: 1.9em;  text-indent:0%; }
+	h1#logo-blog { font-size: 1.9em;  text-indent:0%;}
+	h2{    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
+
 	/*Mobile-Navigation*/
 	nav {
 
@@ -2527,7 +2553,13 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	#photocontainer {
 		
 		h3 { margin: 1% ; width:98%; }
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0;  width:32%; height:288px;}
+
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+
+		button:hover{color:$color1; background-color:$color2; width:100%;}
+
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 374px; width: 40.5%;}
+		
 		.content .menuSwitch { text-align: left;   margin: 10px 0px 0px;   width: 100%;}
 		.content .menuSwitch { font-size:100%;}
 						
@@ -2541,16 +2573,16 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.8em; line-height:20px; height:20px; }
-	    		p{font-size:0.70em; }
+	    		h1{text-indent:0px; font-size:0.85em;  }
+	    		p{font-size:0.75em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
 	    			display:inline-block;
 	    			width:100%;
-	    			a{ height:30px; font-size: 0.70em;  margin:1% 0.5% 1% 0; }
+	    			a{ height:30px;  width:48%; font-size: 0.70em;  margin:1% 0 1% 1%; }
 	    			a:hover{ color:$color4; background-color:$color1; font-weight:normal; font-size:0.70em; }
-	    			a.fancybox { font-size:0.75em; margin:1% 0 1% 0.5%; padding:0.5%; }
+	    			a.fancybox { font-size:0.75em; margin:1% 0 1% 1%; padding:0.5%; width:48%;}
 	    		}
     		}
 			
@@ -2589,8 +2621,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 @media (max-width : 600px) {
 
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ font-size:0.80em; text-align: center;}
-button:hover{color:$color1; background-color:$color2;}
+
 a.nav-toggle { height:60px; line-height:60px; width:60px; margin-right:2%;}
 a.nav-toggle:hover{ line-height:60px;}
 .fixed-side-social-container{display:none;}
@@ -2601,9 +2632,10 @@ a.nav-toggle:hover{ line-height:60px;}
 	header {
 
 		height:62px;
-		#logo {  font-size:1.8em;}
-		#logo-blog {  font-size:1.8em; }
-		p { display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
+
+		h1#logo {  font-size:1.8em;}
+		h1#logo-blog {  font-size:1.8em; }
+		h2{ display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -2715,7 +2747,11 @@ a.nav-toggle:hover{ line-height:60px;}
 
 	#photocontainer {
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width: 32.5%; height:278px;}
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+
+		button:hover{color:$color1; background-color:$color2; width:100%;}
+
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 374px; width: 40.5%;}
 		.content .menuSwitch ul li {  margin:0.5%; font-size: 95%;}
 		.showcase-img {     
 			margin: 0;
@@ -2724,8 +2760,8 @@ a.nav-toggle:hover{ line-height:60px;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.75em; line-height:20px; height:20px; }
-	    		p{font-size:0.65em; }
+	    		h1{text-indent:0px; font-size:0.80em;  }
+	    		p{font-size:0.70em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -2765,12 +2801,13 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 #wrapper_container {
 		header {
-	    width: 100%;
-	    height:62px;
-	    
-		#logo { width: 78%;  }
-		#logo-blog {  width: 78%;  }
-		p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
+		    width: 100%;
+		    height:62px;
+		    		    
+			h1#logo { width: 78%;  }
+			h1#logo-blog {  width: 78%;  }
+			p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
+			
 		}
 
 		#main-content {
@@ -2809,7 +2846,11 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 			#photocontainer {
 
-				.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{  height:280px;}
+				button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+
+				button:hover{color:$color1; background-color:$color2; width:100%;}
+
+				.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 2%; height: 365px; width: 44.5%;}
 				.content .menuSwitch ul li {  margin:0.5%; font-size: 0.9em;}
 
 				.showcase-img {     
@@ -2819,8 +2860,8 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 			    		width: 100%;/*new*/  
 			    		padding:1%; 
 			    		
-			    		h1{text-indent:0px; font-size:0.75em; line-height:20px; height:20px; }
-			    		p{font-size:0.65em; }
+			    		h1{text-indent:0px; font-size:0.85em;  }
+			    		p{font-size:0.75em; }
 			    		.links {
 			    			height:30px; 
 			    			margin:0; 
@@ -2841,19 +2882,18 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 @media (max-width : 480px) and (orientation : landscape) {
 
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:85%; display:block; height:100%; width:15%; outline:none; border:none;  font-size:0.70em; color:$color2; background-color:$color1;}
-button:hover{color:$color1; background-color:$color2;}
+
 .fixed-side-social-container{display:none;}
 a.nav-toggle {display:block; height:60px; line-height:60px; background-size:50px auto, auto auto; width:50px;}
 a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 #wrapper_container header {
 
 	height:62px;
-
-	#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
-	#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
-	p {  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
-		
+	
+	h1#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
+	h1#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
+	h2{  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
+	
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3005,16 +3045,13 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 	
 	#photocontainer {
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 0 0 4% 0; height:260px;}
-		.content .menuSwitch ul li { margin:0.5%; font-size: 0.7em;}
-		.showcase-content {
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
 
-		 margin-top: 0px;    
-		 padding-right: 0px;    
-		 width: 100%;
-		 h1 {    width:100%;  font-size: 0.75em; height: 15px; line-height: 15px;}
-		 p {    margin: 1px 0;   letter-spacing: 0.1em;   line-height: 1.5em; font-size: 0.65em;}
-		}
+		button:hover{color:$color1; background-color:$color2; width:100%;}
+
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 375px; width: 56.5%; display:block;}
+		.content .menuSwitch ul li { margin:0.5%; font-size: 0.7em;}
+		
 	
 		.showcase-img {    
 			float: left;   
@@ -3025,17 +3062,17 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.6em; line-height:20px; height:20px; }
-	    		p{font-size:0.55em; }
+	    		h1{text-indent:0px; font-size:0.9em;  }
+	    		p{font-size:0.80em; }
 	    		.links {
 	    			height:25px; 
 	    			margin:0; 
 	    			display:inline-block;
 	    			width:100%;
-	    			a{ height:25px; font-size: 0.60em;  line-height:25px;}
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.60em; }
-	    			a.fancybox { font-size:0.60em;height:25px; padding:0.5%;line-height:25px; }
-	    			a.fancybox:hover{line-height:25px;height:25px;}
+	    			a{  font-size: 0.70em;  }
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.7em; }
+	    			a.fancybox { font-size:0.70em; padding:0.5%; }
+	    			
 	    		}
     		}
 		}
@@ -3093,10 +3130,6 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 @media (max-width : 375px)  {
 
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:84%; background-color:#fff; display:block; height:100%; width:15%; outline:none; border:none; font-size:0.75em; text-align:left;}
-
-button:hover{color:$color1; background-color:$color2;}
-
 a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 .fixed-side-social-container{display:none;}
@@ -3107,9 +3140,9 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 	
 	height:62px;
 
-	#logo { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px;  text-align:left;   }
-	#logo-blog { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px; text-align:left;  }
-	p { text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; height:15px; line-height:15px;}
+	h1#logo { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px;  text-align:left;   }
+	h1#logo-blog { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px; text-align:left;  }
+	h2{ text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; height:15px; line-height:15px;}
 
 	
 	/*Mobile-Navigation*/
@@ -3262,9 +3295,15 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 		margin:auto; 
 		padding:0;
 		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
+
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+
+		button:hover{color:$color1; background-color:$color2; width:100%;}
+
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 375px; width: 71.5%; display:block;}
 		.content .menuSwitch { text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:80%;}
 		.content .menuSwitch ul li {   font-size: 0.9em; padding: 10px 10px;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% auto; height:343px; width: 65%; display:block;float:none;}
+		
 		
 		.showcase-img { 
 			margin: 0;   
@@ -3276,7 +3315,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.9em; line-height:20px; height:20px; }
+	    		h1{text-indent:0px; font-size:0.9em;  }
 	    		p{font-size:0.80em; }
 	    		.links {
 	    			height:25px; 
@@ -3326,10 +3365,6 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
 
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i, {position:absolute; top:0%; left:85%; background-color:$color1; display:block; height:100%; width:15%; outline:none; border:none; font-size:0.9em;  text-align:left; color:$color4; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0.4%;}
-
-button:hover{color:$color1; background-color:$color2;}
-
 .fixed-side-social-container{display:none;}
 
 #wrapper_container { 
@@ -3340,11 +3375,12 @@ button:hover{color:$color1; background-color:$color2;}
 #wrapper_container header{
 	
 	height:62px;
-
-	#logo { font-size: 1.4em; width: 80%;    }
-	#logo-blog { font-size: 1.4em; width: 80%; }
-	p {   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
 	
+	
+	h1#logo { font-size: 1.4em; width: 80%;    }
+	h1#logo-blog { font-size: 1.4em; width: 80%; }
+	h2{   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
+
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3499,9 +3535,15 @@ button:hover{color:$color1; background-color:$color2;}
 		margin:auto; 
 		padding:0;
 		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
+
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+
+		button:hover{color:$color1; background-color:$color2; width:100%;}
+
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 360px; width: 71.5%; display:block;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; }
 		.content .menuSwitch ul li { font-size: 0.85em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% auto; display:block; float:none; height:328px; }
+		
 		.showcase-img { 
 			margin: 0;   
 			float: left;     
@@ -3512,8 +3554,8 @@ button:hover{color:$color1; background-color:$color2;}
 	    		width: 100%;/*new*/  
 	    		padding:2.5%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.85em; line-height:20px; height:20px; }
-	    		p{font-size:0.75em; }
+	    		h1{text-indent:0px; font-size:0.90em; line-height:20px; height:20px; }
+	    		p{font-size:0.80em; }
 	    		.links {
 	    			height:25px; 
 	    			margin:0; 
@@ -3548,19 +3590,19 @@ button:hover{color:$color1; background-color:$color2;}
 
 @media (max-width : 320px)  {
 
-button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:85%; background-color:$color1; display:block; height:100%; width:15%; outline:none; border:none; font-size:0.85em;  text-align:left; color:$color4;  }
+
 
 #wrapper_container {width: 98%;}
 
 #wrapper_container header{
 
 	width:100%;
+		
+	h1#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
+	h1#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
+	h2 {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
 
-	#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
-	#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
-	p {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
 	
-
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3698,7 +3740,11 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 
 	#photocontainer {
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width:70%; margin: 3% auto; height: 319px;}
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+
+		button:hover{color:$color1; background-color:$color2; width:100%;}
+
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 360px; width: 81.5%; display:block;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:1em;}
 		.content .menuSwitch ul li {   font-size: 0.75em;}
 		.showcase-img { 
@@ -3711,8 +3757,8 @@ button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, butt
 	    		width: 100%;/*new*/  
 	    		padding:2.5%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.85em; line-height:20px; height:20px; }
-	    		p{font-size:0.75em; }
+	    		h1{text-indent:0px; font-size:0.90em;  }
+	    		p{font-size:0.80em; }
 	    		.links {
 	    			height:25px; 
 	    			margin:0; 
