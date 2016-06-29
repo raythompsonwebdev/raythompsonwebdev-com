@@ -57,7 +57,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/campingadvice-website.jpg" alt="CampingAdvice.com website home page" >
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Campingadvice-Website-Small.jpg" alt="CampingAdvice.com website home page" >
 
   <figcaption class="showcase-content showcase-a">
   <h1>Website:</h1>
@@ -68,7 +68,11 @@ Template Name: Websites
   <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP , MySQLi&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
+<<<<<<< HEAD
   <figure class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
+=======
+  <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
+>>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/campingadvice-com">Visit Website</a></figure>
   </figcaption>
   </figure>

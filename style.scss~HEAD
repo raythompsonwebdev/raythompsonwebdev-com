@@ -12,24 +12,11 @@ Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
 */
 
-/*
-FF735F
-0551C7
-468EFF
-A2CC23
-90B2288*/
-
-/*
-0F60C7
-FF8477
-4697FF
-ADCC23
-ABB28B*/
 
 $color1:#062351;
 $color2:#CCD3DE;
 $color3:#c0c9dd;
-$color4:#ffffff;
+$color4:#fff;
 $color5:#6e757f;
 $color6:#9DA3AB;
 $color7:#575A5E;
@@ -114,27 +101,28 @@ img{ width:100%; max-width:100%; height:auto; border:0;}
 	
 	.linkedin-icon{
 		background-position:0 0;
-		span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color3; color:$color1;}
+		span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color2; color:$color1;}
 	}
 	
 	.twitter-icon{
 		background-position:0 -61px;
-		span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color3; color:$color1;}
+		span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color2; color:$color1;}
 	}
 	
 	.facebook-icon{
 		background-position:0 -122px;
-		span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color3; color:$color1;}
+		span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color2; color:$color1;}
 	}
 	
 	.google-icon{
 		background-position:0 -186px;
-		span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color3; color:$color1;}
+		span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color2; color:$color1;}
 	}
 }
 
 /*Global*/
-a.nav-toggle{display:none; }
+a.nav-toggle{height:60px; width:60px; float:right; /*background-size:60px auto, auto auto;*/ display:none; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color2;}
+a.nav-toggle:hover{ float:right;background-color:$color1; color:$color4; }
 a{
 	text-decoration:none; 
 	margin:0 ; 
@@ -190,11 +178,9 @@ button:hover{color:$color1; background-color:$color2;}
 
 
 body{
-	background:$color2;
+	background:$color3;
 	font-size:medium;
 	font-family:($FontStyle); 
-	margin:0;
-	padding:0;
 }
 
 /*Wrapper*/
@@ -212,54 +198,42 @@ body{
 #wrapper_container header { 
 	width: 100%;  
 	height: 90px; 
-	 
+	background-color: $color3; 
 	margin:0;
 	padding:0; 
 
-	
-	h1#logo{
+	/*Logo*/
+	#logo{
 		font-size:2em; 
 		width:40%; 
-		height:40px; 
-		margin:0 ; 
-		font-weight:bold; 
-		line-height:45px; 
-		color:$color3; 
-		text-shadow:1px 1px 1px #212121;     
-		letter-spacing: 0.01em;
-<<<<<<< HEAD
-		
-=======
-		behavior:url(PIE.htc);
->>>>>>> origin/master
-		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
-		span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
-	}
-
-	
-	h1#logo-blog{
-		font-size:2em; 
-		width:40%; 
-		height:40px; 
+		height:45px; 
 		margin:0 ; 
 		font-weight:bold; 
 		line-height:45px; 
 		color:$color2; 
-		text-shadow:1px 1px 1px #212121; 
+		text-shadow:1px 1px 2px #444;     
+		letter-spacing: 0.01em;
+		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
+		span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
+	}
+
+	#logo-blog{
+		font-size:2em; 
+		width:40%; 
+		height:45px; 
+		margin:0 ; 
+		font-weight:bold; 
+		line-height:45px; 
+		color:$color2; 
+		text-shadow:1px 1px 2px #444; 
 		behavior:url(PIE.htc); 
 		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
 		span:last-of-type{height:40px; padding:0; margin:0; color:$color1;}
 	}
 	
-<<<<<<< HEAD
-	h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; font-weight:normal; }
-=======
-	h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; }
->>>>>>> origin/master
+	p{float:left; display:inline-block; width:100%; height:20px; margin: 0; padding:0; line-height:20px; font-size:0.70em; }
 	#title { float:left; min-width:280px; max-width:350px; margin-left:0; }
 
-
-	
 	
 	/*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/	
 	
@@ -278,12 +252,8 @@ body{
 		#innernav .menu-main-container #menu-main{width:100%; display:block;}
 		#innernav .menu-item {width:20%;float:left; height:35px; list-style:none;margin:0; padding:0; text-align:center; display:inline-block;}
 		#innernav li.menu-item:hover { background-color: $color1; }
-<<<<<<< HEAD
-		#innernav li a {font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0;  font-size:0.80em; display:block;}
-=======
-		#innernav li a {font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0; letter-spacing:0.1em;  font-size:0.80em; display:block;}
->>>>>>> origin/master
-		#innernav li a:hover { line-height:35px; color:$color4; font-size:0.85em;}
+		#innernav li a {font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0; letter-spacing:0.1em;  font-size:0.85em; display:block;}
+		#innernav li a:hover { line-height:35px; font-weight:bold;color:$color4; font-size:0.90em;}
 		#mobile-nav { display:none; }
 	} 
 		 
@@ -353,12 +323,12 @@ body{
 				font-family:($FontStyle);
 				padding:0;
 				ul{width:100%; height:auto; display:inline-block; margin:0;}
-				ul.children > li{background-color:$color3; margin:1% auto;}
-				ul li{list-style:none; line-height:30px; background-color:$color3; width: 96%;margin:2% auto; text-align:center;}
-				ul li a{ width:100%; display:block; font-weight:400; letter-spacing:0.02em; font-size:0.9em; line-height:35px; background-color:$color3;}
-				ul li a:hover{color:$color4; background-color:$color1; font-size:1em;}
-				ul li.recentcomments a{display:block; background-color:$color1;}
-				ul li .comment-author-link a{display:block; background-color:$color1;} 
+				ul.children > li{background-color:$color2; margin:1% auto;}
+				ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:4% auto; text-align:center;}
+				ul li a{ width:100%; display:block; font-weight:400; letter-spacing:0.02em; font-size:0.9em; line-height:35px; background-color:$color2;}
+				ul li a:hover{color:$color1; background-color:$color4; font-size:1em;}
+				ul li.recentcomments a{display:block; background-color:$color2;}
+				ul li .comment-author-link a{display:block; background-color:$color2;} 
 			}
 
 		}
@@ -387,24 +357,24 @@ body{
 				margin: 1% 0;
 				
 				
-				h1{font-size: 1.35em; margin:0.5em auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 40px; height: 40px;}
+				h1{font-size: 1.35em; margin:0 auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 40px; height: 40px;}
 				h2{text-indent:0px; font-size: 1.2em;margin: 0.5em auto; padding: 0px;letter-spacing: 0.05em;width: 98%; background-color:$color4; color:$color1; line-height: 40px; height: 40px;}
-				h3{margin: 0.5em auto; height: 40px;line-height: 30px;font-size: 1.10em; text-indent:0%; width:98%;}
+				h3{margin: 1% auto; height: 40px;line-height: 30px;font-size: 1.15em; text-indent:0%; width:98%;}
 				h3 a{ padding-left:0;  height:100%; }
-				ul{line-height: 1.5em; text-indent:0; width:98%; margin: 1% auto;display:block;}
-				ul li{  width: 100%; margin:0px; font-size:0.9em; }
+				ul{line-height: 1.5em;font-size: 0.9em; text-indent:0; width:98%; margin: 1% auto;display:block;}
+				ul li{  width: 100%; margin:0px; font-size:1em; }
 				ul li a{  margin-left:0px;}
 				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.85em; color:$color8; font-weight:350; line-height:1.75em;letter-spacing:0.05em;}
 				
 				.thumb{width: 58%; height:auto; margin: 1% auto; display:block; clear:both;}
 				.postimg{width:29%; margin: 1% auto;}
-				.featuredImage{height:auto; width:90%; margin:1em auto; display:block;}
+				.featuredImage{height:auto; width:90%; margin:1em auto;}
 
 
 				header.byline{
 					width:98%; 
 					margin:auto; 
-					height:45px; 
+					height:60px; 
 					font-size:0.9em; 
 					line-height:1.5em;
 					background-color: #fff;
@@ -420,23 +390,18 @@ body{
 					line-height:1.5em;
 					p{ margin: 0px; display: inline-block; padding: 0; width:auto;}
 					a{font-size: 0.95em; color: $color1; margin:auto; width:100%; }
-					p.right{width:7%; float:right; font-size:1.3em; height:40px; background-color:$color3; margin:0; }
+					p.right{width:10%; float:right; font-size:1.3em; height:40px; background-color:$color2; margin:0; }
 					p.right:hover{ background-color:$color1; color:$color4;}
 
-					p.right a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%; font-size:1.1em;background-color:$color3;}
-					p.right a.comments-count:hover{color:$color4; background-color:$color1; font-size:1.2em; line-height:40px; }
+					p.right a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%;}
+					p.right a.comments-count:hover{color:$color4;}
 
 				}
 				
 				.newsExcerpt{ height:auto;}
 								
-<<<<<<< HEAD
-				.read_more{  font-size:0.9em;  margin: 0% 0 0 1%; padding:1%; height:35px; line-height:20px; list-style:none; background-color:$color3; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block; text-align:center;}
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:20px; }
-=======
-				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:35px; line-height:35px; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
+				.read_more{  font-size:0.9em;     margin: 0% 0 0 1%; padding:1%; height:30px; line-height:15px; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
 				.read_more:hover{ color:$color4; background-color:$color1; font-weight:bold; }
->>>>>>> origin/master
 				/*Social media share buttons*/
 				.sd-content{
 					margin-top:2%;
@@ -485,12 +450,8 @@ body{
 			float:left;
 			@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
 
-<<<<<<< HEAD
-			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em; font-weight:bold;}
-=======
 			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em;}
->>>>>>> origin/master
-			h3#reply-title {width:97%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
+			h3#reply-title {width:96%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
 
 			.navigation{height:50px; width:98%; margin:1% auto;}
 			
@@ -501,7 +462,7 @@ body{
 				margin:2% auto; 
 				font-size:1em;
 				min-height:100px;
-				p{width:100%; font-size: 1em; line-height:1.5em;}
+				p{width:100%;}
 			}
 			.comment-reply-title, #comments {margin:0;height: 35px; min-height: 35px; line-height: 35px; text-indent: 1%;width: 96%; font-size:1em;}
 			.comment-response #submit {  height: 32px;  list-style: outside none none;  background-color: $color1;  width: 23.9652%;  color: $color2;  @include Transition(background 0.3s linear 0s, color 0.3s linear 0s ); font-family:($FontStyle);  font-size: 1em; margin: 0px auto;  border: medium none;}
@@ -528,10 +489,9 @@ body{
 				input[type=text], textarea, select{ @include Transition(all 0.30s ease-in-out ); outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width:100%; }
 				label{height:30px; line-height:30px; width:30px;}
 				input[type=text]:focus, textarea:focus { box-shadow: 0 0 5px rgba(81, 203, 238, 1); padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid rgba(81, 203, 238, 1); }
-				p.form-submit{ margin :2% 0; width: 100%;}
-				input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color3; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color1; font-family:($FontStyle);}
-				input[type="submit"]:hover{background-color:$color1; color:$color4; }
-				
+				input[type="submit"]{ height:35px; list-style:none; width:25%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color2; font-family:($FontStyle);}
+				input[type="submit"]:hover{background-color:$color2; color:$color1; }
+				.form-submit{ margin :2% 0;}
 			}
 			
 			.comment-meta{
@@ -552,8 +512,6 @@ body{
 				a{ margin:0; display:block; height:35px; list-style:none; width:10%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color2; font-family:($FontStyle); line-height:35px; text-align:center;}
 				a:hover{ background-color:$color2; color:$color1;  } 
 			}
-			p.must-log-in{width:100%; text-indent:2%;}
-
 
 		}/*Comment section end*/
 	}
@@ -573,8 +531,8 @@ body{
 		input{ width:95%; height:35px;}
 		label{height:30px; line-height:30px;}
 
-		input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color3; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s); padding:0; border:none; color:$color1; font-family:($FontStyle); display:block;}
-		input[type="submit"]:hover{background-color:$color1; color:$color4; }
+		input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s); padding:0; border:none; color:$color2; font-family:($FontStyle); display:block;}
+		input[type="submit"]:hover{background-color:$color2; color:$color1; }
 
 		input[type=text], textarea, select{ @include Transition(all 0.30s ease-in-out);	 outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width:95%; } 
 		input[type=text]:focus, textarea:focus ,select:focus { box-shadow: 0 0 5px rgba(81, 203, 238, 1); padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid rgba(81, 203, 238, 1); } 
@@ -657,7 +615,22 @@ body{
 				.profile .sectionleftbox caption { /*coordinated marking to match cell's padding*/  margin-bottom:.5em;  /*centered so it doesn't blend in to other content*/  text-align:center; }
 			}
 		
-				
+			
+			/*.imagebox .box:hover .image-4 #image-5 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
+			.imagebox .box:hover .image-4 #image-4 { -moz-transform: translateX(-100%);  -o-transform: translateX(-100%);  -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%);  transform: translateX(-100%);  opacity: 1;}
+			/* Content Section Leftbox contentboxes Caption Common Style */
+
+
+		
+			 
+			/** Caption 4: Slide **/
+			
+			/*.wrapper_container #main-content article .imagebox .box .slide-caption h3{font-size:100%; color:$color4; margin:0px; height:30px; padding:2%; width:96%; background-color:#c90;}*/
+
+			/** Slide Caption :hover Behaviour **/
+			/*.imagebox .box:hover .slide-caption { background-color: $color4; -moz-transform: translateX(-100%); -o-transform: translateX(-100%); -webkit-transform: translateX(-100%); -ms-transform: translateX(-100%); transform: translateX(-100%); opacity: 1;}*/
+			
+			
 		}
 
 
@@ -673,7 +646,7 @@ body{
 			
 			
 
-			h2 { width: 100%; height: 50px; margin: 0px; padding: 0px;   font-size: 1.3em; line-height: 50px; background-color: $color7;   color: $color4; text-indent: 1.5%; letter-spacing: 0.05em; font-weight:bold;}
+			h2 { width: 100%; height: 50px; margin: 0px; padding: 0px;   font-size: 1.4em; line-height: 50px; background-color: $color7;   color: $color4; text-indent: 1.5%; letter-spacing: 0.05em; font-weight:500;}
 			#social { width:50%; display:block; float:left; margin-top:0px;}
 			#social h3{width:100%; margin:2% 0px;}
 
@@ -694,7 +667,7 @@ body{
 					display: inline-block;  
 					float: left; 
 					color:$color1;
-					li { text-align: left;  list-style: none;  height: 23.40%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
+					li { text-align: left;  list-style: none;  height: 23.56%;  border-bottom: 1px solid #444;  position: relative;  bottom: 0px;    }
 					li:first-child{border-top: 1px solid #444;  }
 					li:last-child {  height: 9.48657%;  border:none; font-size:1em; }
 					li span {   color:$color1; position: absolute;  bottom: 0; line-height:inherit;  font-size:0.9em;display:inline-block; width:100%; text-align:left; height:100%;}
@@ -745,11 +718,11 @@ body{
 							text-align:left;  
 							background-color:$color4;
 							
-							h2 { padding:0 ; color:$color4; line-height:40px; text-indent:1.5%; height:40px; background-color: $color1; letter-spacing: 0.1em;font-size: 1.05em; font-weight: bold;}
+							h2 { padding:0 ; color:$color4; line-height:40px; text-indent:1.5%; height:40px; background-color: $color1; letter-spacing: 0.0em;font-size: 1.05em; font-weight: bold;}
 
 							.abobe{float: none;/*new*/ width: 43.589743%;/*new*/ height:33.630272%;/*new*/  margin: 1% auto;/*new*/    outline: 0;   display: block;/*new*/ }
 							.cert{float: none;/*new*/   width: 29.780471%;/*new*/height:42.564102%;/*new*/      margin: 1% auto;/*new*/   display: block;/*new*/}
-							h3 {font-size:0.90em; width:auto; text-indent: 0px; margin-top:1%;letter-spacing: 0.01em; line-height:35px; }
+							h3 {font-size:0.91em; width:auto; margin:0; text-indent: 0px; margin-top:1%;letter-spacing: 0.03em; line-height:1.4em; font-weight:bold;}
 							p {font-size: 0.85em;/*new*/  width: 100%;/*new*/ margin-top:1%; font-weight:300; color:$color1; display:inline-block; line-height: 1.6em;}
 							p:first-child { font-weight:bold;}
 							p i{ font-size:0.85em; color:$color1; }
@@ -758,20 +731,21 @@ body{
 				}
 
 				ul {  margin: 0;  list-style: outside none none;  float: left; height:380px;/*new*/ width: 25%;   padding: 0px; font-family:($FontStyle);}
-				ul li {  margin:5px 0 5px 0; width:100%; height:38px;}
-				ul li a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color3; color:$color1; font-size:0.80em;  line-height:38px;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
+				ul li {  margin:5px 0 5px 0; width:100%; color:$color4; height:38px;}
+				ul li a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color2; color:$color1; font-size:0.80em;  line-height:38px;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
 				ul a:hover {background-color:$color1; color:$color4; font-weight:700; }
 			}/* END OF Hero Slider*/
 		}
 	}
 
 	
-		
+	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:92%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color4; background-color:$color1;}
+	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}	
 
 	.skills{ 
 		list-style: none; 
 		font-family:($FontStyle); 
-		margin:1% 0px 5% 0%; 
+		margin:5% 0px 5% 0%; 
 		padding:0px; 
 		width:45%; 
 		display:inline-block;
@@ -803,8 +777,6 @@ body{
 
 
 	#photocontainer{
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:92%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color4; background-color:$color1;}
-		button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
 		width:96%; 
 		height:auto; 
 		font-family:($FontStyle); 
@@ -822,7 +794,7 @@ body{
 		}
 		
     	.content{clear: both; position: relative;top: 10px;padding: 0px;overflow: hidden; }
-    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 370px;/*new*/ }
+    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 305px;/*new*/ }
 
     	.showcase{margin-top: 10px; width:55%;}
 
@@ -833,10 +805,21 @@ body{
     		height:320px;/*new*/ 
     		margin:0 1% 0 0;  
     		display:inline-block;
-    		
+    		@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
     		img{height:auto;  width: 100%; left: 0;}
     		img:hover {}
 
+    		/*figcaption div.mask{ position:absolute; z-index:1; top:0px; left:0px; margin:0px; width: 91%; opacity:0; display:block;  height:100%; overflow:visible;  @include Transition(all 0.4s ease-in-out ); @include TransScale(scale(0.5)); }
+    		figcaption div.mask:hover{ opacity: 1; @include TransScale(scale(1)); border:125px solid rgba(0,0,0,0.5); }  
+    		figcaption div.mask .info {position:relative;	top: -8px;	opacity:0;	 background:url('/wordpress/wp-content/themes/raythompwebdesign-com/graphics/link1.png') center no-repeat;  display: block; text-decoration: none;  padding:5%;  width: 50px; height: 50px;  left: -20px; @include Transition(all 0.4s ease-in-out ); z-index:99;  color:$color4; text-indent:-9999px;  } 
+    		figcaption .mask .info:hover {  opacity:1; text-decoration: none;   padding:0; @include TransScale(scale(1,1));  text-indent:-9999px; }
+
+    		.port-8.effect-1 img{transition: 0.5s;}
+			.port-8.effect-1:hover img{transform: scale(1.1);}
+			.port-8.effect-1 .text-desc{left: 0; position: absolute; top: 0; width: 100%; height: 100%; transform: scale(0);  backface-visibility: hidden;}
+			.port-8.effect-1:hover .text-desc{opacity: 1; transform: scale(1); border-radius: 20%;}
+
+    		*/
     		.showcase-content{ 
 	    		height:100%; 
 	    		display:none;  
@@ -849,25 +832,8 @@ body{
 	    		left:0px; 
 	    		height: 85%; 
 	    		top:0;
-
-	    		
 	    		h1{text-indent:0px; font-size:0.95em; width:100%; color:$color1;line-height: 25px; width:100%; margin:0; height:25px;}
-	    		p{
-	    			font-size:0.75em; 
-	    			width:100%; 
-	    			margin:1% 0; 
-	    			letter-spacing:0.05em; 
-	    			line-height:1.6em;
-	    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
-	    				font-size:1.5em;
-	    				width:33%;
-	    				display:inline-block;
-	    				text-align:center;
-	    				height:30px;
-	    				line-height:30px;
-	    			}
-	    		}
-
+	    		p{font-size:0.75em; width:100%; margin:1% 0; letter-spacing:0.05em; line-height:1.6em;}
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -946,7 +912,6 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  
 #wrapper_container #main-content {  
  	h2 {  font-size: 1.5em;  text-indent: 1.5%;}
- 	p{font-size:0.85em;  clear:right; margin:0;}
 	.prof_cont #chart #bars span {  font-size: 0.85em;}
  	.prof_cont .hero-slider ul li a {   font-size: 0.85em; line-height:45px;}
  	#blogleftside {  width: 75%;  font-size: 100%;  float: left;}
@@ -974,35 +939,33 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  	width: 100%;  
  	height:100px;
 
- 	
- 	h1#logo{
+ 	#logo{
  		font-size:1.9em; 
  		width:40%; 
  		height:40px; 
  		margin:0 0 0 0.4%; 
- 		 
+ 		font-weight:bold; 
  		line-height:40px; 
  		color:$color2; 
  		text-shadow:1px 1px 2px #444; 
  	}
-	h1#logo-blog{
+
+	#logo-blog{
 		font-size:1.9em; 
 		width:40%; 
-		height:40px; 
+		height:35px; 
 		margin:0 0 0 0.4%; 
-		 
+		font-weight:bold; 
 		line-height:40px; 
 		color:$color2; 
 		text-shadow:1px 1px 2px #444; 
 	}
-	h2 { margin: 0px 0px 0px 0.5%; font-size:0.65em;}
-	
+	p {   margin: 0px 0px 0px 0.5%; font-size:0.65em;}
 
 	nav {
 		#mobile-nav { display:none;}
 		#innernav li a{ font-size:0.7em;}
-		#innernav li a:hover{ font-size:0.8em;}
-		#innernav .menu-main-container { width: 100%; left: 51.3%;}
+		#innernav .menu-main-container {    width: 100%;    left: 51.3%;}
 	} 
 	 
 	
@@ -1011,9 +974,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container #main-content { 
 
-	
+	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
+	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
 	padding: 5px;
-
 
 
 	.introimg { height: auto;}
@@ -1022,7 +985,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	h3 {font-size: 1.1em; text-indent: 20px; }
 
 
-	p { font-size:0.80em;}
+	p { font-size:0.85em;}
 	blockquote { font-size:0.9em;}
 
 
@@ -1031,7 +994,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 
 	#blogrightside {
-		h2 {font-size:1.05em;   }
+		h2 {font-size:1.1em;   }
 				
 		.blogbox {
 
@@ -1041,9 +1004,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				margin:3% auto;  
 				width:96%; 
 				display:block;
-				form.searchform div label {   line-height: 15px; font-size: 0.7em; }
+				form.searchform div label {   line-height: 30px; font-size: 0.7em; }
 				form.searchform div input {    width: 50%;}
-				form.searchform div input[type="submit"] {font-size:0.75em;}
+				form.searchform div input[type="submit"] {font-size:0.8em;}
 			}
 
 			.widget ul li a {   font-size: 0.85em;}
@@ -1064,15 +1027,12 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			
 			.post {
 
-				h1{margin: 0 auto; padding: 0px;color: $color1;letter-spacing: 0.1em; font-size:1.10em; }
-				h2{text-indent:0px; font-size: 1em; padding: 0px;letter-spacing: 0.1em;width: 98%; background-color:$color4; color:$color1; margin:0 auto;}
-				h3 { font-size: 0.95em; text-indent: 0px; height:auto; width: 98%;}
+				h1{margin: 0 auto; padding: 0px;color: $color1;letter-spacing: 0.1em; }
+				h2{text-indent:0px; font-size: 1.05em; padding: 0px;letter-spacing: 0.1em;width: 98%; background-color:$color4; color:$color1; margin:0 auto;}
+				h3 { font-size: 1em; text-indent: 0px; height:auto; width: 98%;}
 				h3 a{ padding-left:0; }
 				h3 a:hover{color:$color6;}
-				ul{line-height: 1.5em; text-indent:0; width:98%; margin: 2% auto;}
-				ul li{  width: 100%; margin:0px; font-size:0.85em; }
-				ul li a{  margin-left:0px;}
-
+				ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:96%; margin: 2% auto;}
 				.byline{ font-size:0.9em; width:98%;}
 				.byline a{font-size: 1em; color: $color1; }
 				.thumb{width:15%; margin-left:20px; }
@@ -1099,11 +1059,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					p.right a.comments-count:hover{color:$color4;}
 
 				}
-<<<<<<< HEAD
-				.read_more{ margin-left:1%; padding:5px; height:35px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 29px; }
-=======
-				.read_more{ margin-left:1%; padding:5px; height:35px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 35px; }
->>>>>>> origin/master
+				.read_more{ margin-left:1%; padding:5px; height:30px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 30px; }
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.90em; line-height: 30px;}
 				.sd-content ul li {  width: 5%;}
 				.bypostauthor{ font-size:1em;}
@@ -1117,46 +1073,12 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		/*blog* end*/
 		.contact-wide {
 
-			.commentlist { 
-				padding-left: 0px;
-				margin:0;
-				.comment-meta { height:auto; font-size:0.80em;  }
-				.comment-meta .comment-author { line-height:  30px; height:  30px; padding:0;}
-				.comment-meta .comment-metadata{ line-height: 30px; height: 30px; padding:0;}
-				li ul{width:100%; margin-left:0;}
-				li {padding:0;}
-			}
-			.comment-content{
-				width:96%; 
-				margin:2% auto; 
-				font-size:1em;
-				min-height:100px;
-				p{width:100%; font-size: 0.9em; line-height:1.5em;}
-			}
-
-
-			.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.9em;}
-			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.9em; margin: 0px auto;  }
-
-			h2 {   height: 40px; font-size: 1.05em; line-height:40px;}
+			h2 {   height: 40px; font-size: 1.1em; line-height:40px;}
 			h3 { font-size:1em;  }
-			.navigation{font-size:0.75em;}
+			.comment-content{width:96%; margin:2% auto; font-size:0.9em;}
 			.comment-form p {font-size:0.8em;}
 			.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
-			.reply{ 
-				
-<<<<<<< HEAD
-				a{  width:20%; background-color:$color1; line-height:35px; }
-				a:hover{ background-color:$color2; color:$color1;  } 
-			}
-=======
-				a{  width:20%; background-color:$color1; ine-height:35px; }
-				a:hover{ background-color:$color2; color:$color1;  } 
-			}
-			
 
-
->>>>>>> origin/master
 		}
 	}
 
@@ -1236,14 +1158,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 							.abobe{ height:28.630272%;/*new*/  margin: 1% auto;/*new*/  }
 							.cert{float: none;/*new*/ height:37.564%;/*new*/   }
 							h2 { font-size: 0.9em; text-indent:5px;  }
-							h3 {    font-size:0.83em; }
+							h3 {    font-size:0.83em; margin: 0;}
 							p { font-size:0.78em; margin-top: 0.5%; line-height: 1.5em;  }
 						}
 					}
 				}
 
 				ul {   padding: 3px;width: 23.9914%;margin: 0;}
-				ul li a {  font-size:0.76em;  }
+				ul li a {  font-size:0.76em; line-height:38px; }
 			}
 			
 		}
@@ -1251,27 +1173,12 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	
 	
 	#photocontainer{
-<<<<<<< HEAD
-
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em;}
-		button:hover{color:$color1; background-color:$color2;font-size:1em; }
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width: 31.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 415px;/*new*/ }
-
-=======
-	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em;}
-	button:hover{color:$color1; background-color:$color2;font-size:1em; }
-
-	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width: 31.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 370px;/*new*/ }
->>>>>>> origin/master
 		width:100%; 
 		height:auto; 
 		font-family:($FontStyle); 
 		margin:auto;
 		h3 { margin: 5px 0px; width:100%; }
-
-		.content .menuSwitch ul li { font-size:1.1em;}
+		.content .menuSwitch ul li { font-size:1em;}
 		.showcase-img{
 			float: left;
 			clear: both;  
@@ -1284,7 +1191,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	    		padding:1%; 
 	    		
 	    		h1{text-indent:0px; font-size:0.90em; }
-	    		p{font-size:0.75em; }
+	    		p{font-size:0.70em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -1307,8 +1214,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		li a{width:100%; }
 		li a:hover{width:100%;color:$color6; }
 
-	}  
-}
+		}  
+	}
  
 #wrapper_container footer{
 
@@ -1325,10 +1232,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 		.socialpics span{ display:inline-block; width:100%; height:100%;}
 
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%;   line-height:1.5em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%;  background-color:$color2; color:$color1; line-height:1.5em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
 	}
 	ul{width:45%; margin:0; padding:5px; text-align:left;  float:left;  }
 	ul li{ text-indent:0px;  }
@@ -1346,41 +1253,32 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header {
 
+	#logo {    font-size: 1.8em; width:42%;}
+	#logo-blog {    font-size: 1.8em; width:42%;}
 	
-	h1#logo { font-size: 1.8em; width:42%;}
-	h1#logo-blog { font-size: 1.8em; width:42%;}
-	h2 {font-size: 0.65em; margin:0 ;}
-
-
+	p {    font-size: 0.65em; margin:0 ;}
+	
 	nav #innernav li a{font-size:0.70em;}
-	nav #innernav li a:hover{font-size:0.75em;}
 	nav #mobile-nav { display:none; }
-	nav #innernav .menu-main-container {width: 100%; left: 51.3%;}
+	nav #innernav .menu-main-container {    width: 100%;   left: 51.3%;}
 	
 }
  
 #wrapper_container #main-content {
 
-<<<<<<< HEAD
-	h1{font-size:1.35em; margin:0;}
-	h2 { font-size: 1.2em;  text-indent: 1.5%;}
-	h3 { font-size: 1.1em;  }
-	p{font-size:0.80em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}
-=======
-	
+	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
+	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2;}
 	
 	h1{font-size:1.35em; margin:0;}
 	h2 { font-size: 1.2em;  text-indent: 1.5%;}
 	h3 { font-size: 1.1em;  }
-	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}}
->>>>>>> origin/master
 
 	.front_panel {
 
 		
 		.intro-text {
-			h1 {  font-size: 0.95em; height:auto;}
-			p {  font-size: 0.85em;}
+			h1 {  font-size: 0.85em; height:auto;}
+			p {  font-size: 0.80em;}
 			.introimg {    width: 13%;}
 		} 
 
@@ -1432,18 +1330,6 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	#blogrightside{ 
 
-<<<<<<< HEAD
-		h2 {  font-size: 1em; height: 35px;line-height: 35px;}
-			
-		.blogbox {
-			
-			.social-1 form.searchform div label { font-size: 0.7em; line-height:1.4em; }
-			.social-1 form.searchform div input {  width: 50%;}
-			.social-1 form.searchform div input[type="submit"] {font-size:0.7em;}
-			.widget ul li a{font-size:0.80em;}
-			.widget ul li a:hover{font-size:0.90em;}
-		}
-=======
 			h2 {  font-size: 1.15em; height: 35px;line-height: 35px;}
 				
 			.blogbox {
@@ -1451,10 +1337,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.social-1 form.searchform div label { font-size: 0.7em; line-height:1.4em; }
 				.social-1 form.searchform div input {  width: 50%;}
 				.social-1 form.searchform div input[type="submit"] {font-size:0.7em;}
-				.widget ul li a{font-size:0.80em;}
-				.widget ul li a:hover{font-size:0.90em;}
+				.widget ul li a{font-size:0.90em;}
+				.widget ul li a:hover{font-size:0.95em;}
 			}
->>>>>>> origin/master
 	}
 
 
@@ -1465,22 +1350,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.left-col {
 			
 			.post {
-<<<<<<< HEAD
-				h1 { font-size:1.05em;}
-				h2 { font-size:0.95em;}
-				h3{font-size:0.90em;}
-				ul li{  width: 100%; margin:0px; font-size:0.85em; }
-				ul li a{  margin-left:0px;}
-=======
 				h1 { font-size:1.15em;}
-				h2 { font-size:1em;}
+				h2 { font-size:1.05em;}
 				h3{font-size:1em;}
->>>>>>> origin/master
 				p{font-size:0.80em; width: 98%;}
 				.byline {font-size:0.85em;}
 				.postimg {     margin: 1% auto;}
 				header.byline{
-					height: 40px; 
+					 
 					font-size:0.75em; 
 					line-height:1.5em;
 					
@@ -1488,7 +1365,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				}
 
 				footer.byline{
-					height:60px; 
+					 
 					font-size:0.8em; 
 					line-height:1.5em;
 					p{ margin: 0px; padding: 0;}
@@ -1500,51 +1377,21 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					p.right a.comments-count:hover{color:$color4;}
 
 				}
-<<<<<<< HEAD
-				.read_more{font-size:0.85em; width: 15.9652%; line-height: 23px;}
-				.read_more:hover{  font-size:0.90em; line-height: 23px;}
-=======
-				.read_more{font-size:0.8em; width: 15.9652%; line-height: 28px;}
-				.read_more:hover{ width: 15.9652%; }
->>>>>>> origin/master
+				.read_more{font-size:0.8em; width: 15.9652%;}
 				.sd-content ul li {  width: 5%;}
 			}
 		
 			.navi .right {font-size:0.9em;}
 			.navi .right {    width: 50%;}
 
-		}
-		.contact-wide{
-
-			h2{font-size:1.1em; height: 40px; line-height: 40px; }
-			h3#reply-title{ font-size:0.9em;}
-
-			.commentlist { 
-				padding-left: 0px;
-				margin:0;
-				.comment-meta { height:auto; font-size:0.80em;  }
-				.comment-meta .comment-author { line-height:  30px; height:  30px; padding:0;}
-				.comment-meta .comment-metadata{ line-height: 30px; height: 30px; padding:0;}
-				li ul{width:100%; margin-left:0;}
-				li {padding:0;}
-			}
-
-			.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.9em;}
-			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.9em; margin: 0px auto;  }
-
-			.navigation{font-size:0.75em;}
-			.comment-content{
-				
-				min-height:100px;
-				p{width:100%; font-size: 0.9em; line-height:1.5em;}
-			}
-			.comment-form p {font-size:0.8em;}
-			.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
-			.reply{ 
-				a{ width:10%; background-color:$color1; line-height:35px; font-size:0.9em; }
-				a:hover{ background-color:$color2; color:$color1; font-size:1em;  } 
-			}
-		}
+			.contact-wide{
+				h2{font-size:1.1em; height: 40px; line-height: 40px; }
+				h3#reply-title{ font-size:1em;}
+				.comment-content{width:96%; margin:2% auto; font-size:0.9em;}
+				.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
+			} 
+		} 
+	
 	}
 	
 	#contactform input[type="submit"] { font-weight:bold;}
@@ -1552,28 +1399,23 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.skills {   margin: 4% 0px 5% 0%; font-size:0.9em;}
 	.skills > li .fa-envelope {width:7%;}
 
-	
+	.comment-form input[type="submit"] {font-size:1em;}
+	.comment-form input[type="submit"]:hover {font-size:1em;}
 
 	#photocontainer { 
 
 		width: 100%;
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em; width:96%;}
-		button:hover{color:$color1; background-color:$color2; font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32%;height: 375px; }
-<<<<<<< HEAD
-		.content .menuSwitch ul li {font-size: 1.15em;}
-=======
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; }
 		.content .menuSwitch ul li {font-size: 100%;}
->>>>>>> origin/master
 		.showcase-img { 
-			width: 96%;
+			width: 92%;
 			.showcase-content{ 
 	    		  
-	    		width: 96%;/*new*/  
+	    		width: 92%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.90em; }
-	    		p{font-size:0.80em; }
+	    		h1{text-indent:0px; font-size:0.80em; }
+	    		p{font-size:0.70em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -1594,6 +1436,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	.webskills > li a{width:100%; }
 	.webskills > li a:hover{width:100%;color:$color6; }
+
 }
 
 #wrapper_container footer {
@@ -1609,10 +1452,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
 	}
 
 	ul{
@@ -1623,6 +1466,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		li a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.8em; height:100%;  line-height:25px;}
 		li a:hover{  margin:0; font-size:0.8em; line-height:25px;}
 	}
+	
 }
 
 }
@@ -1639,17 +1483,15 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container header { 
 	width: 100%;
 
-	
-	h1#logo {font-size: 1.7em; width: 45%; }
-	h1#logo-blog {font-size: 1.7em;  width:45%; }
-	h2 {font-size: 0.60em; }
-	
+	 #logo {   font-size: 1.7em; width: 45%; }
+	 #logo-blog {  font-size: 1.7em;  width:45%; }
+	 p {    font-size: 0.60em; }
 
 	nav {  
 		width: 42%;
-		#innernav li a {font-size: 0.65em;}
-		#innernav li a:hover {font-size: 0.70em;}
-		#innernav .menu-main-container { width: 100%; left: 44.3%;}
+		#innernav li a {  font-size: 0.65em;}
+		#innernav li a:hover {  font-size: 0.70em;}
+		#innernav .menu-main-container {    width: 100%;    left: 44.3%;}
 		#mobile-nav { display:none; }
 	}
 	
@@ -1658,12 +1500,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container #main-content {
 
-	
-<<<<<<< HEAD
-	p {    font-size: 0.75em; width:100%; line-height:1.5em;}
-=======
+	button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.85em;}
+
+	button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2; font-size:0.9em;}
+
 	p {    font-size: 0.80em; width:100%; line-height:1.5em;}
->>>>>>> origin/master
 	h1 {   margin: 0px 0px 0.1em; font-size:1.2em;   padding: 0px; width:100%;}
 	h2 {   font-size: 1em; padding: 0px;    color: $color1;    letter-spacing: 0.1em;   width: 99.5458%;}
 	article h2 {font-size:1.2em; text-indent:1.5%; line-height:40px;}
@@ -1682,7 +1523,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	#blogrightside {
 
-		h2 {   width: 100%;   font-size: 0.95em; height:35px; line-height:35px;}
+		h2 {   width: 100%;   font-size: 1.05em; height:35px; line-height:35px;}
 
 		.blogbox{
 
@@ -1694,8 +1535,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			.widget ul{font-size:1em; width:100%; height:auto; display:inline-block; margin:1% 0; }
 			.widget ul.children > li{background-color:$color2; margin:1% auto;font-size:0.9em; }
 			.widget ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:1% auto; text-align:center;  }
-			.widget ul li a{ width:100%; font-size:0.75em; }
-			.widget ul li a:hover{ font-size:0.80em;}
+			.widget ul li a{ width:100%; font-size:0.8em; }
+			.widget ul li a:hover{ font-size:0.85em;}
 		} 
 	}
  
@@ -1707,13 +1548,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 			h1 {    font-size: 1.5em;}
 			.post {
-				h1{line-height: 35px;height: 35px; font-size: 1em; letter-spacing: 0.1em;width: 98%;}
-				h2{text-indent:0px;line-height: 35px;height: 35px; font-size: 0.9em;margin: 1.5% auto; padding: 0px;letter-spacing: 0.1em;width: 96%; }
-				h3{margin: 1% auto; height: 25px;line-height: 0.85em;font-size: 1.2em; text-indent:0; }
+				h1{font-size: 1.1em; padding: 0px;color: $color1; letter-spacing: 0.1em;width: 98%;}
+				h2{text-indent:0px; font-size: 1em;margin: 1.5% auto; padding: 0px;letter-spacing: 0.1em;width: 96%; background-color:$color4; color:$color1;}
+				h3{margin: 1% auto; height: 25px;line-height: 0.9em;font-size: 1.2em; color:$color5; text-indent:0; }
 				h3 a{ padding-left:0; }
 				ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:96%; margin: 2% auto;}
-				ul li{  width: 100%; margin:0px; font-size:0.8em; }
-				ul li a{  margin-left:0px;}
 				.byline{ font-size:0.8em;  width: 98%; line-height: 1.8em;}
 				.byline a{font-size: 1em; color: $color1; }
 				.postimg {    margin: 1% auto;}
@@ -1727,8 +1566,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				}
 
 				footer.byline{
-					height:60px; 
-					font-size:0.85em; 
+					 
+					font-size:0.75em; 
 					line-height:1.5em;
 					p{ margin: 0px; padding: 0;}
 					a{font-size: 0.80em;  }
@@ -1739,44 +1578,23 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					p.right a.comments-count:hover{color:$color4;}
 
 				}
-				.read_more{font-size:0.8em; width:15.9652349%;}
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.85em;}
+				.read_more{font-size:0.8em;}
+				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.8em;}
 				.sd-content ul li {   width: 5.5%;}
 				.bypostauthor{ font-size:1em;}
 			}
 	
 			.navi .right{width:100%;  font-size:0.8em; font-weight:bold; height:30px; line-height:30px;}
 			.navi .right a{display:inline-block; font-weight:bold; height:30px;}
-		}
+			
 
-		.contact-wide{
-
-			h2 {   height: 40px;  line-height:40px;font-size:1.2em;}
-			h3 {   width: 94%; font-size:1em; margin: 1% auto;} 
-					
-			.commentlist { 
-				padding-left: 0px;
-				margin:0;
-				.comment-meta {  font-size:0.80em;  }
-				.comment-meta .comment-author { line-height:  30px; height:  30px;}
-				.comment-meta .comment-metadata{ line-height: 30px; height: 30px;}
-				li ul{width:100%; margin-left:0;}
-				li {padding:0;}
-			}
-
-			.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.8em;}
-			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.8em; margin: 0px auto;  }
-
-			.navigation{font-size:0.75em;}
-			.comment-content{width:96%; margin:2% auto; font-size:1em;}
-			.comment-form p {font-size:0.8em;}
-			.comment-form .form-submit { margin: 2% 0; }
-			.comment-form input[type="submit"] { width: 25%;}
-
-			.reply{ 
-				a{ width:10%; background-color:$color1; line-height:35px; font-size:0.80em; }
-				a:hover{ background-color:$color2; color:$color1; font-size:0.9em;  } 
-			}
+			.contact-wide{
+				h2 {   height: 40px;  line-height:40px;font-size:1.2em;}
+				h3 {   width: 94%; font-size:1em; margin: 1% auto;} 
+				.comment-content{width:96%; margin:2% auto; font-size:0.8em;}
+				.commentlist .comment-meta {font-size:0.8em;}
+				.comment-form .form-submit { margin: 2% 0; font-size: 0.8em; width:25.9652%;}
+			} 
 		}
 	}
 
@@ -1886,29 +1704,24 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		
 	#photocontainer{
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
-
-		button:hover{color:$color1; background-color:$color2;  font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:31.5%;height: 337px; }
-
 		h2 {  font-size: 1.6em;  width: 98%;   margin:auto 1%;}
 		.content {clear: both;position: relative; top: 0px; padding: 0px; overflow: hidden; }
-		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32.5%; height: 332px;}
 		.content .menuSwitch {text-align: left;margin: 10px 0 0px 0; width:100%;}
-		.content .menuSwitch ul li { font-size:1.15em; list-style-type: none;  display: inline-block;  }
+		.content .menuSwitch ul li {  list-style-type: none;  display: inline-block;  }
 		.ca-style figure {  height: 90%;}
 				
 		.showcase-img {  
 			float: left;  
-			width:96%;  
+			width:92%;  
 			margin: 0;
 			.showcase-content{ 
 	    		  
-	    		width: 96%;/*new*/  
+	    		width: 92%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.80em; }
-	    		p{font-size:0.70em; margin: 0; }
+	    		h1{text-indent:0px; font-size:0.9em; }
+	    		p{font-size:0.75em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -1942,10 +1755,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
 	}
 
 	ul{width:35%; margin:0; padding:5px;   }
@@ -1958,16 +1771,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 /* iPads (landscape) ----------- */
 
 @media (max-width : 768px) {
-
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g { display:none; }
 
 #wrapper_container header {
 
-	
-	h1#logo { font-size: 1.6em; width:45%; }
-	h1#logo-blog { font-size: 1.6em;  width:45%;}
-	.search-box { width: 30%;font-size: 0.75em;}
-	h2 { font-size: 0.65em; }
-	
+	#logo { font-size: 1.6em; width:45%; }
+	#logo-blog {  font-size: 1.6em;  width:45%;}
+	.search-box {    width: 30%;    font-size: 0.75em;}
+	p {    font-size: 0.65em; }
 	nav #mobile-nav { display:none; }
 	nav #innernav .menu-main-container {    width: 100%;    left: 44.3%;}
 	
@@ -1984,14 +1795,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	
 	#blogrightside {
 
-		h2 { width: 100%; font-size: 0.95em; height: 35px; line-height: 35px;}
+		h2 { width: 100%; font-size: 1em; height: 35px; line-height: 35px;}
 
 		.blogbox {
 
 			.social-1 { 
 				display: block;
 				form.searchform div label { font-size: 0.60em;  line-height: 1.5em;}
-				form.searchform div input[type="submit"] {font-size:0.60em;}
+				form.searchform div input[type="submit"] {font-size:0.65em;}
 			}
 		
 			h3{text-indent:10px; font-size:1em}
@@ -2002,7 +1813,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				ul.children > li{background-color:$color2; margin:1% auto;}
 				ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:1% auto; text-align:center;}
 				ul li a{ width:100%; font-size:0.75em;}
-				ul li a:hover{color:$color1; font-size:0.80em; }
+				ul li a:hover{color:$color4; font-size:0.80em; }
 			}
 		}
 	}
@@ -2019,17 +1830,15 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			h1 {  font-size: 1.4em;margin: 5px ; padding: 0px;letter-spacing: 0.1em;width: 100%; line-height:40px;}
 
 			.post {
-				h1{font-size: 1em; padding: 0px;width: 98%;}
-				h2{text-indent:0px; font-size: 0.95em;margin: 1% auto; padding: 0px;letter-spacing: 0.1em;width: 98%; }
-				h3{margin: 1% auto; height: 25px;line-height: 1.2em;font-size: 0.9em;  width:98%;}
+				h1{font-size: 1em; padding: 0px;color: $color1;letter-spacing: 0.1em;width: 98%;}
+				h2{text-indent:0px; font-size: 0.95em;margin: 1% auto; padding: 0px;letter-spacing: 0.1em;width: 96%; background-color:$color4; color:$color1;}
+				h3{margin: 1% auto; height: 25px;line-height: 1.2em;font-size: 0.9em; color:$color5; text-indent:0; width:98%;}
 				h3 a{ padding-left:0; }
-				ul{line-height: 1.5em;  width:98%; margin: 2% auto;}
-				ul li{  width: 100%; margin:0px; font-size:0.8em; }
-				ul li a{  margin-left:0px;}
+				ul{line-height: 1.5em; font-size:0.8em; text-indent:0; width:96%; margin: 2% auto;}
 				p{ width:98%; margin:auto; margin:1% auto; font-size:0.80em;}
 				p.right {   width: 7%;}
 				.bypostauthor{ font-size:1em;}
-				.featuredImage{height:auto; }
+				.featuredImage{height:auto; width:90%; margin:0 auto;}
 				.byline{ margin:auto; width:98%; font-size:0.75em; line-height: 1.9em; }
 				.byline a{font-size: 0.95em; color: $color1; }
 				.thumb{width:15%; margin-left:12px; }
@@ -2055,43 +1864,24 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 				}
 				.read_more{  font-size:0.75em;  }
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.8em; }
+				.read_more:hover{ color:$color4; background-color:$color1; }
 				
 				.sd-content ul li {   width: 6%;}
 			} 
 			
 			.navi .right{width:100%; float:left; display:inline-block; margin-left:0%; font-size:0.75em; font-weight:bold; height:30px; line-height:30px;}
 			.navi .right a{display:inline-block; font-size:1em; font-weight:bold; height:30px;}
-		} 
-
-		.contact-wide {
+			
+			
+			.contact-wide {
 
 				h2 {   height: 40px;  line-height:40px; font-size:1.1em;}
 				h3 {   width: 94%; font-size:0.8em;} 
-				.commentlist { 
-				padding-left: 0px;
-				margin:0;
-				.comment-meta {  font-size:0.80em;  }
-				.comment-meta .comment-author { line-height:  30px; height:  30px;}
-				.comment-meta .comment-metadata{ line-height: 30px; height: 30px;}
-				li ul{width:100%; margin-left:0;}
-				li {padding:0;}
-				}
-
-				.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.8em;}
-				.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.8em; margin: 0px auto;  }
-
-				.navigation{font-size:0.75em;}
-				.comment-content{width:96%; margin:2% auto; }
-				.comment-form p {font-size:0.8em;}
+				.comment-content{width:96%; margin:2% auto; font-size:0.8em;}
 				.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
-				.comment-form input[type="submit"] { width: 25%;}
-				.reply{ 
-					a{ width:10%; background-color:$color1; line-height:35px; font-size:0.75em; }
-					a:hover{ background-color:$color2; color:$color1; font-size:0.85em;  } 
-				}
-		}
-
+			}
+		} 
+	/*end of post*/
 	}
 
 	.front_panel {
@@ -2164,7 +1954,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 							width: 100%;
 							h2 {   font-size: 1.1em; }
 							h3 {    font-size: 0.85em;  margin-top: 1%;}
-							p {  font-size: 0.75em;   margin-top: 0.5%; text-indent:0;}
+							p {  font-size: 0.75em;   margin-top: 5px; text-indent:0;}
 						}
 					}
 				}
@@ -2177,26 +1967,21 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
     }
 
 	#photocontainer {
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
-
-		button:hover{color:$color1; background-color:$color2;  font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:31.5%;height: 337px; }
 	
-		.content .menuSwitch ul li {font-size:1.15em;}
+		.content .menuSwitch ul li {font-size:100%;}
 		.ca-style figure {  height: 90%;}
-		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32.5%; height: 322px;}
 		.showcase-img {  
 			float: left;  
-			width:96%;  
+			width:92%;  
 			margin:0 0.5% 0 0;
 			.showcase-content{ 
 	    		  
-	    		width: 96%;/*new*/  
+	    		width: 92%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.8em; }
-	    		p{font-size:0.70em; }
+	    		h1{text-indent:0px; font-size:0.9em; }
+	    		p{font-size:0.75em; }
 	    		.links {
 	    			height:40px; 
 	    			margin:0; 
@@ -2226,10 +2011,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
 	}
 
 	ul{
@@ -2249,34 +2034,26 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 
 @media (max-width : 667px) {
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:90%; display:block; height:100%; width:10%; outline:none; border:none; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; font-size:0.85em; text-align: center;}
+button:hover{color:$color1; background-color:$color2; cursor:pointer;}
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {display:block; line-height:50px; margin-right:1.2%; height:50px; width:50px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; float:right;}
-a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
+a.nav-toggle {display:block; line-height:60px; margin-right:1%;}
+a.nav-toggle:hover{line-height:60px; }
 
 #wrapper_container { width: 96%; height: auto; margin: 5px auto}
 
 
 #wrapper_container header {   
 	width: 100%;   
-<<<<<<< HEAD
-	height:60px;
-
-=======
 	height:62px;
 
-	
-	h1#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
-	h1#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
-	h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
-	
->>>>>>> origin/master
-	
-	h1#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
-	h1#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
-	h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
-	
+	#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
+
+	#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
+	p {    margin: 0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
+
 	
 	/*Mobile-Navigation*/
 	nav {
@@ -2288,10 +2065,10 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 		#innernav{ display:none; }
 		#mobile-nav {display:block;}
 		#mobile-nav nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:50px; list-style:none; width: 100%; background-color:$color3; margin:0 1px 0 0; padding:0; display:block;line-height:50px; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block; background-color:$color3;}
-		#mobile-nav li a:hover {font-size:0.95em; line-height:50px; font-weight:bold; color:$color4; background-color:$color1;}
-		#mobile-nav li:hover {background-color:$color1;color:$color4;  }
+		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
+		#mobile-nav li:hover {background-color:$color1;  }
 	} 
 		
 }
@@ -2308,7 +2085,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 	h2 { margin: 0 2%; width: 98%; font-size: 1em;}
 	h3{font-size: 0.95em;}
 	#slider { width: 64%; background: none repeat scroll 0% 0% $color2;  margin: auto ; height:300px; float: none;}
-	p { font-size: 0.75em; width: 97.5458%; margin-left: 0%; letter-spacing: 0.1em;}
+	p { font-size: 0.75em; width: 95.5458%; margin-left: 0%; letter-spacing: 0.1em;}
 	li {    margin: 1%;  }
 	
 
@@ -2331,10 +2108,10 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.80em; width:24%; line-height:30px; }
-				form.searchform div input[type="submit"] {    font-size: 0.65em;}
+				form.searchform div input[type="submit"] {    font-size: 0.85em;}
 			}
 			.widget ul li a { font-size:1em;}
-			.widget ul li a:hover { font-size:1.1em; }	
+			.widget ul li a:hover { font-size:1.1em; color:#fff;}	
 		}
 	}
 
@@ -2346,23 +2123,15 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 		h3 {  text-indent: 0;  }
 
 		.left-col{
-			margin:0;
 
 			h1 {  font-size: 1.25em;}
-
 			.post{
 				.postimg {   margin: 1% auto;}
-				h1{font-size:1.10em; margin: 0 auto;}
-				h2{text-indent:0; font-size: 1.05em;margin: 0.5em auto; width: 98%; }
-				h3 { width:98%; font-size:0.95em;}
-				h3 a{ padding-left:0;  height:100%; }
-				ul{line-height: 1.5em; text-indent:0; width:98%; }
-				ul li{  width: 100%; margin:0px; font-size:0.8em; }
-				ul li a{  margin-left:0px;}
-				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.80em; color:$color8;  line-height:1.75em;}
-
+				h1{font-size:1em; margin: 0 auto;}
+				h2{text-indent:0; font-size: 0.95em;margin: 1.5% auto; width: 96%; }
+				h3 { width:98%; font-size:0.9em;}
 				header.byline{
-					font-size:0.80em; 
+					font-size:0.75em; 
 					line-height:1.5em;
 					a{font-size: 0.80em;  }
 				}
@@ -2385,40 +2154,21 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 				.sd-content ul li {    width: 5%;}
 				.sd-content ul li a {top:3px; }
 
-				.read_more{ font-size:0.85em; width:15.9652349%;;margin-left: 1%;  line-height:28px;}
-				.read_more:hover { margin-left: 1%;  line-height:28px; font-size:0.90em;}
+				.read_more{ font-size:0.8em;width:15%;margin-left: 1%; height:30px; line-height:30px;}
+				.read_more:hover { margin-left: 1%; height:30px; line-height:30px;}
 				.meta{font-size:10px;}
 				.visit { margin: 0px 0px 0px 20px;}
 
 			} /*end of post*/
-		}
-
-		.contact-wide {
-
-			h2 {   height: 40px;  line-height:40px; font-size:1em;}
-			h3 {   width: 94%; font-size:0.8em;} 
-			.commentlist { 
-			padding-left: 0px;
-			margin:0;
-			.comment-meta {  font-size:0.9em;  }
-			.comment-meta .comment-author { line-height:  30px; height:  30px;}
-			.comment-meta .comment-metadata{ line-height: 30px; height: 30px;}
-			li ul{width:100%; margin-left:0;}
-			li {padding:0;}
-			}
-
-			.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.8em;}
-			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.9em; margin: 0px auto;  }
-
-			.navigation{font-size:0.75em;}
-			.comment-content{width:96%; margin:2% auto; font-size:0.90em;}
-			.comment-form p {font-size:0.8em;}
-			.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
-			.reply{ 
-				a{ width:10%; background-color:$color1; line-height:35px; font-size:0.85em; }
-				a:hover{ background-color:$color2; color:$color1; font-size:0.90em;  } 
+		
+		
+			.contact-wide {
+				 h2 { height: 40px; font-size: 1.2em;}
+				.comment-content{width:96%; margin:2% auto; font-size:0.75em;}
+				.comment-form .form-submit { margin: 2% 0; font-size: 0.8em; width: 40%;}
 			}
 		} 
+					
 	}
 
 	.front_panel {
@@ -2493,16 +2243,16 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 	/*Photocontainer*/
 	#photocontainer{
 
-		h1 {   font-size: 1em; height: 27px; line-height: 27px;}
-		h3 { margin: 1% ; text-indent: 0; width:98%;  }
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ width:100%; text-align:center;}
+		
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.80em; width:100%; text-align:center;}
 
 		button:hover{color:$color1; background-color:$color2; cursor:pointer; z-index:2; width:100%;}
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 376px; width: 40.5%;}
-
-				
+		
+		h1 {   font-size: 1em; height: 27px; line-height: 27px;}
+		h3 { margin: 1% ; text-indent: 0; width:98%;  }
+		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 0; height: 302px;}
 		.content .menuSwitch { text-align: left;  font-size:100%; margin: 10px 0px 0px;   width: 100%;}
 		
 		.links { width:100%; margin:1% auto; height:30px; line-height:30px;}
@@ -2514,8 +2264,8 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.90em; line-height:25px; height:25px; }
-	    		p{font-size:0.80em;  }
+	    		h1{text-indent:0px; font-size:0.8em; line-height:20px; height:20px; }
+	    		p{font-size:0.70em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -2557,10 +2307,10 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
 	}
 
 	ul{
@@ -2579,24 +2329,19 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 @media (max-width : 640px) and (orientation : landscape){
 
 .fixed-side-social-container{display:none;}
-
-<<<<<<< HEAD
-a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
-=======
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ font-size:0.85em; text-align: center;}
 a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
->>>>>>> origin/master
 #wrapper_container { width: 96%; height: auto; margin: 0 auto; }
 
 
 #wrapper_container header {    
 	width: 100%;    
-	height:60px;    
+	height:62px;    
 	
+	#logo { font-size: 1.9em;  text-indent:0%; }
+	#logo-blog { font-size: 1.9em;  text-indent:0%;}
+	p {    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
 	
-	h1#logo { font-size: 1.9em;  text-indent:0%; }
-	h1#logo-blog { font-size: 1.9em;  text-indent:0%;}
-	h2{    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
-
 	/*Mobile-Navigation*/
 	nav {
 
@@ -2606,10 +2351,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px; margin:0; letter-spacing:0.1em; font-size:9em; text-align:center; display:block;}
-		#mobile-nav li a:hover { font-size:0.95em; line-height:50px;}
-		#mobile-nav li:hover { font-size:0.85em; }
+		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:1em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
+		#mobile-nav li:hover {background-color:$color1;  }
 		}
 	/*end*/
 }
@@ -2649,7 +2394,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 		h2 {    font-size: 1.1em;}
 		.blogbox {
 			.social-1 {
-				width: 80%;  
+				  
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.9em; width:24%; line-height:30px; }
@@ -2664,28 +2409,20 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 		width: 100%; 
 		float:none;
 			
-		
+		/*post*/
 		.left-col{
 
-			h1{  font-size: 1.5em;}
+			h1 {  font-size: 1.5em;}
 			.meta{font-size:10px;}
 			.post {
-				h1 {    font-size: 1.05em;}
 
-				h3 { width:98%; font-size:0.95em;}
+				h3 { width:98%; font-size:1.4em;}
 				p { font-size:0.75em;}
-				ul li{  width: 100%; margin:0px; font-size:0.75em; }
-				ul li a{  margin-left:0px;}
-				header.byline {  font-size: 0.75em; height: 40px;  line-height: 1.5em;}
-				footer.byline {   
-					font-size: 0.85em;   
-					line-height: 1.5em;
-					p.right { font-size: 1em;  margin: 0;}
-				}
 				
 				.postimg {   margin: 1% auto;}
-				.read_more { font-size: 0.85em; width:16.9652349%;}
-				.read_more:hover { font-size:0.90em; }
+				.read_more {    font-size: 0.8em;    width: 16%;}
+				
+				.read_more:hover { font-size:0.75em; }
 				.sd-content ul li {    width: 5%;}
 				.sd-content ul li a {  top:3px;}
 	
@@ -2693,40 +2430,17 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 			
 			.visit { margin: 0px 0px 0px 20px;}
 			.navi .right { font-size:0.9em;}
+
+			.contact-wide {
+
+				h2{ font-size:1.2em;}
+				.comment-content{width:96%; margin:2% auto; font-size:0.85em;}
+				.commentlist .comment-meta {   font-size: 1em;}
+				.comment-form .form-submit {   margin: 2% 0;    font-size: 0.8em;}
+
+			}
 		} 
-		
-		.contact-wide {
-
-			h2 {   height: 40px;  line-height:40px; font-size:1em;}
-			h3 {   width: 94%; font-size:0.8em;} 
-			.commentlist { 
-				padding-left: 0px;
-				margin:0;
-				.comment-meta {  font-size:0.8em;  }
-				.comment-meta .comment-author { line-height:  30px; height:  30px; }
-				.comment-meta .comment-metadata{ line-height: 30px; height: 30px;}
-				li ul{width:100%; margin-left:0;}
-				li {padding:0;}
-			}
-
-			.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.8em;}
-			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.9em; margin: 0px auto;  }
-
-			.navigation{font-size:0.75em;}
-			.comment-content{
-				width:96%; 
-				margin:2% auto; 
-				font-size:0.9em;
-				p{font-size:0.85em;}
-
-			}
-			.comment-form p {font-size:0.8em;}
-			.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
-			.reply{ 
-				a{ width:10%; background-color:$color1; line-height:35px; font-size:0.85em; }
-				a:hover{ background-color:$color2; color:$color1; font-size:0.90em;  } 
-			}
-		}
+		/*end of post*/
 	}
 
 	.front_panel {
@@ -2813,17 +2527,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	#photocontainer {
 		
 		h3 { margin: 1% ; width:98%; }
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color1; background-color:$color2; width:100%;}
-
-<<<<<<< HEAD
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 368px; width: 40.5%;}
-=======
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 374px; width: 40.5%;}
->>>>>>> origin/master
-		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0;  width:32%; height:288px;}
 		.content .menuSwitch { text-align: left;   margin: 10px 0px 0px;   width: 100%;}
 		.content .menuSwitch { font-size:100%;}
 						
@@ -2837,21 +2541,22 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.85em;  }
-	    		p{font-size:0.75em; }
+	    		h1{text-indent:0px; font-size:0.8em; line-height:20px; height:20px; }
+	    		p{font-size:0.70em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
 	    			display:inline-block;
 	    			width:100%;
-	    			a{ height:30px;  width:48%; font-size: 0.70em;  margin:1% 0 1% 1%; }
+	    			a{ height:30px; font-size: 0.70em;  margin:1% 0.5% 1% 0; }
 	    			a:hover{ color:$color4; background-color:$color1; font-weight:normal; font-size:0.70em; }
-	    			a.fancybox { font-size:0.75em; margin:1% 0 1% 1%; padding:0.5%; width:48%;}
+	    			a.fancybox { font-size:0.75em; margin:1% 0 1% 0.5%; padding:0.5%; }
 	    		}
     		}
 			
 		}
-	
+		
+		
 	} 
 	/*Photocontainer end*/
 
@@ -2884,14 +2589,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 @media (max-width : 600px) {
 
-
-<<<<<<< HEAD
-a.nav-toggle { height:50px; line-height:50px; width:50px; margin-right:2%;}
-a.nav-toggle:hover{ line-height:50px;}
-=======
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ font-size:0.80em; text-align: center;}
+button:hover{color:$color1; background-color:$color2;}
 a.nav-toggle { height:60px; line-height:60px; width:60px; margin-right:2%;}
 a.nav-toggle:hover{ line-height:60px;}
->>>>>>> origin/master
 .fixed-side-social-container{display:none;}
 
 #wrapper_container {    
@@ -2899,15 +2600,10 @@ a.nav-toggle:hover{ line-height:60px;}
 
 	header {
 
-<<<<<<< HEAD
-		height:60px;
-=======
 		height:62px;
->>>>>>> origin/master
-
-		h1#logo {  font-size:1.8em;}
-		h1#logo-blog {  font-size:1.8em; }
-		h2{ display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
+		#logo {  font-size:1.8em;}
+		#logo-blog {  font-size:1.8em; }
+		p { display:block; float:none; height:15px; line-height:15px; font-size:0.7em;}
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -2918,10 +2614,10 @@ a.nav-toggle:hover{ line-height:60px;}
 			
 			#mobile-nav {display:block;}
 			nav-collapse ul{ display:block; float:left;}
-			#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
-			#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.85em; text-align:center; display:block;}
-			#mobile-nav li a:hover { line-height:50px; font-weight:bold; font-size:0.85em;}
-			#mobile-nav li:hover {font-size:0.9em;}
+			#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+			#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
+			#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
+			#mobile-nav li:hover {background-color:$color1;  }
 		} 
 	
 		/*end*/
@@ -2954,53 +2650,16 @@ a.nav-toggle:hover{ line-height:60px;}
 		.left-col {
 
 			.post {
-				h1 { font-size: 1.05em;}
-				h2 { font-size: 0.95em; }
-				h3 { font-size: 0.90em;}
-				ul li{  width: 100%; margin:0px; font-size:0.80em; }
-				ul li a{  margin-left:0px;}
-
-				footer.byline {   font-size: 0.85em;   line-height: 1.5em;}
-
-				.read_more { font-size: 0.8em;   width:16.9652349%;}
+				h1 {    font-size: 1em;}
+				.read_more { font-size: 0.8em;    width: 16%;}
 				.read_more:hover { font-size: 0.85em; }
 				.sd-content ul li {    width: 6%;}
 				.sd-content ul li a { }
 			}
 			
 		}
-		.contact-wide {
-
-			h2 {   height: 40px;  line-height:40px; font-size:1em;}
-			h3 {   width: 94%; font-size:0.8em;} 
-
-			.commentlist { 
-				padding-left: 0px;
-				margin:0;
-				.comment-meta {  font-size:0.8em;  }
-				.comment-meta .comment-author { line-height:  30px; height:  30px; }
-				.comment-meta .comment-metadata{ line-height: 30px; height: 30px;}
-				li ul{width:100%; margin-left:0;}
-				li {padding:0;}
-			}
-
-			.comment-reply-title, #comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.8em;}
-			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.8em; margin: 0px auto;  }
-
-			.navigation{font-size:0.75em;}
-			.comment-content{
-				width:96%; 
-				margin:2% auto; 
-				font-size:0.8em;
-				p{font-size: 0.9em;}
-			}
-			.comment-form p {font-size:0.75em;}
-			.comment-form .form-submit { margin: 2% 0; font-size: 0.75em;}
-			.reply{ 
-				a{ width:10%; background-color:$color1; line-height:35px; font-size:0.80em; }
-				a:hover{ background-color:$color2; color:$color1; font-size:0.85em;  } 
-			}
-		}
+		.contact-wide h2{text-align:center;}
+		.contact-wide .comment-form .form-submit {   margin: 2% 0;    font-size: 0.75em;}
 	}
 
 
@@ -3056,17 +2715,8 @@ a.nav-toggle:hover{ line-height:60px;}
 
 	#photocontainer {
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color1; background-color:$color2; width:100%;}
-
-<<<<<<< HEAD
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 343px; width: 40.5%;}
-		.content .menuSwitch ul li {  margin:0.5%; font-size: 0.95em;}
-=======
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 374px; width: 40.5%;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width: 32.5%; height:278px;}
 		.content .menuSwitch ul li {  margin:0.5%; font-size: 95%;}
->>>>>>> origin/master
 		.showcase-img {     
 			margin: 0;
 			.showcase-content{ 
@@ -3074,8 +2724,8 @@ a.nav-toggle:hover{ line-height:60px;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.80em;  }
-	    		p{font-size:0.70em; }
+	    		h1{text-indent:0px; font-size:0.75em; line-height:20px; height:20px; }
+	    		p{font-size:0.65em; }
 	    		.links {
 	    			height:30px; 
 	    			margin:0; 
@@ -3111,21 +2761,16 @@ a.nav-toggle:hover{ line-height:60px;}
 
 @media (max-width : 568px) {
 
-a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:50px;}
+a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:55px;}
 
 #wrapper_container {
 		header {
-		    width: 100%;
-<<<<<<< HEAD
-		    height:60px;
-=======
-		    height:62px;
->>>>>>> origin/master
-		    		    
-			h1#logo { width: 78%;  }
-			h1#logo-blog {  width: 78%;  }
-			p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
-			
+	    width: 100%;
+	    height:62px;
+	    
+		#logo { width: 78%;  }
+		#logo-blog {  width: 78%;  }
+		p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
 		}
 
 		#main-content {
@@ -3137,10 +2782,9 @@ a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:5
 				.left-col {
 
 					.post {
-
-						p {   font-size: 0.75em;}
-						.read_more { font-size: 0.75em; height:30px; line-height: 21px; width:17.9652349%;}
-						.read_more:hover {font-size: 0.8em; line-height: 21px;  }
+						p {   font-size: 0.80em;}
+						.read_more { font-size: 0.75em; line-height: 30px; height:30px;   width: 17%;}
+						.read_more:hover {font-size: 0.8em;  line-height: 30px;  width: 17%;}
 						.sd-content ul li { width: 6%;}
 						.sd-content ul li a { }
 					}
@@ -3155,7 +2799,7 @@ a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:5
 
 				.prof_cont {
 
-					#chart #numbers > li {    height: 21.95%;}
+					#chart #numbers > li {    height: 21.9%;}
 					#chart #bars li span {    font-size: 0.75em;}
 					#chart #bars li {    height: 331px;}
 
@@ -3165,11 +2809,7 @@ a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:5
 
 			#photocontainer {
 
-				button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-				button:hover{color:$color1; background-color:$color2; width:100%;}
-
-				.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 2%; height: 365px; width: 44.5%;}
+				.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{  height:280px;}
 				.content .menuSwitch ul li {  margin:0.5%; font-size: 0.9em;}
 
 				.showcase-img {     
@@ -3179,8 +2819,8 @@ a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:5
 			    		width: 100%;/*new*/  
 			    		padding:1%; 
 			    		
-			    		h1{text-indent:0px; font-size:0.85em;  }
-			    		p{font-size:0.75em; }
+			    		h1{text-indent:0px; font-size:0.75em; line-height:20px; height:20px; }
+			    		p{font-size:0.65em; }
 			    		.links {
 			    			height:30px; 
 			    			margin:0; 
@@ -3201,22 +2841,19 @@ a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:5
 
 @media (max-width : 480px) and (orientation : landscape) {
 
-
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:85%; display:block; height:100%; width:15%; outline:none; border:none;  font-size:0.70em; color:$color2; background-color:$color1;}
+button:hover{color:$color1; background-color:$color2;}
 .fixed-side-social-container{display:none;}
-a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
-
-<<<<<<< HEAD
+a.nav-toggle {display:block; height:60px; line-height:60px; background-size:50px auto, auto auto; width:50px;}
+a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 #wrapper_container header {
 
-	height:60px;
-=======
 	height:62px;
->>>>>>> origin/master
-	
-	h1#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
-	h1#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
-	h2{  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
-	
+
+	#logo { font-size: 1.6em;  height: 40px;  line-height: 40px; text-align:left; }
+	#logo-blog { font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; }
+	p {  display:block; float:none; height:15px; line-height:15px; width:78%; font-size:0.65em; text-align:left;}
+		
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3226,10 +2863,10 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:50px; list-style:none; width: 100%;  margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.85em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:50px; font-weight:bold;font-size:0.75em;}
-		#mobile-nav li:hover { font-size:0.75em;}
+		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
+		#mobile-nav li:hover {background-color:$color1;  }
 	}
 		
 	/*end*/
@@ -3243,7 +2880,7 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 	h1 {  width: 100%; font-size:1.1em; margin: 0px 0px 0.1em;}
 	h2 { font-size: 1em; text-indent: 0px; width: 100%;  margin: 1em auto;}
 
-	p {   line-height: 1.5em; font-size:0.75em;}
+	p {   line-height: 1.5em; font-size:0.85em;}
 
 	.skills{ font-size:0.8em; }
 	.skills > li {  font-size: 1em;}
@@ -3255,14 +2892,14 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 		.blogbox {
 
 			.social-1 {
-				width: 80%;  
+				  
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.9em; width:24%; line-height:30px; }
 				form.searchform div input[type="submit"] {    font-size: 0.85em;}
 			}
-			.widget ul li{font-size:1em;}
-			.widget ul li a{font-size:0.9em;}
+
+			.widget ul li a{font-size:1em;}
 		} 
 	}
 
@@ -3273,26 +2910,22 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 
 			.post {
 
-				h1 { font-size: 1em;}
-				h2{ font-size:0.9em}
-				h3 { width:98%; font-size:0.80em;}
-				   
-				p { font-size: 0.75em;}
-				.postimg { margin: 1% auto;}
-				.read_more {margin-left: 1%; width:19.9652%; font-size:0.75em;}
-				.read_more:hover { font-size:0.80em;}
-				.sd-content ul li { width: 12%;}
-				.sd-content ul li a { margin: 20%;}
+				h1 {    font-size: 1.25em;}
+				h3 {    width:98%; font-size:1.3em;}
+				p {    font-size: 0.8em;}
+				.postimg {    margin: 1% auto;}
+				.read_more {   margin-left: 1%; width:17.9652%; font-size:0.75em;}
+				.sd-content ul li {    width: 12%;}
+				.sd-content ul li a {   margin: 20%;}
 				p.right { width: 10%;}
 			}
 			
 			.navi .right {   font-size: 0.9em; width:100%;}
 			
 		}
-		.contact-wide h2{text-align:center;}
+
 		.contact-wide .comment-form .form-submit { font-weight:bold; width: 29.9652%;   margin: 2% 0;    font-size: 0.8em;}
-		.contact-wide .comment-form input[type="submit"] { width: 32%; font-weight:normal;}
-		
+		.contact-wide h2{text-align:center;}
 
 	}
 
@@ -3372,17 +3005,16 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 	
 	#photocontainer {
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color1; background-color:$color2; width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 375px; width: 56.5%; display:block;}
-<<<<<<< HEAD
-		.content .menuSwitch ul li { margin:0.5%; font-size: 1em;}
-=======
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 0 0 4% 0; height:260px;}
 		.content .menuSwitch ul li { margin:0.5%; font-size: 0.7em;}
->>>>>>> origin/master
-		
+		.showcase-content {
+
+		 margin-top: 0px;    
+		 padding-right: 0px;    
+		 width: 100%;
+		 h1 {    width:100%;  font-size: 0.75em; height: 15px; line-height: 15px;}
+		 p {    margin: 1px 0;   letter-spacing: 0.1em;   line-height: 1.5em; font-size: 0.65em;}
+		}
 	
 		.showcase-img {    
 			float: left;   
@@ -3393,17 +3025,17 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.9em;  }
-	    		p{font-size:0.80em; }
+	    		h1{text-indent:0px; font-size:0.6em; line-height:20px; height:20px; }
+	    		p{font-size:0.55em; }
 	    		.links {
 	    			height:25px; 
 	    			margin:0; 
 	    			display:inline-block;
 	    			width:100%;
-	    			a{  font-size: 0.70em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.7em; }
-	    			a.fancybox { font-size:0.70em; padding:0.5%; }
-	    			
+	    			a{ height:25px; font-size: 0.60em;  line-height:25px;}
+	    			a:hover{ color:$color4; background-color:$color1; font-size:0.60em; }
+	    			a.fancybox { font-size:0.60em;height:25px; padding:0.5%;line-height:25px; }
+	    			a.fancybox:hover{line-height:25px;height:25px;}
 	    		}
     		}
 		}
@@ -3461,11 +3093,11 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 
 @media (max-width : 375px)  {
 
-<<<<<<< HEAD
-a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
-=======
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:84%; background-color:#fff; display:block; height:100%; width:15%; outline:none; border:none; font-size:0.75em; text-align:left;}
+
+button:hover{color:$color1; background-color:$color2;}
+
 a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
->>>>>>> origin/master
 
 .fixed-side-social-container{display:none;}
 
@@ -3473,16 +3105,11 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 #wrapper_container header {
 	
-	height:60px;
+	height:62px;
 
-<<<<<<< HEAD
-	h1#logo { font-size: 1.4em; width: 80%; height: 40px;  line-height: 40px;  text-align:left;   }
-	h1#logo-blog { font-size: 1.4em; width: 80%; height: 40px;  line-height: 40px; text-align:left;  }
-=======
-	h1#logo { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px;  text-align:left;   }
-	h1#logo-blog { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px; text-align:left;  }
->>>>>>> origin/master
-	h2{ text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; height:15px; line-height:15px;}
+	#logo { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px;  text-align:left;   }
+	#logo-blog { font-size: 1.4em; width: 80%; height: 30px;  line-height: 30px; text-align:left;  }
+	p { text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; height:15px; line-height:15px;}
 
 	
 	/*Mobile-Navigation*/
@@ -3494,10 +3121,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:50px; list-style:none; width: 100%; font-size:0.8em; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.85em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:50px; font-weight:bold; font-size:0.9em;}
-		
+		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
+		nav #mobile-nav li:hover {background-color:$color1;  }
 	} 
 	
 	
@@ -3508,7 +3135,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 #wrapper_container #main-content { 
 	padding: 0;
 
-	h1 {   font-size: 1.1em;  margin: 0;}
+	h1 {   font-size: 1.2em;  margin: 0;}
 	h2 {  margin:5px auto; text-indent:1%;   font-size:1em;}
 	
 	.map_container {  width: 95.7293%; float: none;  margin-top: 20px ; }
@@ -3522,7 +3149,6 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 	
 	#blogrightside { 
 		width: 100%;
-		
 		.blogbox {
 			.social-1 {
 				width:80%; 
@@ -3549,19 +3175,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 			header.archive-header {   height: 40px; line-height:40px;}
 			.post{
 
-				h1 { font-size: 1em;}
-				h2 {font-size: 0.9em;}
-				h3 a{ padding-left:0;  height:100%; font-size: 0.8em;}
-				ul{line-height: 1.5em; text-indent:0; width:96%; }
-				ul li{  width: 100%; margin:0px; font-size:0.75em; }
-				ul li a{  margin-left:0px;}
-				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.80em; color:$color8;  line-height:1.75em;}
-
-				footer.byline {
-					p.right {    font-size: 1em;  width:10%;  margin: 0;}
-				}
-				.read_more {  line-height: 25px;  font-size: 0.8em; width:24.9652349%;}
-				.read_more:hover {  line-height: 25px;  font-size: 0.85em; }
+				h1 {    font-size: 1em;}
+				ul {    font-size: 0.9em;}
+				.read_more {  line-height: 25px;  font-size: 0.8em; width:27%;}
+				.read_more:hover {  line-height: 25px;  font-size: 0.85em; width:27%;}
 				.sd-content ul li {    width: 10%;  }
 				.sd-content ul li a {   margin: 6%;}
 				p {font-size:0.75em;}
@@ -3569,17 +3186,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 			} 
 
 		}
-		.contact-wide { 
-			width: 100%; 
-			height: auto;  
-			background-color: $color4;   
-			margin: 0px;
-			h2{text-align:center;}
-			.comment-form .form-submit { width: 55%;   margin: 2% 0;   font-size: 0.75em;}
-			.comment-form input[type="submit"] { width: 36%; font-weight:normal;}
-			#comments {font-size:0.75em; width:100%; text-align:center;}
-		}
+		.contact-wide { width: 100%; height: auto;  background-color: $color4;   margin: 0px;}
+		.contact-wide h2{text-align:center;}
 		
+		.comment-form .form-submit { width: 55%;   margin: 2% 0;   font-size: 0.75em;}
 	}
 
 	.front_panel {
@@ -3621,8 +3231,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 				width: 98%;
 				ul {   padding: 1px;   margin: 0px;    width: 25%;}
 				ul li { font-size:0.8em;}
-				ul li a {    font-size: 0.68em; line-height: 38px;}
-				ul li a:hover { font-weight:normal; font-size: 0.70em; line-height: 38px;}
+				ul li a:hover { font-weight:normal;}
 
 				.mask {  
 					overflow: hidden; 
@@ -3633,7 +3242,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 							.cert {width: 35.780471%; height: 35.564102%;}
 
 							h2 { font-size: 0.9em;}
-							h3 { font-size: 0.80em; width:100%; clear:both; line-height:20px;}
+							h3 { font-size: 0.80em; width:100%; clear:both; height:auto; line-height:20px;}
 							p { font-size: 0.75em; width:99%;}
 						}
 					}
@@ -3653,19 +3262,9 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 		margin:auto; 
 		padding:0;
 		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color1; background-color:$color2; width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 375px; width: 71.5%; display:block;}
 		.content .menuSwitch { text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:80%;}
-<<<<<<< HEAD
-		.content .menuSwitch ul li {   font-size: 1.1em; padding: 10px 10px;}
-=======
 		.content .menuSwitch ul li {   font-size: 0.9em; padding: 10px 10px;}
->>>>>>> origin/master
-		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% auto; height:343px; width: 65%; display:block;float:none;}
 		
 		.showcase-img { 
 			margin: 0;   
@@ -3677,7 +3276,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 	    		width: 100%;/*new*/  
 	    		padding:1%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.9em;  }
+	    		h1{text-indent:0px; font-size:0.9em; line-height:20px; height:20px; }
 	    		p{font-size:0.80em; }
 	    		.links {
 	    			height:25px; 
@@ -3724,12 +3323,13 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 @media (max-width : 360px)  {
 
-a.nav-toggle { height:50px; line-height:50px; width:50px; }
+a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g, button.text-btn-h, button.text-btn-i, {position:absolute; top:0%; left:85%; background-color:$color1; display:block; height:100%; width:15%; outline:none; border:none; font-size:0.9em;  text-align:left; color:$color4; -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s; -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s; -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s; -o-transition: background 0.2s linear 0s, color 0.2s linear 0s; transition: background 0.2s linear 0s, color 0.2s linear 0s; padding: 0.4%;}
+
+button:hover{color:$color1; background-color:$color2;}
+
 .fixed-side-social-container{display:none;}
 
 #wrapper_container { 
@@ -3739,21 +3339,12 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 #wrapper_container header{
 	
-<<<<<<< HEAD
-	height:60px;
-	
-	
-	h1#logo { font-size: 1.4em; width: 80%;  height: 40px;  line-height: 40px;  }
-	h1#logo-blog { font-size: 1.4em; width: 80%;height: 40px;  line-height: 40px; }
-=======
 	height:62px;
-	
-	
-	h1#logo { font-size: 1.4em; width: 80%;    }
-	h1#logo-blog { font-size: 1.4em; width: 80%; }
->>>>>>> origin/master
-	h2{   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
 
+	#logo { font-size: 1.4em; width: 80%;    }
+	#logo-blog { font-size: 1.4em; width: 80%; }
+	p {   font-size:0.60em; width: 72%; display:block; float:none; height:15px; line-height:15px;}
+	
 	/*Mobile-Navigation*/
 	nav {
 
@@ -3763,10 +3354,10 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:50px; font-size:0.8em; list-style:none; width: 100%;  margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.8em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:50px; font-weight:bold;font-size:0.75em;}
-		
+		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
+		#mobile-nav li:hover {background-color:$color1;  }
 	} 
 
 	
@@ -3780,9 +3371,9 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 	height: auto; 
 	margin-bottom: 5px;
 
-	h1 { margin: 0px 0px 0.1em; width:100%; font-size: 1.05em; }
-	h2 { width: 99.5458%; font-size:0.95em; margin:5px 0;text-indent:0px; }
-	p {font-size: 0.75em;  width: 100%;   margin-left: 0; letter-spacing: 0.1em;}
+	h1 { margin: 0px 0px 0.1em; width:100%; font-size: 1em; }
+	h2 { width: 99.5458%; font-size:0.90em; margin:5px 0;text-indent:0px; }
+	p {font-size: 0.75em;  width: 95.5458%;   margin-left: 0; letter-spacing: 0.1em;}
 	li {   margin: 1%; font-size:1em;}
 
 	.map_container {  width: 95.7293%; float: none;  margin-top: 20px ;    height: 250px;}
@@ -3822,19 +3413,13 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 			.post{
 
-				h1 { font-size: 0.95em; height:auto;}
-				h2{text-indent:0px; font-size: 0.90em;margin: 10px auto; padding: 0px;letter-spacing: 0.1em;width: 98%; }
-				h3 {   width: 98%;   font-size: 0.85em; margin-bottom:0;}
-				h3 a{ padding-left:0;  height:100%; }
-				ul{line-height: 1.5em; text-indent:0; width:98%; }
-				ul li{  width: 100%; margin:0px; font-size:0.75em; }
-				ul li a{  margin-left:0px;}
-				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.80em; color:$color8;  line-height:1.75em;}
-
-				header.byline {   font-size: 0.75em; height: 40px;  line-height: 1.5em;}
-				footer.byline {    font-size: 0.80em;    line-height: 1.5em;}
-				.read_more {width:27.9652349%; margin: 0% 0px 0px 1%; }
-				.read_more:hover { margin: 0% 0px 0px 1%; }
+				h1 { font-size: 1em; height:auto;}
+				h2{text-indent:0px; font-size: 0.9em;margin: 10px auto; padding: 0px;letter-spacing: 0.1em;width: 96%; background-color:$color4; color:$color1;}
+				h3 {   width: 96%;   font-size: 0.8em; margin-bottom:0;}
+				h3 a {   padding-left: 0px; }
+				ul {    font-size: 0.9em;}
+				.read_more {width: 27%; margin: 0% 0px 0px 1%; }
+				.read_more:hover {width: 27%; margin: 0% 0px 0px 1%; }
 				p.right {    width: 10%; font-size:1.6em;}
 				.sd-content ul li {    width: 12%;  }
 				.sd-content ul li a {   margin: 10%;}
@@ -3844,24 +3429,10 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 		}
 		
-		.contact-wide { 
-			width: 97%; 
-			height: auto;  
-			background-color: $color4;   
-			float: left;  
-			margin: 5px;
-
-			h2{text-align:center;}
-			.reply a {
-			    width: 15%;
-			    background-color: #062351;
-			    line-height: 35px;
-			    font-size: 0.80em;
-			    &:hover{width:15%;}
-			}
-			.comment-form .form-submit {  margin: 2% 0;  font-weight:bold; font-size: 0.75em;}
-			.comment-form input[type="submit"] { width: 38%; font-weight:normal;}
-		}
+		.contact-wide { width: 97%; height: auto;  background-color: $color4;   float: left;  margin: 5px;}
+		.contact-wide h2{text-align:center;}
+		
+		.comment-form .form-submit { width: 55%; width: 40.9652%;  margin: 2% 0;  font-weight:bold; font-size: 0.75em;}
 	}	
 
 
@@ -3872,7 +3443,7 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 			width: 99%;  
 			float: left;   
 			display: block;   
-			padding: 0;
+			padding: 1%;
 			h1 {  line-height:25px;}
 			h2{ font-size: 0.9em;line-height:25px;}
 			p{ width:99%;  }
@@ -3893,7 +3464,7 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 		.prof_cont {  
 
 			width: 99%;
-			h2{ font-size:0.90em;}
+			h2{ font-size:0.85em;}
 			
 			#numbers > li {   height: 21.87%;}
 			#numbers li span {   font-size: 0.8em; text-align:left;}
@@ -3912,7 +3483,7 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 					div.slider-body{
 						.panel {
 
-							h2 {    font-size: 0.85em;}
+							h2 {    font-size: 0.9em;}
 							h3 { width: 99%; font-size: 0.75em;  }
 							p {   font-size: 0.65em;width: 99%;}
 						}
@@ -3928,19 +3499,9 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 		margin:auto; 
 		padding:0;
 		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color1; background-color:$color2; width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 360px; width: 71.5%; display:block;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; }
-<<<<<<< HEAD
-		.content .menuSwitch ul li { font-size: 1em;}
-=======
 		.content .menuSwitch ul li { font-size: 0.85em;}
->>>>>>> origin/master
-		
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% auto; display:block; float:none; height:328px; }
 		.showcase-img { 
 			margin: 0;   
 			float: left;     
@@ -3951,8 +3512,8 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 	    		width: 100%;/*new*/  
 	    		padding:2.5%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.90em; line-height:20px; height:20px; }
-	    		p{font-size:0.80em; }
+	    		h1{text-indent:0px; font-size:0.85em; line-height:20px; height:20px; }
+	    		p{font-size:0.75em; }
 	    		.links {
 	    			height:25px; 
 	    			margin:0; 
@@ -3987,23 +3548,19 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 @media (max-width : 320px)  {
 
-
+button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:0%; left:85%; background-color:$color1; display:block; height:100%; width:15%; outline:none; border:none; font-size:0.85em;  text-align:left; color:$color4;  }
 
 #wrapper_container {width: 98%;}
 
 #wrapper_container header{
 
 	width:100%;
-		
-<<<<<<< HEAD
-	h1#logo { font-size: 1.25em;  height: 40px;  line-height: 40px; width: 80%; }
-=======
-	h1#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
->>>>>>> origin/master
-	h1#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
-	h2 {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
 
+	#logo { font-size: 1.25em;  height: 40px;  line-height: 40px;width: 80%; }
+	#logo-blog { font-size: 1.25em;  height: 40px;  line-height: 40px;  width: 80%; }
+	p {    font-size:0.50em; display:block; float:none; height:15px; line-height:15px; width: 70%;}
 	
+
 	/*Mobile-Navigation*/
 	nav {
 
@@ -4013,10 +3570,10 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 		#mobile-nav {display:block;}
 		nav nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px; margin:0; letter-spacing:0.1em; font-size:0.8em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:50px; font-weight:bold; }
-		
+		#mobile-nav li{ height:65px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:65px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:65px; font-weight:bold;color:$color4;}
+		#mobile-nav li:hover {background-color:$color1;  }
 
 		}
 	}
@@ -4041,7 +3598,7 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.75em; width:24%; line-height:30px; }
-				form.searchform div input[type="submit"] {    font-size: 0.85em;}
+				form.searchform div input[type="submit"] {    font-size: 0.80em;}
 			}
 			.widget ul li a {   width: 100%;  font-size: 0.85em;}
 		}
@@ -4057,30 +3614,22 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 			h1 {width:100%;}
 			.post {
 
-				p {  margin:0; font-size: 0.75em;}
-
 				.byline {    font-size: 0.80em; }
 				.postimg {  margin: 1% auto;}
 				.thumb {  width: 25%;  margin-left: 10px;}
-				header.byline {  height: 40px;  font-size: 0.75em;    line-height: 1.5em;}
-
-				h1 { font-size: 0.9em; line-height: 35px; height: 35px;}
-				h2 { font-size: 0.85em; line-height: 35px;height: 35px;}
-				.read_more { font-size:0.8em; width:30.9652349%;}
-				.read_more:hover{ font-size:0.85em; }
+				h1 { font-size: 0.9em; line-height:25px;}
+				h2 { font-size: 0.85em; line-height:25px;}
+				.read_more { font-size:0.8em;  width:30%;}
+				.read_more:hover{ font-size:0.85em; width:30%;}
 				.sd-content ul li {    width: 14%;}	
 				.sd-content ul li a {    margin: 11%;}
 
 			}
 		}
 		
-		.contact-wide {
-			h2 { font-size:1.2em;}
-			h3#reply-title {   width: 94%; text-indent:0px; font-size:0.75em;}
-			.comment-form .form-submit {  margin: 2% 0;   font-size: 0.75em;}
-			#comments {font-size:0.75em; width:100%;}
-		} 
-		
+		.contact-wide h2 { font-size:1.2em;}
+		.contact-wide h3#reply-title {   width: 94%; text-indent:0px; font-size:0.75em;}
+		.contact-wide .comment-form .form-submit { width: 55%;   margin: 2% 0;   font-size: 0.75em;}
 	}
 	
 	.front_panel {
@@ -4113,9 +3662,9 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
     	    			
 		.prof_cont {
 
-			h2 {   font-size: 0.85em;}
+			h2 {   font-size: 0.78em;}
 			#chart {margin: 3% auto; }
-			#chart #numbers > li { height: 21.89000%;}
+			#chart #numbers > li { height: 21.85000%;}
 			#chart #bars li { }
 			#chart#numbers li span { text-align:left;  font-size: 0.95em;}
 
@@ -4135,7 +3684,7 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 							background-color: $color4;
 							width: 100%;
 							h2 {   }
-							h3 { width: 99%; }
+							h3 { width: 99%;  }
 							p {  width: 99%;}
 							.abobe {   height: 25.630272%; width: 56.780471%;}
 							.cert {  height: 35.564102%; width: 42.589743%;}
@@ -4149,13 +3698,9 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 	#photocontainer {
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color1; background-color:$color2; width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 360px; width: 81.5%; display:block;}
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width:70%; margin: 3% auto; height: 319px;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:1em;}
-		.content .menuSwitch ul li {   font-size: 0.95em;}
+		.content .menuSwitch ul li {   font-size: 0.75em;}
 		.showcase-img { 
 			margin: 0;   
 			float: left;     
@@ -4166,8 +3711,8 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 	    		width: 100%;/*new*/  
 	    		padding:2.5%; 
 	    		
-	    		h1{text-indent:0px; font-size:0.90em;  }
-	    		p{font-size:0.80em; }
+	    		h1{text-indent:0px; font-size:0.85em; line-height:20px; height:20px; }
+	    		p{font-size:0.75em; }
 	    		.links {
 	    			height:25px; 
 	    			margin:0; 
