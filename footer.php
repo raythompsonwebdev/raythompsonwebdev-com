@@ -106,7 +106,7 @@ jQuery(document).ready(function($){
   
  $('button.text-btn-a').bind().click(function(){
      
-      $('.showcase-a ').slideToggle('fast').css('left','0');
+      $('.showcase-a ').slideToggle('slow').css('left','0');
  
 
     }),
@@ -115,7 +115,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-b').slideToggle('fast');
+      $('.showcase-b').slideToggle('slow');
 
     }),
 
@@ -123,7 +123,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-c').slideToggle('fast');
+      $('.showcase-c').slideToggle('slow');
 
     }),
 
@@ -131,7 +131,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-d').slideToggle('fast');
+      $('.showcase-d').slideToggle('slow');
 
     }),
 
@@ -139,7 +139,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-e').slideToggle('fast');
+      $('.showcase-e').slideToggle('slow');
 
     }),
 
@@ -147,7 +147,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-f').slideToggle('fast');
+      $('.showcase-f').slideToggle('slow');
 
     }),
 
@@ -155,7 +155,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-g').slideToggle('fast');
+      $('.showcase-g').slideToggle('slow');
 
     }),
 
@@ -163,7 +163,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-h').slideToggle('fast');
+      $('.showcase-h').slideToggle('slow');
 
     }),
 
@@ -171,7 +171,7 @@ jQuery(document).ready(function($){
 
     function(){
 
-      $('.showcase-i').slideToggle('fast');
+      $('.showcase-i').slideToggle('slow');
 
     })
 

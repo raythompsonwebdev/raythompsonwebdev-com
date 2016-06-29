@@ -18,19 +18,19 @@ Template Name: Profile
 
   <article class="intro-text">
 
-    <h1>My name is Raymond Thompson and I live in London&#46;</h1>
+    <h1>I build websites and love web development&#46;</h1>
 
-    <p>I am in my mid forties&#44; I recently became a granddad&#44; I love 90&#39;s Hip Hop and Reggae Dancehall Music and Quentin Tarintino Movies&#46;</p>
+    <p>I am in my mid forties&#44; I recently became a granddad&#44; I love 90&#39;s Hip Hop and web design and web development, particularly front-end development and Search Engine Optimisation&#46;</p>
 
-    <p>I have not had any work experience within the web industry&#44; My day job is as Benefits Advisor for a Local Authority, but I am very much interested in transistioning in to web development&#46;</p>
+    <p>I have not had any actual work experience within the web industry&#44; My day job is as Benefits Advisor for a Local Authority, but I am very much interested in web design and web development&#46;</p>
 
-    <p>I started learning web design and web development late 2011 first attending a short City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46; then self learning</p>
+    <p>I started learning how to build websites late 2011 after attending a 7 Month part-time City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;</p>
 
     <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS2&#44; PHP&#44; MYSQL&#44; Javascript and other web design tools&#46;</p>
     
-    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients and real clients&#46;</p> 
+    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients as part of the exam for the certificates&#46;</p> 
 
-    <p>Since completing course in 2012 and gaining certificates &#40;see table right&#41; I needed to learn more about web development and started a combination of attending courses, meet-ups and self teaching&#46;</p>
+    
   </article>
 
  <article class="prof_cont"><!--prof cont-->
@@ -252,14 +252,17 @@ Template Name: Profile
 <div class="front_panel"><!--front panel--> 
 
   <article class="intro-text">
- <p>Over the past Four years I consider myself to have developed fairly good understanding of how to use coding languages HTML5&#44; CSS3&#44; Javascript and Jquery to create clean&#44; standards compliant&#44; easy to use websites&#46;</p>
+  <p>Since completing course in 2012 and gaining certificates &#40;see table above&#41; I needed to learn more about how to build websites and started a combination of watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups &#46;</p>
 
-    <p>Through spending any spare time I have reading web development books &#44; watching web development video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups I have been able to create this website and the others featured on this website&#46;</p>
+ <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax to be able to create clean&#44; standards compliant&#44; easy to use websites&#46;</p>
  
-    <p>I like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap&#44; build tools Grunt and Sass and version control system GitHub to help speed up workflow and organising code&#46; I am in process of creating my own css framework&#46;</p>
+    <p>I very much like to coding websites from scratch and using frameworks like Foundation&#44; Bootstrap&#44; build tools Grunt and Sass and version control system GitHub, which help speed up workflow and organising code&#46;</p>
 
-    <p>I am not a designer&#44; graphic or otherwise but I am able use software programs Photoshop&#44; Inkscape and Illustrator to create website layouts&#44; edit existing images and create simple logos and graphics&#46;</p>
+     <p>There are also other web design tasks I carry out like website testing, keyword research and content creation, search engine optimisation, some market research and database administration.</p>
 
+    <p>My design skills are not great. I use Photoshop&#44; and Inkscape quite a lot to create website layouts and UI layouts&#44; alter existing images and create simple logos and graphics like icons&#46;</p>
+
+   <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
     <br/> 
   </article>
 

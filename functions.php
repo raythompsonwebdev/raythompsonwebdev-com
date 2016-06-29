@@ -195,7 +195,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 //read more button
 function excerpt_read_more_link($output) {
  global $post;
- return $output . '<br/><a href="'. get_permalink($post->ID) . '" class="read_more"> Read More...</a>';
+ return $output . '<br/><a href="'. get_permalink($post->ID) . '" class="read_more">Read More</a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
 
