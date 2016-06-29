@@ -12,11 +12,24 @@ Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
 */
 
+/*
+FF735F
+0551C7
+468EFF
+A2CC23
+90B2288*/
+
+/*
+0F60C7
+FF8477
+4697FF
+ADCC23
+ABB28B*/
 
 $color1:#062351;
 $color2:#CCD3DE;
 $color3:#c0c9dd;
-$color4:#fff;
+$color4:#ffffff;
 $color5:#6e757f;
 $color6:#9DA3AB;
 $color7:#575A5E;
@@ -101,28 +114,27 @@ img{ width:100%; max-width:100%; height:auto; border:0;}
 	
 	.linkedin-icon{
 		background-position:0 0;
-		span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color2; color:$color1;}
+		span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color3; color:$color1;}
 	}
 	
 	.twitter-icon{
 		background-position:0 -61px;
-		span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color2; color:$color1;}
+		span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%; line-height: 60px; background-color:$color3; color:$color1;}
 	}
 	
 	.facebook-icon{
 		background-position:0 -122px;
-		span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color2; color:$color1;}
+		span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color3; color:$color1;}
 	}
 	
 	.google-icon{
 		background-position:0 -186px;
-		span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color2; color:$color1;}
+		span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;line-height: 60px; background-color:$color3; color:$color1;}
 	}
 }
 
 /*Global*/
-a.nav-toggle{height:60px; width:60px; float:right; /*background-size:60px auto, auto auto;*/ display:none; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color2;}
-a.nav-toggle:hover{ float:right;background-color:$color1; color:$color4; }
+a.nav-toggle{display:none; }
 a{
 	text-decoration:none; 
 	margin:0 ; 
@@ -178,9 +190,11 @@ button:hover{color:$color1; background-color:$color2;}
 
 
 body{
-	background:$color3;
+	background:$color2;
 	font-size:medium;
 	font-family:($FontStyle); 
+	margin:0;
+	padding:0;
 }
 
 /*Wrapper*/
@@ -198,7 +212,7 @@ body{
 #wrapper_container header { 
 	width: 100%;  
 	height: 90px; 
-	background-color: $color3; 
+	 
 	margin:0;
 	padding:0; 
 
@@ -210,10 +224,10 @@ body{
 		margin:0 ; 
 		font-weight:bold; 
 		line-height:45px; 
-		color:$color2; 
-		text-shadow:1px 1px 2px #444;     
+		color:$color3; 
+		text-shadow:1px 1px 1px #212121;     
 		letter-spacing: 0.01em;
-		behavior:url(PIE.htc);
+		
 		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
 		span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
 	}
@@ -227,13 +241,13 @@ body{
 		font-weight:bold; 
 		line-height:45px; 
 		color:$color2; 
-		text-shadow:1px 1px 2px #444; 
+		text-shadow:1px 1px 1px #212121; 
 		behavior:url(PIE.htc); 
 		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
 		span:last-of-type{height:40px; padding:0; margin:0; color:$color1;}
 	}
 	
-	h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; }
+	h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; font-weight:normal; }
 	#title { float:left; min-width:280px; max-width:350px; margin-left:0; }
 
 
@@ -327,12 +341,12 @@ body{
 				font-family:($FontStyle);
 				padding:0;
 				ul{width:100%; height:auto; display:inline-block; margin:0;}
-				ul.children > li{background-color:$color2; margin:1% auto;}
-				ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:4% auto; text-align:center;}
-				ul li a{ width:100%; display:block; font-weight:400; letter-spacing:0.02em; font-size:0.9em; line-height:35px; background-color:$color2;}
-				ul li a:hover{color:$color1; background-color:$color4; font-size:1em;}
-				ul li.recentcomments a{display:block; background-color:$color2;}
-				ul li .comment-author-link a{display:block; background-color:$color2;} 
+				ul.children > li{background-color:$color3; margin:1% auto;}
+				ul li{list-style:none; line-height:30px; background-color:$color3; width: 96%;margin:2% auto; text-align:center;}
+				ul li a{ width:100%; display:block; font-weight:400; letter-spacing:0.02em; font-size:0.9em; line-height:35px; background-color:$color3;}
+				ul li a:hover{color:$color4; background-color:$color1; font-size:1em;}
+				ul li.recentcomments a{display:block; background-color:$color1;}
+				ul li .comment-author-link a{display:block; background-color:$color1;} 
 			}
 
 		}
@@ -394,18 +408,18 @@ body{
 					line-height:1.5em;
 					p{ margin: 0px; display: inline-block; padding: 0; width:auto;}
 					a{font-size: 0.95em; color: $color1; margin:auto; width:100%; }
-					p.right{width:7%; float:right; font-size:1.3em; height:40px; background-color:$color2; margin:0; }
+					p.right{width:7%; float:right; font-size:1.3em; height:40px; background-color:$color3; margin:0; }
 					p.right:hover{ background-color:$color1; color:$color4;}
 
-					p.right a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%; font-size:1.1em;}
+					p.right a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%; font-size:1.1em;background-color:$color3;}
 					p.right a.comments-count:hover{color:$color4; background-color:$color1; font-size:1.2em; line-height:40px; }
 
 				}
 				
 				.newsExcerpt{ height:auto;}
 								
-				.read_more{  font-size:0.9em;  margin: 0% 0 0 1%; padding:1%; height:35px; line-height:30px; list-style:none; background-color:$color2; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block;}
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:30px; }
+				.read_more{  font-size:0.9em;  margin: 0% 0 0 1%; padding:1%; height:35px; line-height:20px; list-style:none; background-color:$color3; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block; text-align:center;}
+				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:20px; }
 				/*Social media share buttons*/
 				.sd-content{
 					margin-top:2%;
@@ -454,7 +468,7 @@ body{
 			float:left;
 			@include boxShadow( 1px 2px 3px rgba(0,0,0,.3) , 4px 4px 2px gray );
 
-			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em;}
+			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em; font-weight:bold;}
 			h3#reply-title {width:97%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
 
 			.navigation{height:50px; width:98%; margin:1% auto;}
@@ -494,8 +508,8 @@ body{
 				label{height:30px; line-height:30px; width:30px;}
 				input[type=text]:focus, textarea:focus { box-shadow: 0 0 5px rgba(81, 203, 238, 1); padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid rgba(81, 203, 238, 1); }
 				p.form-submit{ margin :2% 0; width: 100%;}
-				input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color2; font-family:($FontStyle);}
-				input[type="submit"]:hover{background-color:$color2; color:$color1; }
+				input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color3; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color1; font-family:($FontStyle);}
+				input[type="submit"]:hover{background-color:$color1; color:$color4; }
 				
 			}
 			
@@ -538,8 +552,8 @@ body{
 		input{ width:95%; height:35px;}
 		label{height:30px; line-height:30px;}
 
-		input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s); padding:0; border:none; color:$color2; font-family:($FontStyle); display:block;}
-		input[type="submit"]:hover{background-color:$color2; color:$color1; }
+		input[type="submit"]{ height:35px; list-style:none; width:20%; background-color:$color3; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s); padding:0; border:none; color:$color1; font-family:($FontStyle); display:block;}
+		input[type="submit"]:hover{background-color:$color1; color:$color4; }
 
 		input[type=text], textarea, select{ @include Transition(all 0.30s ease-in-out);	 outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width:95%; } 
 		input[type=text]:focus, textarea:focus ,select:focus { box-shadow: 0 0 5px rgba(81, 203, 238, 1); padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid rgba(81, 203, 238, 1); } 
@@ -638,7 +652,7 @@ body{
 			
 			
 
-			h2 { width: 100%; height: 50px; margin: 0px; padding: 0px;   font-size: 1.4em; line-height: 50px; background-color: $color7;   color: $color4; text-indent: 1.5%; letter-spacing: 0.05em; font-weight:500;}
+			h2 { width: 100%; height: 50px; margin: 0px; padding: 0px;   font-size: 1.3em; line-height: 50px; background-color: $color7;   color: $color4; text-indent: 1.5%; letter-spacing: 0.05em; font-weight:bold;}
 			#social { width:50%; display:block; float:left; margin-top:0px;}
 			#social h3{width:100%; margin:2% 0px;}
 
@@ -710,7 +724,7 @@ body{
 							text-align:left;  
 							background-color:$color4;
 							
-							h2 { padding:0 ; color:$color4; line-height:40px; text-indent:1.5%; height:40px; background-color: $color1; letter-spacing: 0.0em;font-size: 1.05em; font-weight: bold;}
+							h2 { padding:0 ; color:$color4; line-height:40px; text-indent:1.5%; height:40px; background-color: $color1; letter-spacing: 0.1em;font-size: 1.05em; font-weight: bold;}
 
 							.abobe{float: none;/*new*/ width: 43.589743%;/*new*/ height:33.630272%;/*new*/  margin: 1% auto;/*new*/    outline: 0;   display: block;/*new*/ }
 							.cert{float: none;/*new*/   width: 29.780471%;/*new*/height:42.564102%;/*new*/      margin: 1% auto;/*new*/   display: block;/*new*/}
@@ -723,8 +737,8 @@ body{
 				}
 
 				ul {  margin: 0;  list-style: outside none none;  float: left; height:380px;/*new*/ width: 25%;   padding: 0px; font-family:($FontStyle);}
-				ul li {  margin:5px 0 5px 0; width:100%; color:$color4; height:38px;}
-				ul li a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color2; color:$color1; font-size:0.80em;  line-height:38px;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
+				ul li {  margin:5px 0 5px 0; width:100%; height:38px;}
+				ul li a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color3; color:$color1; font-size:0.80em;  line-height:38px;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
 				ul a:hover {background-color:$color1; color:$color4; font-weight:700; }
 			}/* END OF Hero Slider*/
 		}
@@ -911,6 +925,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
  
 #wrapper_container #main-content {  
  	h2 {  font-size: 1.5em;  text-indent: 1.5%;}
+ 	p{font-size:0.85em;  clear:right; margin:0;}
 	.prof_cont #chart #bars span {  font-size: 0.85em;}
  	.prof_cont .hero-slider ul li a {   font-size: 0.85em; line-height:45px;}
  	#blogleftside {  width: 75%;  font-size: 100%;  float: left;}
@@ -986,7 +1001,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	h3 {font-size: 1.1em; text-indent: 20px; }
 
 
-	p { font-size:0.85em;}
+	p { font-size:0.80em;}
 	blockquote { font-size:0.9em;}
 
 
@@ -1194,7 +1209,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				}
 
 				ul {   padding: 3px;width: 23.9914%;margin: 0;}
-				ul li a {  font-size:0.76em; line-height:38px; }
+				ul li a {  font-size:0.76em;  }
 			}
 			
 		}
@@ -1269,10 +1284,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 		.socialpics span{ display:inline-block; width:100%; height:100%;}
 
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%;  background-color:$color2; color:$color1; line-height:1.5em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%; background-color:$color2; color:$color1; line-height:1.5em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 200%;   line-height:1.5em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
 	}
 	ul{width:45%; margin:0; padding:5px; text-align:left;  float:left;  }
 	ul li{ text-indent:0px;  }
@@ -1308,7 +1323,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	h1{font-size:1.35em; margin:0;}
 	h2 { font-size: 1.2em;  text-indent: 1.5%;}
 	h3 { font-size: 1.1em;  }
-	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}
+	p{font-size:0.80em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}
 
 	.front_panel {
 
@@ -1516,10 +1531,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
 	}
 
 	ul{
@@ -1566,7 +1581,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container #main-content {
 
 	
-	p {    font-size: 0.80em; width:100%; line-height:1.5em;}
+	p {    font-size: 0.75em; width:100%; line-height:1.5em;}
 	h1 {   margin: 0px 0px 0.1em; font-size:1.2em;   padding: 0px; width:100%;}
 	h2 {   font-size: 1em; padding: 0px;    color: $color1;    letter-spacing: 0.1em;   width: 99.5458%;}
 	article h2 {font-size:1.2em; text-indent:1.5%; line-height:40px;}
@@ -1845,10 +1860,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
 	}
 
 	ul{width:35%; margin:0; padding:5px;   }
@@ -2129,10 +2144,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
 	}
 
 	ul{
@@ -2155,8 +2170,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {display:block; line-height:60px; margin-right:1%;}
-a.nav-toggle:hover{line-height:60px; }
+a.nav-toggle {display:block; line-height:50px; margin-right:1.2%; height:50px; width:50px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; float:right;}
+a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 
 #wrapper_container { width: 96%; height: auto; margin: 5px auto}
 
@@ -2181,10 +2196,10 @@ a.nav-toggle:hover{line-height:60px; }
 		#innernav{ display:none; }
 		#mobile-nav {display:block;}
 		#mobile-nav nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
-		#mobile-nav li:hover {background-color:$color1;  }
+		#mobile-nav li{ height:50px; list-style:none; width: 100%; background-color:$color3; margin:0 1px 0 0; padding:0; display:block;line-height:50px; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block; background-color:$color3;}
+		#mobile-nav li a:hover {font-size:0.95em; line-height:50px; font-weight:bold; color:$color4; background-color:$color1;}
+		#mobile-nav li:hover {background-color:$color1;color:$color4;  }
 	} 
 		
 }
@@ -2201,7 +2216,7 @@ a.nav-toggle:hover{line-height:60px; }
 	h2 { margin: 0 2%; width: 98%; font-size: 1em;}
 	h3{font-size: 0.95em;}
 	#slider { width: 64%; background: none repeat scroll 0% 0% $color2;  margin: auto ; height:300px; float: none;}
-	p { font-size: 0.75em; width: 95.5458%; margin-left: 0%; letter-spacing: 0.1em;}
+	p { font-size: 0.75em; width: 97.5458%; margin-left: 0%; letter-spacing: 0.1em;}
 	li {    margin: 1%;  }
 	
 
@@ -2450,10 +2465,10 @@ a.nav-toggle:hover{line-height:60px; }
 		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; }
 		.social-icon:hover{filter:alpha(opacity=75);moz-opacity:.75;-khtml-opacity:.75;opacity:.75}
 		span{ display:inline-block; width:100%; height:100%;}
-		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;  background-color:$color2; color:$color1; line-height:1.6em;}
-		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
-		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%; background-color:$color2; color:$color1; line-height:1.6em;}
+		.linkedin-icon span .fa-linkedin { width:100%; height:100%; text-align: center; font-size: 180%;   line-height:1.6em;}
+		.twitter-icon span .fa-twitter { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
+		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 180%;  line-height:1.6em;}
 	}
 
 	ul{
@@ -2473,7 +2488,7 @@ a.nav-toggle:hover{line-height:60px; }
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
+a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
 #wrapper_container { width: 96%; height: auto; margin: 0 auto; }
 
 
@@ -2495,10 +2510,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:1em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
-		#mobile-nav li:hover {background-color:$color1;  }
+		#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px; margin:0; letter-spacing:0.1em; font-size:9em; text-align:center; display:block;}
+		#mobile-nav li a:hover { font-size:0.95em; line-height:50px;}
+		#mobile-nav li:hover { font-size:0.85em; }
 		}
 	/*end*/
 }
@@ -2770,8 +2785,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 @media (max-width : 600px) {
 
 
-a.nav-toggle { height:60px; line-height:60px; width:60px; margin-right:2%;}
-a.nav-toggle:hover{ line-height:60px;}
+a.nav-toggle { height:50px; line-height:50px; width:50px; margin-right:2%;}
+a.nav-toggle:hover{ line-height:50px;}
 .fixed-side-social-container{display:none;}
 
 #wrapper_container {    
@@ -2794,10 +2809,10 @@ a.nav-toggle:hover{ line-height:60px;}
 			
 			#mobile-nav {display:block;}
 			nav-collapse ul{ display:block; float:left;}
-			#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-			#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
-			#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
-			#mobile-nav li:hover {background-color:$color1;  }
+			#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
+			#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.85em; text-align:center; display:block;}
+			#mobile-nav li a:hover { line-height:50px; font-weight:bold; font-size:0.85em;}
+			#mobile-nav li:hover {font-size:0.9em;}
 		} 
 	
 		/*end*/
@@ -2982,7 +2997,7 @@ a.nav-toggle:hover{ line-height:60px;}
 
 @media (max-width : 568px) {
 
-a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:55px;}
+a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:50px;}
 
 #wrapper_container {
 		header {
@@ -3022,7 +3037,7 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 				.prof_cont {
 
-					#chart #numbers > li {    height: 21.9%;}
+					#chart #numbers > li {    height: 21.95%;}
 					#chart #bars li span {    font-size: 0.75em;}
 					#chart #bars li {    height: 331px;}
 
@@ -3070,8 +3085,8 @@ a.nav-toggle {    display: block;    height: 60px;    line-height: 60px; width:5
 
 
 .fixed-side-social-container{display:none;}
-a.nav-toggle {display:block; height:60px; line-height:60px; background-size:50px auto, auto auto; width:50px;}
-a.nav-toggle:hover{ background-size:50px auto, auto auto;}
+a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
+
 #wrapper_container header {
 
 	height:60px;
@@ -3089,10 +3104,10 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
-		#mobile-nav li:hover {background-color:$color1;  }
+		#mobile-nav li{ height:50px; list-style:none; width: 100%;  margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.85em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:50px; font-weight:bold;font-size:0.75em;}
+		#mobile-nav li:hover { font-size:0.75em;}
 	}
 		
 	/*end*/
@@ -3106,7 +3121,7 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 	h1 {  width: 100%; font-size:1.1em; margin: 0px 0px 0.1em;}
 	h2 { font-size: 1em; text-indent: 0px; width: 100%;  margin: 1em auto;}
 
-	p {   line-height: 1.5em; font-size:0.85em;}
+	p {   line-height: 1.5em; font-size:0.75em;}
 
 	.skills{ font-size:0.8em; }
 	.skills > li {  font-size: 1em;}
@@ -3240,7 +3255,7 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 		button:hover{color:$color1; background-color:$color2; width:100%;}
 
 		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 375px; width: 56.5%; display:block;}
-		.content .menuSwitch ul li { margin:0.5%; font-size: 0.7em;}
+		.content .menuSwitch ul li { margin:0.5%; font-size: 1em;}
 		
 	
 		.showcase-img {    
@@ -3320,7 +3335,7 @@ a.nav-toggle:hover{ background-size:50px auto, auto auto;}
 
 @media (max-width : 375px)  {
 
-a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
+a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 
 .fixed-side-social-container{display:none;}
 
@@ -3344,10 +3359,10 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
-		nav #mobile-nav li:hover {background-color:$color1;  }
+		#mobile-nav li{ height:50px; list-style:none; width: 100%; font-size:0.8em; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.85em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:50px; font-weight:bold; font-size:0.9em;}
+		
 	} 
 	
 	
@@ -3471,7 +3486,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 				width: 98%;
 				ul {   padding: 1px;   margin: 0px;    width: 25%;}
 				ul li { font-size:0.8em;}
-				ul li a:hover { font-weight:normal;}
+				ul li a {    font-size: 0.68em; line-height: 38px;}
+				ul li a:hover { font-weight:normal; font-size: 0.70em; line-height: 38px;}
 
 				.mask {  
 					overflow: hidden; 
@@ -3509,7 +3525,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 375px; width: 71.5%; display:block;}
 		.content .menuSwitch { text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:80%;}
-		.content .menuSwitch ul li {   font-size: 0.9em; padding: 10px 10px;}
+		.content .menuSwitch ul li {   font-size: 1.1em; padding: 10px 10px;}
 		
 		
 		.showcase-img { 
@@ -3569,7 +3585,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:50px;}
 
 @media (max-width : 360px)  {
 
-a.nav-toggle { height:60px; line-height:60px; width:50px; }
+a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 
 .fixed-side-social-container{display:none;}
@@ -3597,10 +3613,10 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:60px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:60px; font-weight:bold;color:$color4;}
-		#mobile-nav li:hover {background-color:$color1;  }
+		#mobile-nav li{ height:50px; font-size:0.8em; list-style:none; width: 100%;  margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px;  margin:0; letter-spacing:0.1em; font-size:0.8em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:50px; font-weight:bold;font-size:0.75em;}
+		
 	} 
 
 	
@@ -3616,7 +3632,7 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
 	h1 { margin: 0px 0px 0.1em; width:100%; font-size: 1.05em; }
 	h2 { width: 99.5458%; font-size:0.95em; margin:5px 0;text-indent:0px; }
-	p {font-size: 0.75em;  width: 95.5458%;   margin-left: 0; letter-spacing: 0.1em;}
+	p {font-size: 0.75em;  width: 100%;   margin-left: 0; letter-spacing: 0.1em;}
 	li {   margin: 1%; font-size:1em;}
 
 	.map_container {  width: 95.7293%; float: none;  margin-top: 20px ;    height: 250px;}
@@ -3706,7 +3722,7 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 			width: 99%;  
 			float: left;   
 			display: block;   
-			padding: 1%;
+			padding: 0;
 			h1 {  line-height:25px;}
 			h2{ font-size: 0.9em;line-height:25px;}
 			p{ width:99%;  }
@@ -3727,7 +3743,7 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 		.prof_cont {  
 
 			width: 99%;
-			h2{ font-size:0.85em;}
+			h2{ font-size:0.90em;}
 			
 			#numbers > li {   height: 21.87%;}
 			#numbers li span {   font-size: 0.8em; text-align:left;}
@@ -3769,7 +3785,7 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
 		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 360px; width: 71.5%; display:block;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; }
-		.content .menuSwitch ul li { font-size: 0.85em;}
+		.content .menuSwitch ul li { font-size: 1em;}
 		
 		.showcase-img { 
 			margin: 0;   
@@ -3839,10 +3855,10 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
 		#mobile-nav {display:block;}
 		nav nav-collapse ul{ display:block; float:left;}
-		#mobile-nav li{ height:65px; list-style:none; width: 100%; background-color:$color2; margin:0 1px 0 0; padding:0; display:block; }
-		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:65px; color:$color1; margin:0; letter-spacing:0.1em; font-size:0.9em; text-align:center; display:block;}
-		#mobile-nav li a:hover { line-height:65px; font-weight:bold;color:$color4;}
-		#mobile-nav li:hover {background-color:$color1;  }
+		#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
+		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height:50px; margin:0; letter-spacing:0.1em; font-size:0.8em; text-align:center; display:block;}
+		#mobile-nav li a:hover { line-height:50px; font-weight:bold; }
+		
 
 		}
 	}
@@ -3939,9 +3955,9 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
     	    			
 		.prof_cont {
 
-			h2 {   font-size: 0.78em;}
+			h2 {   font-size: 0.85em;}
 			#chart {margin: 3% auto; }
-			#chart #numbers > li { height: 21.85000%;}
+			#chart #numbers > li { height: 21.89000%;}
 			#chart #bars li { }
 			#chart#numbers li span { text-align:left;  font-size: 0.95em;}
 
@@ -3981,7 +3997,7 @@ a.nav-toggle { height:60px; line-height:60px; width:50px; }
 
 		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 360px; width: 81.5%; display:block;}
 		.content .menuSwitch {    text-align: left;    margin: 5px 0px 0px;    width: 100%; font-size:1em;}
-		.content .menuSwitch ul li {   font-size: 0.85em;}
+		.content .menuSwitch ul li {   font-size: 0.95em;}
 		.showcase-img { 
 			margin: 0;   
 			float: left;     
