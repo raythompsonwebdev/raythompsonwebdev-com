@@ -68,11 +68,7 @@ Template Name: Websites
   <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP , MySQLi&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
-<<<<<<< HEAD
-  <figure class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
-=======
   <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
->>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/campingadvice-com">Visit Website</a></figure>
   </figcaption>
   </figure>
@@ -86,7 +82,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg2">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/06/mannering-music-website.jpg" alt="Mannering Music website home page">
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/mannering-music-website.jpg" alt="Mannering Music website home page">
 
   <figcaption class="showcase-content showcase-b">
   <h1>Website:</h1>
@@ -97,7 +93,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
-  <div class="links"> <a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">See Image</a>
+  <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/mannering">Visit Website</a></div>
   </figcaption>
   </figure>
@@ -122,7 +118,7 @@ Template Name: Websites
   <p>Foundation 5&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#46; Javascript&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
-  <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">See Image</a>
+  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/car-rental">Visit Website</a></div>
   </figcaption>
 
@@ -148,7 +144,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3 and Jquery&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p> 
-  <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/shoestore-website-large.jpg"  title="Shoestore website home page">See Image</a>
+  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/shoestore-website-large.jpg"  title="Shoestore website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/shoestore">Visit Website</a></div>
   </figcaption>
 
@@ -174,7 +170,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3&#46; </p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></p> 
-  <div class="links"><a class="fancybox" href="/wordpress/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
+  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
   </figcaption>
 
   </figure>
@@ -199,7 +195,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3 and Jquery&#46; </p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop"></p>     
-  <div class="links"><a href="/wordpress/wp-content/uploads/2016/06/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
+  <div class="links"><a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
   </figcaption>
 
   </figure>

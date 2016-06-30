@@ -25,10 +25,10 @@
 
 <p> I create the following types of websites:</p>
 	<ul class="webskills">
-		<li><span class="fa fa-mobile"></span>HTML5/CSS3 Website Templates&#44;</li>
-		<li><span class="fa fa-wordpress"></span>Wordpress Themes&#44;</li>
-		<li><span class="fa fa-database"></span>E-Commerce Websites&#44;</li>
-		<li><span class="fa fa-file-image-o"></span>Video and Image Galleries&#44;</li>
+		<li><span class="fa fa-mobile"></span>Custom HTML5/CSS3 Website Templates&#44;</li>
+		<li><span class="fa fa-wordpress"></span>Custom Wordpress Themes Templates&#44;</li>
+		<li><span class="fa fa-database"></span>Bootstrap Templates&#44;</li>
+		<li><span class="fa fa-file-image-o"></span>Zurb Foundation Templates&#44;</li>
 	</ul>
 	  
 <p>Each of my websites are built following the latest web design and web development standards and best practices.</p>

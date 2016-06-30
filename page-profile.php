@@ -20,15 +20,17 @@ Template Name: Profile
 
     <h1>I build websites and love web development&#46;</h1>
 
-    <p>I am in my mid forties&#44; I recently became a granddad&#44; I love 90&#39;s Hip Hop and web design and web development, particularly front-end development and Search Engine Optimisation&#46;</p>
+    <p>I am in my mid forties&#44; recently became a granddad&#44; and love 90&#39;s Hip Hop and web design and web development, particularly front-end development, search engine optimisation and responsive design&#46;</p>
 
-    <p>I have not had any actual work experience within the web industry&#44; My day job is as Benefits Advisor for a Local Authority, but I am very much interested in web design and web development&#46;</p>
+    <p>I currently have a day job that is not within the web industry but do spend my free time learning web design and web development and experimenting with code&#46;</p>
 
     <p>I started learning how to build websites late 2011 after attending a 7 Month part-time City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;</p>
 
-    <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS2&#44; PHP&#44; MYSQL&#44; Javascript and other web design tools&#46;</p>
+    <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql&#44; Javascript and other web design tools&#46;</p>
     
-    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients as part of the exam for the certificates&#46;</p> 
+    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients as part of the exam for the certificates&#46;</p>
+
+    <p> Go to git hub to see</p> 
 
     
   </article>
@@ -158,7 +160,7 @@ Template Name: Profile
 
       <h2>Udemy</h2>
 
-      <figure class="cert">
+      <figure class="abobe">
 
       <a href="http://localhost/wordpress/wp-content/uploads/2016/06/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
 
@@ -233,7 +235,7 @@ Template Name: Profile
 
       <h3>Shaw Academy &#45; Diploma in Blogging &#38; Content Marketing</h3>
       <p>Topics&#58;</p>
-      <p>Blogging&#44; Vlogging&#44; Content Marketing&#44;Social Media&#44; Using internet&#44; Content Curation&#44; Monetising Blogs&#46;</p>
+      <p>Blogging&#44; Vlogging&#44; Content Marketing&#44; Building online communities&#44; Content curation&#44; Monetising blogs&#46;</p>
 
       <p><strong><i>Click Image to Enlarge&#46;</i></strong></p>
     </article>
@@ -254,13 +256,10 @@ Template Name: Profile
   <article class="intro-text">
   <p>Since completing course in 2012 and gaining certificates &#40;see table above&#41; I needed to learn more about how to build websites and started a combination of watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups &#46;</p>
 
- <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax to be able to create clean&#44; standards compliant&#44; easy to use websites&#46;</p>
- 
-    <p>I very much like to coding websites from scratch and using frameworks like Foundation&#44; Bootstrap&#44; build tools Grunt and Sass and version control system GitHub, which help speed up workflow and organising code&#46;</p>
-
-     <p>There are also other web design tasks I carry out like website testing, keyword research and content creation, search engine optimisation, some market research and database administration.</p>
-
-    <p>My design skills are not great. I use Photoshop&#44; and Inkscape quite a lot to create website layouts and UI layouts&#44; alter existing images and create simple logos and graphics like icons&#46;</p>
+ <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes from scratch, using frameworks like Themes or create child themes. I can also make changes to existing wordpress themes as well as set up wordpress and get in running on a server&#46;</p>
+  <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap and others. I use build tools Grunt and Sass and Version control system GitHub to help speed up workflow and organising my code&#46;</p>
+  
+    <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
 
    <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
     <br/> 
