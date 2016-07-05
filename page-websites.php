@@ -57,7 +57,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Campingadvice-Website-Small.jpg" alt="CampingAdvice.com website home page" >
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/campingadvice-website-1.jpg" alt="CampingAdvice.com website home page" >
 
   <figcaption class="showcase-content showcase-a">
   <h1>Website:</h1>
