@@ -31,7 +31,7 @@ Template Name: Profile
     <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients as part of the exam for the certificates&#46;</p>
 
     <p> Go to git hub to see</p> 
-
+<br/>
     
   </article>
 
@@ -262,7 +262,7 @@ Template Name: Profile
     <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
 
    <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
-    <br/> 
+  <br/>
   </article>
 
   <article class="prof_cont">
@@ -305,7 +305,7 @@ Template Name: Profile
     </article>
   </article><!--end of prof cont-->
 </div><!--front-panel end-->
-
+<br/>
 
 </section>
 <div class="clearfix"></div>

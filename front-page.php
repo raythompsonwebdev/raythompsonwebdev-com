@@ -28,7 +28,7 @@
 		<li><span class="fa fa-mobile"></span>Custom HTML5/CSS3 Website Templates&#44;</li>
 		<li><span class="fa fa-wordpress"></span>Custom Wordpress Themes Templates&#44;</li>
 		<li><span class="fa fa-database"></span>Bootstrap Templates&#44;</li>
-		<li><span class="fa fa-file-image-o"></span>Zurb Foundation Templates&#44;</li>
+		
 	</ul>
 	  
 <p>Each of my websites are built following the latest web design and web development standards and best practices.</p>
@@ -91,8 +91,6 @@
 <p>All differnt types of resources I hope you will find useful in helping increase your own understanding  </p>
 <br/>
 
-<br/>
-
 </article>
 
 <section class="frontpage_cont">
@@ -117,7 +115,7 @@
 </section>
 
 </div>
-
+<br/>
 
 </section>
 
