@@ -54,7 +54,7 @@
 
 <img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/frontslider-image/mobileimages1aa.png" alt="images of different screen sizes">
 
-<object id="image-4" data="<?php echo home_url();?>/wp-content/themes/raythompwebdesign-com/graphics/mobileimages1aaa.svg" type="image/svg+xml">
+<object id="image-4" data="<?php echo home_url();?>/wp-content/themes/raythompwebdesign-com/graphics/tester-2016_07_14_23_19_16.0.svg" type="image/svg+xml">
 </object>
 </figure>
        
