@@ -34,8 +34,65 @@ Template Name: Profile
 <br/>
     
   </article>
+<article class="prof_cont">
 
- <article class="prof_cont"><!--prof cont-->
+    <h2>Web Skills Level</h2>
+
+    <article id="chart">
+
+      <ul id="numbers">
+
+        <li><span>100</span></li>
+
+          <li><span>75</span></li>
+
+            <li><span>50</span></li>
+
+          <li><span>25</span></li>
+
+        <li><span>%</span></li>
+
+      </ul>
+
+
+
+      <ul id="bars">
+
+        <li><div data-percentage="85" class="bar"></div><span>HTML</span></li>
+
+          <li><div data-percentage="85" class="bar"></div><span>CSS</span></li>
+
+            <li><div data-percentage="60" class="bar"></div><span>JavaScript</span></li>
+
+          <li><div data-percentage="65" class="bar"></div><span>Jquery</span></li>
+
+          <li><div data-percentage="60" class="bar"></div><span>PHP</span></li>
+
+        <li><div data-percentage="65" class="bar"></div><span>MySQL</span></li>
+
+      </ul>
+    </article>
+  </article><!--end of prof cont-->
+ 
+
+</div><!--front panel end-->
+
+<div class="clearfix"></div>
+
+<div class="front_panel"><!--front panel--> 
+
+  <article class="intro-text">
+  <p>Since completing course in 2012 and gaining certificates &#40;see table above&#41; I needed to learn more about how to build websites and started a combination of watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups &#46;</p>
+
+ <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes from scratch, using frameworks like Themes or create child themes. I can also make changes to existing wordpress themes as well as set up wordpress and get in running on a server&#46;</p>
+  <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap and others. I use build tools Grunt and Sass and Version control system GitHub to help speed up workflow and organising my code&#46;</p>
+  
+    <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
+
+   <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
+  <br/>
+  </article>
+<article class="prof_cont"><!--prof cont-->
 <h2>Web Development Related Training </h2>
 <article class="hero-slider"><!-- #hero-slider -->
 <ul>
@@ -246,64 +303,7 @@ Template Name: Profile
 
 </article><!-- hero-slider end -->
 </article><!--end of prof cont-->
-
-</div><!--front panel end-->
-
-<div class="clearfix"></div>
-
-<div class="front_panel"><!--front panel--> 
-
-  <article class="intro-text">
-  <p>Since completing course in 2012 and gaining certificates &#40;see table above&#41; I needed to learn more about how to build websites and started a combination of watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups &#46;</p>
-
- <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes from scratch, using frameworks like Themes or create child themes. I can also make changes to existing wordpress themes as well as set up wordpress and get in running on a server&#46;</p>
-  <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap and others. I use build tools Grunt and Sass and Version control system GitHub to help speed up workflow and organising my code&#46;</p>
   
-    <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
-
-   <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
-  <br/>
-  </article>
-
-  <article class="prof_cont">
-
-    <h2>Web Skills Level</h2>
-
-    <article id="chart">
-
-      <ul id="numbers">
-
-        <li><span>100</span></li>
-
-          <li><span>75</span></li>
-
-            <li><span>50</span></li>
-
-          <li><span>25</span></li>
-
-        <li><span>%</span></li>
-
-      </ul>
-
-
-
-      <ul id="bars">
-
-        <li><div data-percentage="85" class="bar"></div><span>HTML</span></li>
-
-          <li><div data-percentage="85" class="bar"></div><span>CSS</span></li>
-
-            <li><div data-percentage="60" class="bar"></div><span>JavaScript</span></li>
-
-          <li><div data-percentage="65" class="bar"></div><span>Jquery</span></li>
-
-          <li><div data-percentage="60" class="bar"></div><span>PHP</span></li>
-
-        <li><div data-percentage="65" class="bar"></div><span>MySQL</span></li>
-
-      </ul>
-    </article>
-  </article><!--end of prof cont-->
 </div><!--front-panel end-->
 <br/>
 
