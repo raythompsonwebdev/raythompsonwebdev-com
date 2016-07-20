@@ -54,7 +54,7 @@
 <br/>
 <article class="contact-wide" >
 
-<h2>Send your Comment</h2>
+<h2>Send your Comments</h2>
 
 <?php comments_template(); ?>
 

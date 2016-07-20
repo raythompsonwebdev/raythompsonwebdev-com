@@ -18,5 +18,9 @@
 <ul class="tagcloud"><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
 
 </article>
+<article class="blogbox"> 
+<h2>Related Items</h2> 
+
+</article>
 
 </aside>    

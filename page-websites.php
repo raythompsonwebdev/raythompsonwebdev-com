@@ -67,7 +67,7 @@ Template Name: Websites
   <h1>Development Technologies:</h1>
   <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP , MySQLi&#46;</p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Camping-Advice-Home-Page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
   <a href="http://www.raythompwebdesign.com/campingadvice-com">Visit Website</a></figure>
   </figcaption>
@@ -92,7 +92,7 @@ Template Name: Websites
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46;</p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Mannering-Music-Home-Page-large.jpg" title="Mannering Music website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/mannering">Visit Website</a></div>
   </figcaption>
@@ -117,7 +117,7 @@ Template Name: Websites
   <h1>Development Technologies:</h1>
   <p>Foundation 5&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#46; Javascript&#46;</p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p>
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Car-Rental-Home-Page-large.jpg" title="Car Rental website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/car-rental">Visit Website</a></div>
   </figcaption>
@@ -139,11 +139,11 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Shoestore</p>
   <h1>Description</h1>
-  <p>E&#45;commerce website built from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>. advertising Men&#44; Women and Childens shoes for sale for a company called shoestore&#46;</p>
+  <p>On-line store website built using Photoshop template design from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>. Website has a variety of Men&#44; Women and Childens shoes for sale&#46;</p>
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Jquery&#46;</p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop"></span><span class="fa fa-tablet"></span><span class="fa fa-mobile"></span></p> 
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p> 
   <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/shoestore-website-large.jpg"  title="Shoestore website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/shoestore">Visit Website</a></div>
   </figcaption>
@@ -165,11 +165,11 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Greenfootprints.com</p>
   <h1>Description:</h1>
-  <p>Website for local recycling company &#34;GreenFootPrints&#34; based in Essex providing help and advice to the general public on recyling waste&#44; particularly household waste&#46;</p> 
+  <p>Local recycling company &#34;GreenFootPrints&#34; website providing help and advice to the general public on recyling waste&#44; particularly household waste&#46;</p> 
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3&#46; </p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop"></p> 
+<p><span class="fa fa-desktop" title="Desktop"></span></p>
   <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Green-Foot-Prints-Home-Page.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
   </figcaption>
 
@@ -190,11 +190,11 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Travel Agency</p>
   <h1>Description:</h1>
-  <p>Holiday booking website built from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
+  <p>On-line booking website built using Photoshop template design from<a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Jquery&#46; </p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop"></p>     
+<p><span class="fa fa-desktop" title="Desktop"></span></p>    
   <div class="links"><a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/06/Travel-Agency-Home-Page.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
   </figcaption>
 
