@@ -15,6 +15,7 @@
 
 <section id="main-content" class="group" role="main">
 <h1>Hello</h1>
+<br/>
 <div class="front_panel"> 
 
 
@@ -38,15 +39,15 @@
 </article>
 
 </section>
-<br/>
 
-   <article class="intro-text">
+
+<article class="intro-text">
 
 <h1>Welcome to raythompwebdesign.com&#46;</h1>
 
-<p> My name is Raymond and this is my website about web design and web development, particularly front end web development. I spend a lot my spare time building websites and other online&#46; </p>
+<p> My name is Raymond and this is my website about web design and web development, particularly front end web development. I spend a lot my spare time building websites and other online&#46; I create the following types of websites:</p>
 
-<p> I create the following types of websites:</p>
+
 <ul class="webskills">
 <li><span class="fa fa-mobile"></span>Custom HTML5/CSS3/JQUERY/PHP/AJAX Website Templates&#44;</li>
 <li><span class="fa fa-wordpress"></span>Custom Wordpress Themes Templates&#44;</li>
@@ -54,16 +55,16 @@
 
 </ul>
 
-<p>Each of my websites are built following the latest web design and web development standards and best practices.</p>
-
-<p>All websites are fully optimised to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; can be found on most search engines and are fully accessible to all user and validated to ensure sites can be accessed and viewed within most modern web browsers&#46; </p>
-
-
-<p>Click button on right to view some of my work&#46;</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem blanditiis porro dolorem, placeat vel magnam, iste illum, deleniti maxime quis velit expedita ipsam, provident animi ex harum ipsa veniam commodi.</p>	
-
+<p>Each of my websites are built following the latest web design and web development standards and best practices.<br/>
+All websites are fully optimised to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; can be found on most search engines and are fully accessible to all user and validated to ensure sites can be accessed and viewed within most modern web browsers&#46; 
 <br/>
+<br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem blanditiis porro dolorem, placeat vel magnam, iste illum, deleniti maxime quis velit expedita ipsam, provident animi ex harum ipsa veniam commodi.
+<br/>
+<br>
+Click button on right to view some of my work&#46;
+</p>
+
 </article>
 
 </div>
@@ -102,12 +103,9 @@
 		<li><span class="fa fa-database"></span>Website Template Downloads&#44;</li>
 		<li><span class="fa fa-file-image-o"></span>Code examples&#44;</li>
 	</ul>
-<p>All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
-
-<p>All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
-
-<p>All differnt types of resources I hope you will find useful in helping increase your own understanding  </p>
-<br/>
+<p>All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; <br/>
+All differnt types of resources I hope you will find useful in helping increase your own understanding
+</p>
 
 </article>
 

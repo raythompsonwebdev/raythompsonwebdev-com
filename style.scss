@@ -103,6 +103,8 @@ img{ width:100%; max-width:100%; height:auto; border:0;}
 .post img{max-width:100%;}
 /*end of images*/
 
+
+
 .fixed-side-social-container{
 	left:0;
 	width:60px;
@@ -162,7 +164,7 @@ pre {
 	text-align: left;
 }
 
-.code {width:80%; margin:7% auto; display:block; font-size:0.85em}
+.code {width:80%; margin:5% auto; display:block; font-size:0.85em}
 
 
 hr{background-color:$color1; height:1px; margin:5% auto; width:80%; }
@@ -198,25 +200,28 @@ body{
 	font-family:($FontStyle); 
 	margin:0;
 	padding:0;
+
+
 }
 
 /*Wrapper*/
 #wrapper_container {  
-	width:85.294117%; 
+	width:88.294117%; 
 	height:auto; 
 	margin:0 auto; 
 	font-family:($FontStyle); 
 	overflow:auto;
 	clear:both;
-	 
+	background-image: url("graphics/template.jpg"); 
+	
 	padding:0;
 	.fancybox-custom .fancybox-skin {	box-shadow: 0 0 50px #222;	}
 }
 
 /*Header*/
 #wrapper_container header { 
-	width: 100%;  
-	height: 90px; 
+	width: 100%; 
+	height: 72px; 
 	 
 	margin:0;
 	padding:0; 
@@ -225,33 +230,33 @@ body{
 	h1#logo{
 		font-size:2em; 
 		width:40%; 
-		height:40px; 
+		height:47px; 
 		margin:0 ; 
 		font-weight:bold; 
-		line-height:45px; 
+		line-height:47px; 
 		color:$color4; 
 		text-shadow: 1px 1px 1px #000;    
 		letter-spacing: 0.01em;
-		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
-		span:last-of-type{height:40px; padding:0; margin:0; color:$color1; }
+		span{height:100%; padding:0; margin:0; color:$color4; text-align:left;}
+		span:last-of-type{height:100%; padding:0; margin:0; color:$color1; }
 	}
 
 	
 	h1#logo-blog{
 		font-size:2em; 
 		width:40%; 
-		height:40px; 
+		height:47px; 
 		margin:0 ; 
 		font-weight:bold; 
-		line-height:45px; 
+		line-height:47px; 
 		color:$color4; 
 		text-shadow: 1px 1px 1px #000;		
-		span{height:40px; padding:0; margin:0; color:$color4; text-align:left;}
-		span:last-of-type{height:40px; padding:0; margin:0; color:$color1;}
+		span{height:100%; padding:0; margin:0; color:$color4; text-align:left;}
+		span:last-of-type{height:100%; padding:0; margin:0; color:$color1;}
 	}
 	
 
-	h2{float:left; display:inline-block; width:100%; height:20px; margin: 0;letter-spacing:0.1em; padding:0; line-height:20px; font-size:0.75em; font-weight:normal; }
+	h2{float:left; display:inline-block; width:100%; height:25px; margin: 0;letter-spacing:0.1em; padding:0; line-height:25px; font-size:0.75em; font-weight:normal; }
 	#title { float:left; min-width:280px; max-width:350px; margin-left:0; }
 
 
@@ -268,7 +273,8 @@ body{
 		width:40%; 
 		position:absolute; 
 		z-index:999; 
-		left:37.5%;
+		left:38.7%;
+		top:1.5%;
 		#innernav{ padding:0px; margin:0px; height:35px; width:100%; }
 		#innernav .menu-main-container{width:100%;}
 		#innernav .menu-main-container #menu-main{width:100%; display:block;}
@@ -288,18 +294,19 @@ body{
 #wrapper_container #main-content{
 	height:auto; 
 	margin:0; 
-	padding:0; 
+	padding:2% 0 0 0; 
 	font-size:1em;
 	min-height:740px;
-	
+	 
 	hgroup{margin:0; padding:0;}
-	h1{font-size:1.5em; padding:0; color:$color1; width:98%;letter-spacing: 0.05em; line-height:35px; margin:0;height:35px; clear:both;}
-	h2{font-size:1.4em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height:35px; height:35px;}
-	h3{font-size:1.3em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height:35px; height:35px;}
-	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing:0.05em;  line-height:1.8em; clear:right; margin:0;}
+	h1{font-size:1.4em; padding:0; color:$color1; width:100%;line-height: 1.1em; font-weight:350; letter-spacing: 0.095em; margin:0;height:30px; clear:both;}
+	h2{font-size:1.1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 1.4em; height: 30px;}
+	h3{font-size:1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 1.3em; height: 30px;}
+	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing: 0.095em;  line-height: 1.65em; clear:right; margin:0;}
 	/* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
 	ul{ list-style: none; }
 	ul li a:hover{color:$color4;   }
+	
 
 
 	/*Right-side*/
@@ -363,11 +370,13 @@ body{
 		width:75%; 
 		font-size:1em; 
 		float:left;
-		margin-right:2%;
+		margin:0;
+
 		 
 		article .imagebox .box .slide-caption p {  font-size: 100%;     width: 98%;}
 
 		.left-col{
+			margin-top: 2%;
 
 			h1{font-size: 1.6em; margin: 1% 0;padding: 0px;letter-spacing: 0.05em; width: 100%; height:50px; line-height:50px;}
 
@@ -375,38 +384,39 @@ body{
 			.post{
 
 				background-color:$color4; 
-				padding: 1% 0; 
+				padding: 0; 
 				width: 100%; 
-				margin: 1% 0;
+				margin:0 0 1% 0;
+								
 				
-				
-				h1{font-size: 1.35em; margin:0 auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 40px; height: 40px;}
+				h1{font-size: 1.35em; margin:0 auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 48px;
+				height: 48px;}
 				h2{text-indent:0px; font-size: 1.15em;margin: 0 auto; padding: 0px;letter-spacing: 0.05em;width: 98%; background-color:$color4; color:$color1; line-height: 40px; height: 40px;}
 				h3{margin: 0.5em auto; height: 40px;line-height: 30px;font-size: 1.10em; text-indent:0%; width:98%;}
 				h3 a{ padding-left:0;  height:100%; }
 				ul{line-height: 1.5em; text-indent:0; width:98%; margin: 1% auto;display:block;}
 				ul li{  width: 100%; margin:0px; font-size:0.9em; }
 				ul li a{  margin-left:0px;}
-				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.9em; color:$color8; font-weight:350; line-height:1.95em;letter-spacing:0.1em;}
+				p{ width:91%; margin:2.6% 0 0 4.6%; font-size:0.9em; color:$color8; font-weight:350; line-height: 1.69em;letter-spacing:0.11em;}
 				
 				.thumb{width: 58%; height:auto; margin: 1% auto; display:block; clear:both;}
 				.postimg{width:29%; margin: 1% auto;}
-				.featuredImage{height:auto; width:90%; margin:1em auto; display:block;}
+				.featuredImage{height:auto; width:91%; margin:1.37em auto; display:block; min-height:220px;}
 
 
 				header.byline{
 					width:98%; 
 					margin:auto; 
-					height:45px; 
+					height:47px; 
 					font-size:0.9em; 
 					background-color: #fff;
-					line-height:45px;
+					line-height:23px;
 					p{width:auto; margin: 0px; display: inline-block; padding:0;}
 					a{font-size: 0.90em; color: $color1; margin:auto; width:100%; }
 				}
 
 				footer.byline{
-					width:98%; 
+					width:91%; 
 					margin:auto; 
 					height:70px; 
 					font-size:0.9em; 
@@ -421,15 +431,16 @@ body{
 
 				}
 				
-				.newsExcerpt{ height:auto;}
+				.newsExcerpt{ height:auto; margin: 1% 0;}
 								
 
-				.read_more{  font-size:0.9em;  margin: 0% 0 0 1%; padding:1%; height:35px; line-height:17px; list-style:none; background-color:$color3; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block; text-align:center;}
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:17px; }
+				.read_more{  font-size:0.9em; padding:1%; height:35px; line-height:17px; list-style:none; background-color:$color3; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block; text-align:center; margin: 2% 0 2% 4%;}
+				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:17px; margin: 2% 0 2% 4%; }
 				/*Social media share buttons*/
 				.sd-content{
-					margin-top:2%;
-					ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:100%; height:35px; display:block; margin:0 !important; }
+					margin: 0 auto;
+					width: 91%;
+					ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:100%; height:48px; display:block; margin:0 !important; }
 					ul li{ width: 4%; float:left; display:inline-block; padding:0; margin: 0 1% !important; height:100%;}
 					ul li a{ display:block; margin:0; top: 1px; }
 				}
@@ -472,16 +483,17 @@ body{
 			height:auto; 
 			background-color:$color4; 
 			float:left;
+			
 			/*@include boxShadow( 1px 2px 3px rgba(0,0,0,.1) , 4px 4px 2px gray );*/
 
 
 			h2 {width:100%; height:60px; margin:0; padding:0; font-size:1.3em; line-height:60px; background-color:$color7; color:$color4; text-indent:1%; letter-spacing:0.1em; font-weight:bold;}
 
-			h3#reply-title {width:97%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
+			h3#reply-title {width:96%; margin:1% auto; padding:0; font-size:1em; line-height:44.5px; color:$color1; letter-spacing:0.1em; line-height: 1.5em; text-indent:0;}
 
 			.navigation{
 				height: 80px; 
-				width:98%; 
+				width:96%; 
 				margin:1% auto;
 				background-color:$color7;
 				color:$color4;
@@ -516,7 +528,7 @@ body{
 			.commentlist { 
 				padding-left: 0px;
 				margin:0;
-				.comment-meta { display:block; background-color:$color7; height:auto; font-size:0.9em; text-indent:5px; width: 98%; margin: 0 auto; }
+				.comment-meta { display:block; background-color:$color7; height:auto; font-size:0.9em; text-indent:5px; width: 96%; margin: 0 auto; }
 				.comment-meta .comment-author { display:block; line-height: 50px; height: 50px; padding:0;}
 				.comment-meta .comment-metadata{ display:block; line-height: 30px; height: 30px; padding:0;}
 				li ul{width:100%; margin-left:0;}
@@ -525,11 +537,11 @@ body{
 			
 			.comment-form{ 
 
-				width: 80%;
+				width: 82%;
 				height: auto; 
 				margin: auto;
 				font-family:($FontStyle); 
-				padding:10px 0; 
+				padding:1.8% 0; 
 				font-size:100%;
 				input{ width:100%; height:35px;}
 				input[type=text], textarea, select{ @include Transition(all 0.30s ease-in-out ); outline: none; padding: 3px 0px 3px 3px; margin: 5px 1px 3px 0px; border: 1px solid #ddd; width:100%; }
@@ -553,7 +565,7 @@ body{
 			}
 					
 			.reply{ 
-				width: 98%; 
+				width: 96%; 
 				min-height:35px;
 				margin:2% auto;
 				a{ margin:0; display:block; height:35px; list-style:none; width:10%; background-color:$color3; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); padding:0; border:none; color:$color1; font-family:($FontStyle); line-height:35px; text-align:center; font-size:0.95em; float: right;}
@@ -576,7 +588,7 @@ body{
 		padding:10px 0; 
 		font-size:100%;
 
-		p{font-size:1em; margin: 1% 0; }
+		p{font-size:1em; padding: 1% 0;}
 		input{ width:95%; height:35px;}
 		label{height:30px; line-height:30px;}
 
@@ -591,11 +603,11 @@ body{
 	.front_panel{
 		width:100%;
 		display:block;
-		height: 540px;/*new*/
-    	min-height: 540px;/*new*/
-		margin:0 0 1% 0;
+		height: 527px;/*new*/
+    	min-height: 527px;/*new*/
+		margin:0;
 		padding:0;
-		clear:both;
+		
 		
 		/*Intro Container*/
 		.intro-text{ 
@@ -605,9 +617,10 @@ body{
 			float:left; 
 			margin:0; 
 			height:auto;
-			h1{font-size:0.95em; margin: 0 0 0.05em 0; padding:0; color:$color1; letter-spacing:0.1em;  width:100%; display:block; height: 35px; line-height: 35px;}
-			p{ width:99%; line-height: 1.95em; font-size:0.9em; font-weight:350; margin:0 ;letter-spacing: 0.07em; }
+			h1{font-size:0.90em; margin: 0 ; padding:0; color:$color1; letter-spacing:0.1em;  width:100%; display:block; height: 24px; line-height: 24px;}
+			p{ width:99%; line-height: 1.68em; font-size:0.9em; font-weight:350; margin:0 ;letter-spacing: 0.095em; }
 			.introimg {width:15.729257%;float:left; margin:0% 1% 1% 10%; height:auto; display:inline-block; }
+
 		}
 
 
@@ -793,35 +806,37 @@ body{
 	.webskills{ 
 		list-style: none; 
 		font-family:($FontStyle); 
-		margin:2% 0%; 
-		padding:0px; 
+		margin: 0 ;
+		padding: 3% 0;
 		width:100%; 
 		display:inline-block;
-		li{ width:100%; margin:0; font-size:0.85em; color:$color1; font-style: italic; text-indent:0%; height:35px; line-height:35px; letter-spacing:0.1em; font-weight:300;}
-		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.2em; text-align: center; }
+		li{ width:100%; margin:0; font-size:0.85em; color:$color1; font-style: italic; text-indent:0%; height: 35.5px; letter-spacing:0.1em; font-weight:300; display:block;}
+		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;width: 6%;font-size: 1.2em; text-align: left; line-height:35.5px; }
 		li a{width:100%; }
 		li a:hover{width:100%;color:$color4; }
 	}
 	
 	blockquote{ 
-		width:96%; 
-		margin:auto; 
-		color:$color8; 
-		li{ margin:1% 0; font-style: italic;  line-height:1.5em;}
+		width:91%; 
+		margin:1.9% auto; 
+		color:$color1; 
+		line-height:1.5em;
+		font-style: italic;
+		
 	}
 
 
 	#photocontainer{
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:92%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color1; background-color:$color3;}
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:100%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color1; background-color:$color3;}
 		button:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
-		width:96%; 
+		width:100%; 
 		height:auto; 
 		font-family:($FontStyle); 
 		margin:auto;
 		h3{ margin:5px 0px 5px 0px;}
 		.content .menuSwitch {   
 			text-align: left;   
-			margin: 0;    
+			margin: 1.3% 0;    
 			width: 100%;
 			ul {    padding-left: 0; height: auto;}
 			ul li {  list-style-type: none;   display: inline-block;  padding: 10px 20px; border-radius: 4px;   cursor: pointer; background-color: $color3; color: $color1; @include Transition(background-color 0.3s ease-in ); font-size: 1.1em;   margin-right: 1%; }
@@ -831,16 +846,16 @@ body{
 		}
 		
     	.content{clear: both; position: relative;top: 10px;padding: 0px;overflow: hidden; }
-    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 24.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 370px;/*new*/ }
+    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 23.6%;/*new*/ display:inline-block;  margin: 0 1.1% 1.75% 0;  z-index:4;   height: 390px;/*new*/ }
 
     	.showcase{margin-top: 10px; width:55%;}
 
     	
     	.showcase-img{
     		float: left; 
-    		width: 250px;/*new*/   
-    		height:320px;/*new*/ 
-    		margin:0 1% 0 0;  
+    		width: 100%;/*new*/   
+    		height:100%;/*new*/ 
+    		margin:0 ;  
     		display:inline-block;
     		
     		img{height:auto;  width: 100%; left: 0;}
@@ -849,7 +864,7 @@ body{
     		.showcase-content{ 
 	    		height:100%; 
 	    		display:none;  
-	    		width: 92%;/*new*/  
+	    		width: 100%;/*new*/  
 	    		background-color:$color4; 
 	    		padding:2%; 
 	    		border-top:2px $color3 solid; 
@@ -944,7 +959,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	.socialpics {   display: none;}
 
-	ul{width:45%; margin:0; padding:0.5%; text-align:left; float:left; height:100%; }
+	ul{width:45%; margin:0; padding:0.5% 0.5% 0.5% 0; text-align:left; float:left; height:100%; }
 	ul li{  height:22.2%; list-style:none; width:100%; margin:0; text-indent:0px;  font-size:1em; }
 	ul li a {width:40%; text-decoration:none;  color:$color1; margin:0px; padding:0; font-size:0.85em; display:block; line-height:1.5em; @include Transition( all 0.2s ease-in-out);}
 	ul li a:hover{  color:$color4;  margin:0; font-size:0.90em; line-height:1.5em;}
