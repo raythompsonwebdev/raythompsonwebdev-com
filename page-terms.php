@@ -60,7 +60,7 @@ excludes all representations and warranties relating to this website and its con
 <h2>Notification of Changes</h2>
 <p>The Company reserves the right to change these conditions from time to time as it sees fit and your continued use of the site will signify your acceptance of any adjustment to these terms&#46;  If there are any changes to our privacy policy&#44; we will announce that these changes have been made on our home page and on other key pages on our site&#46;  If there are any changes in how we use our site customers&#39; Personally Identifiable Information&#44; notification by e-mail or postal mail will be made to those affected by this change&#46;  Any changes to our privacy policy will be posted on our web site 30 days prior to these changes taking place&#46;  You are therefore advised to re-read this statement on a regular basis&#46; These terms and conditions form part of the Agreement between the Client and ourselves&#46;  Your accessing of this website and&#47;or undertaking of a booking or Agreement indicates your understanding&#44; agreement to and acceptance&#44; of the Disclaimer Notice and the full Terms and Conditions contained herein&#46;  Your statutory Consumer Rights are unaffected&#46;  </p>
    		
-
+<div class="clearfix"></div>
 </section>
 <div class="clearfix"></div>
 <?php get_footer(); ?>

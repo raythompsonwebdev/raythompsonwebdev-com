@@ -52,8 +52,7 @@ Posted in <?php the_category(', ') ?> | <?php comments_popup_link('No Comments &
 <?php endif; ?>	
 
 </article>
-
-<br/>
+<div class="clearfix"></div>
 <article class="contact-wide">
 <h2>Related Items</h2> 		
 </article>

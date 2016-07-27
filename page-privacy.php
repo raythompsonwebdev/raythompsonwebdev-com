@@ -54,9 +54,7 @@ Template Name: Privacy
 
 <p>Users are advised to take caution and good judgement before clicking any shortened urls published on social media platforms by this website and its owners&#46; Despite the best efforts to ensure only genuine urls are published many social media platforms are prone to spam and hacking and therefore this website and its owners cannot be held liable for any damages or implications caused by visiting any shortened links&#46;</p>
 
-<br/>
-<br/>
-<br/>
+<div class="clearfix"></div>
        		
 </section>
 <div class="clearfix"></div>

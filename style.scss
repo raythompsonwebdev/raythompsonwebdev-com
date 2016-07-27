@@ -167,7 +167,7 @@ pre {
 .code {width:80%; margin:5% auto; display:block; font-size:0.85em}
 
 
-hr{background-color:$color1; height:1px; margin:5% auto; width:80%; }
+
 h1, h2, h3 {font-family:($FontStyle); color:$color1; font-size:1em; font-weight:700; padding:0; margin:0;}
 p{font-family:($FontStyle); color:$color1; line-height: 1.5em; font-size: 1em; font-weight:500;padding:0;margin:0; }
 ul{ font-size:1em; padding:0; margin:0;}
@@ -176,7 +176,7 @@ figure{margin:0; padding:0;}
 
 button:hover{color:$color1; background-color:$color2;}
 	
-#copyr {color:$color1; font-size:10px; width:100%; margin:1% 0; }
+#copyr {color:$color1; font-size:10px; width:100%; margin:2% 0; }
 .browserupgrade { margin: 0.2em 0; background: #ccc; color: $color1; padding: 0.2em 0;}
 .sticky{ font-size:1em;}
 .screen-reader-text{ font-size:0.95em; color:$color8; line-height:1.5em;}
@@ -212,7 +212,8 @@ body{
 	font-family:($FontStyle); 
 	overflow:auto;
 	clear:both;
-	background-image: url("graphics/template.jpg"); 
+	background-image: url("graphics/template.gif"); 
+	background-repeat:none;
 	
 	padding:0;
 	.fancybox-custom .fancybox-skin {	box-shadow: 0 0 50px #222;	}
@@ -274,7 +275,7 @@ body{
 		position:absolute; 
 		z-index:999; 
 		left:38.7%;
-		top:1.5%;
+		top: 0.5%;
 		#innernav{ padding:0px; margin:0px; height:35px; width:100%; }
 		#innernav .menu-main-container{width:100%;}
 		#innernav .menu-main-container #menu-main{width:100%; display:block;}
@@ -299,13 +300,14 @@ body{
 	min-height:740px;
 	 
 	hgroup{margin:0; padding:0;}
-	h1{font-size:1.4em; padding:0; color:$color1; width:100%;line-height: 1.1em; font-weight:350; letter-spacing: 0.095em; margin:0;height:30px; clear:both;}
-	h2{font-size:1.1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 1.4em; height: 30px;}
+	h1{font-size:1.4em; padding:0; color:$color1; width:100%;line-height: 48px; font-weight:500; letter-spacing: 0.095em; margin:0;height:48px; clear:both;}
+	h2{font-size:1.1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 48px; height: 48px;}
 	h3{font-size:1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 1.3em; height: 30px;}
-	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing: 0.095em;  line-height: 1.65em; clear:right; margin:0;}
+	p{font-size:0.90em;  font-weight:300; width:95%; letter-spacing: 0.095em;  line-height: 1.7em; clear:right; margin:0;}
 	/* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
 	ul{ list-style: none; }
 	ul li a:hover{color:$color4;   }
+	br{display:none;}
 	
 
 
@@ -367,7 +369,7 @@ body{
 	/*Left-side*/
 	#blogleftside{
 		height:auto; 
-		width:75%; 
+		width:78%; 
 		font-size:1em; 
 		float:left;
 		margin:0;
@@ -376,9 +378,10 @@ body{
 		article .imagebox .box .slide-caption p {  font-size: 100%;     width: 98%;}
 
 		.left-col{
-			margin-top: 2%;
+			margin-top: 0;
 
 			h1{font-size: 1.6em; margin: 1% 0;padding: 0px;letter-spacing: 0.05em; width: 100%; height:50px; line-height:50px;}
+			hr{background-color:$color1; height:1px; margin:5% auto; width:80%; }
 
 			/*Posts*/
 			.post{
@@ -603,8 +606,8 @@ body{
 	.front_panel{
 		width:100%;
 		display:block;
-		height: 527px;/*new*/
-    	min-height: 527px;/*new*/
+		height: 529px;/*new*/
+    	min-height: 529px;/*new*/
 		margin:0;
 		padding:0;
 		
@@ -618,8 +621,9 @@ body{
 			margin:0; 
 			height:auto;
 			h1{font-size:0.90em; margin: 0 ; padding:0; color:$color1; letter-spacing:0.1em;  width:100%; display:block; height: 24px; line-height: 24px;}
-			p{ width:99%; line-height: 1.68em; font-size:0.9em; font-weight:350; margin:0 ;letter-spacing: 0.095em; }
+			p{ width:99%; line-height: 1.69em; font-size:0.9em; font-weight:300; margin:0 ;letter-spacing: 0.095em;padding-top: 0.5%; }
 			.introimg {width:15.729257%;float:left; margin:0% 1% 1% 10%; height:auto; display:inline-block; }
+			hr{background-color:$color1; height:1px; margin: 1.4% auto; width:40%; }
 
 		}
 
@@ -810,7 +814,7 @@ body{
 		padding: 3% 0;
 		width:100%; 
 		display:inline-block;
-		li{ width:100%; margin:0; font-size:0.85em; color:$color1; font-style: italic; text-indent:0%; height: 35.5px; letter-spacing:0.1em; font-weight:300; display:block;}
+		li{ width:100%; margin:0; font-size:0.85em; color:$color1; font-style: italic; text-indent:0%; height: 35px; letter-spacing:0.1em; font-weight:300; display:block;}
 		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;width: 6%;font-size: 1.2em; text-align: left; line-height:35.5px; }
 		li a{width:100%; }
 		li a:hover{width:100%;color:$color4; }
@@ -818,11 +822,12 @@ body{
 	
 	blockquote{ 
 		width:91%; 
-		margin:1.9% auto; 
+		margin: 1.8% auto; 
 		color:$color1; 
-		line-height:1.5em;
+		line-height: 1.6em;
 		font-style: italic;
-		
+		letter-spacing: 0.05em;
+		font-size: 0.9em;
 	}
 
 
@@ -977,18 +982,17 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
  
 #wrapper_container #main-content {  
- 	h2 {  font-size: 1.5em;  text-indent: 1.5%;}
- 	p{font-size:0.85em;  clear:right; margin:0;}
+ 	h2 {  font-size: 1.5em; }
+ 	p{font-size:0.85em;  margin:0;}
 	.prof_cont #chart #bars span {  font-size: 0.85em;}
- 	.prof_cont .hero-slider ul li a {   font-size: 0.85em; line-height:45px;}
- 	#blogleftside {  width: 75%;  font-size: 100%;  float: left;}
+ 	.prof_cont .hero-slider ul li a {   font-size: 0.85em; }
+ 	#blogleftside {  font-size: 100%;  float: left;}
 	
 	#blogrightside{
  		h2 {font-size:1.2em;}
  		.blogbox .widget ul li a {font-size:0.9em;}
 
-}
-
+	}
  
 }
 }
@@ -1004,32 +1008,33 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header {  
  	width: 100%;  
- 	height:75px;
+ 	height:72px;
 
  	
  	h1#logo{
  		font-size:1.9em; 
  		width:40%; 
- 		height:40px; 
- 		margin:0 0 0 0.4%; 
- 		line-height:40px; 
+ 		height:47px;
+ 		line-height:47px;		
+ 		
   	}
 	h1#logo-blog{
 		font-size:1.9em; 
 		width:40%; 
-		height:40px; 
-		margin:0 0 0 0.4%; 
-		line-height:40px; 
+		height:47px;
+		margin:0 ; 
+		line-height:47px;
 		 
 	}
-	h2 { margin: 0px 0px 0px 0.5%; font-size:0.65em;}
+	h2 { font-size:0.70em;}
 	
 
 	nav {
+		left: 41.4%;
 		#mobile-nav { display:none;}
 		#innernav li a{ font-size:0.7em;}
 		#innernav li a:hover{ font-size:0.8em;}
-		#innernav .menu-main-container { width: 100%; left: 51.3%;}
+		#innernav .menu-main-container { width: 100%; }
 	} 
 	 
 	
@@ -1037,24 +1042,16 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 
 #wrapper_container #main-content { 
-
-	
-	padding: 5px;
-
-
-
+	padding: 2.5% 0 0 0;
+	min-height: 740px;
 	.introimg { height: auto;}
-	h1 { width: 98%;  padding:0; margin:0; font-size: 1.4em; height:30px; line-height:30px;}
+	h1 { width: 98%;  padding:0; margin:0; font-size: 1.4em; }
 	h2 {font-size: 1.3em; }
 	h3 {font-size: 1.2em; text-indent: 20px; }
-
-
 	p { font-size:0.80em;}
 	blockquote { font-size:0.9em;}
-
-
 	li { margin: 0px;   font-size: 0.90em;}
-	.skills > li { font-size: 80%;}
+	.skills > li { font-size: 85%;}
 
 
 	#blogrightside {
@@ -1083,7 +1080,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	#blogleftside {
 
 		height: auto;    
-		width: 75%;
+		width: 78%;
 
 		.left-col {
 
@@ -1103,6 +1100,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.byline{ font-size:0.9em; width:98%;}
 				.byline a{font-size: 1em; color: $color1; }
 				.thumb{width:15%; margin-left:20px; }
+				.featuredImage {   margin: 1.37em auto;   min-height: 200px;}
 				p{ font-size:0.85em; }
 				.newExcerpt{}
 				header.byline{
@@ -1127,7 +1125,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 				}
 
-				.read_more{ margin-left:1%; padding:5px; height:35px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 29px; }
+				.read_more{  padding:5px; height:35px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 29px; }
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.90em; line-height: 29px;}
 				.sd-content ul li {  width: 5%;}
 				.bypostauthor{ font-size:1em;}
@@ -1198,16 +1196,16 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	} 
 
 	.front_panel {
-		
+		height: 550px;
+		min-height: 550px;
 		clear:both;
-		height: 500px;
-		min-height: 500px;
-    	  	    	   	
+		    	  	    	   	
     	.intro-text{
 
     		p { width: 99%; margin: 0 ; font-size: 0.83em; line-height: 1.85em; letter-spacing: 0.08em;}
-    		h1 { line-height:30px; font-size: 0.9em; height: 30px;}
+    		h1 { font-size: 0.9em; }
     		.introimg {   width: 14%;}
+    		hr { margin: 1.65% auto;  width: 35%;}
     	} 
     	
 		.frontpage_cont{ 
@@ -1290,10 +1288,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	
 	#photocontainer{
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em;}
-		button:hover{color:$color4; background-color:$color1;font-size:1em; }
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:1em;}
+		button:hover{color:$color4; background-color:$color1;font-size:1.1em; }
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width: 31.5%;/*new*/ display:inline-block;  margin: 3% 0;  z-index:4;   height: 415px;/*new*/ }
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width: 31.5%;/*new*/ display:inline-block;  margin: 1% 1% 0 0;  z-index:4;   height: 450px;/*new*/ }
 		width:100%; 
 		height:auto; 
 		font-family:($FontStyle); 
@@ -1305,11 +1303,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			float: left;
 			clear: both;  
 			margin-top:0; 
-			width:92%;
+			width:100%;
 
 			.showcase-content{ 
 	    		  
-	    		width: 92%;/*new*/  
+	    		width: 100%;/*new*/  
 	    		padding:3%; 
 	    		
 	    		h1{text-indent:0px; font-size:0.95em; }
@@ -1330,6 +1328,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	}
 	
 	.webskills{
+		padding: 3.4% 0;
+		margin: 0;
 
 		li{  font-size:0.78em; }
 		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1em; text-align: center; }
@@ -1359,7 +1359,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
 		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
 	}
-	ul{width:45%; margin:0; padding:5px; text-align:left;  float:left;  }
+	ul{width:45%; margin:0; text-align:left;  float:left;  }
 	ul li{ text-indent:0px;  }
 	ul li a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.78em; line-height: 25px;}
 	ul li a:hover{  margin:0; font-size:0.8em;line-height: 25px;}
@@ -1375,38 +1375,43 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header {
 
-	height:75px;
+	height:72px;
 
 	
 	h1#logo { font-size: 1.9em; width:42%;}
 	h1#logo-blog { font-size: 1.9em; width:42%;}
 	h2 {font-size: 0.65em; margin:0 ;}
 
-
-	nav #innernav li a{font-size:0.70em;}
-	nav #innernav li a:hover{font-size:0.75em;}
-	nav #mobile-nav { display:none; }
-	nav #innernav .menu-main-container {width: 100%; left: 51.3%;}
-	
+	nav {
+		
+		left:41.3%;
+		#innernav li a{font-size:0.70em;}
+		#innernav li a:hover{font-size:0.75em;}
+		#mobile-nav { display:none; }
+	}
+		
 }
  
 #wrapper_container #main-content {
+	padding: 2.5% 0 0 0;
 
 
 	h1{font-size:1.30em; margin:0;}
-	h2 { font-size: 1.2em;  text-indent: 1.5%;}
+	h2 { font-size: 1.2em; }
 	h3 { font-size: 1.1em;  }
-	p{font-size:0.85em;  font-weight:300; width:95%; letter-spacing:0.1em;  line-height:1.8em; clear:right; margin:0;}
+	p{font-size:0.85em;  font-weight:300; width:95%; letter-spacing:0.1em; margin:0; line-height: 1.77em;}
 
 	.front_panel {
-		height: 500px;
-		min-height: 500px;
+		height: 558px;
+		min-height: 558px;
 
 		
 		.intro-text {
-			h1 {  font-size: 0.90em; height:auto; line-height: 30px;}
-			p {  font-size: 0.80em; line-height:1.85em; letter-spacing: 0.08em;}
+			width: 49%;
+			h1 {  font-size: 0.90em; height:auto;}
+			p {  font-size: 0.80em;  letter-spacing: 0.08em; line-height: 1.8em;}
 			.introimg {    width: 13%;}
+			hr{background-color:$color1; height:1px; margin: 2.5% auto; width:40%; }
 		} 
 
 		.frontpage_cont { 
@@ -1478,7 +1483,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	#blogleftside {   
 		height: auto;   
-		width: 75%;
+		width: 78%;
 
 		.left-col {
 			
@@ -1490,12 +1495,13 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				ul li{  width: 100%; margin:0px; font-size:0.85em; }
 				ul li a{  margin-left:0px;}
 
-				p{font-size:0.80em; width: 98%;}
+				p{font-size:0.80em; }
 				.byline {font-size:0.85em;}
-				.postimg {     margin: 1% auto;}
+				.postimg { margin: 1% auto;}
+				.featuredImage {min-height: 180px;}
 				header.byline{
 					height: 40px; 
-					font-size:0.85em; 
+					font-size:0.9em; 
 					line-height:1.6em;
 					
 					a{font-size: 0.85em;  }
@@ -1518,7 +1524,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.read_more{font-size:0.85em; width: 15.9652%; line-height: 23px;}
 				.read_more:hover{  font-size:0.90em; line-height: 23px;}
 
-				.sd-content ul li {  width: 4%;}
+				.sd-content ul li { width: 5%;}
 			}
 		
 			.navi .right {font-size:0.9em;}
@@ -1554,15 +1560,15 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			.comment-form p {font-size:0.8em;}
 			.comment-form .form-submit { margin: 2% 0; font-size: 0.8em;}
 			.reply{ 
-				a{ width:10%; background-color:$color3; line-height:35px; font-size:0.9em; }
-				a:hover{ background-color:$color1; color:$color4; font-weight:bold;  } 
+				a{ width: 20%; background-color:$color3; line-height:35px; font-size:0.9em; }
+				a:hover{ background-color:$color1; color:$color4; font-weight:bold; width: 20%; } 
 			}
 		}
 	}
 	
 	#contactform input[type="submit"] { font-weight:bold;}
 	#contactform p {   font-size: 0.85em;}
-	.skills {   margin: 4% 0px 5% 0%; font-size:0.9em;}
+	.skills { margin: 4% 0px 5% 0%; font-size:0.9em;}
 	.skills > li .fa-envelope {width:7%;}
 
 	
@@ -1570,17 +1576,17 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	#photocontainer { 
 
 		width: 100%;
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em; width:96%;}
+		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:1em; width:100%;}
 		button:hover{ font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32%;height:422px; }
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32%;height: 439px; }
 
 		.content .menuSwitch ul li {font-size: 1.15em;}
 
 		.showcase-img { 
-			width: 96%;
+			width: 100%;
 			.showcase-content{ 
 	    		  
-	    		width: 96%;/*new*/  
+	    		width: 100%;/*new*/  
 	    		padding:3%; 
 	    		
 	    		h1{text-indent:0px; font-size:0.90em; }
@@ -1600,11 +1606,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 						
 	}
 
-	.webskills > li{  font-size:0.80em; }
-	.webskills > li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1em; text-align: center; }
-
-	.webskills > li a{width:100%; }
-	.webskills > li a:hover{width:100%;color:$color6; }
+	.webskills{
+		padding: 1.8% 0;
+		li{  font-size:0.80em; }
+		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.3em; text-align: center; }
+		li a{width:100%; }
+		li a:hover{width:100%;color:$color6; }
+	}
+	 
 }
 
 #wrapper_container footer {
@@ -1649,7 +1658,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 #wrapper_container header { 
 	width: 100%;
-	height: 70px;
+	height: 72px;
 
 	
 	h1#logo {font-size: 1.8em; width: 45%;  }
@@ -1659,9 +1668,12 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	nav {  
 		width: 42%;
+		left: 39.4%;
+		top: 0.5%;
+
 		#innernav li a {font-size: 0.65em;}
 		#innernav li a:hover {font-size: 0.70em;}
-		#innernav .menu-main-container { width: 100%; left: 44.3%;}
+		#innernav .menu-main-container { width: 100%; }
 		#mobile-nav { display:none; }
 	}
 	
@@ -1669,6 +1681,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 
 #wrapper_container #main-content {
+	padding: 3.1% 0 0 0;
+
 
 	
 
@@ -1682,6 +1696,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.map_container {   width: 47%;  margin: 1%;   height: 250px;}
 	blockquote { font-size:0.80em;}
 	.webskills{ 
+		padding: 1.9% 0;
 		
 		li{ text-align:left;}
 		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.2em; text-align: center; }
@@ -1726,9 +1741,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 			h1 {    font-size: 1.5em;}
 			.post {
-				h1{line-height: 35px;height: 35px; font-size: 1.10em; letter-spacing: 0.1em;width: 98%;}
-				h2{text-indent:0px;line-height: 35px;height: 35px; font-size: 1em;margin: 1.5% auto; padding: 0px;letter-spacing: 0.1em;width: 96%; }
-				h3{margin: 1% auto; height: 25px;line-height: 0.85em;font-size: 1.2em; text-indent:0; }
+				h1{ font-size: 1.2em; letter-spacing: 0.1em;width: 98%;}
+				h2{text-indent:0px; font-size: 1.1em;margin: 1.5% auto; padding: 0px;letter-spacing: 0.1em;width: 96%; }
+				h3{margin: 1% auto; font-size: 1em; text-indent:0; }
 				h3 a{ padding-left:0; }
 				ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:96%; margin: 2% auto;}
 				ul li{  width: 100%; margin:0px; font-size:0.8em; }
@@ -1739,7 +1754,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				p{ margin:1% auto; line-height: 2em; letter-spacing: 0.15em; }
 				header.byline{
 					 
-					font-size:0.80em; 
+					font-size:0.90em; 
 					line-height:1.6em;
 					
 					a{font-size: 0.80em;  }
@@ -1760,7 +1775,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				}
 				.read_more{font-size:0.8em; width:15.9652349%;}
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.85em;}
-				.sd-content ul li {   width: 4%;}
+				.sd-content ul li {   width: 5%;}
 				.bypostauthor{ font-size:1em;}
 			}
 	
@@ -1796,7 +1811,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			.comment-form input[type="submit"] { width: 25%;}
 
 			.reply{ 
-				a{ width:10%; background-color:$color2; line-height:35px; font-size:0.85em; }
+				a{ width:20%; background-color:$color2; line-height:35px; font-size:0.85em; }
 				a:hover{ background-color:$color1; color:$color4;font-weight:bold;  } 
 			}
 		}
@@ -1806,24 +1821,26 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.front_panel {
 		display: inline-block;
 		margin:0 0 1% 0;
-		height: 860px;
-		min-height: 860px;
+		height: 865px;
+		min-height: 865px;
 		
 		.intro-text {   
 			width: 100%;  
 			display: inline-block;  
 			margin:0; 
 			padding: 0;
+			float: none;
 
 			h1 { font-size: 1em;}
 			h2 { font-size: 0.95em;}
-			p { font-size: 0.85em; letter-spacing: 0.09em; line-height: 2em;}
+			p { font-size: 0.85em; letter-spacing: 0.09em; line-height: 1.85em;}
 			.introimg { width: 13%;}
+			hr {margin: 2.4% auto;}
 		}
 		
 		.frontpage_cont { 
 			width: 67%; 
-			margin:5% auto; 
+			margin: 3% auto;
 			display: block; 
 			float:none;
 			height: 36.837%; 
@@ -1846,7 +1863,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			display: block; 
 			width:80%; 
 			float:none; 
-			margin:5% auto;
+			margin: 3.5% auto;
 			height: 55%; 
 
 			 h2 {   font-size: 1.2em;}
@@ -1909,7 +1926,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
 
 		button:hover{ font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:31.5%;height: 337px; }
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width: 32.9%; height: 366px; }
 
 		h2 {  font-size: 1.6em;  width: 98%;   margin:auto 1%;}
 		.content {clear: both;position: relative; top: 0px; padding: 0px; overflow: hidden; }
@@ -1920,11 +1937,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				
 		.showcase-img {  
 			float: left;  
-			width:96%;  
+			width:100%;  
 			margin: 0;
 			.showcase-content{ 
 	    		  
-	    		width: 96%;/*new*/  
+	    		width: 100%;/*new*/  
 	    		padding:3%; 
 	    		
 	    		h1{text-indent:0px; font-size:0.80em; }
@@ -1981,6 +1998,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 
 #wrapper_container header {
+	height: 72px;
 
 	
 	h1#logo { font-size: 1.7em; width:45%; }
@@ -1989,7 +2007,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	h2 { font-size: 0.65em; }
 	
 	nav #mobile-nav { display:none; }
-	nav #innernav .menu-main-container {    width: 100%;    left: 44.3%;}
+	nav {
+		left: 39%;
+		top: 0.5%;
+		#innernav .menu-main-container { width: 100%; }
+	}
 	
 	
 }
@@ -2049,19 +2071,19 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				p{ width:98%; margin:1% auto; font-size:0.80em;}
 				p.right {   width: 7%;}
 				.bypostauthor{ font-size:1em;}
-				.featuredImage{height:auto; }
+				.featuredImage{min-height: 183px; }
 				.byline{ margin:auto; width:98%; font-size:0.75em; line-height: 1.9em; }
 				.byline a{font-size: 0.95em; color: $color1; }
 				.thumb{width:15%; margin-left:12px; }
 				header.byline{
-					 
+
 					font-size:0.80em; 
 										
 					a{font-size: 0.80em;  }
 				}
 
 				footer.byline{
-					 
+					width: 98%;
 					font-size:0.75em; 
 					line-height:1.5em;
 					p{ margin: 0px; padding: 0;}
@@ -2073,10 +2095,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					p.right a.comments-count:hover{color:$color4;}
 
 				}
-				.read_more{  font-size:0.75em;  }
-				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.8em; }
+				.read_more{  font-size:0.75em; margin: 2% 0 2% 1%; }
+				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.8em; margin: 2% 0 2% 1%;}
+				.sd-content { 
+					width: 98%;
+					ul li {   width: 5%;}
+				}
 				
-				.sd-content ul li {   width: 4%;}
+				
 			} 
 			
 			.navi .right{width:100%; float:left; display:inline-block; margin-left:0%; font-size:0.75em; font-weight:bold; height:30px; line-height:30px;}
@@ -2121,7 +2147,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		min-height: 860px;
 				
 		.intro-text { 
-			margin:5% auto;
+			
 			padding: 0;
 			h1 {    font-size: 0.95em;}
 			h2{font-size:1em; margin: 0; padding:0; color:$color1; width:100%; text-indent:0px; height:auto; line-height:30px;}
@@ -2147,10 +2173,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		}
 		
 		.prof_cont {  
-			height: 53%;
+			height: 52.8%;
 			width: 80%; 
-			margin:1em 4.5em;  
-			display:inline-block;  
+			margin: 3.5% auto; 
+			display:block;  
 
 			#chart { 
 				#numbers { 
@@ -2205,18 +2231,18 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
 
 		button:hover{ font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:31.5%;height: 337px; }
+		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width: 32.8%; height: 351px; }
 	
 		.content .menuSwitch ul li {font-size:1.15em;}
 		.ca-style figure {  height: 90%;}
 		
 		.showcase-img {  
 			float: left;  
-			width:96%;  
+			width:100%;  
 			margin:0 0.5% 0 0;
 			.showcase-content{ 
 	    		  
-	    		width: 96%;/*new*/  
+	    		width: 100%;/*new*/  
 	    		padding:3%; 
 	    		
 	    		h1{text-indent:0px; font-size:0.8em; }
@@ -2276,7 +2302,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {display:block; line-height:50px; margin-right:1.2%; height:50px; width:50px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; float:right;}
+a.nav-toggle {display:block; line-height:50px; margin-right:2.2%; height:50px; width:50px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; float:right;}
 a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 
 #wrapper_container { width: 96%; height: auto; margin: 5px auto}
@@ -2284,20 +2310,22 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 
 #wrapper_container header {   
 	width: 100%;   
-	height: 70px;
+	height: 72px;
 	
 	h1#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
 	h1#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
-	h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; height:15px; line-height:15px; text-align:left;}
+	h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; }
 	
 	
 	/*Mobile-Navigation*/
 	nav {
 		
-		width: 98%; 
-		left: 1%; 
+		width: 100%; 
+		left: 0; 
 		position:fixed;
-
+		top:2%;
+		
+		
 		#innernav{ display:none; }
 		#mobile-nav {display:block; overflow:hidden;}
 		#mobile-nav nav-collapse ul{ display:block; float:left;}
@@ -2317,15 +2345,15 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 	margin-bottom: 5px;   
 	padding: 0px;
 
-	h1 { margin: 0; width: 100%; font-size:1.3em; line-height: 30px; height:30px;}
-	h2 { margin: 0 2%; width: 98%; font-size: 1.2em; line-height: 30px;}
-	h3{font-size: 1.1em;}
+	h1 { margin: 0; width: 100%; font-size:1.3em; }
+	h2 { margin: 0 ; width: 98%; font-size: 1.1em; }
+	h3{font-size: 1em;}
 	#slider { width: 64%; background: none repeat scroll 0% 0% $color2;  margin: auto ; height:300px; float: none;}
-	p { line-height: 1.9em; font-size: 0.80em; width: 97.5458%; margin-left: 0%; letter-spacing: 0.1em;}
+	p { line-height: 1.92em; font-size: 0.80em; width: 97.5458%; margin-left: 0%; letter-spacing: 0.1em;}
 	li {    margin: 1%;  }
 	
 	.webskills li {	 font-size: 0.85em;	}
-	.skills{  width:90%; display:block; margin:4% auto;}
+	.skills{  width:90%; display:block; margin: 3.5% auto;}
 	.skills li{ margin:0; font-size:1em; color:$color1; font-style: italic; text-indent:1%; height:25px; line-height:25px; }
 	.social_media_container {float: none; margin:0 auto; width: 90%;}
 	
@@ -2373,6 +2401,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 				ul li{  width: 100%; margin:0px; font-size:0.8em; }
 				ul li a{  margin-left:0px;}
 				p{ width:98%; margin:1% 0% 1% 1%; font-size:0.80em; color:$color8; }
+				.featuredImage {   min-height: 161px;}
 
 				header.byline{
 					font-size:0.80em; 
@@ -2431,15 +2460,15 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 			}
 
 			.reply{ 
-				a{ width:10%; background-color:$color3; line-height:35px; font-size:0.85em; }
+				a{ width:20%; background-color:$color3; line-height:35px; font-size:0.85em; }
 				a:hover{ background-color:$color1; color:$color4;   } 
 			}
 		} 
 	}
 
 	.front_panel {
-		height: 952px;
-		min-height: 952px;
+		height: auto;
+		min-height: auto;
 		margin: 0 ;
 		    
     	.intro-text {  
@@ -2448,15 +2477,17 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
     		padding: 0;
     		margin: 0 auto;
 			
-			h1 { font-size: 1em;margin: 0;line-height: 30px;}
-    		h2{ margin: 0; padding:0; color:$color1; width:100%;  text-indent:0px; height:auto; line-height:30px; font-size: 0.95em;}
+			h1 { font-size: 1em;margin: 0;}
+    		h2{ margin: 0; padding:0; color:$color1; width:100%;  text-indent:0px; height:auto; font-size: 0.95em;}
     		p{ width:100%; font-size:0.89em; line-height:1.8em; }
     		.introimg {  margin: 0 1% 0 0; width: 10%; float: right;}
+    		hr {margin: 1.7% auto;}
     	}
 		
 		.frontpage_cont {
 			height: 36.017%;
 			width: 85%;
+			margin: 4.8% auto;
 
 			.imagebox {  
 				margin: 0;
@@ -2469,8 +2500,8 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 		
 		.prof_cont { 
 			height:49%;
-			width: 96%;
-			margin: 5% auto;
+			width: 100%;
+			margin: 3.9% auto;
 			display: block;
 			#chart #bars {    
 				width: 90%;
@@ -2517,6 +2548,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:50px;}
 
 		}
 	}
+	blockquote {   width:96%;}
 
 	.container { float: none; width:96%; height:246px;}
 	.map_container {    width: 95.7293%;    float: none;    margin: 2%;}
@@ -2618,12 +2650,12 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
 
 #wrapper_container header {    
 	width: 100%;    
-	height: 70px;   
+	height: 72px;   
 	
 	
 	h1#logo { font-size: 2em;  text-indent:0%; }
 	h1#logo-blog { font-size: 2em;  text-indent:0%;}
-	h2{    margin: 0 ;  font-size:0.75em; height:15px; line-height:15px; text-indent:0%; font-size:0.65em;}
+	h2{    margin: 0 ;  font-size:0.75em; text-indent:0%; font-size:0.65em;}
 
 	/*Mobile-Navigation*/
 	nav {
@@ -2631,6 +2663,7 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
 		width: 98%;
 		left: 1%;
 		position:fixed;
+		
 
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
@@ -2661,7 +2694,8 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
 		width:50%;
 		li{ margin:0; font-size:0.9em; color:$color1; font-style: italic; text-indent:1%; height:25px; line-height:25px; }
 	}
-	.webskills > li {    font-size: 0.85em;}
+	.webskills { padding: 3.2% 0;}
+	.webskills li {  font-size: 0.85em;}
 		
 	.container { float: none; width:96%; height:246px;}
 	.map_container {      float: none;    margin: 2%;}
@@ -2762,23 +2796,25 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
 
 	.front_panel {
 
-		height: 997px;
-		min-height: 997px;
+		height: auto;
+		min-height: auto;
 		
 		.intro-text {  
 
 			width: 100%; 
 			display: inline-block; 
-			 padding: 0;
-			 h1{font-size:0.95em; margin: 0 auto; padding:0; color:$color1; width:100%;  text-indent:0px; height:auto; line-height:30px;}
-			 h2{font-size:0.9em;}
-			 p{ width:99%; margin: 0; font-size: 0.89em; letter-spacing: 0.1em; line-height: 1.7em; }
-			 .introimg {  float: left; margin: 0 1% 0 0;  width: 9%; height: auto;}
+			padding: 0;
+			h1{font-size:0.95em; margin: 0 auto; padding:0; color:$color1; width:100%; }
+			h2{font-size:0.9em;}
+			p{ width:99%; margin: 0; font-size: 0.89em; letter-spacing: 0.1em; line-height: 1.7em; }
+			.introimg {  float: left; margin: 0 1% 0 0;  width: 9%; height: auto;}
+			hr {margin: 2% auto;}
 		}
 		
         .frontpage_cont{
 			width: 80%;
 			height: 31.117%;
+			margin: 3.8% auto;
 
         	.imagebox {
         		a {    font-size: 0.95em; width: 30%;   }
@@ -2793,7 +2829,7 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width: 50px; }
 
 			width: 98%; 
 			margin: 5% auto;
-			height: 47%;
+			height: 53%;
 
 			 h2 {  font-size: 1.15em;;}
 			/*Chart*/	
@@ -2931,10 +2967,10 @@ a.nav-toggle:hover{ line-height:50px;}
 	width: 96%;
 
 	header {
-		height: 65px;
+		height: 72px;
 		h1#logo {  font-size:1.8em;}
 		h1#logo-blog {  font-size:1.8em; }
-		h2{ display:block; float:none; height:15px; line-height:15px; font-size: 0.6em;}
+		h2{ display:block; float:none;  font-size: 0.6em;}
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -3042,8 +3078,8 @@ a.nav-toggle:hover{ line-height:50px;}
 
 
 	.front_panel {
-		height: 980px;
-		min-height: 980px;
+		height: auto;
+		min-height: auto;
 
 		.intro-text {
 			h1 {  font-size: 0.95em;}
@@ -3057,7 +3093,7 @@ a.nav-toggle:hover{ line-height:50px;}
         .frontpage_cont{
 
         	padding-top:0;
-        	height: 44.327%;
+        	height: 30.327%;
         	.imagebox .box .slide-caption p {padding:0; }
         	.imagebox .box .slide-caption p { line-height:50px; font-size: 0.85em; margin:0;}
 
@@ -3188,8 +3224,8 @@ a.nav-toggle {    display: block;    height: 50px;    line-height: 50px; width:5
 		
 
 		.front_panel {
-			height: 980px;
-			min-height: 980px;
+			height: auto;
+			min-height: auto;
 
 			
 			.intro-text {
@@ -3357,8 +3393,8 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 
 
 	.front_panel {
-		height: 1035px;
-        min-height: 1035px;
+		height: auto;
+		min-height: auto;
 
 		.intro-text { 
 			width: 98%; 
@@ -3645,8 +3681,8 @@ a.nav-toggle {display:block; height:50px; line-height:50px; width:50px;}
 
 	.front_panel {
 
-		height: 1175px;
-		min-height: 1175px;
+		height: auto;
+		min-height: auto;
 
 		.intro-text{
 
@@ -3935,8 +3971,8 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 
 	.front_panel {
 
-		height: 1220px;
-        min-height: 1220px;
+		height: auto;
+		min-height: auto;
     	
 		.intro-text { 
 
@@ -4158,8 +4194,8 @@ a.nav-toggle { height:50px; line-height:50px; width:50px; }
 	}
 	
 	.front_panel {
-		height: 1310px;
-		min-height: 1310px;
+		height: auto;
+		min-height: auto;
 
 		.intro-text { 
 

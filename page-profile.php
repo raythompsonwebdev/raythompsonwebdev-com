@@ -56,22 +56,22 @@ Template Name: Profile
       </ul>
     </article>
   </article><!--end of prof cont-->
+
  <article class="intro-text">
 
     <h1>I build websites and love web development&#46;</h1>
 
-    <p>I am in my mid forties&#44; recently became a granddad&#44; and love 90&#39;s Hip Hop and web design and web development, particularly front-end development, search engine optimisation and responsive design&#46;</p>
+    <p>I am in my mid forties&#44; recently became a granddad&#44; and love 90&#39;s Hip Hop and web design and web development, particularly front-end development, search engine optimisation and responsive design&#46;<br/></p>
+<hr>
+      <p>I currently have a day job that is not within the web industry but do spend my free time learning web design and web development and experimenting with code&#46;</p>
+<hr>
 
-    <p>I currently have a day job that is not within the web industry but do spend my free time learning web design and web development and experimenting with code&#46;</p>
+        <p>I started learning how to build websites late 2011 after attending a 7 Month part-time City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;<br/></p>
+<hr>
+          <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql&#44; Javascript and other web design tools&#46;</p>
+<hr>
+         <p> I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients as part of the exam for the certificates&#46; <br/>Go to git hub to see</p> 
 
-    <p>I started learning how to build websites late 2011 after attending a 7 Month part-time City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;</p>
-
-    <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql&#44; Javascript and other web design tools&#46;</p>
-    
-    <p>I also learnt how to plan&#44; research&#44; wireframe&#44; prototype&#44; build&#44; test and launch a commercial website&#46; Including creating animations&#44; graphics images and copy for the web and worked as part of a team to create a web site for a few madeup clients as part of the exam for the certificates&#46;</p>
-
-    <p> Go to git hub to see</p> 
-<br/>
   </article>
 
 </div><!--front panel end-->
@@ -295,21 +295,22 @@ Template Name: Profile
 
   <article class="intro-text">
   <p>Since completing course in 2012 and gaining certificates &#40;see table above&#41; I needed to learn more about how to build websites and started a combination of watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups &#46;</p>
-
+<hr>
  <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes from scratch, using frameworks like Themes or create child themes. I can also make changes to existing wordpress themes as well as set up wordpress and get in running on a server&#46;</p>
-  <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap and others. I use build tools Grunt and Sass and Version control system GitHub to help speed up workflow and organising my code&#46;</p>
-  
-    <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
+<hr>
+  <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap and others. I use build tools Grunt and Sass and Version control system GitHub to help speed up workflow and organising my code&#46;<br/></p>
+<hr>
+  <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
 
    <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
   <br/>
   </article>
   
 </div><!--front-panel end-->
-<br/>
+<div class="clearfix"></div>
 
 </section>
-<div class="clearfix"></div>
+
 <?php get_footer(); ?>
 
 

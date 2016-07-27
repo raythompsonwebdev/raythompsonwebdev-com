@@ -257,13 +257,14 @@ Template Name: Websites
 
   </figure >
 </section><!-- Panel Container Ends Here -->          
-<br/><br/>
+<div class="clearfix"></div>
 
 </section><!-- End of Content -->
+<div class="clearfix"></div>
 </section><!-- End of PhotoContainer -->
-
+<div class="clearfix"></div>
 </section><!-- End of Main Content -->
 
-
 <div class="clearfix"></div>
+
 <?php get_footer(); ?>
