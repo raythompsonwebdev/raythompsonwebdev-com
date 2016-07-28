@@ -21,9 +21,8 @@ Template Name: Websites
 <h1>Websites</h1>
 
 <p>These are websites I have built over the past four years. websites These are I have built over the past four years These are I have built over the past four years These are I have built over the past four years These are I have built over the past four years.</p>
-
-<br/>
-
+<p></p>
+<div class="clear"></div>
 <div class="clear"></div>
 
 <section id="photocontainer" ><!-- Container Starts Here -->
