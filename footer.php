@@ -8,13 +8,13 @@
 
 <div class="socialpics">
 
-<a class="social-icon linkedin-icon" href="https://uk.linkedin.com/pub/raymond-thompson/b8/2b7/1b4" target="new" title="Follow us on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
+<a class="social-icon linkedin-icon" href="https://uk.linkedin.com/pub/raymond-thompson/b8/2b7/1b4" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
 
-<a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="Follow us on Twitter"><span><i class="fa fa-twitter"></i></span></a>
+<a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="Follow me on Twitter"><span><i class="fa fa-twitter"></i></span></a>
 
-<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Like us on Facebook"><span><i class="fa fa-facebook"></i></span></a>
+<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Follow me on Facebook"><span><i class="fa fa-facebook"></i></span></a>
 
-<a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow us on GitHub"><span><i class="fa fa-github"></i></span></a>
+<a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
 
 </div>
 
@@ -182,7 +182,7 @@ jQuery(document).ready(function($){
 
 </script>
 
-<div class="fixed-side-social-container">
+<!--<div class="fixed-side-social-container">
 <a class="social-icon linkedin-icon" href="https://uk.linkedin.com/pub/raymond-thompson/b8/2b7/1b4" target="new" title="Follow us on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
 
 <a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="Follow us on Twitter"><span><i class="fa fa-twitter"></i></span></a>
@@ -190,7 +190,7 @@ jQuery(document).ready(function($){
 <a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Like us on Facebook"><span><i class="fa fa-facebook"></i></span></a>
 
 <a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow me on GitHub "><span><i class="fa fa-github"></i></span></a>
-</div>
+</div>-->
 
 
 <?php

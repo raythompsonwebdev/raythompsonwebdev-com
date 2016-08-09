@@ -51,9 +51,9 @@
 </nav>
 <?php  if ( is_front_page() || is_page()) : ?>
 	
-<h1 id="logo"><span>RAYTHOMP</span><span >WEBDESIGN</span>.COM </h1>
+<h1 id="logo"><span>RAYTHOMPSON</span><span >WEBDEV</span>.COM </h1>
 <?php else : ?>
-<h1 id="logo-blog"><span >RAYTHOMP</span><span >WEBDESIGN</span>BLOG</h1>            
+<h1 id="logo-blog"><span >RAYTHOMPSON</span><span >WEBDEV</span> BLOG</h1>            
 <?php endif;
 
 $description = get_bloginfo( 'description', 'display' );

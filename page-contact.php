@@ -13,8 +13,7 @@ Template Name: Contact
 
 <p>Any queries about website please either complete form on the right or e-mail me at e-mail addressess below. You can also holla at me on social media</p>
 
-
-
+<h1></h1>
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
