@@ -1,0 +1,194 @@
+
+@mixin transformerorigin( $transformerorigin) {
+  transform-origin: $transformerorigin;
+  -webkit-transform-origin: $transformerorigin;
+  -moz-transform-origin: $transformerorigin;
+  -o-transform-origin: $transformerorigin;
+}
+
+@mixin Timing( $timing) {
+  animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -o-animation-timing-function: $timing;
+}
+
+@mixin delayer( $delayer) {
+  animation-delay: $delayer;
+  -webkit-animation-delay: $delayer;
+  -moz-animation-delay: $delayer;
+  -o-animation-animation-delay: $delayer;
+}
+
+@mixin durationer( $durationer) {
+  animation-duration: $durationer;
+  -webkit-animation-duration: $durationer;
+  -moz-animation-duration: $durationer;
+  -o-animation-duration: $durationer;
+}
+
+
+@mixin transforming-things( $transforming-things...) {
+  transform: $transforming-things;
+  -webkit-transform: $transforming-things;
+  -moz-transform: $transforming-things;
+  -o-transform: $transforming-things;
+}
+
+@mixin transitioner( $transitioner...) {
+-webkit-transition: $transitioner;
+-moz-transition: $transitioner;
+-o-transition: $transitioner;
+transition: $transitioner;
+}
+
+@mixin directions( $directions) {
+  animation-direction: $directions;
+  -webkit-animation-direction: $directions;
+  -moz-animation-direction: $directions;
+  -o-animation-direction: $directions;
+}
+
+@mixin fillermode( $fillermode) {
+  animation-fill-mode: $fillermode;
+  -webkit-animation-fill-mode: $fillermode;
+  -moz-animation-fill-mode: $fillermode;
+  -o-animation-fill-mode: $fillermode;
+}
+
+@mixin keyframes( $name ) {
+
+  @-webkit-keyframes #{ $name } {
+        @content;
+  }
+  @-moz-keyframes #{ $name } {
+        @content;
+  }
+  @-o-keyframes #{ $name } {
+        @content;
+  }
+  @keyframes #{ $name } {
+        @content;
+  }
+}
+
+
+
+#layer4 {
+
+  position:absolute;
+  opacity: 1;
+  z-index:-100;
+  
+}
+
+
+#layer1 {
+  position:absolute;
+  
+  opacity: 0;
+  left:-600px;
+  animation: desk-slide ;
+  -webkit-animation: desk-slide;
+  -moz-animation: desk-slide;
+  -o-animation: desk-slide;
+
+  @include transformerorigin( 275px 270px);
+  @include Timing( ease-in-out );
+  @include delayer( 8s );
+  @include durationer( 1s );
+  @include transforming-things( translateX(-600px) );
+  @include fillermode( both );
+   
+}
+
+@include keyframes( desk-slide ) {
+
+
+  100% { left: 0;  opacity:1; @include transforming-things( rotate(360deg) ); @include transforming-things( translateX(0px) ); }
+    
+}
+
+
+
+#layer3 {
+  position:absolute;
+  
+  opacity: 0;
+  left:-600px;
+  animation: wordpress-cover-slide ;
+  -webkit-animation: wordpress-cover-slide;
+  -moz-animation: wordpress-cover-slide;
+  -o-animation: wordpress-cover-slide;
+
+  @include transformerorigin( 275px 270px );
+  @include Timing( ease-in-out );
+  @include delayer( 14s );
+  @include durationer( 1s );
+  @include transforming-things( translateX(-600px) );
+  @include fillermode( both );
+    
+}
+
+@include keyframes( wordpress-cover-slide ) {
+  
+  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }  
+}
+
+
+#layer5 {
+  position:absolute;
+  
+  opacity: 0;
+  left:-600px;
+  animation: web-design-slide ;
+  -webkit-animation: web-design-slide ;
+  -moz-animation: web-design-slide ;
+  -o-animation: web-design-slide ;
+
+  @include transformerorigin( 275px 270px );
+  @include Timing( ease-in-out );
+  @include delayer( 18s );
+  @include durationer( 1s );
+  @include transforming-things( translateX(-600px) );
+  @include fillermode( both );
+
+    
+}
+
+@include keyframes( web-design-slide  ) {
+  
+  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }  
+}
+
+#g4408{
+
+  position:absolute;
+  
+  animation: web-design-btn ;
+  -webkit-animation: web-design-btn ;
+  -moz-animation: web-design-btn ;
+  -o-animation: web-design-btn ;
+
+  @include transformerorigin( 277.2356px 165.47476px );
+  @include Timing( ease-in-out ); 
+  @include delayer( 22s );
+  @include durationer( 0.5s );
+  @include transitioner(all 0.5s ease-in-out);
+  @include fillermode( both );
+  
+}
+
+@include keyframes( web-design-btn  ) {
+  
+  100% { opacity:1; @include transforming-things( scale (1) ); }  
+}
+  
+#g4408:hover{ @include transforming-things ( scale(1.1) ); @include transitioner( all 1s ease-in-out);  }
+/*#g4408:hover{ @include transforming-things ( scale(0.9) );}*/ 
+
+
+
+
+/*Coding standards~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+

@@ -61,9 +61,9 @@ Template Name: Profile
 
     <h1>I build websites and love web development&#46;</h1>
 
-    <p>I am in my mid forties&#44; recently became a granddad&#44; and love 90&#39;s Hip Hop and web design and web development, particularly front-end development, search engine optimisation and responsive design&#46;<br/></p>
+    <p>My name is Raymond Thompson&#44; recently became a young granddad&#44; and love 90&#39;s Reagge Dancehall and Hip Hop and I love web design and web development, particularly front-end development, search engine optimisation and responsive web development&#46;<br/></p>
 <hr>
-      <p>I currently have a day job that is not within the web industry but do spend my free time learning web design and web development and experimenting with code&#46;</p>
+      <p>I currently available  my free time learning web design and web development and experimenting with code&#46;</p>
 <hr>
 
         <p>I started learning how to build websites late 2011 after attending a 7 Month part-time City &#38; Guilds website design course at East London Advanced Technology Training in East London&#46;<br/></p>
@@ -91,7 +91,7 @@ Template Name: Profile
   <li><a href="#" rel="#panel-4" >Web Design L2</a></li>
   <li><a href="#" rel="#panel-5" >Web Design L3</a></li>
   <li><a href="#" rel="#panel-6" >Udemy</a></li>
-  <li><a href="#" rel="#panel-7" >Lynda.com</a></li>
+  <li><a href="#" rel="#panel-7" >Mobile App Development </a></li>
   <li><a href="#" rel="#panel-8" >Digital Marketing</a></li>
   <li><a href="#" rel="#panel-9" >Content Marketing</a></li>
 </ul>
@@ -237,7 +237,7 @@ Template Name: Profile
 
       </figure>
 
-      <h3>Lynda&#46;com &#45; Various</h3>
+      <h3>MobileApp Development&#45;</h3>
       <p>Topics&#58;</p>
       <p>PHP Essentials&#44; PHP Beyond Basics&#44; Javascript Essentials 2007&#44; Ajax Essentials&#44;  HTML/CSS Essentials&#44; Real World XML&#44; Jquery Essentials&#46;</p>
 
@@ -294,15 +294,15 @@ Template Name: Profile
 </article><!--end of prof cont-->
 
   <article class="intro-text">
-  <p>Since completing course in 2012 and gaining certificates &#40;see table above&#41; I needed to learn more about how to build websites and started a combination of watching video tutorials and online courses&#44; listening to web development podcasts and attending a couple of local Meet&#45;ups &#46;</p>
+  <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes templates from scratch. I can also customise existing wordpress themes and frameworks as well as set up wordpress and get it running securely on a server&#46;</p>
 <hr>
- <p>I have developed a fairly good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes from scratch, using frameworks like Themes or create child themes. I can also make changes to existing wordpress themes as well as set up wordpress and get in running on a server&#46;</p>
+<p>I have learnt more about web design and web developmet through a combination of watching online video tutorials and course &#44; listening to web development related podcasts and attending a couple of local Meet&#45;ups and web projects&#46;</p>
 <hr>
-  <p>I very much like to coding websites from scratch but do use frameworks like Foundation&#44; Bootstrap and others. I use build tools Grunt and Sass and Version control system GitHub to help speed up workflow and organising my code&#46;<br/></p>
+  <p>I very much like to coding websites from scratch and using frameworks like Foundation&#44; Bootstrap&#44; Wordpress&#44; Angularjs, Expressjs. I use build tools Grunt and Sass and Version control system GitHub to help manage workflow and organising code&#46;<br/>I work well either on my own or with a team and love to be involved in project from start to finish.</p>
 <hr>
-  <p>Because my interest lies more with coding, my design skills are not great, but I do use Photoshop&#44; and Inkscape quite a lot and am able to create simple images, edit existing images and create simple logos and graphics like icons&#46;</p>
+  <p>For more information other services on offer or a qoute on a website or web application please feel free to contact me. You can either contact me via social media or go to <a href="">Contact Page</a> and complete contact form. You will receive acknowlegment your query has been received. I will respond to any queries within 24 hours&#46;</p>
 
-   <p>To find out more go to contact page and hit me up. I am happy to answer any queries.</p> 
+   <p>.</p> 
   <br/>
   </article>
   

@@ -36,7 +36,7 @@
  <!--navigation-->
 
 <nav class="navi">
-<span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong>'); ?></span> 
+<span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
 <span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
 </nav><!--end of right navigation-->
 
