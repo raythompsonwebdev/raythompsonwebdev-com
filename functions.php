@@ -45,17 +45,20 @@ add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 //Localization support
 load_theme_textdomain('raythompwebdesign-com', get_template_directory() . '/languages');
 
+add_editor_style( 'css/custom-editor-style.css');
+
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
 add_theme_support( 'post-thumbnails' );
+
 set_post_thumbnail_size( 100, 100, true );
+
 add_image_size( 'featured-image', 783, 9999 );
+
 // Create three new image sizes
-add_image_size('small', 100, 9999);
-add_image_size('medium', 320, 9999);
-add_image_size('largest', 1800, 9999);
-
-
+add_image_size('small', 360, 9999);
+add_image_size('medium', 600, 9999);
+add_image_size('largest', 800, 9999);
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header');
 add_theme_support( 'custom-background');
@@ -142,18 +145,19 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
 function my_scripts_own() {
 
-
 wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'1.0.0', true );
 wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'1.0.0', true );
+wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'1.0', true );
 wp_register_script( 'menuswitch', get_template_directory_uri() . '/js/menuswitch.js', array('jquery'),'1.0', true );
-wp_register_script( 'wow', get_template_directory_uri() . '/js/wow-animate.js', array('jquery'),'1.0', true );
-
+/*wp_register_script( 'custom', get_template_directory_uri() . '/js/animate-slider.js', array('jquery'),'1.0', true );*/
 
 wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.min.js', array());
-wp_enqueue_script( 'scrollto' );
+
 wp_enqueue_script( 'cookie' );
 wp_enqueue_script( 'menuswitch' );
-wp_enqueue_script( 'wow' );
+wp_enqueue_script( 'easing' );
+wp_enqueue_script( 'scrollto' );
+/*wp_enqueue_script( 'custom' );*/
 wp_enqueue_script( 'jquery' );
 
 
@@ -219,8 +223,6 @@ if ( function_exists( 'register_sidebar' ) ) {
 	'after_title' => '</h2>',
 	) );
 }
-
-
 
 
 function map_widgets_init() {

@@ -25,6 +25,7 @@
 
 <?php the_content(); ?>
 
+
 <footer class="byline">
 
 <p class='right'><a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%')?></a></p>
@@ -36,8 +37,8 @@
  <!--navigation-->
 
 <nav class="navi">
-<span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
-<span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
+<span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong><span><i class="fa fa-file"></i></span>'); ?><?php wp_link_pages(); ?></span> 
+<span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong><span><i class="fa fa-file"></i></span>'); ?><?php wp_link_pages(); ?></span> 
 </nav><!--end of right navigation-->
 
 

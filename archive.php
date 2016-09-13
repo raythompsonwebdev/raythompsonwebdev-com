@@ -4,41 +4,47 @@
 <section id="main-content" class="group" role="main">
 	
 
-		<h1><?php // Output the category title
-if ( is_category() ) { single_cat_title(); } 
-      // Output the tag title
-elseif ( is_tag() ) { single_tag_title();
-      // For everything else
+<h1><?php // Output the category title
+	if ( is_category() ) { single_cat_title(); } 
+	      // Output the tag title
+		elseif ( is_tag() ) { single_tag_title();
+	      // For everything else
 
-} else { _e('Browsing the Archive', 'raythompwebdesign-com'); }
-?></h1>
+	} else { _e('Browsing the Archive', 'raythompwebdesign-com'); }
+	?>
+</h1>
 		
 <section id="blogleftside">
+
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>	
 	
 <article id="blog" class="left-col">
           
-<article class="post group">
-		
-<h1><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
+	        
+<article class="entry-content">
+ 
+<h2><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
     
 <ul><?php wp_get_archives('type=monthly'); ?></ul>
 
-<h1><?php _e('Browse by Category:', 'raythompwebdesign-com');?></h2>
+<h2><?php _e('Browse by Category:', 'raythompwebdesign-com');?></h2>
     
 <ul><?php wp_list_categories('title_li='); ?></ul>
 
-<h1><?php _e('Browse by Tag:', 'raythompwebdesign-com');?></h2>
+<h2><?php _e('Browse by Tag:', 'raythompwebdesign-com');?></h2>
 
 <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+
+<h2><?php _e('Browse by Page', 'raythompwebdesign-com');?></h2>
+<ul><?php wp_list_pages('title_li='); ?></ul>
    
 </article>
         
-<?php endwhile; else: ?>
+	<?php endwhile; else: ?>
 
-<p><?php load_theme_textdomain( $domain, $path ) ?></p>
+	<p><?php load_theme_textdomain( 'raythompwebdesign-com', get_template_directory() . '/languages'  ) ?></p>
 
-<?php endif; ?>
+	<?php endif; ?>
 
 </article>
 
@@ -50,6 +56,7 @@ elseif ( is_tag() ) { single_tag_title();
 </article>
 
 </section>
+
 <?php get_sidebar(); ?> 
 </section>
 <div class="clearfix"></div>

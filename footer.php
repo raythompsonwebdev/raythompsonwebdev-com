@@ -18,18 +18,21 @@
 
 </div>
 
+
 <?php wp_nav_menu( array('menu' => 'Secondary', 'container' => 'footer' )); ?>
+
+<p id="copyr" > &copy; 2016 - Raymond Thompson - UK : 
+<?php
+$page = "Page was last updated : ";
+$dt = time();
+    $mysql_datetime = strftime("%Y-%m-%d %H:%M:%S", $dt);
+    echo $page . $mysql_datetime;
+?>
+</p>
 
 </footer> 
 
-
-<p id="copyr">&copy; 2014 - Raymond Thompson - UK
-
-<br/>
-
-<script> document.write("Page Last Updated: " + document.lastModified); </script>
-
-</p>  
+ 
 
 </div>
 
@@ -101,96 +104,25 @@ jQuery(document).ready(function($){
 </script>
 
 
-
 <script >
 
 jQuery(document).ready(function($){
   
- $('button.text-btn-a').bind().click(function(){
-     
-      $('.showcase-a ').slideToggle('slow').css('left','0');
+   
+ $('.showcase-img').click(
+
+  function(){
+    
+      $(this).find('.showcase-content').slideToggle(1000 , 'easeInOutExpo' );
  
+  })
 
-    }),
 
-   $('button.text-btn-b').bind().click(
-
-    function(){
-
-      $('.showcase-b').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-c').bind().click(
-
-    function(){
-
-      $('.showcase-c').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-d').bind().click(
-
-    function(){
-
-      $('.showcase-d').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-e').bind().click(
-
-    function(){
-
-      $('.showcase-e').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-f').bind().click(
-
-    function(){
-
-      $('.showcase-f').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-g').bind().click(
-
-    function(){
-
-      $('.showcase-g').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-h').bind().click(
-
-    function(){
-
-      $('.showcase-h').slideToggle('slow');
-
-    }),
-
-   $('button.text-btn-i').bind().click(
-
-    function(){
-
-      $('.showcase-i').slideToggle('slow');
-
-    })
-
-  
+ 
 });
 
 </script>
 
-<!--<div class="fixed-side-social-container">
-<a class="social-icon linkedin-icon" href="https://uk.linkedin.com/pub/raymond-thompson/b8/2b7/1b4" target="new" title="Follow us on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
-
-<a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="Follow us on Twitter"><span><i class="fa fa-twitter"></i></span></a>
-
-<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Like us on Facebook"><span><i class="fa fa-facebook"></i></span></a>
-
-<a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow me on GitHub "><span><i class="fa fa-github"></i></span></a>
-</div>-->
 
 
 <?php

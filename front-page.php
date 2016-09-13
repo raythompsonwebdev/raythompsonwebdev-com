@@ -14,7 +14,7 @@
 
 
 <section id="main-content" class="group" role="main">
-<h1>Hello </h1>
+<h1>Need a website built?</h1>
 <br/>
 <div class="front_panel"> 
 
@@ -45,15 +45,15 @@
 
 <h1>Welcome to raythompsonwebdev.com&#46;</h1>
 
-<p>Need a website built? raythompsonwebdev.com provides professional web development services to sole traders, microbusinessess and small businesses wanting an on-line presence.</p>
+<p>Professional web development services for local sole traders, microbusinessess and small businesses wishing to connect with their customers on-line and build their online presence.</p>
 <hr>
-<p>Whether you need a web site or web application gain more leads, accept on-line payments or connect with existing and potential clients, I can help you create a great online experience for your users. I create:</p>
+<p>Whether you need a web site or web application to gain leads, accept on-line payments or to provide great customer service to existing and potential clients, I can help you create a great online experience for your users. I create:</p>
 
 
 <ul class="webskills">
-<li><span class="fa fa-mobile"></span>Customised Website Templates&#44;</li>
-<li><span class="fa fa-wordpress"></span>Static and Responsive Wordpress Themes&#44;</li>
-<li><span class="fa fa-database"></span>Mobile Applications&#44;</li>
+<li><span class="fa fa-desktop"></span>Customised Website Templates&#46;</li>
+<li><span class="fa fa-wordpress"></span>Customised Wordpress Themes&#46;</li>
+<li><span class="fa fa-mobile"></span>Mobile Web Applications&#46;</li>
 </ul>
 
 <p>Each of my websites have been built with the focus on simplicity, usability & accessibility for all users. I using clean semantic code, follow standards compliancies and validate code to ensure website can be found by search engines and viewed in most modern Browsers.  </p>
@@ -94,12 +94,12 @@
 
 <h1>Interested in learning web development &#63;</h1>
 
-<p>Check out the blogs I will be posting with short tutorials&#44; curated articles&#44; lists and all sorts of useful web development and web design resources I have created or come across on my journey on improving my own skills&#46;</p>
+<p>Check out the content I will be providing through blog posts including short tutorials&#44; curated articles&#44; lists and all sorts of useful web development and web design related resources I have created or come across on my journey to improving my own skills&#46;</p>
 <ul class="webskills">
-	<li><span class="fa fa-mobile"></span>Video Tutorials&#44;</li>
-	<li><span class="fa fa-wordpress"></span>Blog Tutorials&#44;</li>
-	<li><span class="fa fa-database"></span>Website Template Downloads&#44;</li>
-	<li><span class="fa fa-database"></span>Code examples&#46;</li>
+	<li><span class="fa fa-file-video-o"></span>Video Tutorials&#44;</li>
+	<li><span class="fa fa-file-picture-o"></span>Infographics&#44;</li>
+	<li><span class="fa fa-file-code-o"></span>Code examples&#46;</li>
+	<li><span class="fa fa-download"></span>Website Template Downloads&#44;</li>
 	
 </ul>
 

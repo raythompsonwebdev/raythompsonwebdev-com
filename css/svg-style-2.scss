@@ -78,7 +78,7 @@ transition: $transitioner;
 
   position:absolute;
   opacity: 1;
-  z-index:-100;
+  z-index:-1;
   
 }
 
@@ -87,25 +87,57 @@ transition: $transitioner;
   position:absolute;
   
   opacity: 0;
-  left:-600px;
+  left:600px;
+
   animation: desk-slide ;
   -webkit-animation: desk-slide;
   -moz-animation: desk-slide;
   -o-animation: desk-slide;
 
+
   @include transformerorigin( 275px 270px);
   @include Timing( ease-in-out );
-  @include delayer( 8s );
+  @include delayer( 3s );
   @include durationer( 1s );
-  @include transforming-things( translateX(-600px) );
+  @include transforming-things( translateX(600px) );
   @include fillermode( both );
+  
    
 }
 
 @include keyframes( desk-slide ) {
 
 
-  100% { left: 0;  opacity:1; @include transforming-things( rotate(360deg) ); @include transforming-things( translateX(0px) ); }
+  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }
+    
+}
+
+#layer7 {
+  position:absolute;
+  
+  opacity: 0;
+  left:-600px;
+
+  animation: mob-slide ;
+  -webkit-animation: mob-slide;
+  -moz-animation: mob-slide;
+  -o-animation: mob-slide;
+
+
+  @include transformerorigin( 275px 270px);
+  @include Timing( ease-in-out );
+  @include delayer( 6s );
+  @include durationer( 1s );
+  @include transforming-things( translateX(-600px) );
+  @include fillermode( both );
+  
+   
+}
+
+@include keyframes( mob-slide ) {
+
+
+  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }
     
 }
 
@@ -115,7 +147,7 @@ transition: $transitioner;
   position:absolute;
   
   opacity: 0;
-  left:-600px;
+  left:600px;
   animation: wordpress-cover-slide ;
   -webkit-animation: wordpress-cover-slide;
   -moz-animation: wordpress-cover-slide;
@@ -123,10 +155,11 @@ transition: $transitioner;
 
   @include transformerorigin( 275px 270px );
   @include Timing( ease-in-out );
-  @include delayer( 14s );
+  @include delayer( 9s );
   @include durationer( 1s );
-  @include transforming-things( translateX(-600px) );
+  @include transforming-things( translateX(600px) );
   @include fillermode( both );
+  
     
 }
 
@@ -148,10 +181,11 @@ transition: $transitioner;
 
   @include transformerorigin( 275px 270px );
   @include Timing( ease-in-out );
-  @include delayer( 18s );
+  @include delayer( 12s );
   @include durationer( 1s );
   @include transforming-things( translateX(-600px) );
   @include fillermode( both );
+
 
     
 }
@@ -164,7 +198,7 @@ transition: $transitioner;
 #g4408{
 
   position:absolute;
-  
+  opacity: 0;
   animation: web-design-btn ;
   -webkit-animation: web-design-btn ;
   -moz-animation: web-design-btn ;
@@ -172,10 +206,11 @@ transition: $transitioner;
 
   @include transformerorigin( 277.2356px 165.47476px );
   @include Timing( ease-in-out ); 
-  @include delayer( 22s );
-  @include durationer( 0.5s );
+  @include delayer( 14s );
+  @include durationer( 1s );
   @include transitioner(all 0.5s ease-in-out);
   @include fillermode( both );
+  
   
 }
 
@@ -184,11 +219,133 @@ transition: $transitioner;
   100% { opacity:1; @include transforming-things( scale (1) ); }  
 }
   
-#g4408:hover{ @include transforming-things ( scale(1.1) ); @include transitioner( all 1s ease-in-out);  }
+#g4408:hover{ @include transforming-things ( scale(1.1) ); @include transitioner( all 0.1s ease-in-out);  }
 /*#g4408:hover{ @include transforming-things ( scale(0.9) );}*/ 
 
 
-
-
 /*Coding standards~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+g#Layer_5{
+
+  position:absolute;
+  opacity: 0;
+  
+  animation: jquerypic ;
+  -webkit-animation: jquerypic ;
+  -moz-animation: jquerypic ;
+  -o-animation: jquerypic ;
+
+  @include transformerorigin(0px 0px);
+  @include Timing( ease-in-out );
+  @include delayer( 2s );
+  @include durationer( 2s );
+  @include transitioner(all 0.5s ease-in-out);
+  @include fillermode( both );
+}
+
+@include keyframes( jquerypic ) {
+      
+  100% { left: 0;  opacity:1; }
+}
+
+g#Layer_5:hover{ }
+
+
+
+g#Layer_2{
+
+    position:absolute;
+    opacity: 0;
+
+    animation: phppic ;
+    -webkit-animation: phppic ;
+    -moz-animation: phppic ;
+    -o-animation: phppic ;
+
+    @include transformerorigin( 0 0 );
+    
+    @include Timing( ease-in-out );
+    @include delayer( 4s );
+    @include durationer( 2s );
+    @include transitioner(all 0.5s ease-in-out);
+    @include fillermode( both );
+}
+
+@include keyframes( phppic ) {
+  0%{ left:0; opacity:0; } 
+  100% { left: 0;  opacity:1; }
+}
+
+g#g5138{
+
+    position:absolute;
+    opacity: 0;
+
+    animation: htmlpic ;
+    -webkit-animation: htmlpic ;
+    -moz-animation: htmlpic ;
+    -o-animation: phtmlpic ;
+
+    @include transformerorigin( 0 0 );
+    
+    @include Timing( ease-in-out );
+    @include delayer( 6s );
+    @include durationer( 2s );
+    @include transitioner(all 0.5s ease-in-out);
+    @include fillermode( both );
+}
+
+@include keyframes( htmlpic ) {
+  0%{ left:0; opacity:0; } 
+  100% { left: 0;  opacity:1; }
+}
+
+
+g#g5228{ 
+
+    position:absolute;
+    opacity: 0;
+
+    animation: csspic ;
+    -webkit-animation: csspic ;
+    -moz-animation: csspic ;
+    -o-animation: csspic ;
+
+    @include transformerorigin( 0 0 );
+    
+    @include Timing( ease-in-out );
+    @include delayer( 8s );
+    @include durationer( 2s );
+    @include transitioner(all 0.5s ease-in-out);
+    @include fillermode( both );
+}
+
+@include keyframes( csspic ) {
+    
+    100% { left: 0;  opacity:1; }
+}
+
+
+g#g5296{
+
+    position:absolute;
+    opacity: 0;
+
+     animation: wordpic ;
+    -webkit-animation: wordpic ;
+    -moz-animation: wordpic ;
+    -o-animation: wordpic ;
+
+    @include transformerorigin( 0 0 );
+    @include Timing( ease-in-out );
+    @include delayer( 10s );
+    @include durationer( 2s );
+    @include transitioner(all 0.5s ease-in-out);
+    @include fillermode( both );
+}
+
+@include keyframes( wordpic ) {
+    
+    100% { left: 0;  opacity:1; }
+}
+
 

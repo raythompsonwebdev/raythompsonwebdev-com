@@ -19,7 +19,7 @@
 
 </article>
 <article class="blogbox"> 
-<h2>Related Items</h2> 
+<h2>Twitter</h2> 
 
 </article>
 

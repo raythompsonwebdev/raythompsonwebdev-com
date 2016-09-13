@@ -13,26 +13,27 @@ Raythompwebdesign is distributed under the terms of the GNU GPL
 */
 
 /*
-FF735F
-0551C7
-468EFF
-A2CC23
-90B2288*/
+D61324
+86A61B
+F3BE16
+F1B030
+0B0B0B*/
 
 /*
 
-FF8477
-4697FF
-ADCC23
-ABB28B
-0F60C7
-062351
+0AA500
+F2E400
+F37200
+F20302
+590502
+
 */
 
 $color1:#062351;
 $color2:#CCD3DE;
 $color3:#c0c9dd;
 $color4:#fff;
+$color10:rgba(255, 255, 255, 0.9);
 $color5:#6e757f;
 $color6:#9DA3AB;
 $color7:#575A5E;
@@ -177,7 +178,6 @@ figure{margin:0; padding:0;}
 
 button:hover{color:$color1; background-color:$color2;}
 	
-#copyr {color:$color1; font-size:10px; width:100%; margin:2% 0; }
 .browserupgrade { margin: 0.2em 0; background: #ccc; color: $color1; padding: 0.2em 0;}
 .sticky{ font-size:1em;}
 .screen-reader-text{ font-size:0.95em; color:$color8; line-height:1.5em;}
@@ -196,7 +196,7 @@ button:hover{color:$color1; background-color:$color2;}
 
 
 body{
-	background:$color3;
+	background:$color2;
 	font-size:medium;
 	font-family:($FontStyle); 
 	margin:0;
@@ -231,14 +231,15 @@ body{
 
 	
 	h1#logo{
-		font-size:2em; 
+		font-size:1.7em; 
 		width:40%; 
 		height:47px; 
 		margin:0 ; 
 		font-weight:bold; 
 		line-height:47px; 
-		color:$color4; 
-		text-shadow: 1px 1px 1px #000;    
+		color:$color4;
+		text-shadow:2px 2px #b1bacd; 
+		   
 		letter-spacing: 0.01em;
 		span{height:100%; padding:0; margin:0; color:$color4; text-align:left; display:inline-block;}
 		span:last-of-type{height:100%; padding:0; margin:0; color:$color1; display:inline-block; }
@@ -246,14 +247,15 @@ body{
 
 	
 	h1#logo-blog{
-		font-size:2em; 
+		font-size:1.7em; 
 		width:40%; 
 		height:47px; 
 		margin:0 ; 
 		font-weight:bold; 
 		line-height:47px; 
 		color:$color4; 
-		text-shadow: 1px 1px 1px #000;		
+		text-shadow:2px 3px #c0c9dd;
+				
 		span{height:100%; padding:0; margin:0; color:$color4; text-align:left;}
 		span:last-of-type{height:100%; padding:0; margin:0; color:$color1;}
 	}
@@ -269,17 +271,18 @@ body{
 	
 	/*Navigation*/
 	nav{ 
-		padding:0px; 
-		margin:0; 
+		padding:0; 
+		
 		font-family:($FontStyle);   
-		display:inline-block; 
+		display:block; 
 		width:40%; 
-		position:absolute; 
-		z-index:999; 
-		left:38.7%;
-		top: 0.5%;
+		float:right;
+		//position:absolute; 
+		//z-index:999; 
+		//left:38.7%;
+		//top: 0.5%;
 		#innernav{ padding:0px; margin:0px; height:35px; width:100%; }
-		#innernav .menu-main-container{width:100%;margin-top: 1%;}
+		#innernav .menu-main-container{width:100%;}
 		#innernav .menu-main-container #menu-main{width:100%; display:block;}
 		#innernav .menu-item {width:20%;float:left; height:35px; list-style:none;margin:0; padding:0; text-align:center; display:inline-block;}
 		#innernav li a {background-color: $color2; font-family:($FontStyle); width:100%; height:100%; text-decoration:none; line-height:35px; color:$color1; margin:0;  font-size:0.85em; display:block; letter-spacing:0.1em; font-weight:100;}
@@ -301,8 +304,8 @@ body{
 	min-height:740px;
 	 
 	hgroup{margin:0; padding:0;}
-	h1{font-size:1.4em; padding:0; color:$color1; width:100%;line-height: 48px; font-weight:600; letter-spacing: 0.095em; margin:0;height:48px; clear:both;}
-	h2{font-size:1.1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 48px; height: 48px;}
+	h1{font-size:1.25em; padding:0; color:$color1; width:100%;line-height: 48px; font-weight:600; letter-spacing: 0.095em; margin:0;height:48px; clear:both;}
+	h2{font-size:1.15em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 48px; height: 48px;}
 	h3{font-size:1em;  margin:0;  padding:0; color:$color1;  width:98%; letter-spacing: 0.05em; font-weight:500;line-height: 1.3em; height: 30px;}
 	p{font-size:0.90em;  font-weight:100; width:95%; letter-spacing: 0.095em;  line-height: 1.7em; clear:right; margin:0;}
 	/* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
@@ -344,7 +347,7 @@ body{
 				form.searchform div label{width: 25%; height:100%; font-size: 0.85em; display: inline-block; float:left; line-height:17px; height:30px; padding:0; color:$color1; text-align:center;}
 				form.searchform div input {width:50%;height:30px; font-size:1em; margin:0px; padding:0px; display:inline-block; float:left;border: none;line-height:30px; }
 				form.searchform div input[type=submit]{margin: 0 ; height:30px; list-style:none; background-color:$color3; width:25%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.1em; border:none; font-size:0.9em;border:none; }
-				form.searchform div input[type=submit]:hover{ color:$color4; background-color:$color1; }
+				form.searchform div input[type=submit]:hover{ color:$color4; background-color:$color1; font-size:1em; }
 			}
 
 			
@@ -385,7 +388,7 @@ body{
 			hr{background-color:$color1; height:1px; margin:5% auto; width:80%; }
 
 			/*Posts*/
-			.post{
+			.entry-content{
 
 				background-color:$color4; 
 				padding: 0; 
@@ -393,15 +396,39 @@ body{
 				margin:0 0 1% 0;
 								
 				
-				h1{font-size: 1.35em; margin:0 auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 48px;
+				h1{font-size: 1.35em; margin:1% auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 48px;
 				height: 48px;}
-				h2{text-indent:0px; font-size: 1.15em;margin: 0 auto; padding: 0px;letter-spacing: 0.05em;width: 91%; background-color:$color4; color:$color1; line-height: 40px; height: 40px;}
-				h3{margin: 0.5em auto; height: 40px;line-height: 30px;font-size: 1.10em; text-indent:0%; width:98%;}
+				h2{text-indent:0px; font-size: 1.10em;margin: 0 auto; padding: 0px;letter-spacing: 0.05em;width: 91%; background-color:$color4; color:$color1; line-height: 70px; height: 50px;}
+				h3{margin: 0.5em auto; height: 40px;line-height: 40px;font-size: 1.10em; text-indent:0%; width:98%;}
 				h3 a{ padding-left:0;  height:100%; }
-				ul{line-height: 1.5em; text-indent:0; width:98%; margin: 1% auto;display:block;}
-				ul li{  width: 100%; margin:0px; font-size:0.9em; }
-				ul li a{  margin-left:0px;}
-				p{ width:91%; margin:2.6% 0 0 4.6%; font-size:0.9em; color:$color8; font-weight:100; line-height: 1.69em;letter-spacing:0.11em;}
+				ul{
+					line-height: 1.5em; 
+					text-indent:0; 
+					width:91%; 
+					margin: 1% auto;
+					display:block; 
+					min-height: 100px;
+					
+					li{  
+						width: 100%;
+						margin:0px;
+						.children{width:95%; min-height: auto;}
+						a{ width: 100%; margin-left:0px; text-align:center; display:block;font-size:0.9em; height:100%;background-color:$color2; line-height:35px;}  
+						a:hover{ 
+							color:$color1;  
+							margin-left:0px; 
+							display:block; 
+							background-color:#ecf0f5; 
+							font-size:1.1em; 
+							width: 100%;
+							&::after{content:" > ";}
+						}
+					}
+
+				}
+				
+				.seperator{display:block; height:1%; clear:both;}
+				p{ width:91%; margin:0 0 0 4.6%; font-size:0.9em; color:$color8; font-weight:100; line-height: 1.89em;letter-spacing:0.11em;}
 				
 				.thumb{width: 58%; height:auto; margin: 1% auto; display:block; clear:both;}
 				.postimg{width:29%; margin: 1% auto;}
@@ -441,13 +468,120 @@ body{
 				.read_more{  font-size:0.9em; padding:1%; height:35px; line-height:17px; list-style:none; background-color:$color3; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block; text-align:center; margin: 2% 0 2% 4%;}
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:17px; margin: 2% 0 2% 4%; }
 				/*Social media share buttons*/
-				.sd-title{line-height: 10px; display: block; width: 90%; font-size: 1em; }
+				div.sharedaddy{width:90%; margin:3% auto; display:block;}
+				.sd-title{line-height: 20px; display: block;  font-size: 0.9em; margin:0; outline:none; float:left; height:40px; width:15%;}
+				.sd-title::before{border:none;}
 				.sd-content{
-					margin: 3% auto;
-					width: 91%;
+					margin: 0;
+					width: 85%;
+					display:inline-block;
 					ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:100%; height:35px; display:block; margin:0 !important; }
-					ul li{ width: 4%; float:left; display:inline-block; padding:0; margin: 0 1% !important; height:100%;}
-					ul li a{ display:block; margin:0; top: 1px; height:100%;}
+					ul li{ width: 5%; float:left; display:inline-block; padding:0; margin: 0 2% !important; height:100%;}
+					ul li a{ display:block; margin:0; top: 0; height:100%;}
+				}
+				
+				.entry{ 
+					padding:1% 0; 
+					height:auto;
+					h1 {  font-size: 1.6em;  margin: 10px auto; padding: 0px;letter-spacing: 0.1em;   width: 96%;}
+				}
+				
+				h2.entry-title a{color:$color4; font-size:70%; height:100%; line-height:1em;}
+				
+				.entry-attachment{width:40%; margin: 1em auto}
+			}
+
+			/*Posts*/
+			.post{
+
+				background-color:$color4; 
+				padding: 0; 
+				width: 100%; 
+				margin:0 0 1% 0;
+								
+				
+				h1{font-size: 1.35em; margin:1% auto; padding: 0;letter-spacing: 0.05em;width:98%; font-weight: 600; line-height: 48px;
+				height: 48px;}
+				h2{text-indent:0px; font-size: 1.10em;margin: 0 auto; padding: 0px;letter-spacing: 0.05em;width: 91%; background-color:$color4; color:$color1; line-height: 70px; height: 50px;}
+				h3{margin: 0.5em auto; height: 40px;line-height: 40px;font-size: 1.10em; text-indent:0%; width:98%;}
+				h3 a{ padding-left:0;  height:100%; }
+				ul{
+					line-height: 1.5em; 
+					text-indent:0; 
+					width:91%; 
+					margin: 1% auto;
+					display:block; 
+					
+					
+					li{  
+						width: 100%;
+						margin:0px;
+						
+						a{ width: 100%; margin-left:0px; text-align:center; display:block;font-size:0.9em; height:100%;background-color:$color2; line-height:35px;}  
+						a:hover{ 
+							color:$color1;  
+							margin-left:0px; 
+							display:block; 
+							background-color:#ecf0f5; 
+							font-size:1.1em; 
+							width: 100%;
+							&::after{content:" > ";}
+						}
+					}
+
+				}
+				
+				.seperator{display:block; height:1%; clear:both;}
+				p{ width:91%; margin:0 0 0 4.6%; font-size:0.9em; color:$color8; font-weight:100; line-height: 1.89em;letter-spacing:0.11em;}
+				
+				.thumb{width: 58%; height:auto; margin: 1% auto; display:block; clear:both;}
+				.postimg{width:29%; margin: 1% auto;}
+				.featuredImage{height:auto; width:91%; margin:1.37em auto; display:block; min-height:220px;}
+
+
+				header.byline{
+					width:98%; 
+					margin:auto; 
+					height:47px; 
+					font-size:0.9em; 
+					background-color: #fff;
+					line-height:23px;
+					p{width:auto; margin: 0px; display: inline-block; padding:0;}
+					a{font-size: 0.90em; color: $color1; margin:auto; width:100%; }
+				}
+
+				footer.byline{
+					width:91%; 
+					margin:auto; 
+					height:70px; 
+					font-size:0.9em; 
+					line-height:1.5em;
+					p{ margin: 0px; display: inline-block; padding: 0; width:auto;}
+					a{font-size: 0.95em; color: $color1; margin:auto; width:100%; }
+					p.right{width:6%; float:right; font-size:1.3em; height:40px; background-color:$color3; margin:0; }
+					p.right:hover{ background-color:$color1; color:$color4;}
+
+					p.right a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%; font-size:1.1em;background-color:$color3;}
+					p.right a.comments-count:hover{color:$color4; background-color:$color1; font-weight:bold; line-height:40px; }
+
+				}
+				
+				.newsExcerpt{ height:auto; margin: 1% 0;}
+								
+
+				.read_more{  font-size:0.9em; padding:1%; height:35px; line-height:17px; list-style:none; background-color:$color3; width:13.9652349%; color:$color1; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.05em; display:block; text-align:center; margin: 2% 0 2% 4%;}
+				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.95em; line-height:17px; margin: 2% 0 2% 4%; }
+				/*Social media share buttons*/
+				div.sharedaddy{width:90%; margin:3% auto; display:block;}
+				.sd-title{line-height: 20px; display: block;  font-size: 0.9em; margin:0; outline:none; float:left; height:40px; width:15%;}
+				.sd-title::before{border:none;}
+				.sd-content{
+					margin: 0;
+					width: 85%;
+					display:inline-block;
+					ul{line-height: 1.5em;font-size: 1em; text-indent:0; width:100%; height:35px; display:block; margin:0 !important; }
+					ul li{ width: 5%; float:left; display:inline-block; padding:0; margin: 0 2% !important; height:100%;}
+					ul li a{ display:block; margin:0; top: 0; height:100%;}
 				}
 				
 				.entry{ 
@@ -466,17 +600,22 @@ body{
 				width:100%; 
 				height:40px;
 				.right{
-					width:49%; 
+					width:100%; 
 					float:left; 
 					display:inline-block; 
-					margin-left:0.5%; 
+					margin:0.5% 0%; 
 					font-size:1em; 
 					font-weight:bold; 
 					height:40px; 
 					line-height:40px; 
 					color:$color8;
-					a{display:inline-block; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  font-weight:bold; height:40px; margin:0; width: 78%; text-indent:1%;}
-					a:hover{color:$color4; background-color:$color1; height:40px; text-align:center;}
+
+					a{display:inline-block; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  font-weight:bold; height:40px; margin:0; width: 85%; text-indent:1%;}
+					a:hover{color:$color4; height:40px; background-color:$color1;}
+					span {
+						
+						i{width:4%; text-align:center; font-size:1.3em; background-color:$color3; color:$color1; padding:1.1%; display:inline-block; float: right; height: 100%;}
+					}
 				}
 			}
 		}
@@ -541,12 +680,12 @@ body{
 						float:left;
 						width:40%; 
 						display:inline-block;
-						line-height: 50px; 
-						height: 50px; 
+						line-height: 80px; 
+						height: 60px; 
 						padding:0;
 						img{width:15%; height:100%;  margin: 0; display: inline-block; float:left;}
-						b.fn{display:inline-block; width: auto; padding: 0 2%; text-align: center;}
-						span.says{display:inline-block; width: auto; }
+						b.fn{display:inline-block; width: auto; padding: 0 2%; text-align: center; height:100%;}
+						span.says{display:inline-block; width: auto; height: 100%;}
 						
 					}
 					.comment-metadata{ 
@@ -645,9 +784,8 @@ body{
 	
 			
 			p.must-log-in{width:100%; text-indent:2%;}
-
-
 		}/*Comment section end*/
+
 	}
 	
 	
@@ -701,9 +839,9 @@ body{
 				padding: 3% 0;
 				width:100%; 
 				display:inline-block;
-				li{ width:100%; margin:0; font-size:0.85em; color:$color1; font-style: italic; font-weight:700; text-indent:0%; line-height:35px; height: 35px; letter-spacing:0.1em; display:block;}
-				li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;width: 6.5%;font-size: 1.6em; text-align: left; line-height:35px; }
-				
+				li{ width:100%; margin:0; font-size:0.80em; color:$color1; font-style: italic; font-weight:700; text-indent:0%; line-height:35px; height: 35px; letter-spacing:0.1em; display:block;}
+				li .fa-file-picture-o, li .fa-file-video-o,  li .fa-download, li .fa-desktop, li .fa-wordpress, li .fa-database, li .fa-file-code-o { display:inline-block; height:100%; float:none;width: 6.5%;font-size: 1.6em; text-align: center; line-height:35px; }
+				li .fa-mobile{ display:inline-block; height:100%; float:none;width: 6.5%;font-size: 2em; text-align: center; line-height:35px; }
 				li a{width:100%; }
 				li a:hover{width:100%;color:$color4; }
 			}
@@ -816,13 +954,12 @@ body{
 					height: 100%;  
 					padding: 0;  
 					margin: 0;
-					li {  display: table-cell;  width: 590px;  height: 366px;  margin: 0;  text-align: center;  position: relative;}
+					li {  display: table-cell;  width: 590px;  height: 365px;  margin: 0;  text-align: center;  position: relative;}
 					li .bar {  display: block;  width: 98%;  margin-left: 0px;  background: $color1;  position: absolute;  bottom: 0;}
 					li .bar:hover {  background: $color2;  cursor: pointer;}
 					li .bar:hover:before {  content: attr(data-percentage) '%';  position: relative;  bottom: 20px; }
 					span {  width: 98%;  position: absolute; left:0; bottom: -2em; text-align: center; font-size:0.8em;}
 				}
-
 			}
 			
 			/* End of chart*/
@@ -869,13 +1006,12 @@ body{
 				ul {  margin: 0;  list-style: outside none none;  float: left; height:100%;/*new*/ width: 25%;   padding: 0px; font-family:($FontStyle);}
 				ul li {  margin:0 0 4% 0; width:100%; height:40px;}
 				ul li a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color3; color:$color1; font-size:0.80em;  line-height:40px;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
-				ul a:hover {background-color:$color1; color:$color4; font-weight:700; }
+				ul a:hover {background-color:$color1; color:$color4; }
 			}/* END OF Hero Slider*/
 		}
+
 	}
 
-	
-		
 
 	.skills{ 
 		list-style: none; 
@@ -902,128 +1038,157 @@ body{
 
 
 	#photocontainer{
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{position:absolute; top:85%; left:0%; z-index: 2; display:block; height:15%; width:100%; outline:none; border:none; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); font-size:1em;color:$color1; background-color:$color3;}
-		button:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				
 		width:100%; 
 		height:auto; 
 		font-family:($FontStyle); 
 		margin:auto;
 		h3{ margin:5px 0px 5px 0px;}
-		.content .menuSwitch {   
-			text-align: left;   
-			margin: 1.3% 0;    
-			width: 100%;
-			ul {    padding-left: 0; height: auto;}
-			ul li {  list-style-type: none;   display: inline-block;  padding: 10px 20px; border-radius: 4px;   cursor: pointer; background-color: $color3; color: $color1; @include Transition(background-color 0.3s ease-in ); font-size: 1.1em;   margin-right: 1%; }
-			ul li:hover {   background-color: $color1;    color: $color4; } 
-			ul li.cat-active {   background-color: $color1;   color: $color4; }
+				
+    	.content{
 
-		}
-		
-    	.content{clear: both; position: relative;top: 10px;padding: 0px;overflow: hidden; }
-    	.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{position: relative; top: 2px; overflow: hidden; width: 23.6%;/*new*/ display:inline-block;  margin: 0 1.1% 1.75% 0;  z-index:4;   height: 390px;/*new*/ }
+    		clear: both; 
+    		position: relative;
+    		top: 10px;
+    		padding: 0px;
+    		overflow: hidden;
 
-    	.showcase{margin-top: 10px; width:55%;}
+    		.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  list-style-type: none;   display: inline-block;  padding: 10px 20px; border-radius: 4px;   cursor: pointer; background-color: $color3; color: $color1; @include Transition(background-color 0.3s ease-in ); font-size: 1.1em;   margin-right: 1%; }
+				ul li:hover {   background-color: $color1;    color: $color4; } 
+				ul li.cat-active {   background-color: $color1;   color: $color4; }
+			}
 
-    	
-    	.showcase-img{
-    		float: left; 
-    		width: 100%;/*new*/   
-    		height:100%;/*new*/ 
-    		margin:0 ;  
-    		display:inline-block;
     		
-    		img{height:auto;  width: 100%; left: 0;}
-    		img:hover {}
+    		#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+    			position: relative; 
+    			top: 2px; 
+    			overflow: hidden; 
+    			width: 23.6%;/*new*/ 
+    			display:inline-block;  
+    			margin: 0 1.1% 1.75% 0;  
+    			z-index:4;   
+    			height: 390px;/*new*/
+    			&:hover{cursor:pointer; } 
 
-    		.showcase-content{ 
-	    		height:100%; 
-	    		display:none;  
-	    		width: 100%;/*new*/  
-	    		background-color:$color4; 
-	    		padding:2%; 
-	    		border-top:2px $color3 solid; 
-	    		border-left:2px $color3 solid;
-	    		border-right:2px $color3 solid;
-	    		position:absolute; 
-	    		z-index:10; 
-	    		left:0px; 
-	    		height: 85%; 
-	    		top:0;
+    			.text-btn{
+					position:absolute; 
+					top:40%; 
+					left:0%; 
+					z-index: 2; 
+					display:block; 
+					height:15%; 
+					width:100%; 
+					outline:none; 
+					border:none; 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
 
-	    		
-	    		h1{text-indent:0px; font-size:0.95em; width:100%; color:$color1;line-height: 25px; width:100%; margin:0; height:25px;}
-	    		p{
-	    			font-size:0.75em; 
-	    			width:100%; 
-	    			margin:1% 0; 
-	    			letter-spacing:0.05em; 
-	    			line-height:1.6em;
-	    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
-	    				font-size:1.5em;
-	    				width:33%;
-	    				display:inline-block;
-	    				text-align:center;
-	    				height:30px;
-	    				line-height:30px;
-	    			}
-	    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
-	    				font-size:1.6em;
-	    				height:30px;
-	    				line-height:30px;
-	    				cursor:pointer;
-	    			}
-	    		}
+				.showcase-img{
+		    		float: left; 
+		    		width: 100%;/*new*/   
+		    		height:100%;/*new*/ 
+		    		margin:0 ;  
+		    		display:inline-block;
+		    		
+		    		img{height:auto;  width: 100%; left: 0; }
+		    		img:hover {}
 
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:block;
-	    			width:100%;
-	    			a{ height:30px; list-style:none; background-color:$color2; width: 49%; color:$color1;  letter-spacing:0.1em; border:none; font-family: ($FontStyle); font-size: 0.85em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; display:inline-block; text-align:center; @include Transition(background 0.2s linear 0s );}
-	    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
-	    			a.fancybox { font-size:0.85em; height:30px; display:inline-block; line-height: 30px; text-align: center; margin:1% 1% 1% 0; padding:0.5%; float:left; width: 49%;}
-	    			a.fancybox:hover{ color:$color4; background-color:$color1; font-weight:bold; }
-	    		}
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			    		    		
+			    		width: 100%;/*new*/  
+			    		background-color:$color10; 
+			    		padding:2%; 
+			    		border:2px $color2 solid; 
+			    		
+			    		position:absolute; 
+			    		z-index:10; 
+			    		left:0px; 
+			    		height: 100%; 
+			    		top: 0px;
+
+			    		h1{text-indent:0px; font-size:0.95em; width:100%; color:$color1; line-height: 25px; width:100%; margin:0; height:25px;}
+			    		p{
+			    			font-size:0.85em; 
+			    			width:100%; 
+			    			margin:1% 0; 
+			    			letter-spacing:0.05em; 
+			    			line-height:1.6em;
+			    			color:$color1;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.5em;
+			    				width:33%;
+			    				display:inline-block;
+			    				text-align:center;
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.6em;
+			    				height:30px;
+			    				line-height:30px;
+			    				cursor:pointer;
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    			margin:0; 
+			    			display:block;
+			    			width:100%;
+			    			a{ height:30px; list-style:none; background-color:$color2; width: 49%; color:$color1;  letter-spacing:0.1em; border:none; font-family: ($FontStyle); font-size: 0.85em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; display:inline-block; text-align:center; @include Transition(background 0.2s linear 0s );}
+			    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
+			    			a.fancybox { font-size:0.85em; height:30px; display:inline-block; line-height: 30px; text-align: center; margin:1% 1% 1% 0; padding:0.5%; float:left; width: 49%;}
+			    			a.fancybox:hover{ color:$color4; background-color:$color1; font-weight:bold; }
+			    		}  
+		    		}
+				}
     		}
-
-
-    	}
-     
-    	
-
+		}
 	}
-}
 
+	
+	div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  margin-left: 4px;   height: 100px;}
 
-div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  margin-left: 4px;   height: 100px;}
-
-/*Portfolio gallery*/
-
-/*transistion*/
-.dbox { 
-	margin-bottom: 30px; 
-	@include Transition( all 0.2s ease-in-out );
-	.itemCont { 
-	 	overflow: hidden;
-		display: inline-block;
-		a {  display: block;  padding-bottom: 5px;}
-		a:hover {  background-color: #00ACE9;  color: white;}
+	/*Portfolio gallery*/
+	/*transistion*/
+	.dbox { 
+		margin-bottom: 30px; 
+		@include Transition( all 0.2s ease-in-out );
+		.itemCont { 
+		 	overflow: hidden;
+			display: inline-block;
+			a {  display: block;  padding-bottom: 5px;}
+			a:hover {  background-color: #00ACE9;  color: white;}
+		}
+		.goto {  display: none;}
 	}
-	.goto {  display: none;}
-}
 
-.itemInfo {  display: block;}
-.itemInfo p {  display: none;}
-.thumb img {  text-align: center;}
-.loadit {  text-align: center;}
-/* switch mode */
-.dbox-list {  width: 100%;  height: auto;  padding-bottom: 20px;  margin-bottom: 20px;  border-bottom: 1px solid #eee;}
-.dbox-list > .itemCont > a > .thumb {  width: 100px;  float: left;}
-.dbox-list > .itemCont > a > .itemInfo {  float: left;  margin-left: 30px;  width: 75%;}
-.dbox-list > .itemCont > a > .itemInfo > p {  display: block;  color: #777;}
-.dbox-list .goto {  display: block;  float: right;}
+	.itemInfo {  display: block;}
+	.itemInfo p {  display: none;}
+	.thumb img {  text-align: center;}
+	.loadit {  text-align: center;}
+	/* switch mode */
+	.dbox-list {  width: 100%;  height: auto;  padding-bottom: 20px;  margin-bottom: 20px;  border-bottom: 1px solid #eee;}
+	.dbox-list > .itemCont > a > .thumb {  width: 100px;  float: left;}
+	.dbox-list > .itemCont > a > .itemInfo {  float: left;  margin-left: 30px;  width: 75%;}
+	.dbox-list > .itemCont > a > .itemInfo > p {  display: block;  color: #777;}
+	.dbox-list .goto {  display: block;  float: right;}
 /*end*/
+
+}
+
 
 /*Footer*/
 
@@ -1041,7 +1206,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		padding-left:0px; 
 		width:25%; 
 
-		.social-icon{float:left; margin-left:4%; display:inline-block; width:20%; background-repeat:no-repeat;-webkit-transition:all ease .2s;-moz-transition:all ease .2s;-o-transition:all ease .2s;-ms-transition:all ease .2s;transition:all ease .2s; height:100%; background-color: $color3;}
+		.social-icon{float:left; margin-left:4%; display:inline-block; width:21%; background-repeat:no-repeat;-webkit-transition:all ease .2s;-moz-transition:all ease .2s;-o-transition:all ease .2s;-ms-transition:all ease .2s;transition:all ease .2s; height:100%; background-color: $color3;}
 		.social-icon:hover{background-color:$color1; color:$color4; }
 
 		.socialpics span{ display:inline-block; width:100%; height:100%;}
@@ -1052,10 +1217,12 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 200%;  line-height:1.5em;}
 	}
 
-	ul{width:45%; margin:0; padding:0.5% 0.5% 0.5% 0; text-align:left; float:left; height:100%; }
+	ul{width:45%; margin:0; padding:0 ; text-align:left; float:left; height:100%; }
 	ul li{  height:22.2%; list-style:none; width:100%; margin:0; text-indent:0px;  font-size:1em; }
 	ul li a {width:40%; text-decoration:none;  color:$color1; margin:0px; padding:0; font-size:0.85em; display:block; line-height:1.5em; @include Transition( all 0.2s ease-in-out);}
 	ul li a:hover{  color:$color4;  margin:0; font-size:0.90em; line-height:1.5em;}
+
+	#copyr {color:$color1; text-align:right; font-size:10px; width:40%; margin:0; float:right; display:block; padding-top:4%;}
 	
 	/* footer social images*/
 }
@@ -1100,14 +1267,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
  	
  	h1#logo{
- 		font-size:1.9em; 
+ 		font-size:1.6em; 
  		width:45%; 
  		height:47px;
  		line-height:47px;		
  		
   	}
 	h1#logo-blog{
-		font-size:1.9em; 
+		font-size:1.6em; 
 		width:45%; 
 		height:47px;
 		margin:0 ; 
@@ -1133,10 +1300,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	padding: 2.5% 0 0 0;
 	min-height: 740px;
 	.introimg { height: auto;}
-	h1 { width: 98%;  padding:0; margin:0; font-size: 1.4em; }
-	h2 {font-size: 1.3em; }
-	h3 {font-size: 1.2em; text-indent: 20px; }
-	p { font-size:0.80em;}
+	h1 { width: 98%;  padding:0; margin:0; font-size: 1.2em; }
+	h2 {font-size: 1.15em; }
+	h3 {font-size: 0.95em; text-indent: 20px; }
+	p { font-size:0.85em;}
 	blockquote { font-size:0.9em;}
 	li { margin: 0px;   font-size: 0.90em;}
 	.skills > li { font-size: 85%;}
@@ -1155,7 +1322,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				display:block;
 				form.searchform div label {   line-height: 15px; font-size: 0.7em; }
 				form.searchform div input {    width: 50%;}
-				form.searchform div input[type="submit"] {font-size:0.75em;}
+				form.searchform div input[type="submit"] {    font-size: 0.8em;}
+				form.searchform div input[type="submit"]:hover { font-size: 0.9em;}
 			}
 
 			.widget ul li a {   font-size: 0.85em;}
@@ -1177,7 +1345,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			.post {
 
 				h1{margin: 0 auto; padding: 0px;color: $color1;letter-spacing: 0.1em; font-size: 1.15em; }
-				h2{text-indent:0px; font-size: 1.1em; padding: 0px;letter-spacing: 0.1em;width: 98%; background-color:$color4; color:$color1; margin:0 auto;}
+				h2{text-indent:0px; font-size: 1.05em; padding: 0px;letter-spacing: 0.1em;background-color:$color4; color:$color1; margin:0 auto;}
 				h3 { font-size: 1em; text-indent: 0px; height:auto; width: 98%;}
 				h3 a{ padding-left:0; }
 				h3 a:hover{color:$color6;}
@@ -1215,14 +1383,20 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 				.read_more{  padding:5px; height:35px; list-style:none; width:14.9652349%; font-size:0.85em; line-height: 29px; }
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.90em; line-height: 29px;}
-				.sd-content ul li {  width: 5%;}
-				.sd-title{line-height: 10px; display: block; width: 90%; font-size: 0.9em; }
+
+				.sd-content{
+					width: 80%;
+					ul li {  width: 6%;}
+
+					} 
+				.sd-title{line-height: 10px; display: block; width: 18%; font-size: 0.9em; }
 				
 				.bypostauthor{ font-size:1em;}
 			}
 			 
-			.navi .right{width:50%; float:left; display:inline-block; font-size:0.9em; font-weight:bold; height:40px; line-height:40px;}
-			.navi .right a{display:inline-block;  font-weight:bold;}
+			.navi .right{  font-size:0.9em;  height:40px; line-height:40px;}
+			.navi .right a{display:inline-block;  font-weight:bold; width: 83%;}
+			.navi .right span i {padding: 1.5%; width: 5%;}
 			
 			
 		}
@@ -1254,11 +1428,11 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.comment-meta { 
 					
 					.comment-author { 
-						line-height: 50px; 
-						height: 50px;
+						
 						padding:0;
 						img {   width: 16%;}
-						b.fn{padding: 0 3%;}
+						b.fn{ padding: 0 3%; font-size:0.9em;}
+						span.says{font-size:0.9em;}
 
 					}
 					.comment-metadata{ padding:0;}
@@ -1295,6 +1469,16 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
     		h1 { font-size: 0.9em; }
     		.introimg {   width: 14%;}
     		hr { margin: 1.65% auto;  width: 35%;}
+    		.webskills{
+				padding: 3.4% 0;
+				margin: 0;
+
+				li{  font-size:0.80em; }
+				li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.3em; text-align: center; }
+				li a{width:100%; }
+				li a:hover{width:100%;color:$color6; }
+
+			}  
     	} 
     	
 		.frontpage_cont{ 
@@ -1376,56 +1560,102 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	
 	
 	#photocontainer{
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:1em;}
-		button:hover{color:$color4; background-color:$color1;font-size:1.1em; }
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ width: 31.5%;/*new*/ display:inline-block;  margin: 1% 1% 0 0;  z-index:4;   height: 450px;/*new*/ }
-		width:100%; 
-		height:auto; 
-		font-family:($FontStyle); 
-		margin:auto;
-		h3 { margin: 5px 0px; width:100%; }
-
-		.content .menuSwitch ul li { font-size: 0.9em;}
-		.showcase-img{
-			float: left;
-			clear: both;  
-			margin-top:0; 
-			width:100%;
-
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.95em; }
-	    		p{font-size:0.80em; }
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.85em;  margin:1% 1% 1% 0; }
-	    			a:hover{ color:$color4; background-color:$color1; font-size: 0.90em; }
-	    			a.fancybox { font-size:0.85em;  padding:0.5%; }
-	    		}
-    		}
-
-		}
-		
-	}
+										
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
 	
-	.webskills{
-		padding: 3.4% 0;
-		margin: 0;
+			top: 10px;
+			padding: 0px;
+			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 20px;  @include Transition(background-color 0.3s ease-in ); font-size: 1em; margin-right: 1%; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
 
-		li{  font-size:0.78em; }
-		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1em; text-align: center; }
-		li a{width:100%; }
-		li a:hover{width:100%;color:$color6; }
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 
+				
+				width: 30%;/*new*/ 
+				 
+				
+				&:hover{cursor:pointer; } 
 
-	}  
+				.text-btn{
+					position:absolute; 
+					top:40%; 
+					left:0%; 
+					z-index: 2; 
+					display:block; 
+					height:15%; 
+					width:100%; 
+					outline:none; 
+					border:none; 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    		z-index:10; 
+			    		
+
+			    		h1{ font-size:0.90em; line-height: 25px;  height:25px;}
+			    		p{
+			    			font-size:0.80em; 
+			    			
+			    			margin:1% 0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
+		}
+	}
+/*end*/
+
 }
  
 #wrapper_container footer{
@@ -1464,8 +1694,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	height:72px;
 
 	
-	h1#logo { font-size: 1.9em; width:45%;}
-	h1#logo-blog { font-size: 1.9em; width:45%;}
+	h1#logo { font-size: 1.6em; width:45%;}
+	h1#logo-blog { font-size: 1.6em; width:45%;}
 	h2 {font-size: 0.65em; margin:0 ;}
 
 	nav {
@@ -1482,9 +1712,9 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	padding: 2.5% 0 0 0;
 
 
-	h1{font-size:1.30em; margin:0;}
-	h2 { font-size: 1.2em; }
-	h3 { font-size: 1.1em;  }
+	h1{font-size:1.2em; margin:0;}
+	h2 { font-size: 1.1em; }
+	h3 { font-size: 1em;  }
 	p{font-size:0.85em;  font-weight:300; width:95%; letter-spacing:0.1em; margin:0; line-height: 1.77em;}
 
 	.front_panel {
@@ -1498,6 +1728,16 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			p {  font-size: 0.80em;  letter-spacing: 0.08em; line-height: 1.8em;}
 			.introimg {    width: 13%;}
 			hr{background-color:$color2; height:1px; margin: 2.5% auto; width:40%; }
+			.webskills{
+				padding: 3.4% 0;
+				margin: 0;
+
+				li{  font-size:0.80em; }
+				li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.2em; text-align: center; }
+				li a{width:100%; }
+				li a:hover{width:100%;color:$color6; }
+
+			} 
 		} 
 
 		.frontpage_cont { 
@@ -1559,9 +1799,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			
 			.social-1 form.searchform div label { font-size: 0.7em; line-height:1.4em; }
 			.social-1 form.searchform div input {  width: 50%;}
-			.social-1 form.searchform div input[type="submit"] {font-size:0.7em;}
-			.widget ul li a{font-size:0.80em;}
-			.widget ul li a:hover{font-size:0.90em;}
+			form.searchform div input[type="submit"] {    font-size: 0.75em;}
+			form.searchform div input[type="submit"]:hover { font-size: 0.85em;}
+			.widget ul li a{font-size:0.90em;}
+			.widget ul li a:hover{font-size:0.95em;}
 		}
 	}
 
@@ -1608,12 +1849,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 				.read_more{font-size:0.85em; width: 15.9652%; line-height: 23px;}
 				.read_more:hover{  font-size:0.90em; line-height: 23px;}
+				.sd-title {width: 18%; font-size: 0.85em;}
+				.sd-content {width: 82%;}
 
-				.sd-content ul li { width: 5%;}
+				.sd-content ul li { width: 7%;}
 			}
 		
-			.navi .right {font-size:0.9em;}
-			.navi .right { width: 50%;}
+			.navi .right {font-size:0.85em;}
+			
 
 		}
 		.contact-wide{
@@ -1629,14 +1872,15 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 					.comment-author { 
 						padding:0;
 						img{width:17%;}
-						b.fn{padding:0 3.5%;}
+						b.fn{ padding: 0 3.5%; font-size:0.9em;}
+						span.says{font-size:0.9em;}
 					} 
 					
 				}
 				.comment-metadata{  padding:0;}
 				.comment-content{
 					min-height:100px;
-					p{width:100%; line-height:1.5em;}
+					p{ line-height:1.5em;}
 				}
 				.reply{ 
 					a{ width: 20%; background-color:$color3; line-height:35px; font-size:0.9em; }
@@ -1648,6 +1892,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			}
 
 			#comments {height: 35px; min-height: 35px; line-height: 35px; font-size:0.9em;}
+			#respond .comment-form p.form-submit input[type="submit"] {width:25%;}
 			
 			.navigation{
 				h1{font-size:1.15em;}
@@ -1664,38 +1909,103 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 	
 
-	#photocontainer { 
-
-		width: 100%;
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:1em; width:100%;}
-		button:hover{ font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width:32%;height: 439px; }
-
-		.content .menuSwitch ul li {font-size: 0.9em;}
-
-		.showcase-img { 
-			width: 100%;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.90em; }
-	    		p{font-size:0.80em; }
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.75em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
-	    			a.fancybox { font-size:0.75em;  padding:0.5%; }
-	    		}
-    		}
+	#photocontainer{
+										
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
 			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 20px;  @include Transition(background-color 0.3s ease-in ); font-size: 1em; margin-right: 1%; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
+
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 
+				
+				width: 31%;/*new*/ 
+				 
+				
+				&:hover{cursor:pointer; } 
+
+				.text-btn{
+					position:absolute; 
+					top:40%; 
+					left:0%; 
+					z-index: 2; 
+					display:block; 
+					height:15%; 
+					width:100%; 
+					outline:none; 
+					border:none; 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    		z-index:10; 
+
+			    		
+
+			    		h1{ font-size:0.90em; line-height: 25px;  height:25px;}
+			    		p{
+			    			font-size:0.80em; 
+			    			
+			    			margin:1% 0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
-						
 	}
+/*end*/
 
 	.webskills{
 		padding: 1.8% 0;
@@ -1712,7 +2022,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.socialpics{
 		display:block; 
 		float:right; 
-		margin:1%;  
+		  
 		height:40%; 
 		padding-left:0px; 
 		width:30%; 
@@ -1752,8 +2062,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	height: 72px;
 
 	
-	h1#logo {font-size: 1.8em; width: 52%;  }
-	h1#logo-blog {font-size: 1.8em;  width:52%; }
+	h1#logo {font-size: 1.6em; width: 52%;  }
+	h1#logo-blog {font-size: 1.6em;  width:52%; }
 	h2 {font-size: 0.60em; }
 	
 
@@ -1773,28 +2083,15 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container #main-content {
 	padding: 3.1% 0 0 0;
 
-
-	
-
 	p {    font-size: 0.80em; width:100%; line-height:1.9em;}
-
-	h1 {   margin: 0; font-size:1.3em;   padding: 0px; width:100%;}
-	h2 {   font-size: 1.2em; padding: 0px;    color: $color1;    letter-spacing: 0.1em;   width: 99.5458%;}
-	h3{font-size:1.1em;}
+	h1 {   margin: 0; font-size:1.2em;   padding: 0px; width:100%;}
+	h2 {   font-size: 1.15em; padding: 0px;    color: $color1;    letter-spacing: 0.1em;   width: 99.5458%;}
+	h3{font-size:1em;}
 	
 	.skills li {   font-size: 0.85em;}
 	.map_container {   width: 47%;  margin: 1%;   height: 250px;}
 	blockquote { font-size:0.80em;}
-	.webskills{ 
-		padding: 1.9% 0;
-		
-		li{ text-align:left;}
-		li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.2em; text-align: center; }
-		li a{width:100%; }
-		li a:hover{width:100%;color:$color6; }
-	}
-
-
+	
 	#blogrightside {
 
 		
@@ -1809,7 +2106,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				margin:0 auto;
 				form.searchform{float: none;}
 				form.searchform div input[type="submit"] {font-size:0.85em;}
-				form.searchform div input[type="submit"]:hover {font-size:0.90em;}
+				form.searchform div input[type="submit"]:hover {font-size:0.95em;}
 				form.searchform div label { font-size: 0.95em;  line-height: 30px; }
 			}
 			.tagcloud { text-align: center;}
@@ -1818,8 +2115,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			.widget ul{font-size:1em; width:100%; height:auto; display:inline-block; margin:1% 0; }
 			.widget ul.children > li{background-color:$color2; margin:1% auto;font-size:0.9em; }
 			.widget ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:1% auto; text-align:center;  }
-			.widget ul li a{ width:100%; font-size:0.75em; }
-			.widget ul li a:hover{ font-size:0.80em;}
+			.widget ul li a{ width:100%; font-size:0.90em; }
+			.widget ul li a:hover{ font-size:0.95em;}
 		} 
 	}
  
@@ -1867,7 +2164,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.85em;}
 				.sd-title {font-size:0.85em;}
 
-				.sd-content ul li {   width: 5%;}
+				.sd-content ul li {   width: 7%;}
 				.bypostauthor{ font-size:1em;}
 			}
 	
@@ -1897,7 +2194,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				
 				li ul{width:100%; margin-left:0;}
 				li {padding:0;}
-				.comment-content{width:95%; margin:2% auto; font-size:0.9em;}
+				.comment-content{ margin:2% auto; font-size:0.9em; width: 90%;}
 				.reply{ 
 					a{ width:20%; background-color:$color2; line-height:35px; font-size:0.85em; }
 					a:hover{ background-color:$color1; color:$color4;font-weight:bold;  } 
@@ -1934,6 +2231,14 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 			p { font-size: 0.85em; letter-spacing: 0.09em; line-height: 1.85em;}
 			.introimg { width: 13%;}
 			hr {margin: 2.4% auto;}
+			.webskills{ 
+				padding: 1.9% 0;
+				
+				li{ text-align:left;}
+				li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.2em; text-align: center; }
+				li a{width:100%; }
+				li a:hover{width:100%;color:$color6; }
+			}
 		}
 		
 		.frontpage_cont { 
@@ -2020,44 +2325,102 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 		
 	#photocontainer{
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
-
-		button:hover{ font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width: 32.9%; height: 366px; }
-
-		h2 {  font-size: 1.6em;  width: 98%;   margin:auto 1%;}
-		.content {clear: both;position: relative; top: 0px; padding: 0px; overflow: hidden; }
-		
-		.content .menuSwitch {text-align: left;margin: 20px 0 0 0; width:100%;}
-		.content .menuSwitch ul li { font-size: 0.85em; list-style-type: none;  display: inline-block;  }
-		.ca-style figure {  height: 90%;}
+										
+		h3{ margin:5px 0px 5px 0px;}
 				
-		.showcase-img {  
-			float: left;  
-			width:100%;  
-			margin: 0;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.80em; }
-	    		p{font-size:0.70em; margin: 0; }
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.80em;  }
-	    			a:hover{ color:$color4; background-color:$color1;  }
-	    			a.fancybox { font-size:0.75em;  padding:0.5%; }
-	    		}
-    		}
-		
+		.content{
+	
+			top: 10px;
+			padding: 0px;
+			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 20px;  @include Transition(background-color 0.3s ease-in ); font-size: 1em; margin-right: 1%; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
+
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 
+				
+				width: 31%;/*new*/ 
+				height:325px;
+				 
+				
+				&:hover{cursor:pointer; } 
+
+				.text-btn{
+					position:absolute; 
+					top:40%; 
+					left:0%; 
+					z-index: 2; 
+					display:block; 
+					height:15%; 
+					width:100%; 
+					outline:none; 
+					border:none; 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    		z-index:10; 
+			    		
+
+			    		h1{ font-size:0.80em; line-height: 25px;  height:25px;}
+			    		p{
+			    			font-size:0.75em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.75em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.75em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
-		
-	} 
+	}
+/*end*/ 
 
 	
 	#contactform p {    font-size: 0.85em;}
@@ -2069,7 +2432,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.socialpics{
 		display:block; 
 		float:right; 
-		margin:1%;  
+		  
 		height:40%; 
 		padding-left:0px; 
 		width:30%; 
@@ -2087,6 +2450,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	ul li{ text-indent:10px;  height:23%;}
 	ul li a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.8em; height:100%;  width:47%; line-height:25px;}
 	ul li a:hover{  margin:0; font-size:0.8em; line-height:25px;}
+	#copyr { width: 50%;}
 }
 }
 
@@ -2099,8 +2463,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	height: 72px;
 
 	
-	h1#logo { font-size: 1.7em; width:52%; }
-	h1#logo-blog { font-size: 1.7em;  width:52%;}
+	h1#logo { font-size: 1.55em; width:52%; }
+	h1#logo-blog { font-size: 1.55em;  width:52%;}
 	.search-box { width: 30%;font-size: 0.75em;}
 	h2 { font-size: 0.65em; }
 	
@@ -2118,10 +2482,10 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 #wrapper_container #main-content{
 	
 	padding:0px;
-	h1 { margin: 0; font-size: 1.35em;}
+	h1 { margin: 0; font-size: 1.1em;}
 	p { font-size: 0.75em; }
-	h2 {font-size: 1.1em; padding: 0px;  color: $color1;  letter-spacing: 0.1em; width: 99.5458%;}
-	h3{font-size:1em;}
+	h2 {font-size: 1em; padding: 0px;  color: $color1;  letter-spacing: 0.1em; width: 99.5458%;}
+	h3{font-size:0.95em;}
 	#blogrightside {
 
 		h2 { width: 100%; font-size: 0.95em; height: 35px; line-height: 35px;}
@@ -2132,6 +2496,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				display: block;
 				form.searchform div label { font-size: 0.90em; }
 				form.searchform div input[type="submit"] {font-size:0.85em;}
+				form.searchform div input[type="submit"] {font-size:0.95em;}
 			}
 		
 			h3{text-indent:10px; font-size:1em}
@@ -2141,8 +2506,8 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				ul{ width:100%; height:auto; display:inline-block; margin:1% 0;}
 				ul.children > li{background-color:$color2; margin:1% auto;}
 				ul li{list-style:none; line-height:30px; background-color:$color2; width: 96%;margin:1% auto; text-align:center;}
-				ul li a{ width:100%; font-size:0.75em;}
-				ul li a:hover{color:$color4; font-size:0.80em; }
+				ul li a{ width:100%; font-size:0.9em;}
+				ul li a:hover{color:$color4; font-size:0.95em; }
 			}
 		}
 	}
@@ -2195,16 +2560,17 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 				}
 				.read_more{  font-size:0.75em; margin: 2% 0 2% 1%; }
 				.read_more:hover{ color:$color4; background-color:$color1; font-size:0.8em; margin: 2% 0 2% 1%;}
-				.sd-title {font-size: 0.85em; width:98%;}
+				.sd-title {font-size: 0.85em; }
 				.sd-content { 
-					width: 98%;
-					ul li {   width: 6%;}
+					
+					ul li {   width: 7%;}
 				}
 			} 
 			
-			.navi .right{width:100%; float:left; display:inline-block; margin-left:0%; font-size:0.75em; font-weight:bold; height:30px; line-height:30px;}
-			.navi .right a{display:inline-block; font-size:0.9em; font-weight:bold; height:30px;}
-			.navi .right a:hover{color:$color4; background-color:$color1; height:30px; text-align:center;}
+			.navi .right{width:100%;  margin-left:0%; font-size:0.85em; height:30px; line-height:30px;}
+			.navi .right a{display:inline-block; font-size:0.9em;  height:30px; width: 83%;}
+			.navi .right a:hover{display:inline-block; font-size:0.95em; height:30px; width: 83%;}	
+			.navi .right span i { width: 5%;}
 		} 
 
 		.contact-wide {
@@ -2330,40 +2696,105 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 		}
     }
 
-	#photocontainer {
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.9em;}
-
-		button:hover{ font-size:1em;}
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 3% 0; width: 32.8%; height: 351px; }
+	#photocontainer{
+										
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
 	
-		.content .menuSwitch ul li {font-size:1.15em;}
-		.ca-style figure {  height: 90%;}
-		
-		.showcase-img {  
-			float: left;  
-			width:100%;  
-			margin:0 0.5% 0 0;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.8em; }
-	    		p{font-size:0.70em; }
-	    		.links {
-	    			height:40px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{ font-size: 0.80em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-weight:bold; }
-	    			a.fancybox { font-size:0.75em;  padding:0.5%; }
-	    		}
-    		}
+			top: 10px;
+			padding: 0px;
 			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 20px;  @include Transition(background-color 0.3s ease-in ); font-size: 1em; margin-right: 1%; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
+
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 
+				
+				width: 31.5%;/*new*/ 
+				height:325px;
+				 
+				
+				&:hover{cursor:pointer; } 
+
+				.text-btn{
+					position:absolute; 
+					top:40%; 
+					left:0%; 
+					z-index: 2; 
+					display:block; 
+					height:15%; 
+					width:100%; 
+					outline:none; 
+					border:none; 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    		z-index:10; 
+			    		
+
+			    		h1{ font-size:0.80em; line-height: 25px;  height:25px;}
+			    		p{
+			    			font-size:0.75em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.75em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.75em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
 	}
+/*end*/ 
+
+
 }	
 
 	
@@ -2372,7 +2803,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	.socialpics{
 		display:block; 
 		float:right; 
-		margin:1%;  
+		  
 		height:40%; 
 		padding-left:0px; 
 		width:30%; 
@@ -2389,7 +2820,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 	ul{
 		width:35%; 
 		margin:0; 
-		padding:4px;
+		
 		li{ text-indent:10px;  height:23%;}
 		li a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.75em; height:100%; line-height:25px;}
 		li a:hover{  margin:0; font-size:0.75em; line-height:25px;}
@@ -2406,7 +2837,7 @@ div.wpcf7 img.ajax-loader {  border: medium none;  vertical-align: middle;  marg
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {display:block; line-height:60px; margin-right:2.2%; height:60px; width:60px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; float:right;}
+a.nav-toggle {position: absolute;z-index: 9999;left: 0; top: 0; display:block;  line-height:60px; height:60px; width:60px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; }
 
 a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 
@@ -2417,22 +2848,21 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 	width: 100%;   
 	height: 72px;
 	
-	h1#logo { font-size: 1.9em; width: 80%; margin:0; text-indent: 0%;  }
-	h1#logo-blog { font-size: 1.9em; width: 80%;  margin:0 ; text-indent: 0%; }
-	h2{  margin:0 ; width: 80%; font-size:0.65em; display:block; float:none; }
+	h1#logo { font-size: 1.9em; width: 90%; margin:0 0 0 9%; text-indent: 0%; height: 40px;line-height: 40px; }
+	h1#logo-blog { font-size: 1.9em; width: 90%;  margin:0 0 0 9%; text-indent: 0%; height: 40px; line-height: 40px; }
+	h2{  width: 90%;  margin:0 0 0 9%; font-size:0.65em; display:block; float:none; height:20px; line-height:20px; }
 	
 	
 	/*Mobile-Navigation*/
 	nav {
 		
-		width: 100%; 
-		left: 0; 
+		width: 98%; 
+		left: 1%; 
 		position:fixed;
-		top:10px;
-		
-		
+		top:1%;
+		z-index: 9999;
 		#innernav{ display:none; }
-		#mobile-nav {display:block; overflow:hidden; background-color:$color3;}
+		#mobile-nav {display:block; overflow:hidden; background-color:$color3; }
 		#mobile-nav nav-collapse ul{ display:block; float:left;}
 		#mobile-nav li{ height:60px; list-style:none; width: 100%; background-color:$color3; margin:0; padding:0; display:block; }
 		#mobile-nav li a { width:100%; height:100%; text-decoration:none; line-height: 60px; color:$color1; margin:0; letter-spacing:0.1em; font-size: 1em; text-align:center; display:block; background-color:$color3;}
@@ -2477,7 +2907,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.80em; width:24%; line-height:30px; }
-				form.searchform div input[type="submit"] {    font-size: 0.65em;}
+				form.searchform div input[type="submit"] {    font-size: 0.85em;}
 			}
 			.widget ul li a { font-size:1em;}
 			.widget ul li a:hover { font-size:1.1em; }	
@@ -2517,6 +2947,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 				footer.byline{
 					font-size:0.95em; 
 					line-height:1.5em;
+					margin-top: 5%;
 					p{ margin: 0px; padding: 0;}
 					a{font-size: 0.85em;  }
 					p.right{ font-size:1.1em; margin:0; }
@@ -2528,22 +2959,30 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 				}
 				p { font-size:0.80em;  margin: 1% auto;}
 				p.right { font-size:1.2em;}
-				.sd-content ul {height:35px;}
-				.sd-content ul li {   width: 6%;}
+				div.sharedaddy {    width: 96%;}
+				.sd-title {    font-size: 0.85em; width:20%;}
+				.sd-content {   
+					width: 80%;
+					ul {height:35px;}
+					ul li {   width: 7%;}
+				}
 				
-
 				.read_more{ font-size:0.85em; width:15.9652349%;;margin-left: 1%;  line-height:28px;}
 				.read_more:hover { margin-left: 1%;  line-height:28px; font-size:0.90em;}
 				.meta{font-size:10px;}
 				.visit { margin: 0px 0px 0px 20px;}
 
 			} /*end of post*/
+
+			.navi .right a {width:81%;}
+			.navi .right a:hover {width:81%;}
 		}
 
 		.contact-wide {
 
 			h2 {   height: 40px;  line-height:40px; font-size:1em;}
 			h3 {   width: 94%; font-size:0.8em;} 
+			h3#comments {font-size:0.9em;}
 
 			.navigation {   
 				h1{font-size: 1.1em;}
@@ -2561,12 +3000,18 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 				padding-left: 0px;
 				margin:0;
 				.comment-meta {  
-					font-size:0.9em;
-					.comment-author { }  
+					font-size:1em;
+					.comment-metadata{ font-size:0.9em;}
+					.comment-author { 
+						b.fn{ padding: 0 3%; font-size:0.8em;}
+						span.says{font-size:0.8em;}
+
+
+					}  
 
 				}
-				.comment-metadata{}
-				.comment-content{width:95%; margin:2% auto; font-size:0.90em;}
+				
+				.comment-content{ margin:2% auto; font-size:0.90em;}
 								
 				li ul{width:100%; margin-left:0;}
 				li {padding:0;}
@@ -2677,48 +3122,102 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 	
 	/*Photocontainer*/
 	#photocontainer{
-
-		h1 {   font-size: 1em; height: 27px; line-height: 27px;}
-		h3 { margin: 1% ; text-indent: 0; width:98%;  }
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{ width:100%; text-align:center;}
-
-		button:hover{ cursor:pointer; z-index:2; width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 376px; width: 40.5%;}
+										
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
+			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 20px;  @include Transition(background-color 0.3s ease-in ); font-size: 1em; margin-right: 1%; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
 
 			
-		.content .menuSwitch { text-align: left;  font-size:100%; margin: 20px 0;   width: 100%;}
-		.content .menuSwitch ul li {font-size:1.05em;}
-		
-		.links { width:100%; margin:1% auto; height:30px; line-height:30px;}
-			
-		.showcase-img { 
-			width:100%;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.90em; line-height:25px; height:25px; }
-	    		p{font-size:0.80em;  }
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{ height:30px; font-size: 0.75em;  margin:1% 0 1% 0.5%; }
-	    			a:hover{ color:$color4; background-color:$color1; font-weight:normal; font-size:0.75em; }
-	    			a.fancybox { font-size:0.75em;  margin:1% 0.5% 1% 0; padding:0.5%; }
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 
+				
+				width: 45.5%;/*new*/ 
+				height:392px;
+				 
+				
+				&:hover{cursor:pointer; } 
 
-	    		}
-    		}
-			
+				.text-btn{
+					position:absolute; 
+					top:40%; 
+					left:0%; 
+					z-index: 2; 
+					display:block; 
+					height:15%; 
+					width:100%; 
+					outline:none; 
+					border:none; 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    		z-index:10; 
+			    		
+
+			    		h1{ font-size:0.90em; line-height: 35px;  height:35px;}
+			    		p{
+			    			font-size:0.85em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
-
-		
-		/*Photocontainer end*/
-	} 
+	}
+/*end*/  
 
 	#contactform {
 		float:none; 
@@ -2735,7 +3234,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 	.socialpics{
 		display:block; 
 		float:right; 
-		margin:1%;  
+		  
 		height:40%; 
 		padding-left:0px; 
 		width:37%; 
@@ -2750,13 +3249,14 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 	}
 
 	ul{
-		width:35%; 
+		width:25%; 
 		margin:0; 
-		padding:4px; 
+		 
 		li{ text-indent:0px;  height:23%;}
 		li a {text-decoration:none;  color:$color1; font-size:0.75em; width:100%; line-height:25px;}
 		li a:hover{  margin:0; font-size:0.75em; line-height:25px;}
 	}
+	#copyr {   width: 57%; padding-top: 3%;}
 	
 }
 
@@ -2766,9 +3266,9 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
+a.nav-toggle { left: 0; }
 
-#wrapper_container { width: 96%; height: auto; margin: 0 auto; }
+#wrapper_container { width: 96%; height: auto;  }
 
 
 #wrapper_container header {    
@@ -2778,16 +3278,15 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	
 	h1#logo { font-size: 2em;  text-indent:0%; }
 	h1#logo-blog { font-size: 2em;  text-indent:0%;}
-	h2{    margin: 0 ;  font-size:0.75em; text-indent:0%; font-size:0.65em;}
+	h2{  margin: 0 0 0 9% ;  font-size:0.75em; text-indent:0%; font-size:0.65em;}
 
 	/*Mobile-Navigation*/
 	nav {
 
-		width: 98%;
-		left: 1%;
+		width: 100%;
 		position:fixed;
+		top: 1%;
 		
-
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
 		#mobile-nav li{ height:60px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
@@ -2805,9 +3304,9 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	margin-bottom: 0;   
 	padding: 0px;
 	
-	h1 { width: 100%; text-indent: 0px; font-size: 1.4em; }
-	h2 { margin: 0px; width: 100%;text-indent: 0px; font-size: 1.3em;}
-	h3 {  text-indent: 15px; font-size: 1.2em; }
+	h1 { width: 100%; text-indent: 0px; font-size: 1.5em; }
+	h2 { margin: 0px; width: 100%;text-indent: 0px; font-size: 1.4em;}
+	h3 {  text-indent: 15px; font-size: 1.3em; }
 	p { font-size: 0.8em; width: 100%; margin-left: 0; letter-spacing: 0.1em;}
 	li {    margin: 0px; font-size:1em;  }
 
@@ -2870,13 +3369,13 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 				.postimg {   margin: 1% auto;}
 				.read_more { font-size: 0.85em; width:16.9652349%;}
 				.read_more:hover { font-size:0.90em; }
-				.sd-content ul li {    width: 6%;}
+				.sd-content ul li {    width: 8%;}
 				
 	
 			}
 			
 			.visit { margin: 0px 0px 0px 20px;}
-			.navi .right { font-size:0.9em;}
+			.navi .right { font-size:0.8em;}
 		} 
 		
 		.contact-wide {
@@ -2887,21 +3386,27 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 				padding-left: 0px;
 				margin:0;
 				.comment-meta {  
-					font-size:0.8em;
-					.comment-author {  } 
+					font-size:1em;
+					.comment-author { 
+						line-height: 80px; 
+						height: 60px; 
+						b.fn{ padding: 0 3%; font-size:0.8em;}
+						span.says{font-size:0.8em;}
+
+					} 
 				}
 				.comment-metadata{ }
 				
 				li ul{width:100%; margin-left:0;}
 				li {padding:0;}
 				.comment-content{
-					width:96%; 
+					 
 					margin:2% auto; 
 					font-size:0.9em;
 					p{font-size:0.85em;}
 				}
 				.reply{ 
-					a{ width:10%; background-color:$color3; line-height:35px; font-size:0.85em; }
+					a{ background-color:$color3; line-height:35px; font-size:0.85em; }
 					a:hover{ background-color:$color1; color:$color4;   } 
 				}
 
@@ -3015,48 +3520,102 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 	
 	
 	/*Photocontainer*/
-	#photocontainer {
+	#photocontainer{
+											
+			h3{ margin:5px 0px 5px 0px;}
+					
+			.content{
 		
-		h3 { margin: 1% ; width:98%; }
+				top: 10px;
+				padding: 0px;
+				
+				.menuSwitch {   
+					text-align: left;   
+					margin: 1.3% 0;    
+					width: 100%;
+					ul {    padding-left: 0; height: auto;}
+					ul li {  padding: 10px 20px;  @include Transition(background-color 0.3s ease-in ); font-size: 1em; margin-right: 1%; }
+					ul li:hover {  } 
+					ul li.cat-active {  }
+				}
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+				
+				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+					 			 
+					
+					width: 48.5%;/*new*/ 
+					height:392px;
+					 
+					
+					&:hover{cursor:pointer; } 
 
-		button:hover{width:100%;}
-
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 368px; width: 40.5%;}
-
-		.content .menuSwitch { text-align: left;   margin: 20px 0;  font-size:100%;  width: 100%;}
-		.content .menuSwitch ul li {   font-size: 0.85em;}
-		
+					.text-btn{
+						position:absolute; 
+						top:40%; 
+						left:0%; 
+						z-index: 2; 
+						display:block; 
+						height:15%; 
+						width:100%; 
+						outline:none; 
+						border:none; 
+						@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+						font-size:1em;
+						color:$color1; 
 						
-		.showcase-img {   
-			float: left; 
-			width:100%; 
-			display:inline-block; 
-			margin:0;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.85em;  }
-	    		p{font-size:0.75em; }
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{ height:30px;  width:48%; font-size: 0.70em;  margin:1% 0 1% 1%; }
-	    			a:hover{ color:$color4; background-color:$color1; font-weight:normal; font-size:0.70em; }
-	    			a.fancybox { font-size:0.75em; margin:1% 0 1% 1%; padding:0.5%; width:48%;}
-	    		}
-    		}
-			
+						
+						&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+					}
+
+					.showcase-img{
+			    				    		
+			    		img{ }
+			    		img:hover {}
+
+			    		.showcase-content{ 
+				    		
+				    		display:none;
+				 			    		 
+				    		padding:3%; 
+				   			    		 
+				    					    		
+				    		h1{ font-size:1em; line-height: 35px;  height:35px;}
+				    		p{
+				    			font-size:0.85em; 
+				    			
+				    			margin:0; 
+				    			
+				    			line-height:1.6em;
+				    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+				    				font-size:1.4em;
+				    							    				
+				    				height:30px;
+				    				line-height:30px;
+				    			}
+				    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+				    				font-size:1.5em;
+				    				height:30px;
+				    				line-height:30px;
+				    				
+				    			}
+				    		}
+
+				    		.links {
+				    			height:30px; 
+				    						    			
+				    			width:100%;
+				    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+				    			a:hover{  }
+				    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+				    			a.fancybox:hover{ }
+				    		}  
+			    		}
+					}
+				}
+			}
 		}
+	/*end*/   
 	
-	} 
-	/*Photocontainer end*/
 
 	#contactform { 
 				
@@ -3070,13 +3629,14 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 #wrapper_container footer {
 		
 	ul { 
-		width: 45%; 
+		width: 25%; 
 		margin: 0px; 
 		padding: 4px; 
 		li{ text-indent:0px;  height:23%;}
 		li a { color:$color1; margin:0; padding:0; width:100%; font-size:0.75em; height:100%; line-height:1.7em;}
 		li a:hover{  margin:0; font-size:0.75em; line-height:1.7em;}
 	}
+	#copyr {    width: 50%; font-size:8px; }
 		 
 }
 
@@ -3086,7 +3646,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width: 60px; }
 
 @media (max-width : 600px) {
 
-a.nav-toggle { height:60px; line-height:60px; width:60px; margin-right:2%;}
+a.nav-toggle { height:60px; line-height:60px; width:60px; }
 a.nav-toggle:hover{ line-height:60px;}
 
 .fixed-side-social-container{display:none;}
@@ -3096,16 +3656,16 @@ a.nav-toggle:hover{ line-height:60px;}
 
 	header {
 		height: 72px;
-		h1#logo {  font-size:1.8em;}
-		h1#logo-blog {  font-size:1.8em; }
+		h1#logo {  font-size:1.8em; width: 90%;  margin:0 0 0 9%;}
+		h1#logo-blog {  font-size:1.8em;width: 90%;  margin:0 0 0 9%; }
 		h2{ display:block; float:none;  font-size: 0.6em;}
 		
 		/*Mobile-Navigation*/
 		nav {
 
 			width: 98%; 
-			left: 1%; 
 			position:fixed;
+			top: 1%;
 			
 			#mobile-nav {display:block;}
 			nav-collapse ul{ display:block; float:left;}
@@ -3119,9 +3679,9 @@ a.nav-toggle:hover{ line-height:60px;}
 	}
 
 	#main-content {
-	h1 {font-size: 1.35em;}
-	h2 {   font-size: 1.25em; }
-	h3 {   font-size: 1.15em; }
+	h1 {font-size: 1.45em; height:65px; line-height:65px;}
+	h2 {   font-size: 1.35em; }
+	h3 {   font-size: 1.25em; }
 	
 
 	
@@ -3157,7 +3717,7 @@ a.nav-toggle:hover{ line-height:60px;}
 
 				.read_more { font-size: 0.8em;   width:16.9652349%;line-height: 27px;}
 				.read_more:hover { font-size: 0.85em;     line-height: 27px;}
-				.sd-content ul li {    width: 6%;}
+				.sd-content ul li {    width: 8%;}
 				
 			}
 			
@@ -3170,8 +3730,18 @@ a.nav-toggle:hover{ line-height:60px;}
 			.commentlist { 
 				padding-left: 0px;
 				margin:0;
+				.comment-content{
+					width:90%; 
+					margin:2% auto; 
+					
+					p{font-size: 0.85em;}
+				}
 				.comment-meta {  font-size:0.8em;  }
-				.comment-meta .comment-author {  }
+				.comment-meta .comment-author { 
+					b.fn{ padding: 0 3%; font-size:0.75em;}
+					span.says{font-size:0.75em;}
+
+				}
 				.comment-meta .comment-metadata{ }
 				li ul{width:100%; margin-left:0;}
 				li {padding:0;}
@@ -3181,12 +3751,7 @@ a.nav-toggle:hover{ line-height:60px;}
 			.comment-response #submit {height: 32px; width: 23.9652%; font-size: 0.8em; margin: 0px auto;  }
 
 			.navigation{font-size:0.75em;}
-			.comment-content{
-				width:96%; 
-				margin:2% auto; 
-				font-size:0.8em;
-				p{font-size: 0.9em;}
-			}
+			
 			.comment-form p {font-size:0.75em;}
 			.comment-form .form-submit { margin: 2% 0; font-size: 0.75em;}
 			.reply{ 
@@ -3264,40 +3829,97 @@ a.nav-toggle:hover{ line-height:60px;}
 	
 	}
 
-	#photocontainer {
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color4; background-color:$color1; width:100%;}
-
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 4%; height: 343px; width: 40.5%;}
-		.content .menuSwitch {   margin: 20px 0;  }
-		.content .menuSwitch ul li {  margin:0.5%; font-size: 0.85em;}
-
-		.showcase-img {     
-			margin: 0;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.80em;  }
-	    		p{font-size:0.70em; }
-	    		.links {
-	    			height:30px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{ height:30px; font-size: 0.65em;   }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.65em; }
-	    			a.fancybox { font-size:0.70em; padding:0.5%; }
-	    		}
-    		}
-		}
-			
+	/*Photocontainer*/
+	#photocontainer{
+											
+			h3{ margin:5px 0px 5px 0px;}
+					
+			.content{
 		
-	} 
+				top: 10px;
+				padding: 0px;
+				
+				.menuSwitch {   
+					text-align: left;   
+					margin: 1.3% 0;    
+					width: 100%;
+					ul {    padding-left: 0; height: auto;}
+					ul li {  padding: 10px 20px; font-size: 0.9em; margin-right: 1%; }
+					ul li:hover {  } 
+					ul li.cat-active {  }
+				}
+
+				
+				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+					 			 
+					
+					width: 48.5%;/*new*/ 
+					height:392px;
+					 
+					
+					&:hover{cursor:pointer; } 
+
+					.text-btn{
+						 
+						height:15%; 
+						width:100%; 
+						 
+						@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+						font-size:1em;
+						color:$color1; 
+						
+						
+						&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+					}
+
+					.showcase-img{
+			    				    		
+			    		img{ }
+			    		img:hover {}
+
+			    		.showcase-content{ 
+				    		
+				    		display:none;
+				 			    		 
+				    		padding:3%; 
+				   			    		 
+				    					    		
+				    		h1{ font-size:1em; line-height: 35px;  height:35px;}
+				    		p{
+				    			font-size:0.85em; 
+				    			
+				    			margin:0; 
+				    			
+				    			line-height:1.6em;
+				    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+				    				font-size:1.4em;
+				    							    				
+				    				height:30px;
+				    				line-height:30px;
+				    			}
+				    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+				    				font-size:1.5em;
+				    				height:30px;
+				    				line-height:30px;
+				    				
+				    			}
+				    		}
+
+				    		.links {
+				    			height:30px; 
+				    						    			
+				    			width:100%;
+				    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+				    			a:hover{  }
+				    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+				    			a.fancybox:hover{ }
+				    		}  
+			    		}
+					}
+				}
+			}
+	}
+	/*end*/
 
 	}
 
@@ -3311,6 +3933,8 @@ a.nav-toggle:hover{ line-height:60px;}
 	}
 
 	ul li a { width:100%;}
+	
+	#copyr {    width: 53%; font-size:8px;}
 	}
 
 }
@@ -3325,10 +3949,19 @@ a.nav-toggle { display: block;    height: 60px;    line-height: 60px; width:60px
 	header {
 	    width: 100%;
 	    height: 72px;
+
+	    nav {
+		    width: 97%;
+		    
+		    position: fixed;
+		    top: 1%;
+		}
 	        
-		h1#logo { width: 78%;  }
-		h1#logo-blog {  width: 78%;  }
+		h1#logo {width: 90%;  margin:0 0 0 10%;  }
+		h1#logo-blog { width: 90%;  margin:0 0 0 10%;   }
+		h2 {margin:0 0 0 10%; }
 		p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
+
 		
 	}
 
@@ -3345,9 +3978,11 @@ a.nav-toggle { display: block;    height: 60px;    line-height: 60px; width:60px
 					p {   font-size: 0.75em; line-height:2.2em;}
 					.read_more { font-size: 0.75em; height:35px; line-height: 28px; width:17.9652349%;}
 					.read_more:hover {font-size: 0.8em; line-height: 27px;  }
-					.sd-content ul li { width: 7%;}
+					.sd-content ul li { width: 8%;}
 					
 				}
+				.navi .right a {    width: 79%;}
+				.navi .right a:hover {    width: 79%;}
 			}
 		}
 
@@ -3398,36 +4033,97 @@ a.nav-toggle { display: block;    height: 60px;    line-height: 60px; width:60px
 			
 		} 
 
-		#photocontainer {
+		/*Photocontainer*/
+		#photocontainer{
+												
+			h3{ margin:5px 0px 5px 0px;}
+					
+			.content{
+		
+				top: 10px;
+				padding: 0px;
+				
+				.menuSwitch {   
+					text-align: left;   
+					margin: 1.3% 0;    
+					width: 100%;
+					ul {    padding-left: 0; height: auto;}
+					ul li {  padding: 10px 20px; font-size: 0.8em; margin-right: 1%; }
+					ul li:hover {  } 
+					ul li.cat-active {  }
+				}
 
-			button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+				
+				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+					 			 
+					
+					width: 48.5%;/*new*/ 
+					height: 359px;
+					 
+					
+					&:hover{cursor:pointer; } 
 
-			button:hover{color:$color4; background-color:$color1; width:100%;}
+					.text-btn{
+						 
+						height:15%; 
+						width:100%; 
+						 
+						@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+						font-size:1em;
+						color:$color1; 
+						
+						
+						&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+					}
 
-			.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% 2%; height: 365px; width: 44.5%;}
-			.content .menuSwitch ul li {  margin:0.5%; font-size: 0.85em;}
+					.showcase-img{
+			    				    		
+			    		img{ }
+			    		img:hover {}
 
-			.showcase-img {     
-				margin: 0;
-				.showcase-content{ 
-    		  
-		    		width: 100%;/*new*/  
-		    		padding:3%; 
-		    		
-		    		h1{text-indent:0px; font-size:0.85em;  }
-		    		p{font-size:0.75em; }
-		    		.links {
-		    			height:30px; 
-		    			margin:0; 
-		    			display:inline-block;
-		    			width:100%;
-		    			a{ height:30px; font-size: 0.65em;  margin:1% 1% 1% 0; }
-		    			a:hover{ color:$color4; background-color:$color1; font-size:0.65em; }
-		    			a.fancybox { font-size:0.70em; margin:1% 1% 1% 0; padding:0.5%; }
-		    		}
+			    		.showcase-content{ 
+				    		
+				    		display:none;
+				 			    		 
+				    		padding:3%; 
+				   			    		 
+				    					    		
+				    		h1{ font-size:0.9em; line-height: 30px;  height:30px;}
+				    		p{
+				    			font-size:0.80em; 
+				    			
+				    			margin:0; 
+				    			
+				    			line-height:1.6em;
+				    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+				    				font-size:1.4em;
+				    							    				
+				    				height:30px;
+				    				line-height:30px;
+				    			}
+				    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+				    				font-size:1.5em;
+				    				height:30px;
+				    				line-height:30px;
+				    				
+				    			}
+				    		}
+
+				    		.links {
+				    			height:30px; 
+				    						    			
+				    			width:100%;
+				    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+				    			a:hover{  }
+				    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+				    			a.fancybox:hover{ }
+				    		}  
+			    		}
+					}
 				}
 			}
 		}
+		/*end*/
 
 		#contactform { 
 							
@@ -3443,7 +4139,7 @@ a.nav-toggle { display: block;    height: 60px;    line-height: 60px; width:60px
 
 
 .fixed-side-social-container{display:none;}
-a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
+a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; }
 
 
 #wrapper_container header {
@@ -3451,15 +4147,14 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	height:72px;
 
 	
-	h1#logo { font-size: 1.7em; height: 47px;  line-height: 57px;text-align:left; }
-	h1#logo-blog { font-size: 1.7em;  height: 47px;  line-height: 57px;text-align:left; }
-	h2{  display:block; float:none;  width:78%; font-size:0.65em; text-align:left;}
+	h1#logo {margin:0 0 0 12%;  font-size: 1.6em; height: 40px;  line-height: 40px;text-align:left; width:87%; }
+	h1#logo-blog {margin:0 0 0 12%;  font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; width:87%; }
+	h2{ margin:0 0 0 12%;  display:block; font-size:0.60em; text-align:left;width:87%; }
 	
 	/*Mobile-Navigation*/
 	nav {
 
 		width: 98%;
-		left: 1%; 
 		position:fixed;
 		top:1%;
 
@@ -3482,7 +4177,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	h1 {  width: 100%; font-size:1.15em; }
 	h2 { font-size: 1em; text-indent: 0px; width: 100%;  margin: 1em auto;}
 
-	p {   line-height: 1.8em; font-size:0.8em;}
+	p {   line-height: 1.92em; font-size:0.8em;}
 
 	.skills{ font-size:0.8em; }
 	.skills > li {  font-size: 1em;}
@@ -3522,7 +4217,9 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 
 				.read_more {margin-left: 1%; width:19.9652%; font-size:0.75em;}
 				.read_more:hover { font-size:0.80em;}
-				.sd-content ul li { width: 8%;}
+				.sd-content {    width: 75%;}
+				.sd-title {   width: 25%;}
+				.sd-content ul li { width: 11%;}
 				
 				p.right { width: 10%;}
 			}
@@ -3533,6 +4230,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 		.contact-wide {
 
 			h2{text-align:center;}
+			h3#comments { font-size: 0.8em;}
 
 			.commentlist{
 
@@ -3541,7 +4239,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 					.comment-author {
 						width: 45%;
 						img { width: 27%;}
-						b.fn {  font-size: 0.8em;  padding: 0 3.5%;}
+						b.fn{ padding: 0 3%; font-size:0.75em;}
+						span.says{font-size:0.75em;}
 					}
 					.comment-metadata {  font-size:0.9em;}
 
@@ -3653,40 +4352,97 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	}
 	
 	
-	#photocontainer {
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{ width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 400px;  width: 59.5%; display:block;}
-		.content .menuSwitch {margin: 20px 0px 20px 0px;}
-		.content .menuSwitch ul li { margin:0.5%; font-size: 0.75em;  padding: 15px 17px;}
+	/*Photocontainer*/
+	#photocontainer{
+											
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
 			
-		.showcase-img {    
-			float: none;   
-			display: inline-block;   
-			width: 100%;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.9em;  }
-	    		p{font-size:0.80em; }
-	    		.links {
-	    			height:25px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.70em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.7em; }
-	    			a.fancybox { font-size:0.70em; padding:0.5%; }
-	    			
-	    		}
-    		}
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 10px; font-size: 0.8em; margin-right: 0; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
+
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 				
+				width: 61.5%;
+				height: 380px;
+				margin: 5% auto;
+				display: block;
+				 				
+				&:hover{cursor:pointer; } 
+
+				.text-btn{
+					 
+					height:15%; 
+					width:100%; 
+					 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    					    		
+			    		h1{ font-size:0.9em; line-height: 30px;  height:30px;}
+			    		p{
+			    			font-size:0.80em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{  width: 49%;  height:30px;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
 	}
+	/*end*/
 		
 	#contactform { 
 		 
@@ -3708,7 +4464,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 
 		display:block; 
 		float:right;
-		 margin:1%;  
+		   
 		 padding-left:0px;
 		 width: 50%;
 
@@ -3721,7 +4477,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	}
 	
 	ul{
-		width:45%; 
+		width:35%; 
 		margin:0; 
 		padding:4px; 
 		li{ text-indent:0px;  height:23%;} 
@@ -3729,7 +4485,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 		li a:hover{  margin:0; font-size:0.80em; line-height:1.7em;}
 
 	}
-	
+
+	#copyr {   width: 60%;   font-size: 8px;}
 
 }
 
@@ -3740,23 +4497,22 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 @media (max-width : 414px)  {
 
 .fixed-side-social-container{display:none;}
-a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
+a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; }
 
 
 #wrapper_container header {
 
-	height:72px;
+	height:60px;
 
 	
-	h1#logo { font-size: 1.5em; height: 47px;  line-height: 57px;text-align:left; }
-	h1#logo-blog { font-size: 1.4em;  height: 47px;  line-height: 57px;text-align:left; }
-	h2{  display:block; float:none;  width:78%; font-size:0.65em; text-align:left;}
+	h1#logo {margin: 0 0 0 14%; font-size: 1.4em; height: 40px;  line-height: 40px;text-align:left; width: 85%; height: 30px; line-height: 30px;}
+	h1#logo-blog {margin: 0 0 0 14%; font-size: 1.4em;  height: 40px;  line-height: 40px;text-align:left;width: 85%; height: 30px; line-height: 30px;}
+	h2{ margin: 0 0 0 14%;  font-size:0.60em; text-align:left;width: 85%;}
 	
 	/*Mobile-Navigation*/
 	nav {
 
 		width: 98%;
-		left: 1%; 
 		position:fixed;
 		top:1%;
 
@@ -3779,7 +4535,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	h1 {  width: 100%; font-size:1.15em; }
 	h2 { font-size: 1em; text-indent: 0px; width: 100%;  margin: 1em auto;}
 
-	p {   line-height: 1.8em; font-size:0.8em;}
+	p {   line-height: 1.9em; font-size:0.8em;}
 
 	.skills{ font-size:0.8em; }
 	.skills > li {  font-size: 1em;}
@@ -3818,7 +4574,9 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 
 				.read_more {margin-left: 1%; width:19.9652%; font-size:0.75em;}
 				.read_more:hover { font-size:0.80em;}
-				.sd-content ul li { width: 11%}
+				.sd-title {    font-size:0.75em;}
+				.sd-content ul li { width: 12%}
+				footer.byline p.right {width: 15%;}
 				
 				p.right { width: 10%;}
 			}
@@ -3829,6 +4587,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 		.contact-wide {
 
 			h2{text-align:center;}
+			h3#comments {    font-size: 0.75em;}
 
 			.commentlist{
 
@@ -3836,9 +4595,11 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 
 					.comment-author {
 						img { width: 27%;}
-						b.fn { font-size: 0.8em;  padding: 0 3.5%;}
+						b.fn { font-size: 0.70em;  padding: 0 2%;}
+						
+						span.says{font-size:0.70em;}
 					}
-					.comment-metadata { font-size:0.9em;}
+					.comment-metadata { font-size:0.8em;}
 				}
 			}
 
@@ -3942,40 +4703,97 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	}
 	
 	
-	#photocontainer {
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{ width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 5% auto; height: 380px; width: 65.5%; display:block;}
-		.content .menuSwitch {margin: 20px 0px 20px 0px;}
-		.content .menuSwitch ul li { margin:0.5%; font-size: 0.7em;     padding: 10px 13px;}
+	/*Photocontainer*/
+	#photocontainer{
+											
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
 			
-		.showcase-img {    
-			float: none;   
-			display: inline-block;   
-			width: 100%;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.9em;  }
-	    		p{font-size:0.80em; }
-	    		.links {
-	    			height:25px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.70em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.7em; }
-	    			a.fancybox { font-size:0.70em; padding:0.5%; }
-	    			
-	    		}
-    		}
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 10px; font-size: 0.8em; margin-right: 0; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
+
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 				
+				width: 71.5%;
+				height: 380px;
+				margin: 5% auto;
+				display: block;
+				 				
+				&:hover{cursor:pointer; } 
+
+				.text-btn{
+					 
+					height:15%; 
+					width:100%; 
+					 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    					    		
+			    		h1{ font-size:0.9em; line-height: 35px;  height:35px;}
+			    		p{
+			    			font-size:0.80em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height:1.6em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{  font-size: 0.75em;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.75em;margin:1% 1% 1% 0; padding:0.5%; }
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
 	}
+	/*end*/
 		
 	#contactform { 
 		 
@@ -3998,7 +4816,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 
 		display:block; 
 		float:right;
-		 margin:1%;  
+		   
 		 padding-left:0px;
 		 width: 50%;
 
@@ -4011,7 +4829,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 	}
 	
 	ul{
-		width:45%; 
+		width: 35%; 
 		margin:0; 
 		padding:4px; 
 		li{ text-indent:0px;  height:23%;} 
@@ -4030,26 +4848,26 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px;}
 @media (max-width : 375px)  {
 
 
-a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; margin-top: 14%;}
+a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; }
 .fixed-side-social-container{display:none;}
 
 #wrapper_container {  width: 98%;}
 
 #wrapper_container header {
 	
-	height:72px;
-	h1#logo { font-size: 1.40em; width: 80%; height: 47px;  line-height: 57px;  text-align:left;   }
-	h1#logo-blog { font-size: 1.30em; width: 80%; height: 47px;  line-height: 57px; text-align:left;  }
-	h2{ text-align:left;  font-size:0.60em; width:72%;  display:block; float:none; }
+	height:60px;
+	h1#logo { font-size: 1.35em; width: 80%;    text-align:left; margin: 0 0 0 17%;  height: 30px; line-height: 30px;}
+	h1#logo-blog { font-size: 1.35em; width: 80%; text-align:left; margin: 0 0 0 17%; height: 30px; line-height: 30px;}
+	h2{  font-size:0.60em;  margin: 0 0 0 17%; }
 
 	
 	/*Mobile-Navigation*/
 	nav{
 
 		width: 98%;
-		left: 1%; 
 		position:fixed;
-		top: 0.5%;
+		top: 1%;
+		
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
 		#mobile-nav li{ height:50px; list-style:none; width: 100%; font-size:0.8em; margin:0 1px 0 0; padding:0; display:block; }
@@ -4085,7 +4903,8 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; margin-t
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.8em; width:24%; }
-				form.searchform div input[type="submit"] {    font-size: 0.85em;}
+				form.searchform div input[type="submit"] {    font-size: 0.75em;}
+				form.searchform div input[type="submit"]:hover { font-size: 0.85em;}
 			}
 			.widget ul li a {   width: 100%;  font-size: 0.85em;}
 			.widget ul li a:hover { font-size: 0.90em;}
@@ -4115,11 +4934,13 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; margin-t
 				header.byline a { font-size: 0.90em;}
 
 				footer.byline {
-					p.right {font-size: 1em;  width:10%;  margin: 0;}
+					p.right {font-size: 1em;  width:12%;  margin: 0;}
 				}
-				.read_more {  line-height: 25px;  font-size: 0.8em; width:24.9652349%;}
-				.read_more:hover {  line-height: 25px;  font-size: 0.85em; }
-				.sd-content ul li { width: 11%}
+				.read_more {  line-height: 31px;  font-size: 0.8em; width:24.9652349%;}
+				.read_more:hover {  line-height: 31px;  font-size: 0.85em; }
+				.sd-content {    width: 75%;}
+				.sd-title {    font-size: 0.70em;}
+				.sd-content ul li { width: 13%}
 				
 				p {font-size:0.75em;}
 				p.right {    width: 10%;}
@@ -4133,13 +4954,18 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; margin-t
 			margin: 0px;
 			h2{text-align:center;}
 
-			h3#comments{font-size:0.8em;}
+			h3#comments{font-size:0.75em;}
+
+			.navigation h1 { height: 55px; line-height: 55px;   font-size: 1.1em; height:60px;}
 
 			.commentlist {
 				.comment-meta {
-
-					.comment-author img {   width: 28%;}
-					.comment-metadata {   font-size: 0.8em;}
+					.comment-author{
+						b.fn{ padding: 0 1%; font-size:0.70em;}
+						span.says{font-size:0.70em;}
+						img {   width: 28%;}
+					}
+					.comment-metadata {   font-size: 0.70em;}
 				}
 			}
 
@@ -4243,47 +5069,97 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; margin-t
 	.webskills li { font-size: 0.75em;   text-align: left; height:40px; line-height:40px;}
 
 	
-	#photocontainer { 
-
-		width: 98%; 
-		margin:auto; 
-		padding:0;
-		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
-
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
-
-		button:hover{color:$color4; background-color:$color1; width:100%;}
-
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 380px; width: 71.5%; display:block;}
-		.content .menuSwitch { text-align: left;  margin: 20px 0 ;  width: 100%;}
-		.content .menuSwitch ul li {  padding: 10px 10px; font-size: 0.70em;}
+	/*Photocontainer*/
+	#photocontainer{
+											
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
 			
-		.showcase-img { 
-			margin: 0;   
-			float: left;
-			width: 100%; 
-			display:inline-block;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.9em;  }
-	    		p{font-size:0.80em; }
-	    		.links {
-	    			height:25px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.80em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.80em; }
-	    			a.fancybox { font-size:0.80em; padding:0.5%; }
-	    			
-	    		}
-    		}
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 10px; font-size: 0.7em; margin-right: 0; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
+
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 				
+				width: 77.5%;
+				height: 380px;
+				margin: 5% auto;
+				display: block;
+				 				
+				&:hover{cursor:pointer; } 
+
+				.text-btn{
+					 
+					height:15%; 
+					width:100%; 
+					 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
+
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    					    		
+			    		h1{ font-size:0.9em; line-height: 30px;  height:30px;}
+			    		p{
+			    			font-size:0.80em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height: 1.9em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
-		
 	}
+	/*end*/
 
 }
 
@@ -4293,7 +5169,7 @@ a.nav-toggle {display:block; height:60px; line-height:60px; width:60px; margin-t
 
 		display:block; 
 		float:right; 
-		margin:1%;  
+		  
 		padding-left:0px;
 		width: 50%;
 		.social-icon{ width:23%; margin-left:2%;}
@@ -4325,22 +5201,19 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 
 #wrapper_container header{
 	
-
-	height:72px;
-	
-	
-	h1#logo { font-size: 1.3em; width: 85%;    }
-	h1#logo-blog { font-size: 1.2em; width: 85%; }
-	h2{   font-size:0.60em; width: 72%; display:block; float:none; }
+	height:60px;
+		
+	h1#logo { font-size: 1.30em; width: 85%;    }
+	h1#logo-blog { font-size: 1.3em; width: 85%; }
+	h2{   font-size:0.60em;display:block; float:none; }
 
 	/*Mobile-Navigation*/
 	nav {
 
 		width: 98%;
-		left: 1%; 
 		position:fixed;
-		top: 0.5%;
-
+		top: 1%;
+		
 		#mobile-nav {display:block;}
 		nav-collapse ul{ display:block; float:left;}
 		#mobile-nav li{ height:60px; font-size:0.8em; list-style:none; width: 100%;  margin:0 1px 0 0; padding:0; display:block; }
@@ -4388,7 +5261,8 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.8em; width:24%; line-height:30px; }
-				form.searchform div input[type="submit"] {    font-size: 0.85em;}
+				form.searchform div input[type="submit"] {    font-size: 0.9em;}
+				form.searchform div input[type="submit"]:hover { font-size: 1em;}
 			}
 		}
 	}
@@ -4409,18 +5283,24 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 				ul{line-height: 1.5em; text-indent:0; width:98%; }
 				ul li{  width: 100%; margin:0px; font-size:0.75em; }
 				ul li a{  margin-left:0px;}
-				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.80em; color:$color8; }
+				p{ width:98%; margin:1% 0% 1% 1%;font-size:0.75em; color:$color8; }
 
 				header.byline {   font-size: 0.75em; height: 65px;  }
 				footer.byline {    font-size: 0.80em;    line-height: 1.5em;}
 				.read_more {width:27.9652349%; margin: 0% 0px 0px 1%; }
 				.read_more:hover { margin: 0% 0px 0px 1%; }
 				p.right {    width: 10%; font-size:1.6em;}
-				.sd-content ul li { width: 11%}
+				.sd-content {    width: 72%;}
+
+				.sd-title {    width: 27%;}
+				.sd-content ul li { width: 14%}
 				
 			}
 
 			 .navi .right {  font-size:0.75em;  width: 100%;}
+			 .navi .right a {    width: 71%;}
+			 .navi .right a:hover{    width: 71%;}
+			 .navi .right span i {    width: 8%;}
 
 		}
 		
@@ -4519,46 +5399,97 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 		}
 	}
 
-	#photocontainer { 
+	/*Photocontainer*/
+	#photocontainer{
+											
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
+			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 10px; font-size: 0.7em; margin-right: 0; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
 
-		width: 98%; 
-		margin:auto; 
-		padding:0;
-		h2 { font-size: 1.5em;    width: 98%;    margin: 1%;}
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 				
+				width: 77.5%;
+				height: 380px;
+				margin: 5% auto;
+				display: block;
+				 				
+				&:hover{cursor:pointer; } 
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+				.text-btn{
+					 
+					height:15%; 
+					width:100%; 
+					 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
 
-		button:hover{color:$color4; background-color:$color1; width:100%;}
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 365px; width: 71.5%; display:block;}
-		.content .menuSwitch { text-align: left; margin: 20px 0;   width: 100%; }
-		.content .menuSwitch ul li { font-size: 0.7em; padding: 15px 9px;}
-		
-		.showcase-img { 
-			margin: 0;   
-			float: left;     
-			width: 100%; 
-			display:inline-block;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.90em; line-height:25px; height:25px; }
-	    		p{font-size: 0.75em; }
-	    		.links {
-	    			height:25px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.80em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.80em; }
-	    			a.fancybox { font-size:0.80em; padding:0.5%; }
-	    			
-	    		}
-    		}
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    					    		
+			    		h1{ font-size:0.9em; line-height: 30px;  height:30px;}
+			    		p{
+			    			font-size:0.80em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height: 1.9em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.80em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.80em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
+			}
 		}
 	}
+	/*end*/
 		
 	#contactform {  
 		width: 96%;
@@ -4586,21 +5517,20 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 #wrapper_container header{
 
 	width:100%;
-	height: 72px;
+	height: 60px;
 		
-	h1#logo { font-size: 1.15em;  width: 80%; }
-	h1#logo-blog { font-size: 1.15em;   width: 80%; }
-	h2 {    font-size:0.55em; display:block; float:none; width: 70%;}
+	h1#logo { font-size: 1.15em; margin: 0 0 0 19%;}
+	h1#logo-blog { font-size: 1.15em;  margin: 0 0 0 19%; }
+	h2 {    font-size:0.55em; display:block; float:none; margin: 0 0 0 19%;}
 
 	
 	/*Mobile-Navigation*/
 	nav {
 
 		width: 98%;
-		left: 1%; 
 		position:fixed;
-		top: 0.5%;
-
+		top: 1%;
+		
 		#mobile-nav {display:block;}
 		nav nav-collapse ul{ display:block; float:left;}
 		#mobile-nav li{ height:50px; list-style:none; width: 100%; margin:0 1px 0 0; padding:0; display:block; }
@@ -4631,7 +5561,8 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 				margin:3% auto; 
 				form.searchform div input {    width: 50%;}
 				form.searchform div label { font-size: 0.75em; width:24%; line-height:30px; }
-				form.searchform div input[type="submit"] {    font-size: 0.85em;}
+				form.searchform div input[type="submit"] {    font-size: 0.9em;}
+				form.searchform div input[type="submit"]:hover { font-size: 1em;}
 			}
 			.widget ul li a {   width: 100%;  font-size: 0.85em;}
 		}
@@ -4657,15 +5588,22 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 				h2 { font-size: 0.85em; line-height: 35px;height: 35px;}
 				.read_more { font-size:0.8em; width:30.9652349%;}
 				.read_more:hover{ font-size:0.85em; }
-				.sd-content ul li { width: 11%}	
+				.sd-content {    width: 71%;}
+				.sd-title { font-size: 0.65em;  width: 29%;}
+				.sd-content ul li { width: 16%;}	
 				
 
 			}
+			.navi .right a {  width: 66%;}
+			.navi .right a:hover {  width: 66%;}
 		}
 		
 		.contact-wide {
 			h2 { font-size:1.1em;}
-			h3#reply-title {   width: 94%; text-indent:0px; font-size:0.75em;}
+			h3#reply-title {  text-indent:0px; font-size:0.65em;}
+			.commentlist .comment-meta .comment-metadata {    font-size: 0.60em;}
+			.commentlist .comment-meta .comment-author b.fn {  font-size: 0.60em;  padding: 0 0.5%;}
+			.commentlist .comment-meta .comment-author span.says {    font-size: 0.60em;}
 			.comment-form .form-submit {  margin: 2% 0;   font-size: 0.75em;}
 			#comments {font-size:0.75em; width:100%;}
 		} 
@@ -4745,40 +5683,97 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 		}			
 	}
 
-	#photocontainer {
+	/*Photocontainer*/
+	#photocontainer{
+											
+		h3{ margin:5px 0px 5px 0px;}
+				
+		.content{
+	
+			top: 10px;
+			padding: 0px;
+			
+			.menuSwitch {   
+				text-align: left;   
+				margin: 1.3% 0;    
+				width: 100%;
+				ul {    padding-left: 0; height: auto;}
+				ul li {  padding: 10px 10px; font-size: 0.7em; margin-right: 0; }
+				ul li:hover {  } 
+				ul li.cat-active {  }
+			}
 
-		button.text-btn-a, button.text-btn-b, button.text-btn-c, button.text-btn-d, button.text-btn-e, button.text-btn-f, button.text-btn-g ,button.text-btn-h, button.text-btn-i{font-size:0.90em; width:100%; text-align:center;}
+			
+			#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
+				 			 				
+				width: 81.5%;
+				height: 340px;
+				margin: 7% auto;
+				display: block;
+				 				
+				&:hover{cursor:pointer; } 
 
-		button:hover{ width:100%;}
+				.text-btn{
+					 
+					height:15%; 
+					width:100%; 
+					 
+					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); 
+					font-size:1em;
+					color:$color1; 
+					
+					
+					&:hover{color:$color4; background-color:$color1; cursor:pointer; z-index:2;}
+				}
 
-		.content #panel, #panel2,#panel3,#panel4,#panel5,#panel6,#panel7{ margin: 1% auto; height: 370px; width: 81.5%; display:block;}
-		.content .menuSwitch { text-align: left;  margin: 20px 0; width: 100%; font-size:1em;}
-		.content .menuSwitch ul li { font-size: 0.65em; padding: 15px 6px;}
-		.showcase-img { 
-			margin: 0;   
-			float: left;     
-			width: 100%; 
-			display:inline-block;
-			.showcase-content{ 
-	    		  
-	    		width: 100%;/*new*/  
-	    		padding:3%; 
-	    		
-	    		h1{text-indent:0px; font-size:0.90em;  }
-	    		p{font-size:0.80em; }
-	    		.links {
-	    			height:25px; 
-	    			margin:0; 
-	    			display:inline-block;
-	    			width:100%;
-	    			a{  font-size: 0.80em;  }
-	    			a:hover{ color:$color4; background-color:$color1; font-size:0.80em; }
-	    			a.fancybox { font-size:0.80em; padding:0.5%; }
-	    			
-	    		}
+				.showcase-img{
+		    				    		
+		    		img{ }
+		    		img:hover {}
+
+		    		.showcase-content{ 
+			    		
+			    		display:none;
+			 			    		 
+			    		padding:3%; 
+			   			    		 
+			    					    		
+			    		h1{ font-size:0.85em; line-height: 25px;  height:25px;}
+			    		p{
+			    			font-size:0.75em; 
+			    			
+			    			margin:0; 
+			    			
+			    			line-height: 1.9em;
+			    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
+			    				font-size:1.4em;
+			    							    				
+			    				height:30px;
+			    				line-height:30px;
+			    			}
+			    			span.fa-desktop:hover, span.fa-tablet:hover, span.fa-mobile:hover{
+			    				font-size:1.5em;
+			    				height:30px;
+			    				line-height:30px;
+			    				
+			    			}
+			    		}
+
+			    		.links {
+			    			height:30px; 
+			    						    			
+			    			width:100%;
+			    			a{ height:30px;   width: 49%;  letter-spacing:0.1em;  font-size: 0.75em; line-height:30px;  padding:0.5%; margin:1% 0% 1% 1%; }
+			    			a:hover{  }
+			    			a.fancybox { font-size:0.75em; height:30px;line-height: 30px; margin:1% 1% 1% 0; padding:0.5%; width: 49%;}
+			    			a.fancybox:hover{ }
+			    		}  
+		    		}
+				}
 			}
 		}
-	} 
+	}
+	/*end*/
 	
 	#contactform p {   font-size:0.95em; }
 	#contactform input[type="submit"] {  width: 28.9652%; font-size: 1.2em;}
@@ -4792,7 +5787,7 @@ a.nav-toggle { height:60px; line-height:60px; width:60px; }
 
 		display:block; 
 		float:right; 
-		margin:1%;  
+		  
 		padding-left:0px;
 		width: 62%;
 		.social-icon{ width: 23%; margin-left: 2%;}
