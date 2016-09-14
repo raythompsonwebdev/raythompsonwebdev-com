@@ -23,9 +23,14 @@ if ( have_posts() ) : ?>
 <article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-<header class="byline"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></header>
+<header class="byline">
+
+	<span class="bylineauthor"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></span>
+
+</header>
 
 <article class="entry group">
+
 <?php the_excerpt(); ?>
 
  <p class="postmetadata"><?php

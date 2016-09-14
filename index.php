@@ -15,8 +15,8 @@
 <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
 <header class="byline"> 
-Date: <?php the_date('jS F Y') ?> at <?php the_time('g:i a'); ?> <br />
-Written by <?php the_author() ?> </header>
+<span class="bylineauthor"> Posted by <?php the_author_posts_link(); ?> on <?php the_date('jS F Y');?> at <?php the_time('g:i a'); ?></span>
+</header>
 
 
 
@@ -29,13 +29,15 @@ Written by <?php the_author() ?> </header>
 <br/>
 
 <footer class="byline">
-Posted in <?php the_category(', ') ?> | <?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?>
 
 <p class='right'>
 <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
 </p>
 
-<br/>
+<span class="bylinecat">Posted in <?php the_category(', ') ?> </span>
+<span class="bylinecat"><?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></span>
+
+
 <p><?php $lastmodified = get_the_modified_time('U'); $posted = get_the_time('U');
 			if ($lastmodified > $posted) {
 			echo "Edited " . human_time_diff(get_the_time('U'),	get_the_modified_time('U')) . " later";
@@ -43,11 +45,16 @@ Posted in <?php the_category(', ') ?> | <?php comments_popup_link('No Comments &
 </p>
 
 </footer>
+
+
 </article>
 <?php endwhile; ?>
 <?php else: ?>
 
 <h1>No posts to show</h1>
+
+<figure class="featuredImage"><?php the_post_thumbnail('featured-image');?></figure>
+
 <p>Sorry, we got nada. Nothing. Bupkis. Zippo. Diddly-squat. Sorry to disappoint.</p>
 <?php endif; ?>	
 

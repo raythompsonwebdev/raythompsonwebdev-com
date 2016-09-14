@@ -13,8 +13,8 @@
 <h1><?php the_title(); ?></h1>
 
 <header class="byline">
- Posted by <?php the_author_posts_link(); ?> on <span class="date"><?php the_date('l F d, Y'); ?></span><br/>
- Posted in: <?php the_category(', '); ?> | <?php the_tags('Tagged with: ', ', '); ?>
+<span class="bylineauthor"> Posted by <?php the_author_posts_link(); ?> on <?php the_date('l F d, Y'); ?></span> 
+<span class="bylinecat">Posted in: <?php the_category(', '); ?></span> <span class="bylinetag"><?php the_tags('Tagged with: ', ', '); ?></span>
 </header><!--end of by line-->
 
 
@@ -28,7 +28,10 @@
 
 <footer class="byline">
 
-<p class='right'><a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%')?></a></p>
+<p class='right'>
+	<a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%')?></a>
+</p>
+
 </footer>
 
 <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
