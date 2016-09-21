@@ -20,7 +20,7 @@
 
 
 
-<a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>";>
+<a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>;">
 <figure class="featuredImage"><?php the_post_thumbnail('featured-image');?></figure>
 </a>
 

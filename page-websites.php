@@ -18,9 +18,9 @@ Template Name: Websites
 
 <section id="main-content" class="group" role="main">
 
-<h1>Websites</h1>
+<h1>My Work</h1>
 
-<p>These are websites I have built over the past four years. websites These are I have built over the past four years These are I have built over the past four years These are I have built over the past four years These are I have built over the past four years.</p>
+
 <p></p>
 <div class="clear"></div>
 <div class="clear"></div>
@@ -184,7 +184,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-travel-agency-home-page-small.jpg"  alt="Travel Agency website home page" >
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-travel-agency-website-small.png"  alt="Travel Agency website home page" >
 
   <figcaption class="showcase-content showcase-f">
   <h1>Website:</h1>

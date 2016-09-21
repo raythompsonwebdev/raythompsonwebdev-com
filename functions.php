@@ -36,7 +36,8 @@ function my_theme_setup(){
 function wpb_add_google_fonts() {
 	 
 
-wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Cairo|PT+Sans:400,700|Raleway:400,500,600,700|Roboto:400,500,700|Source+Sans+Pro|Titillium+Web:400,600,700', false );
+wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
+
 
 }
 	 

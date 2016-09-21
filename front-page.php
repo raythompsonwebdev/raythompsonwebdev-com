@@ -14,7 +14,7 @@
 
 
 <section id="main-content" class="group" role="main">
-<h1>Need a website built?</h1>
+<h1>Need a unique website or web application?</h1>
 <br/>
 <div class="front_panel"> 
 
@@ -43,26 +43,22 @@
 
 <article class="intro-text">
 
-<h1>Welcome to raythompsonwebdev.com&#46;</h1>
+<h1>web development from raythompsonwebdev.com&#46;</h1>
 
-<p>Professional web development services for local sole traders, microbusinessess and small businesses wishing to connect with their customers on-line and build their online presence.</p>
+<p>Hi, I am a web developer based in Hackney East London specialising in the development of WordPress websites, customising website templates and responsive website development.</p>
 <hr>
-<p>Whether you need a web site or web application to gain leads, accept on-line payments or to provide great customer service to existing and potential clients, I can help you create a great online experience for your users. I create:</p>
+<p>Whether you need an website for your business or for own personal use, I can help you acheive your on-line goals with a website or web application specifically tailored. I can also provide help with</p>
 
 
 <ul class="webskills">
-<li><span class="fa fa-desktop"></span>Customised Website Templates&#46;</li>
-<li><span class="fa fa-wordpress"></span>Customised Wordpress Themes&#46;</li>
-<li><span class="fa fa-mobile"></span>Mobile Web Applications&#46;</li>
+<li><span class="fa fa-desktop"></span>Website Optimisation&#46;</li>
+<li><span class="fa fa-wordpress"></span>Search Engine Optimisation&#46;</li>
+<li><span class="fa fa-mobile"></span>Digital and Content Marketing&#46;</li>
 </ul>
 
-<p>Each of my websites have been built with the focus on simplicity, usability & accessibility for all users. I using clean semantic code, follow standards compliancies and validate code to ensure website can be found by search engines and viewed in most modern Browsers.  </p>
+<p>From idea to launch of website, I can help you create your website with the focus on simplicity, usability & accessibility for all users. I use clean semantic code, follow web standards compliancies and validate code to ensure your websites can be found by search engines and viewed within in most modern Browsers.  </p>
 <hr>
-<p>All websites are fully optimised to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#46; </p>
-
-
-
-
+<p>To find out more please got to <a href="">contact page</a> and hit me up or got to social media links at bottom of page. Holla&#46; </p>
 </article>
 
 </div>
@@ -92,9 +88,9 @@
 </section>
 <article class="intro-text">
 
-<h1>Interested in learning web development &#63;</h1>
+<h1>Is learning how to build websites hard?&#63;</h1>
 
-<p>Check out the content I will be providing through blog posts including short tutorials&#44; curated articles&#44; lists and all sorts of useful web development and web design related resources I have created or come across on my journey to improving my own skills&#46;</p>
+<p>Yes, it can be; however,In my opinion I think if you enjoy learning and sharing what you have learnt to help others, you can reach your goals and overcome any intense learning phase. Through regular blogs I will be sharing stuff I have learnt about web design and web development through the tons of web development and web design related resources I have come across on my journey to improving my own knowledge&#46;</p>
 <ul class="webskills">
 	<li><span class="fa fa-file-video-o"></span>Video Tutorials&#44;</li>
 	<li><span class="fa fa-file-picture-o"></span>Infographics&#44;</li>
@@ -103,9 +99,9 @@
 	
 </ul>
 
-<p>All different types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building commercial websites and web applications&#46; </p>
+<p>All different types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own web realted work as it has helped with mine&#44; particularly if you have an interest in learning or just beginning to learn about building commercial websites and web applications&#46; </p>
 <hr>
-<p>Also check me out on Social Media&#44; I like sharing relevant content&#46; 
+<p>Also share blogs on Social Media&#44; I like sharing relevant content&#46; 
 All differnt types of resources I hope you will find useful in helping increase your own understanding
 </p>
 

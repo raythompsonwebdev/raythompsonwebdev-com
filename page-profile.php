@@ -57,7 +57,7 @@ Template Name: Profile
     </article>
   </article><!--end of prof cont-->
 
- <article class="intro-text">
+<article class="intro-text">
 
     <h1>I build websites and love web development&#46;</h1>
 
