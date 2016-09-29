@@ -17,9 +17,9 @@ Template Name: Profile
 <div class="front_panel"><!--front panel-->
 
   
-<article class="prof_cont">
+<section class="prof_cont">
 
-    <h2>Coding Skill Level</h2>
+    <h1>Web Development Coding Skill Levels</h1>
 
     <article id="chart">
 
@@ -54,8 +54,12 @@ Template Name: Profile
         <li><div data-percentage="70" class="bar"></div><span>MySQL</span></li>
 
       </ul>
+
+
     </article>
-  </article><!--end of prof cont-->
+
+
+  </section><!--end of prof cont-->
 
 <article class="intro-text">
 
@@ -82,7 +86,9 @@ Template Name: Profile
 
 
 <article class="prof_cont "><!--prof cont-->
-<h2>Web Development Training Received </h2>
+
+<h1>Web Development Training Received </h1>
+
 <article class="hero-slider"><!-- #hero-slider -->
 <ul>
   <li><a href="#" rel="#panel-1" class="active" >Photoshop</a></li>
@@ -91,7 +97,7 @@ Template Name: Profile
   <li><a href="#" rel="#panel-4" >Web Design L2</a></li>
   <li><a href="#" rel="#panel-5" >Web Design L3</a></li>
   <li><a href="#" rel="#panel-6" >Udemy</a></li>
-  <li><a href="#" rel="#panel-7" >Web Apps </a></li>
+  <li><a href="#" rel="#panel-7" >Mobile Web Applications</a></li>
   <li><a href="#" rel="#panel-8" >Digital Marketing</a></li>
   <li><a href="#" rel="#panel-9" >Content Marketing</a></li>
 </ul>
