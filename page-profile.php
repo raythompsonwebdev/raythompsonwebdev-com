@@ -63,14 +63,14 @@ Template Name: Profile
 
     <p>My name is Raymond Thompson&#44; I live in Hackney East London&#44; love 90&#39;s Reagge Dancehall and Hip Hop and I love web design and web development, particularly front-end development, search engine optimisation and responsive web development&#46;<br/></p>
 <hr>
-      <p>When I am not working at my day job I spend my free time learning web design and web development and experimenting with code, building <a href="http://localhost/wordpress/websites-2/">websites</a> &#46;</p>
+      <p>When I am not working at my day job as Customeer Advisor I spend my free time learning web design and web development and experimenting with code, building <a href="http://localhost/wordpress/websites-2/">websites</a> &#46;</p>
 <hr>
 
         <p>I learnt how to build websites late 2011 after attending a 7 month long part-time City &#38; Guilds website design course at the East London Advanced Technology Training Center in East London&#46;<br/></p>
 <hr>
           <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding techniques and coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql&#44; Javascript and other web design tools&#46;</p>
 <hr>
-         <p> I also learnt about planning&#44; researching&#44; wireframeing&#44; prototyping&#44; building&#44; testing and launching a commercial website&#46; Including creating animations&#44; graphics images and simple copy for the web. I also worked as part of a team of fellow students to create websites for a few madeup and real clients as part of the exam&#46; <br/>Go to git hub to see code</p> 
+         <p> I also learnt about planning&#44; researching&#44; wireframeing&#44; prototyping&#44; building&#44; testing and launching a commercial website&#46; I worked as part of a team of fellow students on a projects to create websites for a few madeup and real clients as part of the exam&#46; <br/>Go to git hub to see code</p> 
 
   </article>
 
@@ -294,13 +294,13 @@ Template Name: Profile
 </article><!--end of prof cont-->
 
   <article class="intro-text">
-  <p>I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; I can create custom wordpress themes templates from scratch. I can also customise existing wordpress themes and frameworks as well as set up wordpress and get it running securely on a server&#46;</p>
+  <p>I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; </p>
 <hr>
-<p>I have developed my web design and web development knowledge through a combination of watching online video tutorials and courses&#44; listening to related podcasts and attending a couple of local Meet&#45;ups, Events and web projects&#46;</p>
+<p>I watch a lots online video tutorials and courses&#44; listen to related podcasts, attend local Meet&#45;ups and events occasionally, work on personal web projects and help with website issues for anyone who wants advice&#46;</p>
 <hr>
-  <p>I very much like to coding websites from scratch and using frameworks like Foundation&#44; Bootstrap&#44; Wordpress&#44; Jquery Mobile. I use build tools Grunt and Sass and Version control system GitHub to help manage workflow and organising code&#46;<br/>I work well either on my own or within a team and love to be involved in projects from start to finish.</p>
+  <p>I very much like to coding websites from scratch, but depending on urgency of project will use frameworks like Foundation&#44; Bootstrap. I use build tools Grunt and Sass and Version control system GitHub to help manage workflow and organising code&#46;<br/>I work well either on my own or within a team and love to be involved in projects from start to finish.</p>
 <hr>
-  <p>For more information about services I provide or a qoute on a website or web application please feel free to contact me. You can either contact me via social media or go to <a href="">Contact Page</a> and complete contact form. You will receive acknowlegment your query has been received. I will respond to any queries within 24 hours&#46;</p>
+  <p>I am currently available to help work on any project or path to becoming a full-time web developer. You can either contact me via social media or go to <a href="">Contact Page</a> and complete contact form. You will receive acknowlegment your query has been received. I will respond to any queries within 24 hours&#46;</p>
 
    <p>.</p> 
   <br/>

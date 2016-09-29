@@ -14,7 +14,7 @@
 
 
 <section id="main-content" class="group" role="main">
-<h1>Need a unique website or web application?</h1>
+<h1>I love Web Development</h1>
 <br/>
 <div class="front_panel"> 
 
@@ -43,11 +43,11 @@
 
 <article class="intro-text">
 
-<h1>web development from raythompsonwebdev.com&#46;</h1>
+<h1>I love web development&#46;</h1>
 
 <p>Hi, I am a web developer based in Hackney East London specialising in the development of WordPress websites, customising website templates and responsive website development.</p>
 <hr>
-<p>Whether you need an website for your business or for own personal use, I can help you acheive your on-line goals with a website or web application specifically tailored. I can also provide help with</p>
+<p>Whether its a website needed for your business or for  your own personal use, I can help acheive your on-line goals with a website or web application specifically tailored for your needs. I can also provide help with</p>
 
 
 <ul class="webskills">
@@ -56,9 +56,9 @@
 <li><span class="fa fa-mobile"></span>Digital and Content Marketing&#46;</li>
 </ul>
 
-<p>From idea to launch of website, I can help you create your website with the focus on simplicity, usability & accessibility for all users. I use clean semantic code, follow web standards compliancies and validate code to ensure your websites can be found by search engines and viewed within in most modern Browsers.  </p>
+<p>From idea to launch , I can help you create your website with the focus on simplicity, usability & accessibility for all users. using clean semantic code and following web standards compliancies I can ensure your websites can be found by search engines and viewed within in most modern Browsers.  </p>
 <hr>
-<p>To find out more please got to <a href="">contact page</a> and hit me up or got to social media links at bottom of page. Holla&#46; </p>
+<p>If you have any questions please got to <a href="">contact page</a> and hit me up or got to social media links at bottom of page. Holla&#46; </p>
 </article>
 
 </div>
@@ -88,9 +88,9 @@
 </section>
 <article class="intro-text">
 
-<h1>Is learning how to build websites hard?&#63;</h1>
+<h1>Interested in web design and web development&#63;</h1>
 
-<p>Yes, it can be; however,In my opinion I think if you enjoy learning and sharing what you have learnt to help others, you can reach your goals and overcome any intense learning phase. Through regular blogs I will be sharing stuff I have learnt about web design and web development through the tons of web development and web design related resources I have come across on my journey to improving my own knowledge&#46;</p>
+<p>Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like</p>
 <ul class="webskills">
 	<li><span class="fa fa-file-video-o"></span>Video Tutorials&#44;</li>
 	<li><span class="fa fa-file-picture-o"></span>Infographics&#44;</li>
@@ -99,7 +99,7 @@
 	
 </ul>
 
-<p>All different types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own web realted work as it has helped with mine&#44; particularly if you have an interest in learning or just beginning to learn about building commercial websites and web applications&#46; </p>
+<p>All different types of resources I hope you will find useful in helping increase your own understanding of web design and web development as it has helped with mine&#44; particularly if you have an interest in devloping a career as a web developer building commercial websites, web applications and other web stuff&#46; </p>
 <hr>
 <p>Also share blogs on Social Media&#44; I like sharing relevant content&#46; 
 All differnt types of resources I hope you will find useful in helping increase your own understanding
