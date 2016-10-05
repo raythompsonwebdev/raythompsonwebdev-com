@@ -6,6 +6,27 @@
   -o-transform-origin: $transformerorigin;
 }
 
+@mixin transforming-things( $transforming-things) {
+  transform: $transforming-things;
+  -webkit-transform: $transforming-things;
+  -moz-transform: $transforming-things;
+  -o-transform: $transforming-things;
+}
+
+@mixin transitioner( $transitioner) {
+-webkit-transition: $transitioner;
+-moz-transition: $transitioner;
+-o-transition: $transitioner;
+transition: $transitioner;
+}
+
+@mixin anime-mode( $anime-mode) {
+  animation-name: $anime-mode;
+  -webkit-animation-name: $anime-mode;
+  -moz-animation-name: $anime-mode;
+  -o-animation-name: $anime-mode;
+}
+
 @mixin Timing( $timing) {
   animation-timing-function: $timing;
   -webkit-animation-timing-function: $timing;
@@ -27,21 +48,6 @@
   -o-animation-duration: $durationer;
 }
 
-
-@mixin transforming-things( $transforming-things...) {
-  transform: $transforming-things;
-  -webkit-transform: $transforming-things;
-  -moz-transform: $transforming-things;
-  -o-transform: $transforming-things;
-}
-
-@mixin transitioner( $transitioner...) {
--webkit-transition: $transitioner;
--moz-transition: $transitioner;
--o-transition: $transitioner;
-transition: $transitioner;
-}
-
 @mixin directions( $directions) {
   animation-direction: $directions;
   -webkit-animation-direction: $directions;
@@ -55,6 +61,14 @@ transition: $transitioner;
   -moz-animation-fill-mode: $fillermode;
   -o-animation-fill-mode: $fillermode;
 }
+
+@mixin iteration-mode( $iteration-mode) {
+  animation-iteration-count: $iteration-mode;
+  -webkit-animation-iteration-count: $iteration-mode;
+  -moz-animation-iteration-count: $iteration-mode;
+  -o-animation-iteration-count: $iteration-mode;
+}
+
 
 @mixin keyframes( $name ) {
 
@@ -74,7 +88,7 @@ transition: $transitioner;
 
 
 
-#layer4 {
+g#layer6 {
 
   position:absolute;
   opacity: 1;
@@ -83,269 +97,188 @@ transition: $transitioner;
 }
 
 
-#layer1 {
+g#layer9 {
+
   position:absolute;
-  
   opacity: 0;
-  left:600px;
-
-  animation: desk-slide ;
-  -webkit-animation: desk-slide;
-  -moz-animation: desk-slide;
-  -o-animation: desk-slide;
+  left:-600px;
+    
+  @include transformerorigin( 50% 50% );
 
 
-  @include transformerorigin( 275px 270px);
+  @include anime-mode( desk-slide);
+  @include durationer( 4s );
   @include Timing( ease-in-out );
-  @include delayer( 3s );
-  @include durationer( 1s );
-  @include transforming-things( translateX(600px) );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 0.5s );
   @include fillermode( both );
+
+  @include transforming-things ( translateX(-600px));
+  @include transitioner( all 0.1s ease-in-out);
   
    
 }
 
 @include keyframes( desk-slide ) {
+  
+  20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
 
+  75%{left: 0; opacity:1; @include transforming-things ( rotate(360deg) translateX(0px) scale(1)); }
 
-  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }
-    
+  100%{ left: 0; opacity:0; @include transforming-things ( rotate(-2700deg) translateX(0px) scale(0)); }
+  
 }
 
-#layer7 {
+g#layer8 {
   position:absolute;
-  
   opacity: 0;
-  left:-600px;
-
-  animation: mob-slide ;
-  -webkit-animation: mob-slide;
-  -moz-animation: mob-slide;
-  -o-animation: mob-slide;
-
-
-  @include transformerorigin( 275px 270px);
-  @include Timing( ease-in-out );
-  @include delayer( 6s );
-  @include durationer( 1s );
-  @include transforming-things( translateX(-600px) );
-  @include fillermode( both );
+  left:600px;
   
+  @include transformerorigin( 50% 50% );
+  /*@include anime-mode( mob-slide 5s ease-in-out 1 forwards 7s both);*/
+
+  @include anime-mode( mob-slide);
+  @include durationer( 3s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 5s );
+  @include fillermode( both );
+
+  @include transforming-things ( translateX(600px));
+  @include transitioner( all 0.1s ease-in-out);
    
 }
 
 @include keyframes( mob-slide ) {
 
+  20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
 
-  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }
+  75%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
+
+  100%{ left: 0; opacity:0; @include transforming-things ( translateX(0px) scale(10)); }
     
 }
 
 
 
-#layer3 {
+g#layer10 {
   position:absolute;
-  
   opacity: 0;
-  left:600px;
-  animation: wordpress-cover-slide ;
-  -webkit-animation: wordpress-cover-slide;
-  -moz-animation: wordpress-cover-slide;
-  -o-animation: wordpress-cover-slide;
-
-  @include transformerorigin( 275px 270px );
-  @include Timing( ease-in-out );
-  @include delayer( 9s );
-  @include durationer( 1s );
-  @include transforming-things( translateX(600px) );
-  @include fillermode( both );
+  left:-600px;
+   
+  @include transformerorigin( 50% 50% );
+  /*@include anime-mode( wordpress-cover-slide 5s ease-in-out 1 forwards 12s both);*/
   
-    
+  @include anime-mode( wordpress-cover-slide);
+  @include durationer( 3s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 9s );
+  @include fillermode( both );
+
+  @include transforming-things ( translateX(-600px));
+  @include transitioner( all 0.1s ease-in-out);
+      
 }
 
 @include keyframes( wordpress-cover-slide ) {
-  
-  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }  
+    
+  20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
+
+  50%{ left: 0; opacity:1; @include transforming-things ( translateX(70px) ); }
+
+  100%{ left: 0; opacity:1; @include transforming-things ( translateY(-600px) ); }
+    
 }
 
 
-#layer5 {
+g#layer11 {
   position:absolute;
-  
   opacity: 0;
-  left:-600px;
-  animation: web-design-slide ;
-  -webkit-animation: web-design-slide ;
-  -moz-animation: web-design-slide ;
-  -o-animation: web-design-slide ;
-
-  @include transformerorigin( 275px 270px );
+  left:600px;
+ 
+  @include transformerorigin( 50% 50% );
+  
+  @include anime-mode( web-design-slide);
+  @include durationer( 3s );
   @include Timing( ease-in-out );
-  @include delayer( 12s );
-  @include durationer( 1s );
-  @include transforming-things( translateX(-600px) );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 12.5s );
   @include fillermode( both );
 
-
+  @include transforming-things ( translateX(600px));
+  @include transitioner( all 0.1s ease-in-out);
     
 }
 
 @include keyframes( web-design-slide  ) {
   
-  100% { left: 0;  opacity:1; @include transforming-things( translateX(0px) ); }  
+  20%{ @include transforming-things (  translateX(0px) scale(1)); opacity:1; left: 0;}
+
+  50%{ left: 0; opacity:1; @include transforming-things (rotate(360deg) translateX(0px) scale(1) ); }
+
+  100%{ left: 0; opacity:0; @include transforming-things (rotate(2700deg) translateX(0px) scale(0) ); }
+      
 }
 
-#g4408{
+g#layer12{
 
   position:absolute;
   opacity: 0;
-  animation: web-design-btn ;
-  -webkit-animation: web-design-btn ;
-  -moz-animation: web-design-btn ;
-  -o-animation: web-design-btn ;
-
+ 
+    
   @include transformerorigin( 277.2356px 165.47476px );
-  @include Timing( ease-in-out ); 
-  @include delayer( 14s );
-  @include durationer( 1s );
-  @include transitioner(all 0.5s ease-in-out);
+  /*@include anime-mode( web-design-btn 4s ease-in-out 1 forwards 21s both);*/
+
+  @include anime-mode( web-design-btn);
+  @include durationer( 1.5s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 15.5s );
   @include fillermode( both );
-  
+  @include transforming-things ( translateX(600px));
+  @include transitioner( all 0.1s ease-in-out);
   
 }
 
 @include keyframes( web-design-btn  ) {
   
-  100% { opacity:1; @include transforming-things( scale (1) ); }  
+ 
+  
+  100%{ left: 0; opacity: 1; @include transforming-things ( translateX(0px)); }
+    
 }
+
+#g4408{ 
+
   
-#g4408:hover{ @include transforming-things ( scale(1.1) ); @include transitioner( all 0.1s ease-in-out);  }
-/*#g4408:hover{ @include transforming-things ( scale(0.9) );}*/ 
 
-
-/*Coding standards~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-g#Layer_5{
-
-  position:absolute;
-  opacity: 0;
-  
-  animation: jquerypic ;
-  -webkit-animation: jquerypic ;
-  -moz-animation: jquerypic ;
-  -o-animation: jquerypic ;
-
-  @include transformerorigin(0px 0px);
+  @include transformerorigin( 50% 50% );
+  @include anime-mode( web-design-btn-ft);
+  @include durationer( 1s );
   @include Timing( ease-in-out );
-  @include delayer( 2s );
-  @include durationer( 2s );
-  @include transitioner(all 0.5s ease-in-out);
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 17.5s );
   @include fillermode( both );
+  @include transitioner( all 0.1s ease-in-out);
+  
+
 }
 
-@include keyframes( jquerypic ) {
-      
-  100% { left: 0;  opacity:1; }
-}
-
-g#Layer_5:hover{ }
-
-
-
-g#Layer_2{
-
-    position:absolute;
-    opacity: 0;
-
-    animation: phppic ;
-    -webkit-animation: phppic ;
-    -moz-animation: phppic ;
-    -o-animation: phppic ;
-
-    @include transformerorigin( 0 0 );
+@include keyframes( web-design-btn-ft  ) {
     
-    @include Timing( ease-in-out );
-    @include delayer( 4s );
-    @include durationer( 2s );
-    @include transitioner(all 0.5s ease-in-out);
-    @include fillermode( both );
-}
-
-@include keyframes( phppic ) {
-  0%{ left:0; opacity:0; } 
-  100% { left: 0;  opacity:1; }
-}
-
-g#g5138{
-
-    position:absolute;
-    opacity: 0;
-
-    animation: htmlpic ;
-    -webkit-animation: htmlpic ;
-    -moz-animation: htmlpic ;
-    -o-animation: phtmlpic ;
-
-    @include transformerorigin( 0 0 );
+  50%{  @include transforming-things ( scaleX(1.1)); }
+  100%{   @include transforming-things ( scaleX(1));}
     
-    @include Timing( ease-in-out );
-    @include delayer( 6s );
-    @include durationer( 2s );
-    @include transitioner(all 0.5s ease-in-out);
-    @include fillermode( both );
-}
-
-@include keyframes( htmlpic ) {
-  0%{ left:0; opacity:0; } 
-  100% { left: 0;  opacity:1; }
 }
 
 
-g#g5228{ 
+/*:hover{ @include transforming-things ( scale(0.9) );}*/ 
 
-    position:absolute;
-    opacity: 0;
-
-    animation: csspic ;
-    -webkit-animation: csspic ;
-    -moz-animation: csspic ;
-    -o-animation: csspic ;
-
-    @include transformerorigin( 0 0 );
-    
-    @include Timing( ease-in-out );
-    @include delayer( 8s );
-    @include durationer( 2s );
-    @include transitioner(all 0.5s ease-in-out);
-    @include fillermode( both );
-}
-
-@include keyframes( csspic ) {
-    
-    100% { left: 0;  opacity:1; }
-}
-
-
-g#g5296{
-
-    position:absolute;
-    opacity: 0;
-
-     animation: wordpic ;
-    -webkit-animation: wordpic ;
-    -moz-animation: wordpic ;
-    -o-animation: wordpic ;
-
-    @include transformerorigin( 0 0 );
-    @include Timing( ease-in-out );
-    @include delayer( 10s );
-    @include durationer( 2s );
-    @include transitioner(all 0.5s ease-in-out);
-    @include fillermode( both );
-}
-
-@include keyframes( wordpic ) {
-    
-    100% { left: 0;  opacity:1; }
-}
-
-
+#g4408:hover{@include transitioner( all 0.1s ease-in-out);  @include transforming-things ( scaleX(1.1));}

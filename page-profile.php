@@ -64,17 +64,19 @@ Template Name: Profile
 <article class="intro-text">
 
     <h1>I build websites and love web development&#46;</h1>
+    <figure class="introimg"><img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/raythompwebdesign_youngraymondthompson.jpg" alt="images of different screen sizes">
+</figure>
 
-    <p>My name is Raymond Thompson&#44; I live in Hackney East London&#44; love 90&#39;s Reagge Dancehall and Hip Hop and I love web design and web development, particularly front-end development, search engine optimisation and responsive web development&#46;<br/></p>
+    <p>My name is Raymond Thompson&#44; I reside in Hackney East London&#44; I have a passion for web design and web development, particularly front-end development, search engine optimisation and responsive web development&#46;<br/></p>
 <hr>
-      <p>When I am not working at my day job as Customeer Advisor I spend my free time learning web design and web development and experimenting with code, building <a href="http://localhost/wordpress/websites-2/">websites</a> &#46;</p>
+      <p>When I am not working at my day job as Customer Service Advisor I spend most of my free time learning web design and web development and experimenting with code, building <strong><a href="http://localhost/wordpress/websites-2/">websites</a></strong> and other<strong> <a href="http://localhost/wordpress/blog/">web related stuff</a> </strong> &#46;</p>
 <hr>
 
-        <p>I learnt how to build websites late 2011 after attending a 7 month long part-time City &#38; Guilds website design course at the East London Advanced Technology Training Center in East London&#46;<br/></p>
+        <p>I discovered web development late 2011 after attending a 7 month long part-time City &#38; Guilds website design course at the East London Advanced Technology Training Center in East London&#46;<br/></p>
 <hr>
-          <p>At ELATT I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding techniques and coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql&#44; Javascript and other web design tools&#46;</p>
+          <p>Reluctant at first, I soon discovered I enjoyed learning how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
 <hr>
-         <p> I also learnt about planning&#44; researching&#44; wireframeing&#44; prototyping&#44; building&#44; testing and launching a commercial website&#46; I worked as part of a team of fellow students on a projects to create websites for a few madeup and real clients as part of the exam&#46; <br/>Go to git hub to see code</p> 
+         <p> I learnt how to plan and research&#44; wireframe&#44; build&#44; test and launch a commercial website as part of a team of fellow students working on various web development projects including websites for a few madeup clients and small involvements in real world projects for ELATT's in-house web service 260Web&#46; </p> 
 
   </article>
 
@@ -300,13 +302,15 @@ Template Name: Profile
 </article><!--end of prof cont-->
 
   <article class="intro-text">
-  <p>I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; </p>
+  <p>Over the last few years I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP and Ajax&#46; </p>
 <hr>
-<p>I watch a lots online video tutorials and courses&#44; listen to related podcasts, attend local Meet&#45;ups and events occasionally, work on personal web projects and help with website issues for anyone who wants advice&#46;</p>
+<p>With the constant changes in website development I try to keep up as much as I can by watching online video tutorials&#44; listening to related podcasts, attending local Meet&#45;ups and events occasionally to network with others working within the website development field to ask for advice and tips on improving my own website development skills&#46;</p>
 <hr>
-  <p>I very much like to coding websites from scratch, but depending on urgency of project will use frameworks like Foundation&#44; Bootstrap. I use build tools Grunt and Sass and Version control system GitHub to help manage workflow and organising code&#46;<br/>I work well either on my own or within a team and love to be involved in projects from start to finish.</p>
+  <p>I very much like to coding from scratch and using frameworks like Foundation or Bootstrap or customer management systems like Wordpress when creating websites or web applications. Tools like Grunt and Sass and Version control system GitHub help me manage and organise my workflow&#46;</p>
+
+  <p>I work well either on my own or within a team and would love to be involved in projects from start to finish and offer assistance in any way to help create your own websites or web applications.</p>
 <hr>
-  <p>I am currently available to help work on any project or path to becoming a full-time web developer. You can either contact me via social media or go to <a href="">Contact Page</a> and complete contact form. You will receive acknowlegment your query has been received. I will respond to any queries within 24 hours&#46;</p>
+  <p>I am currently free to assist on any small scale web development project. You can either contact me via social media or go to <strong><a href="">Contact Page</a></strong> and complete contact form. I will respond to any queries within 24 hours&#46;</p>
 
    <p>.</p> 
   <br/>

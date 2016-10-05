@@ -12,6 +12,22 @@ Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
 */
 
+/*
+$colorone:f5e00b-yellow
+$colortwo:f29715-orange
+$colorthree:b2d159-green
+$colorfour:070707-black
+$colorfive:e9ebc3-light green
+$colorsix:fed32f-light orange
+$colorseven:accc51-green-light
+
+
+
+
+
+
+
+*/
 
 $color1:#062351;
 $color2:#CCD3DE;
@@ -303,8 +319,8 @@ body{
 		/* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
 		ul{ list-style: none; }
 		ul li a:hover{color:$color4;   }
-		br{display:none;}
-		
+		br{display:block;}
+		hr.blog-spacer{ margin:2% auto; width:80%; color:$color2; outline:0; border:0;}
 
 
 		/*Right-side*/
@@ -796,7 +812,7 @@ body{
 		.front_panel{
 			width:100%;
 			display:block;
-			height: 529px;/*new*/
+			height: 545px;/*new*/
 	    	min-height: 529px;/*new*/
 			margin:0;
 			padding:0;
@@ -812,7 +828,7 @@ body{
 				height:auto;
 				h1{font-size:1em; margin: 0 ; padding:0; color:$color1; letter-spacing:0.1em;  width:100%; display:block; height: auto; line-height: 24px;font-weight: 600; display:block;}
 				p{ width:99%; line-height: 1.69em; font-size:0.9em; font-weight:100; margin:0 ;letter-spacing: 0.095em;padding-top: 0.5%; }
-				.introimg {width:15.729257%;float:left; margin:0% 1% 1% 10%; height:auto; display:inline-block; }
+				.introimg {width:12.729257%;float:left; margin:1% 1% 0% 0%; height:auto; display:inline-block; }
 				hr{background-color:$color2; height:1px; margin: 1.4% auto; width:40%; outline: none; border: none;}
 				.webskills{ 
 					list-style: none; 
@@ -1146,14 +1162,15 @@ body{
 				    		height: 100%; 
 				    		top: 0px;
 
-				    		h1{text-indent:0px; font-size:0.95em; width:100%; color:$color1; line-height: 25px; width:100%; margin:0; height:25px;}
+				    		h1{text-indent:0px; font-size:0.90em; width:100%; color:$color1; line-height: 20px; width:100%; margin:0; height:20px;}
 				    		p{
 				    			font-size:0.85em; 
 				    			width:100%; 
-				    			margin:1% 0; 
+				    			margin:0 0 1% 0; 
 				    			letter-spacing:0.05em; 
 				    			line-height:1.6em;
 				    			color:$color1;
+
 				    			span.fa-desktop, span.fa-tablet, span.fa-mobile{
 				    				font-size:1.5em;
 				    				width:33%;
@@ -1240,6 +1257,7 @@ body{
 			.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 2em;  line-height:1.5em;}
 			.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 2em;  line-height:1.5em;}
 		}
+#copyr {color:$color1; text-align:right; font-size:10px; width:48%; margin:0; float:right; display:inline-block; padding-top:4%;}
 
 		ul{
 			width:45%; 
@@ -1266,7 +1284,6 @@ body{
 	}
 	
 }/*wrapper*/
-#copyr {color:$color1; text-align:right; font-size:10px; width:40%; margin:0; float:right; display:inline-block; padding-top:4%;}
 
 
 @media (max-width : 1024px) and (orientation : landscape)  {
@@ -1559,7 +1576,7 @@ body{
 	    		p { width: 99%; margin: 0 ; font-size: 0.83em; line-height: 1.85em; letter-spacing: 0.08em;}
 	    		h1 { font-size: 0.9em; }
 
-	    		.introimg {   width: 14%;}
+	    		.introimg {   width: 17%;}
 	    		hr { margin: 1.65% auto;  width: 35%;}
 
 	    		.webskills{
@@ -1870,7 +1887,7 @@ body{
 				width: 49%;
 				h1 {  font-size: 0.90em; height:auto;}
 				p {  font-size: 0.80em;  letter-spacing: 0.08em; line-height: 1.8em;}
-				.introimg {    width: 13%;}
+				.introimg {    width: 17%;}
 				hr{background-color:$color2; height:1px; margin: 2.5% auto; width:40%; }
 				
 				.webskills{
@@ -2563,7 +2580,7 @@ body{
 				h1 { font-size: 1em;}
 				h2 { font-size: 0.95em;}
 				p { font-size: 0.85em; letter-spacing: 0.09em; line-height: 1.85em;}
-				.introimg { width: 13%;}
+				.introimg { width: 8%;}
 				hr {margin: 2.4% auto;}
 				.webskills{ 
 					padding: 1.9% 0;
@@ -3081,8 +3098,8 @@ body{
 				padding: 0;
 				h1 {    font-size: 0.95em;}
 				h2{font-size:1em; margin: 0; padding:0; width:100%; text-indent:0px; height:auto; line-height:30px;}
-				p{ width:100%; margin: 0; font-size:0.85em; }
-				.introimg {    width: 14%;}
+				p{ width:100%; margin: 0; font-size:0.85em;line-height: 1.95em; }
+				.introimg {    width: 9%;}
 			}
 			
 			.frontpage_cont { 
@@ -3588,8 +3605,8 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 				
 				h1 { font-size: 1em;margin: 0;}
 	    		h2{ margin: 0; padding:0; color:$color1; width:100%;  text-indent:0px; height:auto; font-size: 0.95em;}
-	    		p{ width:100%; font-size:0.80em; line-height:1.8em; }
-	    		.introimg {  margin: 0 1% 0 0; width: 10%; float: right;}
+	    		p{ width:100%; font-size:0.80em;  }
+	    		.introimg {   width: 11%; }
 	    		hr {margin: 2% auto;}
 	    	}
 			
@@ -4057,8 +4074,8 @@ a.nav-toggle { left: 0; }
 				padding: 0;
 				h1{font-size:0.95em; margin: 0 auto; padding:0; color:$color1; width:100%; }
 				h2{font-size:0.9em;}
-				p{ width:99%; margin: 0; font-size: 0.80em; letter-spacing: 0.1em; line-height: 1.7em; }
-				.introimg {  float: left; margin: 0 1% 0 0;  width: 9%; height: auto;}
+				p{ width:99%; margin: 0; font-size: 0.80em; letter-spacing: 0.1em;  }
+				.introimg {  float: left; width: 10%; height: auto;}
 				hr {margin: 2% auto;}
 				.webskills { 
 					padding: 3.2% 0;
@@ -4427,7 +4444,7 @@ a.nav-toggle { left: 0; }
 				h1 {  font-size: 0.95em;}
 				h2{font-size:0.9em;}
 				p{margin:0;  width: 100%; font-size: 0.85em;}
-				.introimg {   width: 14%;}
+				.introimg {   width: 16%;}
 				hr {  margin: 3% auto;}
 				.webskills li { text-align: left;}
 
@@ -5000,7 +5017,7 @@ a.nav-toggle { left: 0; }
 				float: left;  
 				display: block; 
 				padding: 0;
-				.introimg {   width: 12%;}
+				.introimg {   width: 15%;}
 				h1 { font-size: 0.85em;}
 				p {font-size:0.8em;}
 				.webskills li{font-size:0.75em;}
@@ -5898,7 +5915,7 @@ a.nav-toggle { left: 0; }
 				h1 {font-size: 0.85em;}
 				h2{font-size:0.80em; }
 				p{font-size: 0.75em; letter-spacing: 0.15em; line-height: 2em;}
-				.introimg{width: 21%;margin: 1% 1% 0 0;}
+				.introimg{width: 16%; }
 			} 
 
 			.frontpage_cont { 
@@ -6314,7 +6331,7 @@ a.nav-toggle { left: 0; }
 				h1 {font-size: 0.85em; }
 				h2{ font-size:0.83em;}
 				p{ width:99%;font-size: 0.80em;  }
-				.introimg { width: 22%;}
+				.introimg { width: 18%;}
 				.webskills{
 					li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { width: 7.5%;font-size: 1.5em; }
 				}
@@ -6684,7 +6701,7 @@ a.nav-toggle { left: 0; }
 				h1{font-size: 0.75em;}
 				h2 {  font-size: 0.73em;}
 				p {   width: 100%;   margin: 0; letter-spacing: 0.2em; font-size: 0.70em; }
-				.introimg {  float: left;  margin: 3% 2% 0px 0px;   width: 24%; }
+				.introimg {  width: 18%;}
 				.webskills{
 					li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { width: 8.5%;font-size: 1.5em; }
 				}

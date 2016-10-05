@@ -5,7 +5,6 @@
 <footer>
 
 
-
 <div class="socialpics">
 
 <a class="social-icon linkedin-icon" href="https://uk.linkedin.com/pub/raymond-thompson/b8/2b7/1b4" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
@@ -31,115 +30,9 @@ $dt = time();
 </p>
 
 </footer> 
-
  
 
 </div>
-
-
-
-<script >
-
-jQuery(document).ready(function($){
-
- $('.fancybox').fancybox({
-      openEffect  : 'elastic',
-      closeEffect : 'elastic'
-
-    });
-
-});
-
-</script>
-
-
-
-<script >
-
-jQuery(document).ready(function($){
-
-  $("#chart #bars li .bar").each( function( key, bar ) {
-
-    var percentage = $(this).data('percentage');
-
-    $(this).animate({
-
-    'height' : percentage + '%'
-
-    }, 1000);
-
-  });
-
-});
-
-</script>
-
-
-<script >
-
-jQuery(document).ready(function($){
-
-  $('.hero-slider ul a').click(function() {
-
-   //reset all the items
-
-    $('.customBlock ul a').removeClass('active');
-
-    //set current item as active
-
-    $(this).addClass('active'); 
-
-     //scroll it to the right position
-
-    $('.mask').scrollTo($(this).attr('rel'), 300);
-
-     //disable click event
-
-      return false;   
-
-  });
-
-});
-
-</script>
-
-
-<script >
-
-jQuery(document).ready(function($){
-  
-   
- $('.showcase-img').click(
-
-  function(){
-    
-      $(this).find('.showcase-content').slideToggle(1000 , 'easeInOutExpo' );
- 
-  })
-
-
- 
-});
-
-</script>
-
-
-
-<?php
-
-function mf_responsive_nav(){
-
-echo '<script>
-
-  var navigation = responsiveNav("#mobile-nav" );
-
-  </script>';
-
-}
-
-add_action('wp_footer', 'mf_responsive_nav');
-
-?>
 
 
 

@@ -18,7 +18,7 @@ Template Name: Websites
 
 <section id="main-content" class="group" role="main">
 
-<h1>My Work</h1>
+<h1>Websites</h1>
 
 
 <p></p>
@@ -62,9 +62,11 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>CampingAdvice.com</p>
   <h1>Description:</h1>
-  <p>Information portal website for those with little or no prior experience of camping and would like to learn more about camping&#46;</p>
+  <p>Camping website based on a website brief for a website project I had to complete for the City & Guilds Level 3 Web design exam. See full website brief on <strong><a href="">GitHub</a></strong>&#46;</p>
+  <p></p>
+
   <h1>Development Technologies:</h1>
-  <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP , MySQLi&#46;</p>
+  <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP &#44; MySQLi&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-campingadvice-home-page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
@@ -88,9 +90,9 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Mannering Music</p>
   <h1>Description:</h1>
-  <p>Website for company called Mannering Music who advertising Jazz, Hip Hop and Country music albums for sale from thier vast collection of classic and new music&#46;</p>
+  <p>Online music store website based on a website brief for a website project I had to complete for the City & Guilds Level 3 Web design exam. See full website brief on <strong><a href="">GitHub</a></strong>&#46;</p>
   <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46;</p>
+  <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46; Ajax&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-mannering-music-page-large.jpg" title="Mannering Music website home page">See Image</a>
@@ -113,9 +115,9 @@ Template Name: Websites
     <h1>Website:</h1>
     <p>Car Rental</p>
     <h1>Description:</h1>
-    <p>Car&#45;Rental booking website created from Photoshop template downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46; </p>
+    <p>Online Car&#45;Rental booking website created from Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46; </p>
     <h1>Development Technologies:</h1>
-    <p>Foundation 5&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#46; Javascript&#46;</p>
+    <p>Foundation 6&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#44; Javascript&#44;</p>
     <h1>Formats</h1>
     <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
     <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-car-rental-home-page-large.jpg" title="Car Rental website home page">See Image</a>
@@ -139,7 +141,7 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Shoestore</p>
   <h1>Description</h1>
-  <p>On-line store website built using Photoshop template design from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>. Website has a variety of Men&#44; Women and Childens shoes for sale&#46;</p>
+  <p>Online shoe store website built from Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>&#46;</p>
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Jquery&#46;</p>
   <h1>Formats</h1>
@@ -165,11 +167,11 @@ Template Name: Websites
     <h1>Website:</h1>
     <p>Greenfootprints.com</p>
     <h1>Description:</h1>
-    <p>Local recycling company &#34;GreenFootPrints&#34; website providing help and advice to the general public on recyling waste&#44; particularly household waste&#46;</p> 
+    <p>Website based on website project I built as a task for City & Guilds Level 2 Website exam. See full website brief on <strong><a href="">GitHub</a></strong>&#46;</p> 
     <h1>Development Technologies:</h1>
     <p>HTML5&#44; CSS3&#46; </p>
     <h1>Formats</h1>
-    <p><span class="fa fa-desktop" title="Desktop"></span></p>
+    <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p> 
     <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-greenfootprints-home-page-large.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
   </figcaption>
 
@@ -190,11 +192,11 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Travel Agency</p>
   <h1>Description:</h1>
-  <p>On-line booking website built using Photoshop template design from<a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
+  <p>Online booking website built using Photoshop template design downloaded from<a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Jquery&#46; </p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span></p>    
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>     
   <div class="links"><a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/www-travel-agency-page-large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
   </figcaption>
 
@@ -219,7 +221,7 @@ Template Name: Websites
 
   <h1>Description:</h1>
 
-  <p><strong>Mixtape Cover-</strong>Mixtape cover for an idea I had for a mixtape of various reggae artists over Wu-Tang Clan instrumentals like C.R.E.A.M. &#44; Triumph and more&#46; Mixtape coming soon to Mr Bullitan you tube channel&#46;</p>
+  <p><strong>Mixtape Cover-</strong>Mixtape cover for an idea I had for a mixtape of various reggae artists mixed over Wu-Tang Clan music Instrumentals like C.R.E.A.M. &#44; Triumph and more&#46;</p>
 
   <div class="links">
   <a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/09/portfolio-graphics-mixtape.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
@@ -243,11 +245,11 @@ Template Name: Websites
   <h1>Website:</h1>
   <p>Fitness Club</p>
   <h1>Description:</h1>
-  <p>Fitness Club Gym website built using Photoshop template design from<a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
+  <p>Fitness Club Gym website built using Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46;</p>
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Foundation 5&#46; </p>
   <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span></p> 
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>  
 
   <div class="links">
   <a class="fancybox" href="<?php echo home_url();?>/wordpresss/wp-content/uploads/2016/09/www-fitness-club-home-page-large.jpg"  title="">LINK</a>

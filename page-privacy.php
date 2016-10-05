@@ -27,9 +27,9 @@ Template Name: Privacy
 
 <p>Every effort has been made to ensure a safe and secure form to email submission process but advise users using such form to email processes that they do so at their own risk&#46;</p>
 
-<p>This website and its owners use any information submitted to provide you with further information about the products &#47; services they offer or to assist you in answering any questions or queries you may have submitted&#46; This includes using your details to subscribe you to any email newsletter program the website operates but only if this was made clear to you and your express permission was granted when submitting any form to email process&#46; </p>
+<p>This website and its owners use any information submitted to assist you in answering any questions or queries you may have submitted&#46; This includes using your details to subscribe you to any email newsletter program the website operates but only if this was made clear to you and your express permission was granted when submitting any form to email process&#46; </p>
 
-<p>Or whereby you the consumer have previously purchased from or enquired about purchasing from the company a product or service that the email newsletter relates to&#46; This is by no means an entire list of your user rights in regard to receiving email marketing material&#46; Your details are not passed on to any third parties&#46;</p>
+<p>Or whereby you the user have previously enquired about anything that the email newsletter relates to&#46; This is by no means an entire list of your user rights in regard to receiving email marketing material&#46; Your details are not passed on to any third parties&#46;</p>
 
 <br/>
 <h2>External Links</h2>
