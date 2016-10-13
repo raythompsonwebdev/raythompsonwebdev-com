@@ -7,9 +7,11 @@ Author: Raymond Thompson
 Author URI: http://www.raythompwebdesign.com
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: black, blue, white, custom-header, custom-background,editor-style
+Tags: custom-header, custom-background,editor-style
 Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
+Text Domain: raythompsonwebdev-com
+Domain Path: /language
 */
 
 /*
@@ -20,11 +22,6 @@ $colorfour:070707-black
 $colorfive:e9ebc3-light green
 $colorsix:fed32f-light orange
 $colorseven:accc51-green-light
-
-
-
-
-
 
 
 */
@@ -40,7 +37,7 @@ $color7:#575A5E;
 $color8:#000;
 $color9:#65686B;
 
-$FontStyle: 'Titillium Web','Kelson Sans', Verdana, sans-serif ;
+$FontStyle: 'Titillium Web','Kelson Sans', Verdana, helvetica, sans-serif ;
 
 
 @mixin Transition( $move... ) {
@@ -75,6 +72,16 @@ $FontStyle: 'Titillium Web','Kelson Sans', Verdana, sans-serif ;
       -o-box-shadow: $shadow;
       box-shadow: $shadow;
 }
+
+
+@mixin boredrady( $shadow... ) {
+      -webkit-border-radius: $shadow;
+      -moz-border-radius: $shadow;
+      -o-border-radius: $shadow;
+      border-radius: $shadow;
+}
+
+
 
 
 @charset "utf-8";
@@ -144,6 +151,51 @@ a{
 	&:active{color: $color5;}
 }
 
+/*WordPress Image Classes*/
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.alignright {
+	float: right;
+	}
+
+.alignleft {
+	float: left;
+	}
+
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #fff;
+	padding-top: 4px;
+	
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 0.85em;
+	line-height: 1.214em;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+
 
 h1, h2, h3 {font-family:($FontStyle); color:$color1; font-size:1em; font-weight:700; padding:0; margin:0;}
 
@@ -163,7 +215,6 @@ button:hover{color:$color1; background-color:$color2;}
 
 .cookie-notice-container{ font-size:0.9em; font-family:($FontStyle); }
 #cookie-notice .button.wp-default{ margin: 0 ; height:100%; list-style:none; background-color:$color1; width:23.9652349%; color:$color2; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); letter-spacing:0.1em; border:none; font-family:($FontStyle); font-size: 1em;border:none;}
-#wpadminbar{display:block; }
 
 .container {width:38.729257%;float:right; margin:0% 1% 1% 2%; }
 
@@ -208,15 +259,15 @@ body{
 		
 		h1#logo{
 			font-size:1.7em; 
-			width:40%; 
-			height:47px; 
+			width:42%; 
+			height:40px;  
 			margin:0 ; 
 			font-weight:bold; 
-			line-height:47px; 
+			line-height:40px;  
 			color:$color4;
 			text-shadow:2px 2px #b1bacd; 
-			   
-			letter-spacing: 0.01em;
+						   
+			letter-spacing: 0.05em;
 			span{height:100%; padding:0; margin:0; color:$color4; text-align:left; display:inline-block;}
 			span:last-of-type{height:100%; padding:0; margin:0; color:$color1; display:inline-block; }
 		}
@@ -224,13 +275,14 @@ body{
 		
 		h1#logo-blog{
 			font-size:1.7em; 
-			width:40%; 
-			height:47px; 
+			width:42%; 
+			height:40px; 
 			margin:0 ; 
 			font-weight:bold; 
-			line-height:47px; 
+			line-height:40px; 
 			color:$color4; 
 			text-shadow:2px 3px #c0c9dd;
+			letter-spacing:0.05em;
 					
 			span{height:100%; padding:0; margin:0; color:$color4; text-align:left;}
 			span:last-of-type{height:100%; padding:0; margin:0; color:$color1;}
@@ -263,6 +315,7 @@ body{
 				height:35px; 
 				width:100%;
 				.menu-main-container{
+					display:flex;
 					width:100%;
 					#menu-main{
 						width:100%; 
@@ -275,7 +328,7 @@ body{
 							margin:0; 
 							padding:0; 
 							text-align:center; 
-							display:inline-block;
+							flex-wrap:wrap;
 							a {
 								background-color: $color2; 
 								font-family:($FontStyle); 
@@ -312,10 +365,10 @@ body{
 		min-height:740px;
 		 
 		hgroup{margin:0; padding:0;}
-		h1{font-size:1.2em; padding:0; color:$color1; width:100%;line-height: 48px; font-weight:600; letter-spacing: 0.095em; margin:0;height:48px; clear:both;}
-		h2{font-size:1.1em;  margin:0;  padding:0; color:$color1;  width:100%; letter-spacing: 0.05em; font-weight:500;line-height: 48px; height: 48px;}
+		h1{font-size:1.15em; padding:0; color:$color1; width:100%;line-height: 40px; font-weight:600; letter-spacing: 0.095em; margin:0;height:40px; clear:both;}
+		h2{font-size:1.1em;  margin:0;  padding:0; color:$color1;  width:100%; letter-spacing: 0.05em; font-weight:500;line-height: 40px; height: 40px;}
 		h3{font-size:1em;  margin:0;  padding:0; color:$color1;  width:100%; letter-spacing: 0.05em; font-weight:500;line-height: 1.3em; height: 30px;}
-		p{font-size:0.90em;  font-weight:100; width:95%; letter-spacing: 0.095em;  line-height: 1.7em; clear:right; margin:0;}
+		p{font-size:0.90em;  font-weight:100; width:100%; letter-spacing: 0.10em;  line-height: 1.85em; clear:right; margin:0;}
 		/* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
 		ul{ list-style: none; }
 		ul li a:hover{color:$color4;   }
@@ -420,7 +473,7 @@ body{
 			.left-col{
 				margin-top: 0;
 
-				h1{font-size: 1.6em; margin: 1% 0;padding: 0px;letter-spacing: 0.05em; width: 100%; height:50px; line-height:50px;}
+				h1{font-size: 1.6em; margin: 1% 0;padding: 0px;letter-spacing: 0.05em; width: 100%; height:50px; line-height:50px; text-align:left;}
 				hr{background-color:$color1; height:1px; margin:5% auto; width:80%; }
 
 				/*Posts*/
@@ -430,12 +483,12 @@ body{
 					padding: 0 2%; 
 					width: 100%; 
 					margin:0 0 1% 0;
+					box-shadow:0 0.5px 0.5px 0px rgba(0,0,0,0.2);
 									
 					
-					h1{font-size: 1.45em; margin:1% auto; padding: 0;letter-spacing: 0.05em;width:100%; font-weight: 600; line-height: 48px;
-					height: 48px;}
-					h2{text-indent:0px; font-size: 1.35em;margin: 0 auto; padding: 0px;letter-spacing: 0.05em;width: 100%; background-color:$color4; color:$color1; line-height: 50px; height: 50px;}
-					h3{margin: 0.5em auto; height: 40px;line-height: 40px;font-size: 1.25em; text-indent:0%; width:100%;}
+					h1{font-size: 1.45em; margin:1% auto; padding: 0;letter-spacing: 0.05em;width:100%; font-weight: 600; line-height: 45px;height: 45px; text-align:left;}
+					h2{text-indent:0px; font-size: 1.35em;margin: 0 auto; padding: 0px;letter-spacing: 0.05em;width: 100%; background-color:$color4; color:$color1; line-height: 50px; height: 50px; text-align:left;}
+					h3{margin: 0.5em auto; height: 40px;line-height: 40px;font-size: 1.25em; text-indent:0%; width:100%; text-align:left;}
 					h3 a{ padding-left:0;  height:100%; }
 					ul{
 						line-height: 1.5em; 
@@ -468,7 +521,7 @@ body{
 					p{ width:100%; margin:0; font-size:0.9em; color:$color8; font-weight:100; line-height: 2.1em; letter-spacing:0.1em; margin-bottom:2%;}
 					
 					.thumb{width: 58%; height:auto; margin: 1% auto; display:block; clear:both;}
-					.postimg{width:29%; margin: 1% auto;}
+					.postimg{width:25%; margin: 1% auto; display:block;}
 					.featuredImage{clear:both; height:auto; width:91%; margin:1.37em auto; display:block; min-height:220px;}
 					pre {
 						border: solid 1px blue;
@@ -530,7 +583,7 @@ body{
 							background-color:$color3; 
 							margin:1%;
 							&:hover{ background-color:$color1; color:$color4;} 
-							a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%; font-size:1.1em;background-color:$color3;}
+							a.comments-count{position:relative; top:0%;left:0%; text-align:center; @include Transition(background 0.2s linear 0s, color 0.2s linear 0s ); display:inline-block; height:100%; line-height:40px; width:100%; font-size:1.1em; background-color:$color3;}
 							a.comments-count:hover{color:$color4; background-color:$color1; font-weight:bold; line-height:40px; }
 
 						}
@@ -590,7 +643,7 @@ body{
 					
 					h2.entry-title a{color:$color4; font-size:70%; height:100%; line-height:1em;}
 					
-					.entry-attachment{width:40%; margin: 1em auto}
+					.entry-attachment{width:28%; margin: 3em auto}
 				}
 			
 				/*post pagination*/
@@ -676,12 +729,12 @@ body{
 						.edit-link{display:inline; padding:10px;}
 						.comment-author { 
 							float:left;
-							width:40%; 
+							width:35%; 
 							display:inline-block;
 							line-height: 80px; 
-							height: 60px; 
+							height: 50px; 
 							padding:0;
-							img{width:15%; height:100%;  margin: 0; display: inline-block; float:left;}
+							img{width:15%; height:85%;  margin: 0; display: inline-block; float:left;}
 							b.fn{display:inline-block; width: auto; padding: 0 2%; text-align: center; height:100%;}
 							span.says{display:inline-block; width: auto; height: 100%;}
 							
@@ -828,7 +881,7 @@ body{
 				height:auto;
 				h1{font-size:1em; margin: 0 ; padding:0; color:$color1; letter-spacing:0.1em;  width:100%; display:block; height: auto; line-height: 24px;font-weight: 600; display:block;}
 				p{ width:99%; line-height: 1.69em; font-size:0.9em; font-weight:100; margin:0 ;letter-spacing: 0.095em;padding-top: 0.5%; }
-				.introimg {width:12.729257%;float:left; margin:1% 1% 0% 0%; height:auto; display:inline-block; }
+				.introimg {width: 14.729%;float:left; margin:1% 1% 0% 0%; height:auto; display:inline-block; }
 				hr{background-color:$color2; height:1px; margin: 1.4% auto; width:40%; outline: none; border: none;}
 				.webskills{ 
 					list-style: none; 
@@ -911,6 +964,7 @@ body{
 				display:inline-block;
 				font-family:($FontStyle);
 				float:right;
+				box-shadow:0 0.5px 0.5px 0px rgba(0,0,0,0.2);
 
 					
 
@@ -1027,11 +1081,21 @@ body{
 						width: 25%;   
 						padding: 0px; 
 						font-family:($FontStyle);
+						display: -webkit-flex;
+						display:flex;
+						-webkit-flex-direction: column;
+   						flex-direction: column;
+   						-webkit-justify-content: flex-start;
+   						justify-content: flex-start;
+						
 						li {  
-							margin:0 0 4% 0; 
+							margin-bottom:1%;
 							width:100%; 
 							height:40px;
-							a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color3; color:$color1; font-size:0.75em;  line-height:40px;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
+							flex-grow: 1;
+							flex-wrap:wrap;
+
+							a { height:100%; outline:none; text-decoration: none; border:0; display:block; width:100%; text-align:center; margin:0 auto; letter-spacing: 0.02em; background-color:$color3; color:$color1; font-size:0.75em; line-height:40px;   @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );}
 							a:hover {background-color:$color1; color:$color4; font-weight:bold; }
 						}
 
@@ -1045,7 +1109,7 @@ body{
 		}
 
 
-		.skills{ 
+		ul.skills{ 
 			list-style: none; 
 			font-family:($FontStyle); 
 			margin:1% 0px 5% 0%; 
@@ -1083,6 +1147,15 @@ body{
 			height:auto; 
 			font-family:($FontStyle); 
 			margin:auto;
+			display:flex;
+			-webkit-flex-direction: row;
+			flex-direction: row;
+			-webkit-align-items: center;
+   			align-items: center;
+   			-webkit-justify-content: center;
+   			justify-content: center;
+
+
 			h3{ margin:5px 0px 5px 0px;}
 					
 	    	.content{
@@ -1162,7 +1235,7 @@ body{
 				    		height: 100%; 
 				    		top: 0px;
 
-				    		h1{text-indent:0px; font-size:0.90em; width:100%; color:$color1; line-height: 20px; width:100%; margin:0; height:20px;}
+				    		h1{text-indent:0px; font-size:0.90em; width:100%; color:$color1; line-height: 20px; width:100%; margin:0; height:20px; text-align:left;}
 				    		p{
 				    			font-size:0.85em; 
 				    			width:100%; 
@@ -1257,7 +1330,7 @@ body{
 			.facebook-icon span .fa-facebook { width:100%; height:100%; text-align: center; font-size: 2em;  line-height:1.5em;}
 			.google-icon span .fa-github { width:100%; height:100%; text-align: center; font-size: 2em;  line-height:1.5em;}
 		}
-#copyr {color:$color1; text-align:right; font-size:10px; width:48%; margin:0; float:right; display:inline-block; padding-top:4%;}
+		p#copyr {color:$color1; text-align:right; font-size:10px; width:48%; margin:0; float:right; display:inline-block; padding-top:4%;}
 
 		ul{
 			width:45%; 
@@ -1286,7 +1359,7 @@ body{
 }/*wrapper*/
 
 
-@media (max-width : 1024px) and (orientation : landscape)  {
+@media (max-width : 1024px)  {
 
 .fixed-side-social-container { display:none;}
 
@@ -1301,23 +1374,20 @@ body{
 	 	h1#logo{
 	 		font-size:1.6em; 
 	 		width:45%; 
-	 		height:47px;
-	 		line-height:47px;		
-	 		
+	 				 		
 	  	}
 		h1#logo-blog{
 			font-size:1.6em; 
 			width:45%; 
-			height:47px;
 			margin:0 ; 
-			line-height:47px;
-			 
+			
 		}
 		h2 { font-size:0.70em;}
 		
 
 		nav {
 			left: 41.4%;
+			width: 45%;
 			#mobile-nav { display:none;}
 			
 			#innernav{ 
@@ -1351,14 +1421,17 @@ body{
 		padding: 2.5% 0 0 0;
 		min-height: 740px;
 		.introimg { height: auto;}
-		h1 { width: 98%;  padding:0; margin:0; font-size: 1.2em; }
+		h1 { padding:0; margin:0; font-size: 1.1em; }
 		h2 {font-size: 1.15em; }
 		h3 {font-size: 0.95em; text-indent: 20px; }
 		p { font-size:0.85em;}
 		blockquote { font-size:0.9em;}
 		li { margin: 0px;   font-size: 0.90em;}
-		.skills {
-			li { font-size: 0.85em;}
+		ul.skills {
+			li { 
+				font-size: 0.85em;
+				.fa-envelope {width: 7%;}
+			}
 		} 
 
 
@@ -1567,8 +1640,8 @@ body{
 
 		
 		.front_panel {
-			height: 550px;
-			min-height: 550px;
+			height: 615px;
+			min-height: 615px;
 			clear:both;
 			    	  	    	   	
 	    	.intro-text{
@@ -1598,7 +1671,8 @@ body{
 
 				width:50%;  
 				margin:0;
-				height: 96%;
+				height: 70%;
+				margin: 4% 0 0 0;
 
 				.imagebox { 
 					width: 100%; 
@@ -1628,7 +1702,7 @@ body{
 				background-color:$color4; 
 				margin:0.5%;
 				display:inline-block;
-				h1 {    font-size: 1em; line-height:47.6667px  }
+				h1 {    font-size: 1.2em; line-height:47.6667px  }
 
 				#chart {
 					height: 77.73469%;
@@ -1643,7 +1717,7 @@ body{
 					}
 
 					#bars {
-						width: 91%;
+						width: 90%;
 						height: 100%;
 						li {  height: 340px;}
 						span {   font-size:0.75em ;}
@@ -1687,8 +1761,8 @@ body{
 							a:hover {  font-size:0.80em; }
 						}
 						li:nth-of-type(7){ 
-							a { padding-top:1%; font-size:0.80em; line-height:19px;  }
-							a:hover {font-size:0.80em; line-height:19px;}
+							a {font-size:0.80em;   }
+							a:hover {font-size:0.80em; }
 						}
 					}
 
@@ -1793,12 +1867,13 @@ body{
 	}
 	 
 	footer{
+		margin-top: 3%;
 
 		.socialpics{
 		
 			width:25%; 
 
-			.social-icon{margin-left:4%; width:21%;}
+			.social-icon{margin-left:4%; width:21%; @include Transition(background-color 0.3s ease-in );}
 			.social-icon:hover{background-color:$color1; color:$color4; }
 
 			span{ }
@@ -1808,6 +1883,7 @@ body{
 			.facebook-icon span .fa-facebook {  font-size: 200%;  line-height:1.6em;}
 			.google-icon span .fa-github { font-size: 200%;  line-height:1.6em;}
 		}
+        p#copyr { font-size:8px; width:47%;}
 
 		
 		ul{
@@ -1846,6 +1922,7 @@ body{
 
 		nav {
 			left:41.3%;
+			width:45%;
 			#mobile-nav { display:none;}
 			
 			#innernav{ 
@@ -1872,9 +1949,10 @@ body{
 			}
 		} 
 	}
+
 	#main-content {
 		padding: 2.5% 0 0 0;
-		h1{font-size:1.1em; height: 40px; line-height: 40px;}
+		h1{font-size:1.05em; height: 40px; line-height: 40px;}
 		h2 { font-size: 1em; }
 		h3 { font-size: 0.95em; }
 		p{font-size:0.85em; font-weight:300; width:95%; letter-spacing:0.1em; margin:0; line-height: 1.77em;}
@@ -1887,15 +1965,15 @@ body{
 				width: 49%;
 				h1 {  font-size: 0.90em; height:auto;}
 				p {  font-size: 0.80em;  letter-spacing: 0.08em; line-height: 1.8em;}
-				.introimg {    width: 17%;}
-				hr{background-color:$color2; height:1px; margin: 2.5% auto; width:40%; }
+				.introimg {    width: 18%;}
+				hr{background-color:$color2; height:1px; margin: 0.8% auto; width:40%; }
 				
 				.webskills{
 					padding: 3.4% 0;
 					margin: 0;
 
 					li{  
-						font-size:0.75em;
+						font-size:0.70em;
 						a{
 							width:100%;
 							&:hover{width:100%;color:$color6; }
@@ -1931,7 +2009,7 @@ body{
 			.prof_cont{
 				height: 470px;
 
-				h1 { font-size: 1em;  text-indent: 1.5%; }
+				h1 { font-size: 1.2em;  text-indent: 1.5%; }
 
 				#chart {
 					margin: 6% auto;
@@ -1961,7 +2039,7 @@ body{
 					
 					ul {
 						li {
-							a { font-size:0.70em;}
+							a { font-size:0.80em;}
 							
 						}
 						li:nth-of-type(7){ 
@@ -2164,7 +2242,7 @@ body{
 
 		}
 		
-		.skills { 
+		ul.skills { 
 			margin: 4% 0px 5% 0%; 
 			font-size:0.9em;
 			li .fa-envelope {width:7%;}
@@ -2196,7 +2274,7 @@ body{
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 
 					
-					width: 31%;/*new*/ 
+					width: 31.95%;/*new*/ 
 					 
 					
 					&:hover{cursor:pointer; } 
@@ -2272,7 +2350,6 @@ body{
 			}
 			li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { display:inline-block; height:100%; float:none;line-height: 35px;width: 6%;font-size: 1.3em; text-align: center; }
 		}
-		 
 	}
 
 	footer {
@@ -2300,8 +2377,8 @@ body{
 			li{ 
 				text-indent:0px;  
 				height:23%;
-				a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.8em; height:100%;  line-height:25px;}
-				a:hover{  margin:0; font-size:0.8em; line-height:25px;}
+				a { font-size:0.8em; line-height:25px;}
+				a:hover{   font-size:0.8em; line-height:25px;}
 			} 
 		}
 	}
@@ -2323,12 +2400,12 @@ body{
 		height: 72px;
 
 		
-		h1#logo {font-size: 1.6em; width: 52%;  }
-		h1#logo-blog {font-size: 1.6em;  width:52%; }
+		h1#logo {font-size: 1.5em; width: 50%;  }
+		h1#logo-blog {font-size: 1.5em;  width:52%; }
 		h2 {font-size: 0.60em; }
 
 		nav {
-			width: 42%;
+			width: 45%;
 			top: 0.5%;
 			left: 39.4%;
 			#mobile-nav { display:none;}
@@ -2349,7 +2426,7 @@ body{
 							
 							a {
 								font-size:0.65em;
-								&:hover {font-size:0.70em;}
+								&:hover {font-size:0.65em;}
 							}
 						}
 					}
@@ -2362,12 +2439,14 @@ body{
 	#main-content {
 		padding: 3.1% 0 0 0;
 
-		p {    font-size: 0.80em; width:100%; line-height:1.9em;}
-		h1 {   margin: 0; font-size:1.2em;   padding: 0px; width:100%;}
-		h2 {   font-size: 1.15em; padding: 0px;    color: $color1;    letter-spacing: 0.1em;   width: 99.5458%;}
+		p {    font-size: 0.85em; width:100%; line-height:1.9em;}
+		h1 {   margin: 0; font-size:1.05em;   padding: 0px; width:100%; text-align:center;}
+		h2 {   font-size: 1.2em; padding: 0px;    color: $color1; text-align:center;   letter-spacing: 0.1em;   width: 99.5458%;}
 		h3{font-size:1em;}
 		
-		.skills li {   font-size: 0.85em;}
+		ul.skills {
+			li {   font-size: 0.80em;}
+		}
 		.map_container {   width: 47%;  margin: 1%;   height: 250px;}
 		blockquote { font-size:0.80em;}
 		
@@ -2430,8 +2509,8 @@ body{
 
 				h1 {    font-size: 1.5em;}
 				.post {
-					h1{ font-size: 1.2em; letter-spacing: 0.1em;width: 100%; }
-					h2{text-indent:0px; font-size: 1em;letter-spacing: 0.1em; height: 35px; line-height:40px;}
+					h1{ font-size: 1.1em; letter-spacing: 0.1em;width: 100%; }
+					h2{text-indent:0px; font-size: 1em;letter-spacing: 0.1em; height: 40px; line-height:40px;}
 					h3{ font-size: 1em; text-indent:0; }
 					h3 a{ padding-left:0; }
 					ul{
@@ -2577,11 +2656,11 @@ body{
 				padding: 0;
 				float: none;
 
-				h1 { font-size: 1em;}
-				h2 { font-size: 0.95em;}
-				p { font-size: 0.85em; letter-spacing: 0.09em; line-height: 1.85em;}
+				h1 { font-size: 0.9em;}
+				h2 { font-size: 0.85em;}
+				p { font-size: 0.80em; letter-spacing: 0.09em; line-height: 1.85em;}
 				.introimg { width: 8%;}
-				hr {margin: 2.4% auto;}
+				hr {margin: 0.8% auto;}
 				.webskills{ 
 					padding: 1.9% 0;
 					
@@ -2597,11 +2676,11 @@ body{
 			}
 			
 			.frontpage_cont { 
-				width: 67%; 
+				width: 75% ;
 				margin: 3% auto;
 				display: block; 
 				float:none;
-				height: 36.837%; 
+				height: 56.837%; 
 
 				.imagebox { 
 					width: 100%;  
@@ -2635,7 +2714,7 @@ body{
 				margin: 3.5% auto;
 				height: 490px; 
 
-				 h1 {   font-size: 1.1em;}
+				 h1 {   font-size: 1.2em;}
 				 #chart {  
 				 	width: 95%;  
 				 	display: block; 
@@ -2695,9 +2774,9 @@ body{
 						width: 26%;
 						li {
 							a { 
-								font-size: 0.70em;  
+								font-size: 0.80em;  
 								font-weight:bold;
-								&:hover{font-size: 0.70em;}
+								&:hover{font-size: 0.80em;}
 							} 
 						}
 						li:nth-of-type(7) a {
@@ -2734,8 +2813,8 @@ body{
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 
 					
-					width: 31%;/*new*/ 
-					height:325px;
+					width: 31.80%;/*new*/ 
+					height:345px;
 					 
 					
 					&:hover{cursor:pointer; } 
@@ -2830,10 +2909,10 @@ body{
 			margin:0; 
 			padding:0;
 			li{ 
-				text-indent:10px;  
+				text-indent:0px;  
 				height:23%;
-				a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.8em; height:100%;  width:47%; line-height:25px;}
-				a:hover{  margin:0; font-size:0.8em; line-height:25px;}
+				a {  font-size:0.8em; width:47%; line-height:25px;}
+				a:hover{   font-size:0.8em; line-height:25px;}
 			}   
 		}
 	
@@ -2855,14 +2934,15 @@ body{
 		height: 72px;
 
 		
-		h1#logo { font-size: 1.55em; width:52%; }
-		h1#logo-blog { font-size: 1.55em;  width:52%;}
+		h1#logo { font-size: 1.4em; width:50%; }
+		h1#logo-blog { font-size: 1.55em;  width:50%;}
 		.search-box { width: 30%;font-size: 0.75em;}
 		h2 { font-size: 0.65em; }
 
 		nav {
 			left: 39%;
-			top: 0.5%
+			top: 0.5%;
+			width: 50%;
 			#mobile-nav { display:none;}
 			
 			#innernav{ 
@@ -2879,6 +2959,7 @@ body{
 							height:35px; 
 							
 							a {	font-size:0.65em;}
+							a:hover {	font-size:0.65em;}
 						}
 					}
 				} 
@@ -2890,9 +2971,10 @@ body{
 		
 		padding:0px;
 		h1 { margin: 0; font-size: 1.1em;}
-		p { font-size: 0.75em; }
-		h2 {font-size: 1em; padding: 0px;  color: $color1;  letter-spacing: 0.1em; width: 99.5458%;}
+		
+		h2 {font-size: 1em; padding: 0px;   letter-spacing: 0.1em; width: 99.5458%;}
 		h3{font-size:0.95em;}
+		p { font-size: 0.70em; }
 		#blogrightside {
 
 			h2 { width: 100%; font-size: 0.95em; height: 35px; line-height: 35px;}
@@ -3104,11 +3186,11 @@ body{
 			
 			.frontpage_cont { 
 
-				width: 58%; 
+				width: 65%; 
 				margin:5% auto; 
 				display: block; 
 				float:none;
-				height: 30.837%;
+				height: 47.837%;
 				
 				.imagebox { 
 					margin: 0 auto;
@@ -3178,8 +3260,8 @@ body{
 						width: 27%;
 						li {
 							a {   
-								font-size: 0.7em;
-								&:hover { font-size:0.70em; }   
+								font-size: 0.8em;
+								&:hover { font-size:0.80em; }   
 							} 
 
 						}
@@ -3215,7 +3297,7 @@ body{
 					 			 
 					
 					width: 31.5%;/*new*/ 
-					height:325px;
+					height:345px;
 					 
 					
 					&:hover{cursor:pointer; } 
@@ -3284,8 +3366,6 @@ body{
 
 		.socialpics{
 		
-			width:30%; 
-
 			.social-icon{margin-left:4%; width:21%;}
 			.social-icon:hover{ }
 
@@ -3302,9 +3382,9 @@ body{
 			margin:0; 
 			
 			li{ 
-				text-indent:10px;  
+				text-indent:0px;  
 				height:23%;
-				a {text-decoration:none;  color:$color1; margin:0; padding:0; font-size:0.75em; height:100%; line-height:25px;}
+				a { font-size:0.75em;  line-height:25px;}
 				a:hover{  margin:0; font-size:0.75em; line-height:25px;}
 			}
 		}
@@ -3319,9 +3399,9 @@ body{
 
 .fixed-side-social-container{display:none;}
 
-a.nav-toggle {position: absolute;z-index: 9999;left: 0; top: 0; display:block;  line-height:60px; height:60px; width:60px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; }
+a.nav-toggle {position: absolute;z-index: 9999;left: 1%; top: 0; display:block;  line-height:60px; height:60px; width:60px; text-align:center;  @include Transition(background 0.2s linear 0s, color 0.2s linear 0s );  background-color:$color3; color:$color1; }
 
-a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
+a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px; @include boredrady( 35px 35px 35px 35px); }
 
 #wrapper_container { 
 	width: 96%; 
@@ -3332,9 +3412,9 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 		width: 100%;   
 		height: 72px;
 		
-		h1#logo { font-size: 1.9em; width: 90%; margin:0 0 0 9%; text-indent: 0%; height: 40px;line-height: 40px; }
-		h1#logo-blog { font-size: 1.9em; width: 90%;  margin:0 0 0 9%; text-indent: 0%; height: 40px; line-height: 40px; }
-		h2{  width: 90%;  margin:0 0 0 9%; font-size:0.65em; display:block; float:none; height:20px; line-height:20px; }
+		h1#logo { text-align:center; font-size: 1.6em; width: 100%; margin:0; text-indent: 0%; height: 40px;line-height: 40px; }
+		h1#logo-blog { text-align:center; font-size: 1.6em; width: 90%;  margin:0; text-indent: 0%; height: 40px; line-height: 40px; }
+		h2{ text-align:center; width: 100%;  margin:0; font-size:0.75em; display:block; float:none; height:20px; line-height:20px; }
 		
 		
 		/*Mobile-Navigation*/
@@ -3391,26 +3471,21 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 		margin-bottom: 0;   
 		padding: 0px;
 
-		h1 { margin: 0; width: 100%; font-size:1.3em; }
-		h2 { margin: 0 ; width: 98%; font-size: 1.1em; }
+		h1 { margin: 0; width: 100%; font-size: 1em; text-align:center;}
+		h2 { margin: 0 ; width: 98%; font-size: 1em; }
 		h3{font-size: 1em;}
 		#slider { width: 64%; background: none repeat scroll 0% 0% $color2;  margin: auto ; height:300px; float: none;}
 		p { line-height: 1.92em; font-size: 0.80em; width: 97.5458%; margin-left: 0%; letter-spacing: 0.1em;}
 		li {    margin: 1%;  }
 		
-		.webskills {
-			ul{
-				li {	 font-size: 0.85em;	}
-			}
+		
 
-		}
-		.skills{  
+		ul.skills{  
 			width:90%; 
 			display:block; 
 			margin: 3.5% auto;
-			ul{
-				li{ margin:0; font-size:1em; color:$color1; font-style: italic; text-indent:1%;  }
-			}
+			li{ margin:0; text-indent:1%;  }
+		
 		}
 
 		.social_media_container {float: none; margin:0 auto; width: 90%;}
@@ -3603,16 +3678,19 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 	    		padding: 0;
 	    		margin: 0 auto;
 				
-				h1 { font-size: 1em;margin: 0;}
-	    		h2{ margin: 0; padding:0; color:$color1; width:100%;  text-indent:0px; height:auto; font-size: 0.95em;}
+				h1 { font-size: 0.95em;margin: 0; line-height: 20px;}
+	    		h2{  width:100%;  text-indent:0px;  font-size: 0.90em;}
 	    		p{ width:100%; font-size:0.80em;  }
 	    		.introimg {   width: 11%; }
 	    		hr {margin: 2% auto;}
+	    		ul.webskills {
+					li { font-size: 0.75em;	}
+				}
 	    	}
 			
 			.frontpage_cont {
 				height: 36.017%;
-				width: 85%;
+				width: 60%;
 				margin: 4.8% auto;
 
 				.imagebox {  
@@ -3678,7 +3756,7 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 						width: 23.9914%;   
 						margin: 0px; 
 						li {
-
+							margin-bottom: 0;
 							a {   font-size: 0.75em; line-height:40px;  }
 							a:hover {   font-size: 0.80em; line-height:40px; }
 
@@ -3721,8 +3799,8 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 
 					
-					width: 45.5%;/*new*/ 
-					height:392px;
+					width: 48.5%;/*new*/ 
+					height: 420px;
 					 
 					
 					&:hover{cursor:pointer; } 
@@ -3822,8 +3900,8 @@ a.nav-toggle:hover{ background-color:$color1; color:$color4; line-height:60px;}
 			li{ 
 				text-indent:0px;  
 				height:23%;
-				a {text-decoration:none;  color:$color1; font-size:0.75em; width:100%; line-height:25px;}
-				a:hover{  margin:0; font-size:0.75em; line-height:25px;}
+				a { font-size:0.70em; width:100%; line-height:25px;}
+				a:hover{  margin:0; font-size:0.70em; line-height:25px;}
 			}
 
 		}
@@ -3848,9 +3926,9 @@ a.nav-toggle { left: 0; }
 		height: 72px;   
 		
 		
-		h1#logo { font-size: 2em;  text-indent:0%; }
-		h1#logo-blog { font-size: 2em;  text-indent:0%;}
-		h2{  margin: 0 0 0 9% ;  font-size:0.75em; text-indent:0%; font-size:0.65em;}
+		h1#logo { font-size: 1.5em;  text-indent:0%; }
+		h1#logo-blog { font-size: 1.5em;  text-indent:0%;}
+		h2{  text-indent:0%; font-size:0.7em;}
 
 		/*Mobile-Navigation*/
 		nav {
@@ -3884,17 +3962,17 @@ a.nav-toggle { left: 0; }
 		margin-bottom: 0;   
 		padding: 0px;
 		
-		h1 { width: 100%;  font-size: 1.2em; }
-		h2 { margin: 0px; width: 100%;text-indent: 0px; font-size: 1.1em;}
-		h3 {  text-indent: 15px; font-size: 1em; }
+		h1 { width: 100%;  font-size: 1em; }
+		h2 { margin: 0px; width: 100%;text-indent: 0px; font-size: 0.95em;}
+		h3 {  text-indent: 15px; font-size: 0.85em; }
 		p { font-size: 0.8em; width: 100%; margin-left: 0; }
-		li {    margin: 0px; font-size:0.9em;  }
+		li {    margin: 0px; font-size:0.85em;  }
 
 		#slider { width: 64%; background: none repeat scroll 0% 0% $color2;  margin: auto ; height:300px; float: none;}
 		
-		.skills{ 
+		ul.skills{ 
 			width:50%;
-			li{ margin:0; font-size:0.75em;  text-indent:1%; height:25px; line-height:25px; }
+			li{ margin:0; font-size:0.70em;  text-indent:1%; height:25px; line-height:25px; }
 		}
 				
 		.container { float: none; width:96%; height:246px;}
@@ -4027,7 +4105,7 @@ a.nav-toggle { left: 0; }
 						.edit-link {  padding: 4px;}
 						.comment-author { 
 							line-height: 80px; 
-							height: 60px; 
+							height: 50px; 
 							b.fn{ padding: 0 3%; font-size:0.8em;}
 							span.says{font-size:0.8em;}
 
@@ -4077,7 +4155,7 @@ a.nav-toggle { left: 0; }
 				p{ width:99%; margin: 0; font-size: 0.80em; letter-spacing: 0.1em;  }
 				.introimg {  float: left; width: 10%; height: auto;}
 				hr {margin: 2% auto;}
-				.webskills { 
+				ul.webskills { 
 					padding: 3.2% 0;
 					li {  font-size: 0.70em; }
 				}
@@ -4104,7 +4182,7 @@ a.nav-toggle { left: 0; }
 				margin: 5% auto;
 				height: 465px;
 
-				 h1 {  font-size: 1.15em;;}
+				 h1 {  font-size: 1.2em;;}
 				/*Chart*/	
 				#chart {
 					height: 77.73469%;
@@ -4162,8 +4240,8 @@ a.nav-toggle { left: 0; }
 					 margin: 0px;
 					 li {  
 					 	margin: 0px 0px 5px; 
-					 	a {   font-size: 0.65em; }
-						a:hover {   font-size: 0.65em;   }  
+					 	a {   font-size: 0.8em; }
+						a:hover {   font-size: 0.80em;   }  
 					 }   
 					}
 				}/*Hero Slider End*/
@@ -4273,8 +4351,8 @@ a.nav-toggle { left: 0; }
 			li{ 
 				text-indent:0px;  
 				height:23%;
-				a { color:$color1; margin:0; padding:0; width:100%; font-size:0.75em; height:100%; line-height:1.7em;}
-				a:hover{  margin:0; font-size:0.75em; line-height:1.7em;}
+				a {   font-size:0.65em; line-height:1.7em;}
+				a:hover{  font-size:0.65em; line-height:1.7em;}
 			}
 
 		}
@@ -4295,9 +4373,9 @@ a.nav-toggle { left: 0; }
 
 	header {
 		height: 72px;
-		h1#logo {  font-size:1.8em; width: 90%;  margin:0 0 0 9%;}
-		h1#logo-blog {  font-size:1.8em;width: 90%;  margin:0 0 0 9%; }
-		h2{ display:block; float:none;  font-size: 0.6em;}
+		h1#logo {  font-size:1.6em;   }
+		h1#logo-blog {  font-size:1.6em;   }
+		h2{ display:block; float:none;  font-size: 0.7em;}
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -4326,9 +4404,9 @@ a.nav-toggle { left: 0; }
 	}
 
 	#main-content {
-		h1 {font-size: 1.2em; height:55px; line-height:55px;}
-		h2 {   font-size: 1.15em; }
-		h3 {   font-size: 1.1em; }
+		h1 {font-size: 1em; height:40px; line-height:40px;}
+		h2 {   font-size: 0.9em; }
+		h3 {   font-size: 0.85em; }
 		
 		
 		#blogrightside{
@@ -4446,7 +4524,9 @@ a.nav-toggle { left: 0; }
 				p{margin:0;  width: 100%; font-size: 0.85em;}
 				.introimg {   width: 16%;}
 				hr {  margin: 3% auto;}
-				.webskills li { text-align: left;}
+				ul.webskills {
+					li { text-align: left;}
+				}
 
 			}
 	         
@@ -4495,8 +4575,8 @@ a.nav-toggle { left: 0; }
 								.abobe {  height: 32.63%; width: 40.59%;}
 								.cert {   height: 38.564%;    width: 25.78%;}
 
-								h3 {    font-size: 0.80em;}
-								p {   font-size: 0.70em; }
+								h3 {    font-size: 0.85em;}
+								p {   font-size: 0.75em; }
 							}
 						}
 
@@ -4506,8 +4586,13 @@ a.nav-toggle { left: 0; }
 
 						li {
 
-							a { font-size: 0.60em;}
-							a:hover{ font-size: 0.60em;}
+							a { font-size: 0.70em;}
+							a:hover{ font-size: 0.70em;}
+						}
+						li:nth-of-type(7) a {
+							font-size:0.7em;
+						    line-height: 40px;
+						    &:hover{font-size:0.7em;}
 						}
 
 					}
@@ -4656,10 +4741,9 @@ a.nav-toggle { left: 0; }
 		    top: 1%;
 		}
 	        
-		h1#logo {width: 90%;  margin:0 0 0 10%;  }
-		h1#logo-blog { width: 90%;  margin:0 0 0 10%;   }
-		h2 {margin:0 0 0 10%; }
-		p {  width: 78%; font-size: 0.70em;  display: block; float: none; height: 15px; line-height: 15px;}
+		h1#logo {font-size:1.6em;  }
+		h1#logo-blog { font-size:1.6em;   }
+		h2 {  font-size: 0.70em;   float: none; height: 15px; line-height: 15px;}
 
 		
 	}
@@ -4850,9 +4934,9 @@ a.nav-toggle { left: 0; }
 		height:72px;
 
 		
-		h1#logo {margin:0 0 0 12%;  font-size: 1.6em; height: 40px;  line-height: 40px;text-align:left; width:87%; }
-		h1#logo-blog {margin:0 0 0 12%;  font-size: 1.6em;  height: 40px;  line-height: 40px;text-align:left; width:87%; }
-		h2{ margin:0 0 0 12%;  display:block; font-size:0.60em; text-align:left;width:87%; }
+		h1#logo {  font-size: 1.5em; height: 40px;  line-height: 40px; text-align:right; width:93%; }
+		h1#logo-blog { font-size: 1.5em;  height: 40px;  line-height: 40px; text-align:right; width:93%;}
+		h2{  display:block; font-size:0.60em;  }
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -4866,9 +4950,10 @@ a.nav-toggle { left: 0; }
 				li{ 
 					 
 					margin:0 1px 0 0; 
+					height: 45px;
 					
-					a {  font-size:0.85em;}
-					a:hover { font-size:0.9em;}
+					a {  font-size:0.85em; height: 45px;  line-height: 45px;}
+					a:hover { font-size:0.9em; height: 45px;  line-height: 45px;}
 				}
 			}
 			nav-collapse ul{ display:block; float:left;}
@@ -4880,12 +4965,12 @@ a.nav-toggle { left: 0; }
 
 		padding: 2px;
 
-		h1 {  width: 100%; font-size:1.15em; }
-		h2 { font-size: 1em; text-indent: 0px; width: 100%;  margin: 1em auto;}
+		h1 {  width: 100%; font-size:1em; height: 40px; line-height: 40px; }
+		h2 { font-size: 0.9em; text-indent: 0px; width: 100%;  margin: 1em auto;}
 
 		p {   line-height: 1.92em; font-size:0.8em;}
 
-		.skills{ 
+		ul.skills{ 
 			font-size:0.8em;
 			li {  font-size: 0.9em;} 
 		}
@@ -5019,17 +5104,19 @@ a.nav-toggle { left: 0; }
 				padding: 0;
 				.introimg {   width: 15%;}
 				h1 { font-size: 0.85em;}
-				p {font-size:0.8em;}
-				.webskills li{font-size:0.75em;}
+				p {font-size:0.75em;}
+				ul.webskills {
+					li{font-size:0.70em;}
+				}
 			}
 			
 
 			.frontpage_cont {
 
-				width:98%;
-				margin:0; 
+				width: 73%;
+				margin: 5% auto; 
 				padding:0; 
-				height: 337px;
+				height: 285px;
 				
 				.imagebox 
 				.imagebox { 
@@ -5048,7 +5135,7 @@ a.nav-toggle { left: 0; }
 				height: 469px;
 				display:inline-block;
 				
-				h1 {    font-size: 1em;}
+				h1 {    font-size: 1.2em;}
 				#chart {   
 					   
 					display: block;
@@ -5141,8 +5228,8 @@ a.nav-toggle { left: 0; }
 				
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 				
-					width: 61.5%;
-					height: 380px;
+					width: 75.5%;
+					height: 382px;
 					margin: 5% auto;
 					display: block;
 					 				
@@ -5256,6 +5343,9 @@ a.nav-toggle { left: 0; }
 /*I-phone 6plus*/
 @media (max-width : 414px)  {
 
+a.nav-toggle {    left: 0; width: 50px; height:50px; font-size:0.85em; line-height:50px;}
+a.nav-toggle:hover {    left: 0; width: 50px; height:50px; font-size:0.85em; line-height:50px;}
+
 .fixed-side-social-container{display:none;}
 
 #wrapper_container{
@@ -5265,9 +5355,9 @@ a.nav-toggle { left: 0; }
 		height:60px;
 
 		
-		h1#logo {margin: 0 0 0 14%; font-size: 1.4em; height: 40px;  line-height: 40px;text-align:left; width: 85%; height: 30px; line-height: 30px;}
-		h1#logo-blog {margin: 0 0 0 14%; font-size: 1.4em;  height: 40px;  line-height: 40px;text-align:left;width: 85%; height: 30px; line-height: 30px;}
-		h2{ margin: 0 0 0 14%;  font-size:0.60em; text-align:left;width: 85%;}
+		h1#logo { font-size: 1.35em;   height: 30px; line-height: 30px;}
+		h1#logo-blog { font-size: 1.35em; height: 30px; line-height: 30px;}
+		h2{   font-size:0.60em; }
 		
 		/*Mobile-Navigation*/
 		nav {
@@ -5284,10 +5374,10 @@ a.nav-toggle { left: 0; }
 					float:left;
 				}
 				li{ 
-					height:50px; 
+					height:45px; 
 					
-					a { line-height:50px;  font-size:0.9em;} 
-					a:hover { line-height:50px;  font-size:1em;}
+					a { line-height:45px;  font-size:0.9em;} 
+					a:hover { line-height:45px;  font-size:1em;}
 				}
 			}
 		}
@@ -5297,14 +5387,14 @@ a.nav-toggle { left: 0; }
 
 		padding: 2px;
 
-		h1 {  width: 100%; font-size:1.15em; }
-		h2 { font-size: 1em; text-indent: 0px; width: 100%;  margin: 1em auto;}
+		h1 {  width: 100%; font-size:0.9em; text-align:center; height: auto;}
+		h2 { font-size: 0.9em; text-indent: 0px; width: 100%;  margin: 1em auto;}
 
 		p {   line-height: 1.9em; font-size:0.8em;}
 
-		.skills{ 
+		ul.skills{ 
 			font-size:0.8em; 
-			li {  font-size: 1em;}
+			li {  font-size: 0.9em;}
 		}
 	
 		blockquote {    font-size: 0.8em;}
@@ -5457,18 +5547,24 @@ a.nav-toggle { left: 0; }
 				display: block; 
 				padding: 0;
 				.introimg {   width: 12%;}
-				h1 { font-size: 0.85em;}
+				h1 { font-size: 0.85em; text-align:left;}
 				p {font-size:0.8em;}
-				.webskills li{font-size:0.7em;}
+				ul.webskills {
+
+					font-size:0.8em;
+					padding: 5% 0;
+					li .fa-file-picture-o, li .fa-file-video-o,	li .fa-download, li .fa-desktop, li .fa-wordpress, li .fa-database, li .fa-file-code-o { width: 9.5%;}
+					li .fa-mobile{ width: 9.5%; font-size:1.6em;}
+				}
 			}
 			
 
 			.frontpage_cont {
 
-				width:98%;
-				margin:0; 
+				width: 77%;
+				margin: 5% auto; 
 				padding:0; 
-				height: 337px;
+				height: 285px;
 				
 				
 				.imagebox { 
@@ -5491,7 +5587,7 @@ a.nav-toggle { left: 0; }
 				height: 469px;
 				display:inline-block;
 				
-				h1 { font-size: 0.9em;}
+				h1 { font-size: 1.2em;}
 				#chart {   
 					   
 					display: block;
@@ -5591,10 +5687,10 @@ a.nav-toggle { left: 0; }
 				
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 				
-					width: 71.5%;
-					height: 380px;
+					width: 75.5%;
+					height: 383px;
 					margin: 5% auto;
-					display: block;
+					
 					 				
 					&:hover{cursor:pointer; } 
 
@@ -5673,17 +5769,17 @@ a.nav-toggle { left: 0; }
 		
 			.socialpics{
 		
-				width: 50%;
+				width: 60%;
 
 				.social-icon{width:23%; margin-left:2%;}
 				.social-icon:hover{}
 
 				span{ }
 
-				.linkedin-icon span .fa-linkedin { font-size: 170%;   line-height:1.6em;}
-				.twitter-icon span .fa-twitter {  font-size: 170%;  line-height:1.6em;}
-				.facebook-icon span .fa-facebook {  font-size: 170%;  line-height:1.6em;}
-				.google-icon span .fa-github { font-size: 170%;  line-height:1.6em;}
+				.linkedin-icon span .fa-linkedin { font-size: 150%;   line-height:1.6em;}
+				.twitter-icon span .fa-twitter {  font-size: 150%;  line-height:1.6em;}
+				.facebook-icon span .fa-facebook {  font-size: 150%;  line-height:1.6em;}
+				.google-icon span .fa-github { font-size: 150%;  line-height:1.6em;}
 			}
 		
 		ul{
@@ -5691,8 +5787,8 @@ a.nav-toggle { left: 0; }
 			margin:0; 
 			padding:4px; 
 			li{ text-indent:0px;  height:23%;} 
-			li a { color:$color1; margin:0; padding:0; font-size:0.80em; height:100%; line-height:1.7em;}
-			li a:hover{  margin:0; font-size:0.80em; line-height:1.7em;}
+			li a {   font-size:0.60em; line-height:1.7em;}
+			li a:hover{  font-size:0.60em; line-height:1.7em;}
 
 		}
 		
@@ -5707,6 +5803,9 @@ a.nav-toggle { left: 0; }
 
 @media (max-width : 375px)  {
 
+a.nav-toggle {left: 0;width: 45px;height: 45px;font-size: 0.80em;line-height: 45px;}
+a.nav-toggle:hover {left: 0;width: 45px;height: 45px;font-size: 0.80em;line-height: 45px;}
+
 .fixed-side-social-container{display:none;}
 
 #wrapper_container {  
@@ -5715,9 +5814,9 @@ a.nav-toggle { left: 0; }
 	header {
 		
 		height:60px;
-		h1#logo { font-size: 1.30em; width: 80%;    text-align:left; margin: 0 0 0 17%;  height: 30px; line-height: 30px;}
-		h1#logo-blog { font-size: 1.25em; width: 80%; text-align:left; margin: 0 0 0 17%; height: 30px; line-height: 30px;}
-		h2{  font-size:0.60em;  margin: 0 0 0 17%; }
+		h1#logo { font-size: 1.25em;  height: 30px; line-height: 30px; width: 96%;}
+		h1#logo-blog { font-size: 1.25em; height: 30px; line-height: 30px; width: 96%;}
+		h2{  font-size:0.60em;  }
 
 		
 		/*Mobile-Navigation*/
@@ -5730,10 +5829,10 @@ a.nav-toggle { left: 0; }
 			#mobile-nav {
 				display:block;
 				li{ 
-					height:50px; 
+					height:45px; 
 									
-					a {  line-height:50px;  font-size:1.1em;} 
-					a:hover { line-height:50px; font-size:1.2em; }
+					a {  line-height:45px;  font-size:0.9em;} 
+					a:hover { line-height:45px; font-size:0.9em; }
 				}
 			}
 			nav-collapse ul{ display:block;}
@@ -5747,15 +5846,15 @@ a.nav-toggle { left: 0; }
 
 	#main-content { 
 		padding: 0;
-		h1 {  font-size: 1.15em;  margin: 0; }
-		h2 {  margin:5px auto; text-indent:1%;   font-size:1.15em;}
+		h1 {  font-size: 1em;  margin: 0; line-height: 30px; }
+		h2 {  margin:5px auto; text-indent:1%;   font-size:0.9em;}
 		
 		.map_container {  width: 95.7293%; float: none;  margin-top: 20px ; }
 		.social_media_container {width: 100%; display: inline-block; float: none;}
 
-		.skills {    
+		ul.skills {    
 			width: 100%;
-			li {    font-size: 0.9em;}
+			li {    font-size: 0.85em;}
 		}
 		
 		#blogrightside { 
@@ -5803,7 +5902,7 @@ a.nav-toggle { left: 0; }
 				header.archive-header {   height: 40px; line-height:40px;}
 				.post{
 
-					h1 { font-size: 1em;}
+					h1 { font-size: 0.9em;}
 					h2 {font-size: 0.9em;}
 					h3 a{ padding-left:0;  height:100%; font-size: 0.8em;}
 					ul{line-height: 1.5em; text-indent:0; width:96%; }
@@ -5919,9 +6018,10 @@ a.nav-toggle { left: 0; }
 			} 
 
 			.frontpage_cont { 
-				margin: 3.8% auto;
-				height: 30.579%;  
-				width: 100%;
+				width: 73%;
+				margin: 5% auto; 
+				padding:0; 
+				height: 240px;
 				
 				.imagebox {   
 					 margin: 0;    
@@ -5941,7 +6041,7 @@ a.nav-toggle { left: 0; }
 				width: 99%; 
 				margin: 5% 0;
 				height: 395px;
-				h1 {    font-size: 0.85em;}
+				h1 {    font-size: 1.1em;}
 				
 				#chart {
 					height: 78.735%;
@@ -6006,7 +6106,9 @@ a.nav-toggle { left: 0; }
 
 		}
 
-		.webskills li { font-size: 0.75em;   text-align: left; height:40px; line-height:40px;}
+		ul.webskills {
+			li { font-size: 0.75em;   text-align: left; height:40px; line-height:40px;}
+		}
 
 		
 		/*Photocontainer*/
@@ -6039,7 +6141,7 @@ a.nav-toggle { left: 0; }
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 				
 					width: 77.5%;
-					height: 380px;
+					height: 400px;
 					margin: 5% auto;
 					display: block;
 					 				
@@ -6061,7 +6163,7 @@ a.nav-toggle { left: 0; }
 				    		padding:3%; 
 				   			    		 
 				    					    		
-				    		h1{ font-size:0.9em; line-height: 30px;  height:30px;}
+				    		h1{ font-size:0.9em; line-height: 25px;  height: 25px;}
 				    		p{
 				    			font-size:0.80em; 
 				    			
@@ -6100,6 +6202,7 @@ a.nav-toggle { left: 0; }
 	}
 
 	footer {
+		height: 130px;
 		
 		.socialpics{
 
@@ -6107,7 +6210,7 @@ a.nav-toggle { left: 0; }
 			float:right; 
 			  
 			padding-left:0px;
-			width: 50%;
+			width: 55%;
 			.social-icon{ width:23%; margin-left:2%;}
 			.linkedin-icon span .fa-linkedin { font-size: 170%; line-height:1.7em; }
 			.twitter-icon span .fa-twitter { font-size: 170%; line-height:1.7em; }
@@ -6135,9 +6238,9 @@ a.nav-toggle { left: 0; }
 		
 		height:60px;
 			
-		h1#logo { font-size: 1.30em; width: 85%;    }
-		h1#logo-blog { font-size: 1.3em; width: 85%; }
-		h2{   font-size:0.60em;display:block; float:none; }
+		h1#logo { font-size: 1.2em;letter-spacing: 0.05em;    }
+		h1#logo-blog { font-size: 1.2em; letter-spacing: 0.05em; }
+		h2{   font-size:0.60em; }
 
 		/*Mobile-Navigation*/
 		nav {
@@ -6149,10 +6252,10 @@ a.nav-toggle { left: 0; }
 			#mobile-nav {
 				display:block;
 				li{ 
-					height:50px; 
+					height:45px; 
 					
-					a { line-height:50px; height:50px; }
-					a:hover { } 
+					a { line-height:45px; height:45px; }
+					 
 				}
 			}
 			nav-collapse ul{ display:block; float:left;}
@@ -6164,24 +6267,24 @@ a.nav-toggle { left: 0; }
 		padding: 0; 
 		height: auto; 
 		margin-bottom: 5px;
-		h1 { margin: 0; width:100%; font-size: 1.15em; }
-		h2 { width: 99.5458%; font-size:1em; margin:5px 0;text-indent:0px; }
-		p {font-size: 0.75em;  width: 100%;  margin-left: 0; letter-spacing: 0.1em;}
-		li {   margin: 1%; font-size:1em;}
+		h1 { margin: 0; width:100%; font-size: 1em; }
+		h2 { width: 99.5458%; font-size:0.95em; margin:5px 0;text-indent:0px; }
+		p {font-size: 0.70em;  width: 100%;  margin-left: 0; letter-spacing: 0.1em;}
+		
 
 		.map_container {  width: 95.7293%; float: none;  margin-top: 20px ;    height: 250px;}
 
-		.skills {  
+		ul.skills {  
 			width: 90%; 
 			display:inline-block;
 			li { 
-				font-size: 0.95em;
+				font-size: 0.8em;
 				img { width: 8%;}
 			} 
 	
 		}
 
-		.webskills {
+		ul.webskills {
 			li {  font-size: 0.70em;}
 		}
 		
@@ -6333,13 +6436,14 @@ a.nav-toggle { left: 0; }
 				p{ width:99%;font-size: 0.80em;  }
 				.introimg { width: 18%;}
 				.webskills{
-					li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { width: 7.5%;font-size: 1.5em; }
+					padding:5% 0;
+					li .fa-mobile, li .fa-wordpress, li .fa-database, li .fa-file-image-o { width: 7.5%; font-size: 1.5em;  }
 				}
 			}
 
 			.frontpage_cont { 
 				height: 29.037%;
-				width: 100%;
+				
 				margin: 5.1% auto;
 
 				.imagebox{
@@ -6362,7 +6466,7 @@ a.nav-toggle { left: 0; }
 			.prof_cont {  
 				height: 399px;
 				width: 99%;
-				h1{ font-size:0.90em;}
+				h1{ font-size:1em;}
 				
 				#chart {
 
@@ -6435,7 +6539,7 @@ a.nav-toggle { left: 0; }
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 				
 					width: 77.5%;
-					height: 380px;
+					height: 400px;
 					margin: 5% auto;
 					display: block;
 					 				
@@ -6530,9 +6634,9 @@ a.nav-toggle { left: 0; }
 		width:100%;
 		height: 60px;
 			
-		h1#logo { font-size: 1.15em; margin: 0 0 0 19%;}
-		h1#logo-blog { font-size: 1.15em;  margin: 0 0 0 19%; }
-		h2 {    font-size:0.55em; display:block; float:none; margin: 0 0 0 19%;}
+		h1#logo { font-size: 1.05em; }
+		h1#logo-blog { font-size: 1.05em;   }
+		h2 {    font-size:0.55em;  }
 
 		
 		/*Mobile-Navigation*/
@@ -6545,10 +6649,10 @@ a.nav-toggle { left: 0; }
 			#mobile-nav {
 				display:block;
 				li{ 
-					height:50px; 
+					height:45px; 
 								
-					a { line-height:50px; }
-					a:hover { line-height:50px;  }
+					a { line-height:45px; }
+					a:hover { line-height:45px;  }
 				}
 			}
 			nav-collapse ul{ float:left;}
@@ -6560,21 +6664,15 @@ a.nav-toggle { left: 0; }
 		
 		padding: 2px;
 
-		h1 { margin:0; width:100%; font-size: 1.15em;}
-		h2 {width: 99.5458%;  margin-left:0; text-indent:1%; font-size: 1.05em;}
+		h1 { margin:0; width:100%; font-size: 0.9em;}
+		h2 {width: 99.5458%;  margin-left:0; text-indent:1%; font-size: 0.85em;}
 		p {width: 100%;   letter-spacing: 0.09em;  margin-left:0;}
-		.skills {
-			ul{
-				li { font-size: 1em;}
-			}
+		ul.skills {
+				li { font-size: 0.8em;}
+			
 
 		}
-		.webskills {
-			ul{
-				li { font-size: 0.60em;}
-			}
-
-		} 
+		 
 
 		#blogrightside { 
 			float: none; 
@@ -6624,8 +6722,8 @@ a.nav-toggle { left: 0; }
 
 					p { margin:1%; font-size: 0.75em;}
 
-					h1 { font-size: 1.05em; line-height: 35px; height: 35px;}
-					h2 { font-size: 0.95em; line-height: 35px;height: 35px;}
+					h1 { font-size: 0.9em; line-height: 35px; height: 35px;}
+					h2 { font-size: 0.85em; line-height: 35px;height: 35px;}
 
 					.postimg {margin: 1% auto;}
 					.thumb {width: 25%;  margin-left: 10px;}
@@ -6635,7 +6733,19 @@ a.nav-toggle { left: 0; }
 						width:35.9652349%;
 						&:hover{ font-size:0.85em; width:35.9652349%;}
 					}
-					
+
+					header.byline{
+						
+						
+						height:auto;
+
+						.bylinecat, .bylineauthor, .bylinetag, .date{
+							
+							
+							a{font-size: 0.75em; } 
+							a:hover{font-size: 0.75em; }
+						}
+					}
 
 					footer.byline {    
 						font-size: 0.80em;    
@@ -6734,7 +6844,7 @@ a.nav-toggle { left: 0; }
 			.prof_cont {
 				height: 399px;
 				margin: 6% 0;
-				h1 {   font-size: 0.85em;}
+				h1 {   font-size: 1em;}
 				#chart {
 					margin: 3% auto;
 					#numbers {  
@@ -6810,7 +6920,7 @@ a.nav-toggle { left: 0; }
 				#panel,#panel2,#panel3,#panel4,#panel5,#panel6,#panel7,#panel8{
 					 			 				
 					width: 81.5%;
-					height: 340px;
+					height: 400px;
 					margin: 7% auto;
 					display: block;
 					 				
@@ -6896,8 +7006,8 @@ a.nav-toggle { left: 0; }
 			padding: 4px;
 			li {   
 				text-indent:0px;
-				a {    width: 100%; font-size: 0.65em;}
-				a:hover {    width: 100%; font-size: 0.68em;} 
+				a {    width: 100%; font-size: 0.6em;}
+				a:hover {    width: 100%; font-size: 0.6em;} 
 			}
 		}
 	}

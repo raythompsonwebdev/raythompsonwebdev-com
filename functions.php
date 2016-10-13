@@ -57,7 +57,7 @@ set_post_thumbnail_size( 100, 100, true );
 add_image_size( 'featured-image', 783, 9999 );
 
 // Create three new image sizes
-add_image_size('small', 360, 9999);
+add_image_size('small', 150, 9999);
 add_image_size('medium', 600, 9999);
 add_image_size('largest', 800, 9999);
 add_theme_support( 'title-tag' );
@@ -141,7 +141,7 @@ add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
     add_filter( 'clean_url', 'add_defer_to_js', 11, 1 );
 }*/
 
-function enqueue_scripts_in_footer() {
+/*function enqueue_scripts_in_footer() {
 
     wp_deregister_script( 'jquery' );
     wp_deregister_script( 'jquery-migrate.min' );
@@ -151,7 +151,18 @@ function enqueue_scripts_in_footer() {
     wp_enqueue_script( 'jquery-migrate.min', '/wp-includes/js/jquery/jquery-migrate.min.js', array(), false, true );
   
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts_in_footer' );;
+add_action( 'wp_enqueue_scripts', 'enqueue_scripts_in_footer' );;*/
+
+
+//function deregister_scripts_ray(){
+
+//	wp_deregister_style( 'dashicons');
+//	wp_enqueue_style('admin');
+
+//}
+//add_action( 'wp_enqueue_scripts', 'deregister_scripts_ray', 11);
+
+
 
 function mytheme_register_styles(){
 wp_register_style('custom', get_stylesheet_directory_uri() . '/css/custom-editor-style.css', false,'1.1','all' );
@@ -185,19 +196,17 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
 function my_scripts_own() {
 wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.min.js', array());
-wp_register_script( 'fancy-slide', get_template_directory_uri() . '/js/fancy-slider.js', array('jquery'),'1.0', true );
-wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'1.0', true );
-wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'1.0.0', true );
-wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'1.0.0', true );
-wp_register_script( 'menuswitch', get_template_directory_uri() . '/js/menuswitch.js', array('jquery'),'1.0', true );
-wp_register_script( 'hero-slide', get_template_directory_uri() . '/js/hero-slider.js', array('jquery'),'1.0', true );
-wp_register_script( 'chart', get_template_directory_uri() . '/js/responsive-chart.js', array('jquery'),'1.0', true );
+wp_register_script( 'fancy-slide', get_template_directory_uri() . '/js/fancy-slider.js', array('jquery'),'20161110', true );
+wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
+wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
+wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
+wp_register_script( 'menuswitch', get_template_directory_uri() . '/js/menuswitch.js', array('jquery'),'20161110', true );
+wp_register_script( 'hero-slide', get_template_directory_uri() . '/js/hero-slider.js', array('jquery'),'20161110', true );
+wp_register_script( 'chart', get_template_directory_uri() . '/js/responsive-chart.js', array('jquery'),'20161110', true );
+
 
 wp_enqueue_script('jquery');
-
-
 wp_enqueue_script( 'fancy-slide' );
-
 wp_enqueue_script( 'cookie' );
 wp_enqueue_script( 'menuswitch' );
 wp_enqueue_script( 'easing' );
@@ -222,6 +231,8 @@ echo '<script>
 }
 
 add_action('wp_footer', 'mf_responsive_nav');
+
+
 function ie_scripts() {
 
 	// Load the Internet Explorer specific stylesheet.
@@ -238,6 +249,7 @@ function ie_scripts() {
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'raythompwebdesign-com-respond', get_template_directory_uri() . '/js/Respond-master/src/respond.js', array(), '1.0.0');
+	
 	wp_script_add_data( 'raythompwebdesign-com-respond', 'conditional', 'lte IE 9' );
 
 }
@@ -322,6 +334,9 @@ register_sidebar( array(
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
 
+
+
+
 ?>
 
 
@@ -343,4 +358,7 @@ function add_google_analytics() {
   ga('send', 'pageview');
 
 </script>
+
+
+
 <?php } ?>

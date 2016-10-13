@@ -63,18 +63,18 @@ Template Name: Profile
 
 <article class="intro-text">
 
-    <h1>I build websites and love web development&#46;</h1>
-    <figure class="introimg"><img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/raythompwebdesign_youngraymondthompson.jpg" alt="images of different screen sizes">
+    <h1>My story so far..&#46;</h1>
+    <figure class="introimg"><img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/pic.jpg" alt="image-of-raythompwebdev-com">
 </figure>
 
-    <p>My name is Raymond Thompson&#44; I reside in Hackney East London&#44; I have a passion for web design and web development, particularly front-end development, search engine optimisation and responsive web development&#46;<br/></p>
+    <p>My name is Raymond Thompson&#44; I reside in Hackney East London&#44; I have a passion for web design and web development, particularly responsive front-end development, search engine optimisation and wordpress web development&#46;<br/></p>
 <hr>
-      <p>When I am not working at my day job as Customer Service Advisor I spend most of my free time learning web design and web development and experimenting with code, building <strong><a href="http://localhost/wordpress/websites-2/">websites</a></strong> and other<strong> <a href="http://localhost/wordpress/blog/">web related stuff</a> </strong> &#46;</p>
+      <p>When I am not working at my day job as Customer Service Advisor I spend most of my free time learning web design and web development and experimenting with code, building <strong><a href="http://localhost/wordpress/websites-2/">websites</a></strong> and creating other<strong> <a href="http://localhost/wordpress/blog/">web related stuff</a> </strong> &#46;</p>
 <hr>
 
         <p>I discovered web development late 2011 after attending a 7 month long part-time City &#38; Guilds website design course at the East London Advanced Technology Training Center in East London&#46;<br/></p>
 <hr>
-          <p>Reluctant at first, I soon discovered I enjoyed learning how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
+          <p>Reluctant to atend at first, I soon discovered I enjoyed learning how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
 <hr>
          <p> I learnt how to plan and research&#44; wireframe&#44; build&#44; test and launch a commercial website as part of a team of fellow students working on various web development projects including websites for a few madeup clients and small involvements in real world projects for ELATT's in-house web service 260Web&#46; </p> 
 
@@ -113,9 +113,9 @@ Template Name: Profile
 
       <figure class="abobe">
 
-      <a href="<?php echo home_url();?>/wp-content/uploads/2016/09/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+      <a href="<?php echo home_url();?>/wp-content/uploads/2016/10/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-      <img src="<?php echo home_url();?>/wp-content/uploads/2016/09/Small-photoshop-Certicate-300x232.jpg" alt="Adobe-Photoshop-Certificate">
+      <img src="<?php echo home_url();?>/wp-content/uploads/2016/10/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Certificate">
 
       </a>
 
@@ -135,8 +135,8 @@ Template Name: Profile
 
       <figure class="abobe">
 
-      <a href="http://localhost/wordpress/wp-content/uploads//2016/09/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
-      <img src="http://localhost/wordpress/wp-content/uploads//2016/09/Small-Dreamweaver-Certicate-300x232.jpg" alt="Adobe-Deamweaver-Certificate"></a>
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/Small-Dreamweaver-Certicate.jpg" alt="Adobe-Deamweaver-Certificate"></a>
 
       </figure>
 
@@ -153,9 +153,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads//2016/09/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
       </a>
 
@@ -174,9 +174,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
+      <a href="http://localhost/wordpress/wordpress/wp-content/uploads/2016/10/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
 
       </a>
 
@@ -195,9 +195,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -216,9 +216,9 @@ Template Name: Profile
 
       <figure class="abobe">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/09/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
 
       </a>
 
@@ -237,17 +237,17 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="City and Guilds Level Three">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="City-and-Guilds-Level-Three">
 
       </a>
 
       </figure>
 
-      <h3>Web App Development&#46;</h3>
+      <h3>Mobile App Development&#46;</h3>
       <p>Topics&#58;</p>
-      <p>PHP Essentials&#44; PHP Beyond Basics&#44; Javascript Essentials 2007&#44; Ajax Essentials&#44;  HTML/CSS Essentials&#44; Real World XML&#44; Jquery Essentials&#46;</p>
+      <p>Introduction to Mobile App Development&#44; Designing our App&#44; User Interfaces with HTML&#44;  Coding Functions&#44;  Web Hosting/Deploying Apps&#44; Mobile App Dev Life Cycle&#44;</p>
 
       <p><strong><i>Click Image to Enlarge&#46;</i></strong></p>
     </article>
@@ -258,9 +258,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/09/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
       </a>
 
@@ -279,9 +279,9 @@ Template Name: Profile
 
       <figure class="cert">
 
-      <a href="http://localhost/wordpress/wp-content/uploads/2016/09/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+      <a href="http://localhost/wordpress/wp-content/uploads/2016/10/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-      <img src="http://localhost/wordpress/wp-content/uploads/2016/09/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+      <img src="http://localhost/wordpress/wp-content/uploads/2016/10/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
       </a>
 

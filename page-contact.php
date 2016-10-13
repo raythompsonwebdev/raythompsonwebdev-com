@@ -33,7 +33,7 @@ Template Name: Contact
 <ul class="skills" >
 	
 	<li>
-        <i class="fa fa-envelope"></i><a href="mailto:info@raythompwebdesign.com">info@raythompwebdesign.com</a> </li>
+        <i class="fa fa-envelope"></i><a href="mailto:raymond.thompson@raythompwebdev.co.uk">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
 <br/>
 	<li>
 		<i class="fa fa-envelope"></i><a href="mailto:ray_thomp@hushmail.com">ray_thomp@hushmail.com</a></li>

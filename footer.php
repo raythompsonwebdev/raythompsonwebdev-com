@@ -7,7 +7,7 @@
 
 <div class="socialpics">
 
-<a class="social-icon linkedin-icon" href="https://uk.linkedin.com/pub/raymond-thompson/b8/2b7/1b4" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
+<a class="social-icon linkedin-icon" href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
 
 <a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="Follow me on Twitter"><span><i class="fa fa-twitter"></i></span></a>
 

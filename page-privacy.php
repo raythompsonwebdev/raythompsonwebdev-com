@@ -11,7 +11,8 @@ Template Name: Privacy
        			
 <h1>Privacy Policy</h1>
 
-<p>This privacy policy is for this website raythompwebdesign.com and served by GoDaddy.com and governs the privacy of its users who choose to use it&#46;</p>
+<p>This privacy policy is for this website raythompsonwebdev.co.uk and served by 1and1.com and governs the privacy of its users who choose to use it&#46;</p>
+
 <p>The policy sets out the different areas where user privacy is concerned and outlines the obligations &amp; requirements of the users&#44; the website and website owners&#46; Furthermore the way this website processes&#44; stores and protects user data and information will also be detailed within this policy&#46;</p>
 
 <br/>
