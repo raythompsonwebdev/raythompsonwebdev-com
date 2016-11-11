@@ -38,11 +38,13 @@ if ( have_comments() ) : ?>
       ));
       ?>
     </ol>
-        <div class="navigation">
-            <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'raythompwebdesign-com' ); ?></h1>
-            <div class="right"><?php previous_comments_link(__( '&larr; Older Comments', 'raythompwebdesign-com' )) ?></div>
-            <div class="right"><?php next_comments_link(__( 'Newer Comments &rarr;', 'raythompwebdesign-com' )) ?></div>
-        </div>
+    <div class="nav-links navigation">
+<h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'raythompwebdesign-com' ); ?></h1>
+        <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'raythompwebdesign-com' ) ); ?></div>
+        <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompwebdesign-com' ) ); ?></div>
+
+    </div><!-- .nav-links -->
+        
     <?php
     if ( ! comments_open() ) : // There are comments but comments are now closed
         echo"<p class='nocomments'>Comments are closed.</p>";

@@ -15,7 +15,7 @@
 
 <section id="main-content" class="group" role="main">
 <h1>Web development is my thing</h1>
-<br/>
+
 <div class="front_panel"> 
 
 
@@ -51,9 +51,9 @@
 
 
 <ul class="webskills">
-<li><span class="fa fa-desktop"></span>Website Optimisation&#46;</li>
-<li><span class="fa fa-wordpress"></span>Search Engine Optimisation&#46;</li>
-<li><span class="fa fa-mobile"></span>Digital and Content Marketing&#46;</li>
+<li id="fa-desktop"></span>Website Optimisation&#46;</li>
+<li id="fa-wordpress"></span>Search Engine Optimisation&#46;</li>
+<li id="fa-mobile"></span>Digital and Content Marketing&#46;</li>
 </ul>
 
 <p>From idea to launch , I can help you create a website with the focus on simplicity, usability & accessibility for all users. Using clean semantic code and following latest web standards compliancies I can ensure any website built can be found by search engines,  viewed within in most modern Browsers and fast page loading.</p>

@@ -1,9 +1,7 @@
 <?php
-
 function fix_ie8() {if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");}}
 add_action('bb_send_headers','fix_ie8');  // for bbPress
 add_action('send_headers','fix_ie8');    // for WordPress
-
 
 add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
@@ -33,20 +31,20 @@ if ( ! function_exists( 'my_theme_setup' ) ) :
 
 function my_theme_setup(){
 
-function wpb_add_google_fonts() {
-	 
+    function wpb_add_google_fonts() {
 
-wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
+    	
+
+        wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
 
 
 }
-	 
-add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+ 
 
 //Localization support
 load_theme_textdomain('raythompwebdesign-com', get_template_directory() . '/languages');
 
-add_editor_style( 'css/custom-editor-style.css');
+add_editor_style( 'css/custom-editor-style.css','fonts/font-style.css');
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
@@ -110,6 +108,15 @@ function cubiq_setup () {
 }
 add_action('after_setup_theme', 'cubiq_setup');
 
+function raythompwebdesign_custom_header_setup() {
+	add_theme_support( 'custom-logo', array(
+	    'width' => 96,
+	    'height' => 96,
+	    'flex-width' => false,
+	    'flex-height' => false,
+	) );
+}
+add_action( 'after_setup_theme', 'raythompwebdesign_custom_header_setup' );
 /**
  * Proper way to enqueue scripts and styles
  */
@@ -169,25 +176,26 @@ wp_register_style('custom', get_stylesheet_directory_uri() . '/css/custom-editor
 wp_register_style('reset',get_stylesheet_directory_uri() . '/css/normalize.css', false,'1.1','all' );
 wp_register_style('responsive',get_stylesheet_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.css', false, true );
 wp_register_style('awesome',get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
-wp_register_style('kelson',get_stylesheet_directory_uri() . '/fonts/kelson_regular/stylesheet.css', false,'1.1','all' );
-/*wp_register_style('BloggerSans',get_stylesheet_directory_uri() . '/fonts/BloggerSans/BloggerSans.css', false,'1.1','all' );
-wp_register_style('Viro',get_stylesheet_directory_uri() . '/fonts/Viro/stylesheet.css', false,'1.1','all' );*/
+wp_register_style('custom-fonts',get_stylesheet_directory_uri() . '/fonts/font-style.css', false,'1.1','all' );
 
-
+//wp_enqueue_script( 'raythompwebdesign-com-navigation', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20120206', true );
+//wp_localize_script( 'raythompwebdesign-com-navigation', 'screenReaderText', array(
+//        'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'raythompwebdesign-com' ) . '</span>',
+//        'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'raythompwebdesign-com' ) . '</span>',
+//) );
 wp_enqueue_style( 'custom' );
 wp_enqueue_style( 'reset' );
 wp_enqueue_style( 'responsive' );
 wp_enqueue_style( 'awesome' );
-wp_enqueue_style( 'kelson' );
-/*wp_enqueue_style( 'BloggerSans' );
-wp_enqueue_style( 'Viro' );*/
+wp_enqueue_style( 'custom-fonts' );
+
 
 }
 add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 
 function raythompwebdesign_add_lightbox() {
-	wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
+    wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
     
@@ -195,7 +203,7 @@ function raythompwebdesign_add_lightbox() {
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
 function my_scripts_own() {
-wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.min.js', array());
+wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
 wp_register_script( 'fancy-slide', get_template_directory_uri() . '/js/fancy-slider.js', array('jquery'),'20161110', true );
 wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
 wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
@@ -224,7 +232,7 @@ function mf_responsive_nav(){
 
 echo '<script>
 
-  var navigation = responsiveNav("#mobile-nav" );
+  var navigation = responsiveNav("#mobile-nav");
 
   </script>';
 
@@ -336,29 +344,151 @@ add_action( 'widgets_init', 'contact_widgets_init' );
 
 
 
+if ( ! function_exists( 'popperscores_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function popperscores_posted_on() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+
+	$posted_on = sprintf(
+		esc_html_x( 'published %s', 'post date', 'raythompwebdesign-com' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	$byline = sprintf(
+		esc_html_x( 'by %s', 'post author', 'raythompwebdesign-com' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+	
+	// Display the author avatar if the author has a Gravatar
+	$author_id = get_the_author_meta( 'ID' );
+	if ( popperscores_validate_gravatar( $author_id ) ) {
+		echo '<div class="meta-content has-avatar">';
+		echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
+	} else {
+		echo '<div class="meta-content">';
+	}
+	
+	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		
+                echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( '&#xf130; Leave a comment', 'raythompwebdesign-com' ), esc_html__( '&#xf130; 1 Comment', 'raythompwebdesign-com' ), esc_html__( '&#xf130; % Comments', 'raythompwebdesign-com' ) );
+		echo '</span>';
+                
+                echo '<span class="bylinetag">';
+		the_tags('Tagged with: ', ', ');
+		echo '</span>';
+                
+                
+	}
+	echo '</div><!-- .meta-content -->';
+}
+endif;
+
+if ( ! function_exists( 'popper_index_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for post-date/time and author on index pages.
+ */
+function popperscores_index_posted_on() {
+	
+	$author_id = get_the_author_meta( 'ID' );
+	
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c') ),
+		esc_html( get_the_modified_date() )
+	);
+              
+
+	$posted_on = sprintf(
+		esc_html_x( 'Published %s', 'post date', 'raythompwebdesign-com' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	$byline = sprintf(
+		esc_html_x( 'by %s', 'post author', 'raythompwebdesign-com' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+	// Display the author avatar if the author has a Gravatar
+	$author_id = get_the_author_meta( 'ID' );
+	if ( popperscores_validate_gravatar( $author_id ) ) {
+		echo '<div class="meta-content has-avatar">';
+		echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
+	} else {
+		echo '<div class="meta-content">';
+	}
+	echo '<span class="byline">' . $byline . ' </span>'
+                . '<span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+	
+	echo '</div><!-- .meta-content -->';
+
+}
+endif;
+
+
+function popperscores_validate_gravatar($id_or_email) {
+  //id or email code borrowed from wp-includes/pluggable.php
+	$email = '';
+	if ( is_numeric($id_or_email) ) {
+		$id = (int) $id_or_email;
+		$user = get_userdata($id);
+		if ( $user )
+			$email = $user->user_email;
+	} elseif ( is_object($id_or_email) ) {
+		// No avatar for pingbacks or trackbacks
+		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
+		if ( ! empty( $id_or_email->comment_type ) && ! in_array( $id_or_email->comment_type, (array) $allowed_comment_types ) )
+			return false;
+
+		if ( !empty($id_or_email->user_id) ) {
+			$id = (int) $id_or_email->user_id;
+			$user = get_userdata($id);
+			if ( $user)
+				$email = $user->user_email;
+		} elseif ( !empty($id_or_email->comment_author_email) ) {
+			$email = $id_or_email->comment_author_email;
+		}
+	} else {
+		$email = $id_or_email;
+	}
+
+	$hashkey = md5(strtolower(trim($email)));
+	$uri = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
+
+	$data = wp_cache_get($hashkey);
+	if (false === $data) {
+		$response = wp_remote_head($uri);
+		if( is_wp_error($response) ) {
+			$data = 'not200';
+		} else {
+			$data = $response['response']['code'];
+		}
+	    wp_cache_set($hashkey, $data, $group = '', $expire = 60*5);
+
+	}		
+	if ($data == '200'){
+		return true;
+	} else {
+		return false;
+	}
+}
 
 ?>
-
-
-<?php add_action('wp_footer','add_google_analytics');//Google Analytics
-function add_google_analytics() {
-?>
-<script>
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52392183-1', 'auto');
-
-  ga('send', 'pageview');
-
-</script>
-
-
-
-<?php } ?>

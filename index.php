@@ -5,8 +5,13 @@
 <h1>Interested in web design and web development&#63;</h1>
 
 <p>Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like</p>
-
 <hr class="blog-spacer">
+
+<?php  if ( is_home() || is_archive() ) : ?>
+<span class="social-1"><?php get_search_form(true); ?></span>
+<?php else : ?>
+
+<?php endif; ?>
 
 <section id="blogleftside"> 
 	
@@ -20,16 +25,43 @@
 
 <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
-<header class="byline"> 
-<span class="bylineauthor"> Posted by <?php the_author_posts_link(); ?> on <?php the_date('jS F Y');?> at <?php the_time('g:i a'); ?></span>
+<header class="byline">
+    
+<div class="entry-meta">
+           
+    <div class="meta-content">
+
+    <?php popperscores_posted_on(); ?> 
+    
+
+
+        
+    </div>
+</div><!-- .entry-meta -->
+
 </header>
 
 
 
 <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>;">
-<figure class="featuredImage"><?php the_post_thumbnail('featured-image');?></figure>
-</a>
 
+<?php 
+    if ( has_post_thumbnail() ) { ?>
+        <figure class="featuredImage">
+                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+                    <?php the_post_thumbnail('featured-image'); ?>
+                </a>
+        </figure>
+    <?php }else{?>
+    <figure class="featuredImage">
+                <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+                    <?php the_post_thumbnail(); ?>
+                </a>
+        </figure>
+    <?php }
+    ?>
+
+        
 <section class="newsExcerpt"><?php the_excerpt();?></section>
 
 <br/>
