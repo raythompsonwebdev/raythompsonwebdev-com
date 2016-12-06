@@ -14,7 +14,11 @@ jQuery(document).ready(function($){
 
      //scroll it to the right position
 
+<<<<<<< HEAD
     $('.hero-slider .mask').scrollTo($(this).attr('rel'), 300);
+=======
+    $('.mask').scrollTo($(this).attr('rel'), 300);
+>>>>>>> origin/master
 
      //disable click event
 

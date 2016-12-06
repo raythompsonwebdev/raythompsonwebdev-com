@@ -24,6 +24,11 @@ Template Name: Contact
 
 
 <br/>
+<article class="social_media_container">
+
+
+
+</article>
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('map')) : ?>
 

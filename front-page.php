@@ -16,7 +16,11 @@
 <section id="main-content" class="group" role="main">
 <h1>Web development is my thing</h1>
 
+<<<<<<< HEAD
 <div class="front_panel">
+=======
+<div class="front_panel"> 
+>>>>>>> origin/master
 
 
 <section class="frontpage_cont">
@@ -27,11 +31,17 @@
 
 <figure class="image-4">
 
+<<<<<<< HEAD
 
 
 <!--<img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/frontslider-image/mobileimages1aa.png" alt="images of different screen sizes">-->
 
 <object type="image/svg+xml" id="image-4" data="<?php echo home_url();?>/wp-content/themes/raythompwebdesign-com/graphics/responsive-design-devices-2.1.svg" >
+=======
+<!--<img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/frontslider-image/mobileimages1aa.png" alt="images of different screen sizes">-->
+
+<object id="image-4" data="<?php echo home_url();?>/wp-content/themes/raythompwebdesign-com/graphics/responsive-design-devices-2.svg" type="image/svg+xml">
+>>>>>>> origin/master
 </object>
 </figure>
 

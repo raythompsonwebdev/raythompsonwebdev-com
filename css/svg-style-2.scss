@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 @import 'svg-partials/mixins.scss';
 
 @import url('../fonts/font-style.css');
@@ -9,13 +10,109 @@ svg#svg4190{
 
 }
 
+=======
+@mixin transformerorigin( $transformerorigin) {
+  transform-origin: $transformerorigin;
+  -webkit-transform-origin: $transformerorigin;
+  -moz-transform-origin: $transformerorigin;
+  -o-transform-origin: $transformerorigin;
+}
+
+@mixin transforming-things( $transforming-things) {
+  transform: $transforming-things;
+  -webkit-transform: $transforming-things;
+  -moz-transform: $transforming-things;
+  -o-transform: $transforming-things;
+}
+
+@mixin transitioner( $transitioner) {
+-webkit-transition: $transitioner;
+-moz-transition: $transitioner;
+-o-transition: $transitioner;
+transition: $transitioner;
+}
+
+@mixin anime-mode( $anime-mode) {
+  animation-name: $anime-mode;
+  -webkit-animation-name: $anime-mode;
+  -moz-animation-name: $anime-mode;
+  -o-animation-name: $anime-mode;
+}
+
+@mixin Timing( $timing) {
+  animation-timing-function: $timing;
+  -webkit-animation-timing-function: $timing;
+  -moz-animation-timing-function: $timing;
+  -o-animation-timing-function: $timing;
+}
+
+@mixin delayer( $delayer) {
+  animation-delay: $delayer;
+  -webkit-animation-delay: $delayer;
+  -moz-animation-delay: $delayer;
+  -o-animation-animation-delay: $delayer;
+}
+
+@mixin durationer( $durationer) {
+  animation-duration: $durationer;
+  -webkit-animation-duration: $durationer;
+  -moz-animation-duration: $durationer;
+  -o-animation-duration: $durationer;
+}
+
+@mixin directions( $directions) {
+  animation-direction: $directions;
+  -webkit-animation-direction: $directions;
+  -moz-animation-direction: $directions;
+  -o-animation-direction: $directions;
+}
+
+@mixin fillermode( $fillermode) {
+  animation-fill-mode: $fillermode;
+  -webkit-animation-fill-mode: $fillermode;
+  -moz-animation-fill-mode: $fillermode;
+  -o-animation-fill-mode: $fillermode;
+}
+
+@mixin iteration-mode( $iteration-mode) {
+  animation-iteration-count: $iteration-mode;
+  -webkit-animation-iteration-count: $iteration-mode;
+  -moz-animation-iteration-count: $iteration-mode;
+  -o-animation-iteration-count: $iteration-mode;
+}
+
+
+@mixin keyframes( $name ) {
+
+  @-webkit-keyframes #{ $name } {
+        @content;
+  }
+  @-moz-keyframes #{ $name } {
+        @content;
+  }
+  @-o-keyframes #{ $name } {
+        @content;
+  }
+  @keyframes #{ $name } {
+        @content;
+  }
+}
+
+@import url('../fonts/font-style.css');
+
+$FontStyle: 'Titillium Web','Kelson Sans', arial, Verdana, helvetica, sans-serif ;
+>>>>>>> origin/master
 
 g#layer6 {
 
   position:absolute;
   opacity: 1;
   z-index:-1;
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/master
 }
 
 
@@ -24,7 +121,11 @@ g#layer9 {
   position:absolute;
   opacity: 0;
   left:-600px;
+<<<<<<< HEAD
   display:none;
+=======
+    
+>>>>>>> origin/master
   @include transformerorigin( 50% 50% );
 
 
@@ -33,11 +134,16 @@ g#layer9 {
   @include Timing( ease-in-out );
   @include iteration-mode( 1 );
   @include directions( forwards );
+<<<<<<< HEAD
   @include delayer( 1s );
+=======
+  @include delayer( 0.5s );
+>>>>>>> origin/master
   @include fillermode( both );
 
   @include transforming-things ( translateX(-600px));
   @include transitioner( all 0.1s ease-in-out);
+<<<<<<< HEAD
 
 
 }
@@ -45,19 +151,35 @@ g#layer9 {
 @include keyframes( desk-slide ) {
   0%{display:none;}
 
+=======
+  
+   
+}
+
+@include keyframes( desk-slide ) {
+  
+>>>>>>> origin/master
   20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
 
   75%{left: 0; opacity:1; @include transforming-things ( rotate(360deg) translateX(0px) scale(1)); }
 
   100%{ left: 0; opacity:0; @include transforming-things ( rotate(-2700deg) translateX(0px) scale(0)); }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/master
 }
 
 g#layer8 {
   position:absolute;
   opacity: 0;
   left:600px;
+<<<<<<< HEAD
   display:none;
+=======
+  
+>>>>>>> origin/master
   @include transformerorigin( 50% 50% );
   /*@include anime-mode( mob-slide 5s ease-in-out 1 forwards 7s both);*/
 
@@ -71,29 +193,51 @@ g#layer8 {
 
   @include transforming-things ( translateX(600px));
   @include transitioner( all 0.1s ease-in-out);
+<<<<<<< HEAD
 
 }
 
 @include keyframes( mob-slide ) {
   0%{display:none;}
+=======
+   
+}
+
+@include keyframes( mob-slide ) {
+>>>>>>> origin/master
 
   20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
 
   75%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
 
   100%{ left: 0; opacity:0; @include transforming-things ( translateX(0px) scale(10)); }
+<<<<<<< HEAD
 
 }
 
+=======
+    
+}
+
+
+
+>>>>>>> origin/master
 g#layer10 {
   position:absolute;
   opacity: 0;
   left:-600px;
+<<<<<<< HEAD
   display:none;
 
   @include transformerorigin( 50% 50% );
   /*@include anime-mode( wordpress-cover-slide 5s ease-in-out 1 forwards 12s both);*/
 
+=======
+   
+  @include transformerorigin( 50% 50% );
+  /*@include anime-mode( wordpress-cover-slide 5s ease-in-out 1 forwards 12s both);*/
+  
+>>>>>>> origin/master
   @include anime-mode( wordpress-cover-slide);
   @include durationer( 3s );
   @include Timing( ease-in-out );
@@ -104,12 +248,20 @@ g#layer10 {
 
   @include transforming-things ( translateX(-600px));
   @include transitioner( all 0.1s ease-in-out);
+<<<<<<< HEAD
 
 }
 
 @include keyframes( wordpress-cover-slide ) {
   0%{display:none;}
 
+=======
+      
+}
+
+@include keyframes( wordpress-cover-slide ) {
+    
+>>>>>>> origin/master
   20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
 
   50%{ left: 0; opacity:1; @include transforming-things ( translateX(100px) ); }
@@ -117,17 +269,30 @@ g#layer10 {
   50%{ left: 0; opacity:1; @include transforming-things ( translateX(300px) ); }
 
   100%{ left: 0; opacity:1; @include transforming-things ( translateX(600px) ); }
+<<<<<<< HEAD
 
 }
 
+=======
+    
+}
+
+
+>>>>>>> origin/master
 g#layer11 {
   position:absolute;
   opacity: 0;
   left:600px;
+<<<<<<< HEAD
   display:none;
 
   @include transformerorigin( 50% 50% );
 
+=======
+ 
+  @include transformerorigin( 50% 50% );
+  
+>>>>>>> origin/master
   @include anime-mode( web-design-slide);
   @include durationer( 3s );
   @include Timing( ease-in-out );
@@ -138,27 +303,44 @@ g#layer11 {
 
   @include transforming-things ( translateX(600px));
   @include transitioner( all 0.1s ease-in-out);
+<<<<<<< HEAD
 
 }
 
 @include keyframes( web-design-slide  ) {
   0%{display:none;}
 
+=======
+    
+}
+
+@include keyframes( web-design-slide  ) {
+  
+>>>>>>> origin/master
   20%{ @include transforming-things (  translateX(0px) scale(1)); opacity:1; left: 0;}
 
   50%{ left: 0; opacity:1; @include transforming-things (rotate(360deg) translateX(0px) scale(1) ); }
 
   100%{ left: 0; opacity:0; @include transforming-things (rotate(2700deg) translateX(0px) scale(0) ); }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> origin/master
 }
 
 g#layer12{
 
   position:absolute;
   opacity: 0;
+<<<<<<< HEAD
   display:none;
 
 
+=======
+ 
+    
+>>>>>>> origin/master
   @include transformerorigin( 277.2356px 165.47476px );
   /*@include anime-mode( web-design-btn 4s ease-in-out 1 forwards 21s both);*/
 
@@ -171,6 +353,7 @@ g#layer12{
   @include fillermode( both );
   @include transforming-things ( translateX(600px));
   @include transitioner( all 0.1s ease-in-out);
+<<<<<<< HEAD
 
 }
 
@@ -187,6 +370,22 @@ g#layer12{
 #g4408{
 
 
+=======
+  
+}
+
+@include keyframes( web-design-btn  ) {
+  
+ 
+  
+  100%{ left: 0; opacity: 1; @include transforming-things ( translateX(0px)); }
+    
+}
+
+#g4408{ 
+
+  
+>>>>>>> origin/master
 
   @include transformerorigin( 50% 50% );
   @include anime-mode( web-design-btn-ft);
@@ -197,11 +396,16 @@ g#layer12{
   @include delayer( 17.5s );
   @include fillermode( both );
   @include transitioner( all 0.1s ease-in-out);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/master
 
 }
 
 @include keyframes( web-design-btn-ft  ) {
+<<<<<<< HEAD
 
   50%{  @include transforming-things ( scaleX(1.1)); }
   100%{   @include transforming-things ( scaleX(1));}
@@ -212,3 +416,17 @@ g#layer12{
 /*:hover{ @include transforming-things ( scale(0.9) );}*/
 
 #g4408:hover{@include transitioner( all 0.1s ease-in-out);  @include transforming-things ( scaleX(1.1));}
+=======
+    
+  50%{  @include transforming-things ( scaleX(1.1)); }
+  100%{   @include transforming-things ( scaleX(1));}
+    
+}
+
+
+/*:hover{ @include transforming-things ( scale(0.9) );}*/ 
+
+#g4408:hover{@include transitioner( all 0.1s ease-in-out);  @include transforming-things ( scaleX(1.1));}
+
+
+>>>>>>> origin/master

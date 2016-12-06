@@ -56,7 +56,11 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
+<<<<<<< HEAD
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-campingadvice-home-page-small.jpg" alt="CampingAdvice.com website home page" >
+=======
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-campingadvice-home-page-small.jpg" alt="CampingAdvice.com website home page" >
+>>>>>>> origin/master
 
   <figcaption class="showcase-content showcase">
   <h1>Website:</h1>
@@ -69,7 +73,11 @@ Template Name: Websites
   <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP &#44; MySQLi&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
+<<<<<<< HEAD
   <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-campingadvice-home-page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
+=======
+  <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-campingadvice-home-page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
+>>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/campingadvice-com">Visit Website</a></figure>
   </figcaption>
 
@@ -81,10 +89,17 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <section id="panel2" class="dbox prod-cnt webdesign">
 
+<<<<<<< HEAD
 
   <figure class="showcase-img" id="showcaseimg2">
 
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-mannering-music-home-page-small.jpg" alt="Mannering Music website home page">
+=======
+ 
+  <figure class="showcase-img" id="showcaseimg2">
+
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-mannering-music-home-page-small.jpg" alt="Mannering Music website home page">
+>>>>>>> origin/master
 
   <figcaption class="showcase-content">
   <h1>Website:</h1>
@@ -95,7 +110,11 @@ Template Name: Websites
   <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46; Ajax&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
+<<<<<<< HEAD
   <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-mannering-music-page-large.jpg" title="Mannering Music website home page">See Image</a>
+=======
+  <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-mannering-music-page-large.jpg" title="Mannering Music website home page">See Image</a>
+>>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/mannering">Visit Website</a></div>
   </figcaption>
   </figure>
@@ -109,7 +128,11 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg3">
 
+<<<<<<< HEAD
     <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-car-rental-home-page-small.jpg" alt="Car Rental website home page">
+=======
+    <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-car-rental-home-page-small.jpg" alt="Car Rental website home page">
+>>>>>>> origin/master
 
     <figcaption class="showcase-content">
     <h1>Website:</h1>
@@ -120,7 +143,11 @@ Template Name: Websites
     <p>Foundation 6&#44;HTML5&#44; CSS3&#44; Jquery UI&#44; Jquery&#44; Javascript&#44;</p>
     <h1>Formats</h1>
     <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
+<<<<<<< HEAD
     <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-car-rental-home-page-large.jpg" title="Car Rental website home page">See Image</a>
+=======
+    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-car-rental-home-page-large.jpg" title="Car Rental website home page">See Image</a>
+>>>>>>> origin/master
     <a href="http://www.raythompwebdesign.com/car-rental">Visit Website</a></div>
     </figcaption>
 
@@ -135,7 +162,11 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg4">
 
+<<<<<<< HEAD
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-shoe-store-home-page-small.jpg" alt="Shoestore website home page">
+=======
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-shoe-store-home-page-small.jpg" alt="Shoestore website home page">
+>>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-d">
   <h1>Website:</h1>
@@ -145,8 +176,13 @@ Template Name: Websites
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Jquery&#46;</p>
   <h1>Formats</h1>
+<<<<<<< HEAD
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-shoe-store-home-page-large-1.jpg"  title="Shoestore website home page">See Image</a>
+=======
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p> 
+  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-shoe-store-home-page-large-1.jpg"  title="Shoestore website home page">See Image</a>
+>>>>>>> origin/master
   <a href="http://www.raythompwebdesign.com/shoestore">Visit Website</a></div>
   </figcaption>
 
@@ -161,18 +197,31 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg5">
 
+<<<<<<< HEAD
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-greenfootprints-home-page-small.jpg" alt="Greenfootprints home page">
+=======
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-greenfootprints-home-page-small.jpg" alt="Greenfootprints home page">
+>>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-e">
     <h1>Website:</h1>
     <p>Greenfootprints.com</p>
     <h1>Description:</h1>
+<<<<<<< HEAD
     <p>Website based on website project I built as a task for City & Guilds Level 2 Website exam. See full website brief on <strong><a href="">GitHub</a></strong>&#46;</p>
     <h1>Development Technologies:</h1>
     <p>HTML5&#44; CSS3&#46; </p>
     <h1>Formats</h1>
     <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
     <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-greenfootprints-home-page-large.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
+=======
+    <p>Website based on website project I built as a task for City & Guilds Level 2 Website exam. See full website brief on <strong><a href="">GitHub</a></strong>&#46;</p> 
+    <h1>Development Technologies:</h1>
+    <p>HTML5&#44; CSS3&#46; </p>
+    <h1>Formats</h1>
+    <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p> 
+    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-greenfootprints-home-page-large.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
+>>>>>>> origin/master
   </figcaption>
 
   </figure>
@@ -186,7 +235,11 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
+<<<<<<< HEAD
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-travel-agency-website-small.png"  alt="Travel Agency website home page" >
+=======
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-travel-agency-website-small.png"  alt="Travel Agency website home page" >
+>>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-f">
   <h1>Website:</h1>
@@ -196,8 +249,13 @@ Template Name: Websites
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Jquery&#46; </p>
   <h1>Formats</h1>
+<<<<<<< HEAD
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
   <div class="links"><a href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-travel-agency-page-large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
+=======
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>     
+  <div class="links"><a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-travel-agency-page-large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
+>>>>>>> origin/master
   </figcaption>
 
   </figure>
@@ -211,7 +269,11 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg7">
 
+<<<<<<< HEAD
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/portfolio-graphics-mixtape-1.jpg" alt="Image of mixtape cover" >
+=======
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/portfolio-graphics-mixtape-1.jpg" alt="Image of mixtape cover" >
+>>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-g" >
 
@@ -224,7 +286,11 @@ Template Name: Websites
   <p><strong>Mixtape Cover-</strong>Mixtape cover for an idea I had for a mixtape of various reggae artists mixed over Wu-Tang Clan music Instrumentals like C.R.E.A.M. &#44; Triumph and more&#46;</p>
 
   <div class="links">
+<<<<<<< HEAD
   <a href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/portfolio-graphics-mixtape.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
+=======
+  <a href="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/portfolio-graphics-mixtape.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
+>>>>>>> origin/master
 
   </figcaption>
   </figure>
@@ -232,13 +298,21 @@ Template Name: Websites
 <!-- Panel Container Ends Here -->
 
 <!-- Panel Container Starts Here -->
+<<<<<<< HEAD
 <section id="panel8" class="dbox prod-cnt foundation">
+=======
+<section id="panel8" class="dbox prod-cnt graphic">
+>>>>>>> origin/master
 
   <!--<button id="text-btn"> Click here to see website brief</button>-->
 
   <figure class="showcase-img" id="showcaseimg8">
 
+<<<<<<< HEAD
   <img src="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-fitness-club-home-page-small.jpg" alt="">
+=======
+  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/10/www-fitness-club-home-page-small.jpg" alt="">
+>>>>>>> origin/master
 
   <figcaption class="showcase-content showcase-h">
 
@@ -249,16 +323,27 @@ Template Name: Websites
   <h1>Development Technologies:</h1>
   <p>HTML5&#44; CSS3 and Foundation 5&#46; </p>
   <h1>Formats</h1>
+<<<<<<< HEAD
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
 
   <div class="links">
   <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/sites/2/2016/11/www-fitness-club-home-page-large.jpg"  title="">LINK</a>
+=======
+  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>  
+
+  <div class="links">
+  <a class="fancybox" href="<?php echo home_url();?>/wordpresss/wp-content/uploads/2016/09/www-fitness-club-home-page-large.jpg"  title="">LINK</a>
+>>>>>>> origin/master
   </div>
 
   </figcaption>
 
   </figure >
+<<<<<<< HEAD
 </section><!-- Panel Container Ends Here -->
+=======
+</section><!-- Panel Container Ends Here -->  
+>>>>>>> origin/master
 
 
 <div class="clearfix"></div>
@@ -271,4 +356,8 @@ Template Name: Websites
 
 <div class="clearfix"></div>
 
+<<<<<<< HEAD
 <?php get_footer(); ?>
+=======
+<?php get_footer(); ?>
+>>>>>>> origin/master

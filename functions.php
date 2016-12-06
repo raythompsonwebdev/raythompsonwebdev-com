@@ -29,11 +29,24 @@ if ( ! function_exists( 'my_theme_setup' ) ) :
 
 function my_theme_setup(){
 
+<<<<<<< HEAD
 function wpb_add_google_fonts() {
+=======
+    function wpb_add_google_fonts() {
+
+    	
+
+        wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
+
+>>>>>>> origin/master
 
     wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700', false );
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/master
 
 //Localization support
 load_theme_textdomain('raythompwebdesign-com', get_template_directory() . '/languages');
@@ -43,14 +56,20 @@ add_editor_style( 'css/custom-editor-style.css','fonts/font-style.css');
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
 add_theme_support( 'post-thumbnails' );
+
 set_post_thumbnail_size( 100, 100, true );
 
 add_image_size( 'featured-image', 783, 9999 );
 
 // Create three new image sizes
 add_image_size('small', 150, 9999);
+<<<<<<< HEAD
 add_image_size('medium', 800, 9999);
 add_image_size('largest', 1024, 9999);
+=======
+add_image_size('medium', 600, 9999);
+add_image_size('largest', 800, 9999);
+>>>>>>> origin/master
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header');
 add_theme_support( 'custom-background');
@@ -102,6 +121,7 @@ remove_action('wp_head', 'feed_links_extra', 3);
 add_action('after_setup_theme', 'cubiq_setup');
 
 function raythompwebdesign_custom_header_setup() {
+<<<<<<< HEAD
 		add_theme_support( 'custom-logo', array(
 		    'width' => 96,
 		    'height' => 96,
@@ -161,10 +181,33 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts_in_footer' );;*/
 //add_action( 'wp_enqueue_scripts', 'deregister_scripts_ray', 11);
 
 
+=======
+	add_theme_support( 'custom-logo', array(
+	    'width' => 96,
+	    'height' => 96,
+	    'flex-width' => false,
+	    'flex-height' => false,
+	) );
+}
+add_action( 'after_setup_theme', 'raythompwebdesign_custom_header_setup' );
+>>>>>>> origin/master
 /**
  * Proper way to enqueue scripts and styles
  */
+function remove_version_parameter( $src ){
+    // Check if version parameter exist
+    $parts = explode( '?ver', $src );
+    // return without version parameter
+    return $parts[0];
+}
+// filter .js files
+add_filter( 'script_loader_src', 'remove_version_parameter', 15, 1 );
+// filter .css files
+add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
 
+
+
+<<<<<<< HEAD
 function mytheme_register_styles(){
 //wp_register_style('minified', get_stylesheet_directory_uri() . '/style-min.css', false,'1.1','all' );
 wp_register_style('custom', get_stylesheet_directory_uri() . '/custom-editor-style.css', false,'1.1','all' );
@@ -179,11 +222,68 @@ wp_register_style('custom-fonts',get_stylesheet_directory_uri() . '/fonts/font-s
 //) );
 
 //wp_enqueue_style( 'minified' );
+=======
+/*if ( ! function_exists( 'add_defer_to_js' ) && ! is_admin() ) {
+
+    function add_defer_to_js( $url ) {
+
+        if ( FALSE === strpos( $url, '.js' ) ) { 
+            // not our file
+            return $url;
+        }
+
+        // Must be a ', not "!
+        return "$url' defer='defer";
+    }
+    add_filter( 'clean_url', 'add_defer_to_js', 11, 1 );
+}*/
+
+/*function enqueue_scripts_in_footer() {
+
+    wp_deregister_script( 'jquery' );
+    wp_deregister_script( 'jquery-migrate.min' );
+    wp_register_script( 'jquery', '/wp-includes/js/jquery/jquery.js', array(), false, true );
+    wp_register_script( 'jquery-migrate.min', '/wp-includes/js/jquery/jquery-migrate.min.js', array(), false, true );
+    wp_enqueue_script( 'jquery', '/wp-includes/js/jquery/jquery.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'jquery-migrate.min', '/wp-includes/js/jquery/jquery-migrate.min.js', array(), false, true );
+  
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_scripts_in_footer' );;*/
+
+
+//function deregister_scripts_ray(){
+
+//	wp_deregister_style( 'dashicons');
+//	wp_enqueue_style('admin');
+
+//}
+//add_action( 'wp_enqueue_scripts', 'deregister_scripts_ray', 11);
+
+
+
+function mytheme_register_styles(){
+wp_register_style('custom', get_stylesheet_directory_uri() . '/css/custom-editor-style.css', false,'1.1','all' );
+wp_register_style('reset',get_stylesheet_directory_uri() . '/css/normalize.css', false,'1.1','all' );
+wp_register_style('responsive',get_stylesheet_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.css', false, true );
+wp_register_style('awesome',get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
+wp_register_style('custom-fonts',get_stylesheet_directory_uri() . '/fonts/font-style.css', false,'1.1','all' );
+
+//wp_enqueue_script( 'raythompwebdesign-com-navigation', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20120206', true );
+//wp_localize_script( 'raythompwebdesign-com-navigation', 'screenReaderText', array(
+//        'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'raythompwebdesign-com' ) . '</span>',
+//        'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'raythompwebdesign-com' ) . '</span>',
+//) );
+>>>>>>> origin/master
 wp_enqueue_style( 'custom' );
 wp_enqueue_style( 'reset' );
 wp_enqueue_style( 'responsive' );
 wp_enqueue_style( 'awesome' );
 wp_enqueue_style( 'custom-fonts' );
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 }
 add_action('wp_enqueue_scripts','mytheme_register_styles');
 
@@ -197,6 +297,7 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
 function my_scripts_own() {
 wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
+<<<<<<< HEAD
 //wp_register_script( 'fancy-slide', get_template_directory_uri() . '/js/fancy-slider.js', array('jquery'),'20161110', true );
 wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
 wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
@@ -232,6 +333,42 @@ echo '<script>
   </script>';
 
 }
+=======
+wp_register_script( 'fancy-slide', get_template_directory_uri() . '/js/fancy-slider.js', array('jquery'),'20161110', true );
+wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
+wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
+wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
+wp_register_script( 'menuswitch', get_template_directory_uri() . '/js/menuswitch.js', array('jquery'),'20161110', true );
+wp_register_script( 'hero-slide', get_template_directory_uri() . '/js/hero-slider.js', array('jquery'),'20161110', true );
+wp_register_script( 'chart', get_template_directory_uri() . '/js/responsive-chart.js', array('jquery'),'20161110', true );
+
+
+wp_enqueue_script('jquery');
+wp_enqueue_script( 'fancy-slide' );
+wp_enqueue_script( 'cookie' );
+wp_enqueue_script( 'menuswitch' );
+wp_enqueue_script( 'easing' );
+wp_enqueue_script( 'scrollto' );
+/*wp_enqueue_script( 'custom' );*/
+wp_enqueue_script( 'hero-slide' );
+wp_enqueue_script( 'chart' );
+wp_enqueue_script( 'responsive-chart' );
+
+}
+
+add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
+
+function mf_responsive_nav(){
+
+echo '<script>
+
+  var navigation = responsiveNav("#mobile-nav");
+
+  </script>';
+
+}
+
+>>>>>>> origin/master
 add_action('wp_footer', 'mf_responsive_nav');
 
 
@@ -251,7 +388,11 @@ function ie_scripts() {
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'raythompwebdesign-com-respond', get_template_directory_uri() . '/js/Respond-master/src/respond.js', array(), '1.0.0');
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 	wp_script_add_data( 'raythompwebdesign-com-respond', 'conditional', 'lte IE 9' );
 
 }
@@ -336,6 +477,7 @@ register_sidebar( array(
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
 
+<<<<<<< HEAD
 
 function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
  $width = $size[0];
@@ -353,6 +495,10 @@ function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
 }
 add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
 
+=======
+
+
+>>>>>>> origin/master
 if ( ! function_exists( 'popperscores_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -379,7 +525,11 @@ function popperscores_posted_on() {
 		esc_html_x( 'by %s', 'post author', 'raythompwebdesign-com' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 	// Display the author avatar if the author has a Gravatar
 	$author_id = get_the_author_meta( 'ID' );
 	if ( popperscores_validate_gravatar( $author_id ) ) {
@@ -388,6 +538,7 @@ function popperscores_posted_on() {
 	} else {
 		echo '<div class="meta-content">';
 	}
+<<<<<<< HEAD
 
 	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -401,6 +552,21 @@ function popperscores_posted_on() {
 		echo '</span>';
 
 
+=======
+	
+	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		
+                echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( '&#xf130; Leave a comment', 'raythompwebdesign-com' ), esc_html__( '&#xf130; 1 Comment', 'raythompwebdesign-com' ), esc_html__( '&#xf130; % Comments', 'raythompwebdesign-com' ) );
+		echo '</span>';
+                
+                echo '<span class="bylinetag">';
+		the_tags('Tagged with: ', ', ');
+		echo '</span>';
+                
+                
+>>>>>>> origin/master
 	}
 	echo '</div><!-- .meta-content -->';
 }
@@ -411,9 +577,15 @@ if ( ! function_exists( 'popper_index_posted_on' ) ) :
  * Prints HTML with meta information for post-date/time and author on index pages.
  */
 function popperscores_index_posted_on() {
+<<<<<<< HEAD
 
 	$author_id = get_the_author_meta( 'ID' );
 
+=======
+	
+	$author_id = get_the_author_meta( 'ID' );
+	
+>>>>>>> origin/master
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
@@ -425,7 +597,11 @@ function popperscores_index_posted_on() {
 		esc_attr( get_the_modified_date( 'c') ),
 		esc_html( get_the_modified_date() )
 	);
+<<<<<<< HEAD
 
+=======
+              
+>>>>>>> origin/master
 
 	$posted_on = sprintf(
 		esc_html_x( 'Published %s', 'post date', 'raythompwebdesign-com' ),
@@ -446,7 +622,11 @@ function popperscores_index_posted_on() {
 	}
 	echo '<span class="byline">' . $byline . ' </span>'
                 . '<span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> origin/master
 	echo '</div><!-- .meta-content -->';
 
 }
@@ -492,7 +672,11 @@ function popperscores_validate_gravatar($id_or_email) {
 		}
 	    wp_cache_set($hashkey, $data, $group = '', $expire = 60*5);
 
+<<<<<<< HEAD
 	}
+=======
+	}		
+>>>>>>> origin/master
 	if ($data == '200'){
 		return true;
 	} else {
@@ -500,4 +684,8 @@ function popperscores_validate_gravatar($id_or_email) {
 	}
 }
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> origin/master
