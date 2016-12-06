@@ -2,21 +2,20 @@
 
 <aside id="blogrightside" class="group" role="complementary">
 
-<article class="blogbox">
+    <article class="blogbox">
+        <h2>Twitter</h2>
 
-<span class="social-1"><?php get_search_form(true); ?></span>
-</article>
-<article class="blogbox"> 
+    </article>
 
-<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Primary Sidebar') ) : ?>
+    <article class="blogbox">
 
-<?php endif; ?>
+        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar')) : ?>
 
-</article>
-<article class="blogbox"> 
-<h2>Tag Cloud</h2> 
-<ul class="tagcloud"><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+        <?php endif; ?>
 
-</article>
+    </article>
+    <article class="blogbox">
+      
+    </article>
 
-</aside>    
+</aside>

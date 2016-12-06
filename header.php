@@ -26,12 +26,44 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<body <?php body_class($class); ?>>
+<body <?php body_class(); ?>>
 
 <div id="wrapper_container">
  	
 
 <header class="group">
+    
+ <?php // Display site icon or first letter as logo ?>
+    <div class="site-logo">
+            <?php $site_title = get_bloginfo( 'name' ); ?>
+            <a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <div class="screen-reader-text">
+                        <?php printf( esc_html__('Go to the home page of %1$s', 'raythompwebdesign-com'), $site_title ); ?>
+                    </div>
+                    <?php
+                    if ( has_custom_logo() ) {
+                            the_custom_logo();
+                    } else { ?>
+                            <div class="site-firstletter" aria-hidden="true">
+                                    <?php echo substr($site_title, 0, 1); ?>
+                            </div>
+                    <?php } ?>
+            </a>
+    </div>
+
+<?php  if ( is_front_page() || is_page()) : ?>
+	
+<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
+<?php else : ?>
+<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>            
+<?php endif;
+
+$description = get_bloginfo( 'description', 'display' );
+if ( $description || is_customize_preview() ) : ?>
+<h2 class="site-description"><?php echo $description; ?></h2>
+
+
+<?php endif; ?>
 
 <nav >
 <ul id="innernav" > 
@@ -49,21 +81,6 @@
 
 
 </nav>
-<?php  if ( is_front_page() || is_page()) : ?>
-	
-<h1 id="logo"><span>RAYTHOMP</span><span >WEBDESIGN</span>.COM </h1>
-<?php else : ?>
-<h1 id="logo-blog"><span >RAYTHOMP</span><span >WEBDESIGN</span>BLOG</h1>            
-<?php endif;
-
-$description = get_bloginfo( 'description', 'display' );
-if ( $description || is_customize_preview() ) : ?>
-
-<h2 class="site-description"><?php echo $description; ?></h2>
-
-<?php endif; ?>
-
-
 
 
 </header>

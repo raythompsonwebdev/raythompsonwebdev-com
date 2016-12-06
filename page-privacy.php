@@ -11,7 +11,8 @@ Template Name: Privacy
        			
 <h1>Privacy Policy</h1>
 
-<p>This privacy policy is for this website raythompwebdesign.com and served by GoDaddy.com and governs the privacy of its users who choose to use it&#46;</p>
+<p>This privacy policy is for this website raythompsonwebdev.co.uk and served by 1and1.com and governs the privacy of its users who choose to use it&#46;</p>
+
 <p>The policy sets out the different areas where user privacy is concerned and outlines the obligations &amp; requirements of the users&#44; the website and website owners&#46; Furthermore the way this website processes&#44; stores and protects user data and information will also be detailed within this policy&#46;</p>
 
 <br/>
@@ -27,9 +28,9 @@ Template Name: Privacy
 
 <p>Every effort has been made to ensure a safe and secure form to email submission process but advise users using such form to email processes that they do so at their own risk&#46;</p>
 
-<p>This website and its owners use any information submitted to provide you with further information about the products &#47; services they offer or to assist you in answering any questions or queries you may have submitted&#46; This includes using your details to subscribe you to any email newsletter program the website operates but only if this was made clear to you and your express permission was granted when submitting any form to email process&#46; </p>
+<p>This website and its owners use any information submitted to assist you in answering any questions or queries you may have submitted&#46; This includes using your details to subscribe you to any email newsletter program the website operates but only if this was made clear to you and your express permission was granted when submitting any form to email process&#46; </p>
 
-<p>Or whereby you the consumer have previously purchased from or enquired about purchasing from the company a product or service that the email newsletter relates to&#46; This is by no means an entire list of your user rights in regard to receiving email marketing material&#46; Your details are not passed on to any third parties&#46;</p>
+<p>Or whereby you the user have previously enquired about anything that the email newsletter relates to&#46; This is by no means an entire list of your user rights in regard to receiving email marketing material&#46; Your details are not passed on to any third parties&#46;</p>
 
 <br/>
 <h2>External Links</h2>
@@ -54,9 +55,7 @@ Template Name: Privacy
 
 <p>Users are advised to take caution and good judgement before clicking any shortened urls published on social media platforms by this website and its owners&#46; Despite the best efforts to ensure only genuine urls are published many social media platforms are prone to spam and hacking and therefore this website and its owners cannot be held liable for any damages or implications caused by visiting any shortened links&#46;</p>
 
-<br/>
-<br/>
-<br/>
+<div class="clearfix"></div>
        		
 </section>
 <div class="clearfix"></div>

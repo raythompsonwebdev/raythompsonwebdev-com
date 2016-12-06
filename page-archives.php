@@ -17,7 +17,7 @@ Template Name: Archives-pages
 	   <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
     
         
-<article class="post group">
+<article class="entry-content">
  
 <h2><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
     
@@ -30,12 +30,15 @@ Template Name: Archives-pages
 <h2><?php _e('Browse by Tag:', 'raythompwebdesign-com');?></h2>
 
 <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+
+<h2><?php _e('Browse by Page', 'raythompwebdesign-com');?></h2>
+<ul><?php wp_list_pages('title_li='); ?></ul>
    
 </article>
         
 <?php endwhile; else: ?>
 
-<p><?php load_theme_textdomain( $domain, $path ) ?></p>
+<p><?php load_theme_textdomain( 'raythompwebdesign-com', get_template_directory() . '/languages' ) ?></p>
 
 <?php endif; ?>
 

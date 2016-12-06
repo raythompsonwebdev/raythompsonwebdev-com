@@ -7,11 +7,11 @@
 // Check if there are any posts to display
 if ( have_posts() ) : ?>
 
-<h1 class="archive-title">Category: <?php single_cat_title( '', true ); ?></h1>
+<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
 <?php
-// Display optional category description
- if ( category_description() ) : ?>
-<div class="archive-meta"><?php echo category_description(); ?></div>
+// Display optional tag description
+ if ( tag_description() ) : ?>
+<div class="archive-meta"><?php echo tag_description(); ?></div>
 <?php endif; ?>
 
 <section id="blogleftside">       	       	      	
