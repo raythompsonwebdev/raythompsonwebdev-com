@@ -13,10 +13,7 @@ if ( have_posts() ) : ?>
  if ( category_description() ) : ?>
 <div class="archive-meta"><?php echo category_description(); ?></div>
 <?php endif; ?>
-
-<section id="blogleftside">       	       	      	
 	   
-<article id="blog" class="left-col">
 
 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -47,11 +44,8 @@ else: ?>
 <!--end of Comment box-->
 </article>
 
-</article><!--end of blog-left-col-->    
-
-      		
-</section><!--end of main content-->
 <?php get_sidebar(); ?>
-</section><!--end of blogleftside-->
+</section>
+
 <div class="clearfix"></div>
 <?php get_footer(); ?> 

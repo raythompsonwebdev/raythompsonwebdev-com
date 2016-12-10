@@ -13,19 +13,10 @@
 	} else { _e('Browsing the Archive', 'raythompwebdesign-com'); }
 	?>
 </h1>
-		
-<section id="blogleftside">
-	
-<article id="blog" class="left-col">
-    	
-	        
-<article class="entry-content">
  
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
     
- 				
-
 <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
 <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
@@ -46,8 +37,7 @@
 
 </header>
 
-
-
+<div class="entry-content">
 <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute()?>;">
 
 <?php 
@@ -65,11 +55,10 @@
         </figure>
     <?php }
     ?>
+</a>  
+<?php the_excerpt();?>
 
-        
-<section class="newsExcerpt"><?php the_excerpt();?></section>
-
-<br/>
+</div>
 
 <footer class="byline">
 
@@ -101,22 +90,14 @@
 <p>Sorry, we got nada. Nothing. Bupkis. Zippo. Diddly-squat. Sorry to disappoint.</p>
 <?php endif; ?>	
 
-
-   
-</article >
-   
-	
-
-</article>
-
-<br/>
-<article class="contact-wide">
-
-<h2>Archives</h2>
   
-</article>
 
+<section class="contact-wide">
+
+<h1>Archives</h1>
+  
 </section>
+
 
 <?php get_sidebar('sidebar-archive'); ?> 
 </section>

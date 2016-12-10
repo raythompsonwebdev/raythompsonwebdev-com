@@ -31,7 +31,7 @@
 <div id="wrapper_container">
  	
 
-<header class="group">
+<header class="group" role="banner">
     
  <?php // Display site icon or first letter as logo ?>
     <div class="site-logo">
@@ -65,7 +65,7 @@ if ( $description || is_customize_preview() ) : ?>
 
 <?php endif; ?>
 
-<nav >
+<nav role="navigation">
 <ul id="innernav" > 
 <?php
   // Checking if there's anything in Top Menu

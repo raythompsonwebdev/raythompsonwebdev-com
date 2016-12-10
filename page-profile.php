@@ -12,7 +12,7 @@
 
     <h1>About Me</h1>
 
-    <div class="front_panel"><!--front panel-->
+    <div class="frontpage_container"><!--front panel-->
 
 
         <section class="prof_cont">
@@ -58,11 +58,10 @@
 
         </section><!--end of prof cont-->
 
-        <article class="intro-text">
-
+        <article class="text-box">
             <h1>My story so far..&#46;</h1>
-            <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wordpress/wp-content/uploads/2016/10/pic.jpg" alt="image-of-raythompwebdev-com">
-            --></figure>
+            <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/pic.jpg" alt="image-of-raythompwebdev-com">
+            //</figure>-->
 
             <p>My name is Raymond Thompson&#44; I reside in Hackney East London&#44; I have a passion for web design and web development, particularly responsive front-end development, search engine optimisation and wordpress web development&#46;<br/></p>
             <hr>
@@ -74,14 +73,15 @@
             <p>Reluctant to atend at first, I soon discovered I enjoyed learning how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
             <hr>
             <p> I learnt how to plan and research&#44; wireframe&#44; build&#44; test and launch a commercial website as part of a team of fellow students working on various web development projects including websites for a few madeup clients and small involvements in real world projects for ELATT's in-house web service 260Web&#46; </p> 
-
+  <div class="clearfix"></div>
         </article>
+        
+   <div class="clearfix"></div>        
 
-    </div><!--front panel end-->
-
-    <div class="clearfix"></div>
-
-    <div class="front_panel"><!--front panel--> 
+    </div><!--frontpage_container-->
+ <div class="clearfix"></div> 
+ 
+    <div class="frontpage_container">
 
 
         <article class="prof_cont "><!--prof cont-->
@@ -90,15 +90,15 @@
 
             <article class="hero-slider"><!-- #hero-slider -->
                 <ul>
-                    <li><a href="#" rel="#panel-1" class="active" >Photoshop</a></li>
-                    <li><a href="#" rel="#panel-2" >Dreamweaver</a></li>
-                    <li><a href="#" rel="#panel-3" >Web Design L1</a></li>
-                    <li><a href="#" rel="#panel-4" >Web Design L2</a></li>
-                    <li><a href="#" rel="#panel-5" >Web Design L3</a></li>
-                    <li><a href="#" rel="#panel-6" >Udemy</a></li>
-                    <li><a href="#" rel="#panel-7" >Mobile Web Applications</a></li>
-                    <li><a href="#" rel="#panel-8" >Digital Marketing</a></li>
-                    <li><a href="#" rel="#panel-9" >Content Marketing</a></li>
+                    <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Photoshop</a></li>
+                    <li><a href="#" rel="#panel-2" title="Adobe Certificate in Communication">Dreamweaver</a></li>
+                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level One" >Web Design L1</a></li>
+                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Two">Web Design L2</a></li>
+                    <li><a href="#" rel="#panel-5" title="City and Guilds Web Design Certificate Level Three">Web Design L3</a></li>
+                    <li><a href="#" rel="#panel-6" title="Udemy and Lynda-com Online course certificates">Udemy</a></li>
+                    <li><a href="#" rel="#panel-7" title="Shaw Academy Online course certificate">Mobile Web Applications</a></li>
+                    <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Digital Marketing</a></li>
+                    <li><a href="#" rel="#panel-9" title="Shaw Academy course certificate">Content Marketing</a></li>
                 </ul>
 
                 <div class="mask"><!--mask-->
@@ -110,9 +110,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Large-Photoshop-Certicate-.jpg" class="fancyboxclass="abobe"" title="Adobe Certificate in Visual Communication">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Large-Photoshop-Certicate-.jpg" class="fancyboxclass=" title="Adobe Certificate in Visual Communication">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Certificate">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
                                      </a>
                                     <figcaption>
                                         <h3>Adobe Certified Associates Visual Communication</h3>
@@ -393,7 +393,7 @@
             </article><!-- hero-slider end -->
         </article><!--end of prof cont-->
 
-        <article class="intro-text">
+        <article class="text-box">
             <p>Over the last few years I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP, Ajax&#44; and various web development best practices&#44; </p>
 <hr>
 <p>With the constant changes in website development I try to keep up as much as I can by watching online tutorials&#44; listening to related podcasts, attending local Meet&#45;ups and events occasionally to network with others working within the website development field to ask for advice and tips on improving my own website development skills&#46;</p>
@@ -403,11 +403,11 @@
   <p>I work well either on my own or within a team and would love to be involved in projects from start to finish and offer assistance in any way to help create your own websites or web applications.</p>
 <hr>
   <p>I would like to be involved in helping create any small scale web development project to gain more experience so, if you need a hand contact me via social media or go to <strong><a href="">Contact Page</a></strong> and complete contact form. I will respond to any queries within 24 hours&#46;</p>
-            <br/>
+           <div class="clearfix"></div> 
         </article>
-
-    </div><!--front-panel end-->
-    <div class="clearfix"></div>
+<div class="clearfix"></div>
+</div><!--front-panel end-->
+ <div class="clearfix"></div> 
 
 </section>
 

@@ -1,9 +1,9 @@
 
 
-<aside id="blogrightside" class="group" role="complementary">
+<aside id="side-bar" class="group" role="complementary">
 
     
-    <article class="blogbox"> 
+    <article class="side-bar-box"> 
 
         <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar')) : ?>
 

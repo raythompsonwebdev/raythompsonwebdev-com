@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <section id="main-content" class="group" role="main">
+
+
 <section id="blogleftside">  
 
 
@@ -11,9 +13,8 @@
 
 </section>
 <?php get_sidebar(); ?>
+
 </section>
-
-
 
 
 

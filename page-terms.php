@@ -5,6 +5,8 @@ Template Name: Terms
 ?>
 
 <?php get_header(); ?>
+
+
 <section id="main-content" class="group" role="main">
 
 <h1>Terms &amp; Conditions</h1>
@@ -22,7 +24,7 @@ Template Name: Terms
 <h2>Exclusions and Limitations </h2>
 <p>The information on this web site is provided on an &#34;as is&#34; basis&#46;  To the fullest extent permitted by law&#44; this Company:</p>
 
-<blockquote>
+<blockquote >
 excludes all representations and warranties relating to this website and its contents or which is or may be provided by any affiliates or any other third party&#44; including in relation to any inaccuracies or omissions in this website and/or the Company&#39;s literature; and excludes all liability for damages arising out of or in connection with your use of this website&#46;  This includes&#44; without limitation&#44; direct loss&#44; loss of business or profits &#40;whether or not the loss of such profits was foreseeable&#44; arose in the normal course of things or you have advised this Company of the possibility of such potential loss&#41;&#44; damage caused to your computer&#44; computer software&#44; systems and programs and the data thereon or any other direct or indirect&#44; consequential and incidental damages&#46;  
 </blockquote>
 

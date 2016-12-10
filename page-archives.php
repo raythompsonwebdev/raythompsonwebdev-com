@@ -9,14 +9,9 @@ Template Name: Archives-pages
  	
 <section id="main-content" class="group" role="main">
 <h1><?php the_title(); ?> List</h1>
-<section id="blogleftside">       	       	      	
 
-<article id="blog" class="left-col">
-
-
-	   <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-    
-        
+<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
+            
 <article class="entry-content">
  
 <h2><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
@@ -42,16 +37,14 @@ Template Name: Archives-pages
 
 <?php endif; ?>
 
-</article>
 
-<br/>
 <article class="contact-wide">
 
 <h2>Archives</h2>
   
 </article>
 
-</section>
+
 <?php get_sidebar(); ?> 
 </section>
 <div class="clearfix"></div>

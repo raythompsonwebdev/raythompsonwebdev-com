@@ -13,22 +13,14 @@ Template Name: Contact
 
 <p>Any queries about website please either complete form on the right or e-mail me at e-mail addressess below. You can also holla at me on social media</p>
 
-<h1></h1>
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
 [ do default stuff if no widgets ]
 
 <?php endif; ?>
-			
-
-
+		
 <br/>
-<article class="social_media_container">
-
-
-
-</article>
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('map')) : ?>
 
@@ -37,21 +29,12 @@ Template Name: Contact
 <?php endif; ?>
 
 
-
-
 <ul class="skills" >
-	
-	<li>
-        <a href="mailto:raymond.thompson@raythompwebdev.co.uk">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
-<br/>
-	<li>
-		<a href="mailto:ray_thomp@hushmail.com">ray_thomp@hushmail.com</a></li>
-<br/>
-
+    <li> <a href="mailto:raymond.thompson@raythompwebdev.co.uk">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
+    <br/>
+    <li><a href="mailto:ray_thomp@hushmail.com">ray_thomp@hushmail.com</a></li>
+    <br/>
 </ul> 
-
-<br/> 
-
 
 <div class="clearfix"></div>				
 

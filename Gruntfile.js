@@ -42,24 +42,7 @@ module.exports = function(grunt){
                     }
             },
 
-            /**
-             * autoprefixer
-             */
-
-          //  autoprefixer:{
-
-          //          options:{
-           //                 browsers:['last 2 versions']
-           //         },
-                    //prefix all file
-           //         multiple_files: {
-           //                 expand:true,
-           //                 flatten:true,
-           //                 src:'compiled/*.css',
-           //                 dest:''
-          //          }
-         //   },
-
+            
             /**
              * Watch task
              */
@@ -78,9 +61,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-sass');
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-
-   // grunt.loadNpmTasks('grunt-autoprefixer');
-
+   
     grunt.registerTask('default', ['watch']);
 
 

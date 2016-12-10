@@ -13,11 +13,7 @@ if ( have_posts() ) : ?>
  if ( tag_description() ) : ?>
 <div class="archive-meta"><?php echo tag_description(); ?></div>
 <?php endif; ?>
-
-<section id="blogleftside">       	       	      	
-	   
-<article id="blog" class="left-col">
-
+ 
 <?php while ( have_posts() ) : the_post(); ?>
 
 <article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -47,10 +43,8 @@ else: ?>
 <!--end of Comment box-->
 </article>
 
-</article><!--end of blog-left-col-->    
+  
 
-      		
-</section><!--end of main content-->
 <?php get_sidebar(); ?>
 </section><!--end of blogleftside-->
 <div class="clearfix"></div>
