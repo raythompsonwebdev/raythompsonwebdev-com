@@ -174,7 +174,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
-  <img src="<?php echo home_url();?>/wordpress/wp-content/uploads/2016/12/holiday-website-small.gif"  alt="Travel Agency website home page" >
+  <img src="<?php echo home_url();?>/wp-content/uploads/2016/10/www-travel-agency-home-page-small.jpg"  alt="Travel Agency website home page" >
 
   <figcaption class="showcase-content showcase-f">
   <h1>Website:</h1>

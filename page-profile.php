@@ -60,7 +60,7 @@
 
         <article class="text-box">
             <h1>My story so far..&#46;</h1>
-            <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/pic.jpg" alt="image-of-raythompwebdev-com">
+            <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wordpress/wp-content/uploads/2016/10/pic.jpg" alt="image-of-raythompwebdev-com">
             //</figure>-->
 
             <p>My name is Raymond Thompson&#44; I reside in Hackney East London&#44; I have a passion for web design and web development, particularly responsive front-end development, search engine optimisation and wordpress web development&#46;<br/></p>
