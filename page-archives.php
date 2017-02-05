@@ -8,13 +8,14 @@ Template Name: Archives-pages
 <?php get_header(); ?>
  	
 <section id="main-content" class="group" role="main">
+    
 <h1><?php the_title(); ?> List</h1>
 
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
             
 <article class="entry-content">
  
-<h2><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
+<h2><?php _e('Browse by Month:', 'raythompsonwebdev-com');?></h2>
     
 <ul><?php wp_get_archives('type=monthly'); ?></ul>
 
@@ -45,7 +46,8 @@ Template Name: Archives-pages
 </article>
 
 
-<?php get_sidebar(); ?> 
+<?php get_sidebar('archives'); ?> 
+
 </section>
 <div class="clearfix"></div>
 <?php get_footer(); ?>

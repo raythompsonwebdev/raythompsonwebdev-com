@@ -5,18 +5,24 @@
     <h1>Interested in web design and web development&#63;</h1>
 
     <p>Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like</p>
-    <hr >
-
+   
+<br/>
     <?php if (is_home() || is_archive()) : ?>
         <span class="social-1"><?php get_search_form(true); ?></span>
     <?php else : ?>
+        <span class="social-1"></span>
     <?php endif; ?>
-
+   <br/>
+    <br/>
     <?php if (have_posts()) : ?>
+        
         <?php while (have_posts()) : the_post(); ?>
+        
             <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
-                <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+                <h1 class="post-title">
+                    <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+                </h1>
 
                 <header class="byline">
                     <div class="entry-meta">
@@ -45,7 +51,7 @@
                         </figure>
                     <?php }
                     ?>
-                    <section class="newsExcerpt"><?php the_excerpt(); ?></section>
+                    <?php the_excerpt(); ?>
 
                     <footer class="byline">
 
@@ -73,11 +79,8 @@
         <?php endwhile; ?>
     <?php else: ?>
 
-        <h1>No posts to show</h1>
-
-        <figure class="featuredImage"><?php the_post_thumbnail('featured-image'); ?></figure>
-
-        <p>Sorry, we got nada. Nothing. Bupkis. Zippo. Diddly-squat. Sorry to disappoint.</p>
+        <?php get_template_part( 'templates/content', 'none' ); ?>
+        
     <?php endif; ?>	
 
 

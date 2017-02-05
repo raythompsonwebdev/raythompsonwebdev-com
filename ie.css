@@ -1,7 +1,7 @@
 /*
 Theme Name: raythompwebdesign.com
 Theme URI:
-Description: Custom Template -ie
+Description: Custom Template
 Version: 1.1
 Author: Raymond Thompson
 Author URI: http://www.raythompwebdesign.com
@@ -10,9 +10,439 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-header, custom-background,editor-style
 Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
-Text Domain: raythompsonwebdev-com
+Text Domain: raythompwebdesign-com
 Domain Path: /language
 */
+/*
+$colorone:f5e00b-yellow
+$colortwo:f29715-orange
+$colorthree:b2d159-green
+$colorfour:070707-black
+$colorfive:e9ebc3-light green
+$colorsix:fed32f-light orange
+$colorseven:accc51-green-light
+*/
+/*
+$color1:#000000;
+$color2:#A2E82F;
+$color3:#FFD437;
+$color4:#F1FFF4;
+$color10:rgba(241, 255, 244, 0.9);
+$color5:#FFD437;
+$color6:#FF261F;
+$color7:#FF254F;
+$color8:#BBE82F;
+$color9:#FF2417;
+$color11:#bac7db;
+
+
+*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 * html {
   font-size: 1em;
   margin: 0;
@@ -55,7 +485,9 @@ html[xmlns] .clearfix {
   clear: both;
 }
 
-.clearfix:before, .group:before, .group:after {
+.clearfix:before,
+.group:after,
+.group:before {
   content: "";
   display: table;
 }
@@ -68,7 +500,7 @@ html[xmlns] .clearfix {
 /*images*/
 img#wpstats {
   display: none;
-  width: 1px;
+  width: 2px;
 }
 
 img {
@@ -96,20 +528,29 @@ a {
   font-size: 1em;
 }
 a img {
-  border: 0px;
+  border: 0;
   outline: none;
 }
+a:link {
+  color: #062351;
+}
 a:visited {
-  color: #575A5E;
+  color: #fff;
 }
 a:focus {
-  color: #CCD3DE;
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+  font-weight: bold;
 }
 a:active {
-  color: #6e757f;
+  color: #fff;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   color: #062351;
   font-size: 1em;
@@ -192,16 +633,20 @@ button:hover {
 .container {
   width: 38.729257%;
   float: right;
-  margin: 0% 1% 1% 2%;
+  margin: 0 1% 1% 2%;
 }
 
 .social_media_container {
   float: left;
-  width: 40.7293%;
+  width: 44.7293%;
   display: block;
-  margin: 1%;
+  margin: 0;
   height: auto;
   min-height: 250px;
+}
+
+div.textwidget {
+  height: auto;
 }
 
 .bypostauthor {
@@ -216,18 +661,20 @@ button:hover {
 
 /* Small menu. */
 body {
-  background: #CCD3DE;
   font-size: medium;
   margin: 0;
   padding: 0;
 }
 
+a.nav-toggle {
+  display: none;
+}
+
+/*Wrapper*/
 #wrapper_container {
-  background: #CCD3DE;
   width: 90%;
   height: auto;
   margin: 0 auto;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   overflow: auto;
   clear: both;
   /*background-image: url("graphics/template.gif");
@@ -235,18 +682,15 @@ body {
   padding: 0 1%;
   /*Header*/
   /*main-content box*/
-  /*Footer*/
+  /*Portfolio gallery*/
+  /*transistion*/
+  /* switch mode */
+  /*end*/
 }
 #wrapper_container .fancybox-custom .fancybox-skin {
   box-shadow: 0 0 50px #222;
 }
 #wrapper_container header {
-  width: 100%;
-  height: 150px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: #CCD3DE;
   /* Text meant only for screen readers. */
   /*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/
   /*Navigation*/
@@ -256,48 +700,11 @@ body {
   position: relative;
   top: -5px;
 }
-#wrapper_container header .screen-reader-text {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
 #wrapper_container header .screen-reader-text:focus {
-  background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-  clip: auto !important;
-  color: #21759b;
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  height: auto;
-  left: 5px;
-  line-height: normal;
-  padding: 15px 23px 14px;
-  text-decoration: none;
-  top: 5px;
-  width: auto;
-  z-index: 100000;
   /* Above WP toolbar. */
 }
-#wrapper_container header .site-logo a {
-  position: absolute;
-  z-index: 10;
-  top: 1em;
-  left: 0em;
-  display: block;
-  width: 2em;
-  height: 2em;
-  background: #062351;
-  border: 2px solid #c0c9dd;
-  color: white;
-  text-decoration: none;
-}
-#wrapper_container header .site-logo a:hover,
-#wrapper_container header .site-logo a:focus {
+#wrapper_container header .site-logo a:focus,
+#wrapper_container header .site-logo a:hover {
   outline: 2px solid white;
 }
 #wrapper_container header .site-firstletter {
@@ -307,155 +714,49 @@ body {
   text-align: center;
   line-height: 1.2em;
 }
-#wrapper_container header .site-logo a:hover .site-firstletter,
-#wrapper_container header .site-logo a:focus .site-firstletter {
+#wrapper_container header .site-logo a:focus .site-firstletter,
+#wrapper_container header .site-logo a:hover .site-firstletter {
   background: white;
   color: black;
-}
-#wrapper_container header h1#logo {
-  font-size: 2em;
-  width: 100%;
-  height: 40px;
-  margin: 0;
-  font-weight: bold;
-  line-height: 40px;
-  color: #fff;
-  text-shadow: 2px 2px #b1bacd;
-  letter-spacing: 0.05em;
-}
-#wrapper_container header h1#logo span {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  text-align: left;
-  display: inline-block;
-}
-#wrapper_container header h1#logo span:last-of-type {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: #062351;
-  display: inline-block;
-}
-#wrapper_container header h1#logo-blog {
-  font-size: 2em;
-  width: 100%;
-  height: 40px;
-  margin: 0;
-  font-weight: bold;
-  line-height: 40px;
-  color: #fff;
-  text-shadow: 2px 3px #c0c9dd;
-  letter-spacing: 0.05em;
-}
-#wrapper_container header h1#logo-blog span {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: #fff;
-  text-align: left;
-}
-#wrapper_container header h1#logo-blog span:last-of-type {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  color: #062351;
-  margin: 0 0.5%;
-}
-#wrapper_container header h2 {
-  float: none;
-  display: block;
-  width: 100%;
-  height: 25px;
-  margin: 0;
-  letter-spacing: 0.1em;
-  padding: 0;
-  line-height: 25px;
-  font-size: 0.75em;
-  font-weight: 100;
-}
-#wrapper_container header #title {
-  float: left;
-  min-width: 280px;
-  max-width: 350px;
-  margin-left: 0;
-}
-#wrapper_container header nav {
-  padding: 0;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  display: block;
-  width: 50%;
-  float: none;
-  margin: 2% auto;
-}
-#wrapper_container header nav #innernav {
-  padding: 0px;
-  margin: 0px;
-  height: 35px;
-  width: 100%;
 }
 #wrapper_container header nav #innernav .menu-main-container {
   width: 100%;
 }
 #wrapper_container header nav #innernav .menu-main-container #menu-main {
   width: 100%;
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
 }
 #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-  width: 19%;
-  float: left;
-  height: 35px;
-  list-style: none;
-  margin: 0 0.5%;
-  padding: 0;
-  text-align: center;
-}
-#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-  background-color: #CCD3DE;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  line-height: 35px;
-  color: #062351;
-  margin: 0;
-  font-size: 0.80em;
-  display: block;
-  letter-spacing: 0.1em;
-  font-weight: 100;
-}
-#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
-  border: solid #062351 1px;
-  line-height: 35px;
-  font-weight: bold;
+  width: 18%;
 }
 #wrapper_container header nav #mobile-nav {
   display: none;
 }
 #wrapper_container #main-content {
-  height: auto;
-  margin: 0;
-  padding: 0 0 0 0;
   font-size: 1em;
   min-height: 740px;
   /*Search Box*/
   /* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
   /*Right-side*/
   /*Left-side*/
+  /*Posts*/
+  /*post pagination*/
+  /*content wide containers*/
+  /*Comment section end*/
   /*Front-page-Panel */
-  /*Portfolio gallery*/
-  /*transistion*/
-  /* switch mode */
-  /*end*/
+}
+#wrapper_container #main-content blockquote {
+  width: 91%;
+  margin: 1.8% auto;
+  line-height: 1.8em;
+  letter-spacing: 0.05em;
+  font-size: 0.9em;
+  font-family: "FontAwesome", "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+}
+#wrapper_container #main-content blockquote:before {
+  content: "\f10d";
+}
+#wrapper_container #main-content blockquote:after {
+  content: "\f10e";
 }
 #wrapper_container #main-content .social-1 {
   height: 35px;
@@ -469,8 +770,8 @@ body {
 #wrapper_container #main-content .social-1 form.searchform {
   text-align: left;
   max-width: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   float: right;
   height: 100%;
   display: block;
@@ -498,8 +799,8 @@ body {
   width: 50%;
   height: 30px;
   font-size: 1em;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: inline-block;
   float: left;
   border: none;
@@ -532,43 +833,40 @@ body {
   padding: 0;
   color: #062351;
   width: 100%;
-  line-height: 60px;
+  line-height: 50px;
   font-weight: 600;
   letter-spacing: 0.095em;
   margin: 0;
-  height: 60px;
   clear: both;
 }
 #wrapper_container #main-content h2 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   margin: 0;
   padding: 0;
   color: #062351;
   width: 100%;
   letter-spacing: 0.05em;
-  font-weight: 500;
-  line-height: 40px;
-  height: 40px;
+  font-weight: bold;
+  line-height: 35px;
 }
 #wrapper_container #main-content h3 {
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
   padding: 0;
   color: #062351;
   width: 100%;
   letter-spacing: 0.05em;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.3em;
   height: 30px;
 }
 #wrapper_container #main-content p {
   font-size: 0.90em;
-  font-weight: 100;
+  font-weight: normal;
   width: 100%;
   letter-spacing: 0.10em;
-  line-height: 1.85em;
-  clear: right;
-  margin: 0;
+  line-height: 1.9em;
+  margin: 0 0 1%;
 }
 #wrapper_container #main-content ul {
   list-style: none;
@@ -576,8 +874,11 @@ body {
 #wrapper_container #main-content ul li a:hover {
   color: #fff;
 }
-#wrapper_container #main-content br {
-  display: block;
+#wrapper_container #main-content hr {
+  background-color: #062351;
+  height: 1px;
+  margin: 5% auto;
+  width: 80%;
 }
 #wrapper_container #main-content hr.blog-spacer {
   margin: 2% auto;
@@ -586,63 +887,55 @@ body {
   outline: 0;
   border: 0;
 }
-#wrapper_container #main-content #blogrightside {
+#wrapper_container #main-content #side-bar {
   padding-top: 0;
   height: auto;
   width: 100%;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   display: block;
-  margin: 0.75% 0 0 0;
+  margin: 0.75% 0 0;
   clear: both;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
 }
-#wrapper_container #main-content #blogrightside .blogbox {
+#wrapper_container #main-content #side-bar .side-bar-box {
   display: inline-block;
   height: auto;
   width: 31%;
   margin: 1%;
   float: left;
 }
-#wrapper_container #main-content #blogrightside .blogbox h2 {
+#wrapper_container #main-content #side-bar .side-bar-box h2 {
   width: 100%;
   height: 40px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-size: 1.2em;
   line-height: 40px;
-  background-color: #575A5E;
-  color: #fff;
   letter-spacing: 0.1em;
   text-align: center;
   margin: 0 auto;
   font-weight: 700;
 }
-#wrapper_container #main-content #blogrightside .blogbox #social h2 {
+#wrapper_container #main-content #side-bar .side-bar-box #social h2 {
   width: 100%;
 }
-#wrapper_container #main-content #blogrightside .blogbox .tagcloud {
+#wrapper_container #main-content #side-bar .side-bar-box .tagcloud {
   width: 90%;
   margin: auto;
   font-size: 100%;
   display: block;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget {
+#wrapper_container #main-content #side-bar .side-bar-box .widget {
   display: block;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   padding: 0;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul {
   width: 100%;
   height: auto;
   display: inline-block;
   margin: 0;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul li {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul li {
   list-style: none;
   line-height: 30px;
   background-color: #c0c9dd;
@@ -650,7 +943,7 @@ body {
   margin: 2% auto;
   text-align: center;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul li a {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul li a {
   width: 100%;
   display: block;
   font-weight: 400;
@@ -659,20 +952,20 @@ body {
   line-height: 35px;
   background-color: #c0c9dd;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul li a:hover {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul li a:hover {
   color: #fff;
   background-color: #062351;
   font-weight: bold;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul li.recentcomments a {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul li.recentcomments a {
   display: block;
   background-color: #062351;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul li.comment-author-link a {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul li.comment-author-link a {
   display: block;
   background-color: #062351;
 }
-#wrapper_container #main-content #blogrightside .blogbox .widget ul.children > li {
+#wrapper_container #main-content #side-bar .side-bar-box .widget ul.children > li {
   background-color: #c0c9dd;
   margin: 1% auto;
 }
@@ -680,56 +973,30 @@ body {
   height: auto;
   width: 100%;
   font-size: 1em;
-  float: left;
   margin: 0;
-  /*content wide containers*/
-  /*Comment section end*/
 }
-#wrapper_container #main-content #blogleftside article .imagebox .box .slide-caption p {
-  font-size: 100%;
-  width: 98%;
-}
-#wrapper_container #main-content #blogleftside .left-col {
+#wrapper_container #main-content .left-col {
   margin-top: 0;
-  /*Posts*/
-  /*post pagination*/
 }
-#wrapper_container #main-content #blogleftside .left-col h1 {
-  font-size: 1.6em;
-  margin: 1% 0;
-  padding: 0px;
-  letter-spacing: 0.05em;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  text-align: left;
-}
-#wrapper_container #main-content #blogleftside .left-col hr {
-  background-color: #062351;
-  height: 1px;
-  margin: 5% auto;
-  width: 80%;
-}
-#wrapper_container #main-content #blogleftside .left-col .post {
+#wrapper_container #main-content .post {
   background-color: #fff;
   padding: 0 2%;
   width: 100%;
   margin: 0 1% 1% 0;
-  box-shadow: 0 0.5px 0.5px 0px rgba(0, 0, 0, 0.2);
   float: left;
   display: inline-block;
   /*Social media share buttons*/
 }
-#wrapper_container #main-content #blogleftside .left-col .post hr.blog-spacer {
+#wrapper_container #main-content .post hr.blog-spacer {
   margin: 2% auto;
   width: 80%;
   color: #CCD3DE;
   outline: 0;
   border: 0;
 }
-#wrapper_container #main-content #blogleftside .left-col .post h1 {
+#wrapper_container #main-content .post h1 {
   font-size: 1.45em;
-  margin: 1% 0 0 0;
+  margin: 1% 0 0;
   padding: 0;
   letter-spacing: 0.05em;
   width: 100%;
@@ -738,11 +1005,11 @@ body {
   height: 45px;
   text-align: left;
 }
-#wrapper_container #main-content #blogleftside .left-col .post h2 {
-  text-indent: 0px;
+#wrapper_container #main-content .post h2 {
+  text-indent: 0;
   font-size: 1.35em;
   margin: 0 auto;
-  padding: 0px;
+  padding: 0;
   letter-spacing: 0.05em;
   width: 100%;
   background-color: #fff;
@@ -751,33 +1018,33 @@ body {
   height: 50px;
   text-align: left;
 }
-#wrapper_container #main-content #blogleftside .left-col .post h3 {
+#wrapper_container #main-content .post h3 {
   margin: 0.5em auto;
   height: 40px;
   line-height: 40px;
   font-size: 1.25em;
-  text-indent: 0%;
+  text-indent: 0;
   width: 100%;
   text-align: left;
 }
-#wrapper_container #main-content #blogleftside .left-col .post h3 a {
+#wrapper_container #main-content .post h3 a {
   padding-left: 0;
   height: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post ul {
+#wrapper_container #main-content .post ul {
   line-height: 1.5em;
   text-indent: 0;
   width: 91%;
   margin: 1% auto;
   display: block;
 }
-#wrapper_container #main-content #blogleftside .left-col .post ul li {
+#wrapper_container #main-content .post ul li {
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
-#wrapper_container #main-content #blogleftside .left-col .post ul li a {
+#wrapper_container #main-content .post ul li a {
   width: 100%;
-  margin-left: 0px;
+  margin-left: 0;
   text-align: center;
   display: block;
   font-size: 0.9em;
@@ -786,23 +1053,23 @@ body {
   line-height: 35px;
   color: #062351;
 }
-#wrapper_container #main-content #blogleftside .left-col .post ul li a:hover {
+#wrapper_container #main-content .post ul li a:hover {
   color: #062351;
-  margin-left: 0px;
+  margin-left: 0;
   display: block;
   background-color: #ecf0f5;
   font-size: 1.1em;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post ul li a:hover::after {
+#wrapper_container #main-content .post ul li a:hover::after {
   content: " > ";
 }
-#wrapper_container #main-content #blogleftside .left-col .post .seperator {
+#wrapper_container #main-content .post .seperator {
   display: block;
   height: 1%;
   clear: both;
 }
-#wrapper_container #main-content #blogleftside .left-col .post p {
+#wrapper_container #main-content .post p {
   width: 100%;
   margin: 0;
   font-size: 0.9em;
@@ -812,19 +1079,19 @@ body {
   letter-spacing: 0.1em;
   margin-bottom: 2%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .thumb {
+#wrapper_container #main-content .post .thumb {
   width: 58%;
   height: auto;
   margin: 1% auto;
   display: block;
   clear: both;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .postimg {
-  width: 20%;
+#wrapper_container #main-content .post .postimg {
+  width: 23%;
   margin: 5% auto;
   display: block;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .featuredImage {
+#wrapper_container #main-content .post .featuredImage {
   clear: both;
   height: auto;
   width: 100%;
@@ -832,7 +1099,7 @@ body {
   display: block;
   min-height: 220px;
 }
-#wrapper_container #main-content #blogleftside .left-col .post pre {
+#wrapper_container #main-content .post pre {
   border: solid 1px blue;
   font-size: 1em;
   color: blue;
@@ -842,45 +1109,76 @@ body {
   direction: ltr;
   text-align: left;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .code {
+#wrapper_container #main-content .post .code {
   width: 80%;
   margin: 5% auto;
   display: block;
   font-size: 0.85em;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline {
+#wrapper_container #main-content .post header.byline {
   width: 100%;
   margin: auto;
   height: auto;
   background-color: #fff;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta {
+#wrapper_container #main-content .post header.byline .entry-meta,
+#wrapper_container #main-content .post header.byline .index-entry-meta {
   height: auto;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .has-avatar, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .has-avatar {
+#wrapper_container #main-content .post header.byline .entry-meta .has-avatar,
+#wrapper_container #main-content .post header.byline .index-entry-meta .has-avatar {
   display: inline-block;
   text-align: left;
   width: 20%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content {
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content {
   height: auto;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .author-avatar, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .author-avatar {
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .author-avatar,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
   width: 7%;
   display: inline-block;
   float: left;
   margin: 0 1em 0 0;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .posted-on, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylinecat, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylinetag, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .byline, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylineauthor, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .date, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .comments-link, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .posted-on, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylinecat, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylinetag, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .byline, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylineauthor, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .date, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .comments-link {
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .byline,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylinecat,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylinetag,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .comments-link,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .date,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .posted-on,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .byline,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .date,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
   width: 79%;
   display: inline-block;
   height: auto;
   line-height: 20px;
   text-align: left;
+  font-family: "FontAwesome", "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .posted-on a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylinecat a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylinetag a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .byline a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylineauthor a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .date a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .comments-link a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .posted-on a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylinecat a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylinetag a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .byline a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylineauthor a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .date a, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .comments-link a {
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .byline a,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .comments-link a,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .date a,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .posted-on a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .byline a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .date a,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
   font-size: 0.90em;
   color: #062351;
   margin: 0;
@@ -888,7 +1186,20 @@ body {
   display: inline-block;
   padding: 0.5%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .posted-on a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylinecat a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylinetag a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .byline a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .bylineauthor a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .date a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .entry-meta .meta-content .comments-link a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .posted-on a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylinecat a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylinetag a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .byline a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .date a:hover, #wrapper_container #main-content #blogleftside .left-col .post header.byline .index-entry-meta .meta-content .comments-link a:hover {
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .date a:hover,
+#wrapper_container #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
+#wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
   font-size: 0.90em;
   color: #c0c9dd;
   margin: 0;
@@ -896,32 +1207,32 @@ body {
   display: inline-block;
   padding: 0.5%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline {
+#wrapper_container #main-content .post footer.byline {
   width: 100%;
   margin: 1% auto;
   height: auto;
   font-size: 0.9em;
   line-height: 1.5em;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline p {
-  margin: 0px;
+#wrapper_container #main-content .post footer.byline p {
+  margin: 0;
   display: inline-block;
   padding: 0;
   width: auto;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline a {
+#wrapper_container #main-content .post footer.byline a {
   font-size: 0.95em;
   color: #062351;
   margin: auto;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline .bylinecat {
+#wrapper_container #main-content .post footer.byline .bylinecat {
   width: 85%;
   display: inline-block;
   height: auto;
   line-height: 20px;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline .bylinecat a {
+#wrapper_container #main-content .post footer.byline .bylinecat a {
   font-size: 0.90em;
   color: #062351;
   margin: 0;
@@ -929,7 +1240,7 @@ body {
   display: inline-block;
   padding: 0.5%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline .bylinecat a:hover {
+#wrapper_container #main-content .post footer.byline .bylinecat a:hover {
   font-size: 0.90em;
   color: #c0c9dd;
   margin: 0;
@@ -937,7 +1248,7 @@ body {
   display: inline-block;
   padding: 0.5%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline p.right {
+#wrapper_container #main-content .post footer.byline p.right {
   width: 6%;
   float: right;
   font-size: 1.3em;
@@ -945,14 +1256,14 @@ body {
   background-color: #c0c9dd;
   margin: 1%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline p.right:hover {
+#wrapper_container #main-content .post footer.byline p.right:hover {
   background-color: #062351;
   color: #fff;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline p.right a.comments-count {
+#wrapper_container #main-content .post footer.byline p.right a.comments-count {
   position: relative;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   text-align: center;
   display: inline-block;
   height: 100%;
@@ -961,17 +1272,13 @@ body {
   font-size: 1.1em;
   background-color: #c0c9dd;
 }
-#wrapper_container #main-content #blogleftside .left-col .post footer.byline p.right a.comments-count:hover {
+#wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
   color: #fff;
   background-color: #062351;
   font-weight: bold;
   line-height: 40px;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .newsExcerpt {
-  height: auto;
-  margin: 1% 0;
-}
-#wrapper_container #main-content #blogleftside .left-col .post .read_more {
+#wrapper_container #main-content .post .read_more {
   font-size: 0.9em;
   padding: 0;
   height: 35px;
@@ -985,19 +1292,19 @@ body {
   text-align: center;
   margin: 2% 0;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .read_more:hover {
+#wrapper_container #main-content .post .read_more:hover {
   color: #fff;
   background-color: #062351;
   font-size: 0.95em;
   line-height: 35px;
   margin: 2% 0;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy {
+#wrapper_container #main-content .post div.sharedaddy {
   width: 100%;
   margin: 3% auto;
   display: block;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-title {
+#wrapper_container #main-content .post div.sharedaddy .sd-title {
   line-height: 0;
   display: block;
   font-size: 0.9em;
@@ -1007,15 +1314,15 @@ body {
   height: 40px;
   width: 11%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-title::before {
+#wrapper_container #main-content .post div.sharedaddy .sd-title::before {
   border: none;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-content {
+#wrapper_container #main-content .post div.sharedaddy .sd-content {
   margin: 0;
   width: 85%;
   display: inline-block;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-content ul {
+#wrapper_container #main-content .post div.sharedaddy .sd-content ul {
   line-height: 1.5em;
   font-size: 1em;
   text-indent: 0;
@@ -1024,7 +1331,7 @@ body {
   display: block;
   margin: 0 1%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-content ul li {
+#wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
   width: 4%;
   float: left;
   display: inline-block;
@@ -1032,7 +1339,7 @@ body {
   margin: 0 1%;
   height: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-content ul li a {
+#wrapper_container #main-content .post div.sharedaddy .sd-content ul li a {
   background-color: #c0c9dd;
   color: #062351;
   display: block;
@@ -1041,54 +1348,54 @@ body {
   height: 100%;
   padding: 20%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-content ul li a:hover {
+#wrapper_container #main-content .post div.sharedaddy .sd-content ul li a:hover {
   color: #062351;
   background-color: #c0c9dd;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post div.sharedaddy .sd-content ul li a:hover::after {
+#wrapper_container #main-content .post div.sharedaddy .sd-content ul li a:hover::after {
   content: "";
 }
-#wrapper_container #main-content #blogleftside .left-col .post .entry {
+#wrapper_container #main-content .post .entry {
   padding: 1% 0;
   height: auto;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .entry h1 {
+#wrapper_container #main-content .post .entry h1 {
   font-size: 1.6em;
   margin: 10px auto;
-  padding: 0px;
+  padding: 0;
   letter-spacing: 0.1em;
   width: 96%;
 }
-#wrapper_container #main-content #blogleftside .left-col .post h2.entry-title a {
+#wrapper_container #main-content .post h2.entry-title a {
   color: #fff;
   font-size: 70%;
   height: 100%;
   line-height: 1em;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .entry-attachment {
+#wrapper_container #main-content .post .entry-attachment {
   width: 20%;
   margin: 3em auto;
 }
-#wrapper_container #main-content #blogleftside .left-col .post .entry-attachment figure.attachment a {
+#wrapper_container #main-content .post .entry-attachment figure.attachment a {
   display: block;
 }
-#wrapper_container #main-content #blogleftside .left-col .navi {
+#wrapper_container #main-content .navi {
   width: 100%;
   height: 40px;
 }
-#wrapper_container #main-content #blogleftside .left-col .navi .right {
+#wrapper_container #main-content .navi .right {
   width: 100%;
   float: left;
   display: inline-block;
-  margin: 0.5% 0%;
+  margin: 0.5% 0;
   font-size: 1.1em;
   font-weight: bold;
   height: 40px;
   line-height: 40px;
   color: #000;
 }
-#wrapper_container #main-content #blogleftside .left-col .navi .right a {
+#wrapper_container #main-content .navi .right a {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   display: inline-block;
   font-weight: bold;
@@ -1097,7 +1404,7 @@ body {
   width: 91%;
   text-indent: 1%;
 }
-#wrapper_container #main-content #blogleftside .left-col .navi .right a::after {
+#wrapper_container #main-content .navi .right a::after {
   font-family: 'FontAwesome';
   content: "\f187";
   font-size: 1.9em;
@@ -1106,13 +1413,13 @@ body {
   width: 27px;
   margin-right: 2%;
 }
-#wrapper_container #main-content #blogleftside .left-col .navi .right a:hover {
+#wrapper_container #main-content .navi .right a:hover {
   color: #fff;
   height: 40px;
   background-color: #CCD3DE;
   border: 1px solid #CCD3DE;
 }
-#wrapper_container #main-content #blogleftside .left-col .navi .right span i {
+#wrapper_container #main-content .navi .right span i {
   width: 4%;
   text-align: center;
   font-size: 1.3em;
@@ -1123,17 +1430,16 @@ body {
   float: right;
   height: 100%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide {
+#wrapper_container #main-content section.contact-wide {
   margin: 1% 0;
   width: 100%;
   height: auto;
   background-color: #fff;
   float: left;
-  box-shadow: 0 0.5px 0.5px 0px rgba(0, 0, 0, 0.2);
-  /*@include boxShadow( 1px 2px 3px rgba(0,0,0,.1) , 4px 4px 2px gray );*/
+  box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
   /*Comment Form*/
 }
-#wrapper_container #main-content #blogleftside .contact-wide h2 {
+#wrapper_container #main-content section.contact-wide h1 {
   width: 100%;
   height: 60px;
   margin: 0;
@@ -1146,20 +1452,20 @@ body {
   letter-spacing: 0.1em;
   font-weight: bold;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .navigation {
+#wrapper_container #main-content section.contact-wide .navigation {
   height: 100px;
   width: 96%;
   margin: 1% auto;
   background-color: #575A5E;
   color: #fff;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .navigation h1 {
+#wrapper_container #main-content section.contact-wide .navigation h1 {
   margin: 0 auto;
   color: #fff;
   font-size: 1.3em;
   width: 96%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .navigation .right {
+#wrapper_container #main-content section.contact-wide .navigation .right {
   width: 50%;
   float: left;
   display: inline-block;
@@ -1170,16 +1476,16 @@ body {
   line-height: 40px;
   color: #000;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .navigation .right a {
+#wrapper_container #main-content section.contact-wide .navigation .right a {
   display: inline-block;
   font-weight: bold;
   height: 30px;
   margin: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .navigation .right a:hover {
+#wrapper_container #main-content section.contact-wide .navigation .right a:hover {
   color: #fff;
 }
-#wrapper_container #main-content #blogleftside .contact-wide h3#comments {
+#wrapper_container #main-content section.contact-wide h3#comments {
   height: 35px;
   min-height: 35px;
   line-height: 35px;
@@ -1189,11 +1495,11 @@ body {
   margin: 2% auto;
   display: block;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist {
-  padding-left: 0px;
+#wrapper_container #main-content section.contact-wide .commentlist {
+  padding-left: 0;
   margin: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta {
   letter-spacing: 0.1em;
   padding: 1%;
   display: block;
@@ -1201,40 +1507,40 @@ body {
   color: #fff;
   height: 75px;
   font-size: 0.95em;
-  text-indent: 0px;
+  text-indent: 0;
   width: 100%;
   margin: 0 auto;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .edit-link {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .edit-link {
   display: inline;
   padding: 10px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-author {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .comment-author {
   float: left;
   display: inline-block;
   height: auto;
   padding: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-author img {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .comment-author img {
   width: 12%;
   height: auto;
   margin: 0;
   display: inline-block;
   float: left;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-author b.fn {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .comment-author b.fn {
   display: inline-block;
   width: auto;
   padding: 0 2%;
   text-align: center;
   height: 100%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-author span.says {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .comment-author span.says {
   display: inline-block;
   width: auto;
   height: 100%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-metadata {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .comment-metadata {
   float: right;
   line-height: 30px;
   height: 30px;
@@ -1242,34 +1548,34 @@ body {
   width: auto;
   display: inline-block;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-meta .comment-metadata a {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-meta .comment-metadata a {
   color: #fff;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-content {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-content {
   width: 100%;
   margin: 2% auto;
   font-size: 0.9em;
   min-height: 100px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .comment-content p {
+#wrapper_container #main-content section.contact-wide .commentlist .comment-content p {
   width: 94%;
   font-size: 1em;
   line-height: 1.5em;
   margin: 0 auto;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist li ul {
+#wrapper_container #main-content section.contact-wide .commentlist li ul {
   width: 100%;
   margin-left: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist li {
+#wrapper_container #main-content section.contact-wide .commentlist li {
   padding: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .reply {
+#wrapper_container #main-content section.contact-wide .commentlist .reply {
   width: 96%;
   min-height: 35px;
   margin: 2% auto;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .reply a {
+#wrapper_container #main-content section.contact-wide .commentlist .reply a {
   margin: 0;
   display: block;
   height: 35px;
@@ -1285,14 +1591,14 @@ body {
   font-size: 0.95em;
   float: right;
 }
-#wrapper_container #main-content #blogleftside .contact-wide .commentlist .reply a:hover {
+#wrapper_container #main-content section.contact-wide .commentlist .reply a:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
   width: 15%;
   line-height: 35px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond h3#reply-title {
+#wrapper_container #main-content section.contact-wide #respond h3#reply-title {
   width: 95%;
   margin: 1% auto;
   padding: 0;
@@ -1302,16 +1608,16 @@ body {
   line-height: 35px;
   text-indent: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond h3#reply-title small a {
+#wrapper_container #main-content section.contact-wide #respond h3#reply-title small a {
   font-size: 0.9em;
   display: inline-block;
   padding: 0 2%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond h3#reply-title small a:hover {
+#wrapper_container #main-content section.contact-wide #respond h3#reply-title small a:hover {
   font-size: 1em;
   color: red;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form {
+#wrapper_container #main-content section.contact-wide #respond .comment-form {
   width: 82%;
   height: auto;
   margin: 5% auto;
@@ -1319,7 +1625,7 @@ body {
   padding: 1.8% 0;
   font-size: 100%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-notes {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-notes {
   font-size: 0.90em;
   font-weight: 300;
   width: 95%;
@@ -1327,78 +1633,81 @@ body {
   line-height: 1.7em;
   margin: 0;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form textarea#comment {
+#wrapper_container #main-content section.contact-wide #respond .comment-form textarea#comment {
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #ddd;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-author label {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author label {
   height: 30px;
   line-height: 30px;
   width: 30px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-author input {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author input {
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #ddd;
   width: 100%;
   width: 100%;
   height: 35px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-author input:focus, #wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-author textarea#comment:focus {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author input:focus,
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author textarea#comment:focus {
   box-shadow: 0 0 5px #51cbee;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #51cbee;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-email label {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email label {
   height: 30px;
   line-height: 30px;
   width: 30px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-email input {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email input {
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #ddd;
   width: 100%;
   width: 100%;
   height: 35px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-email input:focus, #wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-email textarea#comment:focus {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email input:focus,
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email textarea#comment:focus {
   box-shadow: 0 0 5px #51cbee;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #51cbee;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-url label {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url label {
   height: 30px;
   line-height: 30px;
   width: 30px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-url input {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url input {
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #ddd;
   width: 100%;
   width: 100%;
   height: 35px;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-url input:focus, #wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.comment-form-url textarea#comment:focus {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url input:focus,
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url textarea#comment:focus {
   box-shadow: 0 0 5px #51cbee;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #51cbee;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.form-submit {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit {
   margin: 2% 0;
   width: 100%;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.form-submit input[type="submit"] {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"] {
   height: 35px;
   list-style: none;
   width: 20%;
@@ -1408,12 +1717,12 @@ body {
   color: #062351;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
 }
-#wrapper_container #main-content #blogleftside .contact-wide #respond .comment-form p.form-submit input[type="submit"]:hover {
+#wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"]:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
 }
-#wrapper_container #main-content #blogleftside .contact-wide p.must-log-in {
+#wrapper_container #main-content section.contact-wide p.must-log-in {
   width: 100%;
   text-indent: 2%;
 }
@@ -1452,20 +1761,24 @@ body {
   background-color: #062351;
   color: #fff;
 }
-#wrapper_container #main-content #contactform input[type=text], #wrapper_container #main-content #contactform textarea, #wrapper_container #main-content #contactform select {
+#wrapper_container #main-content #contactform input[type=text],
+#wrapper_container #main-content #contactform select,
+#wrapper_container #main-content #contactform textarea {
   outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #ddd;
   width: 95%;
 }
-#wrapper_container #main-content #contactform input[type=text]:focus, #wrapper_container #main-content #contactform textarea:focus, #wrapper_container #main-content #contactform select:focus {
+#wrapper_container #main-content #contactform input[type=text]:focus,
+#wrapper_container #main-content #contactform select:focus,
+#wrapper_container #main-content #contactform textarea:focus {
   box-shadow: 0 0 5px #51cbee;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
+  padding: 3px 0 3px 3px;
+  margin: 5px 1px 3px 0;
   border: 1px solid #51cbee;
 }
-#wrapper_container #main-content .front_panel {
+#wrapper_container #main-content .frontpage_container {
   width: 100%;
   display: block;
   height: 545px;
@@ -1478,7 +1791,7 @@ body {
   /*front-page container*/
   /*profile-page_container*/
 }
-#wrapper_container #main-content .front_panel .intro-text {
+#wrapper_container #main-content .frontpage_container .text-box {
   width: 50%;
   display: inline-block;
   padding: 0;
@@ -1486,7 +1799,7 @@ body {
   margin: 0;
   height: auto;
 }
-#wrapper_container #main-content .front_panel .intro-text h1 {
+#wrapper_container #main-content .frontpage_container .text-box h1 {
   font-size: 1em;
   margin: 0;
   padding: 0;
@@ -1499,7 +1812,7 @@ body {
   font-weight: 600;
   display: block;
 }
-#wrapper_container #main-content .front_panel .intro-text p {
+#wrapper_container #main-content .frontpage_container .text-box p {
   width: 99%;
   line-height: 1.69em;
   font-size: 0.9em;
@@ -1508,74 +1821,75 @@ body {
   letter-spacing: 0.095em;
   padding-top: 0.5%;
 }
-#wrapper_container #main-content .front_panel .intro-text .introimg {
+#wrapper_container #main-content .frontpage_container .text-box .introimg {
   width: 14.729%;
   float: left;
-  margin: 1% 2% 0% 0%;
+  margin: 1% 2% 0 0;
   height: auto;
   display: inline-block;
 }
-#wrapper_container #main-content .front_panel .intro-text hr {
-  background-color: #CCD3DE;
+#wrapper_container #main-content .frontpage_container .text-box hr {
   height: 1px;
   margin: 1.4% auto;
   width: 40%;
   outline: none;
   border: none;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills {
+#wrapper_container #main-content .frontpage_container .text-box a:hover {
+  text-decoration: underline;
+}
+#wrapper_container #main-content .frontpage_container .text-box .webskills {
   list-style: none;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   margin: 0;
   padding: 3% 0;
   width: 100%;
   display: inline-block;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li {
   margin: 0;
   font-size: 0.75em;
   color: #062351;
   font-style: italic;
   font-weight: 700;
-  text-indent: 0%;
+  text-indent: 0;
   display: block;
   width: 100%;
   float: none;
   line-height: 1.5em;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li#fa-desktop {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
   display: block;
   height: 100%;
-  font-size: 0.95em;
+  font-size: 0.85em;
   line-height: 35px;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li#fa-desktop::before {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
   font-family: 'FontAwesome';
   content: "\f108";
   font-style: normal;
   padding: 1.5%;
   line-height: 1.5em;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li#fa-wordpress {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
   display: block;
   height: 100%;
-  font-size: 0.95em;
+  font-size: 0.85em;
   line-height: 35px;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li#fa-wordpress::before {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
   font-family: 'FontAwesome';
   content: "\f19a";
   font-style: normal;
   padding: 1.5%;
   line-height: 1.5em;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li#fa-mobile {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
   display: block;
   height: 100%;
-  font-size: 0.95em;
+  font-size: 0.85em;
   line-height: 35px;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li#fa-mobile::before {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
   font-family: 'FontAwesome';
   content: "\f05a";
   font-style: normal;
@@ -1583,238 +1897,71 @@ body {
   font-size: 1.3em;
   line-height: 1.5em;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li a {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li a {
   width: 100%;
 }
-#wrapper_container #main-content .front_panel .intro-text .webskills li a:hover {
+#wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
   width: 100%;
   color: #fff;
 }
-#wrapper_container #main-content .front_panel .frontpage_cont {
+#wrapper_container #main-content .frontpage_container .svg-image-container {
   width: 50%;
   height: 529px;
-  margin: 0px;
+  margin: 0;
   float: right;
   display: inline-block;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  /* Content Section Leftbox contentboxes Image Box Style */
 }
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox {
+#wrapper_container #main-content .frontpage_container .svg-image-container figure#image-6 #image-5 {
   width: 100%;
+  max-width: 100%;
   height: 100%;
-  margin: 0 auto;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox a {
-  outline: none;
-  text-decoration: none;
-  display: inline-block;
-  width: 30%;
-  height: 35px;
-  text-align: center;
-  margin: 0 auto;
-  background-color: #CCD3DE;
-  color: #062351;
-  font-size: 0.9em;
-  line-height: 35px;
-  float: none;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox a:hover {
-  color: #fff;
-  background-color: #062351;
-  font-weight: normal;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box {
-  border: 0px solid #fff;
-  cursor: pointer;
-  height: 100%;
-  float: left;
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  /*-webkit-box-shadow: 1px 1px 1px 1px #ccc;
-  -moz-box-shadow: 1px 1px 1px 1px #ccc;
-  box-shadow: 1px 1px 1px 1px #ccc;*/
+  border: none;
   margin-top: 0;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 {
-  cursor: pointer;
-  float: left;
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-  margin: 0;
   display: block;
 }
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-6 {
+#wrapper_container #main-content .frontpage_container .svg-image-container figure#image-7 #image-4 {
   display: none;
 }
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-7 {
-  display: none;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-4 {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  border: none;
-  margin-top: 0px;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .image-4 #image-5 {
-  width: 100%;
-  max-width: 100%;
-  height: 100%;
-  border: none;
-  margin-top: 0px;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption {
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  padding: 0;
-  left: 100%;
-  background-color: #c0c9dd;
-  display: block;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p {
-  font-size: 0.9em;
-  color: #062351;
-  margin: 0px auto;
-  padding: 0;
-  width: 100%;
-  text-align: center;
-  line-height: 60px;
-  min-height: 40px;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .box .slide-caption p:last-of-type {
-  font-size: 100%;
-}
-#wrapper_container #main-content .front_panel .frontpage_cont .imagebox .profile .sectionleftbox caption {
-  /*coordinated marking to match cell's padding*/
-  margin-bottom: .5em;
-  /*centered so it doesn't blend in to other content*/
-  text-align: center;
-}
-#wrapper_container #main-content .front_panel .prof_cont {
+#wrapper_container #main-content .frontpage_container .prof_cont {
   width: 50%;
   /*new*/
   height: 485px;
-  background-color: #fff;
   margin: 0;
   display: inline-block;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   float: right;
   /*chart*/
   /* End of chart*/
   /*Hero Slider*/
   /* END OF Hero Slider*/
 }
-#wrapper_container #main-content .front_panel .prof_cont h1 {
+#wrapper_container #main-content .frontpage_container .prof_cont h1 {
   width: 100%;
   height: 50px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-size: 1.3em;
   line-height: 50px;
-  background-color: #575A5E;
-  color: #fff;
   text-indent: 1.5%;
   letter-spacing: 0.05em;
   font-weight: bold;
 }
-#wrapper_container #main-content .front_panel .prof_cont #social {
+#wrapper_container #main-content .frontpage_container .prof_cont #social {
   width: 50%;
   display: block;
   float: left;
-  margin-top: 0px;
+  margin-top: 0;
 }
-#wrapper_container #main-content .front_panel .prof_cont #social h3 {
+#wrapper_container #main-content .frontpage_container .prof_cont #social h3 {
   width: 100%;
-  margin: 2% 0px;
+  margin: 2% 0;
 }
-#wrapper_container #main-content .front_panel .prof_cont #chart {
-  width: 95%;
-  height: 77.73469%;
-  margin: 5% auto;
-  display: block;
+#wrapper_container #main-content .frontpage_container .prof_cont #chart {
+  display: none;
 }
-#wrapper_container #main-content .front_panel .prof_cont #chart #numbers {
-  width: 9%;
-  height: 100%;
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  float: left;
-  color: #062351;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #numbers li {
-  text-align: left;
-  list-style: none;
-  height: 23.40%;
-  border-bottom: 1px solid #444;
-  position: relative;
-  bottom: 0px;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #numbers li:first-child {
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li:first-child {
   border-top: 1px solid #444;
 }
-#wrapper_container #main-content .front_panel .prof_cont #chart #numbers li:last-child {
-  height: 9.48657%;
-  border: none;
-  font-size: 1em;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #numbers li span {
-  color: #062351;
-  position: absolute;
-  bottom: 0;
-  line-height: inherit;
-  font-size: 0.9em;
-  display: inline-block;
-  width: 100%;
-  text-align: left;
-  height: 100%;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #bars {
-  display: inline-block;
-  background: #fff;
-  width: 90%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #bars li {
-  display: block;
-  width: 75px;
-  height: 353px;
-  margin: 0;
-  text-align: center;
-  position: relative;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #bars li .bar {
-  display: block;
-  width: 98%;
-  margin-left: 0px;
-  background: #062351;
-  position: absolute;
-  bottom: 0;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #bars li .bar:hover {
-  background: #CCD3DE;
-  cursor: pointer;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #bars li .bar:hover:before {
-  content: attr(data-percentage) "%";
-  position: relative;
-  bottom: 20px;
-}
-#wrapper_container #main-content .front_panel .prof_cont #chart #bars span {
-  width: 98%;
-  position: absolute;
-  left: 0;
-  bottom: -2em;
-  text-align: center;
-  font-size: 0.8em;
-}
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
   text-align: left;
   background-color: #fff;
   margin: 0.85em auto;
@@ -1822,7 +1969,7 @@ body {
   height: 83.524%;
   width: 98%;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
   float: left;
   width: 74%;
   height: 390px;
@@ -1830,10 +1977,10 @@ body {
   margin: 0 0 0 1%;
   overflow: hidden;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body {
   width: 100%;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   width: 100%;
   height: 390px;
@@ -1841,10 +1988,10 @@ body {
   text-align: left;
   background-color: #fff;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel h2 {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
   padding: 0;
   color: #fff;
-  line-height: 40px;
+  line-height: 2.5em;
   text-indent: 1.5%;
   height: 40px;
   background-color: #062351;
@@ -1854,10 +2001,10 @@ body {
   width: 100%;
   margin: 0;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel .abobe {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
   float: none;
   /*new*/
-  width: 40.59%;
+  width: 35.59%;
   /*new*/
   height: auto;
   /*new*/
@@ -1867,10 +2014,50 @@ body {
   display: block;
   /*new*/
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel .cert {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
+  font-weight: bold;
+  font-size: 0.90em;
+  width: auto;
+  text-indent: 0;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 2.4em;
+  text-align: center;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 2.4em;
+  font-size: 0.9em;
+  display: block;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  width: 100%;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
+  font-size: 0.85em;
+  /*new*/
+  width: 100%;
+  /*new*/
+  margin: 0;
+  font-weight: 300;
+  color: #062351;
+  display: block;
+  line-height: 1.5em;
+  height: auto;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+  font-family: "FontAwesome";
+  font-size: 0.85em;
+  color: #062351;
+  content: "\f19d";
+  margin: 0 1%;
+  line-height: 1.5em;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
   float: none;
   /*new*/
-  width: 26.78%;
+  width: 21.78%;
   /*new*/
   height: auto;
   /*new*/
@@ -1879,42 +2066,54 @@ body {
   display: block;
   /*new*/
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel h3 {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
   font-weight: bold;
   font-size: 0.90em;
   width: auto;
-  text-indent: 0px;
-  margin-top: 1%;
+  text-indent: 0;
+  margin: 0;
   letter-spacing: 0.01em;
-  line-height: 35px;
+  line-height: 2.8em;
   text-align: center;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel p {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
+  margin: 0;
+  padding: 0;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
+  width: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
   font-size: 0.85em;
   /*new*/
   width: 100%;
   /*new*/
-  margin-top: 1%;
+  margin: 0;
   font-weight: 300;
   color: #062351;
-  display: inline-block;
-  line-height: 1.6em;
+  display: block;
+  line-height: 1.5em;
+  height: auto;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel p i {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
+  font-family: "FontAwesome";
   font-size: 0.85em;
   color: #062351;
+  content: "\f19d";
+  margin: 0 1%;
+  line-height: 1.5em;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider .mask div.slider-body .panel p:first-child {
-  font-weight: bold;
-}
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider ul {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
   margin: 0;
   list-style: outside none none;
   float: left;
   height: 100%;
   /*new*/
   width: 25%;
-  padding: 0px;
+  padding: 0;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   display: -webkit-flex;
   display: flex;
@@ -1924,14 +2123,14 @@ body {
   justify-content: flex-start;
   /* style */
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider ul li {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
   margin-bottom: 1%;
   width: 100%;
   height: 40px;
   flex-grow: 1;
   flex-wrap: wrap;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider ul li a {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
   height: 100%;
   outline: none;
   text-decoration: none;
@@ -1946,20 +2145,20 @@ body {
   font-size: 0.75em;
   line-height: 40px;
 }
-#wrapper_container #main-content .front_panel .prof_cont .hero-slider ul li a:hover {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
 }
-#wrapper_container #main-content ul.skills {
+#wrapper_container ul.skills {
   list-style: none;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  margin: 1% 0px 5% 0%;
-  padding: 0px;
+  margin: 3% 0;
+  padding: 0;
   width: 45%;
   display: inline-block;
 }
-#wrapper_container #main-content ul.skills li {
+#wrapper_container ul.skills li {
   width: 100%;
   margin: 0;
   font-size: 0.9em;
@@ -1968,7 +2167,7 @@ body {
   height: 40px;
   line-height: 40px;
 }
-#wrapper_container #main-content ul.skills li::before {
+#wrapper_container ul.skills li::before {
   font-family: 'FontAwesome';
   content: "\f0e0";
   font-style: normal;
@@ -1976,78 +2175,53 @@ body {
   font-size: 1.4em;
   line-height: 1.5em;
 }
-#wrapper_container #main-content ul.skills li a {
+#wrapper_container ul.skills li a {
   width: auto;
   display: inline-block;
   line-height: 40px;
   letter-spacing: 0.05em;
 }
-#wrapper_container #main-content ul.skills li a:hover {
+#wrapper_container ul.skills li a:hover {
   width: 90%;
   color: #fff;
   line-height: 40px;
 }
-#wrapper_container #main-content blockquote {
-  width: 91%;
-  margin: 1.8% auto;
-  color: #062351;
-  line-height: 1.6em;
-  font-style: italic;
-  letter-spacing: 0.05em;
-  font-size: 0.9em;
-}
-#wrapper_container #main-content #photocontainer {
-  width: 100%;
+#wrapper_container div#photocontainer {
   height: auto;
-  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   margin: auto;
-  display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  display: block;
 }
-#wrapper_container #main-content #photocontainer h3 {
-  margin: 5px 0px 5px 0px;
-}
-#wrapper_container #main-content #photocontainer .content {
+#wrapper_container div#photocontainer div.content {
   clear: both;
   position: relative;
   top: 10px;
-  padding: 0px;
   overflow: hidden;
 }
-#wrapper_container #main-content #photocontainer .content .menuSwitch {
+#wrapper_container div#photocontainer div.content .menuSwitch {
   text-align: left;
   margin: 1.3% 0;
   width: 100%;
 }
-#wrapper_container #main-content #photocontainer .content .menuSwitch ul {
+#wrapper_container div#photocontainer div.content .menuSwitch ul {
   padding-left: 0;
   height: auto;
 }
-#wrapper_container #main-content #photocontainer .content .menuSwitch ul li {
-  list-style-type: none;
+#wrapper_container div#photocontainer div.content .menuSwitch ul li {
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
-  cursor: pointer;
-  background-color: #c0c9dd;
-  color: #062351;
+  float: left;
   font-size: 1.1em;
   margin-right: 1%;
 }
-#wrapper_container #main-content #photocontainer .content .menuSwitch ul li:hover {
-  background-color: #062351;
-  color: #fff;
-}
-#wrapper_container #main-content #photocontainer .content .menuSwitch ul li.cat-active {
-  background-color: #062351;
-  color: #fff;
-}
-#wrapper_container #main-content #photocontainer .content #panel, #wrapper_container #main-content #photocontainer .content #panel2, #wrapper_container #main-content #photocontainer .content #panel3, #wrapper_container #main-content #photocontainer .content #panel4, #wrapper_container #main-content #photocontainer .content #panel5, #wrapper_container #main-content #photocontainer .content #panel6, #wrapper_container #main-content #photocontainer .content #panel7, #wrapper_container #main-content #photocontainer .content #panel8 {
+#wrapper_container div#photocontainer div.content div#panel,
+#wrapper_container div#photocontainer div.content div#panel2,
+#wrapper_container div#photocontainer div.content div#panel3,
+#wrapper_container div#photocontainer div.content div#panel4,
+#wrapper_container div#photocontainer div.content div#panel5,
+#wrapper_container div#photocontainer div.content div#panel6,
+#wrapper_container div#photocontainer div.content div#panel7,
+#wrapper_container div#photocontainer div.content div#panel8 {
   position: relative;
   top: 2px;
   overflow: hidden;
@@ -2059,57 +2233,101 @@ body {
   height: 390px;
   /*new*/
 }
-#wrapper_container #main-content #photocontainer .content #panel:hover, #wrapper_container #main-content #photocontainer .content #panel2:hover, #wrapper_container #main-content #photocontainer .content #panel3:hover, #wrapper_container #main-content #photocontainer .content #panel4:hover, #wrapper_container #main-content #photocontainer .content #panel5:hover, #wrapper_container #main-content #photocontainer .content #panel6:hover, #wrapper_container #main-content #photocontainer .content #panel7:hover, #wrapper_container #main-content #photocontainer .content #panel8:hover {
+#wrapper_container div#photocontainer div.content div#panel:hover,
+#wrapper_container div#photocontainer div.content div#panel2:hover,
+#wrapper_container div#photocontainer div.content div#panel3:hover,
+#wrapper_container div#photocontainer div.content div#panel4:hover,
+#wrapper_container div#photocontainer div.content div#panel5:hover,
+#wrapper_container div#photocontainer div.content div#panel6:hover,
+#wrapper_container div#photocontainer div.content div#panel7:hover,
+#wrapper_container div#photocontainer div.content div#panel8:hover {
   cursor: pointer;
 }
-#wrapper_container #main-content #photocontainer .content #panel .text-btn, #wrapper_container #main-content #photocontainer .content #panel2 .text-btn, #wrapper_container #main-content #photocontainer .content #panel3 .text-btn, #wrapper_container #main-content #photocontainer .content #panel4 .text-btn, #wrapper_container #main-content #photocontainer .content #panel5 .text-btn, #wrapper_container #main-content #photocontainer .content #panel6 .text-btn, #wrapper_container #main-content #photocontainer .content #panel7 .text-btn, #wrapper_container #main-content #photocontainer .content #panel8 .text-btn {
+#wrapper_container div#photocontainer div.content div#panel .text-btn,
+#wrapper_container div#photocontainer div.content div#panel2 .text-btn,
+#wrapper_container div#photocontainer div.content div#panel3 .text-btn,
+#wrapper_container div#photocontainer div.content div#panel4 .text-btn,
+#wrapper_container div#photocontainer div.content div#panel5 .text-btn,
+#wrapper_container div#photocontainer div.content div#panel6 .text-btn,
+#wrapper_container div#photocontainer div.content div#panel7 .text-btn,
+#wrapper_container div#photocontainer div.content div#panel8 .text-btn {
   position: absolute;
   top: 40%;
-  left: 0%;
+  left: 0;
   z-index: 2;
   display: block;
   height: 15%;
   width: 100%;
   outline: none;
   border: none;
+  float: left;
   font-size: 1em;
   color: #062351;
 }
-#wrapper_container #main-content #photocontainer .content #panel .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel2 .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel3 .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel4 .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel5 .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel6 .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel7 .text-btn:hover, #wrapper_container #main-content #photocontainer .content #panel8 .text-btn:hover {
+#wrapper_container div#photocontainer div.content div#panel .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel2 .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel3 .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel4 .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel5 .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel6 .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel7 .text-btn:hover,
+#wrapper_container div#photocontainer div.content div#panel8 .text-btn:hover {
   color: #fff;
   background-color: #062351;
   cursor: pointer;
   z-index: 2;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img {
   float: left;
-  width: 100%;
-  /*new*/
-  height: 100%;
-  /*new*/
-  margin: 0;
   display: inline-block;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img img, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img img {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img img,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img img {
   height: auto;
   width: 100%;
   left: 0;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content {
   display: none;
   width: 100%;
   /*new*/
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 5%;
+  padding: 1% 5%;
   border: 1px #fff solid;
   position: absolute;
   z-index: 10;
-  left: 0px;
+  left: 0;
   height: 100%;
-  top: 0px;
+  top: 0;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content h1, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content h1 {
-  text-indent: 0px;
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
+  text-indent: 0;
   font-size: 1em;
   width: 100%;
   color: #062351;
@@ -2119,15 +2337,45 @@ body {
   height: 30px;
   text-align: left;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p {
   font-size: 0.85em;
   width: 100%;
-  margin: 0 0 1% 0;
+  margin: 0 0 1%;
   letter-spacing: 0.05em;
   line-height: 1.6em;
   color: #062351;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p span.fa-mobile, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p span.fa-desktop, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p span.fa-tablet, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p span.fa-mobile {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-tablet,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-desktop,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-mobile,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-tablet {
   font-size: 1.5em;
   width: 33%;
   display: inline-block;
@@ -2135,19 +2383,56 @@ body {
   height: 30px;
   line-height: 30px;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content p span.fa-mobile:hover, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p span.fa-desktop:hover, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p span.fa-tablet:hover, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content p span.fa-mobile:hover {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-tablet:hover,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-desktop:hover,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-mobile:hover,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-tablet:hover {
   font-size: 1.6em;
   height: 30px;
   line-height: 30px;
   cursor: pointer;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content .links, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content .links {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links {
   height: 30px;
   margin: 0;
   display: block;
   width: 100%;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content .links a, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content .links a {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a {
   height: 30px;
   list-style: none;
   background-color: #CCD3DE;
@@ -2159,16 +2444,30 @@ body {
   font-size: 0.85em;
   line-height: 30px;
   padding: 0.5%;
-  margin: 1% 0% 1% 1%;
+  margin: 1% 0 1% 1%;
   display: inline-block;
   text-align: center;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content .links a:hover, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content .links a:hover {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a:hover,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a:hover {
   color: #fff;
   background-color: #062351;
   font-weight: bold;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content .links a.fancybox, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content .links a.fancybox {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a.fancybox,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a.fancybox {
   font-size: 0.85em;
   height: 30px;
   display: inline-block;
@@ -2179,86 +2478,96 @@ body {
   float: left;
   width: 49%;
 }
-#wrapper_container #main-content #photocontainer .content #panel .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel2 .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel3 .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel4 .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel5 .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel6 .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel7 .showcase-img .showcase-content .links a.fancybox:hover, #wrapper_container #main-content #photocontainer .content #panel8 .showcase-img .showcase-content .links a.fancybox:hover {
+#wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a.fancybox:hover,
+#wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a.fancybox:hover {
   color: #fff;
   background-color: #062351;
   font-weight: bold;
 }
-#wrapper_container #main-content div.wpcf7 img.ajax-loader {
+#wrapper_container div.wpcf7 img.ajax-loader {
   border: medium none;
   vertical-align: middle;
-  margin-left: 4px;
   height: 100px;
+  width: 10%;
+  display: block;
+  margin: 5% auto;
 }
-#wrapper_container #main-content .dbox {
+#wrapper_container .dbox {
   margin-bottom: 30px;
 }
-#wrapper_container #main-content .dbox .itemCont {
+#wrapper_container .dbox .itemCont {
   overflow: hidden;
   display: inline-block;
 }
-#wrapper_container #main-content .dbox .itemCont a {
+#wrapper_container .dbox .itemCont a {
   display: block;
   padding-bottom: 5px;
 }
-#wrapper_container #main-content .dbox .itemCont a:hover {
+#wrapper_container .dbox .itemCont a:hover {
   background-color: #00ACE9;
   color: white;
 }
-#wrapper_container #main-content .dbox .goto {
+#wrapper_container .dbox .goto {
   display: none;
 }
-#wrapper_container #main-content .itemInfo {
+#wrapper_container .itemInfo {
   display: block;
 }
-#wrapper_container #main-content .itemInfo p {
+#wrapper_container .itemInfo p {
   display: none;
 }
-#wrapper_container #main-content .thumb img {
+#wrapper_container .thumb img {
   text-align: center;
 }
-#wrapper_container #main-content .loadit {
+#wrapper_container .loadit {
   text-align: center;
 }
-#wrapper_container #main-content .dbox-list {
+#wrapper_container .dbox-list {
   width: 100%;
   height: auto;
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
-#wrapper_container #main-content .dbox-list > .itemCont > a > .thumb {
+#wrapper_container .dbox-list > .itemCont > a > .thumb {
   width: 100px;
   float: left;
 }
-#wrapper_container #main-content .dbox-list > .itemCont > a > .itemInfo {
+#wrapper_container .dbox-list > .itemCont > a > .itemInfo {
   float: left;
   margin-left: 30px;
   width: 75%;
 }
-#wrapper_container #main-content .dbox-list > .itemCont > a > .itemInfo > p {
+#wrapper_container .dbox-list > .itemCont > a > .itemInfo > p {
   display: block;
   color: #777;
 }
-#wrapper_container #main-content .dbox-list .goto {
+#wrapper_container .dbox-list .goto {
   display: block;
   float: right;
 }
-#wrapper_container footer {
+
+/*Footer*/
+footer {
   width: 100%;
   height: 120px;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  margin-top: 5%;
-  /* footer social images*/
+  margin-top: 1%;
 }
-#wrapper_container footer .socialpics {
+footer .socialpics {
   display: block;
   float: right;
   margin: 0;
   height: 40%;
   width: 25%;
 }
-#wrapper_container footer .socialpics .social-icon {
+footer .socialpics .social-icon {
   float: left;
   margin-left: 4%;
   display: inline-block;
@@ -2270,44 +2579,44 @@ body {
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
 }
-#wrapper_container footer .socialpics .social-icon:hover {
+footer .socialpics .social-icon:hover {
   background-color: #062351;
   color: #fff;
 }
-#wrapper_container footer .socialpics span {
+footer .socialpics span {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-#wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
+footer .socialpics .linkedin-icon span .fa-linkedin {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-#wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
+footer .socialpics .twitter-icon span .fa-twitter {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-#wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
+footer .socialpics .facebook-icon span .fa-facebook {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-#wrapper_container footer .socialpics .google-icon span .fa-github {
+footer .socialpics .google-icon span .fa-github {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-#wrapper_container footer p#copyr {
+footer p#copyr {
   color: #062351;
   text-align: right;
   font-size: 10px;
@@ -2317,7 +2626,7 @@ body {
   display: inline-block;
   padding-top: 4%;
 }
-#wrapper_container footer ul {
+footer ul {
   width: 45%;
   margin: 0;
   padding: 0;
@@ -2325,29 +2634,29 @@ body {
   float: left;
   height: 100%;
 }
-#wrapper_container footer ul li {
+footer ul li {
   height: 22.2%;
   list-style: none;
   width: 100%;
   margin: 0;
-  text-indent: 0px;
+  text-indent: 0;
   font-size: 1em;
 }
-#wrapper_container footer ul li a {
+footer ul li a {
   width: 40%;
   text-decoration: none;
   color: #062351;
-  margin: 0px;
+  margin: 0;
   padding: 0;
   font-size: 0.85em;
   display: block;
   line-height: 1.5em;
 }
-#wrapper_container footer ul li a:hover {
+footer ul li a:hover {
   color: #fff;
   margin: 0;
   font-size: 0.90em;
   line-height: 1.5em;
 }
 
-/*wrapper*/
+/*# sourceMappingURL=ie.css.map */

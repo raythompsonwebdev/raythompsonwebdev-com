@@ -8,15 +8,14 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
+                
                 <h1><?php the_title(); ?></h1>
+                
                 <header class="byline">
-
 
                     <div class="entry-meta">
                         <?php popperscores_posted_on(); ?>
                     </div><!-- .entry-meta -->
-
-
 
                 </header><!--end of by line-->
 
@@ -25,7 +24,6 @@
                 </a>
 
                 <?php the_content(); ?>
-
 
                 <footer class="byline">
 
@@ -45,33 +43,37 @@
                 <span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
             </nav><!--end of right navigation-->
 
-
             <!--end of navigation-->
 
-        <?php endwhile;
+        <?php
+        endwhile;
     else:
         ?>
 
         <p><?php load_theme_textdomain($domain, $path) ?></p>
+        
 <?php endif; ?>
     <!--end of Comment box-->
 
 
+    <section class='contact-wide'>
 
-<section class="contact-wide" >
+        <h1>Send your Comments</h2>
+            <?php
+// If comments are open or we have at least one comment, load up the comment template.
+            if (comments_open() || get_comments_number()) :
 
-    <h1>Send your Comments</h2>
+                comments_template();
 
-<?php comments_template(); ?>
-
-
-</section>
+            endif;
+            ?>
+    </section>
 
 
 <?php get_sidebar(); ?>
 
 </section><!--end of main content-->
 
-
 <div class="clearfix"></div>
+
 <?php get_footer(); ?> 

@@ -36,21 +36,24 @@ function wpb_add_google_fonts() {
 
 
 //Localization support
-load_theme_textdomain('raythompwebdesign-com', get_template_directory() . '/languages');
+load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages');
 
 add_editor_style( 'css/custom-editor-style.css','fonts/font-style.css');
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
 add_theme_support( 'post-thumbnails' );
+
 set_post_thumbnail_size( 100, 100, true );
 
 add_image_size( 'featured-image', 783, 9999 );
 
 // Create three new image sizes
-add_image_size('small', 150, 9999);
-add_image_size('medium', 800, 9999);
+add_image_size('small', 300, 9999);
+add_image_size('medium', 700, 9999);
 add_image_size('largest', 1024, 9999);
+
+
 add_theme_support( 'title-tag' );
 add_theme_support( 'custom-header');
 add_theme_support( 'custom-background');
@@ -101,6 +104,18 @@ remove_action('wp_head', 'feed_links_extra', 3);
 }
 add_action('after_setup_theme', 'cubiq_setup');
 
+// remove version from scripts and styles
+function shapeSpace_remove_version_scripts_styles($src) {
+	if (strpos($src, 'ver=')) {
+		$src = remove_query_arg('ver', $src);
+	}
+	return $src;
+}
+add_filter('style_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
+
+
+//custom header
 function raythompwebdesign_custom_header_setup() {
 		add_theme_support( 'custom-logo', array(
 		    'width' => 96,
@@ -123,9 +138,9 @@ add_filter( 'script_loader_src', 'remove_version_parameter', 15, 1 );
 // filter .css files
 add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
 
-
-
+//enqueue style sheets
 function mytheme_register_styles(){
+
 //wp_register_style('minified', get_stylesheet_directory_uri() . '/style-min.css', false,'1.1','all' );
 wp_register_style('custom', get_stylesheet_directory_uri() . '/custom-editor-style.css', false,'1.1','all' );
 wp_register_style('responsive',get_stylesheet_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.css', false, true );
@@ -147,7 +162,7 @@ wp_enqueue_style( 'custom-fonts' );
 }
 add_action('wp_enqueue_scripts','mytheme_register_styles');
 
-
+//enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
     wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
@@ -155,29 +170,27 @@ function raythompwebdesign_add_lightbox() {
 }
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
-function my_scripts_own() {
-wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
 
+//enqueue other scripts
+function my_scripts_own() {
+
+wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
 wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
 wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
 wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
-
 wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
 
-
 wp_enqueue_script('jquery');
-
 wp_enqueue_script( 'cookie' );
-
 wp_enqueue_script( 'easing' );
 wp_enqueue_script( 'scrollto' );
-
 wp_enqueue_script( 'master' );
 
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 
+//mobile navigation script
 function mf_responsive_nav(){
 
 echo '<script>
@@ -189,11 +202,11 @@ echo '<script>
 }
 add_action('wp_footer', 'mf_responsive_nav');
 
-
+//ie 8 styles and scripts
 function ie_scripts() {
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . 'ie.css', array(), '1.0' );
+	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
 	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lte IE 9' );
 
 	// Load the html5 shiv.
@@ -241,9 +254,9 @@ add_filter('the_excerpt', 'excerpt_read_more_link');
 /****Sidebar!******/
 if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array (
-	'name' => __( 'Primary Sidebar', 'raythompwebdesign-com' ),
+	'name' => __( 'Primary Sidebar', 'raythompsonwebdev-com' ),
 	'id' => 'primary-widget-area',
-	'description' => __( 'The primary widget area', 'raythompwebdesign-com' ),
+	'description' => __( 'The primary widget area', 'raythompsonwebdev-com' ),
 	'before_widget' => '<div class="widget">',
 	'after_widget' => "</div>",
 	'before_title' => '<h2 class="widget-title">',
@@ -252,6 +265,7 @@ if ( function_exists( 'register_sidebar' ) ) {
 }
 
 
+//map area
 function map_widgets_init() {
 	register_sidebar( array(
 		'name' => 'map',
@@ -265,6 +279,7 @@ function map_widgets_init() {
 add_action( 'widgets_init', 'map_widgets_init' );
 
 
+//social media widget area
 function social_widgets_init() {
 	register_sidebar( array(
 	'name' => 'social',
@@ -278,6 +293,7 @@ function social_widgets_init() {
 add_action( 'widgets_init', 'social_widgets_init' );
 
 
+//contact form area
 function contact_widgets_init() {
 register_sidebar( array(
 'name' => 'contact',
@@ -291,23 +307,25 @@ register_sidebar( array(
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
 
-
+//responsive images
 function twentysixteen_content_image_sizes_attr( $sizes, $size ) {
  $width = $size[0];
 
- 840 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 1362px) 62vw, 840px';
+ 700 <= $width && $sizes = '(max-width: 700px) 85vw, (max-width: 1024px) 67vw, (max-width: 1362px) 62vw, 840px';
 
  if ( 'page' === get_post_type() ) {
-	 840 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+	 700 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
  } else {
-	 840 > $width && 600 <= $width && $sizes = '(max-width: 709px) 85vw, (max-width: 909px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
-	 600 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+	 700 > $width && 300 <= $width && $sizes = '(max-width: 700px) 85vw, (max-width: 1024px) 67vw, (max-width: 984px) 61vw, (max-width: 1362px) 45vw, 600px';
+	 300 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
  }
 
  return $sizes;
 }
 add_filter( 'wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10 , 2 );
 
+
+//post meta data function to display avatar
 if ( ! function_exists( 'popperscores_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
@@ -331,7 +349,7 @@ function popperscores_posted_on() {
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'raythompwebdesign-com' ),
+		esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -348,7 +366,7 @@ function popperscores_posted_on() {
 	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 
                 echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( '&#xf086; Leave a comment', 'raythompwebdesign-com' ), esc_html__( '&#xf086;; 1 Comment', 'raythompwebdesign-com' ), esc_html__( '&#xf086; % Comments', 'raythompwebdesign-com' ) );
+		comments_popup_link( esc_html__( '&#xf086; Leave a comment', 'raythompwebdesign-com' ), esc_html__( '&#xf086;; 1 Comment', 'raythompsonwebdev-com' ), esc_html__( '&#xf086; % Comments', 'raythompwebdesign-com' ) );
 		echo '</span>';
 
                 echo '<span class="bylinetag">';
@@ -383,7 +401,7 @@ function popperscores_index_posted_on() {
 
 
 	$posted_on = sprintf(
-		esc_html_x( 'Published %s', 'post date', 'raythompwebdesign-com' ),
+		esc_html_x( 'Published %s', 'post date', 'raythompsonwebdev-com' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 

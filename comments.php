@@ -39,9 +39,9 @@ if ( have_comments() ) : ?>
       ?>
     </ol>
     <div class="nav-links navigation">
-<h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'raythompwebdesign-com' ); ?></h1>
+<h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h1>
         <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'raythompwebdesign-com' ) ); ?></div>
-        <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompwebdesign-com' ) ); ?></div>
+        <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompsonwebdev-com' ) ); ?></div>
 
     </div><!-- .nav-links -->
         

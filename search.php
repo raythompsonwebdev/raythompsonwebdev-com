@@ -15,14 +15,15 @@
 <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
 <figure class="thumb"><?php the_post_thumbnail('thumb'); ?></figure>
-<?php $query = new WP_Query( array ( 'post_type' => 'post', 'post_
+
+ <?php $query = new WP_Query( array ( 'post_type' => 'post', 'post_
 count' => '5' ) );
 
 while ( $query->have_posts() ) : $query->the_post(); ?>
 
-<?php endwhile; ?>
+<?php the_excerpt(); ?>
 
-<article class="entry"><?php the_excerpt(); ?></article>
+<?php endwhile; ?>
 
 
 </article>
@@ -31,10 +32,8 @@ while ( $query->have_posts() ) : $query->the_post(); ?>
 
 <?php else : ?>
 
-<h2 class="center">Not Found</h2>
-<p class="center">Sorry, but you are looking for something
-that isn't here.</p>
-<?php get_search_form(); ?>
+<?php get_template_part( 'templates/content', 'none' ); ?>
+
 <?php endif; ?>
 
 <br/>

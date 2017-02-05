@@ -20,6 +20,7 @@ if ( have_posts() ) : ?>
 <article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
 
 <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+
 <header class="byline">
 
 	<span class="bylineauthor"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></span>
@@ -47,5 +48,5 @@ else: ?>
 <?php get_sidebar(); ?>
 </section>
 
-<div class="clearfix"></div>
+
 <?php get_footer(); ?> 

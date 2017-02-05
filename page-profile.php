@@ -17,9 +17,23 @@
 
         <section class="prof_cont">
 
-            <h1>Web Development Code Skill Levels</h1>
+            <h1>Coding Skill Levels</h1>
 
             <article id="chart">
+                
+                    <ul id="numbers">
+
+                    <li><span>100%</span></li>
+
+                    <li><span>80%</span></li>
+
+                    <li><span>60%</span></li>
+
+                    <li><span>20%</span></li>
+
+                    <li><span>%</span></li>
+
+                </ul>
 
                 
                 <ul id="bars">
@@ -37,49 +51,35 @@
                     <li><div data-percentage="70" class="bar"></div><span>MySQL</span></li>
 
                 </ul>
-                
-                <ul id="numbers">
-
-                    <li><span>100%</span></li>
-
-                    <li><span>80%</span></li>
-
-                    <li><span>60%</span></li>
-
-                    <li><span>20%</span></li>
-
-                    <li><span>%</span></li>
-
-                </ul>
-
-
+                            
+                               
             </article>
 
 
         </section><!--end of prof cont-->
 
-        <article class="text-box">
-            <h1>My story so far..&#46;</h1>
-            <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wordpress/wp-content/uploads/2016/10/pic.jpg" alt="image-of-raythompwebdev-com">
+       <article class="text-box">
+            <h1>Web Developer&#46;</h1>
+            <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/pic.jpg" alt="image-of-raythompwebdev-com">
             //</figure>-->
 
-            <p>My name is Raymond Thompson&#44; I reside in Hackney East London&#44; I have a passion for web design and web development, particularly responsive front-end development, search engine optimisation and wordpress web development&#46;<br/></p>
+            <p>My name is Raymond Thompson&#44; I live in Hackney East London&#44; I have a passion for web design and web development, particularly front-end development, responsive web development and Wordpress web development&#46;<br/></p>
             <hr>
-            <p>When I am not working at my day job as Customer Service Advisor I spend most of my free time learning web design and web development and experimenting with code, building <strong><a href="http://localhost/wordpress/websites-2/">websites</a></strong> and creating other<strong> <a href="http://localhost/wordpress/blog/">web related stuff</a> </strong> &#46;</p>
+            <p>When I am not working at my day job as a customer service officer I spend most of my free time learning website design and development, experimenting with code, building <strong><a href="http://raythompsonwebdev.co.uk/website-projects">websites</a></strong> and helping others create other<strong> <a href="http://raythompsonwebdev.co.uk/raythompsonwebdev-blog">website related stuff</a> </strong> &#46;</p>
             <hr>
 
-            <p>I discovered web development late 2011 after attending a 7 month long part-time City &#38; Guilds website design course at the East London Advanced Technology Training Center in East London&#46;<br/></p>
+            <p>I attended a 7 month part-time City and Guilds Web design course at the East London Advanced Technology Training Center in East London between November 2011 and July 2012&#46;
+            I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
             <hr>
-            <p>Reluctant to atend at first, I soon discovered I enjoyed learning how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
-            <hr>
-            <p> I learnt how to plan and research&#44; wireframe&#44; build&#44; test and launch a commercial website as part of a team of fellow students working on various web development projects including websites for a few madeup clients and small involvements in real world projects for ELATT's in-house web service 260Web&#46; </p> 
-  <div class="clearfix"></div>
+            <p> I also learnt the process of how to plan and research&#44; wireframe&#44; build&#44; test and launch a commercial website as part of a team of fellow students working on various web development projects including websites for a few madeup clients and small involvements in real world projects for ELATT's in-house web service 260Web&#46; </p> 
+             <hr>
+            
+            <div class="clearfix"></div>
         </article>
         
    <div class="clearfix"></div>        
 
     </div><!--frontpage_container-->
- <div class="clearfix"></div> 
  
     <div class="frontpage_container">
 
@@ -95,7 +95,7 @@
                     <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level One" >Web Design L1</a></li>
                     <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Two">Web Design L2</a></li>
                     <li><a href="#" rel="#panel-5" title="City and Guilds Web Design Certificate Level Three">Web Design L3</a></li>
-                    <li><a href="#" rel="#panel-6" title="Udemy and Lynda-com Online course certificates">Udemy</a></li>
+                    <li><a href="#" rel="#panel-6" title="Udemy and Lynda-com Online course certificates">Lynda.com</a></li>
                     <li><a href="#" rel="#panel-7" title="Shaw Academy Online course certificate">Mobile Web Applications</a></li>
                     <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Digital Marketing</a></li>
                     <li><a href="#" rel="#panel-9" title="Shaw Academy course certificate">Content Marketing</a></li>
@@ -110,9 +110,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Large-Photoshop-Certicate-.jpg" class="fancyboxclass=" title="Adobe Certificate in Visual Communication">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Large-Photoshop-Certicate-.jpg" class="fancyboxclass=" title="Adobe Certificate in Visual Communication">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
                                      </a>
                                     <figcaption>
                                         <h3>Adobe Certified Associates Visual Communication</h3>
@@ -140,8 +140,8 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Small-Dreamweaver-Certicate.jpg" alt="Adobe-Deamweaver-Certificate"></a>
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Small-Dreamweaver-Certicate.jpg" alt="Adobe-Deamweaver-Certificate"></a>
                                 <figcaption>
                                     <h3>Adobe Certified Associates Web Communication</h3>
                                     <h4>Topics&#58;</h4>
@@ -166,9 +166,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
                                 </a>
                                 
@@ -198,9 +198,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
 
                                 </a>
                                 <figcaption>
@@ -228,9 +228,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                  <figcaption>  
@@ -255,13 +255,13 @@
 
                         <article class="panel" id="panel-6">
 
-                            <h2>Udemy</h2>
+                            <h2>Lynda.com</h2>
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Large-Udemy-Certicate-.jpg" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                 <figcaption>
@@ -269,13 +269,12 @@
                                     <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Google Analytics</li>
-                                            <li>Rich Snippets</li>
+                                            <li>HTML Essentials</li>
                                             <li>Programming Fundementals</li>
-                                            <li>SASS Workflow</li>
+                                            <li>CSS Fundementals</li>
                                             <li>Wordpress Essentials</li>
                                             <li>Javascript Essentials</li>
-                                            <li>HTML5 Audio & Video</li>
+                                            <li>PHP Essentials</li>
                                          
                                     </ul>
                                     <div class="clearfix"></div>         
@@ -292,9 +291,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                 
@@ -324,9 +323,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
                                 
@@ -336,7 +335,6 @@
                                     
                                     <ul>
                                             <li>Adwords/Pay Per Click</li>
-                                            <li>E-mail Marketing</li>
                                             <li>Search Engine Optimisation</li>
                                             <li>Affiliate Marketing</li>
                                             <li>Social Media</li>
@@ -358,9 +356,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/10/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
                                 
@@ -390,24 +388,28 @@
                     </div><!--slider body end-->
                 </div><!-- .mask end --> 
 
+            <div class="clearfix"></div>    
+                
             </article><!-- hero-slider end -->
+            
+            
         </article><!--end of prof cont-->
 
-        <article class="text-box">
-            <p>Over the last few years I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP, Ajax&#44; and various web development best practices&#44; </p>
+       <article class="text-box">
+            <p>Since 2012 I helped with a couple client projects and create my own projects and I have developed a very good understanding of coding languages HTML5&#44; CSS3&#44; Javascript&#44; Jquery&#44; PHP, Ajax&#44; and various web development best practices&#44; </p>
 <hr>
-<p>With the constant changes in website development I try to keep up as much as I can by watching online tutorials&#44; listening to related podcasts, attending local Meet&#45;ups and events occasionally to network with others working within the website development field to ask for advice and tips on improving my own website development skills&#46;</p>
+<p>With the constant changes in web development I try to keep up date as much as I can by watching online tutorials&#44; listening to related podcasts, attending local meet&#45;ups and events occasionally, to network with other web developers and business owners&#46;</p>
 <hr>
-  <p>I very much like to coding from scratch and using frameworks like Foundation or Bootstrap or customer management systems like Wordpress when creating websites or web applications. Tools like Grunt and Sass and Version control system GitHub help me manage and organise my workflow&#46;</p>
-
-  <p>I work well either on my own or within a team and would love to be involved in projects from start to finish and offer assistance in any way to help create your own websites or web applications.</p>
+  <p>I very much like coding websites from scratch but do use frameworks like Foundation and Bootstrap or React and Angular. I love to use Wordpress to creating themes. Tools like Grunt and Sass and GitHub help me manage and organise my workflow&#46;</p>
 <hr>
-  <p>I would like to be involved in helping create any small scale web development project to gain more experience so, if you need a hand contact me via social media or go to <strong><a href="">Contact Page</a></strong> and complete contact form. I will respond to any queries within 24 hours&#46;</p>
-           <div class="clearfix"></div> 
-        </article>
+  <p>I work well either on my own or within a team and love to be involved in projects from start to finish and offer assistance in any way to help create great websites or web applications.</p>
+<hr>
+  <p>If you are a sole trader or micro business and need help with any website development project please contact me via social media or go to <strong><a href="http://raythompsonwebdev.co.uk/contact-page">contact Page</a></strong> and complete contact form. I will respond within 24 hours&#46;</p>
+</article>
+        
+        
 <div class="clearfix"></div>
 </div><!--front-panel end-->
- <div class="clearfix"></div> 
 
 </section>
 

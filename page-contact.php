@@ -21,12 +21,9 @@ Template Name: Contact
 <?php endif; ?>
 		
 <br/>
-
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('map')) : ?>
-
-[ do default stuff if no widgets ]
-
-<?php endif; ?>
+<div class="social_media_container">
+    <img id="image-5" src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/map-of-hackney.jpg" alt="map-of-hackney">
+</div>     
 
 
 <ul class="skills" >

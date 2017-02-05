@@ -13,12 +13,12 @@ module.exports = function(grunt){
                     dev:{
                             options:{
                                     style:"expanded",
-                                    sourcemap:'none'
+                                    sourcemap:'auto'
                             },
 
                             files:{
                                     'style.css':'css/style.scss',
-                                    'svg-style-2.css':'css/svg-style-2.scss',
+                                    'svg-style-3.css':'css/svg-style-3.scss',
 																		'svg-style-3.css':'css/svg-style-3.scss',
                                     'ie.css':'css/ie.scss'
 
@@ -29,11 +29,11 @@ module.exports = function(grunt){
                     dist:{
                             options:{
                                     style:"compressed",
-                                    sourcemap:'none'
+                                    sourcemap:'auto'
                             },
                             files:{
                                     'style-min.css':'css/style.scss',
-                                    'svg-style-2-min.css':'css/svg-style-2.scss',
+                                    'svg-style-3-min.css':'css/svg-style-3.scss',
 																		'svg-style-3-min.css':'css/svg-style-3.scss',
                                     'ie-min.css':'css/ie.scss'
 

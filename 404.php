@@ -16,9 +16,6 @@
 
 </section>
 
-
-
-<div class="clearfix"></div>
 <?php get_footer(); ?>
 
 

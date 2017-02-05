@@ -64,5 +64,5 @@ excludes all representations and warranties relating to this website and its con
    		
 <div class="clearfix"></div>
 </section>
-<div class="clearfix"></div>
+
 <?php get_footer(); ?>

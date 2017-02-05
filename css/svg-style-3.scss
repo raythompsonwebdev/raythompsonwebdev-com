@@ -1,9 +1,9 @@
 
 @import 'svg-partials/mixins.scss';
 
-@import url('../fonts/font-style.css');
+@import url('../raythompwebdesign-com/fonts/font-style.css');
 
-$FontStyle: 'Titillium Web','Kelson Sans', arial, Verdana, helvetica, sans-serif ;
+$FontStyle: 'Titillium Web','ai_kelsor', arial, verdana, helvetica, sans-serif;
 
 
 g#layer14 {
@@ -182,8 +182,6 @@ g#layer21{
 #g4408-1{
   width:20%;
 
-
-
   @include transformerorigin( 50% 50% );
   @include anime-mode( web-design-btn-ft);
   @include durationer( 1s );
@@ -199,12 +197,23 @@ g#layer21{
 
 @include keyframes( web-design-btn-ft  ) {
 
-  50%{  @include transforming-things ( scaleX(1.1)); }
-  100%{   @include transforming-things ( scaleX(1));}
+  20%{  @include transforming-things ( scaleX(1.1)); }
+  60%{   @include transforming-things ( scaleX(1.1));@include transitioner( all 0.1s ease-in-out);}
+  100%{  @include transforming-things ( scaleX(1)); }
 
 }
 
 
+
+    
+#text5744:hover{
+
+    color:#c90;
+}
+
+
+
+
 /*:hover{ @include transforming-things ( scale(0.9) );}*/
 
-#g4408-1:hover{@include transitioner( all 0.1s ease-in-out);  @include transforming-things ( scaleX(1.1));}
+

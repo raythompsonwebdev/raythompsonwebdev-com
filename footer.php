@@ -1,5 +1,5 @@
 <!-- footer-->           	
-
+<br/>
 
 
 <footer>
@@ -22,11 +22,22 @@
 
 <p id="copyr" > &copy; 2016 - Raymond Thompson - UK : 
 <?php
+//$page = "Page was last updated : ";
+//$dt = time();
+//    $mysql_datetime = strftime("%Y-%m-%d %H:%M:%S", $dt);
+ //   echo $page . $mysql_datetime;
+?>
+    	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>"></a>
+			<span class="sep"> | </span>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' ); ?>
+<br/>
+<?php
 $page = "Page was last updated : ";
 $dt = time();
     $mysql_datetime = strftime("%Y-%m-%d %H:%M:%S", $dt);
     echo $page . $mysql_datetime;
 ?>
+
 </p>
 
 </footer> 

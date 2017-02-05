@@ -11,13 +11,13 @@
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-$photographer = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_name', $single = true);
+//$photographer = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_name', $single = true);
 //function get_post_meta( $post_id, $key = '', $single = false ) {
 //    return get_metadata('post', $post_id, $key, $single);
 //}
 
 
-$photographerurl = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_url',$single = true);
+//$photographerurl = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_url',$single = true);
 
 //function get_post_meta( $post_id, $key = '', $single = false ) {
 //   return get_metadata('post', $post_id, $key, $single);
@@ -38,20 +38,26 @@ $photographerurl = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_url
     
     <?php popperscores_index_posted_on(); ?> 
     
-     <span class="posted-on"><?php echo $photographer; ?></span>
+    <!-- <span class="posted-on"><?php echo $photographer; ?></span>
     <span class="posted-on">
         <a href="<?php echo $photographerurl ?>" target="_blank" class="photographerurl">
-            <?php echo $photographerurl ?></a></span>
+            <?php echo $photographerurl ?></a></span>-->
    
     
  </div>
 </header><!--end of by line-->
 
 <div class="entry-attachment">
-<?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "full"); ?>
-<figure class="attachment"><a href="<?php echo wp_get_attachment_url($post_id); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0];?>" width="<?php echo $att_image[1];?>" height="<?php echo $att_image[2];?>"  class="attachment-medium" alt="<?php $post->post_excerpt; ?>" ></a>
-</figure></div>
-<hr class="blog-spacer">
+
+    <?php if ( wp_attachment_is_image( $post->id ) ) : $att_image = wp_get_attachment_image_src( $post->id, "full"); ?>
+
+    <figure class="attachment"><a href="<?php echo wp_get_attachment_url($post_id); ?>" title="<?php the_title(); ?>" rel="attachment"><img src="<?php echo $att_image[0];?>" width="<?php echo $att_image[1];?>" height="<?php echo $att_image[2];?>"  class="attachment-medium" alt="<?php $post->post_excerpt; ?>" ></a>
+</figure>
+
+</div>
+
+
+<br/>
 <footer class="byline">
 
 <p class='right'>
@@ -77,10 +83,10 @@ $photographerurl = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_url
 
 </article>
 
-<article class="contact-wide">
-<h2>Send Comment</h2>
+<section class="contact-wide">
+<h1>Send Comment</h1>
 <?php comments_template(); ?>
-</article>
+</section>
 	
 </section>
 
