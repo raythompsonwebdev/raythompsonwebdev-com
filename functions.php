@@ -46,12 +46,11 @@ add_theme_support( 'post-thumbnails' );
 
 set_post_thumbnail_size( 100, 100, true );
 
-add_image_size( 'featured-image', 783, 9999 );
-
 // Create three new image sizes
-add_image_size('small', 300, 9999);
-add_image_size('medium', 700, 9999);
-add_image_size('largest', 1024, 9999);
+// 
+add_image_size( 'featured-image', 783, 9999 );
+//add_image_size('small', 250, 9999);
+//add_image_size('largest', 1024, 9999);
 
 
 add_theme_support( 'title-tag' );

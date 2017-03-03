@@ -51,7 +51,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-campingadvice-home-page-small.jpg" alt="CampingAdvice.com website home page" >
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-campingadvice-home-page-small.png" alt="CampingAdvice.com website home page" >
 
   <figcaption class="showcase-content showcase">
   <h1>Website:</h1>
@@ -64,7 +64,7 @@ Template Name: Websites
   <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP &#44; MySQLi&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-campingadvice-home-page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
+  <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-campingadvice-home-page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
   <a href="http://www.raythompwebdesign.com/campingadvice-com">Visit Website</a></figure>
   </figcaption>
 
@@ -80,7 +80,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg2">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-mannering-music-home-page-small.jpg" alt="Mannering Music website home page">
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-mannering-music-home-page-small.png" alt="Mannering Music website home page">
 
   <figcaption class="showcase-content">
   <h1>Website:</h1>
@@ -91,7 +91,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46; Ajax&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-mannering-music-page-large.jpg" title="Mannering Music website home page">See Image</a>
+  <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-mannering-music-page-large.jpg" title="Mannering Music website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/mannering">Visit Website</a></div>
   </figcaption>
   </figure>
@@ -103,7 +103,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg3">
 
-    <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-car-rental-home-page-small.jpg" alt="Car Rental website home page">
+    <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-car-rental-home-page-small.png" alt="Car Rental website home page">
 
     <figcaption class="showcase-content">
     <h1>Website:</h1>
@@ -114,7 +114,7 @@ Template Name: Websites
     <p>Foundation 6&#44;HTML5&#44; CSS3&#44; Jquery&#44; Javascript&#44;</p>
     <h1>Formats</h1>
     <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-car-rental-home-page-large.jpg" title="Car Rental website home page">See Image</a>
+    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-car-rental-home-page-large.jpg" title="Car Rental website home page">See Image</a>
     <a href="http://www.raythompwebdesign.com/car-rental">Visit Website</a></div>
     </figcaption>
 
@@ -127,7 +127,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg4">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-shoe-store-home-page-small.jpg" alt="Shoestore website home page">
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-shoe-store-home-page-small.png" alt="Shoestore website home page">
 
   <figcaption class="showcase-content showcase-d">
   <h1>Website:</h1>
@@ -138,7 +138,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3 and Jquery&#46;</p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-shoe-store-home-page-large-1.jpg"  title="Shoestore website home page">See Image</a>
+  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-shoe-store-home-page-large-1.jpg"  title="Shoestore website home page">See Image</a>
   <a href="http://www.raythompwebdesign.com/shoestore">Visit Website</a></div>
   </figcaption>
 
@@ -151,7 +151,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg5">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-greenfootprints-home-page-small.jpg" alt="Greenfootprints home page">
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-greenfootprints-home-page-small.png" alt="Greenfootprints home page">
 
   <figcaption class="showcase-content showcase-e">
     <h1>Website:</h1>
@@ -162,7 +162,7 @@ Template Name: Websites
     <p>HTML5&#44; CSS3&#46; </p>
     <h1>Formats</h1>
     <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-greenfootprints-home-page-large.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
+    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-greenfootprints-home-page-large.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.raythompwebdesign.com/greenfootprints">Visit Website</a></div>
   </figcaption>
 
   </figure>
@@ -174,7 +174,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-travel-agency-home-page-small.jpg"  alt="Travel Agency website home page" >
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-travel-agency-home-page-small.png"  alt="Travel Agency website home page" >
 
   <figcaption class="showcase-content showcase-f">
   <h1>Website:</h1>
@@ -185,7 +185,7 @@ Template Name: Websites
   <p>HTML5&#44; CSS3 and Jquery&#46; </p>
   <h1>Formats</h1>
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <div class="links"><a href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-travel-agency-page-large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
+  <div class="links"><a href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-travel-agency-page-large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.raythompwebdesign.com/TravelAgency">Visit Website</a></div>
   </figcaption>
 
   </figure>
@@ -197,7 +197,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg7">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/portfolio-graphics-mixtape-1.jpg" alt="Image of mixtape cover" >
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/portfolio-graphics-mixtape-1.jpg" alt="Image of mixtape cover" >
 
   <figcaption class="showcase-content showcase-g" >
 
@@ -210,7 +210,7 @@ Template Name: Websites
   <p><strong>Mixtape Cover-</strong>Idea I had for a mixtape of various reggae artists mixed over Classic Wu-Tang Clan music Instrumentals&#46;</p>
 
   <div class="links">
-  <a href="<?php echo home_url();?>/wp-content/uploads/2016/12/portfolio-graphics-mixtape.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
+  <a href="<?php echo home_url();?>/wp-content/uploads/2017/03/portfolio-graphics-mixtape.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
 
   </figcaption>
   </figure>
@@ -222,7 +222,7 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg8">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2016/12/www-fitness-club-home-page-small.jpg" alt="">
+  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-fitness-club-home-page-small.jpg" alt="">
 
   <figcaption class="showcase-content showcase-h">
 
@@ -236,7 +236,7 @@ Template Name: Websites
   <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
 
   <div class="links">
-  <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2016/12/www-fitness-club-home-page-large.jpg"  title="">LINK</a>
+  <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/03/www-fitness-club-home-page-large.jpg"  title="">LINK</a>
   </div>
 
   </figcaption>
