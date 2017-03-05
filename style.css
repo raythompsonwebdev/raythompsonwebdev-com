@@ -540,17 +540,17 @@ a:link {
   color: #062351;
 }
 a:visited {
-  color: #fff;
+  color: #bac7db;
 }
 a:focus {
-  color: #fff;
+  color: #bac7db;
 }
 a:hover {
-  color: #fff;
+  color: #bac7db;
   font-weight: bold;
 }
 a:active {
-  color: #fff;
+  color: #bac7db;
 }
 
 /*WordPress Image Classes*/
@@ -1308,6 +1308,9 @@ a.nav-toggle {
 #wrapper_container #main-content .post ul li {
   width: 100%;
   margin: 0;
+  line-height: 35px;
+  display: block;
+  font-size: 0.85em;
 }
 #wrapper_container #main-content .post ul li a {
   width: 100%;
@@ -1354,7 +1357,7 @@ a.nav-toggle {
   clear: both;
 }
 #wrapper_container #main-content .post .postimg {
-  width: 15%;
+  width: 23%;
   margin: 5% auto;
   display: block;
 }
@@ -1480,7 +1483,7 @@ a.nav-toggle {
   margin: 1% auto;
   height: auto;
   font-size: 0.9em;
-  line-height: 1.5em;
+  display: block;
 }
 #wrapper_container #main-content .post footer.byline p {
   margin: 0;
@@ -1673,6 +1676,10 @@ a.nav-toggle {
   line-height: 40px;
   color: #000;
 }
+#wrapper_container #main-content .navi .right strong {
+  display: inline-block;
+  width: 90%;
+}
 #wrapper_container #main-content .navi .right a {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   display: inline-block;
@@ -1694,13 +1701,12 @@ a.nav-toggle {
   line-height: 40px;
   float: right;
   width: 27px;
-  margin-right: 2%;
+  margin-right: 0;
 }
 #wrapper_container #main-content .navi .right a:hover {
   color: #fff;
   height: 40px;
   background-color: #CCD3DE;
-  border: 1px solid #CCD3DE;
 }
 #wrapper_container #main-content .navi .right span i {
   width: 4%;
@@ -2034,11 +2040,13 @@ a.nav-toggle {
   border: none;
   color: #062351;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  width: 20%;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"]:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
+  width: 20%;
 }
 #wrapper_container #main-content section.contact-wide p.must-log-in {
   width: 100%;
@@ -2425,6 +2433,17 @@ a.nav-toggle {
   outline: 0;
   display: block;
   /*new*/
+  -webkit-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  -moz-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  -o-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  -ms-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img:hover {
+  opacity: 0.8;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption {
+  clear: both;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
   font-weight: bold;
@@ -2443,11 +2462,10 @@ a.nav-toggle {
   font-size: 0.9em;
   display: block;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
   width: 100%;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-  font-size: 0.85em;
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
   /*new*/
   width: 100%;
   /*new*/
@@ -2455,16 +2473,25 @@ a.nav-toggle {
   font-weight: 300;
   color: #062351;
   display: block;
-  line-height: 1.5em;
-  height: auto;
+  font-size: 0.85em;
+  height: 20px;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
   font-family: "FontAwesome";
   font-size: 0.85em;
   color: #062351;
   content: "\f19d";
   margin: 0 1%;
   line-height: 1.5em;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+  display: inline;
+  width: auto;
+  font-size: 0.9em;
+  background-color: #fff;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
+  color: #062351;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
   float: none;
@@ -2478,9 +2505,12 @@ a.nav-toggle {
   display: block;
   /*new*/
 }
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption {
+  clear: both;
+}
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
   font-weight: bold;
-  font-size: 0.90em;
+  font-size: 0.85em;
   width: auto;
   text-indent: 0;
   margin: 0;
@@ -2499,7 +2529,7 @@ a.nav-toggle {
   margin: 0;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-  font-size: 0.85em;
+  font-size: 0.80em;
   /*new*/
   width: 100%;
   /*new*/
@@ -2507,7 +2537,7 @@ a.nav-toggle {
   font-weight: 300;
   color: #062351;
   display: block;
-  line-height: 1.5em;
+  line-height: 25px;
   height: auto;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
@@ -3324,7 +3354,7 @@ a.nav-toggle {
     font-size: 0.85em;
   }
   #wrapper_container #main-content .post .postimg {
-    width: 15%;
+    width: 24%;
   }
   #wrapper_container #main-content .post .thumb {
     width: 15%;
@@ -3404,7 +3434,7 @@ a.nav-toggle {
     font-size: 0.85em;
   }
   #wrapper_container #main-content .post .entry-attachment {
-    width: 25%;
+    width: 20%;
     margin: 3em auto;
   }
   #wrapper_container #main-content .post .entry-attachment figure.attachment a {
@@ -3412,7 +3442,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.85em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post footer.byline .bylinecat {
     line-height: 20px;
@@ -3469,6 +3498,10 @@ a.nav-toggle {
     font-size: 0.9em;
     height: 40px;
     line-height: 40px;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 89%;
   }
   #wrapper_container #main-content .navi .right a {
     display: inline-block;
@@ -3719,20 +3752,28 @@ a.nav-toggle {
     padding: 0;
     font-size: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.7em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 20px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.4em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    display: inline;
+    width: auto;
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    color: #062351;
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 21.78%;
@@ -4276,13 +4317,10 @@ a.nav-toggle {
     font-size: 0.7em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
     font-size: 0.75em;
     margin-right: 1%;
-    line-height: 2.4em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 30.78%;
@@ -4291,7 +4329,7 @@ a.nav-toggle {
     /*new*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
-    font-size: 0.75em;
+    font-size: 0.7em;
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
@@ -4370,7 +4408,7 @@ a.nav-toggle {
     min-height: 180px;
   }
   #wrapper_container #main-content .post .entry-attachment {
-    width: 28%;
+    width: 25%;
     margin: 3em auto;
   }
   #wrapper_container #main-content .post .entry-attachment figure.attachment a {
@@ -4447,7 +4485,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.85em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post footer.byline p {
     margin: 0;
@@ -4939,7 +4976,6 @@ a.nav-toggle {
   #wrapper_container #main-content h2 {
     text-align: center;
     font-size: 1em;
-    text-align: center;
     letter-spacing: 0.1em;
     width: 100%;
   }
@@ -5077,8 +5113,8 @@ a.nav-toggle {
     margin-left: 0;
   }
   #wrapper_container #main-content .post .postimg {
-    width: 17%;
-    margin: 3% auto;
+    width: 30%;
+    margin: 4% auto;
   }
   #wrapper_container #main-content .post p {
     letter-spacing: 0.15em;
@@ -5086,7 +5122,7 @@ a.nav-toggle {
     line-height: 2em;
   }
   #wrapper_container #main-content .post .entry-attachment {
-    width: 28%;
+    width: 25%;
     margin: 3em auto;
   }
   #wrapper_container #main-content .post .entry-attachment figure.attachment a {
@@ -5161,7 +5197,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.85em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post footer.byline p {
     margin: 0;
@@ -5210,6 +5245,10 @@ a.nav-toggle {
     width: 100%;
     font-size: 0.8em;
     font-weight: bold;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 89%;
   }
   #wrapper_container #main-content .navi .right a {
     display: inline-block;
@@ -5456,20 +5495,25 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.80em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.75em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.1em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 21.78%;
@@ -5492,14 +5536,11 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.80em;
     /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 1em;
@@ -6000,7 +6041,6 @@ a.nav-toggle {
   #wrapper_container #main-content .post footer.byline {
     width: 100%;
     font-size: 0.75em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post footer.byline p {
     margin: 0;
@@ -6039,12 +6079,23 @@ a.nav-toggle {
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 6.5%;
   }
+  #wrapper_container #main-content .post .entry-attachment {
+    width: 25%;
+    margin: 3em auto;
+  }
+  #wrapper_container #main-content .post .entry-attachment figure.attachment a {
+    display: block;
+  }
   #wrapper_container #main-content .navi .right {
     width: 100%;
     margin-left: 0;
     font-size: 0.85em;
     height: 30px;
     line-height: 30px;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 88%;
   }
   #wrapper_container #main-content .navi .right a {
     display: inline-block;
@@ -6057,6 +6108,10 @@ a.nav-toggle {
     font-size: 0.95em;
     height: 30px;
     width: 87%;
+  }
+  #wrapper_container #main-content .navi .right a::after {
+    font-size: 1.7em;
+    line-height: 30px;
   }
   #wrapper_container #main-content .navi .right span i {
     width: 5%;
@@ -6179,12 +6234,12 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     height: 415px;
     margin: 0.8em auto;
-    /*Hero Slider End*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
     width: 71%;
     overflow: hidden;
+    /*Hero Slider End*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
     text-align: left;
@@ -6207,79 +6262,82 @@ a.nav-toggle {
     padding: 0;
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
     font-size: 0.75em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.8em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert img {
     /*new*/
     margin: 1% auto;
     /*new*/
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption h3 {
     font-size: 0.85em;
     letter-spacing: 0.01em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption h4 {
     margin: 0;
     padding: 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption ul {
     display: block;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption ul li {
     font-size: 0.70em;
     /*new*/
     display: block;
-    line-height: 1.5em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption ul li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.8em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe h2 {
     font-size: 1.1em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul {
     margin: 0;
     width: 28%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul li a {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul li a:hover {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul li:nth-of-type(7) a {
     line-height: 40px;
     font-size: 0.75em;
   }
-  #wrapper_container #main-content div#photocontainer div.content {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content {
     top: 10px;
     padding: 0;
   }
-  #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content nav.menuSwitch {
     text-align: left;
     margin: 1.3% 0;
     width: 100%;
   }
-  #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content nav.menuSwitch ul {
     padding-left: 0;
     height: auto;
   }
-  #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content nav.menuSwitch ul li {
     padding: 10px 20px;
     -webkit-transition: background-color 0.3s ease-in;
     -moz-transition: background-color 0.3s ease-in;
@@ -6289,164 +6347,164 @@ a.nav-toggle {
     font-size: 1em;
     margin-right: 1%;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 {
     width: 31.5%;
     /*new*/
     height: 345px;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8:hover {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8:hover {
     cursor: pointer;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .text-btn,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .text-btn {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .text-btn,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .text-btn {
     top: 40%;
     left: 0;
     height: 15%;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content {
     padding: 1% 5%;
     z-index: 10;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
     font-size: 0.85em;
     line-height: 25px;
     height: 25px;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p {
     font-size: 0.75em;
     margin: 0;
     line-height: 1.6em;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-tablet,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-desktop,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-mobile,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-tablet {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-tablet,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-desktop,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-mobile,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-tablet {
     font-size: 1.4em;
     height: 30px;
     line-height: 30px;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-tablet:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-desktop:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-mobile:hover,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-tablet:hover {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content p span.fa-tablet:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-desktop:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-mobile:hover,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content p span.fa-tablet:hover {
     font-size: 1.5em;
     height: 30px;
     line-height: 30px;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links {
     height: 30px;
     width: 100%;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a {
     height: 30px;
     width: 49%;
     font-size: 0.75em;
     line-height: 30px;
     margin: 1% 0 1% 1%;
   }
-  #wrapper_container #main-content div#photocontainer div.content div#panel .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a.fancybox,
-  #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a.fancybox {
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel3 .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel4 .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel5 .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel6 .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content .links a.fancybox,
+  #wrapper_container #main-content .frontpage_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content .links a.fancybox {
     font-size: 0.75em;
     height: 30px;
     line-height: 30px;
@@ -6454,39 +6512,39 @@ a.nav-toggle {
     padding: 0.5%;
     width: 49%;
   }
-  #wrapper_container footer .socialpics .social-icon {
+  #wrapper_container #main-content footer .socialpics .social-icon {
     margin-left: 4%;
     width: 21%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
+  #wrapper_container #main-content footer .socialpics .linkedin-icon span .fa-linkedin {
     font-size: 180%;
     line-height: 1.6em;
   }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
+  #wrapper_container #main-content footer .socialpics .twitter-icon span .fa-twitter {
     font-size: 180%;
     line-height: 1.6em;
   }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
+  #wrapper_container #main-content footer .socialpics .facebook-icon span .fa-facebook {
     font-size: 180%;
     line-height: 1.6em;
   }
-  #wrapper_container footer .socialpics .google-icon span .fa-github {
+  #wrapper_container #main-content footer .socialpics .google-icon span .fa-github {
     font-size: 180%;
     line-height: 1.6em;
   }
-  #wrapper_container footer ul {
+  #wrapper_container #main-content footer ul {
     width: 35%;
     margin: 0;
   }
-  #wrapper_container footer ul li {
+  #wrapper_container #main-content footer ul li {
     text-indent: 0;
     height: 25px;
   }
-  #wrapper_container footer ul li a {
+  #wrapper_container #main-content footer ul li a {
     font-size: 0.75em;
     line-height: 25px;
   }
-  #wrapper_container footer ul li a:hover {
+  #wrapper_container #main-content footer ul li a:hover {
     margin: 0;
     font-size: 0.75em;
     line-height: 25px;
@@ -6739,7 +6797,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post .postimg {
     margin: 5% auto;
-    width: 26%;
+    width: 35%;
   }
   #wrapper_container #main-content .post h1 {
     font-size: 1.10em;
@@ -6848,7 +6906,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.95em;
-    line-height: 1.5em;
     margin-top: 5%;
   }
   #wrapper_container #main-content .post footer.byline p {
@@ -6895,6 +6952,13 @@ a.nav-toggle {
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 7%;
   }
+  #wrapper_container #main-content .post .entry-attachment {
+    width: 30%;
+    margin: 3em auto;
+  }
+  #wrapper_container #main-content .post .entry-attachment figure.attachment a {
+    display: block;
+  }
   #wrapper_container #main-content .post .read_more {
     font-size: 0.85em;
     width: 15.9652349%;
@@ -6909,6 +6973,10 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post .visit {
     margin: 0 0 0 20px;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 87%;
   }
   #wrapper_container #main-content .navi .right a {
     width: 87%;
@@ -7086,20 +7154,25 @@ a.nav-toggle {
     padding: 0;
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.75em;
     /*new*/
     display: block;
-    line-height: 1.8em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.1em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 20.78%;
@@ -7259,7 +7332,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 35px;
     height: 35px;
   }
@@ -7271,7 +7344,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p {
-    font-size: 0.85em;
+    font-size: 0.9em;
     margin: 0;
     line-height: 1.6em;
   }
@@ -7625,14 +7698,13 @@ a.nav-toggle {
     margin-left: 0;
   }
   #wrapper_container #main-content .post .postimg {
-    margin: 3% auto;
+    margin: 5% auto;
   }
   #wrapper_container #main-content .post .entry-attachment {
-    width: 35%;
+    width: 33%;
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.85em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post footer.byline .bylinecat {
     line-height: 20px;
@@ -7669,6 +7741,10 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post .visit {
     margin: 0 0 0 20px;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 86%;
   }
   #wrapper_container #main-content .navi .right a {
     width: 85%;
@@ -7893,20 +7969,25 @@ a.nav-toggle {
     padding: 0;
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.75em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.85em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.1em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 20.78%;
@@ -8031,7 +8112,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
-    font-size: 0.8em;
+    font-size: 0.95em;
     line-height: 35px;
     height: 35px;
   }
@@ -8275,10 +8356,10 @@ a.nav-toggle {
     font-size: 1.05em;
   }
   #wrapper_container #main-content .post h2 {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .post h3 {
-    font-size: 0.90em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .post ul li {
     width: 100%;
@@ -8357,7 +8438,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.85em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post .read_more {
     font-size: 0.8em;
@@ -8368,6 +8448,13 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 8%;
+  }
+  #wrapper_container #main-content .post .entry-attachment {
+    width: 30%;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 85%;
   }
   #wrapper_container #main-content .navi .right a {
     width: 85%;
@@ -8514,20 +8601,25 @@ a.nav-toggle {
     margin: 0;
     padding: 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.80em;
     /*new*/
     display: block;
-    line-height: 1.6em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.80em;
     margin-right: 1%;
-    line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 21.78%;
@@ -8861,11 +8953,18 @@ a.nav-toggle {
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 10%;
   }
+  #wrapper_container #main-content .post .entry-attachment {
+    width: 40%;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 82%;
+  }
   #wrapper_container #main-content .navi .right a {
     width: 82%;
   }
   #wrapper_container #main-content .navi .right a::after {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
   #wrapper_container #main-content .navi .right a:hover {
     width: 82%;
@@ -8930,20 +9029,25 @@ a.nav-toggle {
     margin: 0;
     padding: 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.70em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.75em;
     /*new*/
     display: block;
-    line-height: 1.7em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.70em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.80em;
     margin-right: 1%;
-    line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 25.78%;
@@ -9407,8 +9511,8 @@ a.nav-toggle {
     font-size: 0.70em;
   }
   #wrapper_container #main-content .post .postimg {
-    width: 25%;
-    margin: 2% auto;
+    width: 50%;
+    margin: 5% auto;
   }
   #wrapper_container #main-content .post .read_more {
     margin-left: 1%;
@@ -9434,6 +9538,13 @@ a.nav-toggle {
   #wrapper_container #main-content .navi .right {
     font-size: 0.85em;
     width: 100%;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 79%;
+  }
+  #wrapper_container #main-content .navi .right a::after {
+    font-size: 1.5em;
   }
   #wrapper_container #main-content .navi .right a {
     width: 79%;
@@ -9576,7 +9687,7 @@ a.nav-toggle {
     overflow: hidden;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.80em;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
@@ -9594,18 +9705,25 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
     font-size: 0.80em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.7em;
     /*new*/
-    line-height: 1.6em;
+    display: block;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.1em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 30.78%;
@@ -10052,15 +10170,15 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .post .postimg {
-    margin: 2% auto;
-    width: 28%;
+    margin: 5% auto;
+    width: 60%;
   }
   #wrapper_container #main-content .post .featuredImage {
     min-height: 100px;
     margin: 1em auto;
   }
   #wrapper_container #main-content .post .entry-attachment {
-    width: 60%;
+    width: 50%;
   }
   #wrapper_container #main-content .post .read_more {
     margin-left: 1%;
@@ -10176,6 +10294,11 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .navi .right {
     width: 100%;
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 77%;
   }
   #wrapper_container #main-content .navi .right a {
     width: 77%;
@@ -10183,6 +10306,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .navi .right a::after {
     line-height: 30px;
+    font-size: 1.45em;
   }
   #wrapper_container #main-content .navi .right a:hover {
     width: 77%;
@@ -10318,7 +10442,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     line-height: 40px;
-    font-size: 0.75em;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
@@ -10329,7 +10453,7 @@ a.nav-toggle {
     /*new*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
-    font-size: 0.60em;
+    font-size: 0.70em;
     text-indent: 0;
     letter-spacing: 0.01em;
   }
@@ -10338,20 +10462,25 @@ a.nav-toggle {
     padding: 0;
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
     font-size: 0.65em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 25px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.65em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.75em;
     margin-right: 1%;
-    line-height: 2.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.65em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 30.78%;
@@ -10397,11 +10526,13 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
     padding-top: 0;
-    font-size: 0.65em;
+    font-size: 0.70em;
+    line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
     padding-top: 0;
-    font-size: 0.65em;
+    line-height: 20px;
+    font-size: 0.75em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -10429,8 +10560,8 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 60.5%;
-    height: 383px;
+    width: 70.5%;
+    height: 360px;
     margin: 5% auto;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
@@ -10824,8 +10955,8 @@ a.nav-toggle {
     margin: 0.8em auto;
   }
   #wrapper_container #main-content .post .postimg {
-    margin: 2% auto;
-    width: 32%;
+    margin: 5% auto;
+    width: 65%;
   }
   #wrapper_container #main-content .post header.byline {
     margin: auto;
@@ -10922,11 +11053,15 @@ a.nav-toggle {
   #wrapper_container #main-content .post p.right {
     width: 10%;
   }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 76%;
+  }
   #wrapper_container #main-content .navi .right a {
-    width: 77%;
+    width: 76%;
   }
   #wrapper_container #main-content .navi .right a:hover {
-    width: 77%;
+    width: 76%;
   }
   #wrapper_container #main-content .navi .right span i {
     width: 7%;
@@ -11097,21 +11232,26 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
     margin: 0;
     padding: 0;
+    line-height: 20px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.65em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.60em;
     /*new*/
-    display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.6em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 20.78%;
@@ -11131,11 +11271,9 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.65em;
+    font-size: 0.55em;
     height: 20px;
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
@@ -11203,8 +11341,8 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 64.5%;
-    height: 400px;
+    width: 72.5%;
+    height: 340px;
     margin: 5% auto;
     display: block;
   }
@@ -11572,8 +11710,8 @@ a.nav-toggle {
     font-size: 0.7em;
   }
   #wrapper_container #main-content .post .postimg {
-    margin: 2% auto;
-    width: 29%;
+    margin: 5% auto;
+    width: 65%;
   }
   #wrapper_container #main-content .post header.byline {
     margin: auto;
@@ -11645,7 +11783,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.80em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .post footer.byline p.right {
     width: 12%;
@@ -11671,13 +11808,16 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .navi .right {
     font-size: 0.75em;
-    width: 100%;
+  }
+  #wrapper_container #main-content .navi .right strong {
+    display: inline-block;
+    width: 76%;
   }
   #wrapper_container #main-content .navi .right a {
-    width: 79%;
+    width: 76%;
   }
   #wrapper_container #main-content .navi .right a:hover {
-    width: 79%;
+    width: 76%;
   }
   #wrapper_container #main-content .navi .right span i {
     width: 8%;
@@ -11825,23 +11965,28 @@ a.nav-toggle {
     margin: 0;
     padding: 0;
     font-size: 0.70em;
-    height: 25px;
-    line-height: 25px;
+    height: 20px;
+    line-height: 20px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.65em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.6em;
     /*new*/
     display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 22px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.55em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+    font-size: 0.82em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 25.78%;
@@ -11850,7 +11995,7 @@ a.nav-toggle {
     /*new*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
-    font-size: 0.55em;
+    font-size: 0.6em;
     height: 25px;
     line-height: 25px;
   }
@@ -11864,14 +12009,9 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.60em;
-    /*new*/
-    font-weight: 300;
-    display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.60em;
-    margin-right: 1%;
+    font-size: 0.80em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -11899,8 +12039,8 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 65.5%;
-    height: 400px;
+    width: 70.5%;
+    height: 350px;
     margin: 5% auto;
     display: block;
   }
@@ -12196,18 +12336,18 @@ a.nav-toggle {
     font-size: 0.70em;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 35px;
     height: 35px;
   }
   #wrapper_container #main-content .post h2 {
-    font-size: 0.85em;
+    font-size: 0.80em;
     line-height: 35px;
     height: 35px;
   }
   #wrapper_container #main-content .post .postimg {
     margin: 5% auto;
-    width: 32%;
+    width: 65%;
   }
   #wrapper_container #main-content .post .thumb {
     width: 25%;
@@ -12258,14 +12398,20 @@ a.nav-toggle {
     font-size: 0.65em;
     width: 29%;
   }
+  #wrapper_container #main-content .navi .right {
+    font-size: 0.6em;
+  }
   #wrapper_container #main-content .navi .right span i {
     width: 9%;
   }
+  #wrapper_container #main-content .navi .right strong {
+    width: 78%;
+  }
   #wrapper_container #main-content .navi .right a {
-    width: 74%;
+    width: 78%;
   }
   #wrapper_container #main-content .navi .right a:hover {
-    width: 74%;
+    width: 78%;
   }
   #wrapper_container #main-content section.contact-wide h2 {
     font-size: 1.1em;
@@ -12382,6 +12528,9 @@ a.nav-toggle {
     background-color: #fff;
     width: 100%;
   }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 0.70em;
+  }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
     /*new*/
@@ -12394,24 +12543,29 @@ a.nav-toggle {
     font-size: 0.55em;
     text-indent: 0;
     letter-spacing: 0.01em;
+    height: 20px;
+    line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
     font-size: 0.60em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.6em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    font-size: 0.54em;
     /*new*/
-    display: block;
-    line-height: 1.5em;
-    height: auto;
+    height: 25px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.65em;
-    margin-right: 1%;
-    line-height: 1.5em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.60em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+    font-weight: normal;
+    font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 30.78%;
@@ -12430,16 +12584,13 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.60em;
+    font-size: 0.55em;
     /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.65em;
+    font-size: 0.8em;
     margin-right: 1%;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -12467,9 +12618,9 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 65.5%;
-    height: 365px;
-    margin: 7% auto;
+    width: 76.5%;
+    height: 318px;
+    margin: 9% auto;
     display: block;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
@@ -12511,7 +12662,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
-    font-size: 0.75em;
+    font-size: 0.8em;
     line-height: 25px;
     height: 25px;
   }

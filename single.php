@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <section id="main-content" class="group" role="main">   	
-    <h1>Single</h1>	
+    	
 
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
