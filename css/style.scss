@@ -483,7 +483,7 @@ a.nav-toggle {
             padding: 0;
             font-family: ($FontStyle);
             display: block;
-            width: 50%;
+            width: 60%;
             float: none;
             margin: 2% auto;
             //position:absolute;
@@ -505,22 +505,26 @@ a.nav-toggle {
                         -webkit-flex-flow: row wrap; // you can also use column.
                         -ms-flex-flow: row wrap;
                         flex-flow: row wrap;
+                        -webkit-align-items: center;
+                        -ms-flex-pack: center;
+                        align-items: center;
+                        -webkit-justify-content: center;
+                        -ms-flex-pack: center;
+                        justify-content: center;
                                            
                        
                         .menu-item {
-                            width: 19%;
+                            width: 18%;
                             float: left;
                             height: 35px;
                             list-style: none;
-                            margin: 0 0.5%;
+                            margin: 0 0.2em;
                             padding: 0;
                             text-align: center;
-                            -webkit-flex: 1 1 auto;
-                            -ms-flex: 1 1 auto;
-                            flex: 1 1 auto;
-                            -webkit-align-items: center;
-                            -ms-flex-pack: center;
-                            align-items: center;
+                            -webkit-flex: 0 1 18%;
+                            -ms-flex: 0 1 18%;
+                            flex: 0 1 18%;
+                            
                             
                             a {
                                 background-color: $color2;
@@ -740,15 +744,18 @@ a.nav-toggle {
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
             -webkit-justify-content: space-around;
-	        -ms-flex-pack: justify;
-	        justify-content:space-around;
+	    -ms-flex-pack: justify;
+	    justify-content:space-around;
             
             .side-bar-box {
-                -webkit-flex: 1 1 auto;
-	            -ms-flex: 1 1 auto;
-	            flex: 1 1 auto;
-                
-                
+                -webkit-flex: 0 1 auto;
+	        -ms-flex: 0 1 auto;
+	        flex: 0 1 auto;
+                //display: inline-block;
+                height: auto;
+                width: 31%;
+                margin: 0.5em;
+                float: left;
                 h2 {
                     width: 100%;
                     height: 40px;
@@ -763,11 +770,6 @@ a.nav-toggle {
                     margin: 0 auto;
                     font-weight: 700;
                 }
-                display: inline-block;
-                height: auto;
-                width: 31%;
-                margin: 1%;
-                float: left;
                 #social h2 {
                     width: 100%;
                 }
@@ -790,7 +792,7 @@ a.nav-toggle {
                     ul {
                         width: 100%;
                         height: auto;
-                        display: inline-block;
+                        display: block;
                         margin: 0;
                         li {
                             list-style: none;
@@ -1969,6 +1971,8 @@ a.nav-toggle {
                                         h3 {
                                             font-weight: bold;
                                             font-size: 0.90em;
+                                            color:$color4;
+                                            background-color:$color1;
                                             width: auto;
                                             text-indent: 0;
                                             margin: 0;
@@ -1979,8 +1983,8 @@ a.nav-toggle {
                                         h4 {
                                             margin: 0 0 2% 0;
                                             padding: 0;
-                                            background-color:$color1;
-                                            color:$color4;
+                                            border-bottom:1px solid $color1;
+                                            color:$color1;
                                             padding: 0;
                                             line-height: 30px;
                                             font-size: 0.9em;
@@ -2038,6 +2042,8 @@ a.nav-toggle {
                                         h3 {
                                             font-weight: bold;
                                             font-size: 0.85em;
+                                            color:$color4;
+                                            background-color:$color1;
                                             width: auto;
                                             text-indent: 0;
                                             margin: 0;
@@ -2048,8 +2054,9 @@ a.nav-toggle {
                                         h4 {
                                             margin: 0 0 2% 0;
                                             padding: 0;
-                                            background-color:$color1;
-                                            color:$color4;
+                                            font-size: 0.90em;
+                                            border-bottom:1px solid $color1;
+                                            color:$color1;
                                             display: block;
                                             line-height: 30px;
                                             text-indent:1%;
@@ -2095,12 +2102,19 @@ a.nav-toggle {
                         width: 28%;
                         padding: 0;
                         font-family: ($FontStyle);
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-flex-flow: column;
+                        -ms-flex-flow: column;
+                        flex-flow: column;
+                        flex-direction: column;
                          
                         li {
                             width: 100%;
                             height: 44px;
                             display: block;
-                            margin: 0 0 2% 0;
+                            margin: 0 0 0.2em 0;
                             a {
                                 height: 100%;
                                 outline: none;
@@ -2184,7 +2198,7 @@ a.nav-toggle {
 	-ms-flex-line-pack: distribute;
 	align-content: space-around;
         
-       
+               
         div.content {
             clear: both;
             position: relative;
@@ -2232,14 +2246,16 @@ a.nav-toggle {
                 position: relative;
                 top: 2px;
                 overflow: hidden;
+                //display: inline-block;
+                //float:left;
                 width: 23.6%;
-                -webkit-flex: 1 1 auto;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
-                display: inline-block;
-                margin: 0.5%;
+                -webkit-flex: 0 1 23.6%;
+                -ms-flex: 0 1 23.6%;
+                flex: 0 1 23.6%;
+                margin: 0.4em;
                 z-index: 4;
                 height: 390px;
+                float: left;
                 /*new*/
                 &:hover {
                     cursor: pointer;
@@ -3233,7 +3249,7 @@ a.nav-toggle {
                             margin: 0;
                             li {
                                 height: 44px;
-                                margin:0 0 2.5% 0;
+                                margin:0 0 0.2em 0;
                                 a {
                                     font-size: 0.70em;
                                 }
@@ -3302,7 +3318,7 @@ a.nav-toggle {
                                 padding: 1% 5%;
                                 z-index: 10;
                                 h1 {
-                                    font-size: 0.85em;
+                                    font-size: 0.8em;
                                     line-height: 25px;
                                     height: 25px;
                                 }
@@ -4849,7 +4865,7 @@ a.nav-toggle {
                             height: 100%;
                             width: 28%;
                             li {
-                                margin: 0 0 2% 0;
+                                margin: 0 0 0.2em 0;
                                 a {
                                     font-size: 0.80em;
                                     
@@ -4900,7 +4916,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 31.80%;
+                        width: 31%;
                         /*new*/
                         height: 345px;
                         &:hover {
@@ -5764,6 +5780,7 @@ a.nav-toggle {
                 position: fixed;
                 top: 1%;
                 z-index: 9999;
+                
                 #innernav {
                     display: none;
                 }
@@ -6421,10 +6438,10 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 45.5%;
+                        width: 42.5%;
                         /*new*/
                         height: 416px;
-                        margin: 2%;
+                        margin: 3%;
                         &:hover {
                             cursor: pointer;
                         }
@@ -6552,7 +6569,7 @@ a.nav-toggle {
 }
 
 //640px
-@media only screen and (max-width: 40em) and (orientation: landscape) {
+@media only screen and (max-width: 40em) {
     .fixed-side-social-container {
         display: none;
     }
@@ -7165,8 +7182,9 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 44.5%;
+                        width: 42.5%;
                         /*new*/
+                        margin: 3%;
                         height: 392px;
                         &:hover {
                             cursor: pointer;
@@ -7719,7 +7737,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 44.5%;
+                        width: 43.5%;
                         /*new*/
                         height: 392px;
                         &:hover {
@@ -8108,7 +8126,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 44.5%;
+                        width: 43.5%;
                         /*new*/
                         height: 359px;
                         &:hover {
@@ -8717,6 +8735,7 @@ a.nav-toggle {
             }
             /*Photocontainer*/
             div#photocontainer {
+                
                 div.content {
                     top: 10px;
                     padding: 0;
@@ -9347,9 +9366,10 @@ a.nav-toggle {
                                                 width: 100%;
                                                 li {
                                                     font-size: 0.65em;
+                                                    line-height: 20px;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    height: 20px;
                                                     
                                                    
                                                     &:before {
@@ -9358,7 +9378,7 @@ a.nav-toggle {
                                                         
                                                     }
                                                     a.lyndalink{ 
-                                                        line-height: 22px;
+                                                        line-height: 20px;
                                                          
                                                         font-size:0.95em; 
                                                         
@@ -9391,9 +9411,9 @@ a.nav-toggle {
                                                 display: block;
                                                 li {
                                                     font-size: 0.65em;
-                                                    height: 22px;
+                                                    height: 20px;
                                                     /*new*/
-                                                    line-height: 22px;
+                                                    line-height: 20px;
                                                     display: block;
                                                     
                                                     &:before {
@@ -9413,7 +9433,7 @@ a.nav-toggle {
                             li {
                                 width: 100%;
                                 height: 44px;
-                                margin: 2.5% 0;
+                                margin: 0 0 0.2em 0;
                                 a {
                                     font-size: 0.7em;
                                     line-height:44px;
@@ -9442,7 +9462,17 @@ a.nav-toggle {
             }
             /*Photocontainer*/
             div#photocontainer {
-               
+                display:-webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-flow: column;
+                -ms-flex-flow: column ;
+                flex-flow: column ;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                
+                               
                 div.content {
                     top: 10px;
                     padding: 0;
@@ -9471,8 +9501,9 @@ a.nav-toggle {
                     div#panel8 {
                         width: 66.5%;
                         height: 360px;
-                        margin: 5% auto;
-                        display: block;
+                        margin: 1em 4em;
+                        
+                        //display: block;
                         &:hover {
                         cursor: pointer;
                         }
@@ -10043,7 +10074,8 @@ a.nav-toggle.hide {
                                         ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    height: 22px;
+                                                    height: 20px;
+                                                    line-height: 20px;
                                                     font-size: 0.60em;
                                                     /*new*/
                                                     
@@ -10059,7 +10091,8 @@ a.nav-toggle.hide {
                                                 a.lyndalink{ 
                                                          
                                                         font-size:0.6em;
-                                                        height: 22px;
+                                                        height: 20px;
+                                                        
                                                         
                                                         &:hover{ font-weight:normal; font-style:italic;}
                                                     }
@@ -10086,8 +10119,8 @@ a.nav-toggle.hide {
                                             display: block;
                                             li {
                                                 font-size: 0.55em;
-                                                height: 22px;
-                                                line-height: 22px;
+                                                height: 20px;
+                                                line-height: 20px;
                                                 display: block;
                                                 
                                                 &:before {
@@ -10190,7 +10223,7 @@ a.nav-toggle.hide {
                             height: auto;
                             li {
                                 padding: 8px 15px;
-                                font-size: 0.7em;
+                                font-size: 0.6em;
                                 margin-right: 0;
                             }
                         }
@@ -10203,10 +10236,10 @@ a.nav-toggle.hide {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 72.5%;
+                        width: 70%;
                         height: 340px;
-                        margin: 5% auto;
-                        display: block;
+                        margin: 1em 3.5em;
+                        
                         &:hover {
                             cursor: pointer;
                         }
@@ -10848,8 +10881,8 @@ a.nav-toggle.hide {
                     div#panel8 {
                         width: 70.5%;
                         height: 350px;
-                        margin: 5% auto;
-                        display: block;
+                        margin: 1em 3em;
+                        
                         &:hover {
                             cursor: pointer;
                         }
@@ -11317,6 +11350,8 @@ a.nav-toggle.hide {
                                                 li {
                                                     font-size: 0.55em;
                                                     /*new*/
+                                                    height: 15px;
+                                                    line-height: 15px;
                                                     
                                                     
                                                    
@@ -11329,7 +11364,9 @@ a.nav-toggle.hide {
                                                                  
                                                 a.lyndalink{ 
                                                          
-                                                        font-size:0.75em; 
+                                                        font-size:0.75em;
+                                                        height: 15px;
+                                                        line-height: 15px;
                                                         
                                                         &:hover{ font-weight:normal; font-style:italic;}
                                                     }
@@ -11338,7 +11375,7 @@ a.nav-toggle.hide {
                                     }
                                     figure.cert {
                                         img {
-                                            width: 30.78%;
+                                            width: 27.78%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -11356,6 +11393,8 @@ a.nav-toggle.hide {
                                                 display: block;
                                                 li {
                                                     font-size: 0.55em;
+                                                    height: 15px;
+                                                    line-height: 15px;
                                                     /*new*/
                                                     
                                                     display: block;
@@ -11404,7 +11443,7 @@ a.nav-toggle.hide {
                     div#panel8 {
                         width: 75.5%;
                         height: 318px;
-                        margin: 9% auto;
+                        margin: 1em 2.5em;
                         display: block;
                         &:hover {
                             cursor: pointer;

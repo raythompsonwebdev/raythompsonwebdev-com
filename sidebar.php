@@ -14,8 +14,9 @@
         <?php endif; ?>
 
     </article>
+    
     <article class="side-bar-box">
-      
+      <h2>Related Posts</h2>
     </article>
 
 </aside>

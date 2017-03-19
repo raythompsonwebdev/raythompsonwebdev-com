@@ -897,7 +897,7 @@ a.nav-toggle {
   padding: 0;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   display: block;
-  width: 50%;
+  width: 60%;
   float: none;
   margin: 2% auto;
 }
@@ -918,21 +918,24 @@ a.nav-toggle {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-}
-#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-  width: 19%;
-  float: left;
-  height: 35px;
-  list-style: none;
-  margin: 0 0.5%;
-  padding: 0;
-  text-align: center;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
   -webkit-align-items: center;
   -ms-flex-pack: center;
   align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
+  width: 18%;
+  float: left;
+  height: 35px;
+  list-style: none;
+  margin: 0 0.2em;
+  padding: 0;
+  text-align: center;
+  -webkit-flex: 0 1 18%;
+  -ms-flex: 0 1 18%;
+  flex: 0 1 18%;
 }
 #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
   background-color: #CCD3DE;
@@ -1159,13 +1162,12 @@ a.nav-toggle {
   justify-content: space-around;
 }
 #wrapper_container #main-content #side-bar .side-bar-box {
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-block;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   height: auto;
   width: 31%;
-  margin: 1%;
+  margin: 0.5em;
   float: left;
 }
 #wrapper_container #main-content #side-bar .side-bar-box h2 {
@@ -1205,7 +1207,7 @@ a.nav-toggle {
 #wrapper_container #main-content #side-bar .side-bar-box .widget ul {
   width: 100%;
   height: auto;
-  display: inline-block;
+  display: block;
   margin: 0;
 }
 #wrapper_container #main-content #side-bar .side-bar-box .widget ul li {
@@ -2457,6 +2459,8 @@ a.nav-toggle {
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
   font-weight: bold;
   font-size: 0.90em;
+  color: #fff;
+  background-color: #062351;
   width: auto;
   text-indent: 0;
   margin: 0;
@@ -2467,8 +2471,8 @@ a.nav-toggle {
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
   margin: 0 0 2% 0;
   padding: 0;
-  background-color: #062351;
-  color: #fff;
+  border-bottom: 1px solid #062351;
+  color: #062351;
   padding: 0;
   line-height: 30px;
   font-size: 0.9em;
@@ -2522,6 +2526,8 @@ a.nav-toggle {
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
   font-weight: bold;
   font-size: 0.85em;
+  color: #fff;
+  background-color: #062351;
   width: auto;
   text-indent: 0;
   margin: 0;
@@ -2532,8 +2538,9 @@ a.nav-toggle {
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
   margin: 0 0 2% 0;
   padding: 0;
-  background-color: #062351;
-  color: #fff;
+  font-size: 0.90em;
+  border-bottom: 1px solid #062351;
+  color: #062351;
   display: block;
   line-height: 30px;
   text-indent: 1%;
@@ -2573,13 +2580,20 @@ a.nav-toggle {
   width: 28%;
   padding: 0;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  flex-direction: column;
   /* style */
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
   width: 100%;
   height: 44px;
   display: block;
-  margin: 0 0 2% 0;
+  margin: 0 0 0.2em 0;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
   height: 100%;
@@ -2713,13 +2727,13 @@ a.nav-toggle {
   top: 2px;
   overflow: hidden;
   width: 23.6%;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: inline-block;
-  margin: 0.5%;
+  -webkit-flex: 0 1 23.6%;
+  -ms-flex: 0 1 23.6%;
+  flex: 0 1 23.6%;
+  margin: 0.4em;
   z-index: 4;
   height: 390px;
+  float: left;
   /*new*/
 }
 #wrapper_container div#photocontainer div.content div#panel:hover,
@@ -3831,7 +3845,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     height: 44px;
-    margin: 0 0 2.5% 0;
+    margin: 0 0 0.2em 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.70em;
@@ -3934,7 +3948,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
-    font-size: 0.85em;
+    font-size: 0.8em;
     line-height: 25px;
     height: 25px;
   }
@@ -5579,7 +5593,7 @@ a.nav-toggle {
     width: 28%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
-    margin: 0 0 2% 0;
+    margin: 0 0 0.2em 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.80em;
@@ -5629,7 +5643,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 31.80%;
+    width: 31%;
     /*new*/
     height: 345px;
   }
@@ -7296,10 +7310,10 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 45.5%;
+    width: 42.5%;
     /*new*/
     height: 416px;
-    margin: 2%;
+    margin: 3%;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
   #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
@@ -7519,7 +7533,7 @@ a.nav-toggle {
     padding-top: 3%;
   }
 }
-@media only screen and (max-width: 40em) and (orientation: landscape) {
+@media only screen and (max-width: 40em) {
   .fixed-side-social-container {
     display: none;
   }
@@ -8086,8 +8100,9 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 44.5%;
+    width: 42.5%;
     /*new*/
+    margin: 3%;
     height: 392px;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
@@ -8705,7 +8720,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 44.5%;
+    width: 43.5%;
     /*new*/
     height: 392px;
   }
@@ -9134,7 +9149,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 44.5%;
+    width: 43.5%;
     /*new*/
     height: 359px;
   }
@@ -10497,16 +10512,17 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
     font-size: 0.65em;
+    line-height: 20px;
     /*new*/
     display: block;
-    height: 22px;
+    height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.75em;
     margin-right: 1%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    line-height: 22px;
+    line-height: 20px;
     font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -10533,9 +10549,9 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.65em;
-    height: 22px;
+    height: 20px;
     /*new*/
-    line-height: 22px;
+    line-height: 20px;
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
@@ -10548,7 +10564,7 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     width: 100%;
     height: 44px;
-    margin: 2.5% 0;
+    margin: 0 0 0.2em 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.7em;
@@ -10567,6 +10583,17 @@ a.nav-toggle {
     padding-top: 0;
     line-height: 44px;
     font-size: 0.55em;
+  }
+  #wrapper_container #main-content div#photocontainer {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -10596,8 +10623,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
     width: 66.5%;
     height: 360px;
-    margin: 5% auto;
-    display: block;
+    margin: 1em 4em;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
   #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
@@ -11245,7 +11271,8 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    height: 22px;
+    height: 20px;
+    line-height: 20px;
     font-size: 0.60em;
     /*new*/
   }
@@ -11255,7 +11282,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
     font-size: 0.6em;
-    height: 22px;
+    height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
     font-weight: normal;
@@ -11279,8 +11306,8 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.55em;
-    height: 22px;
-    line-height: 22px;
+    height: 20px;
+    line-height: 20px;
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
@@ -11365,7 +11392,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
     padding: 8px 15px;
-    font-size: 0.7em;
+    font-size: 0.6em;
     margin-right: 0;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel,
@@ -11376,10 +11403,9 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 72.5%;
+    width: 70%;
     height: 340px;
-    margin: 5% auto;
-    display: block;
+    margin: 1em 3.5em;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
   #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
@@ -12075,8 +12101,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
     width: 70.5%;
     height: 350px;
-    margin: 5% auto;
-    display: block;
+    margin: 1em 3em;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
   #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
@@ -12589,19 +12614,23 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
     font-size: 0.55em;
     /*new*/
+    height: 15px;
+    line-height: 15px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.60em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
     font-size: 0.75em;
+    height: 15px;
+    line-height: 15px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
     font-weight: normal;
     font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
-    width: 30.78%;
+    width: 27.78%;
     /*new*/
     margin: 1% auto;
     /*new*/
@@ -12618,6 +12647,8 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.55em;
+    height: 15px;
+    line-height: 15px;
     /*new*/
     display: block;
   }
@@ -12653,7 +12684,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
     width: 75.5%;
     height: 318px;
-    margin: 9% auto;
+    margin: 1em 2.5em;
     display: block;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,

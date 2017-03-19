@@ -46,7 +46,7 @@ Template Name: Archives-pages
 </article>
 
 
-<?php get_sidebar('archives'); ?> 
+<?php get_sidebar('archive'); ?> 
 
 </section>
 <div class="clearfix"></div>

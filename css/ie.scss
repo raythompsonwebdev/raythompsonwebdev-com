@@ -50,40 +50,7 @@ html[xmlns] .clearfix {
 .fancybox-custom .fancybox-skin {
     box-shadow: 0 0 50px #222;
 }
-/*Clearfix*/
-*.float-divider {
-    clear: both;
-    display: block;
-    height: 1px;
-    font-size: 1px;
-    line-height: 1px;
-}
 
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-.clearfix {
-    display: inline-block;
-    clear: both;
-}
-
-.clearfix:before,
-.group:after,
-.group:before {
-    content: "";
-    display: table;
-}
-
-.group:after {
-    clear: both;
-}
-/* end of Clearfix*/
 /*images*/
 img#wpstats {
     display: none;
@@ -270,49 +237,61 @@ a.nav-toggle {
         display: none;
         
     }
-/*Wrapper*/
+
+    /*Wrapper*/
+
 #wrapper_container {
-    
-    width: 90%;
+    background: $color2;
+    width: 86%;
     height: auto;
     margin: 0 auto;
-    
+    font-family: ($FontStyle);
     overflow: auto;
     clear: both;
     /*background-image: url("graphics/template.gif");
     background-repeat:none;*/
     padding: 0 1%;
-
     .fancybox-custom .fancybox-skin {
         box-shadow: 0 0 50px #222;
     }
     /*Header*/
     header {
-             
-
+        width: 100%;
+        height: 150px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: $color2;
         .site-logo {
             position: relative;
             top: -5px;
         }
         /* Text meant only for screen readers. */
         .screen-reader-text {
-          
+            clip: rect(1px, 1px, 1px, 1px);
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
         }
-
-        .screen-reader-text:focus {
         
-            /* Above WP toolbar. */
-        }
-
         .site-logo a {
-       
+            position: absolute;
+            z-index: 10;
+            top: 1em;
+            left: 0;
+            display: block;
+            width: 2em;
+            height: 2em;
+            background: $color1;
+            border: 2px solid $color3;
+            color: white;
+            text-decoration: none;
         }
-
         .site-logo a:focus,
         .site-logo a:hover {
             outline: 2px solid white;
         }
-
         .site-firstletter {
             font-family: 'Fira Sans', sans-serif;
             font-size: 1.5em;
@@ -320,88 +299,154 @@ a.nav-toggle {
             text-align: center;
             line-height: 1.2em;
         }
-
         .site-logo a:focus .site-firstletter,
         .site-logo a:hover .site-firstletter {
             background: white;
             color: black;
         }
-
         h1#logo {
-        
-
+            font-size: 2em;
+            width: 100%;
+            height: 40px;
+            margin: 0;
+            font-weight: bold;
+            line-height: 40px;
+            color: $color4;
+            
+            letter-spacing: 0.05em;
             span {
-             
+                height: 100%;
+                padding: 0 0 0 0.2%;
+                margin: 0;
+                color: $color4;
+                text-align: left;
+                display: inline-block;
             }
-
             span:last-of-type {
-                
+                height: 100%;
+                padding: 0 0 0 0.2%;
+                margin: 0;
+                color: $color1;
+                display: inline-block;
             }
         }
-
         h1#logo-blog {
-        
-
+            font-size: 2em;
+            width: 100%;
+            height: 40px;
+            margin: 0;
+            font-weight: bold;
+            line-height: 40px;
+            color: $color4;
+            
+            letter-spacing: 0.05em;
             span {
-             
+                height: 100%;
+                padding: 0 0 0 0.2%;
+                margin: 0;
+                color: $color4;
+                text-align: left;
             }
-
             span:last-of-type {
-         
+                height: 100%;
+                padding: 0 0 0 0.2%;
+                margin: 0;
+                color: $color1;
+                margin: 0 0.5%;
             }
         }
-
         h2 {
-      
+            float: none;
+            display: block;
+            width: 100%;
+            height: 25px;
+            margin: 0;
+            letter-spacing: 0.1em;
+            padding: 0;
+            line-height: 25px;
+            font-size: 0.75em;
+            font-weight: 100;
         }
-
         #title {
-           
+            float: left;
+            min-width: 280px;
+            max-width: 350px;
+            margin-left: 0;
         }
         /*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/
         /*Navigation*/
         nav {
-       
+            padding: 0;
+            font-family: ($FontStyle);
+            display: block;
+            width: 60%;
+            float: none;
+            margin: 2% auto;
+            //position:absolute;
+            //z-index:999;
+            //left:38.7%;
+            //top: 0.5%;
             #innernav {
-            
-
+                padding: 0;
+                margin: 0;
+                height: 35px;
+                width: 100%;
                 .menu-main-container {
                     width: 100%;
-
                     #menu-main {
                         width: 100%;
-                                               
+                          
                         .menu-item {
                             width: 18%;
-                     
-                           
+                            float: left;
+                            display:inline-block;
+                            height: 35px;
+                            list-style: none;
+                            margin: 0 0.2em;
+                            padding: 0;
+                            text-align: center;
+                            
                             a {
-                       
+                                background-color: $color2;
+                                font-family: ($FontStyle);
+                                width: 100%;
+                                height: 100%;
+                                text-decoration: none;
+                                line-height: 35px;
+                                color: $color1;
+                                margin: 0;
+                                font-size: 0.80em;
+                                display: block;
+                                letter-spacing: 0.1em;
+                                font-weight: 100;
                                 &:link {
-                                  
+                                    background-color: $color2;
+                                    color: $color1;
                                 }
-
                                 &:visited {
-                                   
+                                    background-color: $color3;
+                                    color: $color4;
                                 }
-
                                 &:focus {
-                                   
+                                    background-color: $color1;
+                                    color: $color4;
                                 }
-
                                 &:hover {
-                               
+                                    letter-spacing: 0.2em;
+                                    background-color: $color1;
+                                    color: $color4;
+                                    font-weight: bold;
+                                    line-height: 35px;
                                 }
                                 &:active {
-                                 
+                                    background-color: $color1;
+                                    color: $color4;
                                 }
-
                             }
                         }
                     }
                 }
             }
-
             #mobile-nav {
                 display: none;
             }
@@ -410,24 +455,23 @@ a.nav-toggle {
     }
     /*main-content box*/
     #main-content {
-      
+        height: auto;
+        margin: 0;
+        padding: 0;
         font-size: 1em;
         min-height: 740px;
-
         blockquote {
             width: 91%;
             margin: 1.8% auto;
-            
+            color: $color1;
             line-height: 1.8em;
-           
+            font-style: italic;
             letter-spacing: 0.05em;
             font-size: 0.9em;
             font-family: "FontAwesome", ($FontStyle);
-
             &:before {
                 content: "\f10d";
             }
-
             &:after {
                 content: "\f10e";
             }
@@ -441,7 +485,6 @@ a.nav-toggle {
             clear: both;
             float: right;
             font-family: ($FontStyle);
-
             form.searchform {
                 text-align: left;
                 max-width: 100%;
@@ -450,14 +493,12 @@ a.nav-toggle {
                 float: right;
                 height: 100%;
                 display: block;
-
                 div {
                     margin: 0;
                     padding: 0;
                     width: 100%;
                     height: 100%;
                     display: block;
-
                     label {
                         width: 25%;
                         height: 100%;
@@ -470,7 +511,6 @@ a.nav-toggle {
                         color: $color1;
                         text-align: center;
                     }
-
                     input {
                         width: 50%;
                         height: 30px;
@@ -482,7 +522,6 @@ a.nav-toggle {
                         border: none;
                         line-height: 30px;
                     }
-
                     input[type=submit] {
                         margin: 0;
                         height: 30px;
@@ -497,7 +536,6 @@ a.nav-toggle {
                         border: none;
                         font-family: ($FontStyle);
                     }
-
                     input[type=submit]:hover {
                         color: $color4;
                         background-color: $color1;
@@ -506,14 +544,12 @@ a.nav-toggle {
                 }
             }
         }
-
         hgroup {
             margin: 0;
             padding: 0;
         }
-
         h1 {
-            font-size: 1.4em;
+            font-size: 1.3em;
             padding: 0;
             color: $color1;
             width: 100%;
@@ -523,7 +559,6 @@ a.nav-toggle {
             margin: 0;
             clear: both;
         }
-
         h2 {
             font-size: 1.1em;
             margin: 0;
@@ -534,7 +569,6 @@ a.nav-toggle {
             font-weight: bold;
             line-height: 35px;
         }
-
         h3 {
             font-size: 1em;
             margin: 0;
@@ -546,12 +580,11 @@ a.nav-toggle {
             line-height: 1.3em;
             height: 30px;
         }
-
         p {
             font-size: 0.90em;
             font-weight: normal;
             width: 100%;
-            letter-spacing: 0.10em;
+            letter-spacing: 0.08em;
             line-height: 1.9em;
             margin: 0 0 1%;
         }
@@ -559,7 +592,6 @@ a.nav-toggle {
         ul {
             list-style: none;
         }
-
         ul li a:hover {
             color: $color4;
         }
@@ -576,8 +608,6 @@ a.nav-toggle {
             outline: 0;
             border: 0;
         }
-
-
         /*Right-side*/
         #side-bar {
             padding-top: 0;
@@ -587,9 +617,10 @@ a.nav-toggle {
             display: block;
             margin: 0.75% 0 0;
             clear: both;
-            
-
+                        
             .side-bar-box {
+                               
+                display:block;
                 h2 {
                     width: 100%;
                     height: 40px;
@@ -597,7 +628,8 @@ a.nav-toggle {
                     padding: 0;
                     font-size: 1.2em;
                     line-height: 40px;
-                    
+                    background-color: $color7;
+                    color: $color4;
                     letter-spacing: 0.1em;
                     text-align: center;
                     margin: 0 auto;
@@ -608,31 +640,30 @@ a.nav-toggle {
                 width: 31%;
                 margin: 1%;
                 float: left;
-
                 #social h2 {
                     width: 100%;
                 }
-
                 .tagcloud {
                     width: 90%;
                     margin: auto;
                     font-size: 100%;
                     display: block;
                 }
-
                 .widget {
                     display: block;
                     font-family: ($FontStyle);
                     padding: 0;
-
-                    .widget-title {}
-
+                    .widget-title {
+                        height: 40px;
+                        font-size: 1.05em;
+                        line-height: 40px;
+                        letter-spacing: 0.1em;
+                    }
                     ul {
                         width: 100%;
                         height: auto;
                         display: inline-block;
                         margin: 0;
-
                         li {
                             list-style: none;
                             line-height: 30px;
@@ -640,7 +671,6 @@ a.nav-toggle {
                             width: 96%;
                             margin: 2% auto;
                             text-align: center;
-
                             a {
                                 width: 100%;
                                 display: block;
@@ -649,27 +679,23 @@ a.nav-toggle {
                                 font-size: 0.9em;
                                 line-height: 35px;
                                 background-color: $color3;
-                                
+                                @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                             }
-
                             a:hover {
                                 color: $color4;
                                 background-color: $color1;
                                 font-weight: bold;
                             }
                         }
-
                         li.recentcomments a {
                             display: block;
                             background-color: $color1;
                         }
-
                         li.comment-author-link a {
                             display: block;
                             background-color: $color1;
                         }
                     }
-
                     ul.children > li {
                         background-color: $color3;
                         margin: 1% auto;
@@ -677,16 +703,13 @@ a.nav-toggle {
                 }
             }
         }
-
         /*Left-side*/
         #blogleftside {
             height: auto;
             width: 100%;
             font-size: 1em;
-            
             margin: 0;
         }
-
         .left-col {
             margin-top: 0;
         }
@@ -696,10 +719,6 @@ a.nav-toggle {
             padding: 0 2%;
             width: 100%;
             margin: 0 1% 1% 0;
-            
-            float: left;
-            display: inline-block;
-
             hr.blog-spacer {
                 margin: 2% auto;
                 width: 80%;
@@ -707,10 +726,9 @@ a.nav-toggle {
                 outline: 0;
                 border: 0;
             }
-
             h1 {
                 font-size: 1.45em;
-                margin: 1% 0 0;
+                margin: 0;
                 padding: 0;
                 letter-spacing: 0.05em;
                 width: 100%;
@@ -719,47 +737,45 @@ a.nav-toggle {
                 height: 45px;
                 text-align: left;
             }
-
             h2 {
                 text-indent: 0;
-                font-size: 1.35em;
+                font-size: 1.2em;
                 margin: 0 auto;
                 padding: 0;
                 letter-spacing: 0.05em;
                 width: 100%;
                 background-color: $color4;
                 color: $color1;
-                line-height: 50px;
-                height: 50px;
+                line-height: 40px;
+                height: 40px;
                 text-align: left;
             }
-
             h3 {
-                margin: 0.5em auto;
+                margin: 0 auto;
                 height: 40px;
                 line-height: 40px;
-                font-size: 1.25em;
+                font-size: 1.15em;
                 text-indent: 0;
                 width: 100%;
                 text-align: left;
             }
-
             h3 a {
                 padding-left: 0;
                 height: 100%;
             }
-
             ul {
                 line-height: 1.5em;
                 text-indent: 0;
                 width: 91%;
                 margin: 1% auto;
                 display: block;
-
                 li {
                     width: 100%;
                     margin: 0;
-
+                    line-height: 35px;
+                    display:block;
+                    font-size: 0.85em;
+                    
                     a {
                         width: 100%;
                         margin-left: 0;
@@ -771,7 +787,6 @@ a.nav-toggle {
                         line-height: 35px;
                         color: $color1;
                     }
-
                     a:hover {
                         color: $color1;
                         margin-left: 0;
@@ -779,20 +794,17 @@ a.nav-toggle {
                         background-color: #ecf0f5;
                         font-size: 1.1em;
                         width: 100%;
-
                         &::after {
                             content: " > ";
                         }
                     }
                 }
             }
-
             .seperator {
                 display: block;
                 height: 1%;
                 clear: both;
             }
-
             p {
                 width: 100%;
                 margin: 0;
@@ -803,7 +815,6 @@ a.nav-toggle {
                 letter-spacing: 0.1em;
                 margin-bottom: 2%;
             }
-
             .thumb {
                 width: 58%;
                 height: auto;
@@ -811,13 +822,11 @@ a.nav-toggle {
                 display: block;
                 clear: both;
             }
-
             .postimg {
                 width: 23%;
                 margin: 5% auto;
                 display: block;
             }
-
             .featuredImage {
                 clear: both;
                 height: auto;
@@ -826,7 +835,6 @@ a.nav-toggle {
                 display: block;
                 min-height: 220px;
             }
-
             pre {
                 border: solid 1px blue;
                 font-size: 1em;
@@ -837,42 +845,36 @@ a.nav-toggle {
                 direction: ltr;
                 text-align: left;
             }
-
             .code {
                 width: 80%;
                 margin: 5% auto;
                 display: block;
                 font-size: 0.85em;
             }
-
             header.byline {
                 width: 100%;
                 margin: auto;
                 height: auto;
                 background-color: $color4;
-
+                text-align: left;
                 .entry-meta,
                 .index-entry-meta {
                     height: auto;
                     width: 100%;
-
                     .has-avatar {
                         display: inline-block;
                         text-align: left;
                         width: 20%;
                     }
-
                     .meta-content {
                         height: auto;
                         width: 100%;
-
                         .author-avatar {
-                            width: 7%;
+                            width: 9%;
                             display: inline-block;
                             float: left;
-                            margin: 0 1em 0 0;
+                            margin: 0 0.5em 0 0;
                         }
-
                         .byline,
                         .bylineauthor,
                         .bylinecat,
@@ -886,18 +888,16 @@ a.nav-toggle {
                             line-height: 20px;
                             text-align: left;
                             font-family: "FontAwesome", ($FontStyle);
-
                             a {
-                                font-size: 0.90em;
+                                font-size: 1em;
                                 color: $color1;
                                 margin: 0;
                                 width: auto;
                                 display: inline-block;
                                 padding: 0.5%;
                             }
-
                             a:hover {
-                                font-size: 0.90em;
+                                font-size: 1.05em;
                                 color: $color3;
                                 margin: 0;
                                 width: auto;
@@ -908,34 +908,30 @@ a.nav-toggle {
                     }
                 }
             }
-
             footer.byline {
                 width: 100%;
                 margin: 1% auto;
                 height: auto;
                 font-size: 0.9em;
-                line-height: 1.5em;
-
+                display:block;
+                
                 p {
                     margin: 0;
                     display: inline-block;
                     padding: 0;
                     width: auto;
                 }
-
                 a {
                     font-size: 0.95em;
                     color: $color1;
                     margin: auto;
                     width: 100%;
                 }
-
                 .bylinecat {
                     width: 85%;
                     display: inline-block;
                     height: auto;
                     line-height: 20px;
-
                     a {
                         font-size: 0.90em;
                         color: $color1;
@@ -944,7 +940,6 @@ a.nav-toggle {
                         display: inline-block;
                         padding: 0.5%;
                     }
-
                     a:hover {
                         font-size: 0.90em;
                         color: $color3;
@@ -954,26 +949,24 @@ a.nav-toggle {
                         padding: 0.5%;
                     }
                 }
-
                 p.right {
                     width: 6%;
                     float: right;
                     font-size: 1.3em;
                     height: 40px;
+                    line-height: 40px;
                     background-color: $color3;
                     margin: 1%;
-
                     &:hover {
                         background-color: $color1;
                         color: $color4;
                     }
-
                     a.comments-count {
                         position: relative;
                         top: 0;
                         left: 0;
                         text-align: center;
-                       
+                        @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                         display: inline-block;
                         height: 100%;
                         line-height: 40px;
@@ -981,7 +974,6 @@ a.nav-toggle {
                         font-size: 1.1em;
                         background-color: $color3;
                     }
-
                     a.comments-count:hover {
                         color: $color4;
                         background-color: $color1;
@@ -990,12 +982,10 @@ a.nav-toggle {
                     }
                 }
             }
-
-      //      .newsExcerpt {
-      //          height: auto;
-      //          margin: 1% 0;
-      //      }
-
+            //      .newsExcerpt {
+            //          height: auto;
+            //          margin: 1% 0;
+            //      }
             .read_more {
                 font-size: 0.9em;
                 padding: 0;
@@ -1003,7 +993,7 @@ a.nav-toggle {
                 line-height: 35px;
                 list-style: none;
                 background-color: $color3;
-                width: 20.9652349%;
+                width: 15.9652349%;
                 color: $color1;
                 
                 letter-spacing: 0.05em;
@@ -1011,12 +1001,10 @@ a.nav-toggle {
                 text-align: center;
                 margin: 2% 0;
             }
-
             .read_more:hover {
                 color: $color4;
                 background-color: $color1;
                 font-size: 0.95em;
-                line-height: 35px;
                 margin: 2% 0;
             }
             /*Social media share buttons*/
@@ -1024,7 +1012,6 @@ a.nav-toggle {
                 width: 100%;
                 margin: 3% auto;
                 display: block;
-
                 .sd-title {
                     line-height: 0;
                     display: block;
@@ -1035,16 +1022,13 @@ a.nav-toggle {
                     height: 40px;
                     width: 11%;
                 }
-
                 .sd-title::before {
                     border: none;
                 }
-
                 .sd-content {
                     margin: 0;
                     width: 85%;
                     display: inline-block;
-
                     ul {
                         line-height: 1.5em;
                         font-size: 1em;
@@ -1053,7 +1037,6 @@ a.nav-toggle {
                         height: 35px;
                         display: block;
                         margin: 0 1%;
-
                         li {
                             width: 4%;
                             float: left;
@@ -1061,7 +1044,6 @@ a.nav-toggle {
                             padding: 0;
                             margin: 0 1%;
                             height: 100%;
-
                             a {
                                 background-color: $color3;
                                 color: $color1;
@@ -1071,12 +1053,10 @@ a.nav-toggle {
                                 height: 100%;
                                 padding: 20%;
                             }
-
                             a:hover {
                                 color: $color1;
                                 background-color: $color3;
                                 width: 100%;
-
                                 &::after {
                                     content: "";
                                 }
@@ -1085,11 +1065,9 @@ a.nav-toggle {
                     }
                 }
             }
-
             .entry {
                 padding: 1% 0;
                 height: auto;
-
                 h1 {
                     font-size: 1.6em;
                     margin: 10px auto;
@@ -1098,18 +1076,16 @@ a.nav-toggle {
                     width: 96%;
                 }
             }
-
             h2.entry-title a {
                 color: $color4;
                 font-size: 70%;
                 height: 100%;
                 line-height: 1em;
             }
-
+            
             .entry-attachment {
                 width: 20%;
                 margin: 3em auto;
-
                 figure.attachment {
                     a {
                         display: block;
@@ -1121,7 +1097,6 @@ a.nav-toggle {
         .navi {
             width: 100%;
             height: 40px;
-
             .right {
                 width: 100%;
                 float: left;
@@ -1132,7 +1107,7 @@ a.nav-toggle {
                 height: 40px;
                 line-height: 40px;
                 color: $color8;
-
+                strong{display: inline-block; width: 90%;}
                 a {
                     font-family: ($FontStyle);
                     display: inline-block;
@@ -1143,7 +1118,6 @@ a.nav-toggle {
                     width: 91%;
                     text-indent: 1%;
                 }
-
                 a::after {
                     font-family: 'FontAwesome';
                     content: "\f187";
@@ -1151,16 +1125,14 @@ a.nav-toggle {
                     line-height: 40px;
                     float: right;
                     width: 27px;
-                    margin-right: 2%;
+                    margin-right: 0;
                 }
-
                 a:hover {
                     color: $color4;
                     height: 40px;
                     background-color: $color2;
-                    border: 1px solid $color2;
+                    
                 }
-
                 span {
                     i {
                         width: 4%;
@@ -1176,7 +1148,6 @@ a.nav-toggle {
                 }
             }
         }
-
         /*content wide containers*/
         section.contact-wide {
             margin: 1% 0;
@@ -1184,7 +1155,6 @@ a.nav-toggle {
             height: auto;
             background-color: $color4;
             float: left;
-            box-shadow: 0 0.5px 0.5px 0 rgba(0,0,0,0.2);
            
             h1 {
                 width: 100%;
@@ -1199,21 +1169,18 @@ a.nav-toggle {
                 letter-spacing: 0.1em;
                 font-weight: bold;
             }
-
             .navigation {
                 height: 100px;
                 width: 96%;
                 margin: 1% auto;
                 background-color: $color7;
                 color: $color4;
-
                 h1 {
                     margin: 0 auto;
                     color: $color4;
                     font-size: 1.3em;
                     width: 96%;
                 }
-
                 .right {
                     width: 50%;
                     float: left;
@@ -1224,14 +1191,12 @@ a.nav-toggle {
                     height: 40px;
                     line-height: 40px;
                     color: $color8;
-
                     a {
                         display: inline-block;
                         font-weight: bold;
                         height: 30px;
                         margin: 0;
                     }
-
                     a:hover {
                         color: $color4;
                     }
@@ -1248,11 +1213,9 @@ a.nav-toggle {
                 margin: 2% auto;
                 display: block;
             }
-
             .commentlist {
                 padding-left: 0;
                 margin: 0;
-
                 .comment-meta {
                     letter-spacing: 0.1em;
                     padding: 1%;
@@ -1264,18 +1227,15 @@ a.nav-toggle {
                     text-indent: 0;
                     width: 100%;
                     margin: 0 auto;
-
                     .edit-link {
                         display: inline;
                         padding: 10px;
                     }
-
                     .comment-author {
                         float: left;
                         display: inline-block;
                         height: auto;
                         padding: 0;
-
                         img {
                             width: 12%;
                             height: auto;
@@ -1283,7 +1243,6 @@ a.nav-toggle {
                             display: inline-block;
                             float: left;
                         }
-
                         b.fn {
                             display: inline-block;
                             width: auto;
@@ -1291,14 +1250,12 @@ a.nav-toggle {
                             text-align: center;
                             height: 100%;
                         }
-
                         span.says {
                             display: inline-block;
                             width: auto;
                             height: 100%;
                         }
                     }
-
                     .comment-metadata {
                         float: right;
                         line-height: 30px;
@@ -1306,19 +1263,16 @@ a.nav-toggle {
                         padding: 0;
                         width: auto;
                         display: inline-block;
-
                         a {
                             color: $color4;
                         }
                     }
                 }
-
                 .comment-content {
                     width: 100%;
                     margin: 2% auto;
                     font-size: 0.9em;
                     min-height: 100px;
-
                     p {
                         width: 94%;
                         font-size: 1em;
@@ -1326,21 +1280,17 @@ a.nav-toggle {
                         margin: 0 auto;
                     }
                 }
-
                 li ul {
                     width: 100%;
                     margin-left: 0;
                 }
-
                 li {
                     padding: 0;
                 }
-
                 .reply {
                     width: 96%;
                     min-height: 35px;
                     margin: 2% auto;
-
                     a {
                         margin: 0;
                         display: block;
@@ -1348,7 +1298,7 @@ a.nav-toggle {
                         list-style: none;
                         width: 15%;
                         background-color: $color3;
-                       
+                        
                         padding: 0;
                         border: none;
                         color: $color1;
@@ -1358,7 +1308,6 @@ a.nav-toggle {
                         font-size: 0.95em;
                         float: right;
                     }
-
                     a:hover {
                         background-color: $color1;
                         color: $color4;
@@ -1368,7 +1317,6 @@ a.nav-toggle {
                     }
                 }
             }
-
             #respond {
                 h3#reply-title {
                     width: 95%;
@@ -1379,20 +1327,17 @@ a.nav-toggle {
                     letter-spacing: 0.1em;
                     line-height: 35px;
                     text-indent: 0;
-
                     small a {
                         font-size: 0.9em;
-                        
+                       
                         display: inline-block;
                         padding: 0 2%;
                     }
-
                     small a:hover {
                         font-size: 1em;
                         color: red;
                     }
                 }
-
                 .comment-form {
                     width: 82%;
                     height: auto;
@@ -1400,7 +1345,6 @@ a.nav-toggle {
                     font-family: ($FontStyle);
                     padding: 1.8% 0;
                     font-size: 100%;
-
                     p.comment-notes {
                         font-size: 0.90em;
                         font-weight: 300;
@@ -1409,25 +1353,22 @@ a.nav-toggle {
                         line-height: 1.7em;
                         margin: 0;
                     }
-
                     textarea#comment {
-                        
+                        @include Transition(all 0.30s ease-in-out);
                         outline: none;
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
                         border: 1px solid #ddd;
                         width: 100%;
                     }
-
                     p.comment-form-author {
                         label {
                             height: 30px;
                             line-height: 30px;
                             width: 30px;
                         }
-
                         input {
-                            
+                            @include Transition(all 0.30s ease-in-out);
                             outline: none;
                             padding: 3px 0 3px 3px;
                             margin: 5px 1px 3px 0;
@@ -1436,23 +1377,20 @@ a.nav-toggle {
                             width: 100%;
                             height: 35px;
                         }
-
                         input:focus,
                         textarea#comment:focus {
-                            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                            
                             padding: 3px 0 3px 3px;
                             margin: 5px 1px 3px 0;
-                            border: 1px solid rgba(81, 203, 238, 1);
+                            
                         }
                     }
-
                     p.comment-form-email {
                         label {
                             height: 30px;
                             line-height: 30px;
                             width: 30px;
                         }
-
                         input {
                             
                             outline: none;
@@ -1463,23 +1401,20 @@ a.nav-toggle {
                             width: 100%;
                             height: 35px;
                         }
-
                         input:focus,
                         textarea#comment:focus {
-                            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                            
                             padding: 3px 0 3px 3px;
                             margin: 5px 1px 3px 0;
-                            border: 1px solid rgba(81, 203, 238, 1);
+                            
                         }
                     }
-
                     p.comment-form-url {
                         label {
                             height: 30px;
                             line-height: 30px;
                             width: 30px;
                         }
-
                         input {
                             
                             outline: none;
@@ -1490,49 +1425,43 @@ a.nav-toggle {
                             width: 100%;
                             height: 35px;
                         }
-
                         input:focus,
                         textarea#comment:focus {
-                            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+                            
                             padding: 3px 0 3px 3px;
                             margin: 5px 1px 3px 0;
-                            border: 1px solid rgba(81, 203, 238, 1);
+                            
                         }
                     }
-
                     p.form-submit {
                         margin: 2% 0;
                         width: 100%;
-
                         input[type="submit"] {
                             height: 35px;
                             list-style: none;
-                            width: 20%;
                             background-color: $color3;
                             
                             padding: 0;
                             border: none;
                             color: $color1;
                             font-family: ($FontStyle);
+                            width: 20%;
                         }
-
                         input[type="submit"]:hover {
                             background-color: $color1;
                             color: $color4;
                             font-weight: bold;
+                            width: 20%;
                         }
                     }
                 }
             }
-
             p.must-log-in {
                 width: 100%;
                 text-indent: 2%;
             }
         }
         /*Comment section end*/
-
-
         #contactform {
             float: right;
             width: 50%;
@@ -1540,22 +1469,18 @@ a.nav-toggle {
             font-family: ($FontStyle);
             padding: 10px 0;
             font-size: 100%;
-
             p {
                 font-size: 1em;
                 padding: 1% 0;
             }
-
             input {
                 width: 95%;
                 height: 35px;
             }
-
             label {
                 height: 30px;
                 line-height: 30px;
             }
-
             input[type="submit"] {
                 height: 35px;
                 list-style: none;
@@ -1568,41 +1493,35 @@ a.nav-toggle {
                 font-family: ($FontStyle);
                 display: block;
             }
-
             input[type="submit"]:hover {
                 background-color: $color1;
                 color: $color4;
             }
-
             input[type=text],
             select,
             textarea {
-                
+               
                 outline: none;
                 padding: 3px 0 3px 3px;
                 margin: 5px 1px 3px 0;
                 border: 1px solid #ddd;
                 width: 95%;
             }
-
             input[type=text]:focus,
             select:focus,
             textarea:focus {
-                box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+               
                 padding: 3px 0 3px 3px;
                 margin: 5px 1px 3px 0;
-                border: 1px solid rgba(81, 203, 238, 1);
+                
             }
         }
         /*Front-page-Panel */
         .frontpage_container {
             width: 100%;
             display: block;
-            height: 545px;
-            /*new*/
-            min-height: 529px;
-            /*new*/
-            margin: 0;
+            height: auto;
+            margin:0 0 2% 0;
             padding: 0;
             /*Intro Container*/
             .text-box {
@@ -1612,7 +1531,6 @@ a.nav-toggle {
                 float: left;
                 margin: 0;
                 height: auto;
-
                 h1 {
                     font-size: 1em;
                     margin: 0;
@@ -1626,9 +1544,8 @@ a.nav-toggle {
                     font-weight: 600;
                     display: block;
                 }
-
                 p {
-                    width: 99%;
+                    width: 95%;
                     line-height: 1.69em;
                     font-size: 0.9em;
                     font-weight: 100;
@@ -1636,7 +1553,6 @@ a.nav-toggle {
                     letter-spacing: 0.095em;
                     padding-top: 0.5%;
                 }
-
                 .introimg {
                     width: 14.729%;
                     float: left;
@@ -1644,24 +1560,24 @@ a.nav-toggle {
                     height: auto;
                     display: inline-block;
                 }
-
                 hr {
-                    
+                    background-color: $color2;
                     height: 1px;
                     margin: 1.4% auto;
                     width: 40%;
                     outline: none;
                     border: none;
                 }
-                a:hover{text-decoration:underline;}
+                a:hover {
+                    text-decoration: underline;
+                }
                 .webskills {
                     list-style: none;
-                    
+                    font-family: ($FontStyle);
                     margin: 0;
                     padding: 3% 0;
                     width: 100%;
                     display: inline-block;
-
                     li {
                         margin: 0;
                         font-size: 0.75em;
@@ -1674,14 +1590,12 @@ a.nav-toggle {
                         float: none;
                         line-height: 1.5em;
                     }
-
                     li#fa-desktop {
                         display: block;
                         height: 100%;
                         font-size: 0.85em;
                         line-height: 35px;
                     }
-
                     li#fa-desktop::before {
                         font-family: 'FontAwesome';
                         content: "\f108";
@@ -1689,14 +1603,12 @@ a.nav-toggle {
                         padding: 1.5%;
                         line-height: 1.5em;
                     }
-
                     li#fa-wordpress {
                         display: block;
                         height: 100%;
                         font-size: 0.85em;
                         line-height: 35px;
                     }
-
                     li#fa-wordpress::before {
                         font-family: 'FontAwesome';
                         content: "\f19a";
@@ -1704,14 +1616,12 @@ a.nav-toggle {
                         padding: 1.5%;
                         line-height: 1.5em;
                     }
-
                     li#fa-mobile {
                         display: block;
                         height: 100%;
                         font-size: 0.85em;
                         line-height: 35px;
                     }
-
                     li#fa-mobile::before {
                         font-family: 'FontAwesome';
                         content: "\f05a";
@@ -1720,11 +1630,9 @@ a.nav-toggle {
                         font-size: 1.3em;
                         line-height: 1.5em;
                     }
-
                     li a {
                         width: 100%;
                     }
-
                     li a:hover {
                         width: 100%;
                         color: $color4;
@@ -1734,39 +1642,34 @@ a.nav-toggle {
             /*front-page container*/
             .svg-image-container {
                 width: 50%;
-                height: 529px;
+                height: auto;
                 margin: 0;
                 float: right;
                 display: inline-block;
-                
-
+                font-family: ($FontStyle);
                 figure#image-6 #image-5 {
+                    display: none;
+                    opacity: 0;
+                }
+                figure#image-7 #image-4 {
                     width: 100%;
                     max-width: 100%;
                     height: 100%;
                     border: none;
                     margin-top: 0;
-                    display:block;
-                }
-
-                figure#image-7 #image-4 {
-                    display: none;
-                  
                 }
             }
             /*profile-page_container*/
             .prof_cont {
                 width: 50%;
                 /*new*/
-                height: 485px;
-                
+                height: 500px;
+                background-color: $color4;
                 margin: 0;
                 display: inline-block;
-                
+                font-family: ($FontStyle);
                 float: right;
                 
-
-
                 h1 {
                     width: 100%;
                     height: 50px;
@@ -1774,18 +1677,17 @@ a.nav-toggle {
                     padding: 0;
                     font-size: 1.3em;
                     line-height: 50px;
-                    
+                    background-color: $color7;
+                    color: $color4;
                     text-indent: 1.5%;
                     letter-spacing: 0.05em;
                     font-weight: bold;
                 }
-
                 #social {
                     width: 50%;
                     display: block;
                     float: left;
                     margin-top: 0;
-
                     h3 {
                         width: 100%;
                         margin: 2% 0;
@@ -1793,59 +1695,93 @@ a.nav-toggle {
                 }
                 /*chart*/
                 #chart {
-                    //display:none;
-
+                    width: 95%;
+                    height: 385px;
+                    margin: 5% auto;
+                    display: block;
                     #numbers {
-                                                             
-                        
-
+                        width: 9.5%;
+                        height: 378px;
+                        font-size: 1em;
+                        margin: 0;
+                        padding: 0;
+                        display: inline-block;
+                        float: left;
+                        color: $color1;
                         li {
-                            
+                            text-align: left;
+                            list-style: none;
+                            height: 23.40%;
+                            border-bottom: 1px solid #444;
+                            position: relative;
+                            bottom: 0;
+                            z-index: 1;
+                            width: 90%;
                         }
-
                         li:first-child {
                             border-top: 1px solid #444;
                         }
-
                         li:last-child {
-                            
+                            height: 9.48657%;
+                            border: none;
+                            font-size: 1em;
                         }
-
                         li span {
-                            
-                            
+                            color: $color1;
+                            position: absolute;
+                            bottom: 0;
+                            line-height: inherit;
+                            font-size: 0.9em;
+                            display: inline-block;
+                            width: 100%;
+                            text-align: left;
+                            height: 100%;
+                            z-index: 2;
                         }
                     }
-
                     #bars {
-                        
-                        
-
+                        display: inline-block;
+                        background: $color4;
+                        width: 90%;
+                        height: 100%;
+                        padding: 0;
+                        margin: 0;
                         li {
-                           
-                            
-                            
-
+                            display: table-cell;
+                            width: 590px;
+                            height: 353px;
+                            margin: 0;
+                            text-align: center;
+                            position: relative;
                             .bar {
-                                
+                                display: block;
+                                width: 97%;
+                                margin-left: 0;
+                                background: $color1;
+                                position: absolute;
+                                bottom: 0;
                             }
-
                             .bar:hover {
-                                
+                                background: $color2;
+                                cursor: pointer;
                             }
-
                             .bar:hover:before {
-                                
+                                content: attr(data-percentage) '%';
+                                position: relative;
+                                bottom: 20px;
                             }
                         }
-
                         span {
-                            
+                            width: 98%;
+                            position: absolute;
+                            left: 0;
+                            bottom: -2em;
+                            text-align: center;
+                            font-size: 0.8em;
                         }
                     }
                 }
                 /* End of chart*/
-
                 /*Hero Slider*/
                 .hero-slider {
                     text-align: left;
@@ -1854,30 +1790,24 @@ a.nav-toggle {
                     font-family: ($FontStyle);
                     height: 83.524%;
                     width: 98%;
-
                     .mask {
                         float: left;
-                        width: 74%;
+                        width: 71%;
                         height: 390px;
                         /*new*/
                         margin: 0 0 0 1%;
                         overflow: hidden;
-
                         div.slider-body {
                             width: 100%;
-
                             .panel {
                                 font-family: ($FontStyle);
                                 width: 100%;
                                 height: 390px;
-                                /*new*/
-                                text-align: left;
                                 background-color: $color4;
-
                                 h2 {
                                     padding: 0;
                                     color: $color4;
-                                    line-height: 2.5em;
+                                    line-height: 40px;
                                     text-indent: 1.5%;
                                     height: 40px;
                                     background-color: $color1;
@@ -1887,13 +1817,14 @@ a.nav-toggle {
                                     width: 100%;
                                     margin: 0;
                                 }
-
                                 figure.abobe {
+                                    
                                     img {
                                         float: none;
                                         /*new*/
                                         width: 35.59%;
                                         /*new*/
+                                        
                                         height: auto;
                                         /*new*/
                                         margin: 1% auto;
@@ -1901,9 +1832,11 @@ a.nav-toggle {
                                         outline: 0;
                                         display: block;
                                         /*new*/
+                                       
+                                        &:hover{opacity:0.8; }
                                     }
-
                                     figcaption {
+                                        clear:both;
                                         h3 {
                                             font-weight: bold;
                                             font-size: 0.90em;
@@ -1911,33 +1844,33 @@ a.nav-toggle {
                                             text-indent: 0;
                                             margin: 0;
                                             letter-spacing: 0.01em;
-                                            line-height: 2.4em;
+                                            line-height: 30px;
                                             text-align: center;
                                         }
-
                                         h4 {
-                                            margin: 0;
+                                            margin: 0 0 2% 0;
                                             padding: 0;
-                                            line-height: 2.4em;
+                                            background-color:$color1;
+                                            color:$color4;
+                                            padding: 0;
+                                            line-height: 30px;
                                             font-size: 0.9em;
                                             display: block;
+                                            text-indent:1%;
                                         }
-
-                                        ul {
+                                        ul, ul#lyndalinks {
                                             width: 100%;
-
                                             li {
-                                                font-size: 0.85em;
                                                 /*new*/
                                                 width: 100%;
                                                 /*new*/
                                                 margin: 0;
                                                 font-weight: 300;
                                                 color: $color1;
-                                                display: block;
-                                                line-height: 1.5em;
-                                                height: auto;
-
+                                                
+                                                font-size: 0.85em;
+                                                
+                                                height: 20px;
                                                 &:before {
                                                     font-family: "FontAwesome";
                                                     font-size: 0.85em;
@@ -1946,11 +1879,18 @@ a.nav-toggle {
                                                     margin: 0 1%;
                                                     line-height: 1.5em;
                                                 }
+                                                a.lyndalink{ 
+                                                     
+                                                    width:auto; 
+                                                    font-size:0.9em; 
+                                                    background-color:#fff;
+                                                    &:hover{color: $color1;}
+                                                }
+                                                
                                             }
                                         }
                                     }
                                 }
-
                                 figure.cert {
                                     img {
                                         float: none;
@@ -1964,42 +1904,43 @@ a.nav-toggle {
                                         display: block;
                                         /*new*/
                                     }
-
                                     figcaption {
+                                        clear:both;
                                         h3 {
                                             font-weight: bold;
-                                            font-size: 0.90em;
+                                            font-size: 0.85em;
                                             width: auto;
                                             text-indent: 0;
                                             margin: 0;
                                             letter-spacing: 0.01em;
-                                            line-height: 2.8em;
+                                            line-height: 30px;
                                             text-align: center;
                                         }
-
                                         h4 {
-                                            margin: 0;
+                                            margin: 0 0 2% 0;
                                             padding: 0;
+                                            background-color:$color1;
+                                            color:$color4;
+                                            display: block;
+                                            line-height: 30px;
+                                            text-indent:1%;
                                         }
-
                                         ul {
                                             width: 100%;
                                             display: block;
                                             padding: 0;
                                             margin: 0;
-
                                             li {
-                                                font-size: 0.85em;
+                                                font-size:0.80em;
                                                 /*new*/
                                                 width: 100%;
                                                 /*new*/
                                                 margin: 0;
-                                                font-weight: 300;
+                                                font-weight: normal;
                                                 color: $color1;
                                                 display: block;
-                                                line-height: 1.5em;
+                                                line-height: 20px;
                                                 height: auto;
-
                                                 &:before {
                                                     font-family: "FontAwesome";
                                                     font-size: 0.85em;
@@ -2008,6 +1949,7 @@ a.nav-toggle {
                                                     margin: 0 1%;
                                                     line-height: 1.5em;
                                                 }
+                                                
                                             }
                                         }
                                     }
@@ -2015,30 +1957,21 @@ a.nav-toggle {
                             }
                         }
                     }
-
-                    ul {
+                    ul#list {
                         margin: 0;
                         list-style: outside none none;
                         float: left;
                         height: 100%;
                         /*new*/
-                        width: 25%;
+                        width: 28%;
                         padding: 0;
                         font-family: ($FontStyle);
-                        display: -webkit-flex;
-                        display: flex;
-                        -webkit-flex-direction: column;
-                        flex-direction: column;
-                        -webkit-justify-content: flex-start;
-                        justify-content: flex-start;
-
+                         
                         li {
-                            margin-bottom: 1%;
                             width: 100%;
-                            height: 40px;
-                            flex-grow: 1;
-                            flex-wrap: wrap;
-
+                            height: 44px;
+                            display: block;
+                            margin: 0 0 2% 0;
                             a {
                                 height: 100%;
                                 outline: none;
@@ -2052,10 +1985,9 @@ a.nav-toggle {
                                 background-color: $color3;
                                 color: $color1;
                                 font-size: 0.75em;
-                                line-height: 40px;
+                                line-height: 44px;
                                 
                             }
-
                             a:hover {
                                 background-color: $color1;
                                 color: $color4;
@@ -2069,7 +2001,6 @@ a.nav-toggle {
             }
         }
     }
-
     ul.skills {
         list-style: none;
         font-family: ($FontStyle);
@@ -2077,7 +2008,6 @@ a.nav-toggle {
         padding: 0;
         width: 45%;
         display: inline-block;
-
         li {
             width: 100%;
             margin: 0;
@@ -2086,7 +2016,6 @@ a.nav-toggle {
             font-style: italic;
             height: 40px;
             line-height: 40px;
-
             &::before {
                 font-family: 'FontAwesome';
                 content: "\f0e0";
@@ -2095,14 +2024,12 @@ a.nav-toggle {
                 font-size: 1.4em;
                 line-height: 1.5em;
             }
-
             a {
                 width: auto;
                 display: inline-block;
                 line-height: 40px;
                 letter-spacing: 0.05em;
             }
-
             a:hover {
                 width: 90%;
                 color: $color4;
@@ -2110,49 +2037,48 @@ a.nav-toggle {
             }
         }
     }
-
     div#photocontainer {
-                
-        display:block;
-
+        width: 100%;
+        height: auto;
+        font-family: ($FontStyle);
+        margin: auto;
+                       
         div.content {
             clear: both;
             position: relative;
             top: 10px;
-            
+            padding: 0;
             overflow: hidden;
-           
-
-            .menuSwitch {
+            width: 100%;
+            nav.menuSwitch {
                 text-align: left;
                 margin: 1.3% 0;
-                
-
+                width: 100%;
                 ul {
                     padding-left: 0;
                     height: auto;
-
                     li {
-                        
+                        list-style-type: none;
                         display: inline-block;
                         padding: 10px 20px;
                         border-radius: 4px;
-                                                
-                        float:left;
+                        cursor: pointer;
+                        background-color: $color3;
+                        color: $color1;
+                        @include Transition(background-color 0.3s ease-in);
                         font-size: 1.1em;
                         margin-right: 1%;
                     }
-
                     li:hover {
-                        
+                        background-color: $color1;
+                        color: $color4;
                     }
-
                     li.cat-active {
-                        
+                        background-color: $color1;
+                        color: $color4;
                     }
                 }
             }
-
             div#panel,
             div#panel2,
             div#panel3,
@@ -2164,17 +2090,15 @@ a.nav-toggle {
                 position: relative;
                 top: 2px;
                 overflow: hidden;
-                width: 22.6%;
-                /*new*/
-                display: inline-block;
-                margin: 0 1.1% 1.75% 0;
+                display: block;
+                float:left;
+                margin: 0.4em;
                 z-index: 4;
                 height: 390px;
                 /*new*/
                 &:hover {
                     cursor: pointer;
                 }
-
                 .text-btn {
                     position: absolute;
                     top: 40%;
@@ -2185,11 +2109,9 @@ a.nav-toggle {
                     width: 100%;
                     outline: none;
                     border: none;
-                    float:left;
-                   
+                    
                     font-size: 1em;
                     color: $color1;
-
                     &:hover {
                         color: $color4;
                         background-color: $color1;
@@ -2197,25 +2119,25 @@ a.nav-toggle {
                         z-index: 2;
                     }
                 }
-
                 .showcase-img {
                     float: left;
-                                                      
+                    width: 100%;
+                    /*new*/
+                    height: 100%;
+                    /*new*/
+                    margin: 0;
                     display: inline-block;
-
                     img {
                         height: auto;
                         width: 100%;
                         left: 0;
                     }
-
                     img:hover {}
-
                     .showcase-content {
                         display: none;
                         width: 100%;
                         /*new*/
-                        
+                        background-color: $color10;
                         padding: 1% 5%;
                         border: 1px $color4 solid;
                         position: absolute;
@@ -2223,10 +2145,10 @@ a.nav-toggle {
                         left: 0;
                         height: 100%;
                         top: 0;
-
+                        padding-top: 1%;
                         h1 {
                             text-indent: 0;
-                            font-size: 1em;
+                            font-size: 0.95em;
                             width: 100%;
                             color: $color1;
                             line-height: 30px;
@@ -2235,7 +2157,6 @@ a.nav-toggle {
                             height: 30px;
                             text-align: left;
                         }
-
                         p {
                             font-size: 0.85em;
                             width: 100%;
@@ -2243,7 +2164,6 @@ a.nav-toggle {
                             letter-spacing: 0.05em;
                             line-height: 1.6em;
                             color: $color1;
-
                             span.fa-desktop,
                             span.fa-mobile,
                             span.fa-tablet {
@@ -2254,7 +2174,6 @@ a.nav-toggle {
                                 height: 30px;
                                 line-height: 30px;
                             }
-
                             span.fa-desktop:hover,
                             span.fa-mobile:hover,
                             span.fa-tablet:hover {
@@ -2264,13 +2183,11 @@ a.nav-toggle {
                                 cursor: pointer;
                             }
                         }
-
                         .links {
                             height: 30px;
                             margin: 0;
                             display: block;
                             width: 100%;
-
                             a {
                                 height: 30px;
                                 list-style: none;
@@ -2286,15 +2203,13 @@ a.nav-toggle {
                                 margin: 1% 0 1% 1%;
                                 display: inline-block;
                                 text-align: center;
-                               
+                                @include Transition(background 0.2s linear 0s);
                             }
-
                             a:hover {
                                 color: $color4;
                                 background-color: $color1;
                                 font-weight: bold;
                             }
-
                             a.fancybox {
                                 font-size: 0.85em;
                                 height: 30px;
@@ -2306,7 +2221,6 @@ a.nav-toggle {
                                 float: left;
                                 width: 49%;
                             }
-
                             a.fancybox:hover {
                                 color: $color4;
                                 background-color: $color1;
@@ -2318,7 +2232,6 @@ a.nav-toggle {
             }
         }
     }
-
     div.wpcf7 img.ajax-loader {
         border: medium none;
         vertical-align: middle;
@@ -2328,43 +2241,36 @@ a.nav-toggle {
         margin: 5% auto;
     }
     /*Portfolio gallery*/
+    
     /*transistion*/
     .dbox {
         margin-bottom: 30px;
-        
-
+        @include Transition( all 0.2s ease-in-out);
         .itemCont {
             overflow: hidden;
             display: inline-block;
-
             a {
                 display: block;
                 padding-bottom: 5px;
             }
-
             a:hover {
                 background-color: #00ACE9;
                 color: white;
             }
         }
-
         .goto {
             display: none;
         }
     }
-
     .itemInfo {
         display: block;
     }
-
     .itemInfo p {
         display: none;
     }
-
     .thumb img {
         text-align: center;
     }
-
     .loadit {
         text-align: center;
     }
@@ -2376,145 +2282,129 @@ a.nav-toggle {
         margin-bottom: 20px;
         border-bottom: 1px solid #eee;
     }
-
     .dbox-list > .itemCont > a > .thumb {
         width: 100px;
         float: left;
     }
-
     .dbox-list > .itemCont > a > .itemInfo {
         float: left;
         margin-left: 30px;
         width: 75%;
     }
-
     .dbox-list > .itemCont > a > .itemInfo > p {
         display: block;
         color: #777;
     }
-
     .dbox-list .goto {
         display: block;
         float: right;
     }
     /*end*/
-}
-/*Footer*/
-footer {
-    width: 100%;
-    height: 120px;
-    font-family: ($FontStyle);
-    margin-top: 1%;
-
-    .socialpics {
-        display: block;
-        float: right;
-        margin: 0;
-        height: 40%;
-        width: 25%;
-
-        .social-icon {
-            float: left;
-            margin-left: 4%;
-            display: inline-block;
-            width: 21%;
-            background-repeat: no-repeat;
-           
-            height: 100%;
-            background-color: $color2;
-            transform-origin: (50% 50%);
-            -webkit-transform-origin: (50% 50%);
-            -moz-transform-origin: (50% 50%);
-        }
-
-        .social-icon:hover {
-            background-color: $color1;
-            color: $color4;
-        }
-
-        span {
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-        }
-
-        .linkedin-icon span .fa-linkedin {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-size: 1.9em;
-            line-height: 46px;
-        }
-
-        .twitter-icon span .fa-twitter {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-size: 1.9em;
-            line-height: 46px;
-        }
-
-        .facebook-icon span .fa-facebook {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-size: 1.9em;
-            line-height: 46px;
-        }
-
-        .google-icon span .fa-github {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            font-size: 1.9em;
-            line-height: 46px;
-        }
-    }
-
-    p#copyr {
-        color: $color1;
-        text-align: right;
-        font-size: 10px;
-        width: 48%;
-        margin: 0;
-        float: right;
-        display: inline-block;
-        padding-top: 4%;
-    }
-
-    ul {
-        width: 45%;
-        margin: 0;
-        padding: 0;
-        text-align: left;
-        float: left;
-        height: 100%;
-
-        li {
-            height: 22.2%;
-            list-style: none;
-            width: 100%;
+    
+    
+    /*Footer*/
+    footer {
+        width: 100%;
+        height: 120px;
+        font-family: ($FontStyle);
+        margin-top: 1%;
+        .socialpics {
+            display: block;
+            float: right;
             margin: 0;
-            text-indent: 0;
-            font-size: 1em;
-
-            a {
-                width: 40%;
-                text-decoration: none;
-                color: $color1;
-                margin: 0;
-                padding: 0;
-                font-size: 0.85em;
-                display: block;
-                line-height: 1.5em;
+            height: 40%;
+            width: 25%;
+            .social-icon {
+                float: left;
+                margin-left: 4%;
+                display: inline-block;
+                width: 21%;
+                background-repeat: no-repeat;
                 
+                height: 100%;
+                background-color: $color2;
+               
             }
-
-            a:hover {
+            .social-icon:hover {
+                background-color: $color1;
                 color: $color4;
+            }
+            span {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+            .linkedin-icon span .fa-linkedin {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 1.9em;
+                line-height: 46px;
+            }
+            .twitter-icon span .fa-twitter {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 1.9em;
+                line-height: 46px;
+            }
+            .facebook-icon span .fa-facebook {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 1.9em;
+                line-height: 46px;
+            }
+            .google-icon span .fa-github {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 1.9em;
+                line-height: 46px;
+            }
+        }
+        p#copyr {
+            color: $color1;
+            text-align: right;
+            font-size: 10px;
+            width: 48%;
+            margin: 0;
+            float: right;
+            display: inline-block;
+            padding-top: 3%;
+        }
+        ul {
+            width: 45%;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+            float: left;
+            height: 100%;
+            li {
+                height: 25px;
+                list-style: none;
+                width: 100%;
                 margin: 0;
-                font-size: 0.90em;
-                line-height: 1.5em;
+                text-indent: 0;
+                font-size: 1em;
+                a {
+                    width: 40%;
+                    text-decoration: none;
+                    color: $color1;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 0.85em;
+                    display: block;
+                    height: 100%;
+                    line-height: 25px;
+                    
+                }
+                a:hover {
+                    color: $color4;
+                    margin: 0;
+                    font-size: 0.90em;
+                    line-height: 1.5em;
+                }
             }
         }
     }

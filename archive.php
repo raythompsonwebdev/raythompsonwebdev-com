@@ -110,7 +110,7 @@
     </section>
 
 
-<?php get_sidebar('sidebar-archive'); ?> 
+<?php get_sidebar('archive'); ?> 
     
     
 </section>

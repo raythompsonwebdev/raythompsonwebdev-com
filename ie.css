@@ -462,41 +462,6 @@ html[xmlns] .clearfix {
   box-shadow: 0 0 50px #222;
 }
 
-/*Clearfix*/
-*.float-divider {
-  clear: both;
-  display: block;
-  height: 1px;
-  font-size: 1px;
-  line-height: 1px;
-}
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-.clearfix {
-  display: inline-block;
-  clear: both;
-}
-
-.clearfix:before,
-.group:after,
-.group:before {
-  content: "";
-  display: table;
-}
-
-.group:after {
-  clear: both;
-}
-
-/* end of Clearfix*/
 /*images*/
 img#wpstats {
   display: none;
@@ -672,9 +637,11 @@ a.nav-toggle {
 
 /*Wrapper*/
 #wrapper_container {
-  width: 90%;
+  background: #CCD3DE;
+  width: 86%;
   height: auto;
   margin: 0 auto;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   overflow: auto;
   clear: both;
   /*background-image: url("graphics/template.gif");
@@ -686,11 +653,18 @@ a.nav-toggle {
   /*transistion*/
   /* switch mode */
   /*end*/
+  /*Footer*/
 }
 #wrapper_container .fancybox-custom .fancybox-skin {
   box-shadow: 0 0 50px #222;
 }
 #wrapper_container header {
+  width: 100%;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #CCD3DE;
   /* Text meant only for screen readers. */
   /*.social-icons{float:right; margin:0.5% 0 ;  height:auto; padding-left:0px; width: 12%; }*/
   /*Navigation*/
@@ -700,8 +674,25 @@ a.nav-toggle {
   position: relative;
   top: -5px;
 }
-#wrapper_container header .screen-reader-text:focus {
-  /* Above WP toolbar. */
+#wrapper_container header .screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+#wrapper_container header .site-logo a {
+  position: absolute;
+  z-index: 10;
+  top: 1em;
+  left: 0;
+  display: block;
+  width: 2em;
+  height: 2em;
+  background: #062351;
+  border: 2px solid #c0c9dd;
+  color: white;
+  text-decoration: none;
 }
 #wrapper_container header .site-logo a:focus,
 #wrapper_container header .site-logo a:hover {
@@ -719,6 +710,87 @@ a.nav-toggle {
   background: white;
   color: black;
 }
+#wrapper_container header h1#logo {
+  font-size: 2em;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  font-weight: bold;
+  line-height: 40px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+#wrapper_container header h1#logo span {
+  height: 100%;
+  padding: 0 0 0 0.2%;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+}
+#wrapper_container header h1#logo span:last-of-type {
+  height: 100%;
+  padding: 0 0 0 0.2%;
+  margin: 0;
+  color: #062351;
+  display: inline-block;
+}
+#wrapper_container header h1#logo-blog {
+  font-size: 2em;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  font-weight: bold;
+  line-height: 40px;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+#wrapper_container header h1#logo-blog span {
+  height: 100%;
+  padding: 0 0 0 0.2%;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+}
+#wrapper_container header h1#logo-blog span:last-of-type {
+  height: 100%;
+  padding: 0 0 0 0.2%;
+  margin: 0;
+  color: #062351;
+  margin: 0 0.5%;
+}
+#wrapper_container header h2 {
+  float: none;
+  display: block;
+  width: 100%;
+  height: 25px;
+  margin: 0;
+  letter-spacing: 0.1em;
+  padding: 0;
+  line-height: 25px;
+  font-size: 0.75em;
+  font-weight: 100;
+}
+#wrapper_container header #title {
+  float: left;
+  min-width: 280px;
+  max-width: 350px;
+  margin-left: 0;
+}
+#wrapper_container header nav {
+  padding: 0;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  display: block;
+  width: 60%;
+  float: none;
+  margin: 2% auto;
+}
+#wrapper_container header nav #innernav {
+  padding: 0;
+  margin: 0;
+  height: 35px;
+  width: 100%;
+}
 #wrapper_container header nav #innernav .menu-main-container {
   width: 100%;
 }
@@ -727,11 +799,58 @@ a.nav-toggle {
 }
 #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
   width: 18%;
+  float: left;
+  display: inline-block;
+  height: 35px;
+  list-style: none;
+  margin: 0 0.2em;
+  padding: 0;
+  text-align: center;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
+  background-color: #CCD3DE;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  line-height: 35px;
+  color: #062351;
+  margin: 0;
+  font-size: 0.80em;
+  display: block;
+  letter-spacing: 0.1em;
+  font-weight: 100;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:link {
+  background-color: #CCD3DE;
+  color: #062351;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:visited {
+  background-color: #c0c9dd;
+  color: #fff;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:focus {
+  background-color: #062351;
+  color: #fff;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
+  letter-spacing: 0.2em;
+  background-color: #062351;
+  color: #fff;
+  font-weight: bold;
+  line-height: 35px;
+}
+#wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:active {
+  background-color: #062351;
+  color: #fff;
 }
 #wrapper_container header nav #mobile-nav {
   display: none;
 }
 #wrapper_container #main-content {
+  height: auto;
+  margin: 0;
+  padding: 0;
   font-size: 1em;
   min-height: 740px;
   /*Search Box*/
@@ -747,7 +866,9 @@ a.nav-toggle {
 #wrapper_container #main-content blockquote {
   width: 91%;
   margin: 1.8% auto;
+  color: #062351;
   line-height: 1.8em;
+  font-style: italic;
   letter-spacing: 0.05em;
   font-size: 0.9em;
   font-family: "FontAwesome", "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
@@ -829,7 +950,7 @@ a.nav-toggle {
   padding: 0;
 }
 #wrapper_container #main-content h1 {
-  font-size: 1.4em;
+  font-size: 1.3em;
   padding: 0;
   color: #062351;
   width: 100%;
@@ -864,7 +985,7 @@ a.nav-toggle {
   font-size: 0.90em;
   font-weight: normal;
   width: 100%;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.08em;
   line-height: 1.9em;
   margin: 0 0 1%;
 }
@@ -897,6 +1018,7 @@ a.nav-toggle {
   clear: both;
 }
 #wrapper_container #main-content #side-bar .side-bar-box {
+  display: block;
   display: inline-block;
   height: auto;
   width: 31%;
@@ -910,6 +1032,8 @@ a.nav-toggle {
   padding: 0;
   font-size: 1.2em;
   line-height: 40px;
+  background-color: #575A5E;
+  color: #fff;
   letter-spacing: 0.1em;
   text-align: center;
   margin: 0 auto;
@@ -928,6 +1052,12 @@ a.nav-toggle {
   display: block;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   padding: 0;
+}
+#wrapper_container #main-content #side-bar .side-bar-box .widget .widget-title {
+  height: 40px;
+  font-size: 1.05em;
+  line-height: 40px;
+  letter-spacing: 0.1em;
 }
 #wrapper_container #main-content #side-bar .side-bar-box .widget ul {
   width: 100%;
@@ -951,6 +1081,11 @@ a.nav-toggle {
   font-size: 0.9em;
   line-height: 35px;
   background-color: #c0c9dd;
+  -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  transition: background 0.2s linear 0s, color 0.2s linear 0s;
 }
 #wrapper_container #main-content #side-bar .side-bar-box .widget ul li a:hover {
   color: #fff;
@@ -983,8 +1118,6 @@ a.nav-toggle {
   padding: 0 2%;
   width: 100%;
   margin: 0 1% 1% 0;
-  float: left;
-  display: inline-block;
   /*Social media share buttons*/
 }
 #wrapper_container #main-content .post hr.blog-spacer {
@@ -996,7 +1129,7 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .post h1 {
   font-size: 1.45em;
-  margin: 1% 0 0;
+  margin: 0;
   padding: 0;
   letter-spacing: 0.05em;
   width: 100%;
@@ -1007,22 +1140,22 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .post h2 {
   text-indent: 0;
-  font-size: 1.35em;
+  font-size: 1.2em;
   margin: 0 auto;
   padding: 0;
   letter-spacing: 0.05em;
   width: 100%;
   background-color: #fff;
   color: #062351;
-  line-height: 50px;
-  height: 50px;
+  line-height: 40px;
+  height: 40px;
   text-align: left;
 }
 #wrapper_container #main-content .post h3 {
-  margin: 0.5em auto;
+  margin: 0 auto;
   height: 40px;
   line-height: 40px;
-  font-size: 1.25em;
+  font-size: 1.15em;
   text-indent: 0;
   width: 100%;
   text-align: left;
@@ -1041,6 +1174,9 @@ a.nav-toggle {
 #wrapper_container #main-content .post ul li {
   width: 100%;
   margin: 0;
+  line-height: 35px;
+  display: block;
+  font-size: 0.85em;
 }
 #wrapper_container #main-content .post ul li a {
   width: 100%;
@@ -1120,6 +1256,7 @@ a.nav-toggle {
   margin: auto;
   height: auto;
   background-color: #fff;
+  text-align: left;
 }
 #wrapper_container #main-content .post header.byline .entry-meta,
 #wrapper_container #main-content .post header.byline .index-entry-meta {
@@ -1139,10 +1276,10 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .post header.byline .entry-meta .meta-content .author-avatar,
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-  width: 7%;
+  width: 9%;
   display: inline-block;
   float: left;
-  margin: 0 1em 0 0;
+  margin: 0 0.5em 0 0;
 }
 #wrapper_container #main-content .post header.byline .entry-meta .meta-content .byline,
 #wrapper_container #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
@@ -1179,7 +1316,7 @@ a.nav-toggle {
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .date a,
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-  font-size: 0.90em;
+  font-size: 1em;
   color: #062351;
   margin: 0;
   width: auto;
@@ -1200,7 +1337,7 @@ a.nav-toggle {
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
 #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-  font-size: 0.90em;
+  font-size: 1.05em;
   color: #c0c9dd;
   margin: 0;
   width: auto;
@@ -1212,7 +1349,7 @@ a.nav-toggle {
   margin: 1% auto;
   height: auto;
   font-size: 0.9em;
-  line-height: 1.5em;
+  display: block;
 }
 #wrapper_container #main-content .post footer.byline p {
   margin: 0;
@@ -1253,6 +1390,7 @@ a.nav-toggle {
   float: right;
   font-size: 1.3em;
   height: 40px;
+  line-height: 40px;
   background-color: #c0c9dd;
   margin: 1%;
 }
@@ -1265,6 +1403,11 @@ a.nav-toggle {
   top: 0;
   left: 0;
   text-align: center;
+  -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  transition: background 0.2s linear 0s, color 0.2s linear 0s;
   display: inline-block;
   height: 100%;
   line-height: 40px;
@@ -1285,7 +1428,7 @@ a.nav-toggle {
   line-height: 35px;
   list-style: none;
   background-color: #c0c9dd;
-  width: 20.9652349%;
+  width: 15.9652349%;
   color: #062351;
   letter-spacing: 0.05em;
   display: block;
@@ -1296,7 +1439,6 @@ a.nav-toggle {
   color: #fff;
   background-color: #062351;
   font-size: 0.95em;
-  line-height: 35px;
   margin: 2% 0;
 }
 #wrapper_container #main-content .post div.sharedaddy {
@@ -1395,6 +1537,10 @@ a.nav-toggle {
   line-height: 40px;
   color: #000;
 }
+#wrapper_container #main-content .navi .right strong {
+  display: inline-block;
+  width: 90%;
+}
 #wrapper_container #main-content .navi .right a {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   display: inline-block;
@@ -1411,13 +1557,12 @@ a.nav-toggle {
   line-height: 40px;
   float: right;
   width: 27px;
-  margin-right: 2%;
+  margin-right: 0;
 }
 #wrapper_container #main-content .navi .right a:hover {
   color: #fff;
   height: 40px;
   background-color: #CCD3DE;
-  border: 1px solid #CCD3DE;
 }
 #wrapper_container #main-content .navi .right span i {
   width: 4%;
@@ -1436,7 +1581,6 @@ a.nav-toggle {
   height: auto;
   background-color: #fff;
   float: left;
-  box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
   /*Comment Form*/
 }
 #wrapper_container #main-content section.contact-wide h1 {
@@ -1634,6 +1778,11 @@ a.nav-toggle {
   margin: 0;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form textarea#comment {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   outline: none;
   padding: 3px 0 3px 3px;
   margin: 5px 1px 3px 0;
@@ -1646,6 +1795,11 @@ a.nav-toggle {
   width: 30px;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author input {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   outline: none;
   padding: 3px 0 3px 3px;
   margin: 5px 1px 3px 0;
@@ -1656,10 +1810,8 @@ a.nav-toggle {
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author input:focus,
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-author textarea#comment:focus {
-  box-shadow: 0 0 5px #51cbee;
   padding: 3px 0 3px 3px;
   margin: 5px 1px 3px 0;
-  border: 1px solid #51cbee;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email label {
   height: 30px;
@@ -1677,10 +1829,8 @@ a.nav-toggle {
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email input:focus,
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-email textarea#comment:focus {
-  box-shadow: 0 0 5px #51cbee;
   padding: 3px 0 3px 3px;
   margin: 5px 1px 3px 0;
-  border: 1px solid #51cbee;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url label {
   height: 30px;
@@ -1698,10 +1848,8 @@ a.nav-toggle {
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url input:focus,
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-form-url textarea#comment:focus {
-  box-shadow: 0 0 5px #51cbee;
   padding: 3px 0 3px 3px;
   margin: 5px 1px 3px 0;
-  border: 1px solid #51cbee;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit {
   margin: 2% 0;
@@ -1710,17 +1858,18 @@ a.nav-toggle {
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"] {
   height: 35px;
   list-style: none;
-  width: 20%;
   background-color: #c0c9dd;
   padding: 0;
   border: none;
   color: #062351;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  width: 20%;
 }
 #wrapper_container #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"]:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
+  width: 20%;
 }
 #wrapper_container #main-content section.contact-wide p.must-log-in {
   width: 100%;
@@ -1773,19 +1922,14 @@ a.nav-toggle {
 #wrapper_container #main-content #contactform input[type=text]:focus,
 #wrapper_container #main-content #contactform select:focus,
 #wrapper_container #main-content #contactform textarea:focus {
-  box-shadow: 0 0 5px #51cbee;
   padding: 3px 0 3px 3px;
   margin: 5px 1px 3px 0;
-  border: 1px solid #51cbee;
 }
 #wrapper_container #main-content .frontpage_container {
   width: 100%;
   display: block;
-  height: 545px;
-  /*new*/
-  min-height: 529px;
-  /*new*/
-  margin: 0;
+  height: auto;
+  margin: 0 0 2% 0;
   padding: 0;
   /*Intro Container*/
   /*front-page container*/
@@ -1813,7 +1957,7 @@ a.nav-toggle {
   display: block;
 }
 #wrapper_container #main-content .frontpage_container .text-box p {
-  width: 99%;
+  width: 95%;
   line-height: 1.69em;
   font-size: 0.9em;
   font-weight: 100;
@@ -1829,6 +1973,7 @@ a.nav-toggle {
   display: inline-block;
 }
 #wrapper_container #main-content .frontpage_container .text-box hr {
+  background-color: #CCD3DE;
   height: 1px;
   margin: 1.4% auto;
   width: 40%;
@@ -1840,6 +1985,7 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .frontpage_container .text-box .webskills {
   list-style: none;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   margin: 0;
   padding: 3% 0;
   width: 100%;
@@ -1906,28 +2052,31 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .frontpage_container .svg-image-container {
   width: 50%;
-  height: 529px;
+  height: auto;
   margin: 0;
   float: right;
   display: inline-block;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
 }
 #wrapper_container #main-content .frontpage_container .svg-image-container figure#image-6 #image-5 {
+  display: none;
+  opacity: 0;
+}
+#wrapper_container #main-content .frontpage_container .svg-image-container figure#image-7 #image-4 {
   width: 100%;
   max-width: 100%;
   height: 100%;
   border: none;
   margin-top: 0;
-  display: block;
-}
-#wrapper_container #main-content .frontpage_container .svg-image-container figure#image-7 #image-4 {
-  display: none;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont {
   width: 50%;
   /*new*/
-  height: 485px;
+  height: 500px;
+  background-color: #fff;
   margin: 0;
   display: inline-block;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   float: right;
   /*chart*/
   /* End of chart*/
@@ -1941,6 +2090,8 @@ a.nav-toggle {
   padding: 0;
   font-size: 1.3em;
   line-height: 50px;
+  background-color: #575A5E;
+  color: #fff;
   text-indent: 1.5%;
   letter-spacing: 0.05em;
   font-weight: bold;
@@ -1955,8 +2106,92 @@ a.nav-toggle {
   width: 100%;
   margin: 2% 0;
 }
+#wrapper_container #main-content .frontpage_container .prof_cont #chart {
+  width: 95%;
+  height: 385px;
+  margin: 5% auto;
+  display: block;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
+  width: 9.5%;
+  height: 378px;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  float: left;
+  color: #062351;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li {
+  text-align: left;
+  list-style: none;
+  height: 23.40%;
+  border-bottom: 1px solid #444;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+  width: 90%;
+}
 #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li:first-child {
   border-top: 1px solid #444;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li:last-child {
+  height: 9.48657%;
+  border: none;
+  font-size: 1em;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
+  color: #062351;
+  position: absolute;
+  bottom: 0;
+  line-height: inherit;
+  font-size: 0.9em;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  height: 100%;
+  z-index: 2;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #bars {
+  display: inline-block;
+  background: #fff;
+  width: 90%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li {
+  display: table-cell;
+  width: 590px;
+  height: 353px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li .bar {
+  display: block;
+  width: 97%;
+  margin-left: 0;
+  background: #062351;
+  position: absolute;
+  bottom: 0;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li .bar:hover {
+  background: #CCD3DE;
+  cursor: pointer;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li .bar:hover:before {
+  content: attr(data-percentage) "%";
+  position: relative;
+  bottom: 20px;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont #chart #bars span {
+  width: 98%;
+  position: absolute;
+  left: 0;
+  bottom: -2em;
+  text-align: center;
+  font-size: 0.8em;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
   text-align: left;
@@ -1968,7 +2203,7 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
   float: left;
-  width: 74%;
+  width: 71%;
   height: 390px;
   /*new*/
   margin: 0 0 0 1%;
@@ -1981,14 +2216,12 @@ a.nav-toggle {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   width: 100%;
   height: 390px;
-  /*new*/
-  text-align: left;
   background-color: #fff;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
   padding: 0;
   color: #fff;
-  line-height: 2.5em;
+  line-height: 40px;
   text-indent: 1.5%;
   height: 40px;
   background-color: #062351;
@@ -2011,6 +2244,12 @@ a.nav-toggle {
   display: block;
   /*new*/
 }
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img:hover {
+  opacity: 0.8;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption {
+  clear: both;
+}
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
   font-weight: bold;
   font-size: 0.90em;
@@ -2018,38 +2257,48 @@ a.nav-toggle {
   text-indent: 0;
   margin: 0;
   letter-spacing: 0.01em;
-  line-height: 2.4em;
+  line-height: 30px;
   text-align: center;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-  margin: 0;
+  margin: 0 0 2% 0;
   padding: 0;
-  line-height: 2.4em;
+  background-color: #062351;
+  color: #fff;
+  padding: 0;
+  line-height: 30px;
   font-size: 0.9em;
   display: block;
+  text-indent: 1%;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
   width: 100%;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-  font-size: 0.85em;
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
   /*new*/
   width: 100%;
   /*new*/
   margin: 0;
   font-weight: 300;
   color: #062351;
-  display: block;
-  line-height: 1.5em;
-  height: auto;
+  font-size: 0.85em;
+  height: 20px;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
   font-family: "FontAwesome";
   font-size: 0.85em;
   color: #062351;
   content: "\f19d";
   margin: 0 1%;
   line-height: 1.5em;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+  width: auto;
+  font-size: 0.9em;
+  background-color: #fff;
+}
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
+  color: #062351;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
   float: none;
@@ -2063,19 +2312,27 @@ a.nav-toggle {
   display: block;
   /*new*/
 }
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption {
+  clear: both;
+}
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
   font-weight: bold;
-  font-size: 0.90em;
+  font-size: 0.85em;
   width: auto;
   text-indent: 0;
   margin: 0;
   letter-spacing: 0.01em;
-  line-height: 2.8em;
+  line-height: 30px;
   text-align: center;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-  margin: 0;
+  margin: 0 0 2% 0;
   padding: 0;
+  background-color: #062351;
+  color: #fff;
+  display: block;
+  line-height: 30px;
+  text-indent: 1%;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
   width: 100%;
@@ -2084,15 +2341,15 @@ a.nav-toggle {
   margin: 0;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-  font-size: 0.85em;
+  font-size: 0.80em;
   /*new*/
   width: 100%;
   /*new*/
   margin: 0;
-  font-weight: 300;
+  font-weight: normal;
   color: #062351;
   display: block;
-  line-height: 1.5em;
+  line-height: 20px;
   height: auto;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
@@ -2103,31 +2360,24 @@ a.nav-toggle {
   margin: 0 1%;
   line-height: 1.5em;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
   margin: 0;
   list-style: outside none none;
   float: left;
   height: 100%;
   /*new*/
-  width: 25%;
+  width: 28%;
   padding: 0;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: flex-start;
-  justify-content: flex-start;
   /* style */
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
-  margin-bottom: 1%;
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
   width: 100%;
-  height: 40px;
-  flex-grow: 1;
-  flex-wrap: wrap;
+  height: 44px;
+  display: block;
+  margin: 0 0 2% 0;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
   height: 100%;
   outline: none;
   text-decoration: none;
@@ -2140,9 +2390,9 @@ a.nav-toggle {
   background-color: #c0c9dd;
   color: #062351;
   font-size: 0.75em;
-  line-height: 40px;
+  line-height: 44px;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
@@ -2184,29 +2434,51 @@ a.nav-toggle {
   line-height: 40px;
 }
 #wrapper_container div#photocontainer {
-  display: block;
+  width: 100%;
+  height: auto;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  margin: auto;
 }
 #wrapper_container div#photocontainer div.content {
   clear: both;
   position: relative;
   top: 10px;
+  padding: 0;
   overflow: hidden;
+  width: 100%;
 }
-#wrapper_container div#photocontainer div.content .menuSwitch {
+#wrapper_container div#photocontainer div.content nav.menuSwitch {
   text-align: left;
   margin: 1.3% 0;
+  width: 100%;
 }
-#wrapper_container div#photocontainer div.content .menuSwitch ul {
+#wrapper_container div#photocontainer div.content nav.menuSwitch ul {
   padding-left: 0;
   height: auto;
 }
-#wrapper_container div#photocontainer div.content .menuSwitch ul li {
+#wrapper_container div#photocontainer div.content nav.menuSwitch ul li {
+  list-style-type: none;
   display: inline-block;
   padding: 10px 20px;
   border-radius: 4px;
-  float: left;
+  cursor: pointer;
+  background-color: #c0c9dd;
+  color: #062351;
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
   font-size: 1.1em;
   margin-right: 1%;
+}
+#wrapper_container div#photocontainer div.content nav.menuSwitch ul li:hover {
+  background-color: #062351;
+  color: #fff;
+}
+#wrapper_container div#photocontainer div.content nav.menuSwitch ul li.cat-active {
+  background-color: #062351;
+  color: #fff;
 }
 #wrapper_container div#photocontainer div.content div#panel,
 #wrapper_container div#photocontainer div.content div#panel2,
@@ -2219,10 +2491,9 @@ a.nav-toggle {
   position: relative;
   top: 2px;
   overflow: hidden;
-  width: 22.6%;
-  /*new*/
-  display: inline-block;
-  margin: 0 1.1% 1.75% 0;
+  display: block;
+  float: left;
+  margin: 0.4em;
   z-index: 4;
   height: 390px;
   /*new*/
@@ -2254,7 +2525,6 @@ a.nav-toggle {
   width: 100%;
   outline: none;
   border: none;
-  float: left;
   font-size: 1em;
   color: #062351;
 }
@@ -2280,6 +2550,11 @@ a.nav-toggle {
 #wrapper_container div#photocontainer div.content div#panel7 .showcase-img,
 #wrapper_container div#photocontainer div.content div#panel8 .showcase-img {
   float: left;
+  width: 100%;
+  /*new*/
+  height: 100%;
+  /*new*/
+  margin: 0;
   display: inline-block;
 }
 #wrapper_container div#photocontainer div.content div#panel .showcase-img img,
@@ -2305,6 +2580,7 @@ a.nav-toggle {
   display: none;
   width: 100%;
   /*new*/
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 1% 5%;
   border: 1px #fff solid;
   position: absolute;
@@ -2312,6 +2588,7 @@ a.nav-toggle {
   left: 0;
   height: 100%;
   top: 0;
+  padding-top: 1%;
 }
 #wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content h1,
 #wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content h1,
@@ -2322,7 +2599,7 @@ a.nav-toggle {
 #wrapper_container div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
 #wrapper_container div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
   text-indent: 0;
-  font-size: 1em;
+  font-size: 0.95em;
   width: 100%;
   color: #062351;
   line-height: 30px;
@@ -2441,6 +2718,11 @@ a.nav-toggle {
   margin: 1% 0 1% 1%;
   display: inline-block;
   text-align: center;
+  -webkit-transition: background 0.2s linear 0s;
+  -moz-transition: background 0.2s linear 0s;
+  -o-transition: background 0.2s linear 0s;
+  -ms-transition: background 0.2s linear 0s;
+  transition: background 0.2s linear 0s;
 }
 #wrapper_container div#photocontainer div.content div#panel .showcase-img .showcase-content .links a:hover,
 #wrapper_container div#photocontainer div.content div#panel2 .showcase-img .showcase-content .links a:hover,
@@ -2494,6 +2776,11 @@ a.nav-toggle {
 }
 #wrapper_container .dbox {
   margin-bottom: 30px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 #wrapper_container .dbox .itemCont {
   overflow: hidden;
@@ -2546,22 +2833,20 @@ a.nav-toggle {
   display: block;
   float: right;
 }
-
-/*Footer*/
-footer {
+#wrapper_container footer {
   width: 100%;
   height: 120px;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   margin-top: 1%;
 }
-footer .socialpics {
+#wrapper_container footer .socialpics {
   display: block;
   float: right;
   margin: 0;
   height: 40%;
   width: 25%;
 }
-footer .socialpics .social-icon {
+#wrapper_container footer .socialpics .social-icon {
   float: left;
   margin-left: 4%;
   display: inline-block;
@@ -2569,48 +2854,45 @@ footer .socialpics .social-icon {
   background-repeat: no-repeat;
   height: 100%;
   background-color: #CCD3DE;
-  transform-origin: 50% 50%;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
 }
-footer .socialpics .social-icon:hover {
+#wrapper_container footer .socialpics .social-icon:hover {
   background-color: #062351;
   color: #fff;
 }
-footer .socialpics span {
+#wrapper_container footer .socialpics span {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-footer .socialpics .linkedin-icon span .fa-linkedin {
+#wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-footer .socialpics .twitter-icon span .fa-twitter {
+#wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-footer .socialpics .facebook-icon span .fa-facebook {
+#wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-footer .socialpics .google-icon span .fa-github {
+#wrapper_container footer .socialpics .google-icon span .fa-github {
   width: 100%;
   height: 100%;
   text-align: center;
   font-size: 1.9em;
   line-height: 46px;
 }
-footer p#copyr {
+#wrapper_container footer p#copyr {
   color: #062351;
   text-align: right;
   font-size: 10px;
@@ -2618,9 +2900,9 @@ footer p#copyr {
   margin: 0;
   float: right;
   display: inline-block;
-  padding-top: 4%;
+  padding-top: 3%;
 }
-footer ul {
+#wrapper_container footer ul {
   width: 45%;
   margin: 0;
   padding: 0;
@@ -2628,15 +2910,15 @@ footer ul {
   float: left;
   height: 100%;
 }
-footer ul li {
-  height: 22.2%;
+#wrapper_container footer ul li {
+  height: 25px;
   list-style: none;
   width: 100%;
   margin: 0;
   text-indent: 0;
   font-size: 1em;
 }
-footer ul li a {
+#wrapper_container footer ul li a {
   width: 40%;
   text-decoration: none;
   color: #062351;
@@ -2644,9 +2926,10 @@ footer ul li a {
   padding: 0;
   font-size: 0.85em;
   display: block;
-  line-height: 1.5em;
+  height: 100%;
+  line-height: 25px;
 }
-footer ul li a:hover {
+#wrapper_container footer ul li a:hover {
   color: #fff;
   margin: 0;
   font-size: 0.90em;
