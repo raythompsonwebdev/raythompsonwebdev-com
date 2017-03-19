@@ -837,7 +837,7 @@ a.nav-toggle {
 }
 #wrapper_container header h1#logo span {
   height: 100%;
-  padding: 0;
+  padding: 0 0 0 0.2%;
   margin: 0;
   color: #fff;
   text-align: left;
@@ -845,7 +845,7 @@ a.nav-toggle {
 }
 #wrapper_container header h1#logo span:last-of-type {
   height: 100%;
-  padding: 0;
+  padding: 0 0 0 0.2%;
   margin: 0;
   color: #062351;
   display: inline-block;
@@ -863,14 +863,14 @@ a.nav-toggle {
 }
 #wrapper_container header h1#logo-blog span {
   height: 100%;
-  padding: 0;
+  padding: 0 0 0 0.2%;
   margin: 0;
   color: #fff;
   text-align: left;
 }
 #wrapper_container header h1#logo-blog span:last-of-type {
   height: 100%;
-  padding: 0;
+  padding: 0 0 0 0.2%;
   margin: 0;
   color: #062351;
   margin: 0 0.5%;
@@ -918,9 +918,6 @@ a.nav-toggle {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
 }
 #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
   width: 19%;
@@ -930,6 +927,12 @@ a.nav-toggle {
   margin: 0 0.5%;
   padding: 0;
   text-align: center;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  align-items: center;
 }
 #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
   background-color: #CCD3DE;
@@ -1151,8 +1154,14 @@ a.nav-toggle {
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
 }
 #wrapper_container #main-content #side-bar .side-bar-box {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: inline-block;
   height: auto;
   width: 31%;
@@ -2261,7 +2270,7 @@ a.nav-toggle {
 #wrapper_container #main-content .frontpage_container .prof_cont {
   width: 50%;
   /*new*/
-  height: auto;
+  height: 500px;
   background-color: #fff;
   margin: 0;
   display: inline-block;
@@ -2360,7 +2369,7 @@ a.nav-toggle {
 }
 #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li .bar {
   display: block;
-  width: 96%;
+  width: 97%;
   margin-left: 0;
   background: #062351;
   position: absolute;
@@ -2394,7 +2403,7 @@ a.nav-toggle {
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
   float: left;
   width: 71%;
-  height: 371px;
+  height: 390px;
   /*new*/
   margin: 0 0 0 1%;
   overflow: hidden;
@@ -2456,11 +2465,15 @@ a.nav-toggle {
   text-align: center;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-  margin: 0;
+  margin: 0 0 2% 0;
+  padding: 0;
+  background-color: #062351;
+  color: #fff;
   padding: 0;
   line-height: 30px;
   font-size: 0.9em;
   display: block;
+  text-indent: 1%;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
   width: 100%;
@@ -2472,7 +2485,6 @@ a.nav-toggle {
   margin: 0;
   font-weight: 300;
   color: #062351;
-  display: block;
   font-size: 0.85em;
   height: 20px;
 }
@@ -2485,7 +2497,6 @@ a.nav-toggle {
   line-height: 1.5em;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-  display: inline;
   width: auto;
   font-size: 0.9em;
   background-color: #fff;
@@ -2519,8 +2530,13 @@ a.nav-toggle {
   text-align: center;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-  margin: 0;
+  margin: 0 0 2% 0;
   padding: 0;
+  background-color: #062351;
+  color: #fff;
+  display: block;
+  line-height: 30px;
+  text-indent: 1%;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
   width: 100%;
@@ -2534,10 +2550,10 @@ a.nav-toggle {
   width: 100%;
   /*new*/
   margin: 0;
-  font-weight: 300;
+  font-weight: normal;
   color: #062351;
   display: block;
-  line-height: 25px;
+  line-height: 20px;
   height: auto;
 }
 #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
@@ -2548,7 +2564,7 @@ a.nav-toggle {
   margin: 0 1%;
   line-height: 1.5em;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
   margin: 0;
   list-style: outside none none;
   float: left;
@@ -2559,13 +2575,13 @@ a.nav-toggle {
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   /* style */
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
   width: 100%;
-  height: 41px;
+  height: 44px;
   display: block;
-  margin-bottom: 1%;
+  margin: 0 0 2% 0;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
   height: 100%;
   outline: none;
   text-decoration: none;
@@ -2578,14 +2594,14 @@ a.nav-toggle {
   background-color: #c0c9dd;
   color: #062351;
   font-size: 0.75em;
-  line-height: 41px;
+  line-height: 44px;
   -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
   -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
   -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
   -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
   transition: background 0.2s linear 0s, color 0.2s linear 0s;
 }
-#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+#wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
   background-color: #062351;
   color: #fff;
   font-weight: bold;
@@ -2631,13 +2647,18 @@ a.nav-toggle {
   height: auto;
   font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
   margin: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: justify;
+  justify-content: space-around;
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
 }
 #wrapper_container div#photocontainer div.content {
   clear: both;
@@ -2692,9 +2713,11 @@ a.nav-toggle {
   top: 2px;
   overflow: hidden;
   width: 23.6%;
-  /*new*/
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: inline-block;
-  margin: 0 1.1% 1.75% 0;
+  margin: 0.5%;
   z-index: 4;
   height: 390px;
   /*new*/
@@ -3156,8 +3179,8 @@ a.nav-toggle {
 }
 
 @media only screen and (max-width: 1920px) {
-  #wrapper_container {
-    width: 80%;
+  #wrapper_conainer {
+    width: 75%;
   }
 }
 @media only screen and (max-width: 1280px) {
@@ -3678,9 +3701,8 @@ a.nav-toggle {
     margin: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont {
-    height: auto;
+    height: 500px;
     width: 49%;
-    background-color: #fff;
     margin: 0.5%;
     display: inline-block;
   }
@@ -3688,7 +3710,9 @@ a.nav-toggle {
     font-size: 1.15em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart {
+    margin: 6% auto;
     height: 385px;
+    width: 96%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
     height: 365px;
@@ -3714,13 +3738,12 @@ a.nav-toggle {
     font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    margin: 0.3em auto;
-    width: 95%;
-    height: 394px;
+    width: 96%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
     width: 71%;
+    height: 385px;
     overflow: hidden;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
@@ -3729,8 +3752,7 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.9em;
-    text-indent: 5px;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h3 {
     font-size: 0.80em;
@@ -3738,7 +3760,7 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
     /*new*/
-    width: 35.59%;
+    width: 40.59%;
     /*new*/
     margin: 1% auto;
     /*new*/
@@ -3748,7 +3770,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.7em;
   }
@@ -3756,7 +3777,7 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    font-size: 0.7em;
+    font-size: 0.75em;
     /*new*/
     display: block;
     height: 20px;
@@ -3776,7 +3797,7 @@ a.nav-toggle {
     font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
-    width: 21.78%;
+    width: 28.78%;
     /*new*/
     margin: 1% auto;
     /*new*/
@@ -3786,48 +3807,42 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.75em;
+    font-size: 0.70em;
     /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
     margin-right: 1%;
-    line-height: 2.4em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel ul {
     display: block;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel ul li {
-    line-height: 1.8em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
     width: 28%;
     margin: 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
-    height: 42px;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
+    height: 44px;
+    margin: 0 0 2.5% 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
     font-size: 0.65em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
     font-size: 0.65em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
@@ -3861,7 +3876,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 31.5%;
+    width: 23.5%;
     /*new*/
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
@@ -3919,7 +3934,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content h1,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content h1 {
-    font-size: 0.9em;
+    font-size: 0.85em;
     line-height: 25px;
     height: 25px;
   }
@@ -3931,7 +3946,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6 .showcase-img .showcase-content p,
   #wrapper_container #main-content div#photocontainer div.content div#panel7 .showcase-img .showcase-content p,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 .showcase-img .showcase-content p {
-    font-size: 0.85em;
+    font-size: 0.80em;
     margin: 1% 0;
     line-height: 1.6em;
   }
@@ -4013,7 +4028,7 @@ a.nav-toggle {
     height: 30px;
     width: 49%;
     letter-spacing: 0.1em;
-    font-size: 0.80em;
+    font-size: 0.75em;
     line-height: 30px;
     padding: 0%;
     margin: 1% 0 1% 1%;
@@ -4102,13 +4117,13 @@ a.nav-toggle {
   }
 
   #wrapper_container header h1#logo {
-    font-size: 1.8em;
+    font-size: 1.85em;
   }
   #wrapper_container header h1#logo-blog {
-    font-size: 1.8em;
+    font-size: 1.85em;
   }
   #wrapper_container header h2 {
-    font-size: 0.65em;
+    font-size: 0.75em;
     margin: 0;
   }
   #wrapper_container header nav {
@@ -4140,12 +4155,12 @@ a.nav-toggle {
     padding: 2.5% 0 0;
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.15em;
+    font-size: 1.2em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 1.1em;
+    font-size: 1.5em;
   }
   #wrapper_container #main-content h3 {
     font-size: 1em;
@@ -4169,190 +4184,6 @@ a.nav-toggle {
   }
   #wrapper_container #main-content social-1 form.searchform div input[type="submit"]:hover {
     font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container {
-    height: auto;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box {
-    width: 49%;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.90em;
-    height: auto;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box p {
-    font-size: 0.75em;
-    letter-spacing: 0.08em;
-    line-height: 1.7em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .introimg {
-    width: 18%;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box hr {
-    background-color: #CCD3DE;
-    height: 1px;
-    margin: 0.8% auto;
-    width: 40%;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
-    margin: 0;
-    padding: 3% 0;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
-    font-size: 0.70em;
-    display: block;
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    display: block;
-    height: 100%;
-    font-size: 0.80em;
-    line-height: 35px;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
-    padding: 1.5%;
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.80em;
-    line-height: 35px;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
-    padding: 1.5%;
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    display: block;
-    height: 100%;
-    font-size: 0.80em;
-    line-height: 35px;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    padding: 1.5%;
-    font-size: 1.2em;
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
-    width: 100%;
-    color: #fff;
-  }
-  #wrapper_container #main-content .frontpage_container .svg-image-container {
-    margin: 0;
-    height: auto;
-  }
-  #wrapper_container #main-content .frontpage_container .svg-image-container .imagebox a {
-    font-size: 0.75em;
-    font-weight: normal;
-    width: 35%;
-  }
-  #wrapper_container #main-content .frontpage_container .svg-image-container .imagebox a:hover {
-    font-size: 0.75em;
-    font-weight: bold;
-  }
-  #wrapper_container #main-content .frontpage_container .svg-image-container .imagebox .box .slide-caption p {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont {
-    height: auto;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont h1 {
-    font-size: 1.05em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart {
-    width: 97%;
-    margin: 5% auto;
-    height: 370px;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li {
-    height: 345px;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.70em;
-    text-align: center;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li {
-    height: 23.58%;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    margin: 0.6em auto;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
-    font-size: 0.8em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
-    line-height: 40px;
-    font-size: 0.7em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
-    line-height: 40px;
-    font-size: 0.7em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
-    float: none;
-    /*new*/
-    width: 50.59%;
-    /*new*/
-    margin: 1% auto;
-    /*new*/
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
-    font-size: 0.75em;
-    text-indent: 0;
-    letter-spacing: 0.01em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
-    padding: 0;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
-    width: 100%;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
-    font-size: 0.7em;
-    /*new*/
-    display: block;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.75em;
-    margin-right: 1%;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
-    width: 30.78%;
-    /*new*/
-    margin: 1% auto;
-    /*new*/
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
-    font-size: 0.7em;
-    letter-spacing: 0.01em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
-    padding: 0;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
-    display: block;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.7em;
-    /*new*/
-    font-weight: 300;
-    display: block;
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.75em;
-    margin-right: 1%;
-    line-height: 2.4em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.9em;
   }
   #wrapper_container #main-content #side-bar h2 {
     font-size: 1.05em;
@@ -4633,6 +4464,203 @@ a.nav-toggle {
   #wrapper_container #main-content ul.skills li a:hover {
     width: 90%;
     line-height: 40px;
+  }
+  #wrapper_container #main-content .frontpage_container {
+    height: auto;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box {
+    width: 49%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box h1 {
+    font-size: 0.90em;
+    height: auto;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box p {
+    font-size: 0.75em;
+    letter-spacing: 0.08em;
+    line-height: 1.9em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .introimg {
+    width: 18%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box hr {
+    background-color: #CCD3DE;
+    height: 1px;
+    margin: 0.8% auto;
+    width: 40%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+    margin: 0;
+    padding: 3% 0;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+    font-size: 0.70em;
+    display: block;
+    line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+    display: block;
+    height: 100%;
+    font-size: 0.80em;
+    line-height: 35px;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
+    padding: 1.5%;
+    line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
+    font-size: 0.80em;
+    line-height: 35px;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
+    padding: 1.5%;
+    line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
+    display: block;
+    height: 100%;
+    font-size: 0.80em;
+    line-height: 35px;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
+    padding: 1.5%;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
+    width: 100%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
+    width: 100%;
+    color: #fff;
+  }
+  #wrapper_container #main-content .frontpage_container .svg-image-container {
+    margin: 0;
+    height: auto;
+  }
+  #wrapper_container #main-content .frontpage_container .svg-image-container .imagebox a {
+    font-size: 0.75em;
+    font-weight: normal;
+    width: 35%;
+  }
+  #wrapper_container #main-content .frontpage_container .svg-image-container .imagebox a:hover {
+    font-size: 0.75em;
+    font-weight: bold;
+  }
+  #wrapper_container #main-content .frontpage_container .svg-image-container .imagebox .box .slide-caption p {
+    font-size: 0.80em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont {
+    height: 500px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont h1 {
+    font-size: 1.05em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart {
+    width: 97%;
+    margin: 8% auto;
+    height: 370px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li {
+    height: 345px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
+    font-size: 0.70em;
+    text-align: center;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li {
+    height: 23.58%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
+    margin: 0.8em auto;
+    width: 96%;
+    height: 84.524%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
+    font-size: 0.7em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+    line-height: 40px;
+    font-size: 0.7em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+    line-height: 40px;
+    font-size: 0.7em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
+    float: none;
+    /*new*/
+    width: 40.59%;
+    /*new*/
+    margin: 1% auto;
+    /*new*/
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
+    font-size: 0.75em;
+    text-indent: 0;
+    letter-spacing: 0.01em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
+    padding: 0;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
+    width: 100%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    /*new*/
+    width: 100%;
+    /*new*/
+    margin: 0;
+    display: block;
+    font-size: 0.7em;
+    height: 20px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
+    font-size: 0.85em;
+    content: "\f19d";
+    margin: 0 1%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+    display: inline;
+    width: auto;
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
+    color: #062351;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
+    width: 27.78%;
+    /*new*/
+    margin: 1% auto;
+    /*new*/
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
+    font-size: 0.7em;
+    letter-spacing: 0.01em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
+    padding: 0;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
+    display: block;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
+    font-size: 0.7em;
+    /*new*/
+    display: block;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
+    font-size: 0.75em;
+    margin-right: 1%;
   }
   #wrapper_container #main-content #photocontainer div .content {
     top: 10px;
@@ -4932,13 +4960,13 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container header h1#logo {
-    font-size: 1.65em;
+    font-size: 1.8em;
   }
   #wrapper_container header h1#logo-blog {
-    font-size: 1.65em;
+    font-size: 1.8em;
   }
   #wrapper_container header h2 {
-    font-size: 0.60em;
+    font-size: 0.70em;
   }
   #wrapper_container header nav {
     width: 70%;
@@ -4970,7 +4998,7 @@ a.nav-toggle {
     padding: 3.1% 0 0;
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.10em;
+    font-size: 1.2em;
     text-align: center;
   }
   #wrapper_container #main-content h2 {
@@ -5340,7 +5368,7 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.80em;
     letter-spacing: 0.09em;
-    line-height: 1.85em;
+    line-height: 1.9em;
   }
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
     width: 8%;
@@ -5431,13 +5459,13 @@ a.nav-toggle {
     width: 80%;
     float: none;
     margin: 3.5% auto;
+    height: 500px;
     /*Hero Slider*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont h1 {
     font-size: 1.2em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart {
-    width: 95%;
     display: block;
     margin: 4% auto;
     height: 400px;
@@ -5461,12 +5489,11 @@ a.nav-toggle {
     height: 360px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.75em;
+    font-size: 0.8em;
     text-align: center;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    margin: 0.8em auto;
-    height: 405px;
+    height: 84.524%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
@@ -5478,10 +5505,15 @@ a.nav-toggle {
     background-color: #fff;
     width: 100%;
   }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 1em;
+    text-indent: 5px;
+    font-weight: bold;
+  }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
     /*new*/
-    width: 35.59%;
+    width: 40.59%;
     /*new*/
     margin: 1% auto;
     /*new*/
@@ -5499,24 +5531,23 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    font-size: 0.75em;
+    font-size: 0.8em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.80em;
+    font-size: 0.95em;
     margin-right: 1%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+    font-size: 0.9em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
     font-weight: normal;
     font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
-    width: 21.78%;
+    width: 22.78%;
     /*new*/
     margin: 1% auto;
     /*new*/
@@ -5527,14 +5558,13 @@ a.nav-toggle {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.80em;
+    font-size: 0.75em;
     /*new*/
     display: block;
   }
@@ -5542,29 +5572,26 @@ a.nav-toggle {
     font-size: 0.80em;
     margin-right: 1%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 1em;
-    text-indent: 5px;
-    font-weight: bold;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
     padding: 1px;
     margin: 0;
     height: 100%;
     width: 28%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
-    font-size: 0.80em;
-    font-weight: bold;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
+    margin: 0 0 2% 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.80em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
+    font-size: 0.85em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
     font-size: 0.80em;
     line-height: 40px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
     line-height: 40px;
     font-size: 0.80em;
   }
@@ -5820,10 +5847,10 @@ a.nav-toggle {
 }
 @media only screen and (max-width: 48em) {
   #wrapper_container header h1#logo {
-    font-size: 1.65em;
+    font-size: 1.7em;
   }
   #wrapper_container header h1#logo-blog {
-    font-size: 1.65em;
+    font-size: 1.7em;
   }
   #wrapper_container header h2 {
     font-size: 0.65em;
@@ -5848,10 +5875,10 @@ a.nav-toggle {
     height: 35px;
   }
   #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
   #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
-    font-size: 0.65em;
+    font-size: 0.75em;
   }
   #wrapper_container #main-content {
     padding: 0;
@@ -5859,10 +5886,10 @@ a.nav-toggle {
   }
   #wrapper_container #main-content h1 {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.15em;
   }
   #wrapper_container #main-content h2 {
-    font-size: 1em;
+    font-size: 1.15em;
     padding: 0;
     letter-spacing: 0.1em;
     width: 99.5458%;
@@ -6232,8 +6259,8 @@ a.nav-toggle {
     font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 415px;
-    margin: 0.8em auto;
+    height: 84.524%;
+    margin: 0.6em auto;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
@@ -6244,6 +6271,7 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
     text-align: left;
     width: 100%;
+    height: 394px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
@@ -6258,7 +6286,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.75em;
   }
@@ -6266,19 +6293,18 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    font-size: 0.75em;
+    font-size: 0.8em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+    font-size: 0.9em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
     font-weight: normal;
     font-style: italic;
   }
@@ -6292,7 +6318,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figure.cert figcaption ul {
@@ -6310,17 +6335,17 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe h2 {
     font-size: 1.1em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul#list {
     margin: 0;
     width: 28%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul li a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul#list li a {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul#list li a:hover {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask ul#list li:nth-of-type(7) a {
     line-height: 40px;
     font-size: 0.75em;
   }
@@ -6600,14 +6625,14 @@ a.nav-toggle {
     /*Mobile-Navigation*/
   }
   #wrapper_container header h1#logo {
-    font-size: 1.6em;
+    font-size: 1.7em;
     width: 100%;
     height: 40px;
     line-height: 40px;
     letter-spacing: 0.055em;
   }
   #wrapper_container header h1#logo-blog {
-    font-size: 1.6em;
+    font-size: 1.7em;
     height: 40px;
     line-height: 40px;
     letter-spacing: 0.055em;
@@ -6696,13 +6721,13 @@ a.nav-toggle {
   #wrapper_container #main-content h1 {
     margin: 0;
     width: 100%;
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
   }
   #wrapper_container #main-content h2 {
     margin: 0;
     width: 98%;
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content h3 {
     font-size: 0.95em;
@@ -6787,7 +6812,7 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
   #wrapper_container #main-content h3 {
     text-indent: 0;
@@ -7075,7 +7100,8 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     width: 100%;
-    font-size: 0.75em;
+    font-size: 0.8em;
+    line-height: 2em;
   }
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
     width: 11%;
@@ -7092,7 +7118,7 @@ a.nav-toggle {
     margin: 4.8% auto;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont {
-    height: 485px;
+    height: 500px;
     width: 100%;
     margin: 3.9% auto;
     display: block;
@@ -7104,6 +7130,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart {
     height: 380px;
+    margin: 5% auto;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li {
     height: 23.82000%;
@@ -7119,15 +7146,15 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
     bottom: -1.5em;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 410px;
-    margin: 2% auto;
+    margin: 1% auto;
     width: 98%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
-    width: 72%;
+    width: 71%;
     margin: 0 0 0 1%;
     overflow: hidden;
   }
@@ -7150,7 +7177,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.85em;
   }
@@ -7161,16 +7187,15 @@ a.nav-toggle {
     font-size: 0.75em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+    font-size: 0.95em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
     font-weight: normal;
     font-style: italic;
   }
@@ -7186,7 +7211,6 @@ a.nav-toggle {
     line-height: 30px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.85em;
   }
@@ -7194,41 +7218,35 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.8em;
+    font-size: 0.75em;
     /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.80em;
-    margin-right: 1%;
+    font-size: 0.85em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 1.1em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
     width: 27%;
     margin: 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
-    margin-bottom: 0;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.75em;
-    line-height: 40px;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
     font-size: 0.80em;
-    line-height: 40px;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
-    line-height: 40px;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+    line-height: 44px;
     font-size: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
-    line-height: 40px;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+    line-height: 44px;
     font-size: 0.75em;
   }
   #wrapper_container #main-content blockquote {
@@ -7278,9 +7296,10 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 48.5%;
+    width: 45.5%;
     /*new*/
     height: 416px;
+    margin: 2%;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
   #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
@@ -7965,7 +7984,6 @@ a.nav-toggle {
     text-indent: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.85em;
   }
@@ -7976,7 +7994,6 @@ a.nav-toggle {
     font-size: 0.75em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
@@ -8000,7 +8017,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.85em;
   }
@@ -8008,7 +8024,7 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.8em;
+    font-size: 0.7em;
     /*new*/
     font-weight: 300;
     display: block;
@@ -8059,7 +8075,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 0.9em;
     margin-right: 1%;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel,
@@ -8070,7 +8086,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 48.5%;
+    width: 44.5%;
     /*new*/
     height: 392px;
   }
@@ -8321,18 +8337,18 @@ a.nav-toggle {
     /*Photocontainer*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1em;
+    font-size: 1.15em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content p {
-    line-height: 1.82em;
+    line-height: 1.9em;
     font-size: 0.75em;
   }
   #wrapper_container #main-content .social-1 {
@@ -8542,10 +8558,10 @@ a.nav-toggle {
     min-height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     margin: 0;
@@ -8577,7 +8593,7 @@ a.nav-toggle {
     height: 21.85000%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 420px;
+    height: 84.524%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
@@ -8598,7 +8614,6 @@ a.nav-toggle {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
@@ -8608,7 +8623,6 @@ a.nav-toggle {
     font-size: 0.80em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
@@ -8633,7 +8647,6 @@ a.nav-toggle {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
@@ -8642,9 +8655,7 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.75em;
     /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
@@ -8654,18 +8665,19 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 1.05em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
     font-size: 0.7em;
-    line-height: 40px;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
     font-size: 0.7em;
+    line-height: 44px;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -8693,7 +8705,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 48.5%;
+    width: 44.5%;
     /*new*/
     height: 392px;
   }
@@ -8992,11 +9004,11 @@ a.nav-toggle {
     font-size: 1.1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart {
-    height: 400px;
-    margin-bottom: 0;
+    height: 390px;
+    margin: 4% auto;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
-    height: 415px;
+    height: 414px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li {
     height: 21.90%;
@@ -9006,6 +9018,9 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
     font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
+    /*Hero Slider End*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.85em;
@@ -9020,23 +9035,21 @@ a.nav-toggle {
     /*new*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
-    font-size: 0.85em;
+    font-size: 0.75em;
     text-indent: 0;
     letter-spacing: 0.01em;
     line-height: 30px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    font-size: 0.75em;
+    font-size: 0.7em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
@@ -9056,12 +9069,11 @@ a.nav-toggle {
     /*new*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
-    font-size: 0.85em;
+    font-size: 0.75em;
     letter-spacing: 0.01em;
     line-height: 30px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
@@ -9069,15 +9081,32 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.75em;
-    /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
     margin-right: 1%;
     line-height: 1.5em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
+    margin: 0;
+    width: 28%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
+    height: 44px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
+    font-size: 0.70em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+    line-height: 44px;
+    font-size: 0.65em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+    font-size: 0.7em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -9093,8 +9122,8 @@ a.nav-toggle {
     height: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
-    padding: 10px 20px;
-    font-size: 0.8em;
+    padding: 8px 20px;
+    font-size: 0.75em;
     margin-right: 1%;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel,
@@ -9105,7 +9134,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 48.5%;
+    width: 44.5%;
     /*new*/
     height: 359px;
   }
@@ -9332,14 +9361,14 @@ a.nav-toggle {
     line-height: 1.2em;
   }
   #wrapper_container header h1#logo {
-    font-size: 1.4em;
+    font-size: 1.5em;
     height: 40px;
     line-height: 40px;
     text-align: center;
     width: 100%;
   }
   #wrapper_container header h1#logo-blog {
-    font-size: 1.4em;
+    font-size: 1.5em;
     height: 40px;
     text-align: center;
     line-height: 40px;
@@ -9386,21 +9415,21 @@ a.nav-toggle {
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.15em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.95em;
+    font-size: 1em;
     text-indent: 0;
     width: 100%;
     margin: 1em auto;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.90em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content p {
-    line-height: 1.92em;
+    line-height: 1.95em;
     font-size: 0.75em;
   }
   #wrapper_container #main-content ul.skills {
@@ -9623,14 +9652,15 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont {
     width: 99%;
-    height: 490px;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont h1 {
     font-size: 1.1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart {
+    margin: 5% auto;
     display: block;
+    height: 400px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
     width: 10%;
@@ -9641,7 +9671,7 @@ a.nav-toggle {
     height: 24.65%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
-    font-size: 0.75em;
+    font-size: 0.95em;
     text-align: left;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li:last-child {
@@ -9656,35 +9686,18 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.65em;
+    font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 400px;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
-    width: 24%;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
-    width: 100%;
-    color: #fff;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
-    font-size: 0.75em;
-    font-weight: normal;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
-    font-size: 0.75em;
-    font-weight: normal;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
-    font-size: 0.70em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
-    font-size: 0.70em;
+    margin: 2% auto;
+    height: 84.524%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
-    width: 73.5%;
+    width: 72.5%;
     overflow: hidden;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body {
+    width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.85em;
@@ -9712,7 +9725,6 @@ a.nav-toggle {
     font-size: 0.7em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
@@ -9742,16 +9754,35 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.75em;
+    font-size: 0.7em;
     /*new*/
-    font-weight: 300;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
     margin-right: 1%;
     line-height: 2.1em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
+    width: 26%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
+    width: 100%;
+    color: #fff;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
+    font-size: 0.75em;
+    font-weight: normal;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
+    font-size: 0.75em;
+    font-weight: normal;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+    font-size: 0.70em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+    font-size: 0.70em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -9767,7 +9798,7 @@ a.nav-toggle {
     height: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
-    padding: 10px;
+    padding: 8px 18px;
     font-size: 0.75em;
     margin-right: 0;
   }
@@ -10006,7 +10037,7 @@ a.nav-toggle {
     font-size: 8px;
   }
 }
-/*414px- iphone5 */
+/*414px- iphone6+ portrait */
 @media only screen and (max-width: 25.875em) {
   a.nav-toggle {
     display: block;
@@ -10096,18 +10127,18 @@ a.nav-toggle {
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 0.85em;
+    font-size: 1.05em;
     text-align: center;
     height: auto;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.80em;
+    font-size: 0.95em;
     text-indent: 0;
     width: 100%;
     margin: 1em auto;
   }
   #wrapper_container #main-content p {
-    line-height: 1.8em;
+    line-height: 1.9em;
     font-size: 0.7em;
   }
   #wrapper_container #main-content ul.skills {
@@ -10416,7 +10447,7 @@ a.nav-toggle {
     height: 24.65%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
-    font-size: 0.75em;
+    font-size: 0.9em;
     text-align: left;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li:last-child {
@@ -10431,13 +10462,13 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 400px;
+    height: 84.524%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
-    width: 73.5%;
+    width: 72.5%;
     overflow: hidden;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
@@ -10458,7 +10489,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.70em;
   }
@@ -10469,18 +10499,20 @@ a.nav-toggle {
     font-size: 0.65em;
     /*new*/
     display: block;
-    height: 25px;
+    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.75em;
     margin-right: 1%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
-    font-size: 0.65em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
+    line-height: 22px;
+    font-size: 0.95em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
     font-weight: normal;
     font-style: italic;
+    line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert img {
     width: 30.78%;
@@ -10493,7 +10525,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.70em;
   }
@@ -10501,38 +10532,41 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.75em;
+    font-size: 0.65em;
+    height: 22px;
     /*new*/
-    font-weight: 300;
+    line-height: 22px;
     display: block;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.65em;
     margin-right: 1%;
-    line-height: 2.8em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
     width: 24.9914%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     width: 100%;
+    height: 44px;
+    margin: 2.5% 0;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.7em;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
     font-size: 0.7em;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
     padding-top: 0;
-    font-size: 0.70em;
-    line-height: 20px;
+    font-size: 0.55em;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
     padding-top: 0;
-    line-height: 20px;
-    font-size: 0.75em;
+    line-height: 44px;
+    font-size: 0.55em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -10548,8 +10582,8 @@ a.nav-toggle {
     height: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
-    padding: 10px;
-    font-size: 0.8em;
+    padding: 8px 12px;
+    font-size: 0.7em;
     margin-right: 0;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel,
@@ -10560,9 +10594,10 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 70.5%;
+    width: 66.5%;
     height: 360px;
     margin: 5% auto;
+    display: block;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel:hover,
   #wrapper_container #main-content div#photocontainer div.content div#panel2:hover,
@@ -10771,7 +10806,7 @@ a.nav-toggle {
     font-size: 0.60em;
   }
 }
-/*I-phone 6 - 375px*/
+/*I-phone 6 portrait - 375px*/
 @media only screen and (max-width: 23.4375em) {
   a.nav-toggle {
     top: 0;
@@ -10847,7 +10882,7 @@ a.nav-toggle {
     /*end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 0.85em;
+    font-size: 1em;
     margin: 0;
     line-height: 30px;
   }
@@ -11131,7 +11166,7 @@ a.nav-toggle {
     min-height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
     font-size: 0.80em;
@@ -11177,36 +11212,9 @@ a.nav-toggle {
     font-size: 0.60em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 330px;
+    height: 84.524%;
     margin: 1% auto;
     width: 98%;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
-    height: 98%;
-    margin: 0;
-    width: 25%;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li {
-    height: 35px;
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
-    font-size: 0.75em;
-    line-height: 33px;
-    height: 33px;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
-    font-weight: normal;
-    font-size: 0.75em;
-    line-height: 33px;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
-    line-height: 16px;
-    font-size: 0.70em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
-    line-height: 16px;
-    font-size: 0.70em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     height: 322px;
@@ -11230,7 +11238,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     line-height: 20px;
   }
@@ -11238,9 +11245,9 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
+    height: 22px;
     font-size: 0.60em;
     /*new*/
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
@@ -11248,6 +11255,7 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink {
     font-size: 0.6em;
+    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks a.lyndalink:hover {
     font-weight: normal;
@@ -11264,7 +11272,6 @@ a.nav-toggle {
     letter-spacing: 0.01em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
-    margin: 0;
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
@@ -11272,7 +11279,8 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     font-size: 0.55em;
-    height: 20px;
+    height: 22px;
+    line-height: 22px;
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
@@ -11281,6 +11289,33 @@ a.nav-toggle {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.9em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
+    height: 98%;
+    margin: 0;
+    width: 25%;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
+    height: 34px;
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
+    font-size: 0.65em;
+    line-height: 34px;
+    height: 34px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
+    font-weight: normal;
+    font-size: 0.75em;
+    line-height: 34px;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+    line-height: 16px;
+    font-size: 0.70em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+    line-height: 16px;
+    font-size: 0.70em;
   }
   #wrapper_container #main-content .webskills {
     padding: 3.2% 0;
@@ -11329,7 +11364,7 @@ a.nav-toggle {
     height: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
-    padding: 10px;
+    padding: 8px 15px;
     font-size: 0.7em;
     margin-right: 0;
   }
@@ -11600,7 +11635,7 @@ a.nav-toggle {
   #wrapper_container #main-content h1 {
     margin: 0;
     width: 100%;
-    font-size: 0.75em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content h2 {
     width: 100%;
@@ -11866,7 +11901,7 @@ a.nav-toggle {
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
     font-size: 0.80em;
@@ -11922,29 +11957,11 @@ a.nav-toggle {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     height: 335px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul {
-    width: 26.9%;
-    padding: 0;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a {
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li a:hover {
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a {
-    line-height: 15px;
-    font-size: 0.70em;
-  }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul li:nth-of-type(7) a:hover {
-    line-height: 15px;
-    font-size: 0.70em;
-  }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     width: 72%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.80em;
+    font-size: 0.90em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     float: none;
@@ -11962,27 +11979,25 @@ a.nav-toggle {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h4 {
-    margin: 0;
     padding: 0;
     font-size: 0.70em;
-    height: 20px;
-    line-height: 20px;
+    height: 25px;
+    line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    font-size: 0.6em;
+    font-size: 0.54em;
     /*new*/
     display: block;
-    height: 22px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.80em;
     margin-right: 1%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 0.82em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a.lyndalink:hover, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
     font-weight: normal;
@@ -11995,11 +12010,12 @@ a.nav-toggle {
     /*new*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
-    font-size: 0.6em;
+    font-size: 0.56em;
     height: 25px;
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h4 {
+    margin: 0 0 1% 0;
     font-size: 0.70em;
     height: 25px;
     line-height: 25px;
@@ -12008,10 +12024,28 @@ a.nav-toggle {
     display: block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
-    font-size: 0.60em;
+    font-size: 0.55em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
     font-size: 0.80em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list {
+    width: 27.5%;
+    padding: 0;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+    line-height: 15px;
+    font-size: 0.70em;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+    line-height: 15px;
+    font-size: 0.70em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
     top: 10px;
@@ -12027,8 +12061,8 @@ a.nav-toggle {
     height: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
-    padding: 10px;
-    font-size: 0.7em;
+    padding: 8px 10px;
+    font-size: 0.65em;
     margin-right: 0;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel,
@@ -12278,13 +12312,13 @@ a.nav-toggle {
   #wrapper_container #main-content h1 {
     margin: 0;
     width: 100%;
-    font-size: 0.75em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content h2 {
-    width: 99.5458%;
+    width: 100%;
     margin-left: 0;
     text-indent: 1%;
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content p {
     width: 100%;
@@ -12461,10 +12495,10 @@ a.nav-toggle {
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.75em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
-    font-size: 0.73em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     width: 100%;
@@ -12553,9 +12587,8 @@ a.nav-toggle {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
-    font-size: 0.54em;
+    font-size: 0.55em;
     /*new*/
-    height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before, #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.60em;
@@ -12606,8 +12639,8 @@ a.nav-toggle {
     height: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch ul li {
-    padding: 10px;
-    font-size: 0.7em;
+    padding: 8px 8px;
+    font-size: 0.6em;
     margin-right: 0;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel,
@@ -12618,7 +12651,7 @@ a.nav-toggle {
   #wrapper_container #main-content div#photocontainer div.content div#panel6,
   #wrapper_container #main-content div#photocontainer div.content div#panel7,
   #wrapper_container #main-content div#photocontainer div.content div#panel8 {
-    width: 76.5%;
+    width: 75.5%;
     height: 318px;
     margin: 9% auto;
     display: block;

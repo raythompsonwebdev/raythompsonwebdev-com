@@ -420,7 +420,7 @@ a.nav-toggle {
             letter-spacing: 0.05em;
             span {
                 height: 100%;
-                padding: 0;
+                padding: 0 0 0 0.2%;
                 margin: 0;
                 color: $color4;
                 text-align: left;
@@ -428,7 +428,7 @@ a.nav-toggle {
             }
             span:last-of-type {
                 height: 100%;
-                padding: 0;
+                padding: 0 0 0 0.2%;
                 margin: 0;
                 color: $color1;
                 display: inline-block;
@@ -446,14 +446,14 @@ a.nav-toggle {
             letter-spacing: 0.05em;
             span {
                 height: 100%;
-                padding: 0;
+                padding: 0 0 0 0.2%;
                 margin: 0;
                 color: $color4;
                 text-align: left;
             }
             span:last-of-type {
                 height: 100%;
-                padding: 0;
+                padding: 0 0 0 0.2%;
                 margin: 0;
                 color: $color1;
                 margin: 0 0.5%;
@@ -505,16 +505,8 @@ a.nav-toggle {
                         -webkit-flex-flow: row wrap; // you can also use column.
                         -ms-flex-flow: row wrap;
                         flex-flow: row wrap;
-                        //-webkit-justify-content: space-around;
-                        //-ms-flex-pack: justify;//microsoft uses flex pack which uses justify instead of space-around or space-between.main axis
-                        //justify-content: space-around;
-                        -webkit-align-items: stretch; // you can use baseline, stretch, centre,flex-end, flex-start.cross-axis
-                        -ms-flex-align: stretch;
-                        align-items: stretch;
-                        //align-content works on the line items are on. not individual items justify-content
-                        //-webkit-align-content: space-around;// you can use baseline, stretch, centre,flex-end, flex-start.
-                        //-ms-flex-line-pack: distribute;//ms uses distribute instead of space around.
-                        //align-content: space-around;
+                                           
+                       
                         .menu-item {
                             width: 19%;
                             float: left;
@@ -523,12 +515,13 @@ a.nav-toggle {
                             margin: 0 0.5%;
                             padding: 0;
                             text-align: center;
-                            //-ms-flex-wrap:wrap;
-                            //-webkit-flex-wrap:wrap;
-                            //flex-wrap:wrap;
-                            //-webkit-align-self: flex-start;// you can use baseline, stretch, centre,flex-end, flex-start.
-                            //-ms-flex-item-align: start;//microsoft uses just start rather than flex-start;
-                            //align-self: flex-start;
+                            -webkit-flex: 1 1 auto;
+                            -ms-flex: 1 1 auto;
+                            flex: 1 1 auto;
+                            -webkit-align-items: center;
+                            -ms-flex-pack: center;
+                            align-items: center;
+                            
                             a {
                                 background-color: $color2;
                                 font-family: ($FontStyle);
@@ -746,7 +739,16 @@ a.nav-toggle {
             -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+            -webkit-justify-content: space-around;
+	        -ms-flex-pack: justify;
+	        justify-content:space-around;
+            
             .side-bar-box {
+                -webkit-flex: 1 1 auto;
+	            -ms-flex: 1 1 auto;
+	            flex: 1 1 auto;
+                
+                
                 h2 {
                     width: 100%;
                     height: 40px;
@@ -1790,7 +1792,7 @@ a.nav-toggle {
             .prof_cont {
                 width: 50%;
                 /*new*/
-                height: auto;
+                height: 500px;
                 background-color: $color4;
                 margin: 0;
                 display: inline-block;
@@ -1882,7 +1884,7 @@ a.nav-toggle {
                             position: relative;
                             .bar {
                                 display: block;
-                                width: 96%;
+                                width: 97%;
                                 margin-left: 0;
                                 background: $color1;
                                 position: absolute;
@@ -1920,7 +1922,7 @@ a.nav-toggle {
                     .mask {
                         float: left;
                         width: 71%;
-                        height: 371px;
+                        height: 390px;
                         /*new*/
                         margin: 0 0 0 1%;
                         overflow: hidden;
@@ -1975,11 +1977,15 @@ a.nav-toggle {
                                             text-align: center;
                                         }
                                         h4 {
-                                            margin: 0;
+                                            margin: 0 0 2% 0;
+                                            padding: 0;
+                                            background-color:$color1;
+                                            color:$color4;
                                             padding: 0;
                                             line-height: 30px;
                                             font-size: 0.9em;
                                             display: block;
+                                            text-indent:1%;
                                         }
                                         ul, ul#lyndalinks {
                                             width: 100%;
@@ -1990,7 +1996,7 @@ a.nav-toggle {
                                                 margin: 0;
                                                 font-weight: 300;
                                                 color: $color1;
-                                                display: block;
+                                                
                                                 font-size: 0.85em;
                                                 
                                                 height: 20px;
@@ -2003,7 +2009,7 @@ a.nav-toggle {
                                                     line-height: 1.5em;
                                                 }
                                                 a.lyndalink{ 
-                                                    display:inline; 
+                                                     
                                                     width:auto; 
                                                     font-size:0.9em; 
                                                     background-color:#fff;
@@ -2040,8 +2046,13 @@ a.nav-toggle {
                                             text-align: center;
                                         }
                                         h4 {
-                                            margin: 0;
+                                            margin: 0 0 2% 0;
                                             padding: 0;
+                                            background-color:$color1;
+                                            color:$color4;
+                                            display: block;
+                                            line-height: 30px;
+                                            text-indent:1%;
                                         }
                                         ul {
                                             width: 100%;
@@ -2054,10 +2065,10 @@ a.nav-toggle {
                                                 width: 100%;
                                                 /*new*/
                                                 margin: 0;
-                                                font-weight: 300;
+                                                font-weight: normal;
                                                 color: $color1;
                                                 display: block;
-                                                line-height: 25px;
+                                                line-height: 20px;
                                                 height: auto;
                                                 &:before {
                                                     font-family: "FontAwesome";
@@ -2075,7 +2086,7 @@ a.nav-toggle {
                             }
                         }
                     }
-                    ul {
+                    ul#list {
                         margin: 0;
                         list-style: outside none none;
                         float: left;
@@ -2084,11 +2095,12 @@ a.nav-toggle {
                         width: 28%;
                         padding: 0;
                         font-family: ($FontStyle);
+                         
                         li {
                             width: 100%;
-                            height: 41px;
+                            height: 44px;
                             display: block;
-                            margin-bottom: 1%;
+                            margin: 0 0 2% 0;
                             a {
                                 height: 100%;
                                 outline: none;
@@ -2102,7 +2114,7 @@ a.nav-toggle {
                                 background-color: $color3;
                                 color: $color1;
                                 font-size: 0.75em;
-                                line-height: 41px;
+                                line-height: 44px;
                                 @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                             }
                             a:hover {
@@ -2159,13 +2171,20 @@ a.nav-toggle {
         height: auto;
         font-family: ($FontStyle);
         margin: auto;
-        display: flex;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: center;
-        justify-content: center;
+        display:-webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+        -webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+        -webkit-justify-content: space-around;
+	-ms-flex-pack: justify;
+	justify-content:space-around;
+	-webkit-align-content: space-around;
+	-ms-flex-line-pack: distribute;
+	align-content: space-around;
+        
+       
         div.content {
             clear: both;
             position: relative;
@@ -2214,9 +2233,11 @@ a.nav-toggle {
                 top: 2px;
                 overflow: hidden;
                 width: 23.6%;
-                /*new*/
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
                 display: inline-block;
-                margin: 0 1.1% 1.75% 0;
+                margin: 0.5%;
                 z-index: 4;
                 height: 390px;
                 /*new*/
@@ -2538,8 +2559,8 @@ a.nav-toggle {
 
 
 @media only screen and (max-width: 1920px) {
-    #wrapper_container{
-        width: 80%;
+    #wrapper_conainer{
+        width: 75%;
     }
 }
 
@@ -2552,7 +2573,7 @@ a.nav-toggle {
     
 }
 
-//1024px
+//1024px ipad
 @media only screen and (max-width: 64em) {
     .fixed-side-social-container {
         display: none;
@@ -3062,16 +3083,18 @@ a.nav-toggle {
                     }
                 }
                 .prof_cont {
-                    height: auto;
+                    height: 500px;
                     width: 49%;
-                    background-color: $color4;
+                    
                     margin: 0.5%;
                     display: inline-block;
                     h1 {
                         font-size: 1.15em;
                     }
                     #chart {
+                        margin: 6% auto;
                         height: 385px;
+                        width: 96%;
                         #numbers {
                             height: 365px;
                             li {
@@ -3097,12 +3120,13 @@ a.nav-toggle {
                         }
                     }
                     .hero-slider {
-                        margin: 0.3em auto;
-                        width: 95%;
-                        height: 394px;
+                        
+                        width: 96%;
+                        
                         .mask {
                             float: left;
                             width: 71%;
+                            height: 385px;
                             overflow: hidden;
                             div.slider-body {
                                 .panel {
@@ -3110,8 +3134,8 @@ a.nav-toggle {
                                     background-color: $color4;
                                     width: 100%;
                                     h2 {
-                                        font-size: 0.9em;
-                                        text-indent: 5px;
+                                        font-size: 1em;
+                                        
                                     }
                                     h3 {
                                         font-size: 0.80em;
@@ -3120,7 +3144,7 @@ a.nav-toggle {
                                         img {
                                             float: none;
                                             /*new*/
-                                            width: 35.59%;
+                                            width: 40.59%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -3131,14 +3155,14 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                                 font-size: 0.7em;
                                             }
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.7em;
+                                                    font-size: 0.75em;
                                                     /*new*/
                                                     display: block;
                                                     height: 20px;
@@ -3163,7 +3187,7 @@ a.nav-toggle {
                                     }
                                     figure.cert {
                                         img {
-                                            width: 21.78%;
+                                            width: 28.78%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -3174,22 +3198,21 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
-                                                font-size: 0.7em;
+                                                font-size: 0.8em;
                                             }
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.70em;
                                                     /*new*/
-                                                    font-weight: 300;
                                                     display: block;
-                                                    line-height: 1.5em;
+                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
-                                                        line-height: 2.4em;
+                                                        
                                                     }
                                                 }
                                             }
@@ -3198,18 +3221,19 @@ a.nav-toggle {
                                     ul {
                                         display: block;
                                         li {
-                                            line-height: 1.8em;
+                                            
                                             
                                         }
                                     }
                                 }
                             }
                         }
-                        ul {
+                        ul#list {
                             width: 28%;
                             margin: 0;
                             li {
-                                height: 42px;
+                                height: 44px;
+                                margin:0 0 2.5% 0;
                                 a {
                                     font-size: 0.70em;
                                 }
@@ -3256,7 +3280,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 31.5%;
+                        width: 23.5%;
                         /*new*/
                         &:hover {
                             cursor: pointer;
@@ -3278,12 +3302,12 @@ a.nav-toggle {
                                 padding: 1% 5%;
                                 z-index: 10;
                                 h1 {
-                                    font-size: 0.9em;
+                                    font-size: 0.85em;
                                     line-height: 25px;
                                     height: 25px;
                                 }
                                 p {
-                                    font-size: 0.85em;
+                                    font-size: 0.80em;
                                     margin: 1% 0;
                                     line-height: 1.6em;
                                     span.fa-desktop,
@@ -3308,7 +3332,7 @@ a.nav-toggle {
                                         height: 30px;
                                         width: 49%;
                                         letter-spacing: 0.1em;
-                                        font-size: 0.80em;
+                                        font-size: 0.75em;
                                         line-height: 30px;
                                         padding: 0%;
                                         margin: 1% 0 1% 1%;
@@ -3399,13 +3423,13 @@ a.nav-toggle {
     #wrapper_container {
         header {
             h1#logo {
-                font-size: 1.8em;
+                font-size: 1.85em;
             }
             h1#logo-blog {
-                font-size: 1.8em;
+                font-size: 1.85em;
             }
             h2 {
-                font-size: 0.65em;
+                font-size: 0.75em;
                 margin: 0;
             }
             nav {
@@ -3437,12 +3461,12 @@ a.nav-toggle {
         #main-content {
             padding: 2.5% 0 0;
             h1 {
-                font-size: 1.15em;
+                font-size: 1.2em;
                 height: 40px;
                 line-height: 40px;
             }
             h2 {
-                font-size: 1.1em;
+                font-size: 1.5em;
             }
             h3 {
                 font-size: 1em;
@@ -3473,220 +3497,7 @@ a.nav-toggle {
                     }
                 }
             }
-            .frontpage_container {
-                height: auto;
-                .text-box {
-                    width: 49%;
-                    h1 {
-                        font-size: 0.90em;
-                        height: auto;
-                    }
-                    p {
-                        font-size: 0.75em;
-                        letter-spacing: 0.08em;
-                        line-height: 1.7em;
-                    }
-                    .introimg {
-                        width: 18%;
-                    }
-                    hr {
-                        background-color: $color2;
-                        height: 1px;
-                        margin: 0.8% auto;
-                        width: 40%;
-                    }
-                    .webskills {
-                        margin: 0;
-                        padding: 3% 0;
-                        li {
-                            font-size: 0.70em;
-                            display: block;
-                            line-height: 1.5em;
-                        }
-                        li#fa-desktop {
-                            display: block;
-                            height: 100%;
-                            font-size: 0.80em;
-                            line-height: 35px;
-                        }
-                        li#fa-desktop::before {
-                            padding: 1.5%;
-                            line-height: 1.5em;
-                        }
-                        li#fa-wordpress {
-                            font-size: 0.80em;
-                            line-height: 35px;
-                        }
-                        li#fa-wordpress::before {
-                            padding: 1.5%;
-                            line-height: 1.5em;
-                        }
-                        li#fa-mobile {
-                            display: block;
-                            height: 100%;
-                            font-size: 0.80em;
-                            line-height: 35px;
-                        }
-                        li#fa-mobile::before {
-                            padding: 1.5%;
-                            font-size: 1.2em;
-                            line-height: 1.5em;
-                        }
-                        li a {
-                            width: 100%;
-                        }
-                        li a:hover {
-                            width: 100%;
-                            color: $color4;
-                        }
-                    }
-                }
-                .svg-image-container {
-                    margin: 0;
-                    height: auto;
-                    .imagebox {
-                        a {
-                            font-size: 0.75em;
-                            font-weight: normal;
-                            width: 35%;
-                            &:hover {
-                                font-size: 0.75em;
-                                font-weight: bold;
-                            }
-                        }
-                        .box {
-                            .slide-caption p {
-                                font-size: 0.80em;
-                            }
-                        }
-                    }
-                }
-                .prof_cont {
-                    height: auto;
-                    h1 {
-                        font-size: 1.05em;
-                    }
-                    #chart {
-                        width: 97%;
-                        margin: 5% auto;
-                        height: 370px;
-                        #bars {
-                            li {
-                                height: 345px;
-                                span {
-                                    font-size: 0.70em;
-                                    text-align: center;
-                                }
-                            }
-                        }
-                        #numbers {
-                            li {
-                                height: 23.58%;
-                                span {
-                                    font-size: 0.75em;
-                                }
-                            }
-                        }
-                    }
-                    .hero-slider {
-                        margin: 0.6em auto;
-                        ul {
-                            li {
-                                a {
-                                    font-size: 0.8em;
-                                }
-                            }
-                            li:nth-of-type(7) {
-                                a {
-                                    line-height: 40px;
-                                    font-size: 0.7em;
-                                }
-                                a:hover {
-                                    line-height: 40px;
-                                    font-size: 0.7em;
-                                }
-                            }
-                        }
-                        .mask {
-                            div.slider-body {
-                                .panel {
-                                    figure.abobe {
-                                        img {
-                                            float: none;
-                                            /*new*/
-                                            width: 50.59%;
-                                            /*new*/
-                                            margin: 1% auto;
-                                            /*new*/
-                                        }
-                                        figcaption {
-                                            h3 {
-                                                font-size: 0.75em;
-                                                text-indent: 0;
-                                                letter-spacing: 0.01em;
-                                            }
-                                            h4 {
-                                                margin: 0;
-                                                padding: 0;
-                                            }
-                                            ul {
-                                                width: 100%;
-                                                li {
-                                                    font-size: 0.7em;
-                                                    /*new*/
-                                                    display: block;
-                                                    
-                                                    &:before {
-                                                        font-size: 0.75em;
-                                                        margin-right: 1%;
-                                                        
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    figure.cert {
-                                        img {
-                                            width: 30.78%;
-                                            /*new*/
-                                            margin: 1% auto;
-                                            /*new*/
-                                        }
-                                        figcaption {
-                                            h3 {
-                                                font-size: 0.7em;
-                                                letter-spacing: 0.01em;
-                                            }
-                                            h4 {
-                                                margin: 0;
-                                                padding: 0;
-                                            }
-                                            ul {
-                                                display: block;
-                                                li {
-                                                    font-size: 0.7em;
-                                                    /*new*/
-                                                    font-weight: 300;
-                                                    display: block;
-                                                    line-height: 1.5em;
-                                                    &:before {
-                                                        font-size: 0.75em;
-                                                        margin-right: 1%;
-                                                        line-height: 2.4em;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                    h2 {
-                                        font-size: 0.9em;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            
             #side-bar {
                 h2 {
                     font-size: 1.05em;
@@ -3963,6 +3774,245 @@ a.nav-toggle {
                     }
                 }
             }
+            
+            .frontpage_container {
+                height: auto;
+                .text-box {
+                    width: 49%;
+                    h1 {
+                        font-size: 0.90em;
+                        height: auto;
+                    }
+                    p {
+                        font-size: 0.75em;
+                        letter-spacing: 0.08em;
+                        line-height: 1.9em;
+                    }
+                    .introimg {
+                        width: 18%;
+                    }
+                    hr {
+                        background-color: $color2;
+                        height: 1px;
+                        margin: 0.8% auto;
+                        width: 40%;
+                    }
+                    .webskills {
+                        margin: 0;
+                        padding: 3% 0;
+                        li {
+                            font-size: 0.70em;
+                            display: block;
+                            line-height: 1.5em;
+                        }
+                        li#fa-desktop {
+                            display: block;
+                            height: 100%;
+                            font-size: 0.80em;
+                            line-height: 35px;
+                        }
+                        li#fa-desktop::before {
+                            padding: 1.5%;
+                            line-height: 1.5em;
+                        }
+                        li#fa-wordpress {
+                            font-size: 0.80em;
+                            line-height: 35px;
+                        }
+                        li#fa-wordpress::before {
+                            padding: 1.5%;
+                            line-height: 1.5em;
+                        }
+                        li#fa-mobile {
+                            display: block;
+                            height: 100%;
+                            font-size: 0.80em;
+                            line-height: 35px;
+                        }
+                        li#fa-mobile::before {
+                            padding: 1.5%;
+                            font-size: 1.2em;
+                            line-height: 1.5em;
+                        }
+                        li a {
+                            width: 100%;
+                        }
+                        li a:hover {
+                            width: 100%;
+                            color: $color4;
+                        }
+                    }
+                }
+                .svg-image-container {
+                    margin: 0;
+                    height: auto;
+                    .imagebox {
+                        a {
+                            font-size: 0.75em;
+                            font-weight: normal;
+                            width: 35%;
+                            &:hover {
+                                font-size: 0.75em;
+                                font-weight: bold;
+                            }
+                        }
+                        .box {
+                            .slide-caption p {
+                                font-size: 0.80em;
+                            }
+                        }
+                    }
+                }
+                .prof_cont {
+                    height: 500px;
+                    h1 {
+                        font-size: 1.05em;
+                    }
+                    #chart {
+                        width: 97%;
+                        margin: 8% auto;
+                        height: 370px;
+                        #bars {
+                            li {
+                                height: 345px;
+                                span {
+                                    font-size: 0.70em;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        #numbers {
+                            li {
+                                height: 23.58%;
+                                span {
+                                    font-size: 0.75em;
+                                }
+                            }
+                        }
+                    }
+                    .hero-slider {
+                        margin: 0.8em auto;
+                        width: 96%;
+                        height: 84.524%;
+                        
+                        ul#list {
+                            li {
+                                a {
+                                    font-size: 0.7em;
+                                    &:hover{font-size: 0.75em;}
+                                }
+                            }
+                            li:nth-of-type(7) {
+                                a {
+                                    line-height: 40px;
+                                    font-size: 0.7em;
+                                }
+                                a:hover {
+                                    line-height: 40px;
+                                    font-size: 0.7em;
+                                }
+                            }
+                        }
+                        
+                        .mask {
+                            div.slider-body {
+                                .panel {
+                                    h2 {
+                                        font-size: 0.9em;
+                                    }
+                                    figure.abobe {
+                                        img {
+                                            float: none;
+                                            /*new*/
+                                            width: 40.59%;
+                                            /*new*/
+                                            margin: 1% auto;
+                                            /*new*/
+                                        }
+                                        figcaption {
+                                            h3 {
+                                                font-size: 0.75em;
+                                                text-indent: 0;
+                                                letter-spacing: 0.01em;
+                                            }
+                                            h4 {
+                                                
+                                                padding: 0;
+                                            }
+                                            ul, ul#lyndalinks {
+                                                width: 100%;
+                                                li {
+                                                    /*new*/
+                                                    width: 100%;
+                                                    /*new*/
+                                                    margin: 0;
+                                                    
+                                                    display: block;
+                                                    font-size: 0.7em;
+
+                                                    height: 20px;
+                                                    &:before {
+                                                        
+                                                        font-size: 0.85em;
+                                                        
+                                                        content: "\f19d";
+                                                        margin: 0 1%;
+                                                       
+                                                    }
+                                                    a.lyndalink{ 
+                                                        display:inline; 
+                                                        width:auto; 
+                                                        font-size:0.8em; 
+                                                        
+                                                        &:hover{color: $color1;}
+                                                    }
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    figure.cert {
+                                        img {
+                                            width: 27.78%;
+                                            /*new*/
+                                            margin: 1% auto;
+                                            /*new*/
+                                        }
+                                        figcaption {
+                                            h3 {
+                                                font-size: 0.7em;
+                                                letter-spacing: 0.01em;
+                                            }
+                                            h4 {
+                                               
+                                                padding: 0;
+                                            }
+                                            ul {
+                                                display: block;
+                                                li {
+                                                    font-size: 0.7em;
+                                                    /*new*/
+                                                    
+                                                    display: block;
+                                                    
+                                                    &:before {
+                                                        font-size: 0.75em;
+                                                        margin-right: 1%;
+                                                        
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                 }
+                            }
+                        }
+                        
+                    }
+                   
+                }
+            }
+            
             #photocontainer {
                 div .content {
                     top: 10px;
@@ -4161,13 +4211,13 @@ a.nav-toggle {
         header {
             width: 100%;
             h1#logo {
-                font-size: 1.65em;
+                font-size: 1.8em;
             }
             h1#logo-blog {
-                font-size: 1.65em;
+                font-size: 1.8em;
             }
             h2 {
-                font-size: 0.60em;
+                font-size: 0.70em;
             }
             nav {
                 width: 70%;
@@ -4199,7 +4249,7 @@ a.nav-toggle {
         #main-content {
             padding: 3.1% 0 0;
             h1 {
-                font-size: 1.10em;
+                font-size: 1.2em;
                 text-align: center;
             }
             h2 {
@@ -4560,7 +4610,7 @@ a.nav-toggle {
                     p {
                         font-size: 0.80em;
                         letter-spacing: 0.09em;
-                        line-height: 1.85em;
+                        line-height: 1.9em;
                     }
                     .introimg {
                         width: 8%;
@@ -4656,11 +4706,12 @@ a.nav-toggle {
                     width: 80%;
                     float: none;
                     margin: 3.5% auto;
+                    height: 500px;
                     h1 {
                         font-size: 1.2em;
                     }
                     #chart {
-                        width: 95%;
+                        
                         display: block;
                         margin: 4% auto;
                         height: 400px;
@@ -4683,7 +4734,7 @@ a.nav-toggle {
                             li {
                                 height: 360px;
                                 span {
-                                    font-size: 0.75em;
+                                    font-size: 0.8em;
                                     text-align: center;
                                 }
                             }
@@ -4691,8 +4742,8 @@ a.nav-toggle {
                     }
                     /*Hero Slider*/
                     .hero-slider {
-                        margin: 0.8em auto;
-                        height: 405px;
+                       
+                        height: 84.524%;
                         .mask {
                             float: left;
                             width: 71%;
@@ -4702,11 +4753,17 @@ a.nav-toggle {
                                     text-align: left;
                                     background-color: $color4;
                                     width: 100%;
+                                    h2 {
+                                        font-size: 1em;
+                                        text-indent: 5px;
+                                        font-weight: bold;
+                                    }
+                                    
                                     figure.abobe {
                                         img {
                                             float: none;
                                             /*new*/
-                                            width: 35.59%;
+                                            width: 40.59%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -4725,31 +4782,32 @@ a.nav-toggle {
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.8em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
-                                                        font-size: 0.80em;
+                                                        font-size: 0.95em;
                                                         margin-right: 1%;
-                                                        
+                                                      
                                                     }
-                                                }
-                                                                 
-                                                a.lyndalink{ 
+                                                    a.lyndalink{ 
                                                          
-                                                        font-size:0.8em; 
+                                                        font-size:0.9em; 
                                                         
                                                         &:hover{ font-weight:normal; font-style:italic;}
-                                                    }
+                                                    }  
+                                                }
+                                                                 
+                                                
                                             }
                                           
                                         }
                                     }
                                     figure.cert {
                                         img {
-                                            width: 21.78%;
+                                            width: 22.78%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -4761,13 +4819,13 @@ a.nav-toggle {
                                                 line-height: 25px;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                             }
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.80em;
+                                                    font-size: 0.75em;
                                                     /*new*/
                                                     
                                                     display: block;
@@ -4781,25 +4839,22 @@ a.nav-toggle {
                                             }
                                         }
                                     }
-                                    h2 {
-                                        font-size: 1em;
-                                        text-indent: 5px;
-                                        font-weight: bold;
-                                    }
+                                    
                                 }
                             }
                         }
-                        ul {
+                        ul#list {
                             padding: 1px;
                             margin: 0;
                             height: 100%;
                             width: 28%;
                             li {
+                                margin: 0 0 2% 0;
                                 a {
                                     font-size: 0.80em;
-                                    font-weight: bold;
+                                    
                                     &:hover {
-                                        font-size: 0.80em;
+                                        font-size: 0.85em;
                                     }
                                 }
                             }
@@ -4967,15 +5022,15 @@ a.nav-toggle {
     }
 }
 
-//768px
+//768px ipad portrait
 @media only screen and (max-width: 48em) {
     #wrapper_container {
         header {
             h1#logo {
-                font-size: 1.65em;
+                font-size: 1.7em;
             }
             h1#logo-blog {
-                font-size: 1.65em;
+                font-size: 1.7em;
             }
             h2 {
                 font-size: 0.65em;
@@ -4995,10 +5050,10 @@ a.nav-toggle {
                                 width: 19%;
                                 height: 35px;
                                 a {
-                                    font-size: 0.65em;
+                                    font-size: 0.7em;
                                 }
                                 a:hover {
-                                    font-size: 0.65em;
+                                    font-size: 0.75em;
                                 }
                             }
                         }
@@ -5010,10 +5065,10 @@ a.nav-toggle {
             padding: 0;
             h1 {
                 margin: 0;
-                font-size: 1.1em;
+                font-size: 1.15em;
             }
             h2 {
-                font-size: 1em;
+                font-size: 1.15em;
                 padding: 0;
                 letter-spacing: 0.1em;
                 width: 99.5458%;
@@ -5356,6 +5411,7 @@ a.nav-toggle {
                 }
                 .prof_cont {
                     margin: 3.5% auto;
+                    
                     #chart {
                         #numbers {
                             font-size: 0.8em;
@@ -5382,8 +5438,8 @@ a.nav-toggle {
                     }
                     /*Hero Slider*/
                     .hero-slider {
-                        height: 415px;
-                        margin: 0.8em auto;
+                        height: 84.524%;
+                        margin: 0.6em auto;
                         .mask {
                             float: left;
                             width: 71%;
@@ -5392,6 +5448,7 @@ a.nav-toggle {
                                 .panel {
                                     text-align: left;
                                     width: 100%;
+                                    height: 394px;
                                     figure.abobe {
                                         img {
                                             float: none;
@@ -5407,7 +5464,7 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                                 font-size: 0.75em;
                                             }
@@ -5415,24 +5472,25 @@ a.nav-toggle {
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.8em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
                                                         
                                                     }
-                                                }
-                                                                 
-                                                a.lyndalink{ 
+                                                    a.lyndalink{ 
                                                          
-                                                        font-size:0.8em; 
+                                                        font-size:0.9em; 
                                                         
                                                         &:hover{ font-weight:normal; font-style:italic;}
                                                     }
+                                                }
+                                                                 
+                                                
                                             
                                             
                                         }
@@ -5449,7 +5507,7 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                            
                                                 padding: 0;
                                             }
                                             ul {
@@ -5474,7 +5532,7 @@ a.nav-toggle {
                                 }
                             }
                         }
-                        ul {
+                        ul#list {
                             margin: 0;
                             width: 28%;
                             li {
@@ -5633,7 +5691,7 @@ a.nav-toggle {
 }
 }
 
-//667px
+//667px iphone6 landscape
 @media only screen and (max-width: 41.6875em) {
     .fixed-side-social-container {
         display: none;
@@ -5670,14 +5728,14 @@ a.nav-toggle {
             width: 100%;
             height: 75px;
             h1#logo {
-                font-size: 1.6em;
+                font-size: 1.7em;
                 width: 100%;
                 height: 40px;
                 line-height: 40px;
                 letter-spacing: 0.055em;
             }
             h1#logo-blog {
-                font-size: 1.6em;
+                font-size: 1.7em;
                 height: 40px;
                 line-height: 40px;
                 letter-spacing: 0.055em;
@@ -5766,13 +5824,13 @@ a.nav-toggle {
             h1 {
                 margin: 0;
                 width: 100%;
-                font-size: 1em;
+                font-size: 1.1em;
                 text-align: center;
             }
             h2 {
                 margin: 0;
                 width: 98%;
-                font-size: 0.9em;
+                font-size: 1em;
             }
             h3 {
                 font-size: 0.95em;
@@ -5870,7 +5928,7 @@ a.nav-toggle {
                 width: 100%;
             }
             h1 {
-                font-size: 1.25em;
+                font-size: 1.15em;
             }
             h3 {
                 text-indent: 0;
@@ -6141,7 +6199,8 @@ a.nav-toggle {
                     }
                     p {
                         width: 100%;
-                        font-size: 0.75em;
+                        font-size: 0.8em;
+                        line-height: 2em;
                     }
                     .introimg {
                         width: 11%;
@@ -6161,7 +6220,7 @@ a.nav-toggle {
                     margin: 4.8% auto;
                 }
                 .prof_cont {
-                    height: 485px;
+                    height: 500px;
                     width: 100%;
                     margin: 3.9% auto;
                     display: block;
@@ -6170,6 +6229,7 @@ a.nav-toggle {
                     }
                     #chart {
                         height: 380px;
+                        margin: 5% auto;
                         #numbers {
                             li {
                                 height: 23.82000%;
@@ -6185,17 +6245,18 @@ a.nav-toggle {
                             }
                             li span {
                                 bottom: -1.5em;
+                                font-size: 0.85em;
                             }
                         }
                     }
                     /*Hero Slider*/
                     .hero-slider {
-                        height: 410px;
-                        margin: 2% auto;
+                        
+                        margin: 1% auto;
                         width: 98%;
                         .mask {
                             float: left;
-                            width: 72%;
+                            width: 71%;
                             margin: 0 0 0 1%;
                             overflow: hidden;
                             div.slider-body {
@@ -6219,7 +6280,7 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                                 font-size: 0.85em;
                                             }
@@ -6229,21 +6290,22 @@ a.nav-toggle {
                                                     font-size: 0.75em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
                                                         
                                                     }
-                                                }
-                                                                 
-                                                a.lyndalink{ 
+                                                     a.lyndalink{ 
                                                          
-                                                        font-size:0.8em; 
+                                                        font-size:0.95em; 
                                                         
                                                         &:hover{ font-weight:normal; font-style:italic;}
                                                     }
+                                                }
+                                                                 
+                                               
                                             }
                                         }
                                     }
@@ -6261,21 +6323,21 @@ a.nav-toggle {
                                                 line-height: 30px;
                                             }
                                             h4 {
-                                                margin: 0;
+                                               
                                                 padding: 0;
                                                 font-size: 0.85em;
                                             }
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.8em;
+                                                    font-size: 0.75em;
                                                     /*new*/
-                                                    font-weight: 300;
+                                                    
                                                     display: block;
-                                                    line-height: 1.5em;
+                                                    
                                                     &:before {
-                                                        font-size: 0.80em;
-                                                        margin-right: 1%;
+                                                        font-size: 0.85em;
+                                                        
                                                         line-height: 1.5em;
                                                     }
                                                 }
@@ -6288,26 +6350,26 @@ a.nav-toggle {
                                 }
                             }
                         }
-                        ul {
+                        ul#list {
                             width: 27%;
                             margin: 0;
                             li {
-                                margin-bottom: 0;
+                                
                                 a {
                                     font-size: 0.75em;
-                                    line-height: 40px;
+                                    line-height: 44px;
                                 }
                                 a:hover {
                                     font-size: 0.80em;
-                                    line-height: 40px;
+                                    line-height: 44px;
                                 }
                             }
                             li:nth-of-type(7) a {
-                                line-height: 40px;
+                                line-height: 44px;
                                 font-size: 0.7em;
                             }
                             li:nth-of-type(7) a:hover {
-                                line-height: 40px;
+                                line-height: 44px;
                                 font-size: 0.75em;
                             }
                         }
@@ -6359,9 +6421,10 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 48.5%;
+                        width: 45.5%;
                         /*new*/
                         height: 416px;
+                        margin: 2%;
                         &:hover {
                             cursor: pointer;
                         }
@@ -6981,7 +7044,7 @@ a.nav-toggle {
                                                 text-indent: 0;
                                             }
                                             h4 {
-                                                margin: 0;
+                                           
                                                 padding: 0;
                                                 font-size: 0.85em;
                                             }
@@ -6991,7 +7054,7 @@ a.nav-toggle {
                                                     font-size: 0.75em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
@@ -7022,14 +7085,14 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                                 font-size: 0.85em;
                                             }
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.8em;
+                                                    font-size: 0.7em;
                                                     /*new*/
                                                     font-weight: 300;
                                                     display: block;
@@ -7089,7 +7152,7 @@ a.nav-toggle {
                             height: auto;
                             li {
                                 padding: 10px 20px;
-                                font-size: 1em;
+                                font-size: 0.9em;
                                 margin-right: 1%;
                             }
                         }
@@ -7102,7 +7165,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 48.5%;
+                        width: 44.5%;
                         /*new*/
                         height: 392px;
                         &:hover {
@@ -7266,18 +7329,18 @@ a.nav-toggle {
         }
         #main-content {
             h1 {
-                font-size: 1em;
+                font-size: 1.15em;
                 height: 40px;
                 line-height: 40px;
             }
             h2 {
-                font-size: 0.95em;
+                font-size: 1em;
             }
             h3 {
-                font-size: 0.9em;
+                font-size: 0.95em;
             }
             p {
-                line-height: 1.82em;
+                line-height: 1.9em;
                 font-size: 0.75em;
             }
             .social-1 {
@@ -7479,10 +7542,10 @@ a.nav-toggle {
                 min-height: auto;
                 .text-box {
                     h1 {
-                        font-size: 0.95em;
+                        font-size: 1em;
                     }
                     h2 {
-                        font-size: 0.9em;
+                        font-size: 0.95em;
                     }
                     p {
                         margin: 0;
@@ -7518,7 +7581,7 @@ a.nav-toggle {
                         }
                     }
                     .hero-slider {
-                        height: 420px;
+                        height: 84.524%;
                         .mask {
                             float: left;
                             width: 71%;
@@ -7541,7 +7604,7 @@ a.nav-toggle {
                                                 line-height: 25px;
                                             }
                                             h4 {
-                                                margin: 0;
+                                               
                                                 padding: 0;
                                             }
                                             ul, ul#lyndalinks {
@@ -7550,7 +7613,7 @@ a.nav-toggle {
                                                     font-size: 0.80em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
@@ -7582,7 +7645,7 @@ a.nav-toggle {
                                                 line-height: 25px;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                             }
                                             ul {
@@ -7590,9 +7653,9 @@ a.nav-toggle {
                                                 li {
                                                     font-size: 0.75em;
                                                     /*new*/
-                                                    font-weight: 300;
+                                                    
                                                     display: block;
-                                                    line-height: 1.5em;
+                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
@@ -7608,7 +7671,7 @@ a.nav-toggle {
                                 }
                             }
                         }
-                        ul {
+                        ul#list {
                             li {
                                 a {
                                     font-size: 0.70em;
@@ -7619,9 +7682,10 @@ a.nav-toggle {
                             }
                             li:nth-of-type(7) a {
                                 font-size: 0.7em;
-                                line-height: 40px;
+                                line-height: 44px;
                                 &:hover {
                                     font-size: 0.7em;
+                                    line-height: 44px;
                                 }
                             }
                         }
@@ -7655,7 +7719,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 48.5%;
+                        width: 44.5%;
                         /*new*/
                         height: 392px;
                         &:hover {
@@ -7758,7 +7822,7 @@ a.nav-toggle {
     }
 }
 
-//536px
+//536px 
 @media only screen and (max-width: 33.5em) {
     a.nav-toggle {
         line-height: 50px;
@@ -7890,10 +7954,10 @@ a.nav-toggle {
                         font-size: 1.1em;
                     }
                     #chart {
-                        height: 400px;
-                        margin-bottom: 0;
+                        height: 390px;
+                        margin: 4% auto;
                         #numbers {
-                            height: 415px;
+                            height: 414px;
                             li {
                                 height: 21.90%;
                             }
@@ -7926,22 +7990,22 @@ a.nav-toggle {
                                         }
                                         figcaption {
                                             h3 {
-                                                font-size: 0.85em;
+                                                font-size: 0.75em;
                                                 text-indent: 0;
                                                 letter-spacing: 0.01em;
                                                 line-height: 30px;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                             }
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.7em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
@@ -7968,22 +8032,21 @@ a.nav-toggle {
                                         }
                                         figcaption {
                                             h3 {
-                                                font-size: 0.85em;
+                                                font-size: 0.75em;
                                                 letter-spacing: 0.01em;
                                                 line-height: 30px;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                             }
                                             ul {
                                                 display: block;
                                                 li {
                                                     font-size: 0.75em;
-                                                    /*new*/
-                                                    font-weight: 300;
+                                                    
                                                     display: block;
-                                                    line-height: 1.5em;
+                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
@@ -7996,6 +8059,25 @@ a.nav-toggle {
                                 }
                             }
                         }
+                        ul#list {
+                            margin: 0;
+                            width: 28%;
+                            li {
+                                height: 44px;
+                                a {
+                                    font-size: 0.70em;
+                                    &:hover {
+                                        font-size: 0.75em;
+                                    }
+                                }
+                            }
+                            li:nth-of-type(7) a {
+                                line-height: 44px;
+                                font-size: 0.65em;
+                                &:hover{font-size:0.7em;}
+                            }
+                        }
+                        /*Hero Slider End*/
                     }
                 }
             }
@@ -8012,8 +8094,8 @@ a.nav-toggle {
                             padding-left: 0;
                             height: auto;
                             li {
-                                padding: 10px 20px;
-                                font-size: 0.8em;
+                                padding: 8px 20px;
+                                font-size: 0.75em;
                                 margin-right: 1%;
                             }
                         }
@@ -8026,7 +8108,7 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 48.5%;
+                        width: 44.5%;
                         /*new*/
                         height: 359px;
                         &:hover {
@@ -8139,8 +8221,6 @@ a.nav-toggle {
     }
 }
 
-
-
 //480px
 @media only screen and (max-width: 30em)and (orientation: landscape) {
     .fixed-side-social-container {
@@ -8165,14 +8245,14 @@ a.nav-toggle {
                 line-height: 1.2em;
             }
             h1#logo {
-                font-size: 1.4em;
+                font-size: 1.5em;
                 height: 40px;
                 line-height: 40px;
                 text-align: center;
                 width: 100%;
             }
             h1#logo-blog {
-                font-size: 1.4em;
+                font-size: 1.5em;
                 height: 40px;
                 text-align: center;
                 line-height: 40px;
@@ -8222,21 +8302,21 @@ a.nav-toggle {
             padding: 2px;
             h1 {
                 width: 100%;
-                font-size: 1em;
+                font-size: 1.15em;
                 height: 40px;
                 line-height: 40px;
             }
             h2 {
-                font-size: 0.95em;
+                font-size: 1em;
                 text-indent: 0;
                 width: 100%;
                 margin: 1em auto;
             }
             h3 {
-                font-size: 0.90em;
+                font-size: 0.95em;
             }
             p {
-                line-height: 1.92em;
+                line-height: 1.95em;
                 font-size: 0.75em;
             }
             ul.skills {
@@ -8482,13 +8562,15 @@ a.nav-toggle {
                 }
                 .prof_cont {
                     width: 99%;
-                    height: 490px;
+                    
                     display: inline-block;
                     h1 {
                         font-size: 1.1em;
                     }
                     #chart {
+                        margin: 5% auto;
                         display: block;
+                        height: 400px;
                         #numbers {
                             width: 10%;
                             font-size: 0.8em;
@@ -8496,7 +8578,7 @@ a.nav-toggle {
                             li {
                                 height: 24.65%;
                                 span {
-                                    font-size: 0.75em;
+                                    font-size: 0.95em;
                                     text-align: left;
                                 }
                             }
@@ -8513,38 +8595,20 @@ a.nav-toggle {
                                     display: block;
                                 }
                                 span {
-                                    font-size: 0.65em;
+                                    font-size: 0.75em;
                                 }
                             }
                         }
                     }
                     .hero-slider {
-                        height: 400px;
-                        ul {
-                            width: 24%;
-                            li {
-                                width: 100%;
-                                color: $color4;
-                                a {
-                                    font-size: 0.75em;
-                                    font-weight: normal;
-                                }
-                                a:hover {
-                                    font-size: 0.75em;
-                                    font-weight: normal;
-                                }
-                            }
-                            li:nth-of-type(7) a {
-                                font-size: 0.70em;
-                            }
-                            li:nth-of-type(7) a:hover {
-                                font-size: 0.70em;
-                            }
-                        }
+                        margin: 2% auto;
+                        height: 84.524%;
+                        
                         .mask {
-                            width: 73.5%;
+                            width: 72.5%;
                             overflow: hidden;
                             div.slider-body {
+                                width: 100%;
                                 .panel {
                                     h2 {
                                         font-size: 0.85em;
@@ -8573,7 +8637,7 @@ a.nav-toggle {
                                                     font-size: 0.7em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
@@ -8609,11 +8673,11 @@ a.nav-toggle {
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.7em;
                                                     /*new*/
-                                                    font-weight: 300;
+                                                    
                                                     display: block;
-                                                    line-height: 1.5em;
+                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
@@ -8624,6 +8688,28 @@ a.nav-toggle {
                                         }
                                     }
                                 }
+                            }
+                        }
+                        
+                        ul#list {
+                            width: 26%;
+                            li {
+                                width: 100%;
+                                color: $color4;
+                                a {
+                                    font-size: 0.75em;
+                                    font-weight: normal;
+                                }
+                                a:hover {
+                                    font-size: 0.75em;
+                                    font-weight: normal;
+                                }
+                            }
+                            li:nth-of-type(7) a {
+                                font-size: 0.70em;
+                            }
+                            li:nth-of-type(7) a:hover {
+                                font-size: 0.70em;
                             }
                         }
                     }
@@ -8642,7 +8728,7 @@ a.nav-toggle {
                             padding-left: 0;
                             height: auto;
                             li {
-                                padding: 10px;
+                                padding: 8px 18px;
                                 font-size: 0.75em;
                                 margin-right: 0;
                             }
@@ -8800,7 +8886,7 @@ a.nav-toggle {
 }
 
 
-/*414px- iphone5 */
+/*414px- iphone6+ portrait */
 
 @media only screen and (max-width: 25.875em) {
     a.nav-toggle {
@@ -8886,18 +8972,18 @@ a.nav-toggle {
             padding: 2px;
             h1 {
                 width: 100%;
-                font-size: 0.85em;
+                font-size: 1.05em;
                 text-align: center;
                 height: auto;
             }
             h2 {
-                font-size: 0.80em;
+                font-size: 0.95em;
                 text-indent: 0;
                 width: 100%;
                 margin: 1em auto;
             }
             p {
-                line-height: 1.8em;
+                line-height: 1.9em;
                 font-size: 0.7em;
             }
             ul.skills {
@@ -9202,7 +9288,7 @@ a.nav-toggle {
                             li {
                                 height: 24.65%;
                                 span {
-                                    font-size: 0.75em;
+                                    font-size: 0.9em;
                                     text-align: left;
                                 }
                             }
@@ -9219,16 +9305,16 @@ a.nav-toggle {
                                     display: block;
                                 }
                                 span {
-                                    font-size: 0.65em;
+                                    font-size: 0.7em;
                                 }
                             }
                         }
                     }
                     
                     .hero-slider {
-                        height: 400px;
+                        height: 84.524%;
                         .mask {
-                            width: 73.5%;
+                            width: 72.5%;
                             overflow: hidden;
                             div.slider-body {
                                 .panel {
@@ -9252,7 +9338,7 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                                 font-size: 0.70em;
                                             }
@@ -9263,21 +9349,24 @@ a.nav-toggle {
                                                     font-size: 0.65em;
                                                     /*new*/
                                                     display: block;
-                                                    height: 25px;
+                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.75em;
                                                         margin-right: 1%;
                                                         
                                                     }
+                                                    a.lyndalink{ 
+                                                        line-height: 22px;
+                                                         
+                                                        font-size:0.95em; 
+                                                        
+                                                        &:hover{ font-weight:normal; font-style:italic; line-height: 25px;}
+                                                    }
                                                 }
                                                                  
-                                                a.lyndalink{ 
-                                                         
-                                                        font-size:0.65em; 
-                                                        
-                                                        &:hover{ font-weight:normal; font-style:italic;}
-                                                    }
+                                                
                                             }
                                         }
                                     }
@@ -9294,22 +9383,23 @@ a.nav-toggle {
                                                 letter-spacing: 0.01em;
                                             }
                                             h4 {
-                                                margin: 0;
+                                                
                                                 padding: 0;
                                                 font-size: 0.70em;
                                             }
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.65em;
+                                                    height: 22px;
                                                     /*new*/
-                                                    font-weight: 300;
+                                                    line-height: 22px;
                                                     display: block;
-                                                    line-height: 1.5em;
+                                                    
                                                     &:before {
                                                         font-size: 0.65em;
                                                         margin-right: 1%;
-                                                        line-height: 2.8em;
+                                                        
                                                     }
                                                 }
                                             }
@@ -9318,26 +9408,32 @@ a.nav-toggle {
                                 }
                             }
                         }
-                        ul {
+                        ul#list {
                             width: 24.9914%;
                             li {
                                 width: 100%;
+                                height: 44px;
+                                margin: 2.5% 0;
                                 a {
                                     font-size: 0.7em;
+                                    line-height:44px;
                                 }
                                 a:hover {
                                     font-size: 0.7em;
+                                    line-height:44px;
                                 }
                             }
                             li:nth-of-type(7) a {
                                 padding-top: 0;
                                 
-                                font-size: 0.70em;
-                                line-height:20px;
+                                font-size: 0.55em;
+                                line-height:44px;
+                                
                                 &:hover {
                                     padding-top: 0;
-                                    line-height:20px;
-                                    font-size: 0.75em;
+                                    line-height:44px;
+                                    
+                                    font-size: 0.55em;
                                 }
                             }
                         }
@@ -9346,9 +9442,11 @@ a.nav-toggle {
             }
             /*Photocontainer*/
             div#photocontainer {
+               
                 div.content {
                     top: 10px;
                     padding: 0;
+                    
                     nav.menuSwitch {
                         text-align: left;
                         margin: 1.3% 0;
@@ -9357,8 +9455,8 @@ a.nav-toggle {
                             padding-left: 0;
                             height: auto;
                             li {
-                                padding: 10px;
-                                font-size: 0.8em;
+                                padding: 8px 12px;
+                                font-size: 0.7em;
                                 margin-right: 0;
                             }
                         }
@@ -9371,11 +9469,12 @@ a.nav-toggle {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 70.5%;
+                        width: 66.5%;
                         height: 360px;
                         margin: 5% auto;
+                        display: block;
                         &:hover {
-                            cursor: pointer;
+                        cursor: pointer;
                         }
                         .text-btn {
                             &:hover {
@@ -9505,7 +9604,7 @@ a.nav-toggle {
 }
 
 
-/*I-phone 6 - 375px*/
+/*I-phone 6 portrait - 375px*/
 
 @media only screen and (max-width: 23.4375em) {
 a.nav-toggle {
@@ -9577,7 +9676,7 @@ a.nav-toggle.hide {
         #main-content {
             padding: 0;
             h1 {
-                font-size: 0.85em;
+                font-size: 1em;
                 margin: 0;
                 line-height: 30px;
             }
@@ -9860,7 +9959,7 @@ a.nav-toggle.hide {
                 min-height: auto;
                 .text-box {
                     h1 {
-                        font-size: 0.85em;
+                        font-size: 0.9em;
                     }
                     h2 {
                         font-size: 0.80em;
@@ -9908,42 +10007,11 @@ a.nav-toggle.hide {
                         }
                     }
                     .hero-slider {
-                        height: 330px;
+                        height: 84.524%;
                         margin: 1% auto;
                         width: 98%;
                                                
-                        ul {
-                            
-                            height: 98%;
-                            margin: 0;
-                            width: 25%;
-                            li {
-                                height:35px;
-                                font-size: 0.75em;
-                                a {
-                                    font-size: 0.75em;
-                                    line-height: 33px;
-                                    height: 33px;
-                                }
-                                a:hover {
-                                    font-weight: normal;
-                                    font-size: 0.75em;
-                                    line-height: 33px;
-                                }
-                            }
-                            li:nth-of-type(7) {
-                                a {
-                                    
-                                    line-height: 16px;
-                                    font-size: 0.70em;
-                                    &:hover {
-                                        
-                                        line-height: 16px;
-                                        font-size: 0.70em;
-                                    }
-                                }
-                            }
-                        }
+                        
                         .mask {
                             height: 322px;
                             overflow: hidden;
@@ -9967,7 +10035,7 @@ a.nav-toggle.hide {
                                             letter-spacing: 0.01em;
                                         }
                                         h4 {
-                                            margin: 0;
+                                           
                                             padding: 0;
                                             line-height: 20px;
                                         }
@@ -9975,10 +10043,11 @@ a.nav-toggle.hide {
                                         ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
+                                                    height: 22px;
                                                     font-size: 0.60em;
                                                     /*new*/
                                                     
-                                                    height: 22px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.80em;
@@ -9989,7 +10058,8 @@ a.nav-toggle.hide {
                                                                  
                                                 a.lyndalink{ 
                                                          
-                                                        font-size:0.6em; 
+                                                        font-size:0.6em;
+                                                        height: 22px;
                                                         
                                                         &:hover{ font-weight:normal; font-style:italic;}
                                                     }
@@ -10009,15 +10079,15 @@ a.nav-toggle.hide {
                                             letter-spacing: 0.01em;
                                         }
                                         h4 {
-                                            margin: 0;
+                                            
                                             padding: 0;
                                         }
                                         ul {
                                             display: block;
                                             li {
                                                 font-size: 0.55em;
-                                                height: 20px;
-                                                
+                                                height: 22px;
+                                                line-height: 22px;
                                                 display: block;
                                                 
                                                 &:before {
@@ -10035,7 +10105,38 @@ a.nav-toggle.hide {
                                 }
                             }
                         }
-                        
+                        ul#list {
+                            
+                            height: 98%;
+                            margin: 0;
+                            width: 25%;
+                            li {
+                                height:34px;
+                                font-size: 0.75em;
+                                a {
+                                    font-size: 0.65em;
+                                    line-height: 34px;
+                                    height: 34px;
+                                }
+                                a:hover {
+                                    font-weight: normal;
+                                    font-size: 0.75em;
+                                    line-height: 34px;
+                                }
+                            }
+                            li:nth-of-type(7) {
+                                a {
+                                    
+                                    line-height: 16px;
+                                    font-size: 0.70em;
+                                    &:hover {
+                                        
+                                        line-height: 16px;
+                                        font-size: 0.70em;
+                                    }
+                                }
+                            }
+                        }
                         
                     }
                 }
@@ -10088,7 +10189,7 @@ a.nav-toggle.hide {
                             padding-left: 0;
                             height: auto;
                             li {
-                                padding: 10px;
+                                padding: 8px 15px;
                                 font-size: 0.7em;
                                 margin-right: 0;
                             }
@@ -10273,7 +10374,7 @@ a.nav-toggle.hide {
             h1 {
                 margin: 0;
                 width: 100%;
-                font-size: 0.75em;
+                font-size: 0.95em;
                 
             }
             h2 {
@@ -10533,7 +10634,7 @@ a.nav-toggle.hide {
                     display: block;
                     padding: 0;
                     h1 {
-                        font-size: 0.85em;
+                        font-size: 0.95em;
                     }
                     h2 {
                         font-size: 0.80em;
@@ -10593,8 +10694,104 @@ a.nav-toggle.hide {
                     .hero-slider {
                         height: 335px;
                         
-                        ul {
-                            width: 26.9%;
+                        
+                        .mask {
+                            width: 72%;
+                            div.slider-body {
+                                .panel {
+                                    h2 {
+                                        
+                                        font-size: 0.90em;
+                                    }
+                                    figure.abobe {
+                                        img {
+                                            float: none;
+                                            /*new*/
+                                            width: 45.59%;
+                                            /*new*/
+                                            margin: 1% auto;
+                                            /*new*/
+                                        }
+                                        figcaption {
+                                            h3 {
+                                                font-size: 0.65em;
+                                                text-indent: 0;
+                                                letter-spacing: 0.01em;
+                                                height:25px;
+                                                line-height:25px;
+                                            }
+                                            h4 {
+                                               
+                                                padding: 0;
+                                                font-size: 0.70em;
+                                                height:25px;
+                                                line-height:25px;
+                                            }
+                                            
+                                            ul, ul#lyndalinks {
+                                                width: 100%;
+                                                li {
+                                                    font-size: 0.54em;
+                                                    /*new*/
+                                                    display: block;
+                                                    
+                                                   
+                                                    &:before {
+                                                        font-size: 0.80em;
+                                                        margin-right: 1%;
+                                                        
+                                                    }
+                                                    a.lyndalink{ 
+                                                         
+                                                        font-size:0.9em; 
+                                                        
+                                                        &:hover{ font-weight:normal; font-style:italic;}
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    figure.cert {
+                                        
+                                        img {
+                                            width: 25.78%;
+                                            /*new*/
+                                            margin: 1% auto;
+                                            /*new*/
+                                        }
+                                        figcaption {
+                                            h3 {
+                                                font-size: 0.56em;
+                                                
+                                                height:25px;
+                                                line-height:25px;
+                                            }
+                                            h4 {
+                                                margin: 0 0 1% 0;
+                                                font-size: 0.70em;
+                                                height:25px;
+                                                line-height:25px;
+                                                                                                
+
+                                            }
+                                            ul {
+                                                display: block;
+                                                li {
+                                                    font-size: 0.55em;
+                                                    
+                                                    &:before {
+                                                        font-size: 0.80em;
+                                                        
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        ul#list {
+                            width: 27.5%;
                             padding: 0;
                             li {
                                 a {
@@ -10619,103 +10816,6 @@ a.nav-toggle.hide {
                             
                             
                         }
-                        .mask {
-                            width: 72%;
-                            div.slider-body {
-                                .panel {
-                                    h2 {
-                                        
-                                        font-size: 0.80em;
-                                    }
-                                    figure.abobe {
-                                        img {
-                                            float: none;
-                                            /*new*/
-                                            width: 45.59%;
-                                            /*new*/
-                                            margin: 1% auto;
-                                            /*new*/
-                                        }
-                                        figcaption {
-                                            h3 {
-                                                font-size: 0.65em;
-                                                text-indent: 0;
-                                                letter-spacing: 0.01em;
-                                                height:25px;
-                                                line-height:25px;
-                                            }
-                                            h4 {
-                                                margin: 0;
-                                                padding: 0;
-                                                font-size: 0.70em;
-                                                height:20px;
-                                                line-height:20px;
-                                            }
-                                            
-                                            ul, ul#lyndalinks {
-                                                width: 100%;
-                                                li {
-                                                    font-size: 0.6em;
-                                                    /*new*/
-                                                    display: block;
-                                                    height: 22px;
-                                                   
-                                                    &:before {
-                                                        font-size: 0.80em;
-                                                        margin-right: 1%;
-                                                        
-                                                    }
-                                                    a.lyndalink{ 
-                                                         
-                                                        font-size:0.82em; 
-                                                        
-                                                        &:hover{ font-weight:normal; font-style:italic;}
-                                                    }
-                                                }
-                                                                 
-                                                
-                                            }
-                                        }
-                                    }
-                                    figure.cert {
-                                        
-                                        img {
-                                            width: 25.78%;
-                                            /*new*/
-                                            margin: 1% auto;
-                                            /*new*/
-                                        }
-                                        figcaption {
-                                            h3 {
-                                                font-size: 0.6em;
-                                                
-                                                height:25px;
-                                                line-height:25px;
-                                            }
-                                            h4 {
-                                                
-                                                font-size: 0.70em;
-                                                height:25px;
-                                                line-height:25px;
-                                                                                                
-
-                                            }
-                                            ul {
-                                                display: block;
-                                                li {
-                                                    font-size: 0.60em;
-                                                    
-                                                    &:before {
-                                                        font-size: 0.80em;
-                                                        
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -10732,8 +10832,8 @@ a.nav-toggle.hide {
                             padding-left: 0;
                             height: auto;
                             li {
-                                padding: 10px;
-                                font-size: 0.7em;
+                                padding: 8px 10px;
+                                font-size: 0.65em;
                                 margin-right: 0;
                             }
                         }
@@ -10902,13 +11002,13 @@ a.nav-toggle.hide {
             h1 {
                 margin: 0;
                 width: 100%;
-                font-size: 0.75em;
+                font-size: 0.95em;
             }
             h2 {
-                width: 99.5458%;
+                width: 100%;
                 margin-left: 0;
                 text-indent: 1%;
-                font-size: 0.7em;
+                font-size: 0.9em;
             }
             p {
                 width: 100%;
@@ -11117,10 +11217,10 @@ a.nav-toggle.hide {
                     display: block;
                     padding: 0;
                     h1 {
-                        font-size: 0.75em;
+                        font-size: 0.95em;
                     }
                     h2 {
-                        font-size: 0.73em;
+                        font-size: 0.9em;
                     }
                     p {
                         width: 100%;
@@ -11215,10 +11315,10 @@ a.nav-toggle.hide {
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.54em;
+                                                    font-size: 0.55em;
                                                     /*new*/
                                                     
-                                                    height: 25px;
+                                                    
                                                    
                                                     &:before {
                                                         font-size: 0.60em;
@@ -11288,8 +11388,8 @@ a.nav-toggle.hide {
                             padding-left: 0;
                             height: auto;
                             li {
-                                padding: 10px;
-                                font-size: 0.7em;
+                                padding: 8px 8px;
+                                font-size: 0.6em;
                                 margin-right: 0;
                             }
                         }
@@ -11302,7 +11402,7 @@ a.nav-toggle.hide {
                     div#panel6,
                     div#panel7,
                     div#panel8 {
-                        width: 76.5%;
+                        width: 75.5%;
                         height: 318px;
                         margin: 9% auto;
                         display: block;

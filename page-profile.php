@@ -89,7 +89,8 @@
             <h1>Web Development Training</h1>
 
             <article class="hero-slider"><!-- #hero-slider -->
-                <ul>
+                
+                <ul id="list">
                     <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Photoshop</a></li>
                     <li><a href="#" rel="#panel-2" title="Adobe Certificate in Communication">Dreamweaver</a></li>
                     <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level One" >Web Design L1</a></li>
@@ -100,6 +101,7 @@
                     <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Digital Marketing</a></li>
                     <li><a href="#" rel="#panel-9" title="Shaw Academy course certificate">Content Marketing</a></li>
                 </ul>
+                
 
                 <div class="mask"><!--mask-->
                     <div class="slider-body"><!--slider body -->
@@ -127,7 +129,7 @@
                                             
                                         </ul>
 
-                                    <div class="clearfix"></div>
+                            
                                     </figcaption>
                                
 
@@ -155,7 +157,7 @@
                                             <li>Evaluating and Maintaining a Site</li>
                                             
                                     </ul>
-                                    <div class="clearfix"></div>
+                                   
                                 </figcaption>
                             </figure>
                  
@@ -186,7 +188,7 @@
                                             <li>Organizing Content</li>
                                             <li>Using the Internet</li>
                                     </ul>
-                                    <div class="clearfix"></div>                          
+                                                            
                                 </figcaption>
                             </figure>
 
@@ -216,7 +218,7 @@
                                             <li>Improving Productivity using IT3</li>
                                          
                                     </ul>
-                                    <div class="clearfix"></div>
+                                   
                                 </figcaption>
                                 
                             </figure>
@@ -276,9 +278,9 @@
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/wordpress-building-themes-from-scratch-using-underscores">WordPress: Building Themes from Scratch Using Underscores</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
-                                         
+                                       <br/>  
                                     </ul>
-                                    <div class="clearfix"></div>         
+                                          
                                 </figcaption>
 
                             </figure>
@@ -389,7 +391,7 @@
                     </div><!--slider body end-->
                 </div><!-- .mask end --> 
 
-            <div class="clearfix"></div>    
+     
                 
             </article><!-- hero-slider end -->
             

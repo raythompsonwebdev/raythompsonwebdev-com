@@ -27,16 +27,16 @@ if ( have_posts() ) : ?>
 
 </header>
 
-<article class="entry group">
+
 
 <?php the_excerpt(); ?>
 
  <p class="postmetadata"><?php
   comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
 ?></p>
-</article>
 
-<br/>
+
+
 <?php endwhile; 
 else: ?>
 <p>Sorry, no posts matched your criteria.</p>
@@ -44,8 +44,8 @@ else: ?>
 <?php endif; ?>
 <!--end of Comment box-->
 </article>
-
 <?php get_sidebar(); ?>
+
 </section>
 
 

@@ -161,6 +161,8 @@ wp_enqueue_style( 'custom-fonts' );
 }
 add_action('wp_enqueue_scripts','mytheme_register_styles');
 
+
+
 //enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
     wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
@@ -174,10 +176,14 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 function my_scripts_own() {
 
 wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
+
+
 wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
 wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
 wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
 wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
+
+
 
 wp_enqueue_script('jquery');
 wp_enqueue_script( 'cookie' );

@@ -48,6 +48,7 @@ $dt = time();
 <?php add_action('wp_footer','add_google_analytics');//Google Analytics
 function add_google_analytics() {
 ?>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -64,7 +65,7 @@ function add_google_analytics() {
 <?php } ?>
 
 
-
+    
 <?php wp_footer(); ?> 
 
 </body>
