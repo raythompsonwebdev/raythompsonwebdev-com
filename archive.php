@@ -45,7 +45,7 @@
             
                     <?php while (have_posts()) : the_post(); ?>
 
-                <div class="entry-content">
+                <div class="entry">
                     
         <?php if (has_post_thumbnail()) { ?>
                             <figure class="featuredImage">

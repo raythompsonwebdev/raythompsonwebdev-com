@@ -12,8 +12,8 @@ if ( have_posts() ) : ?>
 // Display optional category description
  if ( category_description() ) : ?>
 <div class="archive-meta"><?php echo category_description(); ?></div>
-<?php endif; ?>
-	   
+
+    <?php endif; ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,7 +26,6 @@ if ( have_posts() ) : ?>
 	<span class="bylineauthor"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></span>
 
 </header>
-
 
 
 <?php the_excerpt(); ?>

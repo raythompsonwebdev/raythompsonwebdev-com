@@ -12,20 +12,33 @@ Template Name: Archives-pages
 <h1><?php the_title(); ?> List</h1>
 
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
+
             
-<article class="entry-content">
+<article class="entry">
  
 <h2><?php _e('Browse by Month:', 'raythompsonwebdev-com');?></h2>
     
 <ul><?php wp_get_archives('type=monthly'); ?></ul>
 
+</article>
+
+<article class="entry">
+
 <h2><?php _e('Browse by Category:', 'raythompwebdesign-com');?></h2>
     
 <ul><?php wp_list_categories('title_li='); ?></ul>
 
+</article>
+
+<article class="entry">
+
 <h2><?php _e('Browse by Tag:', 'raythompwebdesign-com');?></h2>
 
 <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+
+</article>
+
+<article class="entry">
 
 <h2><?php _e('Browse by Page', 'raythompwebdesign-com');?></h2>
 <ul><?php wp_list_pages('title_li='); ?></ul>
