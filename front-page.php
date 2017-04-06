@@ -39,9 +39,9 @@
 
 
             <ul class="webskills">
-                <li id="fa-desktop"></span>Domain Name Search and Hosting&#46;</li>
-                <li id="fa-wordpress"></span>Search Engine Optimisation&#46;</li>
-                <li id="fa-mobile"></span>Website Optimisation&#46;</li>
+                <li id="fa-desktop"><span></span>Domain Name Search and Hosting&#46;</li>
+                <li id="fa-wordpress"><span></span>Search Engine Optimisation&#46;</li>
+                <li id="fa-mobile"><span></span>Website Optimisation&#46;</li>
             </ul>
 
             <p>From idea to launch , I can help create a website with the focus on simplicity, usability & accessibility for all your users. Using clean semantic code and following latest web standards compliances, I can ensure any website or web application built can be found by most search engines,  viewed within in most modern browsers and have fast page loading for a great user experience.</p>

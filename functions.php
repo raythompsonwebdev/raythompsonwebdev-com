@@ -38,7 +38,8 @@ function wpb_add_google_fonts() {
 //Localization support
 load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages');
 
-add_editor_style( 'css/custom-editor-style.css','fonts/font-style.css');
+
+add_editor_style( array( 'css/custom-editor-style.css','fonts/font-style.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' ) );
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
@@ -76,9 +77,9 @@ $defaults = array(
 
 //register menus
 register_nav_menus(	array(
-								'main' => 'Main Nav',
-								'Secondary' => 'Secondary',
-								'mobile' => 'mobile' ));
+    'main' => 'Main Nav',
+    'Secondary' => 'Secondary',
+    'mobile' => 'mobile' ));
 }
 
 endif; // my_theme_setup end
@@ -142,6 +143,7 @@ function mytheme_register_styles(){
 
 //wp_register_style('minified', get_stylesheet_directory_uri() . '/style-min.css', false,'1.1','all' );
 wp_register_style('custom', get_stylesheet_directory_uri() . '/custom-editor-style.css', false,'1.1','all' );
+
 wp_register_style('responsive',get_stylesheet_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.css', false, true );
 wp_register_style('awesome',get_stylesheet_directory_uri() . '/fontawesome/css/font-awesome.min.css', false,'1.1','all' );
 wp_register_style('custom-fonts',get_stylesheet_directory_uri() . '/fonts/font-style.css', false,'1.1','all' );
@@ -165,9 +167,14 @@ add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 //enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
-    wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
-    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
+    
+    if( is_page_template('profile') or is_page_template('websites')){
+        
+        wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
+        wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+        wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
+    }
+        
 }
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
@@ -177,19 +184,20 @@ function my_scripts_own() {
 
 wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
 
+    if( is_page_template('profile') or is_page_template('websites')){
 
-wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
-wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
-wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
-wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
+        wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
+        wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
+        wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
+        wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
 
+        wp_enqueue_script('jquery');
+        wp_enqueue_script( 'cookie' );
+        wp_enqueue_script( 'easing' );
+        wp_enqueue_script( 'scrollto' );
+        wp_enqueue_script( 'master' );
 
-
-wp_enqueue_script('jquery');
-wp_enqueue_script( 'cookie' );
-wp_enqueue_script( 'easing' );
-wp_enqueue_script( 'scrollto' );
-wp_enqueue_script( 'master' );
+    }
 
 }
 
@@ -258,56 +266,56 @@ add_filter('the_excerpt', 'excerpt_read_more_link');
 
 /****Sidebar!******/
 if ( function_exists( 'register_sidebar' ) ) {
-	register_sidebar( array (
-	'name' => __( 'Primary Sidebar', 'raythompsonwebdev-com' ),
-	'id' => 'primary-widget-area',
-	'description' => __( 'The primary widget area', 'raythompsonwebdev-com' ),
-	'before_widget' => '<div class="widget">',
-	'after_widget' => "</div>",
-	'before_title' => '<h2 class="widget-title">',
-	'after_title' => '</h2>',
-	) );
+    register_sidebar( array (
+    'name' => __( 'Primary Sidebar', 'raythompsonwebdev-com' ),
+    'id' => 'primary-widget-area',
+    'description' => __( 'The primary widget area', 'raythompsonwebdev-com' ),
+    'before_widget' => '<div class="widget">',
+    'after_widget' => "</div>",
+    'before_title' => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+    ) );
 }
 
 
 //map area
 function map_widgets_init() {
-	register_sidebar( array(
-		'name' => 'map',
-		'id' => 'map',
-		'before_widget' => '<div class="social_media_container">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>',
-	) );
+    register_sidebar( array(
+        'name' => 'map',
+        'id' => 'map',
+        'before_widget' => '<div class="social_media_container">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'map_widgets_init' );
 
 
 //social media widget area
 function social_widgets_init() {
-	register_sidebar( array(
-	'name' => 'social',
-	'id' => 'social',
-	'before_widget' => '<div id="social">',
-	'after_widget' => '</div>',
-	'before_title' => '<h2>',
-	'after_title' => '</h2>',
-	) );
+    register_sidebar( array(
+    'name' => 'social',
+    'id' => 'social',
+    'before_widget' => '<div id="social">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'social_widgets_init' );
 
 
 //contact form area
 function contact_widgets_init() {
-register_sidebar( array(
-'name' => 'contact',
-'id' => 'contact',
-'before_widget' => '<div id="contactform">',
-'after_widget' => '</div>',
-'before_title' => '<h2>',
-'after_title' => '</h2>',
-) );
+    register_sidebar( array(
+    'name' => 'contact',
+    'id' => 'contact',
+    'before_widget' => '<div id="contactform">',
+    'after_widget' => '</div>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>',
+    ) );
 
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
@@ -338,7 +346,7 @@ if ( ! function_exists( 'popperscores_posted_on' ) ) :
 function popperscores_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  Updated: <time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,
@@ -394,7 +402,7 @@ function popperscores_index_posted_on() {
 
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  Updated: <time class="updated" datetime="%3$s">%4$s</time>';
 	}
 
 	$time_string = sprintf( $time_string,

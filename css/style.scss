@@ -111,6 +111,7 @@ img {
     max-width: 100%;
 }
 
+
 /*end of images*/
 
 
@@ -148,6 +149,7 @@ a {
         color: $color11;
     }
 }
+
 
 /*WordPress Image Classes*/
 
@@ -208,7 +210,7 @@ p {
     color: $color1;
     line-height: 1.5em;
     font-size: 1em;
-    font-weight: normal;
+    font-weight: 500;
     padding: 0;
     margin: 0;
 }
@@ -223,8 +225,6 @@ li {
     list-style: none;
     font-size: 1em;
     margin: 0;
-    padding:0;
-    list-style:none;
 }
 
 figure {
@@ -486,7 +486,10 @@ a.nav-toggle {
             width: 60%;
             float: none;
             margin: 2% auto;
-            
+            //position:absolute;
+            //z-index:999;
+            //left:38.7%;
+            //top: 0.5%;
             #innernav {
                 padding: 0;
                 margin: 0;
@@ -526,7 +529,6 @@ a.nav-toggle {
                             a {
                                 background-color: $color2;
                                 font-family: ($FontStyle);
-                                
                                 width: 100%;
                                 height: 100%;
                                 text-decoration: none;
@@ -536,7 +538,7 @@ a.nav-toggle {
                                 font-size: 0.80em;
                                 display: block;
                                 letter-spacing: 0.1em;
-                                font-weight: normal;
+                                font-weight: 100;
                                 &:link {
                                     background-color: $color2;
                                     color: $color1;
@@ -667,7 +669,7 @@ a.nav-toggle {
             padding: 0;
         }
         h1 {
-            font-size: 1.3em;
+            font-size: 1.2em;
             padding: 0;
             color: $color1;
             width: 100%;
@@ -702,54 +704,17 @@ a.nav-toggle {
             font-size: 0.90em;
             font-weight: normal;
             width: 100%;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             line-height: 1.9em;
             margin: 0 0 1%;
         }
         /* li{ margin: 0px auto;font-size: 1em;color: $color1;font-style: italic;width: 85%;}*/
         ul {
             list-style: none;
-            li a:hover {
-                color: $color4;
-            }
         }
-        ul.skills {
-            list-style: none;
-            font-family: ($FontStyle);
-            margin: 3% 0;
-            padding: 0;
-            width: 45%;
-            display: inline-block;
-            li {
-                width: 100%;
-                margin: 0;
-                font-size: 0.9em;
-                color: $color1;
-                font-style: italic;
-                height: 40px;
-                line-height: 40px;
-                &::before {
-                    font-family: 'FontAwesome';
-                    content: "\f0e0";
-                    font-style: normal;
-                    padding: 1.5%;
-                    font-size: 1.4em;
-                    line-height: 1.5em;
-                }
-                a {
-                    width: auto;
-                    display: inline-block;
-                    line-height: 40px;
-                    letter-spacing: 0.05em;
-                }
-                a:hover {
-                    width: 90%;
-                    color: $color4;
-                    line-height: 40px;
-                }
-            }
+        ul li a:hover {
+            color: $color4;
         }
-      
         hr {
             background-color: $color1;
             height: 1px;
@@ -891,13 +856,8 @@ a.nav-toggle {
                 outline: 0;
                 border: 0;
             }
-            .seperator {
-                display: block;
-                height: 1%;
-                clear: both;
-            }
             h1 {
-                font-size: 1.45em;
+                font-size: 1.35em;
                 margin: 0;
                 padding: 0;
                 letter-spacing: 0.05em;
@@ -928,27 +888,23 @@ a.nav-toggle {
                 text-indent: 0;
                 width: 100%;
                 text-align: left;
-                a {
-                    padding-left: 0;
-                    height: 100%;
-                }
             }
-            
+            h3 a {
+                padding-left: 0;
+                height: 100%;
+            }
             ul {
                 line-height: 1.5em;
                 text-indent: 0;
-                width: 80%;
-                margin: 1em auto;
+                width: 91%;
+                margin: 1% auto;
                 display: block;
-                list-style-type: disc;
                 li {
                     width: 100%;
                     margin: 0;
                     line-height: 35px;
                     display:block;
-                    font-size: 0.9em;
-                    font-style: italic;
-                    
+                    font-size: 0.85em;
                     
                     a {
                         width: 100%;
@@ -974,7 +930,11 @@ a.nav-toggle {
                     }
                 }
             }
-            
+            .seperator {
+                display: block;
+                height: 1%;
+                clear: both;
+            }
             p {
                 width: 100%;
                 margin: 0;
@@ -983,7 +943,7 @@ a.nav-toggle {
                 font-weight: 100;
                 line-height: 2.1em;
                 letter-spacing: 0.1em;
-                margin-bottom: 0.5em;
+                margin-bottom: 2%;
             }
             .thumb {
                 width: 58%;
@@ -1040,7 +1000,7 @@ a.nav-toggle {
                         height: auto;
                         width: 100%;
                         .author-avatar {
-                            width: 6%;
+                            width: 7%;
                             display: inline-block;
                             float: left;
                             margin: 0 0.5em 0 0;
@@ -1082,8 +1042,8 @@ a.nav-toggle {
                 width: 100%;
                 margin: 1% auto;
                 height: auto;
-                font-size: 1em;
-                display:inline-block;
+                font-size: 0.9em;
+                display:block;
                 
                 p {
                     margin: 0;
@@ -1408,7 +1368,7 @@ a.nav-toggle {
                         height: auto;
                         padding: 0;
                         img {
-                            width: 12%;
+                            width: 16%;
                             height: auto;
                             margin: 0;
                             display: inline-block;
@@ -2184,7 +2144,42 @@ a.nav-toggle {
             }
         }
     }
-    
+    ul.skills {
+        list-style: none;
+        font-family: ($FontStyle);
+        margin: 3% 0;
+        padding: 0;
+        width: 45%;
+        display: inline-block;
+        li {
+            width: 100%;
+            margin: 0;
+            font-size: 0.9em;
+            color: $color1;
+            font-style: italic;
+            height: 40px;
+            line-height: 40px;
+            &::before {
+                font-family: 'FontAwesome';
+                content: "\f0e0";
+                font-style: normal;
+                padding: 1.5%;
+                font-size: 1.4em;
+                line-height: 1.5em;
+            }
+            a {
+                width: auto;
+                display: inline-block;
+                line-height: 40px;
+                letter-spacing: 0.05em;
+            }
+            a:hover {
+                width: 90%;
+                color: $color4;
+                line-height: 40px;
+            }
+        }
+    }
     div#photocontainer {
         width: 100%;
         height: auto;
@@ -2788,7 +2783,7 @@ a.nav-toggle {
                     margin-left: 0;
                 }
                 p {
-                    font-size: 0.85em;
+                    font-size: 0.8em;
                 }
                 .postimg {
                     width: 24%;
@@ -2813,7 +2808,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 6%;
+                                width: 7%;
                                 display: inline-block;
                                 float: left;
                                 margin: 0 0.5em 0 0;
@@ -3606,7 +3601,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 6%;
+                                width: 7%;
                                 display: inline-block;
                                 float: left;
                                 margin: 0 0.5em 0 0;
@@ -4270,7 +4265,7 @@ a.nav-toggle {
         #main-content {
             padding: 3.1% 0 0;
             h1 {
-                font-size: 1.2em;
+                font-size: 1.15em;
                 text-align: center;
             }
             h2 {
@@ -4450,7 +4445,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 8%;
+                                width: 9%;
                                 margin: 0 0.5em 0 0;
                             }
                             .byline,
@@ -5086,10 +5081,10 @@ a.nav-toggle {
             padding: 0;
             h1 {
                 margin: 0;
-                font-size: 1.15em;
+                font-size: 1.05em;
             }
             h2 {
-                font-size: 1.15em;
+                font-size: 1.10em;
                 padding: 0;
                 letter-spacing: 0.1em;
                 width: 99.5458%;
@@ -5105,7 +5100,7 @@ a.nav-toggle {
                 form.searchform {
                     div {
                         label {
-                            font-size: 0.80em;
+                            font-size: 0.75em;
                         }
                         input[type="submit"] {
                             font-size: 0.80em;
@@ -5220,7 +5215,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 8%;
+                                width: 9%;
                                 margin: 0 0.5em 0 0;
                             }
                             .byline,
@@ -5950,7 +5945,7 @@ a.nav-toggle {
                 width: 100%;
             }
             h1 {
-                font-size: 1.15em;
+                font-size: 1.05em;
             }
             h3 {
                 text-indent: 0;
@@ -6011,7 +6006,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 8%;
+                                width: 9%;
                                 margin: 0 0.5em 0 0;
                             }
                             .byline,
@@ -6653,7 +6648,7 @@ a.nav-toggle {
             padding: 0;
             h1 {
                 width: 100%;
-                font-size: 1.1em;
+                font-size: 1em;
             }
             h2 {
                 text-indent: 0;
@@ -7352,7 +7347,7 @@ a.nav-toggle {
         }
         #main-content {
             h1 {
-                font-size: 1.15em;
+                font-size: 1em;
                 height: 40px;
                 line-height: 40px;
             }
@@ -7423,7 +7418,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 8%;
+                                width: 9%;
                                 margin: 0 0.5em 0 0;
                             }
                             .byline,
@@ -8325,7 +8320,7 @@ a.nav-toggle {
             padding: 2px;
             h1 {
                 width: 100%;
-                font-size: 1.15em;
+                font-size: 1em;
                 height: 40px;
                 line-height: 40px;
             }
@@ -8996,7 +8991,7 @@ a.nav-toggle {
             padding: 2px;
             h1 {
                 width: 100%;
-                font-size: 1.05em;
+                font-size: 0.9em;
                 text-align: center;
                 height: auto;
             }
@@ -9066,7 +9061,7 @@ a.nav-toggle {
             }
             .post {
                 h1 {
-                    font-size: 1em;
+                    font-size: 1.05em;
                     text-align: center;
                 }
                 h2 {
@@ -9125,7 +9120,7 @@ a.nav-toggle {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 18%;
+                                width: 21%;
                                 margin: 0 auto;
                                 float: none;
                                 display: block;
@@ -9154,6 +9149,7 @@ a.nav-toggle {
                 footer.byline {
                     .bylinecat {
                         line-height: 20px;
+                        font-size: 0.8em;
                         a {
                             font-size: 0.85em;
                         }
@@ -9712,7 +9708,7 @@ a.nav-toggle.hide {
         #main-content {
             padding: 0;
             h1 {
-                font-size: 1em;
+                font-size: 0.9em;
                 margin: 0;
                 line-height: 30px;
             }
@@ -9803,7 +9799,7 @@ a.nav-toggle.hide {
             }
             .post {
                 h1 {
-                    font-size: 0.9em;
+                    font-size: 1.1em;
                 }
                 h2 {
                     font-size: 0.9em;
@@ -9852,7 +9848,7 @@ a.nav-toggle.hide {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 21%;
+                                width: 25%;
                                 margin: 0 auto;
                                 float: none;
                                 display: block;
@@ -9868,6 +9864,7 @@ a.nav-toggle.hide {
                                 width: 100%;
                                 float: none;
                                 text-align: center;
+                                font-size: 1.05em;
                                 a {
                                     font-size: 0.85em;
                                 }
@@ -9886,10 +9883,10 @@ a.nav-toggle.hide {
                 }
                 .read_more {
                     font-size: 0.8em;
-                    width: 25.9652349%;
+                    width: 30.965%;
                     &:hover {
                         font-size: 0.85em;
-                        width: 25.9652349%;
+                        width: 30.965%;
                     }
                 }
                 div.sharedaddy {
@@ -10412,7 +10409,7 @@ a.nav-toggle.hide {
             h1 {
                 margin: 0;
                 width: 100%;
-                font-size: 0.95em;
+                font-size: 0.8em;
                 
             }
             h2 {
@@ -10506,7 +10503,7 @@ a.nav-toggle.hide {
             }
             .post {
                 h1 {
-                    font-size: 0.95em;
+                    font-size: 1em;
                     height: auto;
                 }
                 h2 {
@@ -10558,7 +10555,7 @@ a.nav-toggle.hide {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 21%;
+                                width: 25%;
                                 margin: 0 auto;
                                 float: none;
                                 display: block;
@@ -11040,13 +11037,13 @@ a.nav-toggle.hide {
             h1 {
                 margin: 0;
                 width: 100%;
-                font-size: 0.95em;
+                font-size: 0.75em;
             }
             h2 {
                 width: 100%;
                 margin-left: 0;
                 text-indent: 1%;
-                font-size: 0.9em;
+                font-size: 0.8em;
             }
             p {
                 width: 100%;
@@ -11153,7 +11150,7 @@ a.nav-toggle.hide {
                         }
                         .meta-content {
                             .author-avatar {
-                                width: 21%;
+                                width: 27%;
                                 display: block;
                                 float: none;
                                 margin: auto;
@@ -11171,8 +11168,8 @@ a.nav-toggle.hide {
                 footer.byline {
                     font-size: 0.80em;
                     p.right {
-                        width: 16%;
-                        font-size: 1.5em;
+                        width: 14%;
+                        font-size: 1.4em;
                     }
                 }
                 div.sharedaddy {
