@@ -13,18 +13,14 @@
     
     
     <article class="side-bar-box"> 
-        <h2>Tag Cloud</h2> 
-        <ul class="tagcloud">
-            
-            <?php wp_tag_cloud();?></ul>
+        <h2>Link</h2> 
+        
 
     </article>
     
     <article class="side-bar-box"> 
-
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar')) : ?>
-
-        <?php endif; ?>
+        <h2>Link</h2> 
+        
 
     </article>
 

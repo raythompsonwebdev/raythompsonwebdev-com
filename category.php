@@ -4,45 +4,76 @@
    	
 <section id="main-content" class="group" >
   <?php 
-// Check if there are any posts to display
-if ( have_posts() ) : ?>
+    // Check if there are any posts to display
+    if ( have_posts() ) : ?>
 
-<h1 class="archive-title">Category: <?php single_cat_title( '', true ); ?></h1>
+    <h1 class="archive-title">
+        Category: <?php single_cat_title( '', true ); ?>
+    </h1>
 <?php
 // Display optional category description
  if ( category_description() ) : ?>
+
 <div class="archive-meta"><?php echo category_description(); ?></div>
 
-    <?php endif; ?>
+<?php endif; ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<article class="post group"<?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+     
+    <h1>
+        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+    </h1>
 
-<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+    <header class="byline">
 
-<header class="byline">
+        <div class="entry-meta">
+            <?php popperscores_posted_on(); ?>
+        </div><!-- .entry-meta -->
 
-	<span class="bylineauthor"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></span>
+    </header>
 
-</header>
+    <?php if (has_post_thumbnail()) { ?>
+        <figure class="featuredImage">
+            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                <?php the_post_thumbnail('featured-image'); ?>
+            </a>
+        </figure>
+    <?php } else { ?>
+    <figure class="featuredImage">
+        <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+            <?php the_post_thumbnail(); ?>
+        </a>
+    </figure>
+    <?php } ?>
 
+    <div class="entry">
 
-<?php the_excerpt(); ?>
+        <?php the_excerpt(); ?>
 
- <p class="postmetadata"><?php
-  comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-?></p>
+    </div>
 
+    <footer class="byline">
+        <p class="postmetadata">
+        <?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
+       ?>
+        </p>
+    </footer>
 
-
-<?php endwhile; 
-else: ?>
-<p>Sorry, no posts matched your criteria.</p>
-
-<?php endif; ?>
-<!--end of Comment box-->
+    <?php endwhile; 
+    else: ?>
+    <p>Sorry, no posts matched your criteria.</p>
+   
 </article>
+ <?php endif; ?>
+    <!--end of Comment box-->
+<section class='contact-wide'>
+
+    <h1>Send your Comments</h2>
+
+</section>
+
 <?php get_sidebar(); ?>
 
 </section>

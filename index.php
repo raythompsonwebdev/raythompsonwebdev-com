@@ -51,8 +51,12 @@
                         </figure>
                     <?php }
                     ?>
+                    
+                    <div class="entry">
+                    
                     <?php the_excerpt(); ?>
-
+                    </div>
+                    
                     <footer class="byline">
 
                         <p class='right'>

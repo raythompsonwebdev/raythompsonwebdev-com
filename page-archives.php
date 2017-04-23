@@ -16,9 +16,15 @@ Template Name: Archives-pages
             
 <article class="entry">
  
-<h2><?php _e('Browse by Month:', 'raythompsonwebdev-com');?></h2>
+<h2><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
     
-<ul><?php wp_get_archives('type=monthly'); ?></ul>
+<ul><?php // Arguments
+                $args = array(
+                    'type' => 'monthly'
+                );
+                // The archives
+                wp_get_archives( $args );
+            ?> </ul>
 
 </article>
 
@@ -26,7 +32,14 @@ Template Name: Archives-pages
 
 <h2><?php _e('Browse by Category:', 'raythompwebdesign-com');?></h2>
     
-<ul><?php wp_list_categories('title_li='); ?></ul>
+<ul><?php // Arguments
+        $default = array(
+            'title_li' => ''
+        );
+        // The categories
+        wp_list_categories( $default ); 
+    ?>
+</ul>
 
 </article>
 
@@ -52,11 +65,11 @@ Template Name: Archives-pages
 <?php endif; ?>
 
 
-<article class="contact-wide">
+<section class="contact-wide">
 
-<h2>Archives</h2>
+<h1>Related Items</h1>
   
-</article>
+</section>
 
 
 <?php get_sidebar('archive'); ?> 

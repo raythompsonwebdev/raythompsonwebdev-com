@@ -694,6 +694,7 @@ a.nav-toggle {
             margin: 0;
             padding: 0;
             color: $color1;
+            border-bottom: 2px $color1 solid;
             width: 100%;
             letter-spacing: 0.05em;
             font-weight: bold;
@@ -1933,7 +1934,7 @@ a.nav-toggle {
                             .panel {
                                 font-family: ($FontStyle);
                                 width: 100%;
-                                height: 390px;
+                                height: 389px;
                                 background-color: $color4;
                                 h2 {
                                     padding: 0;
@@ -1971,8 +1972,8 @@ a.nav-toggle {
                                         h3 {
                                             font-weight: bold;
                                             font-size: 0.90em;
-                                            color:$color4;
-                                            background-color:$color1;
+                                            color:$color1;
+                                            border-bottom:1px solid $color1;
                                             width: auto;
                                             text-indent: 0;
                                             margin: 0;
@@ -1983,8 +1984,8 @@ a.nav-toggle {
                                         h4 {
                                             margin: 0 0 2% 0;
                                             padding: 0;
-                                            border-bottom:1px solid $color1;
                                             color:$color1;
+                                            border-bottom:1px solid $color1;
                                             padding: 0;
                                             line-height: 30px;
                                             font-size: 0.9em;
@@ -1994,16 +1995,16 @@ a.nav-toggle {
                                         ul, ul#lyndalinks {
                                             width: 100%;
                                             li {
-                                                /*new*/
+                                                
+                                                font-size:0.80em;
                                                 width: 100%;
-                                                /*new*/
                                                 margin: 0;
-                                                font-weight: 300;
+                                                font-weight: normal;
                                                 color: $color1;
-                                                
-                                                font-size: 0.85em;
-                                                
-                                                height: 20px;
+                                                display: block;
+                                                height: 25px;
+                                                line-height: 25px;
+                                                height: auto;
                                                 &:before {
                                                     font-family: "FontAwesome";
                                                     font-size: 0.85em;
@@ -2014,10 +2015,11 @@ a.nav-toggle {
                                                 }
                                                 a.lyndalink{ 
                                                      
+                                                    color: $color1; 
                                                     width:auto; 
-                                                    font-size:0.9em; 
+                                                    font-size:1em; 
                                                     background-color:#fff;
-                                                    &:hover{color: $color1;}
+                                                    &:hover{font-weight:normal; font-style:italic;}
                                                 }
                                                 
                                             }
@@ -2042,8 +2044,8 @@ a.nav-toggle {
                                         h3 {
                                             font-weight: bold;
                                             font-size: 0.85em;
-                                            color:$color4;
-                                            background-color:$color1;
+                                            color:$color1;
+                                            border-bottom:1px solid $color1;
                                             width: auto;
                                             text-indent: 0;
                                             margin: 0;
@@ -2068,13 +2070,12 @@ a.nav-toggle {
                                             margin: 0;
                                             li {
                                                 font-size:0.80em;
-                                                /*new*/
                                                 width: 100%;
-                                                /*new*/
                                                 margin: 0;
                                                 font-weight: normal;
                                                 color: $color1;
                                                 display: block;
+                                                height: 20px;
                                                 line-height: 20px;
                                                 height: auto;
                                                 &:before {
@@ -3179,24 +3180,24 @@ a.nav-toggle {
                                                 width: 100%;
                                                 li {
                                                     font-size: 0.75em;
-                                                    /*new*/
                                                     display: block;
-                                                    height: 20px;
-                                                   
+                                                    
                                                     &:before {
                                                         font-size: 0.80em;
                                                         margin-right: 1%;
                                                         
                                                     }
+                                                    
+                                                    a.lyndalink{ 
+                                                        
+                                                        width:auto; 
+                                                        font-size:0.9em; 
+                                                        color: $color1;
+                                                        &:hover{ }
+                                                    }
                                                 }
                                                                  
-                                                a.lyndalink{ 
-                                                        display:inline; 
-                                                        width:auto; 
-                                                        font-size:0.8em; 
-                                                        
-                                                        &:hover{color: $color1; font-weight:normal; font-style:italic;}
-                                                    }
+                                                
                                             }
                                           
                                         }
@@ -3964,9 +3965,8 @@ a.nav-toggle {
                                                     margin: 0;
                                                     
                                                     display: block;
-                                                    font-size: 0.7em;
+                                                    font-size: 0.75em;
 
-                                                    height: 20px;
                                                     &:before {
                                                         
                                                         font-size: 0.85em;
@@ -3976,9 +3976,9 @@ a.nav-toggle {
                                                        
                                                     }
                                                     a.lyndalink{ 
-                                                        display:inline; 
+                                                        
                                                         width:auto; 
-                                                        font-size:0.8em; 
+                                                        
                                                         
                                                         &:hover{color: $color1;}
                                                     }
@@ -4012,7 +4012,7 @@ a.nav-toggle {
                                                     display: block;
                                                     
                                                     &:before {
-                                                        font-size: 0.75em;
+                                                        font-size: 0.8em;
                                                         margin-right: 1%;
                                                         
                                                     }
@@ -4219,6 +4219,8 @@ a.nav-toggle {
 
 //800px
 @media only screen and (max-width: 50em) {
+    
+    
     .fixed-side-social-container {
         display: none;
     }
@@ -4779,7 +4781,7 @@ a.nav-toggle {
                                         img {
                                             float: none;
                                             /*new*/
-                                            width: 40.59%;
+                                            width: 33.59%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -4823,7 +4825,7 @@ a.nav-toggle {
                                     }
                                     figure.cert {
                                         img {
-                                            width: 22.78%;
+                                            width: 20.78%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -4841,13 +4843,15 @@ a.nav-toggle {
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.8em;
                                                     /*new*/
+                                                    line-height: 25px;
+                                                    height: 25px;
                                                     
                                                     display: block;
                                                     
                                                     &:before {
-                                                        font-size: 0.80em;
+                                                        font-size: 0.85em;
                                                         margin-right: 1%;
                                                         
                                                     }
@@ -6285,7 +6289,7 @@ a.nav-toggle {
                                         img {
                                             float: none;
                                             /*new*/
-                                            width: 35.59%;
+                                            width: 32.59%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -6304,7 +6308,7 @@ a.nav-toggle {
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.8em;
                                                     /*new*/
                                                     display: block;
                                                     
@@ -6328,7 +6332,7 @@ a.nav-toggle {
                                     }
                                     figure.cert {
                                         img {
-                                            width: 20.78%;
+                                            width: 18.78%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -6353,7 +6357,7 @@ a.nav-toggle {
                                                     display: block;
                                                     
                                                     &:before {
-                                                        font-size: 0.85em;
+                                                        font-size: 0.9em;
                                                         
                                                         line-height: 1.5em;
                                                     }
@@ -6373,21 +6377,21 @@ a.nav-toggle {
                             li {
                                 
                                 a {
-                                    font-size: 0.75em;
+                                    font-size: 0.85em;
                                     line-height: 44px;
                                 }
                                 a:hover {
-                                    font-size: 0.80em;
+                                    font-size: 0.9em;
                                     line-height: 44px;
                                 }
                             }
                             li:nth-of-type(7) a {
                                 line-height: 44px;
-                                font-size: 0.7em;
+                                font-size: 0.85em;
                             }
                             li:nth-of-type(7) a:hover {
                                 line-height: 44px;
-                                font-size: 0.75em;
+                                font-size: 0.9em;
                             }
                         }
                     }
@@ -7005,7 +7009,7 @@ a.nav-toggle {
                         #bars {
                             height: 100%;
                             li {
-                                height: 365px;
+                                height: 358px;
                                 .bar {
                                     display: block;
                                     margin-left: 0;
@@ -7025,7 +7029,7 @@ a.nav-toggle {
                                 height: 22%;
                                 text-align: left;
                                 span {
-                                    font-size: 1em;
+                                    font-size: 1.2em;
                                 }
                             }
                         }
@@ -7050,7 +7054,7 @@ a.nav-toggle {
                                         img {
                                             float: none;
                                             /*new*/
-                                            width: 35.59%;
+                                            width: 32.59%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -7068,13 +7072,13 @@ a.nav-toggle {
                                             ul, ul#lyndalinks {
                                                 width: 100%;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.8em;
                                                     /*new*/
                                                     display: block;
                                                     
                                                    
                                                     &:before {
-                                                        font-size: 0.80em;
+                                                        font-size: 0.90em;
                                                         margin-right: 1%;
                                                         
                                                     }
@@ -7091,7 +7095,7 @@ a.nav-toggle {
                                     }
                                     figure.cert {
                                         img {
-                                            width: 20.78%;
+                                            width: 19.78%;
                                             /*new*/
                                             margin: 1% auto;
                                             /*new*/
@@ -7109,11 +7113,9 @@ a.nav-toggle {
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.7em;
-                                                    /*new*/
-                                                    font-weight: 300;
+                                                    font-size: 0.8em;
                                                     display: block;
-                                                    line-height: 1.6em;
+                                                    
                                                     &:before {
                                                         font-size: 0.85em;
                                                         margin-right: 1%;
@@ -7135,17 +7137,17 @@ a.nav-toggle {
                             li {
                                 margin: 0 0 5px;
                                 a {
-                                    font-size: 0.85em;
+                                    font-size: 0.9em;
                                 }
                                 a:hover {
-                                    font-size: 0.85em;
+                                    font-size: 0.95em;
                                 }
                             }
                             li:nth-of-type(7) a {
-                                font-size: 0.85em;
+                                font-size: 0.95em;
                             }
                             li:nth-of-type(7) a:hover {
-                                font-size: 0.85em;
+                                font-size: 0.1em;
                             }
                         }
                     }
@@ -7692,17 +7694,17 @@ a.nav-toggle {
                         ul#list {
                             li {
                                 a {
-                                    font-size: 0.70em;
+                                    font-size: 0.85em;
                                 }
                                 a:hover {
-                                    font-size: 0.70em;
+                                    font-size: 0.9em;
                                 }
                             }
                             li:nth-of-type(7) a {
-                                font-size: 0.7em;
+                                font-size: 0.75em;
                                 line-height: 44px;
                                 &:hover {
-                                    font-size: 0.7em;
+                                    font-size: 0.8em;
                                     line-height: 44px;
                                 }
                             }
@@ -7982,7 +7984,7 @@ a.nav-toggle {
                         }
                         #bars {
                             li {
-                                height: 365px;
+                                height: 362px;
                                 span {
                                     font-size: 0.75em;
                                 }
@@ -8050,7 +8052,7 @@ a.nav-toggle {
                                         }
                                         figcaption {
                                             h3 {
-                                                font-size: 0.75em;
+                                                font-size: 0.65em;
                                                 letter-spacing: 0.01em;
                                                 line-height: 30px;
                                             }
@@ -8061,7 +8063,7 @@ a.nav-toggle {
                                             ul {
                                                 display: block;
                                                 li {
-                                                    font-size: 0.75em;
+                                                    font-size: 0.7em;
                                                     
                                                     display: block;
                                                     
@@ -8083,16 +8085,16 @@ a.nav-toggle {
                             li {
                                 height: 44px;
                                 a {
-                                    font-size: 0.70em;
+                                    font-size: 0.75em;
                                     &:hover {
-                                        font-size: 0.75em;
+                                        font-size: 0.8em;
                                     }
                                 }
                             }
                             li:nth-of-type(7) a {
                                 line-height: 44px;
-                                font-size: 0.65em;
-                                &:hover{font-size:0.7em;}
+                                font-size: 0.7em;
+                                &:hover{font-size:0.75em;}
                             }
                         }
                         /*Hero Slider End*/
@@ -9367,10 +9369,10 @@ a.nav-toggle {
                                                 width: 100%;
                                                 li {
                                                     font-size: 0.65em;
-                                                    line-height: 20px;
+                                                    line-height: 25px;
                                                     /*new*/
                                                     display: block;
-                                                    height: 20px;
+                                                    height: 25px;
                                                     
                                                    
                                                     &:before {
@@ -9379,11 +9381,11 @@ a.nav-toggle {
                                                         
                                                     }
                                                     a.lyndalink{ 
-                                                        line-height: 20px;
+                                                        line-height: 25px;
                                                          
                                                         font-size:0.95em; 
                                                         
-                                                        &:hover{ font-weight:normal; font-style:italic; line-height: 25px;}
+                                                        &:hover{ font-weight:normal; font-style:italic; }
                                                     }
                                                 }
                                                                  
@@ -9447,14 +9449,14 @@ a.nav-toggle {
                             li:nth-of-type(7) a {
                                 padding-top: 0;
                                 
-                                font-size: 0.55em;
+                                font-size: 0.6em;
                                 line-height:44px;
                                 
                                 &:hover {
                                     padding-top: 0;
                                     line-height:44px;
                                     
-                                    font-size: 0.55em;
+                                    font-size: 0.65em;
                                 }
                             }
                         }
@@ -10027,12 +10029,12 @@ a.nav-toggle.hide {
                                 height: 22.6999%;
                             }
                             li span {
-                                font-size: 0.75em;
+                                font-size: 0.95em;
                             }
                         }
                         #bars {
                             li {
-                                height: 281px;
+                                height: 279px;
                             }
                             li span {
                                 font-size: 0.60em;
@@ -10056,7 +10058,7 @@ a.nav-toggle.hide {
                                         img {
                                         float: none;
                                         /*new*/
-                                        width: 40.59%;
+                                        width: 38.59%;
                                         /*new*/
                                         margin: 1% auto;
                                         /*new*/
@@ -10709,7 +10711,7 @@ a.nav-toggle.hide {
                                 height: 22.6999%;
                             }
                             li span {
-                                font-size: 0.85em;
+                                font-size: 0.95em;
                                 text-align: left;
                             }
                         }
@@ -10719,7 +10721,7 @@ a.nav-toggle.hide {
                                 left: 0;
                             }
                             li {
-                                height: 282px;
+                                height: 280px;
                             }
                             span {
                                 font-size: 0.60em;
@@ -10731,7 +10733,7 @@ a.nav-toggle.hide {
                         
                         
                         .mask {
-                            width: 72%;
+                            width: 71%;
                             div.slider-body {
                                 .panel {
                                     h2 {
@@ -10830,21 +10832,21 @@ a.nav-toggle.hide {
                             padding: 0;
                             li {
                                 a {
-                                    font-size: 0.75em;
+                                    font-size: 0.8em;
                                 }
                                 a:hover {
-                                    font-size: 0.75em;
+                                    font-size: 0.8em;
                                 }
                             }
                             li:nth-of-type(7) {
                                 a {
                                     
                                     line-height: 15px;
-                                    font-size: 0.70em;
+                                    font-size: 0.75em;
                                     &:hover {
                                         
                                         line-height: 15px;
-                                        font-size: 0.70em;
+                                        font-size: 0.75em;
                                     }
                                 }
                             }
@@ -11297,13 +11299,13 @@ a.nav-toggle.hide {
                         }
                         #bars {
                             li {
-                                height: 295px;
+                                height: 293px;
                             }
                         }
                     }
                     .hero-slider {
                         height: 327px;
-                        ul {
+                        ul#list {
                             padding: 0;
                             width: 28%;
                             margin: 0;

@@ -7,50 +7,52 @@
 
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-            <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
-                
-                <h1><?php the_title(); ?></h1>
-                
-                <header class="byline">
+    <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 
-                    <div class="entry-meta">
-                        <?php popperscores_posted_on(); ?>
-                    </div><!-- .entry-meta -->
+        <h1><?php the_title(); ?></h1>
 
-                </header><!--end of by line-->
+        <header class="byline">
 
-                <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>;">
-                    <figure class="featuredImage"><?php the_post_thumbnail('custom'); ?></figure>
-                </a>
+            <div class="entry-meta">
+                <?php popperscores_posted_on(); ?>
+            </div><!-- .entry-meta -->
 
-                <?php the_content(); ?>
+        </header><!--end of by line-->
 
-                <footer class="byline">
+        <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>;">
+            <figure class="featuredImage"><?php the_post_thumbnail('custom'); ?></figure>
+        </a>
 
-                    <p class='right'>
-                        <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-                    </p>
+    <div class="entry">
+        <?php the_content(); ?>
+    </div>
 
-                </footer>
+        <footer class="byline">
 
-                <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
-            </article><!--end of post group-->
+            <p class='right'>
+                <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
+            </p>
 
-            <!--navigation-->
+        </footer>
 
-            <nav class="navi">
-                <span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
-                <span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
-            </nav><!--end of right navigation-->
+        <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
+    </article><!--end of post group-->
 
-            <!--end of navigation-->
+        <!--navigation-->
 
-        <?php
-        endwhile;
+        <nav class="navi">
+            <span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
+            <span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
+        </nav><!--end of right navigation-->
+
+        <!--end of navigation-->
+
+    <?php
+    endwhile;
     else:
         ?>
 
-        <p><?php load_theme_textdomain($domain, $path) ?></p>
+        <p><?php load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages'); ?></p>
         
 <?php endif; ?>
     <!--end of Comment box-->
@@ -59,14 +61,7 @@
     <section class='contact-wide'>
 
         <h1>Send your Comments</h2>
-            <?php
-// If comments are open or we have at least one comment, load up the comment template.
-            if (comments_open() || get_comments_number()) :
-
-                comments_template();
-
-            endif;
-            ?>
+            
     </section>
 
 

@@ -4,7 +4,7 @@
 <section id="main-content" class="group" role="main">
 
 
-    <h1><?php
+    <h1 class="archive-title"><?php
         // Output the category title
         if (is_category()) {
             single_cat_title();
@@ -17,7 +17,12 @@
             _e('Browsing the Archive', 'raythompwebdesign-com');
         }
         ?>
+        
     </h1>
+    <?php
+    the_archive_title('<h2 class="page-title">', '</h2>');
+    
+    ?>
 
 <?php if (have_posts()) : ?>
 
@@ -26,25 +31,18 @@
 
             
             <header class="byline">
-
+<br/>
                 <div class="entry-meta">
-
-                    <div class="meta-content">
-
-    <?php
-    the_archive_title('<h1 class="page-title">', '</h1>');
-    the_archive_description('<div class="taxonomy-description">', '</div>');
-    ?>
-
-                    </div>
+     <?php popperscores_posted_on(); ?>
+                  
                 </div><!-- .entry-meta -->
 
             </header>
 
-            <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
-            
+                        
                     <?php while (have_posts()) : the_post(); ?>
-
+            
+<h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
                 <div class="entry">
                     
         <?php if (has_post_thumbnail()) { ?>
