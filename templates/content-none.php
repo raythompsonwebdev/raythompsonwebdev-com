@@ -9,16 +9,18 @@
 
 ?>
 
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+
 <section class="<?php if ( is_404() ) { echo 'error-404'; } else { echo 'no-results'; } ?> not-found">
 	<header class="page-header">
 		<h1 class="page-title">
 			<?php 
-			if ( is_404() ) { esc_html_e( 'Page not available', 'raythompwebdesign-com' );
+			if ( is_404() ) { esc_html_e( 'Page not available', 'raythompsonwebdev-com' );
 			} else if ( is_search() ) {
 				/* translators: %s = search query */
-				printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'raythompwebdesign-com'), '<em>' . get_search_query() . '</em>' );
+				printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'raythompsonwebdev-com'), '<em>' . get_search_query() . '</em>' );
 			} else {
-				esc_html_e( 'Nothing Found', 'raythompwebdesign-com' );
+				esc_html_e( 'Nothing Found', 'raythompsonwebdev-com' );
 			}
 			?>
 		</h1>
@@ -27,21 +29,21 @@
 	<div class="page-content">
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'raythompwebdesign-com' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+			<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'raythompsonwebdev-com' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'raythompwebdesign-com' ); ?></p>
+			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'raythompsonwebdev-com' ); ?></p>
 			<?php get_search_form(); ?>
 		
 		<?php elseif ( is_404() ) : ?>
 
-			<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'raythompwebdesign-com' ); ?></p>
+			<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'raythompsonwebdev-com' ); ?></p>
 			<?php get_search_form(); ?>
 			
 		<?php else : ?>
 
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'raythompwebdesign-com' ); ?></p>
+			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'raythompsonwebdev-com' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>
@@ -50,7 +52,7 @@
 	<?php
     if ( is_404() || is_search() ) {
     ?>
-		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'raythompwebdesign-com' ); ?></h1>
+		<h1 class="page-title secondary-title"><?php esc_html_e( 'Most recent posts:', 'raythompsonwebdev-com' ); ?></h1>
 		<?php
 		// Get the 6 latest posts
 		$args = array(
@@ -70,3 +72,5 @@
 	} // endif	
 	?>
 </section><!-- .no-results -->
+
+</article>

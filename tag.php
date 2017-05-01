@@ -20,32 +20,39 @@ if ( have_posts() ) : ?>
 
 <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 <header class="byline">
+    <div class="entry-meta">
+        <div class="meta-content">
 
-	<span class="bylineauthor"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></span>
+            <?php popperscores_posted_on(); ?> 
 
+        </div>
+    </div><!-- .entry-meta -->
 </header>
 
-<article class="entry group">
+<div class="entry">
 
 <?php the_excerpt(); ?>
+ 
+</div>
 
- <p class="postmetadata"><?php
+<footer class="byline">
+<p class="postmetadata"><?php
   comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
 ?></p>
-</article>
+</footer>
 
 <br/>
 <?php endwhile; 
 else: ?>
-<p>Sorry, no posts matched your criteria.</p>
+<?php get_template_part( 'templates/content', 'none' ); ?>
 
 <?php endif; ?>
 <!--end of Comment box-->
 </article>
 
-  
+  <div class="clearfix"></div>
 
 <?php get_sidebar(); ?>
 </section><!--end of blogleftside-->
-<div class="clearfix"></div>
+
 <?php get_footer(); ?> 

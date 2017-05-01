@@ -17,7 +17,7 @@
 
         <section class="prof_cont">
 
-            <h1>Coding Skill Levels</h1>
+            <h1>Skills Graph</h1>
 
             <article id="chart">
                 
@@ -38,13 +38,13 @@
                 
                 <ul id="bars">
 
-                    <li><div data-percentage="90" class="bar"></div><span>HTML</span></li>
+                    <li><div data-percentage="90" class="bar"></div><span>Coding</span></li>
 
-                    <li><div data-percentage="90" class="bar"></div><span>CSS</span></li>
+                    <li><div data-percentage="90" class="bar"></div><span>Design</span></li>
 
-                    <li><div data-percentage="80" class="bar"></div><span>JavaScript</span></li>
+                    <li><div data-percentage="80" class="bar"></div><span>SEO</span></li>
 
-                    <li><div data-percentage="85" class="bar"></div><span>Jquery</span></li>
+                    <li><div data-percentage="85" class="bar"></div><span>Wordpress</span></li>
 
                     <li><div data-percentage="75" class="bar"></div><span>PHP</span></li>
 
@@ -63,15 +63,16 @@
             <!--<figure class="introimg"><img id="image-6" src="<?php echo home_url(); ?>/wp-content/uploads/2016/12/pic.jpg" alt="image-of-raythompwebdev-com">
             //</figure>-->
 
-            <p>My name is Raymond Thompson&#44; I live in Hackney East London&#44; I have a passion for web design and web development, particularly front-end development, responsive web development and Wordpress web development&#46;<br/></p>
+            <p>My name is Raymond Thompson. I live in Hackney East London. I have a passion for web design and web development, particularly front-end development, responsive web development and Wordpress web development.<br/></p>
             <hr>
-            <p>When I am not working at my day job as a customer service officer I spend most of my free time learning website design and development, experimenting with code, building <strong><a href="http://raythompsonwebdev.co.uk/website-projects">websites</a></strong> and helping others create other<strong> <a href="http://raythompsonwebdev.co.uk/raythompsonwebdev-blog">website related stuff</a> </strong> &#46;</p>
+            <p>When I am not working at my day job as a customer service officer, I spend most of my free time learning website design and development. I  experiment with code, build <strong><a href="http://raythompsonwebdev.co.uk/website-projects">websites</a></strong> and help others create other<strong> <a href="http://raythompsonwebdev.co.uk/raythompsonwebdev-blog">website related stuff</a> </strong>.</p>
             <hr>
 
-            <p>I attended a 7 month part-time City and Guilds Web design course at the East London Advanced Technology Training Center in East London between November 2011 and July 2012&#46;
-            I learnt how to build websites using web design and web development software programs Adobe Photoshop, Dreamweaver and Flash also coding languages XHTML&#44; CSS&#44; PHP&#44; MYsql and Javascript&#46;</p>
+            <p>I  gained a passion for web design and develeopment after attended a 7 month part-time City and Guilds Web design course at the East London Advanced Technology Training Center in East London between November 2011 and July 2012.</p>
+     <hr />           
+<p>I also learnt the process of how to plan and research, prototype, build, test and launch a commercial website.  As part of a team of fellow students we worked on various web development projects including websites for a few madeup clients and involvements in real world projects for ELATT's in-house web service 260Web.</p>
             <hr>
-            <p> I also learnt the process of how to plan and research&#44; wireframe&#44; build&#44; test and launch a commercial website as part of a team of fellow students working on various web development projects including websites for a few madeup clients and small involvements in real world projects for ELATT's in-house web service 260Web&#46; </p> 
+            <p> I have helped a with a couple of projects and created my own projects. I have over the years developed a very good understanding of coding languages HTML5, CSS3, Javascript, Jquery, PHP, Ajax, and various web development best practices to be able to produce high quality websites. </p> 
              <hr>
             
             <div class="clearfix"></div>
@@ -112,9 +113,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Large-Photoshop-Certicate-.jpg" class="fancyboxclass=" title="Adobe Certificate in Visual Communication">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Large-Photoshop-Certicate-.jpg" class="fancyboxclass=" title="Adobe Certificate in Visual Communication">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
                                      
                                 </a>
                                     <figcaption>
@@ -143,8 +144,8 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Small-Dreamweaver-Certicate.jpg" alt="Adobe-Deamweaver-Certificate"></a>
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Small-Dreamweaver-Certicate.jpg" alt="Adobe-Deamweaver-Certificate"></a>
                                 <figcaption>
                                     <h3>Adobe Certified Associates Web Communication</h3>
                                     <h4>Topics&#58;</h4>
@@ -169,9 +170,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
                                 </a>
                                 
@@ -201,9 +202,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
 
                                 </a>
                                 <figcaption>
@@ -231,9 +232,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                  <figcaption>  
@@ -262,9 +263,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/cert-montage.png" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/cert-montage.png" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                 <figcaption>
@@ -294,9 +295,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                 
@@ -326,9 +327,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
                                 
@@ -359,9 +360,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/04/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
                                 

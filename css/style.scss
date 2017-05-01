@@ -1,16 +1,16 @@
 /*
-Theme Name: raythompwebdesign.com
+Theme Name: raythompsonwebdev-com
 Theme URI:
 Description: Custom Template
 Version: 1.1
 Author: Raymond Thompson
-Author URI: http://www.raythompwebdesign.com
+Author URI: http://www.raythompsonwebdev.co.uk
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-header, custom-background,editor-style
 Raythompwebdesign WordPress Theme, Copyright 2014 Raymond Thompson
 Raythompwebdesign is distributed under the terms of the GNU GPL
-Text Domain: raythompwebdesign-com
+Text Domain: raythompsonwebdev-com
 Domain Path: /language
 */
 
@@ -22,7 +22,7 @@ $colorthree:b2d159-green
 $colorfour:070707-black
 $colorfive:e9ebc3-light green
 $colorsix:fed32f-light orange
-$colorseven:accc51-green-light
+$colorseven:accc51-green-ligh
 */
 
 @import "partials/variables";
@@ -338,6 +338,111 @@ a.nav-toggle {
     padding: 0 1%;
     .fancybox-custom .fancybox-skin {
         box-shadow: 0 0 50px #222;
+    }
+    
+    #side-bar {
+        padding-top: 0;
+        height: auto;
+        width: 100%;
+        font-family: ($FontStyle);
+        display: block;
+        margin: 0.75% 0 0;
+        clear: both;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: justify;
+        justify-content:space-around;
+
+        .side-bar-box {
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            //display: inline-block;
+            height: auto;
+            width: 31%;
+            margin: 0.5em;
+            float: left;
+            h2 {
+                width: 100%;
+                height: 40px;
+                margin: 0;
+                padding: 0;
+                font-size: 1.2em;
+                line-height: 40px;
+                background-color: $color7;
+                color: $color4;
+                letter-spacing: 0.1em;
+                text-align: center;
+                margin: 0 auto;
+                font-weight: 700;
+            }
+            #social h2 {
+                width: 100%;
+            }
+            .tagcloud {
+                width: 90%;
+                margin: auto;
+                font-size: 100%;
+                display: block;
+            }
+            .widget {
+                display: block;
+                font-family: ($FontStyle);
+                padding: 0;
+                .widget-title {
+                    height: 40px;
+                    font-size: 1.05em;
+                    line-height: 40px;
+                    letter-spacing: 0.1em;
+                }
+                ul {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 0;
+                    li {
+                        list-style: none;
+                        line-height: 30px;
+                        background-color: $color3;
+                        width: 96%;
+                        margin: 2% auto;
+                        text-align: center;
+                        a {
+                            width: 100%;
+                            display: block;
+                            font-weight: 400;
+                            letter-spacing: 0.02em;
+                            font-size: 0.9em;
+                            line-height: 35px;
+                            background-color: $color3;
+                            @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                        }
+                        a:hover {
+                            color: $color4;
+                            background-color: $color1;
+                            font-weight: bold;
+                        }
+                    }
+                    li.recentcomments a {
+                        display: block;
+                        background-color: $color1;
+                    }
+                    li.comment-author-link a {
+                        display: block;
+                        background-color: $color1;
+                    }
+                }
+                ul.children > li {
+                    background-color: $color3;
+                    margin: 1% auto;
+                }
+            }
+        }
     }
     /*Header*/
     header {
@@ -1227,7 +1332,7 @@ a.nav-toggle {
         /*post pagination*/
         .navi {
             width: 100%;
-            height: 40px;
+            height: auto;
             .right {
                 width: 100%;
                 float: left;
@@ -1246,8 +1351,8 @@ a.nav-toggle {
                     font-weight: bold;
                     height: 40px;
                     margin: 0;
-                    width: 91%;
-                    text-indent: 1%;
+                    width: 99%;
+                    text-indent: 0.5%;
                 }
                 a::after {
                     font-family: 'FontAwesome';

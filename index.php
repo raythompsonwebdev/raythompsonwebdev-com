@@ -28,7 +28,7 @@
                     <div class="entry-meta">
                         <div class="meta-content">
 
-                            <?php popperscores_posted_on(); ?> 
+                            <?php popperscores_index_posted_on(); ?> 
 
                         </div>
                     </div><!-- .entry-meta -->

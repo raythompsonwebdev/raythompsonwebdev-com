@@ -40,7 +40,7 @@ the_excerpt();
 <?php
 printf(
         /* Translators: %s = Name of the current post. */
-        wp_kses(__('Continue reading %s', 'raythompwebdesign-com'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
+        wp_kses(__('Continue reading %s', 'raythompsonwebdev-com'), array('span' => array('class' => array()))), the_title('<span class="screen-reader-text">"', '"</span>', false)
 );
 ?>
         </a>

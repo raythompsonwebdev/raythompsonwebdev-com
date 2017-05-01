@@ -11,40 +11,19 @@
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-//$photographer = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_name', $single = true);
-//function get_post_meta( $post_id, $key = '', $single = false ) {
-//    return get_metadata('post', $post_id, $key, $single);
-//}
-
-
-//$photographerurl = get_post_meta($post_id->ID, $key = 'raythompwebdesign-com_url',$single = true);
-
-//function get_post_meta( $post_id, $key = '', $single = false ) {
-//   return get_metadata('post', $post_id, $key, $single);
-//}
-//$photographerurl = get_metadata('post', $post_id, $key, $single);
-//$photographer = get_metadata('post', $post_id, $key, $single);
 ?>
 
-<article class="post group" 
-<?php post_class(); ?> <?php the_ID(); ?>
->
-<h1><?php the_title(); ?></h1>
+<article class="post group" <?php post_class(); ?> <?php the_ID(); ?>>
+
+   <h1><?php the_title(); ?></h1>
 
 <header class="byline">
  <div class="entry-meta">
-           
-   
     
     <?php popperscores_index_posted_on(); ?> 
     
-    <!-- <span class="posted-on"><?php echo $photographer; ?></span>
-    <span class="posted-on">
-        <a href="<?php echo $photographerurl ?>" target="_blank" class="photographerurl">
-            <?php echo $photographerurl ?></a></span>-->
-   
-    
  </div>
+    
 </header><!--end of by line-->
 
 <div class="entry-attachment">
@@ -85,7 +64,12 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
 <section class="contact-wide">
 <h1>Send Comment</h1>
-<?php comments_template(); ?>
+<?php
+    // If comments are open or we have at least one comment, load up the comment template.
+    if ( comments_open() || get_comments_number() ) :
+            comments_template();
+    endif;
+?>
 </section>
 	
 </section>

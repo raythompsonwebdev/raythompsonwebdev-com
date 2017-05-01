@@ -14,7 +14,7 @@
 if (isset($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])){
     die ('Please do not load this page directly. Thanks!'); }
 if ( post_password_required() ) { ?>
-    <p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'raythompwebdesign-com'); ?></p>
+    <p class="nocomments"><?php _e('This post is password protected. Enter the password to view comments.', 'raythompsonwebdev-com'); ?></p>
 <?php
     return; }
 // ##########  End do not delete section
@@ -40,7 +40,7 @@ if ( have_comments() ) : ?>
     </ol>
     <div class="nav-links navigation">
 <h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h1>
-        <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'raythompwebdesign-com' ) ); ?></div>
+        <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'raythompsonwebdev-com' ) ); ?></div>
         <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompsonwebdev-com' ) ); ?></div>
 
     </div><!-- .nav-links -->

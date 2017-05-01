@@ -1,6 +1,5 @@
 
 <?php get_header(); ?>
-
    	
 <section id="main-content" class="group" >
   <?php 
@@ -10,7 +9,8 @@
     <h1 class="archive-title">
         Category: <?php single_cat_title( '', true ); ?>
     </h1>
-<?php
+
+        <?php
 // Display optional category description
  if ( category_description() ) : ?>
 
@@ -55,28 +55,22 @@
     </div>
 
     <footer class="byline">
-        <p class="postmetadata">
-        <?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-       ?>
+    <p class="postmetadata">
+<?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');?>
         </p>
     </footer>
+    
+ </article>
 
-    <?php endwhile; 
-    else: ?>
-    <p>Sorry, no posts matched your criteria.</p>
-   
-</article>
- <?php endif; ?>
+<?php endwhile;  else: ?>
+
+   <?php get_template_part( 'templates/content', 'none' ); ?>
+    
+<?php endif; ?>
+
     <!--end of Comment box-->
-<section class='contact-wide'>
-
-    <h1>Send your Comments</h2>
-
-</section>
-
+    <div class="clearfix"></div>    
 <?php get_sidebar(); ?>
-
 </section>
-
-
+ 
 <?php get_footer(); ?> 

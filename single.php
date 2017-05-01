@@ -41,8 +41,12 @@
         <!--navigation-->
 
         <nav class="navi">
-            <span class="right"><?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
-            <span class="right"><?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php wp_link_pages(); ?></span> 
+          
+            <span class="right">
+                <?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?>
+                <?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?></span> 
+            
+            
         </nav><!--end of right navigation-->
 
         <!--end of navigation-->
@@ -55,12 +59,17 @@
         <p><?php load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages'); ?></p>
         
 <?php endif; ?>
-    <!--end of Comment box-->
-
 
     <section class='contact-wide'>
 
         <h1>Send your Comments</h2>
+        
+        <?php
+        // If comments are open or we have at least one comment, load up the comment template.
+        if ( comments_open() || get_comments_number() ) :
+                comments_template();
+        endif;
+?>
             
     </section>
 
