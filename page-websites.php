@@ -51,21 +51,14 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg1">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/03/www-campingadvice-home-page-small.png" alt="CampingAdvice.com website home page" >
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-camping-advice-home-page-small.png" alt="CampingAdvice.com website home page" >
 
   <figcaption class="showcase-content showcase">
-  <h1>Website:</h1>
-  <p>CampingAdvice.com</p>
-  <h1>Description:</h1>
-  <p>Website based on a brief for a website project I had to complete for the City & Guilds Level 3 Web design exam. See full code on <strong><a href="https://github.com/DigbyCeaser/CampingAdvice-html">GitHub</a></strong>&#46;</p>
-  <p></p>
-
-  <h1>Development Technologies:</h1>
-  <p>Bootstrap 3&#44; Jquery&#44; CSS3&#44; PHP &#44; MySQLi&#46;</p>
-  <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <figure class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-campingadvice-home-page-large.jpg"  title="CampingAdvice.com Home Page">See Image</a>
-  <a href="http://www.campingadvice.raythompsonwebdev.co.uk" title="www.campingadvice.raythompsonwebdev.co.uk">Visit Website</a></figure>
+  <h1>Camping Advice.com</h1>
+  <p> Advice and Forum website for newbie campers</p>
+      
+  <figure class="links"> 
+  <a href="<?php echo home_url();?>/wordpress/blog/websites/mannering-music" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
   </figcaption>
 
 
@@ -82,19 +75,13 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg2">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/www-mannering-music-website-small.png" alt="Mannering Music website home page">
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-mannering-music-home-page-small.png" alt="Mannering Music website home page">
 
   <figcaption class="showcase-content">
-  <h1>Website:</h1>
-  <p>Mannering Music</p>
-  <h1>Description:</h1>
-  <p>Website based on a website brief for a website project I had to complete for the City & Guilds Level 3 Web design exam. See full code on <strong><a href="https://github.com/DigbyCeaser/New-Mannering-Folder">GitHub</a></strong>&#46;</p>
-  <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3&#44; Jquery&#44; PHP&#46; MySQLi&#46; Ajax&#46;</p>
-  <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <div class="links"> <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-mannering-music-page-large.jpg" title="Mannering Music website home page">See Image</a>
-  <a href="http://www.mannering-music.raythompsonwebdev.co.uk" title="www.mannering-music.raythompsonwebdev.co.uk">Visit Website</a></div>
+  <h1>Mannering Music</h1>
+  <p>Online music store</p>
+    
+  <div class="links"> <a href="<?php echo home_url();?>/wordpress/blog/websites/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
   </figure>
 </div>
@@ -105,19 +92,13 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg3">
 
-    <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/www-car-rental-home-page-small.png" alt="Car Rental website home page">
+    <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-car-rental-home-page-small.png" alt="Car Rental website home page">
 
     <figcaption class="showcase-content">
-    <h1>Website:</h1>
-    <p>Car Rental</p>
-    <h1>Description:</h1>
-    <p>Online Car&#45;Rental booking website template built from Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46; See full code on <strong><a href="https://github.com/DigbyCeaser/Car-Rental-Foundation">GitHub</a></strong>&#46; </p>
-    <h1>Development Technologies:</h1>
-    <p>Foundation 6&#44;HTML5&#44; CSS3&#44; Jquery&#44;</p>
-    <h1>Formats</h1>
-    <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-car-rental-home-page-large.jpg" title="Car Rental website home page">See Image</a>
-    <a href="http://www.car-rental.raythompsonwebdev.co.uk" title="www.car-rental.raythompsonwebdev.co.uk">Visit Website</a></div>
+    <h1>Car Rental</h1>
+    <p>Online car rental booking website</p>
+        
+    <div class="links"><a href="<?php echo home_url();?>/wordpress/blog/websites/car-rental" title="www.car-rental.raythompsonwebdev.co.uk">See more..</a></div>
     </figcaption>
 
   </figure>
@@ -129,19 +110,13 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg4">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/www-shoe-store-home-page-small.png" alt="Shoestore website home page">
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-shoe-store-home-page-small.png" alt="Shoestore website home page">
 
   <figcaption class="showcase-content showcase-d">
-  <h1>Website:</h1>
-  <p>Shoestore</p>
-  <h1>Description</h1>
-  <p>Online shoe store website template built from Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber&#46;com</strong></a>&#46; See full code on <strong><a href="https://github.com/DigbyCeaser/ShoeStore-Jquery">GitHub</a></strong>&#46;</p>
-  <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3 and jQuery&#46;</p>
-  <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-shoe-store-home-page-large-1.jpg"  title="Shoestore website home page">See Image</a>
-  <a href="http://www.shoestore.raythompsonwebdev.co.uk" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
+  <h1>Shoestore</h1>
+  <p>Online shoe and accessories store</p>
+    
+  <div class="links"><a href="<?php echo home_url();?>/wordpress/blog/websites/shoe-store" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
   </figcaption>
 
   </figure>
@@ -153,18 +128,13 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg5">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/www-greenfootprints-home-page-small.png" alt="Greenfootprints home page">
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-greenfootprints-home-page-small.png" alt="greenfootprints website home page">
 
   <figcaption class="showcase-content showcase-e">
-    <h1>Website:</h1>
-    <p>Greenfootprints.com</p>
-    <h1>Description:</h1>
-    <p>Website based on website project I built as a task for City & Guilds Level 2 Website exam. See full code on <strong><a href="https://github.com/DigbyCeaser/greenfootprints-project">GitHub</a></strong>&#46;</p>
-    <h1>Development Technologies:</h1>
-    <p>HTML5&#44; CSS3&#46; jQuery </p>
-    <h1>Formats</h1>
-    <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-    <div class="links"><a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-greenfootprints-home-page-large.jpg" title="Greenfootprints home page">See Image</a><a href="http://www.greenfootprints.raythompsonwebdev.co.uk"title="www.greenfootprints.raythompsonwebdev.co.uk">Visit Website</a></div>
+    <h1>Greenfootprints.com</h1>
+    <p>Website for UK leading recyling organisation</p>
+    
+    <div class="links"><a href="<?php echo home_url();?>/wordpress/blog/websites/greenfootprints"title="www.greenfootprints.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
 
   </figure>
@@ -176,18 +146,14 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg6">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/www-travel-agency-website-small.png"  alt="Travel Agency website home page" >
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-travel-agency-home-page-small.png"  alt="Travel Agency website home page" >
 
   <figcaption class="showcase-content showcase-f">
-  <h1>Website:</h1>
-  <p>Travel Agency</p>
-  <h1>Description:</h1>
-  <p>Online Travel Agency website Template built from Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46; See full code on <strong><a href="https://github.com/DigbyCeaser/Holiday-Site-Jquery-1">GitHub</a></strong>&#46;</p>
-  <h1>Development Technologies:</h1>
-  <p>HTML5&#44; CSS3 and Jquery&#46; </p>
-  <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-  <div class="links"><a href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-travel-agency-page-large.jpg" class="fancybox" title="Travel Agency home page" id="tavel">See Image</a><a href="http://www.travelagency.raythompsonwebdev.co.uk" title="www.travelagency.raythompsonwebdev.co.uk">Visit Website</a></div>
+  <h1>Travel Agency</h1>
+  <p>Online travel booking website</p>
+  
+  
+ <div class="links"><a href="<?php echo home_url();?>/wordpress/blog/websites/travel-agency" title="www.travelagency.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
 
   </figure>
@@ -199,20 +165,15 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg7">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/portfolio-graphics-mixtape-1.jpg" alt="Image of mixtape cover" >
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/portfolio-graphics-mixtape-cover-small.jpg" alt="mixtape cover" >
 
   <figcaption class="showcase-content showcase-g" >
 
-  <h1>Graphic:</h1>
-
-  <p>Mixtape Covers</p>
-
-  <h1>Description:</h1>
-
-  <p><strong>Mixtape Cover-</strong>Idea I had for a mixtape of various reggae artists mixed over Classic Wu-Tang Clan music Instrumentals&#46;</p>
-
+  <h1>Mixtape Covers</h1>
+  <p></p>
+  
   <div class="links">
-  <a href="<?php echo home_url();?>/wp-content/uploads/2017/04/portfolio-graphics-mixtape.jpg" class="fancybox" title="Mixtape cover " >See Image</a>  </div>
+  <a href=""  title="mixtape cover " >See Image</a>  </div>
 
   </figcaption>
   </figure>
@@ -224,21 +185,14 @@ Template Name: Websites
 
   <figure class="showcase-img" id="showcaseimg8">
 
-  <img src="<?php echo home_url();?>/wp-content/uploads/2017/04/www-fitness-club-home-page-small.png" alt="www-fitness-club-home-page">
+  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-fitness-club-home-page-small.png" alt="fitness club website home page">
 
   <figcaption class="showcase-content showcase-h">
 
-  <h1>Website:</h1>
-  <p>Fitness Club</p>
-  <h1>Description:</h1>
-  <p>Gym website template built using Photoshop template design downloaded from <a href="http://www.phpjabbers.com"><strong>PHPJabber.com</strong></a>&#46; See full code on <strong><a href="https://github.com/DigbyCeaser/Fitness-Club">GitHub</a></strong>&#46;</p>
-  <h1>Development Technologies:</h1>
-  <p>HTML5, CSS3, Jquery and Foundation 6&#46; </p>
-  <h1>Formats</h1>
-  <p><span class="fa fa-desktop" title="Desktop"></span><span class="fa fa-tablet" title="Tablet"></span><span class="fa fa-mobile" title="Mobile"></span></p>
-
-  <div class="links">
-  <a class="fancybox" href="<?php echo home_url();?>/wp-content/uploads/2017/04/www-fitness-club-home-page-large.jpg"  title="">See Image</a><a href="http://www.fitness-club.raythompsonwebdev.co.uk" title="www.fitness-club.raythompsonwebdev.co.uk">Visit Website</a>
+  <h1>Fitness Club</h1>
+  <p></p>
+  
+  <div class="links"><a href="<?php echo home_url();?>/wordpress/blog/websites/fitness-club" title="www.fitness-club.raythompsonwebdev.co.uk">See more..</a>
   </div>
 
   </figcaption>
