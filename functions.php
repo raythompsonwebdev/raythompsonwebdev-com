@@ -220,7 +220,7 @@ function my_scripts_own() {
     }
     
     //websites page
-    if( is_page('websites')){
+    if( is_page('websites') ){
         
     //master
     wp_register_script( 'websites', get_template_directory_uri() . '/js/websites.js', array('jquery'),'20161110', true );

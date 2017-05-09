@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
       openEffect  : 'elastic',
       closeEffect : 'elastic'
 
-    }),
+    });
 
 
 }); 

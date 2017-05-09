@@ -58,7 +58,7 @@ Template Name: Websites
   <p> Advice and Forum website for newbie campers</p>
       
   <figure class="links"> 
-  <a href="<?php echo home_url();?>/wordpress/blog/websites/mannering-music" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
+  <a href="<?php echo home_url();?>/wordpress/blog/websites/camping-advice" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
   </figcaption>
 
 
