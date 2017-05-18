@@ -30,10 +30,11 @@
         <?php the_meta(); ?>
         <div class="links"> 
         <p class="formats">
-            <span>Formats</span>
-      <span class="fa fa-desktop" title="Desktop"> DeskTop</span>
-      <span class="fa fa-tablet" title="Tablet"> Tablet</span>
-      <span class="fa fa-mobile" title="Mobile"> Mobile</span>
+            <span>Website Formats</span>
+            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-desktop"></i></a></span>
+            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-tablet" title="Tablet"></i></a></span>
+            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-mobile"></i></a></span>
+
   </p>
        </div>
         

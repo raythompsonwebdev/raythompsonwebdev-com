@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
     
       $(this).find('.showcase-content').slideToggle(1000 , 'easeInOutExpo' );
  
-  })
+  });
  
  
 });

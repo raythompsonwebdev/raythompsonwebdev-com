@@ -89,18 +89,18 @@
 
         <article class="prof_cont "><!--prof cont-->
 
-            <h1>Web Development Training</h1>
+            <h1>Website Development Training</h1>
 
             <article class="hero-slider"><!-- #hero-slider -->
                 
                 <ul id="list">
                     <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Photoshop</a></li>
                     <li><a href="#" rel="#panel-2" title="Adobe Certificate in Communication">Dreamweaver</a></li>
-                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level One" >Web Design L1</a></li>
-                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Two">Web Design L2</a></li>
-                    <li><a href="#" rel="#panel-5" title="City and Guilds Web Design Certificate Level Three">Web Design L3</a></li>
+                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level One" >City &amp; Guilds 1</a></li>
+                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Two">City &amp; Guilds 2</a></li>
+                    <li><a href="#" rel="#panel-5" title="City and Guilds Web Design Certificate Level Three">City &amp; Guilds 3</a></li>
                     <li><a href="#" rel="#panel-6" title="Udemy and Lynda-com Online course certificates">Lynda.com</a></li>
-                    <li><a href="#" rel="#panel-7" title="Shaw Academy Online course certificate">Mobile Web Applications</a></li>
+                    <li><a href="#" rel="#panel-7" title="Shaw Academy Online course certificate">Mobile App Development</a></li>
                     <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Digital Marketing</a></li>
                     <li><a href="#" rel="#panel-9" title="Shaw Academy course certificate">Content Marketing</a></li>
                 </ul>
@@ -111,24 +111,24 @@
 
                         <article class="panel" id="panel-1">
 
-                            <h2>Photoshop</h2>
+                            <h2>Adobe Certified Associates </h2>
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Large-Photoshop-Certicate-.jpg" class="fancyboxclass=" title="Adobe Certificate in Visual Communication">
+                                <a href="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
                                      
                                 </a>
                                     <figcaption>
-                                        <h3>Adobe Certified Associates Visual Communication</h3>
+                                        <h3>Visual Communication: Photoshop CS4</h3>
                                         <h4>Topics&#58;</h4>
                                         <ul>
-                                            <li>Setting project requirements</li>
-                                            <li>Identifying Design Elememts when Preparing Images</li>
-                                            <li>Understanding Photoshop Interface</li>
-                                            <li>Manipulating Images</li>
-                                            <li>Evaluating Digital Images</li>
+                                            <li><a href="">Setting project requirements</a></li>
+                                            <li><a href="">Identifying Design Elememts when Preparing Images</a></li>
+                                            <li><a href="">Understanding Photoshop Interface</a></li>
+                                            <li><a href="">Manipulating Images</a></li>
+                                            <li><a href="">Evaluating Digital Images</a></li>
                                             
                                         </ul>
 
@@ -142,22 +142,22 @@
 
                         <article class="panel" id="panel-2">
 
-                            <h2>Dreamweaver</h2>
+                            <h2>Adobe Certified Associates</h2>
 
                             <figure class="abobe">
 
                                 <a href="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Large-Dreamweaver-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Communication">
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Small-Dreamweaver-Certicate.jpg" alt="Adobe-Deamweaver-Certificate"></a>
                                 <figcaption>
-                                    <h3>Adobe Certified Associates Web Communication</h3>
+                                    <h3>Web Communication: Dreamweaver</h3>
                                     <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Setting project requirements</li>
-                                            <li>Planning Site Design and Page layout</li>
-                                            <li>Understanding Dreamweaver Interface</li>
-                                            <li>Adding Content&#44; Organizing Content</li>
-                                            <li>Evaluating and Maintaining a Site</li>
+                                            <li><a href="">Setting project requirements</a></li>
+                                            <li><a href="">Planning Site Design and Page layout</a></li>
+                                            <li><a href="">Understanding Dreamweaver Interface</a></li>
+                                            <li><a href="">Adding Content&#44; Organizing Content</a></li>
+                                            <li><a href="">Evaluating and Maintaining a Site</a></li>
                                             
                                     </ul>
                                     <div class="clearfix"></div>
@@ -169,7 +169,7 @@
 
                         <article class="panel" id="panel-3">
 
-                            <h2>Web Design Certificate</h2>
+                            <h2>City &amp; Guilds Level 1</h2>
 
                             <figure class="cert">
 
@@ -184,13 +184,13 @@
                                 <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Improving productivity using IT</li>
-                                            <li>IT Communication Fundementals</li>
-                                            <li>Website Software</li>
-                                            <li>Adding Content</li>
-                                            <li>IT User fundementals</li>
-                                            <li>Organizing Content</li>
-                                            <li>Using the Internet</li>
+                                            <li><a href="">Improving productivity using IT</a></li>
+                                            <li><a href="">IT Communication Fundementals</a></li>
+                                           
+                                            <li><a href="">Adding Content</a></li>
+                                            <li><a href="">IT User fundementals</a></li>
+                                            <li><a href="">Organizing Content</a></li>
+                                            <li><a href="">Using the Internet</a></li>
                                     </ul>
                                          <div class="clearfix"></div>                   
                                 </figcaption>
@@ -201,7 +201,7 @@
 
                         <article class="panel" id="panel-4">
 
-                            <h2>Web Design Certificate</h2>
+                            <h2>City &amp; Guilds Level 2</h2>
 
                             <figure class="cert">
 
@@ -215,11 +215,11 @@
                                 <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Database software</li>
-                                            <li>Design Software</li>
-                                            <li>Imaging Software</li>
-                                            <li>Website Software</li>
-                                            <li>Improving Productivity using IT3</li>
+                                        <li><a href="">Database software</a></li>
+                                            <li><a href="">Design Software</a></li>
+                                            <li><a href="">Imaging Software</a></li>
+                                            <li><a href="">Website Software</a></li>
+                                            <li><a href="">Improving Productivity using IT</a></li>
                                          
                                     </ul>
                                    <div class="clearfix"></div>
@@ -231,7 +231,7 @@
 
                         <article class="panel" id="panel-5">
 
-                            <h2>Web Design Certificate</h2>
+                            <h2>City &amp; Guilds Level 3</h2>
 
                             <figure class="cert">
 
@@ -245,11 +245,11 @@
                                 <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Database software</li>
-                                            <li>Design Software</li>
-                                            <li>Imaging Software</li>
-                                            <li>Website Software</li>
-                                            <li>Using Internet</li>
+                                            <li><a href="">Database software</a></li>
+                                            <li><a href="">Design Software</a></li>
+                                            <li><a href="">Imaging Software</a></li>
+                                            <li><a href="">Website Software</a></li>
+                                            <li><a href="">Using Internet</a></li>
                                          
                                     </ul>
                                     <div class="clearfix"></div>
@@ -262,7 +262,7 @@
 
                         <article class="panel" id="panel-6">
 
-                            <h2>Lynda.com</h2>
+                            <h2>Lynda.com / Udemy</h2>
 
                             <figure class="abobe">
 
@@ -282,6 +282,9 @@
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/wordpress-building-themes-from-scratch-using-underscores">WordPress: Building Themes from Scratch Using Underscores</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
+                                        <li><a class="lyndalink" href="">Angular JS Essentials</a></li>
+                                        
+                                        
                                        <br/>  
                                     </ul>
                                           <div class="clearfix"></div>
@@ -294,7 +297,7 @@
 
                         <article class="panel" id="panel-7">
 
-                            <h2>Mobile App Development</h2>
+                            <h2>Shaw Academy</h2>
 
                             <figure class="cert">
 
@@ -309,12 +312,12 @@
                                     <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Introduction to Mobile App Development</li>
-                                            <li>Designing our App</li>
-                                            <li>User Interfaces with HTML</li>
-                                            <li>Coding Functions</li>
-                                            <li>Web Hosting/Deploying Apps</li>
-                                            <li>Mobile App Dev Life Cycle</li>
+                                        <li><a href="">Introduction to Mobile App Development</a></li>
+                                            <li><a href="">Designing our App</a></li>
+                                            <li><a href="">User Interfaces with HTML</a></li>
+                                            <li><a href="">Coding Functions</a></li>
+                                            <li><a href="">Web Hosting/Deploying Apps</a></li>
+                                            <li><a href="">Mobile App Dev Life Cycle</a></li>
                                          
                                     </ul>
                                     <div class="clearfix"></div>
@@ -326,7 +329,7 @@
 
                         <article class="panel" id="panel-8">
 
-                            <h2>Digital Marketing</h2>
+                            <h2>Shaw Academy</h2>
 
                             <figure class="cert">
 
@@ -337,16 +340,16 @@
                                 </a>
                                 
                                 <figcaption>
-                                    <h3>Shaw Academy &#45; Diploma in Digital Marketing</h3>
+                                    <h3>Diploma in Digital Marketing</h3>
                                     <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Adwords/Pay Per Click</li>
-                                            <li>Search Engine Optimisation</li>
-                                            <li>Affiliate Marketing</li>
-                                            <li>Social Media</li>
-                                            <li>Web Analytics</li>
-                                            <li>Blogging</li>
+                                            <li><a href="">Adwords/Pay Per Click</a></li>
+                                            <li><a href="">Search Engine Optimisation</a></li>
+                                            <li><a href="">Affiliate Marketing</a></li>
+                                            <li><a href="">Social Media</a></li>
+                                            <li><a href="">Web Analytics</a></li>
+                                            <li><a href="">Blogging</a></li>
                                          
                                     </ul>
                                     <div class="clearfix"></div>                                    
@@ -359,7 +362,7 @@
 
                         <article class="panel" id="panel-9">
 
-                            <h2>Blogging &#38; Content Marketing</h2>
+                            <h2>Shaw Academy</h2>
 
                             <figure class="cert">
 
@@ -370,16 +373,16 @@
                                 </a>
                                 
                                 <figcaption>
-                                    <h3>Shaw Academy &#45; Diploma in Blogging &#38; Content Marketing</h3>
+                                    <h3>Diploma in Blogging &#38; Content Marketing</h3>
                                     <h4>Topics&#58;</h4>
                                     
                                     <ul>
-                                            <li>Blogging</li>
-                                            <li>Vlogging</li>
-                                            <li>Content Marketing</li>
-                                            <li>Building online communities</li>
-                                            <li>Content curation</li>
-                                            <li>Monetising blogs</li>
+                                        <li><a href="">Blogging</a></li>
+                                            <li><a href="">Vlogging</a></li>
+                                            <li><a href="">Content Marketing</a></li>
+                                            <li><a href="">Building online communities</a></li>
+                                            <li><a href="">Content curation</a></li>
+                                            <li><a href="">Monetising blogs</a></li>
                                                                                      
                                     </ul>
                                     

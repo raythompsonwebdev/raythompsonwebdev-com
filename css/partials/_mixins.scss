@@ -12,7 +12,6 @@
 
 
 @mixin Transition( $move... ) {
-
     -webkit-transition: $move;
     -moz-transition: $move;
     -o-transition: $move;
@@ -50,5 +49,12 @@
     -moz-border-radius: $shadow;
     -o-border-radius: $shadow;
     border-radius: $shadow;
+}
+
+@mixin originTran( $origin... ) {
+    -webkit-transform-origin: $origin;
+    -moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    transform-origin: $origin;
 }
 
