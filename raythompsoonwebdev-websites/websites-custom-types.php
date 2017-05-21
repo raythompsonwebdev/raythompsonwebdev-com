@@ -34,20 +34,20 @@ function custom_post_type() {
 
 // Set UI labels for Custom Post Type
 	$labels = array(
-		'name'                => _x( 'Websites', 'Post Type General Name', 'raythompsonwebdev-com' ),
-		'singular_name'       => _x( 'Websites', 'Post Type Singular Name', 'raythompsonwebdev-com' ),
-		'menu_name'           => __( 'Websites', 'raythompsonwebdev-com' ),
-		'name_admin_bar'      => __( 'Websites', 'raythompsonwebdev-com' ),
-		'parent_item_colon'   => __( 'Parent Websites', 'raythompsonwebdev-com' ),
+		'name'                => _x( 'Website', 'Post Type General Name', 'raythompsonwebdev-com' ),
+		'singular_name'       => _x( 'Website', 'Post Type Singular Name', 'raythompsonwebdev-com' ),
+		'menu_name'           => __( 'Website', 'raythompsonwebdev-com' ),
+		'name_admin_bar'      => __( 'Website', 'raythompsonwebdev-com' ),
+		'parent_item_colon'   => __( 'Parent Website', 'raythompsonwebdev-com' ),
 		//'menu_icon' 					=> get_stylesheet_directory_uri() . '/images/portfolio-icon.png',
 		//'menu_icon' => 'dashicons-download',
-		'all_items'           => __( 'Websites', 'raythompsonwebdev-com' ),
-		'view_item'           => __( 'View Websites', 'raythompsonwebdev-com' ),
-		'add_new_item'        => __( 'Add New Websites', 'raythompsonwebdev-com' ),
-		'add_new'             => __( 'Add Websites', 'raythompsonwebdev-com' ),
-		'edit_item'           => __( 'Edit Websites', 'raythompsonwebdev-com' ),
-		'update_item'         => __( 'Update Websites', 'raythompsonwebdev-com' ),
-		'search_items'        => __( 'Search Websites', 'raythompsonwebdev-com' ),
+		'all_items'           => __( 'Website', 'raythompsonwebdev-com' ),
+		'view_item'           => __( 'View Website', 'raythompsonwebdev-com' ),
+		'add_new_item'        => __( 'Add New Website', 'raythompsonwebdev-com' ),
+		'add_new'             => __( 'Add Website', 'raythompsonwebdev-com' ),
+		'edit_item'           => __( 'Edit Website', 'raythompsonwebdev-com' ),
+		'update_item'         => __( 'Update Website', 'raythompsonwebdev-com' ),
+		'search_items'        => __( 'Search Website', 'raythompsonwebdev-com' ),
 		'not_found'           => __( 'Not Found', 'raythompsonwebdev-com' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'raythompsonwebdev-com' ),
 		'featured_image'      => __( 'Featured Image', 'raythompsonwebdev-com' ),
@@ -59,13 +59,13 @@ function custom_post_type() {
 // Set other options for Custom Post Type
 
 	$args = array(
-		'label'               => __( 'Websites', 'raythompsonwebdev-com' ),
-		'description'         => __( 'Websites news and reviews', 'raythompsonwebdev-com' ),
+		'label'               => __( 'Website', 'raythompsonwebdev-com' ),
+		'description'         => __( 'Website Gallery', 'raythompsonwebdev-com' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
 		// You can associate this CPT with a taxonomy or custom taxonomy.
-		'taxonomies'          => array( 'video-category' , 'post_tag' ),
+		'taxonomies'          => array( 'website-category' , 'post_tag' ),
 		/* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
@@ -88,7 +88,7 @@ function custom_post_type() {
 	);
 
 	// Registering your Custom Post Type
-	register_post_type( 'websites', $args );
+	register_post_type( 'website', $args );
 
 }
 
@@ -103,29 +103,29 @@ add_action( 'init', 'custom_post_type', 0 );
 function my_taxonomies_product() {
 
   $labels = array(
-    'name'              => _x( 'Websites Categories', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Websites Category', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Websites Categories' ),
-    'all_items'         => __( 'All Websites Categories' ),
-    'parent_item'       => __( 'Parent Websites Category' ),
-    'parent_item_colon' => __( 'Parent Websites Category:' ),
-    'edit_item'         => __( 'Edit Websites Category' ),
-    'update_item'       => __( 'Update Websites Category' ),
-    'add_new_item'      => __( 'Add New Websites Category' ),
-    'new_item_name'     => __( 'New Websites Category' ),
-    'menu_name'         => __( 'Websites Categories' ),
+    'name'              => _x( 'Website Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Website Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Website Categories' ),
+    'all_items'         => __( 'All Website Categories' ),
+    'parent_item'       => __( 'Parent Website Category' ),
+    'parent_item_colon' => __( 'Parent Website Category:' ),
+    'edit_item'         => __( 'Edit Website Category' ),
+    'update_item'       => __( 'Update Website Category' ),
+    'add_new_item'      => __( 'Add New Website Category' ),
+    'new_item_name'     => __( 'New Website Category' ),
+    'menu_name'         => __( 'Website Categories' ),
   );
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
 		'query_var' => true,
             'rewrite' => array(
-                'slug' => 'websites-category', // This controls the base slug that will display before each term
+                'slug' => 'website-category', // This controls the base slug that will display before each term
                 'with_front' => false // Don't display the category base before
 							)
 
   );
-  register_taxonomy( 'websites-category', 'websites', $args );
+  register_taxonomy( 'website-category', 'website', $args );
 
 
 }
@@ -144,35 +144,35 @@ register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
 //add meta boxes
 add_action( 'add_meta_boxes', 'add_websites_metaboxes' );
-
-
 function add_websites_metaboxes() {
-	add_meta_box('websites_details', esc_html__('Websites Details','raythompsonwebdev-com'), 'websites_fields', 'websites', 'normal', 'default');
+	add_meta_box('website_details', esc_html__('Website Details','raythompsonwebdev-com'), 'website_fields', 'website', 'normal', 'default');
 }
 
 
 
-function websites_fields (){
+function website_fields (){
 
 	global $post;
 
 	$custom = get_post_custom($post->ID);
 
-	$website_name = $custom["website_name"][0];
-	$website_code = $custom["website_code"][0];
-	$website_url = $custom["website_url"][0];
-	$website_description = $custom["website_description"][0];
-
+	$website_name = $custom["Website Name"][0];
+	$website_description = $custom["Website Description"][0];
+	$website_code = $custom["Website Code"][0];
+	$website_url = $custom["Website URL"][0];
+	
     ?>
 
-<p><label>Website Name:</label><br /><input size="45" name="website_name"  value="<?php echo $website_name; ?>" /></p>
+<p><label>Website Name:</label><br /><input size="45" name="Website Name"  value="<?php echo $website_name; ?>" /></p>
 
-<p><label>Website Code:</label><br /><input size="45" name="website_code" value="<?php echo $website_code; ?>" /></p>
-
-<p><label>Website URL:</label><br /><input size="45" name="website_url" value="<?php echo $website_url; ?>" /></p>
-
-<p><label>Website Description:</label><br /><textarea col="15" rows="10" name="website_description" value="<?php echo $website_description; ?>"></textarea>
+<p><label>Website Description:</label><br /><textarea col="15" rows="10" name="Website Description" value="<?php echo $website_description; ?>"></textarea>
 </p>
+
+<p><label>Website Code:</label><br /><input size="45" name="Website Code" value="<?php echo $website_code; ?>" /></p>
+
+<p><label>Website URL:</label><br /><input size="45" name="Website URL" value="<?php echo $website_url; ?>" /></p>
+
+
 
 	<?php
 
@@ -187,10 +187,11 @@ function save_website_attributes(){
 
     global $post;
 
-    update_post_meta($post->ID, "website_name",  $_POST["website_name"]);
-    update_post_meta($post->ID, "website_code", $_POST["website_code"]);
-    update_post_meta($post->ID, "website_url", $_POST["website_url"]);
-		update_post_meta($post->ID, "website_description", $_POST["website_description"]);
+    update_post_meta($post->ID, "Website Name",  $_POST["Website Name"]);
+	update_post_meta($post->ID, "Website Description", $_POST["Website Description"]);
+    update_post_meta($post->ID, "Website Code", $_POST["Website Code"]);
+    update_post_meta($post->ID, "Website URL", $_POST["Website URL"]);
+	
 
     // Bail if we're doing an auto save
     if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
@@ -205,7 +206,7 @@ function save_website_attributes(){
 
 
 
-/*
+
 
 function check_current_screen() {
     if( !is_admin() ) return;
@@ -214,13 +215,13 @@ function check_current_screen() {
 }
 add_action( 'admin_notices', 'check_current_screen' );
 
-/*
+
 function conference_contextual_help() {
 
 	$editspeaker = "From this screen, you can view and update all your soundclash's...";
-	$addspeaker = "Enter the details of a new soundclash...";
+	$addspeaker = "Enter the details of a new Website...";
 
-	$editsession = "View and edit your soundclash sessions...";
+	$editsession = "View and edit your Website...";
 	$addsession = "Add a new session ...";
 
 	$editsessiontopics = "Add and edit topics...";
@@ -236,6 +237,7 @@ function conference_contextual_help() {
 }
 
 add_action('admin_init', 'conference_contextual_help');
+
 
 
 // The Event Location Metabox
@@ -259,7 +261,6 @@ function clash_location() {
 }
 
 
-*/
 //Save the Metabox Data
 
 function wpt_save_clash_meta($post_id, $post) {
