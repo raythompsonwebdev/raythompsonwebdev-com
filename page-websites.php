@@ -82,7 +82,7 @@ Template Name: Websites
   <h1>Mannering Music</h1>
   <p>Online music store</p>
     
-  <div class="links"> <a href=" http://www.raythompsonwebdev.co.uk/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
+  <div class="links"> <a href=" https://www.raythompsonwebdev.co.uk/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
   </figure>
 </div>
@@ -117,7 +117,7 @@ Template Name: Websites
   <h1>Shoestore</h1>
   <p>Online shoe and accessories store</p>
     
-  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/shoe-store" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
+  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/shoe-store/" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
   </figcaption>
 
   </figure>
