@@ -80,7 +80,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content">
   <h1>Mannering Music</h1>
-  <p>Online music store</p>
+  <p>Online music store selling Hip Hop, Jazz and Country music albums</p>
     
   <div class="links"> <a href=" https://www.raythompsonwebdev.co.uk/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>

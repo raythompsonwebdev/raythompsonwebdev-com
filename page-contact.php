@@ -29,7 +29,7 @@ Template Name: Contact
 <ul class="skills" >
     <li> <a href="mailto:raymond.thompson@raythompwebdev.co.uk">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
     <br/>
-    <li><a href="mailto:ray_thomp@hushmail.com">ray_thomp@hushmail.com</a></li>
+   
     <br/>
 </ul> 
 
