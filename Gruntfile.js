@@ -14,9 +14,9 @@ module.exports = function(grunt){
                 use: [mozjpeg()]
               },
               files: {                         // Dictionary of files 
-                'dist/img.png': 'src/img.png', // 'destination': 'source' 
-                'dist/img.jpg': 'src/img.jpg',
-                'dist/img.gif': 'src/img.gif'
+                'images/optimised images/img.png': 'images/img.png', // 'destination': 'source' 
+                'images/optimised images/img.jpg': 'images/img.jpg',
+                'images/optimised images/img.gif': 'images/img.gif'
               }
             }, */
   /*          dynamic: {                         // Another target 
@@ -90,7 +90,7 @@ module.exports = function(grunt){
     
     //grunt.registerTask('default', ['imagemin']);
    
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['watch', 'sass']);
 
 
 }
