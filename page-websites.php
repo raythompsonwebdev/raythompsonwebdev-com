@@ -58,8 +58,8 @@ Template Name: Websites
   <p> Advice and Forum website for newbie campers</p>
       
   <figure class="links"> 
-      <!--<?//php echo home_url();?>/website/camping-advice-->
-  <a href="https://www.raythompsonwebdev.co.uk/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
+      <!--<?//https://www.raythompsonwebdev.co.ukphp echo home_url();?>/website/camping-advice-->
+  <a href="<?php echo home_url();?>/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
   </figcaption>
 
 
