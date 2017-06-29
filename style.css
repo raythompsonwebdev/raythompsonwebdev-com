@@ -435,296 +435,272 @@ th {
   padding: 0;
 }
 
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* html {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+.fancybox-custom .fancybox-skin {
+  box-shadow: 0 0 50px #222;
+}
+
+/*Clearfix*/
+*.float-divider {
+  clear: both;
+  display: block;
+  height: 1px;
+  font-size: 1px;
+  line-height: 1px;
+}
+
+.group:after,
+.group:before {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+/* end of Clearfix*/
+/*images*/
+img#wpstats {
+  display: none;
+  width: 2px;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: bottom;
+}
+
+.post img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/*end of images*/
+/*Global*/
+a.nav-toggle {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #062351;
+  font-size: 1em;
+}
+a img {
+  border: 0;
+  outline: none;
+}
+a:link {
+  color: #062351;
+}
+a:visited {
+  color: #65686B;
+}
+a:focus {
+  color: #65686B;
+}
+a:hover {
+  color: #fff;
+  font-weight: bold;
+}
+a:active {
+  color: #65686B;
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  border: 1px solid #fff;
+  text-align: center;
+  background-color: #fff;
+  padding-top: 4px;
+}
+
+.wp-caption img {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  line-height: 1.214em;
+  padding: 0 4px 5px;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  color: #062351;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  color: #062351;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  list-style: none;
+  font-size: 1em;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  color: #062351;
+  background-color: #CCD3DE;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #062351;
+  padding: 0.2em 0;
+}
+
+.sticky {
+  font-size: 1em;
+}
+
+.screen-reader-text {
+  font-size: 0.95em;
+  color: #000;
+  line-height: 1.5em;
+}
+
+.gallery-caption {
+  font-size: 1em;
+}
+
+.cookie-notice-container {
+  font-size: 0.9em;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+}
+
+#cookie-notice .button.wp-default {
+  margin: 0;
+  height: 100%;
+  list-style: none;
+  background-color: #062351;
+  width: 23.9652349%;
+  color: #CCD3DE;
+  -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  letter-spacing: 0.1em;
+  border: none;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  font-size: 1em;
+  border: none;
+}
+
+.avatar-26 .photo {
+  left: 0px;
+}
+
+.container {
+  width: 38.729257%;
+  float: right;
+  margin: 0 1% 1% 2%;
+}
+
+div.textwidget {
+  height: auto;
+}
+
+.bypostauthor {
+  font-size: 1em;
+}
+
+.newExcerpt {
+  display: block;
+  padding: 1% 0;
+  margin: 0;
+}
+
+/* Small menu. */
+body {
+  background: #CCD3DE;
+  font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 @media only screen and (max-width: 120em) {
-  *,
-  *:after,
-  *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  * html {
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-    outline: none;
-  }
-
-  * html .clearfix {
-    height: 1%;
-  }
-
-  html[xmlns] .clearfix {
-    display: block;
-  }
-
-  .fancybox-custom .fancybox-skin {
-    box-shadow: 0 0 50px #222;
-  }
-
-  /*Clearfix*/
-  *.float-divider {
-    clear: both;
-    display: block;
-    height: 1px;
-    font-size: 1px;
-    line-height: 1px;
-  }
-
-  .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-  }
-
-  .clearfix {
-    display: block;
-    clear: both;
-  }
-
-  .clearfix:before,
-  .group:after,
-  .group:before {
-    content: "";
-    display: table;
-  }
-
-  .group:after {
-    clear: both;
-  }
-
-  /* end of Clearfix*/
-  /*images*/
-  img#wpstats {
-    display: none;
-    width: 2px;
-  }
-
-  img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border: 0;
-    vertical-align: bottom;
-  }
-
-  .post img {
-    max-width: 100%;
-    vertical-align: bottom;
-  }
-
-  /*end of images*/
-  /*Global*/
-  a.nav-toggle {
-    display: none;
-  }
-
-  a {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    color: #062351;
-    font-size: 1em;
-  }
-  a img {
-    border: 0;
-    outline: none;
-  }
-  a:link {
-    color: #062351;
-  }
-  a:visited {
-    color: #65686B;
-  }
-  a:focus {
-    color: #65686B;
-  }
-  a:hover {
-    color: #fff;
-    font-weight: bold;
-  }
-  a:active {
-    color: #65686B;
-  }
-
-  img.centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .alignright {
-    float: right;
-  }
-
-  .alignleft {
-    float: left;
-  }
-
-  .aligncenter,
-  div.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .wp-caption {
-    border: 1px solid #fff;
-    text-align: center;
-    background-color: #fff;
-    padding-top: 4px;
-  }
-
-  .wp-caption img {
-    margin: 0;
-    padding: 0;
-    border: 0 none;
-  }
-
-  .wp-caption p.wp-caption-text {
-    font-size: 0.85em;
-    line-height: 1.214em;
-    padding: 0 4px 5px;
-    margin: 0;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    color: #062351;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-  }
-
-  p {
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    color: #062351;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-  }
-
-  ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    list-style: none;
-    font-size: 1em;
-    margin: 0;
-  }
-
-  figure {
-    margin: 0;
-    padding: 0;
-  }
-
-  button:hover {
-    color: #062351;
-    background-color: #CCD3DE;
-  }
-
-  .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #062351;
-    padding: 0.2em 0;
-  }
-
-  .sticky {
-    font-size: 1em;
-  }
-
-  .screen-reader-text {
-    font-size: 0.95em;
-    color: #000;
-    line-height: 1.5em;
-  }
-
-  .gallery-caption {
-    font-size: 1em;
-  }
-
-  .cookie-notice-container {
-    font-size: 0.9em;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  }
-
-  #cookie-notice .button.wp-default {
-    margin: 0;
-    height: 100%;
-    list-style: none;
-    background-color: #062351;
-    width: 23.9652349%;
-    color: #CCD3DE;
-    -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    letter-spacing: 0.1em;
-    border: none;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    font-size: 1em;
-    border: none;
-  }
-
-  .avatar-26 .photo {
-    left: 0px;
-  }
-
-  .container {
-    width: 38.729257%;
-    float: right;
-    margin: 0 1% 1% 2%;
-  }
-
-  .social_media_container {
-    float: left;
-    width: 44.7293%;
-    display: block;
-    margin: 0;
-    height: auto;
-    min-height: 250px;
-  }
-
-  div.textwidget {
-    height: auto;
-  }
-
-  .bypostauthor {
-    font-size: 1em;
-  }
-
-  .newExcerpt {
-    display: block;
-    padding: 1% 0;
-    margin: 0;
-  }
-
-  /* Small menu. */
-  body {
-    background: #CCD3DE;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
   #wrapper_container {
     background: #CCD3DE;
-    width: 84%;
+    width: 86%;
     height: auto;
     margin: 0 auto;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
@@ -855,24 +831,58 @@ th {
     height: 150px;
     margin: 0;
     padding: 0;
-    text-align: center;
     background-color: #CCD3DE;
-    /* Text meant only for screen readers. */
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start;
     /*Navigation*/
     /*Mobile-Navigation*/
   }
   #wrapper_container header .site-logo {
     position: relative;
     top: -5px;
+    /* Text meant only for screen readers. */
   }
-  #wrapper_container header .screen-reader-text {
+  #wrapper_container header .site-logo a {
+    position: absolute;
+    z-index: 10;
+    top: 1em;
+    left: 0;
+    display: block;
+    width: 3em;
+    height: 3em;
+    background: #062351;
+    border: 2px solid #c0c9dd;
+    color: white;
+    text-decoration: none;
+    line-height: 40px;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+    -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+    -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+    -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
+    transition: background 0.2s linear 0s, color 0.2s linear 0s;
+  }
+  #wrapper_container header .site-logo .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
   }
-  #wrapper_container header .screen-reader-text:focus {
+  #wrapper_container header .site-logo .screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -892,56 +902,47 @@ th {
     z-index: 100000;
     /* Above WP toolbar. */
   }
-  #wrapper_container header .site-logo a {
-    position: absolute;
-    z-index: 10;
-    top: 1em;
-    left: 0;
-    display: block;
-    width: 2em;
-    height: 2em;
-    background: #062351;
-    border: 2px solid #c0c9dd;
-    color: white;
-    text-decoration: none;
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    transition: background 0.2s linear 0s, color 0.2s linear 0s;
-  }
   #wrapper_container header .site-logo a:focus,
   #wrapper_container header .site-logo a:hover {
     outline: 2px solid white;
   }
   #wrapper_container header .site-firstletter {
     font-family: 'Fira Sans', sans-serif;
-    font-size: 1.5em;
-    font-weight: 700;
+    font-size: 2.4em;
+    font-weight: normal;
     text-align: center;
-    line-height: 1.2em;
+    line-height: 44px;
   }
   #wrapper_container header .site-logo a:focus .site-firstletter,
   #wrapper_container header .site-logo a:hover .site-firstletter {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
+    font-weight: normal;
+    text-align: center;
+    line-height: 44px;
   }
-  #wrapper_container header h1#logo {
-    font-size: 2.3em;
+  #wrapper_container header hgroup {
+    width: 55%;
+    display: block;
+    float: left;
+    height: 50%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 2em;
     width: 100%;
-    height: 40px;
-    margin: 0;
+    height: 50px;
     font-weight: bold;
-    line-height: 40px;
+    line-height: 60px;
     color: #fff;
-    text-shadow: 2px 2px #b1bacd;
-    letter-spacing: 0.05em;
+    text-shadow: 2px 2px #bac7db;
+    display: block;
+    margin: 0;
+    padding-left: 6%;
+    letter-spacing: 0.03em;
+    float: left;
+    width: 90%;
   }
-  #wrapper_container header h1#logo span {
+  #wrapper_container header hgroup h1#logo span {
     height: 100%;
     padding: 0 0 0 0.2%;
     margin: 0;
@@ -949,39 +950,40 @@ th {
     text-align: left;
     display: inline-block;
   }
-  #wrapper_container header h1#logo span:last-of-type {
+  #wrapper_container header hgroup h1#logo span:last-of-type {
     height: 100%;
     padding: 0 0 0 0.2%;
     margin: 0;
     color: #062351;
     display: inline-block;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 2.3em;
-    width: 100%;
-    height: 40px;
-    margin: 0;
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 2em;
+    height: 50px;
     font-weight: bold;
-    line-height: 40px;
+    line-height: 60px;
     color: #fff;
-    text-shadow: 2px 3px #c0c9dd;
-    letter-spacing: 0.05em;
+    text-shadow: 2px 3px #bac7db;
+    display: block;
+    margin: 0;
+    padding-left: 6%;
+    letter-spacing: 0.03em;
+    float: left;
+    width: 90%;
   }
-  #wrapper_container header h1#logo-blog span {
+  #wrapper_container header hgroup h1#logo-blog span {
     height: 100%;
-    padding: 0 0 0 0.2%;
     margin: 0;
     color: #fff;
     text-align: left;
   }
-  #wrapper_container header h1#logo-blog span:last-of-type {
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
     height: 100%;
-    padding: 0 0 0 0.2%;
     margin: 0;
     color: #062351;
     margin: 0 0.5%;
   }
-  #wrapper_container header h2 {
+  #wrapper_container header hgroup h2 {
     float: none;
     display: block;
     width: 100%;
@@ -992,58 +994,46 @@ th {
     line-height: 25px;
     font-size: 0.8em;
     font-weight: normal;
+    padding-left: 6.5%;
+    clear: left;
   }
-  #wrapper_container header #title {
+  #wrapper_container header hgroup #title {
     float: left;
     min-width: 280px;
     max-width: 350px;
     margin-left: 0;
   }
-  #wrapper_container header nav {
+  #wrapper_container header nav.menu-main-container {
     padding: 0;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    display: block;
-    width: 60%;
-    float: none;
-    margin: 2% auto;
+    display: inline-block;
+    width: 45%;
+    float: right;
+    margin: 0.5em 0 0 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 25%;
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header nav.menu-main-container ul#menu-main {
     padding: 0;
-    margin: 0;
+    margin: 0.5em 0 0 0;
     height: 35px;
     width: 100%;
   }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-align-items: center;
-    -ms-flex-pack: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-    width: 18%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
+    width: 19%;
     float: left;
     height: 35px;
     list-style: none;
     margin: 0 0.2em;
     padding: 0;
     text-align: center;
-    -webkit-flex: 0 1 18%;
-    -ms-flex: 0 1 18%;
-    flex: 0 1 18%;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
     background-color: #CCD3DE;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     width: 100%;
@@ -1055,7 +1045,7 @@ th {
     font-size: 0.85em;
     display: block;
     letter-spacing: 0.1em;
-    font-weight: 100;
+    font-weight: normal;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
@@ -1066,31 +1056,30 @@ th {
     -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
     transition: background 0.2s linear 0s, color 0.2s linear 0s;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:link {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
     background-color: #CCD3DE;
     color: #062351;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:visited {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
     background-color: #c0c9dd;
     color: #fff;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:focus {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
     background-color: #062351;
     color: #fff;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
-    letter-spacing: 0.2em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
     background-color: #062351;
     color: #fff;
     font-weight: bold;
     line-height: 35px;
     letter-spacing: 0.12em;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:active {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
     background-color: #062351;
     color: #fff;
   }
-  #wrapper_container header nav #mobile-nav {
+  #wrapper_container header div#mobile-nav {
     display: none;
   }
   #wrapper_container #main-content {
@@ -1127,7 +1116,7 @@ th {
   #wrapper_container #main-content .social-1 {
     height: 35px;
     margin: 0;
-    width: 35%;
+    width: 30%;
     display: block;
     clear: both;
     float: right;
@@ -1141,6 +1130,7 @@ th {
     float: right;
     height: 100%;
     display: block;
+    width: 100%;
   }
   #wrapper_container #main-content .social-1 form.searchform div {
     margin: 0;
@@ -1148,6 +1138,12 @@ th {
     width: 100%;
     height: 100%;
     display: block;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
   }
   #wrapper_container #main-content .social-1 form.searchform div label {
     width: 25%;
@@ -1249,6 +1245,25 @@ th {
   #wrapper_container #main-content ul li a:hover {
     color: #fff;
   }
+  #wrapper_container #main-content ul.skills {
+    margin: 3% 0;
+    width: 45%;
+    display: block;
+    float: left;
+  }
+  #wrapper_container #main-content ul.skills li {
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content ul.skills li::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content ul.skills li a {
+    width: auto;
+    display: inline-block;
+  }
+  #wrapper_container #main-content ul.skills li a:hover {
+    color: #fff;
+  }
   #wrapper_container #main-content hr {
     background-color: #062351;
     height: 1px;
@@ -1261,6 +1276,14 @@ th {
     color: #CCD3DE;
     outline: 0;
     border: 0;
+  }
+  #wrapper_container #main-content .social_media_container {
+    float: left;
+    width: 40.7293%;
+    display: block;
+    margin: 0;
+    height: auto;
+    min-height: 250px;
   }
   #wrapper_container #main-content #side-bar {
     padding-top: 0;
@@ -1386,6 +1409,7 @@ th {
     padding: 0 2%;
     width: 100%;
     margin: 0 1% 1% 0;
+    clear: both;
     /*Social media share buttons*/
   }
   #wrapper_container #main-content .post hr.blog-spacer {
@@ -1411,7 +1435,7 @@ th {
     font-size: 1.2em;
     margin: 0 auto;
     padding: 0;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     width: 100%;
     background-color: #fff;
     color: #062351;
@@ -1435,7 +1459,7 @@ th {
   #wrapper_container #main-content .post ul.post-list {
     line-height: 1.5em;
     text-indent: 0;
-    width: 58%;
+    width: 90%;
     margin: 1% auto;
     display: block;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
@@ -1446,6 +1470,7 @@ th {
     line-height: 35px;
     display: block;
     height: auto;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .post ul {
     line-height: 1.5em;
@@ -1700,19 +1725,19 @@ th {
     width: 100%;
     display: block;
     color: #062351;
-                             /*       i.fa-desktop:hover,
-                                    i.fa-mobile:hover,
-                                    i.fa-tablet:hover {
+                                    /*       i.fa-desktop:hover,
+                                           i.fa-mobile:hover,
+                                           i.fa-tablet:hover {
 
-                                        font-size: 1.6em;
-                                        height: 46px;
-                                        line-height: 46px;
-                                        cursor: pointer;
-                                        color: $color4;
-                                        background-color: $color1;
+                                               font-size: 1.6em;
+                                               height: 46px;
+                                               line-height: 46px;
+                                               cursor: pointer;
+                                               color: $color4;
+                                               background-color: $color1;
 
 
-                                    }*/
+                                           }*/
   }
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-desktop,
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-mobile,
@@ -1746,11 +1771,11 @@ th {
   #wrapper_container #main-content .post p {
     width: 100%;
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.95em;
     color: #000;
     font-weight: 100;
     line-height: 2.1em;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
     margin-bottom: 2%;
   }
   #wrapper_container #main-content .post .thumb {
@@ -1761,14 +1786,14 @@ th {
     clear: both;
   }
   #wrapper_container #main-content .post .postimg {
-    width: 18%;
+    width: 16%;
     margin: 5% auto;
     display: block;
   }
   #wrapper_container #main-content .post .featuredImage {
     clear: both;
     height: auto;
-    width: 100%;
+    width: 90%;
     margin: 1em auto;
     display: block;
     min-height: 220px;
@@ -1814,7 +1839,7 @@ th {
   }
   #wrapper_container #main-content .post header.byline .entry-meta .meta-content .author-avatar,
   #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-    width: 5%;
+    width: 4%;
     display: inline-block;
     float: left;
     margin: 0 0.5em 2% 0;
@@ -2103,9 +2128,9 @@ th {
   }
   #wrapper_container #main-content .navi .right strong {
     display: inline-block;
-    width: 92%;
+    width: 93.5%;
   }
-  #wrapper_container #main-content .navi .right a {
+  #wrapper_container #main-content .navi .right strong a {
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     display: inline-block;
     -webkit-transform-origin: 50% 50%;
@@ -2122,13 +2147,13 @@ th {
     width: 100%;
     text-indent: 0.5%;
   }
-  #wrapper_container #main-content .navi .right a:hover {
+  #wrapper_container #main-content .navi .right strong a:hover {
     color: #fff;
     height: 100%;
     background-color: #062351;
     font-weight: bold;
   }
-  #wrapper_container #main-content .navi .right a::after {
+  #wrapper_container #main-content .navi .right strong a::after {
     font-family: 'FontAwesome';
     content: "\f187";
     font-size: 1.9em;
@@ -2579,11 +2604,11 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     width: 98%;
-    line-height: 1.8em;
+    line-height: 1.9em;
     font-size: 0.9em;
     font-weight: normal;
     margin: 0;
-    letter-spacing: 0.075em;
+    letter-spacing: 0.03em;
     padding-top: 0.5%;
   }
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
@@ -2604,7 +2629,7 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box a:hover {
     text-decoration: underline;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     list-style: none;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     margin: 0;
@@ -2612,7 +2637,7 @@ th {
     width: 100%;
     display: inline-block;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     margin: 0;
     color: #062351;
     font-style: italic;
@@ -2623,53 +2648,56 @@ th {
     float: none;
     max-height: 35px;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a:hover {
     width: 100%;
     color: #fff;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.9em;
     line-height: 35px;
     max-height: 35px;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
     font-family: 'FontAwesome';
     content: "\f108";
     font-style: normal;
     display: inline-block;
     height: 35px;
-    width: 35px;
+    width: 50px;
     text-align: center;
+    font-size: 1.5em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
     font-size: 0.9em;
     line-height: 35px;
     max-height: 35px;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
     font-family: 'FontAwesome';
     content: "\f19a";
     display: inline-block;
     height: 35px;
-    width: 35px;
+    width: 50px;
     text-align: center;
+    font-size: 1.5em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
     font-size: 0.9em;
     line-height: 35px;
     max-height: 35px;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
     font-family: 'FontAwesome';
     content: "\f05a";
     font-style: normal;
     display: inline-block;
     height: 35px;
-    width: 35px;
+    width: 50px;
     text-align: center;
+    font-size: 1.6em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 50%;
@@ -3098,41 +3126,6 @@ th {
     background-color: #062351;
     color: #fff;
     font-weight: bold;
-  }
-  #wrapper_container ul.skills {
-    list-style: none;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    margin: 3% 0;
-    padding: 0;
-    width: 45%;
-    display: inline-block;
-  }
-  #wrapper_container ul.skills li {
-    width: 100%;
-    margin: 0;
-    color: #062351;
-    font-style: italic;
-    height: 40px;
-    line-height: 40px;
-  }
-  #wrapper_container ul.skills li::before {
-    font-family: 'FontAwesome';
-    content: "\f0e0";
-    font-style: normal;
-    display: inline-block;
-    font-size: 1.4em;
-    line-height: 1.5em;
-    float: left;
-  }
-  #wrapper_container ul.skills li a {
-    width: auto;
-    display: inline-block;
-    line-height: 40px;
-    letter-spacing: 0.05em;
-  }
-  #wrapper_container ul.skills li a:hover {
-    color: #fff;
-    line-height: 40px;
   }
   #wrapper_container div#photocontainer {
     width: 100%;
@@ -3586,52 +3579,15 @@ th {
   }
 }
 @media only screen and (max-width: 90em) {
-  a.nav-toggle {
-    display: none;
-  }
-
-  figure {
-    padding: 0;
-    margin: 0;
-  }
-
-  .fancybox-custom .fancybox-skin {
-    box-shadow: 0 0 50px #222;
-  }
-
-  .screen-reader-text {
-    font-size: 0.9em;
-    line-height: 1.5em;
-  }
-
   .gallery-caption {
     font-size: 0.9em;
-  }
-
-  .container {
-    width: 38.729257%;
-    margin: 0 1% 1% 2%;
-  }
-
-  .social_media_container {
-    width: 44.7293%;
-    min-height: 250px;
   }
 
   .bypostauthor {
     font-size: 0.9em;
   }
 
-  .newExcerpt {
-    display: block;
-    padding: 1% 0;
-  }
-
   /* Small menu. */
-  body {
-    font-size: medium;
-  }
-
   /*Wrapper*/
   #wrapper_container {
     width: 86%;
@@ -3703,108 +3659,113 @@ th {
   }
   #wrapper_container header {
     height: 150px;
-    text-align: center;
-    /* Text meant only for screen readers. */
     /*Navigation*/
     /*Mobile-Navigation*/
   }
   #wrapper_container header .site-logo {
     position: relative;
-    top: -5px;
-  }
-  #wrapper_container header .screen-reader-text:focus {
-    font-size: 0.85em;
-    left: 5px;
-    padding: 15px 23px 14px;
-    top: 5px;
-    /* Above WP toolbar. */
+    top: -10px;
+    /* Text meant only for screen readers. */
   }
   #wrapper_container header .site-logo a {
     top: 1em;
-    display: block;
-    width: 2em;
-    height: 2em;
+    width: 2.8em;
+    height: 2.8em;
+  }
+  #wrapper_container header .site-logo .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #wrapper_container header .site-logo .screen-reader-text:focus {
+    border-radius: 3px;
+    font-size: 14px;
+    left: 5px;
+    top: 5px;
+    /* Above WP toolbar. */
   }
   #wrapper_container header .site-logo a:focus,
   #wrapper_container header .site-logo a:hover {
     outline: 2px solid white;
   }
   #wrapper_container header .site-firstletter {
-    font-size: 1.5em;
-    line-height: 1.2em;
+    font-size: 2.2em;
+    line-height: 41px;
   }
   #wrapper_container header .site-logo a:focus .site-firstletter,
   #wrapper_container header .site-logo a:hover .site-firstletter {
-    background: white;
-    color: black;
+    line-height: 41px;
   }
-  #wrapper_container header h1#logo {
-    letter-spacing: 0.05em;
-    font-size: 2.1em;
+  #wrapper_container header hgroup {
+    width: 55%;
+    height: 50%;
   }
-  #wrapper_container header h1#logo span {
+  #wrapper_container header hgroup h1#logo {
+    font-size: 2em;
+    padding-left: 8%;
+    letter-spacing: 0.03em;
+  }
+  #wrapper_container header hgroup h1#logo span {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo span:last-of-type {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 2em;
+    padding-left: 8%;
+    letter-spacing: 0.03em;
+  }
+  #wrapper_container header hgroup h1#logo-blog span {
     text-align: left;
   }
-  #wrapper_container header h1#logo span:last-of-type {
-    padding: 0 0 0 0.2%;
-    display: inline-block;
-  }
-  #wrapper_container header h1#logo-blog {
-    font-size: 2.1em;
-    letter-spacing: 0.05em;
-  }
-  #wrapper_container header h1#logo-blog span {
-    padding: 0 0 0 0.2%;
-    text-align: left;
-  }
-  #wrapper_container header h1#logo-blog span:last-of-type {
-    padding: 0 0 0 0.2%;
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
     margin: 0 0.5%;
   }
-  #wrapper_container header h2 {
-    letter-spacing: 0.1em;
-    font-size: 0.7em;
+  #wrapper_container header hgroup h2 {
+    font-size: 0.8em;
+    padding-left: 8.5%;
+    clear: left;
   }
-  #wrapper_container header #title {
-    float: left;
+  #wrapper_container header hgroup #title {
     min-width: 280px;
     max-width: 350px;
-    margin-left: 0;
   }
-  #wrapper_container header nav {
-    padding: 0;
-    display: block;
-    width: 60%;
-    float: none;
-    margin: 2% auto;
+  #wrapper_container header nav.menu-main-container {
+    width: 45%;
+    margin: 0.5% 0 0 0;
+    height: 25%;
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header nav.menu-main-container ul#menu-main {
     height: 35px;
   }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    width: 100%;
-    padding: 0;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
     width: 18%;
-    float: left;
-    height: 35px;
-    margin: 0 0.2em;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
     line-height: 35px;
     font-size: 0.85em;
-    display: block;
-    letter-spacing: 0.1em;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
-    letter-spacing: 0.2em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
+    background-color: #CCD3DE;
+    color: #062351;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
+    background-color: #c0c9dd;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+    background-color: #062351;
+    color: #fff;
     line-height: 35px;
   }
-  #wrapper_container header nav #mobile-nav {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header div#mobile-nav {
     display: none;
   }
   #wrapper_container #main-content {
@@ -4254,15 +4215,15 @@ th {
     width: 100%;
     display: block;
     height: 46px;
-                            /*        i.fa-desktop:hover,
-                                    i.fa-mobile:hover,
-                                    i.fa-tablet:hover {
-                                        font-size: 1.25em;
-                                        height: 46px;
-                                        line-height: 46px;
-    
+                                /*        i.fa-desktop:hover,
+                                        i.fa-mobile:hover,
+                                        i.fa-tablet:hover {
+                                            font-size: 1.25em;
+                                            height: 46px;
+                                            line-height: 46px;
 
-                                    }*/
+
+                                        }*/
   }
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-desktop,
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-mobile,
@@ -4855,31 +4816,33 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box a:hover {
     text-decoration: underline;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3% 0;
     display: inline-block;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     text-indent: 0;
     float: none;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
     font-style: normal;
+    font-size: 1.4em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
     font-style: normal;
+    font-size: 1.4em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 50%;
@@ -5449,86 +5412,113 @@ th {
 }
 @media all and (max-width: 80em) {
   #wrapper_container {
-    width: 86%;
-    /*Header*/
+    width: 90%;
   }
   #wrapper_container header {
     height: 150px;
-    /* Text meant only for screen readers. */
     /*Navigation*/
     /*Mobile-Navigation*/
   }
   #wrapper_container header .site-logo {
-    top: -5px;
-  }
-  #wrapper_container header .screen-reader-text:focus {
-    font-size: 0.85em;
-    /* Above WP toolbar. */
+    position: relative;
+    top: -10px;
+    /* Text meant only for screen readers. */
   }
   #wrapper_container header .site-logo a {
-    top: 1em;
+    width: 2.6em;
+    height: 2.6em;
+  }
+  #wrapper_container header .site-logo .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #wrapper_container header .site-logo .screen-reader-text:focus {
+    border-radius: 3px;
+    /* Above WP toolbar. */
   }
   #wrapper_container header .site-logo a:focus,
   #wrapper_container header .site-logo a:hover {
     outline: 2px solid white;
   }
   #wrapper_container header .site-firstletter {
-    font-size: 1.5em;
+    font-size: 2em;
+    line-height: 38px;
   }
   #wrapper_container header .site-logo a:focus .site-firstletter,
   #wrapper_container header .site-logo a:hover .site-firstletter {
-    background: white;
-    color: black;
+    line-height: 38px;
   }
-  #wrapper_container header h1#logo {
+  #wrapper_container header hgroup {
+    width: 59%;
+    height: 50%;
+  }
+  #wrapper_container header hgroup h1#logo {
     font-size: 1.9em;
+    padding-left: 7%;
+    letter-spacing: 0.03em;
   }
-  #wrapper_container header h1#logo span {
+  #wrapper_container header hgroup h1#logo span {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo span:last-of-type {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.9em;
+    padding-left: 7%;
+    letter-spacing: 0.03em;
+  }
+  #wrapper_container header hgroup h1#logo-blog span {
     text-align: left;
   }
-  #wrapper_container header h1#logo span:last-of-type {
-    display: inline-block;
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
+    margin: 0 0.5%;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.9em;
+  #wrapper_container header hgroup h2 {
+    font-size: 0.8em;
+    padding-left: 7.5%;
+    clear: left;
   }
-  #wrapper_container header h1#logo-blog span {
-    text-align: left;
+  #wrapper_container header hgroup #title {
+    min-width: 280px;
+    max-width: 350px;
   }
-  #wrapper_container header h1#logo-blog span:last-of-type {
-    display: inline-block;
+  #wrapper_container header nav.menu-main-container {
+    width: 40%;
+    margin: 0.5% 0 0 0;
+    height: 25%;
   }
-  #wrapper_container header h2 {
-    font-size: 0.7em;
-  }
-  #wrapper_container header #title {
-    float: left;
-  }
-  #wrapper_container header nav {
-    width: 60%;
-    margin: 2% auto;
-  }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header nav.menu-main-container ul#menu-main {
     height: 35px;
   }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
+    width: 18.5%;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    padding: 0;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
+    line-height: 35px;
+    font-size: 0.8em;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-    width: 18%;
-    margin: 0 0.2em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
+    background-color: #CCD3DE;
+    color: #062351;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-    font-size: 0.85em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
+    background-color: #c0c9dd;
+    color: #fff;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
-    letter-spacing: 0.12em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+    background-color: #062351;
+    color: #fff;
     line-height: 35px;
   }
-  #wrapper_container header nav #mobile-nav {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header div#mobile-nav {
     display: none;
   }
   #wrapper_container #main-content .post {
@@ -5728,31 +5718,33 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box a:hover {
     text-decoration: underline;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3% 0;
     display: inline-block;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     text-indent: 0;
     float: none;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    font-size: 0.85em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.8em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
     font-style: normal;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.85em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
-    font-style: normal;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.85em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
     font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-style: normal;
+    font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.4em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 50%;
@@ -6157,44 +6149,108 @@ th {
     width: 96%;
   }
   #wrapper_container header {
-    height: 130px;
+    height: 120px;
+    /*Navigation*/
+    /*Mobile-Navigation*/
+  }
+  #wrapper_container header .site-logo {
+    position: relative;
+    top: -10px;
+    /* Text meant only for screen readers. */
   }
   #wrapper_container header .site-logo a {
-    top: 1em;
-    left: 0;
+    width: 2.5em;
+    height: 2.5em;
   }
-  #wrapper_container header h1#logo {
+  #wrapper_container header .site-logo .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #wrapper_container header .site-logo .screen-reader-text:focus {
+    border-radius: 3px;
+    /* Above WP toolbar. */
+  }
+  #wrapper_container header .site-logo a:focus,
+  #wrapper_container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 2em;
+    line-height: 36px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header hgroup {
+    width: 59%;
+    height: 50%;
+  }
+  #wrapper_container header hgroup h1#logo {
     font-size: 1.8em;
+    padding-left: 8%;
   }
-  #wrapper_container header h1#logo-blog {
+  #wrapper_container header hgroup h1#logo span {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo span:last-of-type {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
     font-size: 1.8em;
+    padding-left: 8%;
   }
-  #wrapper_container header h2 {
-    font-size: 0.65em;
+  #wrapper_container header hgroup h1#logo-blog span {
+    text-align: left;
   }
-  #wrapper_container header nav {
-    width: 60%;
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
+    margin: 0 0.5%;
   }
-  #wrapper_container header nav #mobile-nav {
-    display: none;
+  #wrapper_container header hgroup h2 {
+    font-size: 0.7em;
+    padding-left: 8.5%;
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header hgroup #title {
+    min-width: 280px;
+    max-width: 350px;
+  }
+  #wrapper_container header nav.menu-main-container {
+    width: 40%;
+    margin: 0.5% 0 0 0;
+    height: 25%;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main {
     height: 35px;
   }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
+    width: 18%;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    width: 100%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
+    line-height: 35px;
+    font-size: 0.75em;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-    width: 19%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
+    background-color: #CCD3DE;
+    color: #062351;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-    font-size: 0.8em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
+    background-color: #c0c9dd;
+    color: #fff;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a:hover {
-    font-weight: bold;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+    background-color: #062351;
+    color: #fff;
+    line-height: 35px;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header div#mobile-nav {
+    display: none;
   }
   #wrapper_container #main-content {
     padding: 0;
@@ -6709,30 +6765,33 @@ th {
     margin: 1.65% auto;
     width: 35%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     margin: 0;
     padding: 3% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
-    font-size: 0.70em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a:hover {
     width: 100%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.80em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.25em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.80em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.25em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.80em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.35em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 49%;
@@ -7124,36 +7183,109 @@ th {
     display: none;
   }
 
-  #wrapper_container header h1#logo {
-    font-size: 1.75em;
+  #wrapper_container header {
+    height: 120px;
+    /*Navigation*/
+    /*Mobile-Navigation*/
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.75em;
+  #wrapper_container header .site-logo {
+    position: relative;
+    top: -10px;
+    /* Text meant only for screen readers. */
   }
-  #wrapper_container header h2 {
+  #wrapper_container header .site-logo a {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  #wrapper_container header .site-logo .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #wrapper_container header .site-logo .screen-reader-text:focus {
+    border-radius: 3px;
+    /* Above WP toolbar. */
+  }
+  #wrapper_container header .site-logo a:focus,
+  #wrapper_container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 2em;
+    line-height: 36px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header hgroup {
+    width: 59%;
+    height: 50%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.7em;
+    padding-left: 8%;
+  }
+  #wrapper_container header hgroup h1#logo span {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo span:last-of-type {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.7em;
+    padding-left: 8%;
+  }
+  #wrapper_container header hgroup h1#logo-blog span {
+    text-align: left;
+  }
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
+    margin: 0 0.5%;
+  }
+  #wrapper_container header hgroup h2 {
     font-size: 0.7em;
-    margin: 0;
+    padding-left: 8.5%;
   }
-  #wrapper_container header nav {
-    width: 60%;
+  #wrapper_container header hgroup #title {
+    min-width: 280px;
+    max-width: 350px;
   }
-  #wrapper_container header nav #mobile-nav {
-    display: none;
+  #wrapper_container header nav.menu-main-container {
+    width: 40%;
+    margin: 0.5% 0 0 0;
+    height: 25%;
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header nav.menu-main-container ul#menu-main {
     height: 35px;
   }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
+    width: 18%;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    width: 100%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
+    line-height: 35px;
+    font-size: 0.75em;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-    width: 19%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
+    background-color: #CCD3DE;
+    color: #062351;
   }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-    font-size: 0.8em;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
+    background-color: #c0c9dd;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+    background-color: #062351;
+    color: #fff;
+    line-height: 35px;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header div#mobile-nav {
+    display: none;
   }
   #wrapper_container #main-content {
     padding: 2.5% 0 0;
@@ -7596,7 +7728,6 @@ th {
   }
   #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-notes {
     font-size: 0.80em;
-    width: 25%;
   }
   #wrapper_container #main-content section.contact-wide .navigation h1 {
     font-size: 1.2em;
@@ -7652,26 +7783,32 @@ th {
     margin: 0.8% auto;
     width: 40%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a {
+    width: 100%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a:hover {
+    width: 100%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
     font-size: 1.2em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.2em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.3em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     margin: 0;
@@ -8017,39 +8154,110 @@ th {
     width: 96%;
   }
   #wrapper_container header {
+    height: 120px;
+    /*Navigation*/
+    /*Mobile-Navigation*/
+  }
+  #wrapper_container header .site-logo {
+    position: relative;
+    top: -10px;
+    /* Text meant only for screen readers. */
+  }
+  #wrapper_container header .site-logo a {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  #wrapper_container header .site-logo .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #wrapper_container header .site-logo .screen-reader-text:focus {
+    border-radius: 3px;
+    /* Above WP toolbar. */
+  }
+  #wrapper_container header .site-logo a:focus,
+  #wrapper_container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.9em;
+    line-height: 34px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 34px;
+  }
+  #wrapper_container header hgroup {
+    width: 55%;
+    height: 50%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.5em;
+    padding-left: 10%;
     width: 100%;
   }
-  #wrapper_container header h1#logo {
-    font-size: 1.7em;
+  #wrapper_container header hgroup h1#logo span {
+    padding: 0 0 0 0.2%;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.7em;
+  #wrapper_container header hgroup h1#logo span:last-of-type {
+    padding: 0 0 0 0.2%;
   }
-  #wrapper_container header h2 {
-    font-size: 0.70em;
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.5em;
+    padding-left: 10%;
+    width: 100%;
   }
-  #wrapper_container header nav {
-    width: 70%;
-    top: 0.5%;
+  #wrapper_container header hgroup h1#logo-blog span {
+    text-align: left;
   }
-  #wrapper_container header nav #mobile-nav {
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
+    margin: 0 0.5%;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.7em;
+    padding-left: 10.5%;
+  }
+  #wrapper_container header hgroup #title {
+    min-width: 280px;
+    max-width: 350px;
+  }
+  #wrapper_container header nav.menu-main-container {
+    width: 45%;
+    margin: 0.5% 0 0 0;
+    height: 43%;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main {
+    height: 35px;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
+    width: 18%;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
+    line-height: 35px;
+    font-size: 0.7em;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
+    background-color: #CCD3DE;
+    color: #062351;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
+    background-color: #c0c9dd;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+    background-color: #062351;
+    color: #fff;
+    line-height: 35px;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header div#mobile-nav {
     display: none;
-  }
-  #wrapper_container header nav #innernav {
-    height: 35px;
-  }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    width: 100%;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-    width: 19%;
-    height: 35px;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-    font-size: 0.80em;
   }
   #wrapper_container #main-content {
     padding: 3.1% 0 0;
@@ -8539,6 +8747,9 @@ th {
   #wrapper_container #main-content section.contact-wide #respond .comment-form input[type="submit"] {
     width: 25%;
   }
+  #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-notes {
+    font-size: 0.75em;
+  }
   #wrapper_container #main-content .frontpage_container {
     display: inline-block;
     margin: 0 0 1%;
@@ -8569,30 +8780,36 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box hr {
     margin: 0.8% auto;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     margin: 0;
     padding: 3% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     display: block;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a {
     width: 100%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li a:hover {
     width: 100%;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.25em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.25em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.35em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 75%;
@@ -8960,36 +9177,111 @@ th {
   }
 }
 @media only screen and (max-width: 48em) {
-  #wrapper_container header h1#logo {
-    font-size: 1.7em;
+  #wrapper_container header {
+    height: 120px;
+    /*Navigation*/
+    /*Mobile-Navigation*/
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.7em;
+  #wrapper_container header .site-logo {
+    position: relative;
+    top: -10px;
+    /* Text meant only for screen readers. */
   }
-  #wrapper_container header h2 {
+  #wrapper_container header .site-logo a {
+    width: 2.3em;
+    height: 2.3em;
+  }
+  #wrapper_container header .site-logo .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  #wrapper_container header .site-logo .screen-reader-text:focus {
+    border-radius: 3px;
+    /* Above WP toolbar. */
+  }
+  #wrapper_container header .site-logo a:focus,
+  #wrapper_container header .site-logo a:hover {
+    outline: 2px solid white;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.8em;
+    line-height: 33px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 33px;
+  }
+  #wrapper_container header hgroup {
+    width: 55%;
+    height: 50%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.45em;
+    padding-left: 10%;
+    width: 100%;
+  }
+  #wrapper_container header hgroup h1#logo span {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo span:last-of-type {
+    padding: 0 0 0 0.2%;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.45em;
+    padding-left: 10%;
+    width: 100%;
+  }
+  #wrapper_container header hgroup h1#logo-blog span {
+    text-align: left;
+  }
+  #wrapper_container header hgroup h1#logo-blog span:last-of-type {
+    margin: 0 0.5%;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.65em;
+    padding-left: 10.5%;
+  }
+  #wrapper_container header hgroup #title {
+    min-width: 280px;
+    max-width: 350px;
+  }
+  #wrapper_container header nav.menu-main-container {
+    width: 45%;
+    margin: 0.5% 0 0 0;
+    height: 43%;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main {
+    height: 35px;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
+    width: 18%;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a {
+    line-height: 35px;
     font-size: 0.65em;
   }
-  #wrapper_container header nav {
-    width: 75%;
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:link {
+    background-color: #CCD3DE;
+    color: #062351;
   }
-  #wrapper_container header nav #mobile-nav {
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:visited {
+    background-color: #c0c9dd;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+    background-color: #062351;
+    color: #fff;
+    line-height: 35px;
+  }
+  #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item a:active {
+    background-color: #062351;
+    color: #fff;
+  }
+  #wrapper_container header div#mobile-nav {
     display: none;
-  }
-  #wrapper_container header nav #innernav {
-    height: 35px;
-  }
-  #wrapper_container header nav #innernav .menu-main-container {
-    width: 100%;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main {
-    width: 100%;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item {
-    width: 19%;
-    height: 35px;
-  }
-  #wrapper_container header nav #innernav .menu-main-container #menu-main .menu-item a {
-    font-size: 0.7em;
   }
   #wrapper_container #main-content {
     padding: 0;
@@ -9454,6 +9746,9 @@ th {
   #wrapper_container #main-content section.contact-wide #respond .comment-form input[type="submit"] {
     width: 25%;
   }
+  #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-notes {
+    font-size: 0.7em;
+  }
   #wrapper_container #main-content .frontpage_container {
     height: 860px;
     min-height: 860px;
@@ -9501,17 +9796,17 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #chart #bars {
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars {
     height: 98.1481%;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #chart #bars li {
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li {
     display: table-cell;
     width: 590px;
     margin: 0;
     text-align: center;
     position: relative;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont #chart #chart #bars li span {
+  #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
     font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
@@ -9769,10 +10064,10 @@ th {
 
   a.nav-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
-    left: -4em;
-    top: -4em;
+    left: 0.5em;
+    top: 4em;
     line-height: 60px;
     height: 60px;
     width: 60px;
@@ -9784,21 +10079,21 @@ th {
     transition: all 0.2s linear 0s, color 0.2s linear 0s;
     background-color: #c0c9dd;
     color: #062351;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #062351;
   }
 
   a.nav-toggle.hide {
-    left: 0;
-    top: 0;
+    left: -4em;
   }
 
   a.nav-toggle:hover {
     background-color: #062351;
     color: #fff;
     line-height: 60px;
-    -webkit-border-radius: 35px 35px 35px 35px;
-    -moz-border-radius: 35px 35px 35px 35px;
-    -o-border-radius: 35px 35px 35px 35px;
-    border-radius: 35px 35px 35px 35px;
+    border: 2px solid #fff;
   }
 
   #wrapper_container {
@@ -9808,28 +10103,36 @@ th {
   }
   #wrapper_container header {
     width: 100%;
-    height: 75px;
+    height: 120px;
     /*Mobile-Navigation*/
+    /*end of mobile Nav*/
   }
-  #wrapper_container header h1#logo {
-    font-size: 1.6em;
+  #wrapper_container header hgroup {
+    width: 70%;
+    height: 100%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.75em;
     width: 100%;
-    height: 40px;
-    line-height: 40px;
     letter-spacing: 0.055em;
+    padding-left: 0;
+    line-height: 50px;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.6em;
-    height: 40px;
-    line-height: 40px;
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.75em;
     letter-spacing: 0.055em;
+    padding-left: 0;
+    line-height: 50px;
   }
-  #wrapper_container header h2 {
+  #wrapper_container header hgroup h2 {
     width: 100%;
     margin: 0;
-    font-size: 0.70em;
-    height: 20px;
-    line-height: 20px;
+    font-size: 0.75em;
+    padding-left: 0;
+    text-align: center;
   }
   #wrapper_container header .site-logo {
     top: -5px;
@@ -9837,66 +10140,66 @@ th {
   #wrapper_container header .site-logo a {
     top: 0.8em;
     left: 0;
-    width: 1.8em;
-    height: 1.8em;
+    width: 2.5em;
+    height: 2.5em;
   }
   #wrapper_container header .site-firstletter {
-    line-height: 1em;
+    font-size: 1.8em;
+    line-height: 36px;
   }
-  #wrapper_container header nav {
-    width: 98%;
-    left: 1%;
-    position: fixed;
-    top: 1%;
-    z-index: 9999;
-    /*end of mobile Nav*/
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header nav.menu-main-container {
     display: none;
   }
-  #wrapper_container header nav .nav-collapse ul {
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
     display: block;
     margin: 0 auto;
-    width: 80%;
-    overflow: hidden;
-  }
-  #wrapper_container header nav #mobile-nav {
-    display: block;
-    overflow: hidden;
+    width: 96%;
+    left: 0.5em;
+    height: 302px;
     background-color: #CCD3DE;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
+  #wrapper_container header div#mobile-nav {
+    width: 100%;
+    left: 0;
+    top: 0.2em;
+    z-index: 9999;
+    display: block;
+    background-color: #CCD3DE;
+  }
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
     height: 60px;
     list-style: none;
     width: 100%;
-    background-color: #c0c9dd;
-    margin: 0;
-    padding: 0;
     display: block;
+    background-color: #CCD3DE;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item:hover {
-    background-color: #062351;
-    color: #fff;
-  }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
     line-height: 60px;
-    color: #062351;
     margin: 0;
     letter-spacing: 0.1em;
-    font-size: 1em;
+    font-size: 0.9em;
     text-align: center;
     display: block;
-    background-color: #c0c9dd;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid #062351;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
     line-height: 60px;
-    color: #fff;
-    background-color: #062351;
     letter-spacing: 0.2em;
     font-weight: bold;
+    background-color: #062351;
+    color: #fff;
+    border: 2px solid #fff;
   }
   #wrapper_container #main-content {
     width: 100%;
@@ -9909,14 +10212,14 @@ th {
     /*end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1em;
+    font-size: 1.15em;
     text-align: center;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.95em;
+    font-size: 1.05em;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.8em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content #slider {
     width: 74%;
@@ -10455,30 +10758,30 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box hr {
     margin: 2% auto;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     margin: 0;
     padding: 3% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     display: block;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.85em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.25em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.85em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.8em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.25em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.8em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.35em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     height: 36.017%;
@@ -10514,7 +10817,7 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
     bottom: -1.5em;
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     margin: 1em auto;
@@ -10835,13 +11138,16 @@ th {
   }
 
   a.nav-toggle {
-    display: block;
-    left: -4em;
-    top: 0;
+    left: 0.5em;
+    top: 4em;
   }
 
   a.nav-toggle.hide {
-    left: 0;
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 60px;
   }
 
   #wrapper_container {
@@ -10849,50 +11155,69 @@ th {
     height: auto;
   }
   #wrapper_container header {
-    width: 100%;
+    height: 120px;
     /*Mobile-Navigation*/
-  }
-  #wrapper_container header h1#logo {
-    font-size: 1.5em;
-  }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.5em;
-  }
-  #wrapper_container header h2 {
-    font-size: 0.7em;
-  }
-  #wrapper_container header .site-logo a {
-    top: 0.8em;
-    left: 0;
-    width: 1.8em;
-    height: 1.8em;
-  }
-  #wrapper_container header .site-firstletter {
-    line-height: 1em;
-  }
-  #wrapper_container header nav {
-    width: 98%;
     /*end of mobile Nav*/
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header hgroup {
+    width: 70%;
+    float: none;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.7em;
+    letter-spacing: 0.055em;
+    padding-left: 0;
+    line-height: 50px;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.7em;
+    letter-spacing: 0.055em;
+    padding-left: 0;
+    line-height: 50px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.7em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
+  }
+  #wrapper_container header .site-logo a {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.8em;
+    line-height: 36px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header nav.menu-main-container {
     display: none;
   }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 80%;
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 96%;
+    left: 0.5em;
   }
-  #wrapper_container header nav #mobile-nav {
-    background-color: #CCD3DE;
+  #wrapper_container header div#mobile-nav {
+    left: 0;
+    top: 0.2em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
     height: 60px;
-    display: block;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
     line-height: 60px;
     letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
     line-height: 60px;
     letter-spacing: 0.2em;
   }
@@ -10996,7 +11321,7 @@ th {
     font-size: 10px;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1.05em;
+    font-size: 1.15em;
   }
   #wrapper_container #main-content .post h3 {
     width: 100%;
@@ -11304,26 +11629,29 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box hr {
     margin: 2% auto;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3.2% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     font-size: 0.70em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.25em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.25em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.35em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 80%;
@@ -11354,7 +11682,7 @@ th {
     bottom: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.85em;
+    font-size: 0.9em;
     bottom: -2em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
@@ -11475,7 +11803,7 @@ th {
     margin: 0 0 0.4em 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
     font-size: 0.95em;
@@ -11623,61 +11951,82 @@ th {
   }
 
   a.nav-toggle {
-    display: block;
+    left: 0.5em;
+    top: 4em;
   }
 
   a.nav-toggle.hide {
-    left: 0;
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 60px;
   }
 
   #wrapper_container {
     width: 98%;
   }
   #wrapper_container header {
-    height: 72px;
+    height: 120px;
     /*Mobile-Navigation*/
-    /*end*/
-  }
-  #wrapper_container header .site-firstletter {
-    line-height: 1.1em;
-  }
-  #wrapper_container header h1#logo {
-    font-size: 1.5em;
-  }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.5em;
-  }
-  #wrapper_container header h2 {
-    display: block;
-    float: none;
-    font-size: 0.65em;
-  }
-  #wrapper_container header nav {
-    width: 98%;
     /*end of mobile Nav*/
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header hgroup {
+    width: 75%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.65em;
+    line-height: 45px;
+    height: 45px;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.65em;
+    line-height: 45px;
+    height: 45px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.7em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
+  }
+  #wrapper_container header .site-logo a {
+    width: 2.6em;
+    height: 2.6em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.8em;
+    line-height: 36px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header nav.menu-main-container {
     display: none;
   }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 80%;
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 96%;
+    left: 0.5em;
   }
-  #wrapper_container header nav #mobile-nav {
-    background-color: #CCD3DE;
+  #wrapper_container header div#mobile-nav {
+    left: 0;
+    top: 0.2em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
     height: 60px;
-    width: 100%;
-    display: block;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    width: 100%;
-    height: 100%;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
     line-height: 60px;
     letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
     line-height: 60px;
     letter-spacing: 0.2em;
   }
@@ -11685,15 +12034,15 @@ th {
     /*Photocontainer*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1em;
+    font-size: 1.15em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.95em;
+    font-size: 1.05em;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content p {
     line-height: 1.9em;
@@ -11716,10 +12065,10 @@ th {
     font-size: 1em;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1.05em;
+    font-size: 1.15em;
   }
   #wrapper_container #main-content .post h2 {
-    font-size: 1em;
+    font-size: 1.05em;
   }
   #wrapper_container #main-content .post h3 {
     font-size: 0.95em;
@@ -11891,7 +12240,7 @@ th {
   }
   #wrapper_container #main-content .post .website-text .links p.formats span:first-of-type {
     font-size: 0.85em;
-    width: 21%;
+    width: 22%;
   }
   #wrapper_container #main-content .post .website-text .links p.formats p {
     width: 73%;
@@ -12046,30 +12395,24 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box hr {
     margin: 3% auto;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     margin: 0;
     padding: 3% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
     display: block;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.8em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.8em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.75em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.8em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
     font-size: 1.2em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a:hover {
-    width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     padding-top: 0;
@@ -12080,7 +12423,7 @@ th {
     width: 90%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
     height: 410px;
@@ -12099,7 +12442,7 @@ th {
     height: 435px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 1em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe img {
     width: 35.59%;
@@ -12314,63 +12657,80 @@ th {
 }
 @media only screen and (max-width: 33.5em) {
   a.nav-toggle {
-    line-height: 50px;
-    height: 50px;
-    width: 50px;
+    left: 0.5em;
+    top: 4em;
   }
 
   a.nav-toggle.hide {
-    left: 0;
+    left: -4em;
   }
 
   a.nav-toggle:hover {
-    line-height: 50px;
+    line-height: 60px;
   }
 
   #wrapper_container header {
-    width: 100%;
-    height: 72px;
+    height: 120px;
     /*Mobile-Navigation*/
-    /*end*/
-  }
-  #wrapper_container header .site-firstletter {
-    line-height: 1.15em;
-  }
-  #wrapper_container header h1#logo {
-    font-size: 1.5em;
-  }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.5em;
-  }
-  #wrapper_container header h2 {
-    font-size: 0.65em;
-    float: none;
-    height: 15px;
-    line-height: 15px;
-  }
-  #wrapper_container header nav {
-    width: 98%;
     /*end of mobile Nav*/
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header hgroup {
+    width: 90%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.5em;
+    line-height: 45px;
+    height: 45px;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.5em;
+    line-height: 45px;
+    height: 45px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.65em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
+  }
+  #wrapper_container header .site-logo a {
+    width: 2.6em;
+    height: 2.6em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.8em;
+    line-height: 36px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header nav.menu-main-container {
     display: none;
   }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 80%;
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 96%;
+    left: 0.5em;
   }
-  #wrapper_container header nav #mobile-nav {
-    background-color: #CCD3DE;
+  #wrapper_container header div#mobile-nav {
+    left: 0;
+    top: 0.2em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
-    height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
+    height: 60px;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    line-height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
+    line-height: 60px;
     letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
-    line-height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
+    line-height: 60px;
     letter-spacing: 0.2em;
   }
   #wrapper_container #main-content {
@@ -12434,6 +12794,31 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box p {
     line-height: 2em;
     font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
+    margin: 0;
+    padding: 3% 0;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
+    display: block;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.4em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     padding-top: 0;
@@ -12717,68 +13102,77 @@ th {
     display: none;
   }
 
+  a.nav-toggle {
+    left: 0.5em;
+    top: 4em;
+  }
+
   a.nav-toggle.hide {
-    left: 0;
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 60px;
   }
 
   #wrapper_container header {
-    height: 72px;
+    height: 120px;
     /*Mobile-Navigation*/
-    /*end*/
-  }
-  #wrapper_container header .site-logo {
-    top: -10px;
-  }
-  #wrapper_container header .site-logo a {
-    top: 1em;
-    left: 0;
-    width: 2em;
-    height: 2em;
-  }
-  #wrapper_container header .site-firstletter {
-    line-height: 1.2em;
-  }
-  #wrapper_container header h1#logo {
-    font-size: 1.45em;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-  }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.45em;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-  }
-  #wrapper_container header h2 {
-    display: block;
-    font-size: 0.60em;
-  }
-  #wrapper_container header nav {
-    width: 98%;
     /*end of mobile Nav*/
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header hgroup {
+    width: 85%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.45em;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.45em;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.65em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
+  }
+  #wrapper_container header .site-logo a {
+    width: 2.6em;
+    height: 2.6em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.8em;
+    line-height: 36px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header nav.menu-main-container {
     display: none;
   }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 80%;
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 96%;
+    left: 0.5em;
   }
-  #wrapper_container header nav #mobile-nav {
-    background-color: #CCD3DE;
+  #wrapper_container header div#mobile-nav {
+    left: 0;
+    top: 0.2em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
-    height: 50px;
-    width: 100%;
-    display: block;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
+    height: 60px;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    line-height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
+    line-height: 60px;
     letter-spacing: 0.1em;
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
-    line-height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
+    line-height: 60px;
     letter-spacing: 0.2em;
   }
   #wrapper_container #main-content {
@@ -12788,7 +13182,7 @@ th {
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 0.95em;
+    font-size: 1.15em;
     height: 40px;
     line-height: 40px;
   }
@@ -12841,10 +13235,10 @@ th {
     font-size: 0.8em;
   }
   #wrapper_container #main-content #side-bar {
-    width: 96%;
+    width: 100%;
   }
   #wrapper_container #main-content #side-bar h2 {
-    font-size: 1.05em;
+    font-size: 1em;
   }
   #wrapper_container #main-content #side-bar .side-bar-box {
     -webkit-flex: 0 1 auto;
@@ -12864,13 +13258,13 @@ th {
     font-size: 1em;
   }
   #wrapper_container #main-content #side-bar .side-bar-box .widget ul li a {
-    font-size: 0.95em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .post {
     width: 100%;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1em;
+    font-size: 1.15em;
     font-weight: bold;
     text-align: center;
   }
@@ -13017,7 +13411,7 @@ th {
     width: 21%;
     height: 109px;
     float: left;
-    font-size: 0.9em;
+    font-size: 0.8em;
     text-indent: 1%;
     margin-right: 1%;
     line-height: 35px;
@@ -13207,8 +13601,30 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
-    font-size: 0.70em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
+    margin: 0;
+    padding: 3% 0;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li {
+    display: block;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.4em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 73%;
@@ -13544,74 +13960,83 @@ th {
 /*414px- iphone6+ portrait */
 @media only screen and (max-width: 25.875em) {
   a.nav-toggle {
-    left: -4em;
-    top: 0;
+    left: 0.5em;
+    top: 4em;
     line-height: 50px;
     height: 50px;
     width: 50px;
-    text-align: center;
   }
 
   a.nav-toggle.hide {
-    left: 0;
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 50px;
   }
 
   #wrapper_container header {
-    height: 60px;
+    height: 120px;
     /*Mobile-Navigation*/
-    /*end*/
-  }
-  #wrapper_container header .site-logo a {
-    top: 0.8em;
-    left: 0;
-    width: 1.5em;
-    height: 1.5em;
-  }
-  #wrapper_container header .site-firstletter {
-    line-height: 1em;
-    font-size: 1.2em;
-  }
-  #wrapper_container header h1#logo {
-    font-size: 1.25em;
-    height: 30px;
-    line-height: 30px;
-  }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.25em;
-    height: 30px;
-    line-height: 30px;
-  }
-  #wrapper_container header h2 {
-    font-size: 0.60em;
-  }
-  #wrapper_container header nav {
-    width: 98%;
     /*end of mobile Nav*/
   }
-  #wrapper_container header nav #innernav {
+  #wrapper_container header hgroup {
+    width: 100%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.3em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.3em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.65em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
+  }
+  #wrapper_container header .site-logo a {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.6em;
+    line-height: 34px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 34px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 36px;
+  }
+  #wrapper_container header nav.menu-main-container {
     display: none;
   }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 75%;
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 96%;
+    left: 0.5em;
   }
-  #wrapper_container header nav #mobile-nav {
-    background-color: #CCD3DE;
+  #wrapper_container header div#mobile-nav {
+    left: 0;
+    top: -0.5em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
-    height: 50px;
-    width: 100%;
-    display: block;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
+    height: 60px;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    width: 100%;
-    height: 100%;
-    line-height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
+    line-height: 60px;
     letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
-    font-size: 1em;
-    line-height: 50px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
+    line-height: 60px;
     letter-spacing: 0.2em;
   }
   #wrapper_container #main-content {
@@ -13676,18 +14101,18 @@ th {
     padding: 0;
   }
   #wrapper_container #main-content #side-bar .side-bar-box .widget ul li a {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
   }
   #wrapper_container #main-content .post h2 {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .post h3 {
     width: 100%;
-    font-size: 0.80em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .post p {
     font-size: 0.7em;
@@ -13775,7 +14200,7 @@ th {
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) p {
     width: 72%;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) a {
     width: auto;
@@ -14023,34 +14448,26 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 5% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
-    font-size: 0.70em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    font-size: 0.7em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop::before {
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.7em;
-    line-height: 35px;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress::before {
-    line-height: 1.5em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.7em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
     font-size: 1.3em;
-    line-height: 1.5em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.3em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.4em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 73%;
@@ -14371,15 +14788,16 @@ th {
 /*I-phone 6 portrait - 375px*/
 @media only screen and (max-width: 23.4375em) {
   a.nav-toggle {
-    top: 0;
-    line-height: 50px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
+    left: 0.5em;
+    top: 4em;
   }
 
   a.nav-toggle.hide {
-    left: 0;
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 50px;
   }
 
   .fixed-side-social-container {
@@ -14390,53 +14808,68 @@ th {
     width: 98%;
   }
   #wrapper_container header {
-    height: 60px;
+    height: 120px;
     /*Mobile-Navigation*/
+    /*end of mobile Nav*/
   }
-  #wrapper_container header h1#logo {
-    font-size: 1.20em;
-    height: 30px;
-    line-height: 30px;
+  #wrapper_container header hgroup {
     width: 100%;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.20em;
-    height: 30px;
-    line-height: 30px;
-    width: 100%;
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
   }
-  #wrapper_container header h2 {
-    font-size: 0.60em;
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.6em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
   }
   #wrapper_container header .site-logo a {
-    top: 0.5em;
+    width: 1.9em;
+    height: 1.9em;
   }
   #wrapper_container header .site-firstletter {
-    line-height: 1.25em;
-    font-size: 1em;
+    font-size: 1.4em;
+    line-height: 26px;
   }
-  #wrapper_container header nav {
-    width: 98%;
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 26px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 26px;
+  }
+  #wrapper_container header nav.menu-main-container {
+    display: none;
+  }
+  #wrapper_container header .nav-collapse ul {
     position: fixed;
-    top: 1%;
+    width: 96%;
+    left: 0.5em;
   }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 71%;
+  #wrapper_container header div#mobile-nav {
+    left: 0;
+    top: -0.5em;
   }
-  #wrapper_container header nav #mobile-nav {
-    display: block;
-    margin: 0 auto;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
+    height: 60px;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
-    height: 45px;
-  }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    line-height: 45px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
+    line-height: 60px;
+    letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
-    line-height: 45px;
-    font-size: 1em;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
+    line-height: 60px;
+    letter-spacing: 0.2em;
   }
   #wrapper_container #main-content {
     padding: 0;
@@ -14444,14 +14877,13 @@ th {
     /*end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 0;
     line-height: 30px;
   }
   #wrapper_container #main-content h2 {
-    margin: 5px auto;
     text-indent: 1%;
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .map_container {
     width: 95.7293%;
@@ -14504,7 +14936,7 @@ th {
     line-height: 35px;
   }
   #wrapper_container #main-content #side-bar .side-bar-box .widget ul li a {
-    width: 100%;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content #blogleftside {
     width: 100%;
@@ -14677,7 +15109,7 @@ th {
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) p {
     width: 73%;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) a {
     width: auto;
@@ -14856,32 +15288,31 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.7em;
-    letter-spacing: 0.15em;
     line-height: 2em;
   }
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
     width: 24%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3.2% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.90em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
     font-size: 0.90em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
     font-size: 0.90em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
+    font-size: 1.4em;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     width: 73%;
@@ -15174,51 +15605,84 @@ th {
     display: none;
   }
 
+  a.nav-toggle {
+    top: 5em;
+  }
+
+  a.nav-toggle.hide {
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 50px;
+  }
+
   #wrapper_container {
     width: 98%;
   }
   #wrapper_container header {
-    height: 60px;
+    height: 120px;
     /*Mobile-Navigation*/
+    /*end of mobile Nav*/
+  }
+  #wrapper_container header hgroup {
+    width: 100%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1.1em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1.1em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.65em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
   }
   #wrapper_container header .site-logo a {
+    width: 2.2em;
+    height: 2.2em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.5em;
+    line-height: 31px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 31px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 31px;
+  }
+  #wrapper_container header nav.menu-main-container {
+    display: none;
+  }
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 94%;
+    left: 0.5em;
+  }
+  #wrapper_container header div#mobile-nav {
+    left: 0;
     top: 0.5em;
   }
-  #wrapper_container header h1#logo {
-    font-size: 1.1em;
-    letter-spacing: 0.06em;
-    width: 100%;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
+    height: 60px;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.1em;
-    letter-spacing: 0.06em;
-    width: 100%;
-  }
-  #wrapper_container header h2 {
-    font-size: 0.60em;
-  }
-  #wrapper_container header nav {
-    width: 98%;
-    position: fixed;
-    top: 1%;
-  }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 71%;
-  }
-  #wrapper_container header nav #mobile-nav {
-    display: block;
-    margin: 0 auto;
-  }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
-    height: 45px;
-  }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    line-height: 45px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
+    line-height: 60px;
+    letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
-    line-height: 45px;
-    font-size: 1em;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
+    line-height: 60px;
+    letter-spacing: 0.2em;
   }
   #wrapper_container #main-content {
     padding: 0;
@@ -15282,16 +15746,13 @@ th {
     font-size: 0.8em;
   }
   #wrapper_container #main-content #side-bar {
-    width: 96%;
+    width: 100%;
   }
   #wrapper_container #main-content #side-bar .side-bar-box .widget .widget-title {
-    font-size: 0.95em;
-    height: 35px;
-    line-height: 35px;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content #side-bar .side-bar-box .widget ul li a {
-    width: 100%;
-    font-size: 0.95em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content #blogleftside {
     width: 100%;
@@ -15621,26 +16082,26 @@ th {
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
     width: 19%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3.2% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
-    font-size: 0.80em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
+    font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
-    font-size: 0.90em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop::before {
+    font-size: 1.2em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
-    font-size: 0.90em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
+    font-size: 0.75em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.90em;
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress::before {
+    font-size: 1.2em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile::before {
     font-size: 1.3em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .svg-image-container {
     height: 29.037%;
@@ -15911,55 +16372,85 @@ th {
 }
 /* Blackberry */
 @media only screen and (max-width: 20em) {
+  a.nav-toggle {
+    top: 5em;
+  }
+
+  a.nav-toggle.hide {
+    left: -4em;
+  }
+
+  a.nav-toggle:hover {
+    line-height: 50px;
+  }
+
   #wrapper_container {
     width: 98%;
     /*end*/
   }
   #wrapper_container header {
-    width: 100%;
-    height: 60px;
+    height: 120px;
     /*Mobile-Navigation*/
+    /*end of mobile Nav*/
   }
-  #wrapper_container header .site-firstletter {
-    line-height: 1.25em;
-    font-size: 0.7em;
+  #wrapper_container header hgroup {
+    width: 100%;
+  }
+  #wrapper_container header hgroup h1#logo {
+    font-size: 1em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h1#logo-blog {
+    font-size: 1em;
+    line-height: 40px;
+    height: 40px;
+  }
+  #wrapper_container header hgroup h2 {
+    font-size: 0.55em;
+    padding-left: 0;
+  }
+  #wrapper_container header .site-logo {
+    top: -5px;
   }
   #wrapper_container header .site-logo a {
-    width: 1.1em;
-    height: 1.1em;
+    width: 1.9em;
+    height: 1.9em;
+  }
+  #wrapper_container header .site-firstletter {
+    font-size: 1.3em;
+    line-height: 25px;
+  }
+  #wrapper_container header .site-logo a:focus .site-firstletter,
+  #wrapper_container header .site-logo a:hover .site-firstletter {
+    line-height: 25px;
+  }
+  #wrapper_container header .site-firstletter {
+    line-height: 25px;
+  }
+  #wrapper_container header nav.menu-main-container {
+    display: none;
+  }
+  #wrapper_container header .nav-collapse ul {
+    position: fixed;
+    width: 94%;
+    left: 0.5em;
+  }
+  #wrapper_container header div#mobile-nav {
+    left: 0;
     top: 0.5em;
   }
-  #wrapper_container header h1#logo {
-    font-size: 1.05em;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item {
+    height: 60px;
   }
-  #wrapper_container header h1#logo-blog {
-    font-size: 1.05em;
-  }
-  #wrapper_container header h2 {
-    font-size: 0.50em;
-  }
-  #wrapper_container header nav {
-    width: 98%;
-    position: fixed;
-    top: 1%;
-  }
-  #wrapper_container header nav .nav-collapse ul {
-    width: 67%;
-  }
-  #wrapper_container header nav #mobile-nav {
-    display: block;
-    margin: 0 auto;
-  }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item {
-    height: 45px;
-  }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a {
-    line-height: 45px;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a {
+    line-height: 60px;
+    letter-spacing: 0.1em;
     font-size: 0.9em;
   }
-  #wrapper_container header nav #mobile-nav ul#menu-mobile li.menu-item a:hover {
-    line-height: 45px;
-    font-size: 1em;
+  #wrapper_container header div#mobile-nav ul#menu-mobile li.menu-item a:hover {
+    line-height: 60px;
+    letter-spacing: 0.2em;
   }
   #wrapper_container #main-content {
     padding: 2px;
@@ -15967,19 +16458,14 @@ th {
     /*end*/
   }
   #wrapper_container #main-content h1 {
-    margin: 0;
-    width: 100%;
     font-size: 1em;
   }
   #wrapper_container #main-content h2 {
-    width: 100%;
-    margin-left: 0;
     text-indent: 1%;
     font-size: 0.9em;
   }
   #wrapper_container #main-content p {
-    width: 100%;
-    letter-spacing: 0.09em;
+    letter-spacing: 0.03em;
     margin-left: 0;
   }
   #wrapper_container #main-content ul.skills li {
@@ -16001,7 +16487,7 @@ th {
   }
   #wrapper_container #main-content #side-bar {
     float: none;
-    width: 96%;
+    width: 100%;
   }
   #wrapper_container #main-content #side-bar h2 {
     font-size: 1em;
@@ -16012,7 +16498,6 @@ th {
     line-height: 35px;
   }
   #wrapper_container #main-content #side-bar .side-bar-box .widget ul li a {
-    width: 100%;
     font-size: 0.90em;
   }
   #wrapper_container #main-content #blogleftside {
@@ -16108,13 +16593,13 @@ th {
     font-size: 0.7em;
   }
   #wrapper_container #main-content .post ul.post-meta li span.post-meta-key {
-    width: 30%;
-    font-size: 0.9em;
+    width: 25%;
+    font-size: 0.8em;
     text-indent: 0.5%;
   }
   #wrapper_container #main-content .post ul.post-meta li p {
     width: 68%;
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .post ul.post-meta li a {
     font-size: 0.8em;
@@ -16130,14 +16615,12 @@ th {
     line-height: 15px;
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) span.post-meta-key {
-    width: 30%;
-    height: 109px;
-    font-size: 0.95em;
+    font-size: 0.75em;
     text-indent: 0.5%;
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) p {
     width: 68%;
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) a {
     width: auto;
@@ -16169,7 +16652,7 @@ th {
     letter-spacing: 0.05em;
   }
   #wrapper_container #main-content .post .website-text .links p.formats span:first-of-type {
-    font-size: 0.65em;
+    font-size: 0.6em;
     width: 25%;
   }
   #wrapper_container #main-content .post .website-text .links p.formats span {
@@ -16287,33 +16770,22 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     width: 100%;
-    margin: 0;
-    letter-spacing: 0.2em;
     font-size: 0.70em;
   }
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
     width: 26%;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills {
     padding: 3.2% 0;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-desktop {
     font-size: 0.80em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-desktop {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-wordpress {
     font-size: 0.80em;
   }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-wordpress {
+  #wrapper_container #main-content .frontpage_container .text-box ul.webskills li#fa-mobile {
     font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile {
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li#fa-mobile::before {
-    font-size: 1.3em;
-  }
-  #wrapper_container #main-content .frontpage_container .text-box .webskills li a {
-    width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont {
     margin: 4% 0;

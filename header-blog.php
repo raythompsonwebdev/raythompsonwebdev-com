@@ -1,4 +1,5 @@
 <!doctype html>
+
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");} ?>
 
 <html class="no-js" <?php language_attributes(); ?>>
@@ -38,7 +39,7 @@
             <?php $site_title = get_bloginfo( 'name' ); ?>
             <a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                     <div class="screen-reader-text">
-                        <?php printf( esc_html__('Go to the home page of %1$s', 'raythompsonwebdev-com'), $site_title ); ?>
+                        <?php printf( esc_html__('Go to the home page of %1$s', 'raythompwebdesign-com'), $site_title ); ?>
                     </div>
                     <?php
                     if ( has_custom_logo() ) {
@@ -50,42 +51,33 @@
                     <?php } ?>
             </a>
     </div>
+
  
-     
-<?php  if ( is_front_page() || is_page()) : ?>
- <hgroup>
-    <h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
-
-<?php else : ?>
-<hgroup>
-    <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>            
-<?php endif;
-
-    $description = get_bloginfo( 'description', 'display' );
-
-    if ( $description || is_customize_preview() ) : ?>
-
-    <h2 class="site-description"><?php echo $description; ?></h2></hgroup>
-
-
-<?php endif;?>
-
+<hgroup id="sign">
+<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>            
 
 <?php
-    // Checking if there's anything in Top Menu
-    if ( has_nav_menu( 'main' ) ) {
-    // If there is, adds the Top Menu area
-    wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); 
-    }
+$description = get_bloginfo( 'description', 'display' );
 
-    if ( has_nav_menu( 'mobile' ) ) {
+if ( $description || is_customize_preview() ) : ?>
 
-    wp_nav_menu( array('menu' => 'mobile', 'container_id' => 'mobile-nav' ));
-    }
- ?>   
+<h2 class="site-description"><?php echo $description; ?></h2></hgroup>
+
+ 
+    <?php
+// Checking if there's anything in Top Menu
+  if ( has_nav_menu( 'main' ) ) {
+        // If there is, adds the Top Menu area
+        wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); 
+  }
+
     
+    if ( has_nav_menu( 'mobile' ) ) {
+    
+    wp_nav_menu( array('menu' => 'mobile', 'container_id' => 'mobile-nav' ));
+  }
 
-
+?>
 
 
 
