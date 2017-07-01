@@ -191,9 +191,6 @@ add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 //enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
-    
-   
-
         wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
         wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
         wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
@@ -224,7 +221,7 @@ function my_scripts_own() {
     wp_enqueue_script( 'easing' );
     wp_enqueue_script( 'scrollto' );
     wp_enqueue_script( 'cookie' );
-  ;
+	wp_enqueue_script( 'responsivenav' );
     wp_enqueue_script( 'master' );
 
 }
@@ -232,8 +229,6 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 
 //mobile navigation script
 function mf_responsive_nav(){
-
-
 
 echo '<script>
   var navigation = responsiveNav("#mobile-nav");

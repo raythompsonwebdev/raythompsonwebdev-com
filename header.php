@@ -78,23 +78,11 @@
     wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); 
     }
 
-    if ( has_nav_menu( 'mobile' ) ) {
-
+   
     wp_nav_menu( array('menu' => 'mobile', 'container_id' => 'mobile-nav' ));
-    }
+
  ?>   
     
-
-
-
-
-
-
-        
-
-
-
-
 
 
 </header>
