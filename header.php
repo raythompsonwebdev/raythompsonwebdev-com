@@ -16,7 +16,7 @@
 <link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" />
 
-<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?> 
+<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php wp_head(); ?>
 </head>
@@ -29,10 +29,10 @@
 <body <?php body_class(); ?>>
 
 <div id="wrapper_container">
- 	
+
 
 <header class="group" role="banner">
-    
+
  <?php // Display site icon or first letter as logo ?>
     <div class="site-logo">
             <?php $site_title = get_bloginfo( 'name' ); ?>
@@ -50,15 +50,15 @@
                     <?php } ?>
             </a>
     </div>
- 
-     
+
+
 <?php  if ( is_front_page() || is_page()) : ?>
  <hgroup>
     <h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 
 <?php else : ?>
 <hgroup>
-    <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>            
+    <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
 <?php endif;
 
     $description = get_bloginfo( 'description', 'display' );
@@ -75,17 +75,16 @@
     // Checking if there's anything in Top Menu
     if ( has_nav_menu( 'main' ) ) {
     // If there is, adds the Top Menu area
-    wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); 
-    }
+    wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' ));
 
-   
+  }
     wp_nav_menu( array('menu' => 'mobile', 'container_id' => 'mobile-nav' ));
+  
 
- ?>   
-    
+
+
+ ?>
+
 
 
 </header>
-
-
-
