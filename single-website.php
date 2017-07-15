@@ -2,10 +2,9 @@
 <?php get_header(); ?>
 
 <section id="main-content" class="group" role="main">   	
-    	
-
-
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    
+    
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 
@@ -14,17 +13,34 @@
         <header class="byline">
 
             <div class="entry-meta">
-                <?php popperscores_posted_on(); ?>
+               
+                
             </div><!-- .entry-meta -->
 
         </header><!--end of by line-->
 
         <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>;">
-            <figure class="featuredImage"><?php the_post_thumbnail('custom'); ?></figure>
+            
+            <figure class="websiteImage">
+                <?php the_post_thumbnail('websites'); ?>
+            </figure>
         </a>
 
-    <div class="entry">
-        <?php the_content(); ?>
+    <div class="website-text">
+        <?php the_meta(); ?>
+        <div class="links"> 
+        <p class="formats">
+            <span>Website Formats</span>
+            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-desktop"></i></a></span>
+            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-tablet" title="Tablet"></i></a></span>
+            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-mobile"></i></a></span>
+
+  </p>
+       </div>
+        
+       <div class="links"> 
+  <a href="" title="">Visit Website</a> 
+  </div>
     </div>
 
         <footer class="byline">
@@ -42,9 +58,7 @@
 
         <nav class="navi">
           
-            <span class="right">
-                <?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?>
-                <?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?></span> 
+            <span class="right"> </span> 
             
             
         </nav><!--end of right navigation-->

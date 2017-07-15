@@ -1,122 +1,62 @@
 <?php
-
 /*
 
-* Template Name :Home
+ * Template Name :Home
 
-*/
-
+ */
 ?>
-
 
 
 <?php get_header(); ?>
 
 
 <section id="main-content" class="group" role="main">
-<h1>Hello</h1>
-<br/>
-<div class="front_panel"> 
+
+    <h1>Web Development </h1>
+
+    <div class="frontpage_container">
+
+        <div class="svg-image-container">
+
+            <figure id="image-6">
+                <img id="image-5" src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/home-page-image.png" alt="images of different screen sizes">
+            </figure>
+
+            <figure id="image-7">
+                <object class="style-svg" type="image/svg+xml" id="image-4" data="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
+                </object>
+            </figure>
+
+        </div>
+
+        <article class="text-box" role="article">
+
+            <h1>Hello, I'm a Web Developer</h1>
+
+            <p>My name is Raymond. I am a web developer and I create custom WordPress themes, Customise existing Wordpress Themes and build websites and mobile web applications for sole traders, micro businesses and regular individuals wanting an on-line presence.</p>
+            <hr>
+            <p>Whether a website or web application is needed for your business or even for your own personal use, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.</p>
+            <p>I can also provide advice with</p>
 
 
-<section class="frontpage_cont">
+            <ul class="webskills">
+                <li id="fa-desktop"><span></span>Searching for a Domain Name&#46;</li>
+                <li id="fa-wordpress"><span></span>Finding a Website Host.</li>
+                <li id="fa-mobile"><span></span>Wordpress Installation and more.&#46;</li>
+            </ul>
 
-<article class="imagebox">
-
-<article class="box">
-
-<figure class="image-4">
-
-<img id="image-6" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/frontslider-image/mobileimages1aa.png" alt="images of different screen sizes">
-
-<object id="image-4" data="<?php echo home_url();?>/wp-content/themes/raythompwebdesign-com/graphics/tester-2016_07_14_23_19_16.0.svg" type="image/svg+xml">
-</object>
-</figure>
-       
-
-</article>
-
-</article>
-
-</section>
-
-
-<article class="intro-text">
-
-<h1>Welcome to raythompwebdesign.com&#46;</h1>
-
-<p> My name is Raymond and this is my website about web design and web development, particularly front end web development. I spend a lot my spare time building websites and other online&#46; I create the following types of websites:</p>
-
-
-<ul class="webskills">
-<li><span class="fa fa-mobile"></span>Custom HTML5/CSS3/JQUERY/PHP/AJAX Website Templates&#44;</li>
-<li><span class="fa fa-wordpress"></span>Custom Wordpress Themes Templates&#44;</li>
-<li><span class="fa fa-database"></span>Bootstrap and Foundation Templates&#44;</li>
-
-</ul>
-
-<p>Each of my websites are built following the latest web design and web development standards and best practices.</p>
-<hr>
-<p>All websites are fully optimised to ensure fast page loading whether viewed on a desktop monitor or a mobile device&#44; can be found on most search engines and are fully accessible to all user and validated to ensure sites can be accessed and viewed within most modern web browsers&#46; </p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem blanditiis porro dolorem, placeat vel magnam, iste illum, deleniti maxime quis velit expedita ipsam, provident animi ex harum ipsa veniam commodi.
-Click button on right to view some of my work&#46;
-</p>
-
-</article>
-
-</div>
-
-
-<div class="front_panel">
-
-<section class="frontpage_cont ">
-
-<article class="imagebox">
-
-<article class="box">
-
-<figure class="image-4">
-
-<img id="image-7" src="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/frontslider-image/codingstandards1.png" alt="images of different screen sizes">
-
-<object id="image-5" data="<?php echo home_url();?>/wordpress/wp-content/themes/raythompwebdesign-com/graphics/codingstandards1.svg" type="image/svg+xml" >
-</object>
-
-</figure>
-
-</article>
-
-</article>
-
-</section>
-<article class="intro-text">
-
-<h1>Interested in web development &#63;</h1>
-
-<p>Check out my blog posts where&#44;I will be sharing links to tutorials&#44; articles&#44; blog post and all sorts of useful information I have come across&#46;</p>
-<ul class="webskills">
-	<li><span class="fa fa-mobile"></span>Video Tutorials&#44;</li>
-	<li><span class="fa fa-wordpress"></span>Blog Tutorials&#44;</li>
-	<li><span class="fa fa-database"></span>Website Template Downloads&#44; Code examples&#46;</li>
-	
-</ul>
-
-<p>All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; </p>
-<hr>
-<p>All differnt types of resources I hope you will find useful in helping increase your own understanding of web design and web development and hopefully help improve your own work as it has helped with mine&#44; particularly if you are just beginning to learn about building websites and web applications&#46; 
-All differnt types of resources I hope you will find useful in helping increase your own understanding
-</p>
-
-</article>
-
-
-</div>
-
-
-
-
-</section>
-
+            <p>From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices.</p>
+                  <hr>
+            <p>I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.</p>
+            <hr>
+            <p>To see samples of some previous work, click big blue button on the right. To enquire about getting help with any project you have or plan to start please go to <strong><a href="http://raythompsonwebdev.co.uk/contact-page">contact page</a></strong>. I am also available to contact on social media, links at the bottom. Holla!</p>
+        </article>
 
 <div class="clearfix"></div>
-<?php get_footer(); ?> 
+    </div>
+
+</section>
+
+
+
+<?php get_footer(); ?>

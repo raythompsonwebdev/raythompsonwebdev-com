@@ -14,40 +14,24 @@ Template Name: Contact
 <p>Any queries about website please either complete form on the right or e-mail me at e-mail addressess below. You can also holla at me on social media</p>
 
 
-
-
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
 [ do default stuff if no widgets ]
 
 <?php endif; ?>
-			
-
-
+		
 <br/>
-<article class="social_media_container">
+<div class="social_media_container">
+    <img id="image-5" src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/map-of-hackney.jpg" alt="map-of-hackney">
+</div>     
 
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('map')) : ?>
-
-			[ do default stuff if no widgets ]
-
-				<?php endif; ?>
-
-</article>
 
 <ul class="skills" >
-	
-	<li>
-        <i class="fa fa-envelope"></i><a href="mailto:info@raythompwebdesign.com">info@raythompwebdesign.com</a> </li>
-<br/>
-	<li>
-		<i class="fa fa-envelope"></i><a href="mailto:ray_thomp@hushmail.com">ray_thomp@hushmail.com</a></li>
-<br/>
-
+    <li> <a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
+    <br/>
+   
+    <br/>
 </ul> 
-
-<br/> 
-
 
 <div class="clearfix"></div>				
 

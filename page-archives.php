@@ -8,48 +8,73 @@ Template Name: Archives-pages
 <?php get_header(); ?>
  	
 <section id="main-content" class="group" role="main">
+    
 <h1><?php the_title(); ?> List</h1>
-<section id="blogleftside">       	       	      	
 
-<article id="blog" class="left-col">
+<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
-
-	   <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-    
-        
-<article class="post group">
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+            
+<article class="entry">
  
-<h2><?php _e('Browse by Month:', 'raythompwebdesign-com');?></h2>
+<h2><?php _e('Browse by Month:', 'raythompsonwebdev-com');?></h2>
     
-<ul><?php wp_get_archives('type=monthly'); ?></ul>
+<ul><?php // Arguments
+                $args = array(
+                    'type' => 'monthly'
+                );
+                // The archives
+                wp_get_archives( $args );
+            ?> </ul>
 
-<h2><?php _e('Browse by Category:', 'raythompwebdesign-com');?></h2>
-    
-<ul><?php wp_list_categories('title_li='); ?></ul>
-
-<h2><?php _e('Browse by Tag:', 'raythompwebdesign-com');?></h2>
-
-<ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
-   
 </article>
+
+<article class="entry">
+
+    <h2><?php _e('Browse by Category:', 'raythompsonwebdev-com');?></h2>
+
+    <ul><?php // Arguments
+            $default = array(
+                'title_li' => ''
+            );
+            // The categories
+            wp_list_categories( $default ); 
+        ?>
+    </ul>
+
+</article>
+
+<article class="entry">
+
+    <h2><?php _e('Browse by Tag:', 'raythompsonwebdev-com');?></h2>
+
+    <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+
+</article>
+
+<!--<article class="entry">
+
+<h2><?php _e('Browse by Page', 'raythompsonwebdev-com');?></h2>
+<ul><?php wp_list_pages('title_li='); ?></ul>
+   
+</article>-->
         
 <?php endwhile; else: ?>
 
-<p><?php load_theme_textdomain( $domain, $path ) ?></p>
+<p><?php load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' ) ?></p>
 
 <?php endif; ?>
+ </article>
 
-</article>
+<section class="contact-wide">
 
-<br/>
-<article class="contact-wide">
-
-<h2>Archives</h2>
+<h1>Archive Pages</h1>
   
-</article>
-
 </section>
-<?php get_sidebar(); ?> 
+
+
+<?php get_sidebar('archive'); ?> 
+
 </section>
 <div class="clearfix"></div>
 <?php get_footer(); ?>

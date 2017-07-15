@@ -5,11 +5,13 @@ Template Name: Terms
 ?>
 
 <?php get_header(); ?>
+
+
 <section id="main-content" class="group" role="main">
 
 <h1>Terms &amp; Conditions</h1>
 
-<p><strong>In using this website you are deemed to have read and agreed to the following terms and conditions:</strong>The following terminology applies to these Terms and Conditions&#44; Privacy Statement and Disclaimer Notice and any or all Agreements:&#34;Client"&#44; &#34;You&#34;and&#34;Your&#34;refers to you&#44;the person accessing this website and accepting the Company&#39;s terms and conditions&#46; The&#34; Company&#34;&#44; &#34;Ourselves&#34;&#44; &#34;We&#34; and &#34;Us&#34;&#44; refers to our Company&#46;  &#34;Party&#44; &#34;Parties&#44; or &#34;Us&#44; refers to both the Client and ourselves&#44; or either the Client or ourselves&#46;  All terms refer to the offer&#44; acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner&#44; whether by formal meetings of a fixed duration&#44; or any other means&#44; for the express purpose of meeting the Client&#39;s needs in respect of provision of the Company&#39;s stated services&#47;products&#44; in accordance with and subject to&#44; prevailing English Law&#46;  Any use of the above terminology or other words in the singular&#44; plural&#44; capitalisation and&#47;or he&#47;she or they&#44; are taken as interchangeable and therefore as referring to same&#46; </p>
+<p><strong>In using this website you are deemed to have read and agreed to the following terms and conditions:</strong>The following terminology applies to these Terms and Conditions&#44; Privacy Statement and Disclaimer Notice and any or all Agreements:&#34;Client"&#44; &#34;You&#34;and&#34;Your&#34;refers to you&#44;the person accessing this website and accepting the Company&#39;s terms &amp; conditions&#46; The&#34; Company&#34;&#44; &#34;Ourselves&#34;&#44; &#34;We&#34; and &#34;Us&#34;&#44; refers to our Company&#46;  &#34;Party&#44; &#34;Parties&#44; or &#34;Us&#44; refers to both the Client and ourselves&#44; or either the Client or ourselves&#46;  All terms refer to the offer&#44; acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner&#44; whether by formal meetings of a fixed duration&#44; or any other means&#44; for the express purpose of meeting the Client&#39;s needs in respect of provision of the Company&#39;s stated services&#47;products&#44; in accordance with and subject to&#44; prevailing English Law&#46;  Any use of the above terminology or other words in the singular&#44; plural&#44; capitalisation and&#47;or he&#47;she or they&#44; are taken as interchangeable and therefore as referring to same&#46; </p>
 <br/>
 <h2>Privacy Statement</h2>
 <p>We are committed to protecting your privacy&#46;Authorized employees within the company on a need to know basis only use any information collected from individual user&#46;  We constantly review our systems and data to ensure the best possible service to our users &#46; Parliament has created specific offences for unauthorised actions against computer systems and data&#46;We will investigate any such actions with a view to prosecuting and/or taking civil proceedings to recover damages against those responsible&#46;</p>  
@@ -22,7 +24,7 @@ Template Name: Terms
 <h2>Exclusions and Limitations </h2>
 <p>The information on this web site is provided on an &#34;as is&#34; basis&#46;  To the fullest extent permitted by law&#44; this Company:</p>
 
-<blockquote>
+<blockquote >
 excludes all representations and warranties relating to this website and its contents or which is or may be provided by any affiliates or any other third party&#44; including in relation to any inaccuracies or omissions in this website and/or the Company&#39;s literature; and excludes all liability for damages arising out of or in connection with your use of this website&#46;  This includes&#44; without limitation&#44; direct loss&#44; loss of business or profits &#40;whether or not the loss of such profits was foreseeable&#44; arose in the normal course of things or you have advised this Company of the possibility of such potential loss&#41;&#44; damage caused to your computer&#44; computer software&#44; systems and programs and the data thereon or any other direct or indirect&#44; consequential and incidental damages&#46;  
 </blockquote>
 
@@ -30,7 +32,7 @@ excludes all representations and warranties relating to this website and its con
 
 <br/>
 <h2>Availability </h2> 
-<p>Unless otherwise stated&#44; the services featured on this website are only available within the United Kingdom&#44; or in relation to postings from the United Kingdom&#46;  All advertising is intended solely for the United Kingdom market&#46;  You are solely responsible for evaluating the fitness for a particular purpose of any downloads&#44; programs and text available through this site&#46;  Redistribution or republication of any part of this site or its content is prohibited&#44; including such by framing or other similar or any other means&#44; without the express written consent of the Company&#46;  The Company does not warrant that the service from this site will be uninterrupted&#44; timely or error free&#44; although it is provided to the best ability&#46;  By using this service you thereby indemnify this Company&#44; its employees&#44; agents and affiliates against any loss or damage&#44; in whatever manner&#44; howsoever caused&#46; </p>    
+<p>Unless otherwise stated&#44; any type of services featured on this website are only available within the United Kingdom&#44; or in relation to postings from the United Kingdom&#46;  All advertising is intended solely for the United Kingdom market&#46;  You are solely responsible for evaluating the fitness for a particular purpose of any downloads&#44; programs and text available through this site&#46;  Redistribution or republication of any part of this site or its content is prohibited&#44; including such by framing or other similar or any other means&#44; without the express written consent of the Company&#46;  The Company does not warrant that the service from this site will be uninterrupted&#44; timely or error free&#44; although it is provided to the best ability&#46;  By using this service you thereby indemnify this Company&#44; its employees&#44; agents and affiliates against any loss or damage&#44; in whatever manner&#44; howsoever caused&#46; </p>    
 
 <h2>Log Files</h2>
 <p>We use IP addresses to analyse trends&#44; administer the site&#44; track user&#39;s movement&#44; and gather broad demographic information for aggregate use&#46;  IP addresses are not linked to personally identifiable information&#46;  Additionally&#44; for systems administration&#44; detecting usage patterns and troubleshooting purposes&#44; our web servers automatically log standard access information including browser type&#44; access times&#47;open mail&#44; URL requested&#44; and referral URL&#46;  This information is not shared with third parties and is used only within this Company on a need-to-know basis&#46;  Any individually identifiable information related to this data will never be used in any way different to that stated above without your explicit permission&#46; </p>    
@@ -62,5 +64,5 @@ excludes all representations and warranties relating to this website and its con
    		
 <div class="clearfix"></div>
 </section>
-<div class="clearfix"></div>
+
 <?php get_footer(); ?>
