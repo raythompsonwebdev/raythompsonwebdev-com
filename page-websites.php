@@ -58,8 +58,13 @@ Template Name: Websites
   <p> Advice and Forum website for newbie campers</p>
       
   <figure class="links"> 
+<<<<<<< HEAD
       <!--<?//php echo home_url();?>/website/camping-advice-->
   <a href="http://localhost/wordpress/blog/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
+=======
+      <!--<?//https://www.raythompsonwebdev.co.ukphp echo home_url();?>/website/camping-advice-->
+  <a href="<?php echo home_url();?>/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
+>>>>>>> origin/master
   </figcaption>
 
 
@@ -80,9 +85,15 @@ Template Name: Websites
 
   <figcaption class="showcase-content">
   <h1>Mannering Music</h1>
+<<<<<<< HEAD
   <p>Online music store</p>
     
   <div class="links"> <a href=" http://localhost/wordpress/blog/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
+=======
+  <p>Online music store selling Hip Hop, Jazz and Country music albums</p>
+    
+  <div class="links"> <a href=" https://www.raythompsonwebdev.co.uk/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
+>>>>>>> origin/master
   </figcaption>
   </figure>
 </div>
@@ -99,7 +110,11 @@ Template Name: Websites
     <h1>Car Rental</h1>
     <p>Online car rental booking website</p>
         
+<<<<<<< HEAD
     <div class="links"><a href="http://localhost/wordpress/blog/website/car-rental" title="www.car-rental.raythompsonwebdev.co.uk">See more..</a></div>
+=======
+    <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/car-rental" title="www.car-rental.raythompsonwebdev.co.uk">See more..</a></div>
+>>>>>>> origin/master
     </figcaption>
 
   </figure>
@@ -117,7 +132,11 @@ Template Name: Websites
   <h1>Shoestore</h1>
   <p>Online shoe and accessories store</p>
     
+<<<<<<< HEAD
   <div class="links"><a href="http://localhost/wordpress/blog/website/shoe-store/" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
+=======
+  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/shoe-store/" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
+>>>>>>> origin/master
   </figcaption>
 
   </figure>

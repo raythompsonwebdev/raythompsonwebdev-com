@@ -19,12 +19,22 @@
 
         </header><!--end of by line-->
 
+<<<<<<< HEAD
         <a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title_attribute() ?>;">
             
             <figure class="websiteImage">
                 <?php the_post_thumbnail('websites'); ?>
             </figure>
         </a>
+=======
+        
+            <figure class="websiteImage">
+          <a href="" class="fancybox.image" title="">      
+                <?php the_post_thumbnail('websites'); ?>
+          </a>      
+            </figure>
+        
+>>>>>>> origin/master
 
     <div class="website-text">
         <?php the_meta(); ?>
@@ -39,7 +49,11 @@
        </div>
         
        <div class="links"> 
+<<<<<<< HEAD
   <a href="" title="">Visit Website</a> 
+=======
+  
+>>>>>>> origin/master
   </div>
     </div>
 

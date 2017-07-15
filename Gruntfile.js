@@ -1,6 +1,10 @@
 module.exports = function(grunt){
 
+<<<<<<< HEAD
    // var mozjpeg = require('imagemin-mozjpeg');
+=======
+    var mozjpeg = require('imagemin-mozjpeg');
+>>>>>>> origin/master
 
     grunt.initConfig({
 
@@ -14,9 +18,15 @@ module.exports = function(grunt){
                 use: [mozjpeg()]
               },
               files: {                         // Dictionary of files 
+<<<<<<< HEAD
                 'dist/img.png': 'src/img.png', // 'destination': 'source' 
                 'dist/img.jpg': 'src/img.jpg',
                 'dist/img.gif': 'src/img.gif'
+=======
+                'images/optimised images/img.png': 'images/img.png', // 'destination': 'source' 
+                'images/optimised images/img.jpg': 'images/img.jpg',
+                'images/optimised images/img.gif': 'images/img.gif'
+>>>>>>> origin/master
               }
             }, */
   /*          dynamic: {                         // Another target 
@@ -90,7 +100,11 @@ module.exports = function(grunt){
     
     //grunt.registerTask('default', ['imagemin']);
    
+<<<<<<< HEAD
     grunt.registerTask('default', ['watch']);
+=======
+    grunt.registerTask('default', ['watch', 'sass']);
+>>>>>>> origin/master
 
 
 }

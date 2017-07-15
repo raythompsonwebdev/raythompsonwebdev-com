@@ -1,4 +1,11 @@
  
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/master
  
  jQuery(document).ready(function($){
 
