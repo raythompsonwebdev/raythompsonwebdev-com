@@ -140,11 +140,7 @@ add_filter( 'script_loader_src', 'remove_version_parameter', 15, 1 );
 // filter .css files
 add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
 
-<<<<<<< HEAD
-/*deregister jquery 
-=======
 /*deregister jquery
->>>>>>> origin/master
 function my_init()
 {
     {
@@ -195,20 +191,10 @@ add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 //enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
-<<<<<<< HEAD
-    
-   
-
-        wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
-        wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-        wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
-   
-=======
         wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
         wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
         wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
 
->>>>>>> origin/master
 }
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
@@ -216,41 +202,6 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 //enqueue other scripts
 function my_scripts_own() {
 
-<<<<<<< HEAD
-    wp_enqueue_script( 'responsivenav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
-     
-    
-    wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
-    
-         
-        
-    wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
-     
-    wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
-    
-    
-    //master
-    wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
-
-    wp_enqueue_script('jquery');
-    wp_enqueue_script( 'easing' );
-    wp_enqueue_script( 'scrollto' );
-    wp_enqueue_script( 'cookie' );
-  ;
-    wp_enqueue_script( 'master' );
-
-}
-add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
-
-//mobile navigation script
-function mf_responsive_nav(){
-
-
-
-echo '<script>
-  var navigation = responsiveNav("#mobile-nav");
-  </script>';
-=======
     wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.min.js', array());
      
 
@@ -272,13 +223,10 @@ echo '<script>
     wp_enqueue_script( 'cookie' );
 
     wp_enqueue_script( 'master' );
->>>>>>> origin/master
 
 }
-add_action('wp_footer', 'mf_responsive_nav');
+add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 
-<<<<<<< HEAD
-=======
 //mobile navigation script
 function mf_responsive_nav(){
 
@@ -289,7 +237,6 @@ echo '<script>
 }
 add_action('wp_footer', 'mf_responsive_nav');
 
->>>>>>> origin/master
 //ie 8 styles and scripts
 function ie_scripts() {
 

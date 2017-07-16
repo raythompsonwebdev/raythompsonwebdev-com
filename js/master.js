@@ -1,12 +1,3 @@
- 
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> origin/master
- 
  jQuery(document).ready(function($){
 
  $('.fancybox').fancybox({

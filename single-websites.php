@@ -39,7 +39,7 @@
        </div>
         
        <div class="links"> 
-  <a href="" title="">Visit Website</a> 
+  
   </div>
     </div>
 

@@ -16,13 +16,13 @@ Domain Path: /language
 
 
 /*
-$colorone:f5e00b-yellow
-$colortwo:f29715-orange
-$colorthree:b2d159-green
-$colorfour:070707-black
-$colorfive:e9ebc3-light green
-$colorsix:fed32f-light orange
-$colorseven:accc51-green-ligh
+$colorone:#f5e00b-yellow
+$colortwo:#f29715-orange
+$colorthree:#b2d159-green
+$colorfour:#070707-black
+$colorfive:#e9ebc3-light green
+$colorsix:#fed32f-light orange
+$colorseven:#accc51-green-ligh
 */
 
 @import "partials/variables";
@@ -115,11 +115,7 @@ a {
         color: $color9;
     }
     &:hover {
-<<<<<<< HEAD
-        color: $color4;
-=======
         color: $color5;
->>>>>>> origin/master
         font-weight: bold;
     }
     &:active {
@@ -182,7 +178,6 @@ p {
     font-family: ($FontStyle);
     color: $color1;
     font-size: 1em;
-
     padding: 0;
     margin: 0;
 }
@@ -287,13 +282,8 @@ body {
 }
 
 
-<<<<<<< HEAD
-//1920px
-@media only screen and (max-width: 120em)   {
-=======
 //1441 px to 1920px
 @media only screen and (max-width: 120em) {
->>>>>>> origin/master
 
     #wrapper_container {
         background: $color2;
@@ -425,48 +415,29 @@ body {
             -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-            -webkit-justify-content: flex-start;
-            -ms-flex-pack: flex-start;
-            justify-content: flex-start;
-            -webkit-align-items: flex-start;
-            -ms-flex-align: flex-start;
-            align-items: flex-start;
-
+            
             .site-logo {
                 position: relative;
-<<<<<<< HEAD
-                top: 5px;
+                top: 10px;
                 width: 3.5em;
-                height: 4em;
+                height: 3.5em;
+                -webkit-flex: 0.1 1 auto;
+                -ms-flex: 0.1 1 auto;
+                flex: 0.1 1 auto;
+                
 
                 a {
-                   // position: absolute;
-                   // z-index: 10;
-                   // top: 1em;
-                  //  left: 0;
+                    //position: absolute;
+                    //z-index: 10;
+                    //top: 0.7em;
+                    //left: 0;
                     display: block;
-                    
-=======
-                top: -5px;
-
-                a {
-                    position: absolute;
-                    z-index: 10;
-                    top: 0.7em;
-                    left: 0;
-                    display: block;
-                    width: 3em;
-                    height: 3em;
->>>>>>> origin/master
                     background: $color1;
                     border: 2px solid $color3;
                     color: white;
                     text-decoration: none;
-<<<<<<< HEAD
-                    line-height: 45px;
-=======
                     line-height: 40px;
->>>>>>> origin/master
+                    width:80%;
                     @include originTran( 50% 50%);
                     @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                 }
@@ -506,15 +477,6 @@ body {
             }
             .site-firstletter {
                 font-family: 'Fira Sans', sans-serif;
-<<<<<<< HEAD
-                font-size: 2.4em;
-                font-weight: normal;
-                text-align: center;
-                line-height: 45px;
-            }
-            .site-logo a:focus .site-firstletter,
-            .site-logo a:hover .site-firstletter {
-=======
                 font-size: 2.3em;
                 font-weight: normal;
                 text-align: center;
@@ -524,57 +486,41 @@ body {
             }
             .site-logo a:focus .site-firstletter,
                 .site-logo a:hover .site-firstletter {
->>>>>>> origin/master
                 background: $color4;
                 color:$color8;
                 font-weight: normal;
                 text-align: center;
-<<<<<<< HEAD
-                line-height: 45px;
-=======
 
->>>>>>> origin/master
             }
 
             hgroup{
-                width:55%;
+                width: 50%;
                 display:block;
                 float:left;
-                height:50%;
-<<<<<<< HEAD
-                
-=======
->>>>>>> origin/master
+                height:4em;
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
 
                 h1#logo {
-                    font-size: 2em;
+                    font-size: 1.9em;
                     width: 100%;
-<<<<<<< HEAD
                     height: 40px;
                     font-weight: bold;
                     line-height: 40px;
-=======
-                    height: 45px;
-                    font-weight: bold;
-                    line-height: 50px;
->>>>>>> origin/master
                     color: $color4;
                     text-shadow: 2px 2px $color11;
                     display: block;
                     margin: 0;
-<<<<<<< HEAD
                     
-=======
-                    padding-left:6%;
->>>>>>> origin/master
                     letter-spacing:0.03em;
                     float: left;
-                    width: 90%;
+                    width: 100%;
 
 
                     span {
                         height: 100%;
-                        padding: 0 0 0 0.2%;
+                        
                         margin: 0;
                         color: $color4;
                         text-align: left;
@@ -582,38 +528,25 @@ body {
                     }
                     span:last-of-type {
                         height: 100%;
-                        padding: 0 0 0 0.2%;
+                        
                         margin: 0;
                         color: $color1;
                         display: inline-block;
                     }
                 }
                 h1#logo-blog {
-                    font-size: 2em;
-<<<<<<< HEAD
+                    font-size: 1.9em;
                     height: 40px;
                     font-weight: bold;
                     line-height: 40px;
-=======
-                    height: 45px;
-                    font-weight: bold;
-                    line-height: 50px;
->>>>>>> origin/master
                     color: $color4;
                     text-shadow: 2px 3px $color11;
                     display: block;
                     margin:0;
-<<<<<<< HEAD
                     
                     letter-spacing:0.03em;
                     float: left;
                     width: 100%;
-=======
-                    padding-left:6%;
-                    letter-spacing:0.03em;
-                    float: left;
-                    width: 90%;
->>>>>>> origin/master
 
                     span {
                         height: 100%;
@@ -625,31 +558,21 @@ body {
                         height: 100%;
                         margin: 0;
                         color: $color1;
-                        margin: 0 0.5%;
+                        
                     }
                 }
                 h2 {
                     float: none;
                     display: block;
                     width: 100%;
-<<<<<<< HEAD
-                    height: 22px;
+                    height: 20px;
                     margin: 0 ;
                     letter-spacing: 0.1em;
                     padding: 0;
-                    line-height: 22px;
+                    line-height: 20px;
                     font-size: 0.8em;
                     font-weight: normal;
-=======
-                    height: 25px;
-                    margin: 0 ;
-                    letter-spacing: 0.1em;
                     padding: 0;
-                    line-height: 25px;
-                    font-size: 0.8em;
-                    font-weight: normal;
-                    padding-left:6.5%;
->>>>>>> origin/master
                     clear: left;
                 }
                 #title {
@@ -669,36 +592,27 @@ body {
                 width: 45%;
                 float: right;
                 margin: 0.5em 0 0 0;
-<<<<<<< HEAD
-                height:auto;
-  
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex: 1 1 auto;
+                -ms-flex: 1 1 1 auto;
+                flex: 1 1 auto;
+                height:35px;
+
                 ul#menu-main {
                     padding: 0;
                     margin: 0;
                     height: 35px;
                     width: 100%;
-                    display: -webkit-flex;
-                    display: -ms-flexbox;
-                    display: flex;
-=======
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                height:25%;
-
-                ul#menu-main {
-                    padding: 0;
-                    margin: 0.5em 0 0 0;
-                    height: 35px;
-                    width: 100%;
->>>>>>> origin/master
                     li.menu-item {
                         width: 19%;
                         float: left;
                         height: 35px;
                         list-style: none;
-                        margin: 0 0.2em;
+                        margin: 0 0 0 0.2em;
                         padding: 0;
+                        display:inline-block;
                         text-align: center;
                         -webkit-flex: 0 1 auto;
                         -ms-flex: 0 1 auto;
@@ -909,11 +823,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             ul.skills {
                 margin: 3% 0;
                 width: 45%;
@@ -981,7 +891,7 @@ body {
                     flex: 0 1 auto;
                     //display: inline-block;
                     height: auto;
-                    width: 31%;
+                    width: 31.9%;
                     margin: 0.5em;
                     float: left;
                     h2 {
@@ -2141,10 +2051,7 @@ body {
                 label {
                     height: 30px;
                     line-height: 30px;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
                 }
                 input[type="submit"] {
                     height: 35px;
@@ -2212,7 +2119,7 @@ body {
                         display: block;
                     }
                     p {
-                        width: 98%;
+                        width: 96%;
                         line-height: 1.9em;
                         font-size: 0.9em;
                         font-weight: normal;
@@ -2319,18 +2226,27 @@ body {
                     margin: 0;
                     float: right;
                     display: inline-block;
+                                     
                     font-family: ($FontStyle);
-                    figure#image-6 #image-5 {
-                        display: none;
-                        opacity: 0;
+                    figure#image-6 {
+                        #image-5 {
+                            display: none;
+                            opacity: 0;
+                        }
                     }
-                    figure#image-7 #image-4 {
-                        width: 100%;
-                        max-width: 100%;
-                        height: 100%;
-                        border: none;
-                        margin-top: 0;
-                    }
+                    
+                    figure#image-7{
+                 
+                        #image-4 {
+                            width: 100%;
+                            max-width: 100%;
+                            height: 100%;
+                            border: none;
+                            margin-top: 0;
+
+                        }
+                        
+                    } 
                 }
 
                 /*profile-page_container*/
@@ -2786,7 +2702,7 @@ body {
                             color: $color1;
                             @include Transition(background-color 0.3s ease-in);
                             font-size: 1.1em;
-                            margin-right: 1%;
+                            margin-right: 0.5em;
                         }
                         li:hover {
                             background-color: $color1;
@@ -3121,11 +3037,7 @@ body {
     /* Small menu. */
     /*Wrapper*/
     #wrapper_container {
-<<<<<<< HEAD
         width: 90%;
-=======
-        width: 86%;
->>>>>>> origin/master
         margin: 0 auto;
         clear: both;
 
@@ -3134,7 +3046,7 @@ body {
             margin: 0.75% 0 0;
 
             .side-bar-box {
-                width: 31%;
+                width: 31.9%;
                 margin: 0.5em;
 
                 h2 {
@@ -3210,24 +3122,11 @@ body {
             height: 150px;
 
             .site-logo {
-                position: relative;
-<<<<<<< HEAD
-                top: 5px;
-                width: 3.4em;
-                height: 3.9em;
-
+                top: 10px;
+                width: 3.5em;
+                height: 3.5em;
                 a {
-                    width: 80%;
-                    line-height: 40px;
-=======
-                top: -10px;
-
-                a {
-                    width: 2.8em;
-                    height: 2.8em;
-                    top: 1em;
-
->>>>>>> origin/master
+                    width:80%;
                 }
                 /* Text meant only for screen readers. */
                 .screen-reader-text {
@@ -3244,28 +3143,6 @@ body {
 
             }
             .site-logo a:focus,
-<<<<<<< HEAD
-            .site-logo a:hover {
-                outline: 2px solid white;
-            }
-            .site-firstletter {
-                font-size: 2.2em;
-                line-height: 40px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 40px;
-            }
-
-            hgroup{
-                width:50%;
-                height:50%;
-
-                h1#logo {
-                    font-size: 1.8em;
-                    letter-spacing:0.03em;
-                    width: 100%;
-=======
                 .site-logo a:hover {
                 outline: 2px solid white;
 
@@ -3275,50 +3152,40 @@ body {
 
             }
             .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
+            .site-logo a:hover .site-firstletter {
             }
 
             hgroup{
-                width:55%;
-                height:50%;
+                width:50%;
+                height:4em;
 
                 h1#logo {
-                    font-size: 2em;
-                    padding-left:7.5%;
+                    font-size: 1.8em;
+                    
                     letter-spacing:0.03em;
->>>>>>> origin/master
 
                     span {
-                        padding: 0 0 0 0.2%;
+                        padding: 0 ;
                     }
                     span:last-of-type {
-                        padding: 0 0 0 0.2%;
+                        padding: 0 ;
                     }
                 }
                 h1#logo-blog {
-<<<<<<< HEAD
                     font-size: 1.8em;
+                    
                     letter-spacing:0.03em;
-                    width: 100%;
-=======
-                    font-size: 2em;
-                    padding-left:7.5%;
-                    letter-spacing:0.03em;
->>>>>>> origin/master
 
                     span {
                         text-align: left;
                     }
                     span:last-of-type {
-                        margin: 0 0.5%;
+                        margin: 0;
                     }
                 }
                 h2 {
                     font-size: 0.75em;
-<<<<<<< HEAD
-=======
-                    padding-left:8.5%;
->>>>>>> origin/master
+                    padding-left:0;
                     clear: left;
                 }
                 #title {
@@ -3330,17 +3197,17 @@ body {
 
             nav.menu-main-container {
                 width: 45%;
-                margin:0.5% 0 0 0;
-                height:25%;
+                margin: 0.5em 0 0 0;
+                height:35px;
 
                 ul#menu-main {
                     height: 35px;
                     li.menu-item {
-                        width: 18%;
+                        width: 19%;
 
                         a {
                             line-height: 35px;
-                            font-size: 0.85em;
+                            font-size: 0.8em;
 
                             &:link {
                                 background-color: $color2;
@@ -3456,7 +3323,7 @@ body {
                 height: 30px;
             }
             p {
-                font-size: 0.90em;
+                font-size: 0.85em;
                 letter-spacing: 0.08em;
                 line-height: 1.9em;
                 margin: 0 0 1%;
@@ -3497,7 +3364,7 @@ body {
                 .side-bar-box {
 
                     height: auto;
-                    width: 31%;
+                    width: 31.9%;
                     margin: 0.5em;
                     float: left;
                     h2 {
@@ -3878,13 +3745,8 @@ body {
                                                 font-size: 1.25em;
                                                 height: 46px;
                                                 line-height: 46px;
-<<<<<<< HEAD
-    
-    
-=======
 
 
->>>>>>> origin/master
                                             }*/
                                 }
                             }
@@ -4443,10 +4305,7 @@ body {
                 label {
                     height: 30px;
                     line-height: 30px;
-<<<<<<< HEAD
-=======
                     font-size:0.9em;
->>>>>>> origin/master
                 }
                 input[type="submit"] {
                     height: 35px;
@@ -4493,16 +4352,11 @@ body {
                 /*Intro Container*/
                 .text-box {
                     width: 50%;
-                    display: inline-block;
-
-                    float: left;
-
-                    height: auto;
+              
                     h1 {
                         font-size: 0.97em;
                         letter-spacing: 0.08em;
-                        line-height: 25px;
-
+ 
                     }
                     p {
 
@@ -4558,8 +4412,6 @@ body {
                 .svg-image-container {
                     width: 50%;
                     height: auto;
-                    float: right;
-                    display: inline-block;
 
                     figure#image-6 #image-5 {
                         display: none;
@@ -4883,7 +4735,7 @@ body {
                             cursor: pointer;
 
                             font-size: 0.95em;
-                            margin-right: 1%;
+                            margin-right: 0.4em;
                         }
                         li:hover {
                             background-color: $color1;
@@ -5118,11 +4970,7 @@ body {
 }
 
 //1280px
-<<<<<<< HEAD
-@media all and (max-width: 80em) {
-=======
 @media only screen and (max-width: 80em) {
->>>>>>> origin/master
 
     #wrapper_container {
         width: 90%;
@@ -5132,18 +4980,12 @@ body {
             height: 150px;
 
             .site-logo {
-                position: relative;
-                top: -10px;
+                top: 9px;
+                width: 3em;
+                height: 3em;
 
                 a {
-<<<<<<< HEAD
-                    width: 2.6em;
-                    height: 2.6em;
-=======
-                    width: 2.7em;
-                    height: 2.7em;
->>>>>>> origin/master
-
+                    width: 80%;
                 }
                 /* Text meant only for screen readers. */
                 .screen-reader-text {
@@ -5160,65 +5002,41 @@ body {
                 outline: 2px solid white;
             }
             .site-firstletter {
-<<<<<<< HEAD
-                font-size: 2em;
-                line-height: 38px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 38px;
-=======
                 font-size: 1.8em;
             }
             .site-logo a:focus .site-firstletter,
                 .site-logo a:hover .site-firstletter {
->>>>>>> origin/master
             }
 
             hgroup{
-                width:59%;
-                height:50%;
+                height:4em;
 
                 h1#logo {
-                    font-size: 1.9em;
-<<<<<<< HEAD
-                    padding-left:7%;
-=======
-                    padding-left:7.5%;
->>>>>>> origin/master
+                    font-size: 1.7em;
                     letter-spacing:0.03em;
+                    height: 35px;
 
                     span {
-                        padding: 0 0 0 0.2%;
+                        padding: 0;
                     }
                     span:last-of-type {
-                        padding: 0 0 0 0.2%;
+                        padding: 0 ;
                     }
                 }
                 h1#logo-blog {
-                    font-size: 1.9em;
-<<<<<<< HEAD
-                    padding-left:7%;
-=======
-                    padding-left:7.5%;
->>>>>>> origin/master
+                    font-size: 1.7em;
                     letter-spacing:0.03em;
+                    height: 35px;
 
                     span {
                         text-align: left;
                     }
                     span:last-of-type {
-                        margin: 0 0.5%;
+                        margin: 0 ;
                     }
                 }
                 h2 {
-<<<<<<< HEAD
-                    font-size: 0.8em;
-                    padding-left:7.5%;
-=======
                     font-size: 0.7em;
-                    padding-left:8%;
->>>>>>> origin/master
                     clear: left;
                 }
                 #title {
@@ -5230,17 +5048,15 @@ body {
 
             nav.menu-main-container {
                 width: 40%;
-                margin:0.5% 0 0 0;
-                height:25%;
 
                 ul#menu-main {
                     height: 35px;
                     li.menu-item {
-                        width: 18.5%;
+                        width: 19%;
 
                         a {
                             line-height: 35px;
-                            font-size: 0.8em;
+                            font-size: 0.75em;
 
                             &:link {
                                 background-color: $color2;
@@ -5273,6 +5089,105 @@ body {
         }
 
         #main-content {
+            blockquote {
+                width: 91%;
+                margin: 1.8% auto;
+                line-height: 1.8em;
+                letter-spacing: 0.05em;
+                font-size: 0.9em;
+
+                &:before {
+                    content: "\f10d";
+                }
+                &:after {
+                    content: "\f10e";
+                }
+            }
+            /*Search Box*/
+            .social-1 {
+                height: 35px;
+                width: 35%;
+                display: block;
+                clear: both;
+                form.searchform {
+                    text-align: left;
+
+                    display: block;
+                    div {
+                        display: block;
+                        label {
+                            width: 25%;
+                            font-size: 0.85em;
+                            display: inline-block;
+
+                            line-height: 30px;
+                            height: 30px;
+                            text-align: center;
+                        }
+                        input {
+                            width: 50%;
+                            height: 30px;
+                            font-size: 0.9em;
+
+                            line-height: 30px;
+                        }
+                        input[type=submit] {
+                            height: 30px;
+                            width: 25%;
+                            letter-spacing: 0.1em;
+
+                            font-size: 0.9em;
+                            border: none;
+
+                            &:hover {
+                                font-weight:bold;
+                            }
+                        }
+
+                    }
+                }
+            }
+            hgroup {
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                font-size: 1.1em;
+   
+            }
+            h2 {
+                font-size: 1em;
+
+            }
+            h3 {
+                font-size: 0.95em;
+
+            }
+            p {
+                font-size: 0.8em;
+
+            }
+
+            ul {
+                list-style: none;
+                li{
+                    a:hover {
+                        color: $color4;
+                    }
+                }
+            }
+
+            hr {
+                height: 1px;
+                width: 80%;
+            }
+            hr.blog-spacer {
+                margin: 2% auto;
+                width: 80%;
+
+            }
+            
+            
             .post {
                 background-color: $color4;
                 padding: 0 1%;
@@ -5441,7 +5356,7 @@ body {
 
                     }
                     p {
-                        font-size: 0.85em;
+                        font-size: 0.8em;
                         width: 96%;
                     }
                     .introimg {
@@ -5879,28 +5794,18 @@ body {
     }
     #wrapper_container {
         width: 96%;
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
         header {
 
             height: 120px;
 
             .site-logo {
                 position: relative;
-                top: -10px;
+                top: 9px;
 
                 a {
-<<<<<<< HEAD
-                    width: 2.5em;
-                    height: 2.5em;
-=======
-                    width: 2.7em;
-                    height: 2.7em;
->>>>>>> origin/master
 
+                    width:80%;
                 }
                 /* Text meant only for screen readers. */
                 .screen-reader-text {
@@ -5918,60 +5823,41 @@ body {
             }
             .site-firstletter {
                 font-size: 2em;
-<<<<<<< HEAD
-                line-height: 36px;
             }
             .site-logo a:focus .site-firstletter,
                 .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-=======
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
->>>>>>> origin/master
             }
 
             hgroup{
-                width:59%;
-                height:50%;
+                height:4em;
 
                 h1#logo {
-                    font-size: 1.8em;
-<<<<<<< HEAD
-                    padding-left:8%;
-=======
-                    padding-left:8.5%;
->>>>>>> origin/master
+                    font-size: 1.65em;
+                    height: 35px;
+                    
 
                     span {
-                        padding: 0 0 0 0.2%;
+                        padding: 0;
                     }
                     span:last-of-type {
-                        padding: 0 0 0 0.2%;
+                        padding: 0;
                     }
                 }
                 h1#logo-blog {
-                    font-size: 1.8em;
-<<<<<<< HEAD
-                    padding-left:8%;
-=======
-                    padding-left:8.5%;
->>>>>>> origin/master
+                    font-size: 1.65em;
+                    height: 35px;
+                    
 
                     span {
                         text-align: left;
                     }
                     span:last-of-type {
-                        margin: 0 0.5%;
+                        margin: 0 ;
                     }
                 }
                 h2 {
                     font-size: 0.7em;
-<<<<<<< HEAD
-                    padding-left:8.5%;
-=======
-                    padding-left:9%;
->>>>>>> origin/master
+                   
                 }
                 #title {
                     min-width: 280px;
@@ -5981,22 +5867,17 @@ body {
             /*Navigation*/
 
             nav.menu-main-container {
-                width: 40%;
-                margin:0.5% 0 0 0;
-                height:25%;
-
+                width: 35%;
+                margin:0.5em 0 0 0;
+ 
                 ul#menu-main {
                     height: 35px;
                     li.menu-item {
-                        width: 18%;
+                        width: 19%;
 
                         a {
                             line-height: 35px;
-<<<<<<< HEAD
-                            font-size: 0.75em;
-=======
                             font-size: 0.7em;
->>>>>>> origin/master
 
                             &:link {
                                 background-color: $color2;
@@ -6027,13 +5908,8 @@ body {
             div#mobile-nav { display: none; }
             /*Mobile-Navigation*/
         }
-<<<<<<< HEAD
-        
-        
-=======
 
 
->>>>>>> origin/master
         #main-content {
             padding: 0;
             min-height: 740px;
@@ -6042,20 +5918,20 @@ body {
             }
             h1 {
 
-                font-size: 1.15em;
+                font-size: 1em;
             }
             h2 {
-                font-size: 1.1em;
+                font-size: 0.95em;
             }
             h3 {
-                font-size: 1em;
+                font-size: 0.9em;
             }
             p {
                 font-size: 0.80em;
             }
 
             blockquote {
-                font-size: 0.9em;
+                font-size: 0.85em;
             }
 
             ul.skills {
@@ -7045,29 +6921,18 @@ body {
         display: none;
     }
     #wrapper_container {
-<<<<<<< HEAD
-        
-=======
 		width:98%;
 
->>>>>>> origin/master
         header {
 
             height: 120px;
 
             .site-logo {
                 position: relative;
-                top: -10px;
+                top: 9px;
 
                 a {
-<<<<<<< HEAD
-                    width: 2.5em;
-                    height: 2.5em;
-=======
-                    width: 2.7em;
-                    height: 2.7em;
->>>>>>> origin/master
-
+                    width:80%;
                 }
                 /* Text meant only for screen readers. */
                 .screen-reader-text {
@@ -7085,63 +6950,39 @@ body {
             }
             .site-firstletter {
                 font-size: 2em;
-<<<<<<< HEAD
-                line-height: 36px;
             }
             .site-logo a:focus .site-firstletter,
                 .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-=======
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
->>>>>>> origin/master
             }
 
             hgroup{
-                width:59%;
-                height:50%;
+                width:50%;
+                height:4em;
 
                 h1#logo {
-<<<<<<< HEAD
-                    font-size: 1.7em;
-                    padding-left:8%;
-=======
-                    font-size: 1.65em;
-                    padding-left:9%;
->>>>>>> origin/master
-
+                    font-size: 1.6em;
+                  
                     span {
-                        padding: 0 0 0 0.2%;
+                        padding: 0;
                     }
                     span:last-of-type {
-                        padding: 0 0 0 0.2%;
+                        padding: 0 ;
                     }
                 }
                 h1#logo-blog {
-<<<<<<< HEAD
-                    font-size: 1.7em;
-                    padding-left:8%;
-=======
-                    font-size: 1.65em;
-                    padding-left:9%;
->>>>>>> origin/master
+                    font-size: 1.6em;
+                    
 
                     span {
                         text-align: left;
                     }
                     span:last-of-type {
-                        margin: 0 0.5%;
+                        margin: 0;
                     }
                 }
                 h2 {
-<<<<<<< HEAD
-                    font-size: 0.7em;
-                    padding-left:8.5%;
-=======
                     font-size: 0.65em;
-                    padding-left:9.5%;
->>>>>>> origin/master
+                    
                 }
                 #title {
                     min-width: 280px;
@@ -7151,22 +6992,18 @@ body {
             /*Navigation*/
 
             nav.menu-main-container {
-                width: 40%;
-                margin:0.5% 0 0 0;
-                height:25%;
+                width: 35%;
+                margin:0.5em 0 0 0;
+                height:35px;
 
                 ul#menu-main {
                     height: 35px;
                     li.menu-item {
-                        width: 18%;
+                        width: 19%;
 
                         a {
                             line-height: 35px;
-<<<<<<< HEAD
-                            font-size: 0.75em;
-=======
                             font-size: 0.7em;
->>>>>>> origin/master
 
                             &:link {
                                 background-color: $color2;
@@ -7197,29 +7034,23 @@ body {
             div#mobile-nav { display: none; }
             /*Mobile-Navigation*/
         }
-<<<<<<< HEAD
-        
-        
-=======
 
 
->>>>>>> origin/master
         #main-content {
             padding: 2.5% 0 0;
             h1 {
-                font-size: 1.1em;
+                font-size: 1em;
                 height: 40px;
                 line-height: 40px;
             }
             h2 {
-                font-size: 1em;
+                font-size: 0.95em;
             }
             h3 {
-                font-size: 0.9em;
+                font-size: 0.85em;
             }
             p {
                 font-size: 0.75em;
-                font-weight: 100;
                 width: 95%;
                 letter-spacing: 0.1em;
                 margin: 0;
@@ -7720,10 +7551,7 @@ body {
                 p {
                     font-size: 0.8em;
                 }
-<<<<<<< HEAD
-=======
                 label{font-size:0.85em;}
->>>>>>> origin/master
             }
             ul.skills {
                 margin: 4% 0 5%;
@@ -7749,11 +7577,11 @@ body {
                 .text-box {
                     width: 49%;
                     h1 {
-                        font-size: 0.9em;
+                        font-size: 1em;
                         height: auto;
                     }
                     p {
-                        font-size: 0.7em;
+                        font-size: 0.75em;
                         width: 98%;
                         line-height: 1.9em;
                     }
@@ -7778,7 +7606,7 @@ body {
 
                         }
                         li#fa-desktop {
-                            font-size: 0.75em;
+                            font-size: 0.8em;
 
                         }
                         li#fa-desktop::before {
@@ -7786,25 +7614,21 @@ body {
 
                         }
                         li#fa-wordpress {
-                            font-size: 0.75em;
+                            font-size: 0.8em;
 
                         }
                         li#fa-wordpress::before {
                             font-size:1.2em;
                         }
                         li#fa-mobile {
-                            font-size: 0.75em;
+                            font-size: 0.8em;
 
                         }
                         li#fa-mobile::before {
                             font-size: 1.3em;
 
                         }
-<<<<<<< HEAD
-                      
-=======
 
->>>>>>> origin/master
                     }
                 }
                 .svg-image-container {
@@ -8162,13 +7986,8 @@ body {
         display: none;
     }
     #wrapper_container {
-<<<<<<< HEAD
-        width: 96%;
-        
-=======
         width: 98%;
 
->>>>>>> origin/master
         header {
 
             height: 120px;
@@ -8178,13 +7997,8 @@ body {
                 top: -10px;
 
                 a {
-<<<<<<< HEAD
-                    width: 2.4em;
-                    height: 2.4em;
-=======
                     width: 2.7em;
                     height: 2.7em;
->>>>>>> origin/master
 
                 }
                 /* Text meant only for screen readers. */
@@ -8203,19 +8017,11 @@ body {
             }
             .site-firstletter {
                 font-size: 1.9em;
-<<<<<<< HEAD
-                line-height: 34px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 34px;
-=======
 
             }
             .site-logo a:focus .site-firstletter,
                 .site-logo a:hover .site-firstletter {
 
->>>>>>> origin/master
             }
 
             hgroup{
@@ -8223,16 +8029,10 @@ body {
                 height:50%;
 
                 h1#logo {
-<<<<<<< HEAD
-                    font-size: 1.5em;
-                    padding-left: 10%;
-                    width: 100%;
-=======
                     font-size: 1.45em;
                     padding-left: 11.5%;
                     width: 100%;
 					height: 40px;
->>>>>>> origin/master
 
                     span {
                         padding: 0 0 0 0.2%;
@@ -8242,16 +8042,10 @@ body {
                     }
                 }
                 h1#logo-blog {
-<<<<<<< HEAD
-                    font-size: 1.5em;
-                    padding-left: 10%;
-                    width: 100%;
-=======
                     font-size: 1.45em;
                     padding-left: 11.5%;
                     width: 100%;
 					height: 40px;
->>>>>>> origin/master
 
                     span {
                         text-align: left;
@@ -8261,13 +8055,8 @@ body {
                     }
                 }
                 h2 {
-<<<<<<< HEAD
-                    font-size: 0.7em;
-                    padding-left:10.5%;
-=======
                     font-size: 0.65em;
                     padding-left:12%;
->>>>>>> origin/master
                 }
                 #title {
                     min-width: 280px;
@@ -8278,11 +8067,7 @@ body {
 
             nav.menu-main-container {
                 width: 45%;
-<<<<<<< HEAD
-                margin:0.5% 0 0 0;
-=======
                 margin:5% 0 0 0;
->>>>>>> origin/master
                 height: 43%;
 
                 ul#menu-main {
@@ -8323,13 +8108,8 @@ body {
             div#mobile-nav { display: none; }
             /*Mobile-Navigation*/
         }
-<<<<<<< HEAD
-        
-        
-=======
 
 
->>>>>>> origin/master
         #main-content {
             padding: 3.1% 0 0;
             h1 {
@@ -8944,11 +8724,7 @@ body {
                         li#fa-mobile::before {
                             font-size: 1.35em;
                         }
-<<<<<<< HEAD
-                        
-=======
 
->>>>>>> origin/master
                     }
                 }
                 .svg-image-container {
@@ -9321,13 +9097,8 @@ body {
                 top: -10px;
 
                 a {
-<<<<<<< HEAD
-                    width: 2.3em;
-                    height: 2.3em;
-=======
                     width: 2.7em;
                     height: 2.7em;
->>>>>>> origin/master
 
                 }
                 /* Text meant only for screen readers. */
@@ -9346,19 +9117,11 @@ body {
             }
             .site-firstletter {
                 font-size: 1.8em;
-<<<<<<< HEAD
-                line-height: 33px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 33px;
-=======
 
             }
             .site-logo a:focus .site-firstletter,
                 .site-logo a:hover .site-firstletter {
 
->>>>>>> origin/master
             }
 
             hgroup{
@@ -9366,13 +9129,8 @@ body {
                 height:50%;
 
                 h1#logo {
-<<<<<<< HEAD
-                    font-size: 1.45em;
-                    padding-left: 10%;
-=======
                     font-size: 1.4em;
                     padding-left: 12%;
->>>>>>> origin/master
                     width: 100%;
 
                     span {
@@ -9383,13 +9141,8 @@ body {
                     }
                 }
                 h1#logo-blog {
-<<<<<<< HEAD
-                    font-size: 1.45em;
-                    padding-left: 10%;
-=======
                     font-size: 1.4em;
                     padding-left: 12%;
->>>>>>> origin/master
                     width: 100%;
 
                     span {
@@ -9401,11 +9154,7 @@ body {
                 }
                 h2 {
                     font-size: 0.65em;
-<<<<<<< HEAD
-                    padding-left:10.5%;
-=======
                     padding-left:12.5%;
->>>>>>> origin/master
                 }
                 #title {
                     min-width: 280px;
@@ -9426,11 +9175,7 @@ body {
 
                         a {
                             line-height: 35px;
-<<<<<<< HEAD
-                            font-size: 0.65em;
-=======
                             font-size: 0.6em;
->>>>>>> origin/master
 
                             &:link {
                                 background-color: $color2;
@@ -9465,11 +9210,7 @@ body {
             padding: 0;
             h1 {
                 margin: 0;
-<<<<<<< HEAD
-                font-size: 1.15em;
-=======
                 font-size: 1.1em;
->>>>>>> origin/master
             }
             h2 {
                 font-size: 1.10em;
@@ -9530,11 +9271,7 @@ body {
                                 text-align: center;
                                 a {
                                     width: 100%;
-<<<<<<< HEAD
-                                    font-size: 0.9em;
-=======
                                     font-size: 0.8em;
->>>>>>> origin/master
                                     &:hover {
                                         color: $color4;
 
@@ -9556,11 +9293,7 @@ body {
             }
             .post {
                 h1 {
-<<<<<<< HEAD
-                    font-size: 1.15em;
-=======
                     font-size: 1.1em;
->>>>>>> origin/master
                 }
                 h2 {
                     text-indent: 0;
@@ -10320,119 +10053,6 @@ body {
     }
 }
 
-<<<<<<< HEAD
-//667px iphone6 landscape
-@media only screen and (max-width: 41.6875em) {
-    .fixed-side-social-container {
-        display: none;
-    }
-    a.nav-toggle {
-        display: block;
-        position: fixed;
-        z-index: 9999;
-        left: 0.5em;
-        top: 4em;
-        line-height: 60px;
-        height: 60px;
-        width: 60px;
-        text-align: center;
-        @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
-        background-color: $color3;
-        color: $color1;
-        @include box-sizing($type:border-box);
-        border:2px solid $color1;
-    }
-    a.nav-toggle.hide {
-        left: -4em;
-    }
-    a.nav-toggle:hover {
-        background-color: $color1;
-        color: $color4;
-        line-height: 60px;
-        border:2px solid $color4;
-    }
-    #wrapper_container {
-        width: 96%;
-        height: auto;
-        margin: 5px auto;
-        header {
-            width: 100%;
-            height: 120px;
-            
-            hgroup {
-                width: 70%;
-                height: 100%;
-                float:none;
-                margin:auto;
-                text-align:center;
-                h1#logo {
-                    font-size: 1.75em;
-                    width: 100%;
-                    letter-spacing: 0.055em;
-                    padding-left: 0;
-                    line-height:50px;
-                }
-                h1#logo-blog {
-                    font-size: 1.75em;
-                    letter-spacing: 0.055em;
-                    padding-left: 0;
-                    line-height:50px;
-                }
-                h2 {
-                    width: 100%;
-                    margin: 0;
-                    font-size: 0.75em;
-                    padding-left: 0;
-                    text-align:center;
-                }
-              }
-            
-            //.site-logo {  top: -7px; left: 96%;}
-            .site-logo {
-                top:-5px;
-                a {
-                    top: 0.8em;
-                    left: 0;
-                    width: 2.5em;
-                    height: 2.5em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.8em;
-                line-height: 36px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-            }
-            
-           
-
-            .site-firstletter {
-                line-height: 36px;
-            }
-            /*Mobile-Navigation*/
-               
-            nav.menu-main-container{
-                display: none;
-            }
-            .nav-collapse ul {
-                position:fixed;
-                display: block;
-                margin: 0 auto;
-                width: 96%;
-                //overflow: hidden;
-                left: 0.5em;
-                height: 302px;
-                background-color: $color2;
-            }
-        
-
-            div#mobile-nav {
-                width: 100%;
-=======
 
 //736
 @media only screen and (max-width: 736px) {
@@ -11513,7 +11133,6 @@ body {
 
             div#mobile-nav {
                 width: 100%;
->>>>>>> origin/master
                 left: 0;
                 top: 0.2em;
                 z-index: 9999;
@@ -11528,11 +11147,7 @@ body {
                         display: block;
                         background-color: $color2;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -11555,11 +11170,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -12195,11 +11806,7 @@ body {
                         li#fa-mobile::before {
                             font-size: 1.35em;
                         }
-<<<<<<< HEAD
-                        
-=======
 
->>>>>>> origin/master
                     }
                 }
                 .svg-image-container {
@@ -12553,21 +12160,13 @@ body {
     a.nav-toggle:hover {
         line-height: 60px;
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/master
     #wrapper_container {
         width: 96%;
         height: auto;
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             hgroup {
                 width: 70%;
                 float:none;
@@ -12588,33 +12187,11 @@ body {
                     padding-left: 0;
                 }
               }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 2.5em;
-                    height: 2.5em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.8em;
-                line-height: 36px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-            }
-            
-           
-=======
                     width: 2.8em;
                     height: 2.8em;
 
@@ -12631,17 +12208,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 36px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -12650,11 +12222,7 @@ body {
                 width: 96%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
 
             div#mobile-nav {
                 left: 0;
@@ -12664,11 +12232,7 @@ body {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -12682,11 +12246,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -13156,11 +12716,6 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            #contactform p {
-                font-size: 0.8em;
-            }
-=======
             #contactform {
                 p {
                 font-size: 0.8em;
@@ -13169,7 +12724,6 @@ body {
                 label{font-size:0.85em;}
             }
 
->>>>>>> origin/master
             .frontpage_container {
                 height: auto;
                 min-height: auto;
@@ -13224,11 +12778,7 @@ body {
                         li#fa-mobile::before {
                             font-size: 1.35em;
                         }
-<<<<<<< HEAD
-                    
-=======
 
->>>>>>> origin/master
                     }
                 }
                 .svg-image-container {
@@ -13544,11 +13094,7 @@ body {
         width: 98%;
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             hgroup {
                 width: 75%;
                 h1#logo {
@@ -13566,33 +13112,11 @@ body {
                     padding-left: 0;
                 }
               }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 2.6em;
-                    height: 2.6em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.8em;
-                line-height: 36px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-            }
-            
-           
-=======
                     width: 2.7em;
                     height: 2.7em;
 
@@ -13609,17 +13133,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 36px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -13628,11 +13147,7 @@ body {
                 width: 96%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
 
             div#mobile-nav {
                 left: 0;
@@ -13642,11 +13157,7 @@ body {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -13660,11 +13171,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -14407,11 +13914,7 @@ body {
     #wrapper_container {
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             hgroup {
                 width: 90%;
                 h1#logo {
@@ -14429,33 +13932,11 @@ body {
                     padding-left: 0;
                 }
               }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 2.6em;
-                    height: 2.6em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.8em;
-                line-height: 36px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-            }
-            
-           
-=======
                     width: 2.7em;
                     height: 2.7em;
 
@@ -14472,17 +13953,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 36px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -14491,11 +13967,7 @@ body {
                 width: 96%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
 
             div#mobile-nav {
                 left: 0;
@@ -14505,11 +13977,7 @@ body {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -14523,11 +13991,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -14931,19 +14395,11 @@ body {
     a.nav-toggle:hover {
         line-height: 60px;
     }
-<<<<<<< HEAD
-    
-    #wrapper_container {
-        header {
-            height: 120px;
-            
-=======
 
     #wrapper_container {
         header {
             height: 120px;
 
->>>>>>> origin/master
             hgroup {
                 width: 85%;
                 h1#logo {
@@ -14955,19 +14411,11 @@ body {
 
                 }
                 h2 {
-<<<<<<< HEAD
-                    font-size: 0.65em;
-                    padding-left: 0;
-                }
-              }
-            
-=======
                     font-size: 0.6em;
                     padding-left: 0;
                 }
               }
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
@@ -14977,19 +14425,6 @@ body {
 
                 }
             }
-<<<<<<< HEAD
-            
-            .site-firstletter {
-                font-size: 1.8em;
-                line-height: 36px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 36px;
-            }
-            
-           
-=======
 
             .site-firstletter {
                 font-size: 1.8em;
@@ -15001,17 +14436,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 36px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -15020,11 +14450,7 @@ body {
                 width: 96%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
 
             div#mobile-nav {
                 left: 0;
@@ -15034,11 +14460,7 @@ body {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -15052,11 +14474,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -15902,11 +15320,7 @@ body {
 /*414px- iphone6+ portrait */
 
 @media only screen and (max-width: 25.875em) {
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/master
     a.nav-toggle {
         left: 0.5em;
         top: 4em;
@@ -15924,27 +15338,6 @@ body {
     #wrapper_container {
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-            hgroup {
-                width: 100%;
-                h1#logo {
-                    font-size: 1.3em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h1#logo-blog {
-                    font-size: 1.3em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h2 {
-                    font-size: 0.65em;
-                    padding-left: 0;
-                }
-              }
-            
-=======
 
             hgroup {
                 width: 100%;
@@ -15964,29 +15357,10 @@ body {
                 }
               }
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 2.4em;
-                    height: 2.4em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.6em;
-                line-height: 34px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 34px;
-            }
-            
-           
-=======
                     width: 2.7em;
                     height: 2.7em;
 
@@ -16003,17 +15377,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 36px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -16022,11 +15391,7 @@ body {
                 width: 96%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
 
             div#mobile-nav {
                 left: 0;
@@ -16036,11 +15401,7 @@ body {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -16054,11 +15415,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -16522,11 +15879,7 @@ body {
                         li#fa-mobile::before {
                             font-size: 1.4em;
                         }
-<<<<<<< HEAD
-                        
-=======
 
->>>>>>> origin/master
                     }
                 }
                 .svg-image-container {
@@ -16714,11 +16067,7 @@ body {
             }
             /*Photocontainer*/
             div#photocontainer {
-<<<<<<< HEAD
-                display:block; 
-=======
                 display:block;
->>>>>>> origin/master
                 margin:0 auto;
                 div.content {
                     top: 10px;
@@ -16882,27 +16231,6 @@ body {
         width: 98%;
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-            hgroup {
-                width: 100%;
-                h1#logo {
-                    font-size: 1.2em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h1#logo-blog {
-                    font-size: 1.2em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h2 {
-                    font-size: 0.6em;
-                    padding-left: 0;
-                }
-              }
-            
-=======
 
             hgroup {
                 width: 100%;
@@ -16922,29 +16250,10 @@ body {
                 }
               }
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 1.9em;
-                    height: 1.9em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.4em;
-                line-height: 26px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 26px;
-            }
-            
-           
-=======
                     width: 2.7em;
                     height: 2.7em;
 
@@ -16961,17 +16270,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 26px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -16980,11 +16284,7 @@ body {
                 width: 96%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
 
             div#mobile-nav {
                 left: 0;
@@ -16994,11 +16294,7 @@ body {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -17012,11 +16308,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -17120,11 +16412,7 @@ body {
                         padding-left: 0;
                         height: 100%;
                         font-size: 0.7em;
-<<<<<<< HEAD
-                    }  
-=======
                     }
->>>>>>> origin/master
                 }
 
                 p {
@@ -17810,11 +17098,7 @@ body {
         display: none;
     }
     a.nav-toggle {
-<<<<<<< HEAD
-        top: 5em;
-=======
         top: 4em;
->>>>>>> origin/master
     }
     a.nav-toggle.hide {
         left: -4em;
@@ -17822,36 +17106,11 @@ body {
     a.nav-toggle:hover {
         line-height: 50px;
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> origin/master
     #wrapper_container {
         width: 98%;
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-            hgroup {
-                width: 100%;
-                h1#logo {
-                    font-size: 1.1em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h1#logo-blog {
-                    font-size: 1.1em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h2 {
-                    font-size: 0.65em;
-                    padding-left: 0;
-                }
-              }
-            
-=======
 
             hgroup {
                 width: 100%;
@@ -17871,29 +17130,10 @@ body {
                 }
               }
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 2.2em;
-                    height: 2.2em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.5em;
-                line-height: 31px;
-            }
-            .site-logo a:focus .site-firstletter,
-                .site-logo a:hover .site-firstletter {
-                line-height: 31px;
-            }
-            
-           
-=======
                     width: 2.7em;
                     height: 2.7em;
 
@@ -17910,17 +17150,12 @@ body {
             }
 
 
->>>>>>> origin/master
 
             .site-firstletter {
                 line-height: 31px;
             }
             /*Mobile-Navigation*/
-<<<<<<< HEAD
-               
-=======
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -17929,29 +17164,17 @@ body {
                 width: 94%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-        
-
-            div#mobile-nav {
-                left: 0;
-                top: 0.5em;
-=======
 
 
             div#mobile-nav {
                 left: 0;
                 top: -0.5em;
->>>>>>> origin/master
                 //overflow: hidden;
                 ul#menu-mobile {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -17965,11 +17188,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }
@@ -18696,23 +17915,13 @@ body {
     }
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 /* Blackberry */
 
 //320px
 @media only screen and (max-width: 20em) {
-<<<<<<< HEAD
-    
-    a.nav-toggle {
-        top: 5em;
-=======
 
     a.nav-toggle {
         top: 4em;
->>>>>>> origin/master
     }
     a.nav-toggle.hide {
         left: -4em;
@@ -18724,20 +17933,6 @@ body {
         width: 98%;
         header {
             height: 120px;
-<<<<<<< HEAD
-            
-            hgroup {
-                width: 100%;
-                h1#logo {
-                    font-size: 1em;
-                    line-height:40px;
-                    height:40px;
-                }
-                h1#logo-blog {
-                    font-size: 1em;
-                    line-height:40px;
-                    height:40px;
-=======
 
             hgroup {
                 width: 100%;
@@ -18758,44 +17953,17 @@ body {
 						padding: 0 0 0 0.2%;
 					}
 
->>>>>>> origin/master
                 }
                 h2 {
                     font-size: 0.55em;
                     padding-left: 0;
                 }
               }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             //.site-logo {  top: -7px; left: 96%;}
             .site-logo {
                 top:-5px;
                 a {
-<<<<<<< HEAD
-                    width: 1.9em;
-                    height: 1.9em;
-
-                }
-            }
-            
-            .site-firstletter {
-                font-size: 1.3em;
-                line-height: 25px;
-            }
-            .site-logo a:focus .site-firstletter,
-            .site-logo a:hover .site-firstletter {
-                line-height: 25px;
-            }
-                   
-            .site-firstletter {
-                line-height: 25px;
-            }
-            /*Mobile-Navigation*/
-               
-=======
                     width: 2.6em;
                     height: 2.6em;
 
@@ -18816,7 +17984,6 @@ body {
             }
             /*Mobile-Navigation*/
 
->>>>>>> origin/master
             nav.menu-main-container{
                 display: none;
             }
@@ -18825,27 +17992,16 @@ body {
                 width: 94%;
                 left: 0.5em;
             }
-<<<<<<< HEAD
-  
-            div#mobile-nav {
-                left: 0;
-                top: 0.5em;
-=======
 
             div#mobile-nav {
                 left: 0;
                 top: 0.05em;
->>>>>>> origin/master
                 //overflow: hidden;
                 ul#menu-mobile {
                     li.menu-item {
                         height: 60px;
                         &:hover {
-<<<<<<< HEAD
-                            
-=======
 
->>>>>>> origin/master
                         }
                         a {
                             line-height: 60px;
@@ -18859,11 +18015,7 @@ body {
                     }
                 }
             }
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> origin/master
             /*end of mobile Nav*/
 
         }

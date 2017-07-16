@@ -49,14 +49,10 @@
                   <hr>
             <p>I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.</p>
             <hr>
-<<<<<<< HEAD
-            <p>To see samples of some previous work, click big blue button on the right. To enquire about getting help with any project you have or plan to start please go to <strong><a href="http://raythompsonwebdev.co.uk/contact-page">contact page</a></strong>. I am also available to contact on social media, links at the bottom. Holla!</p>
-=======
             <p>To see samples of some previous work, click big blue button on the right. To enquire about getting help with any project you have or plan to start please go to <strong><a href="http://raythompsonwebdev.co.uk/contact">contact page</a></strong>. I am also available to contact on social media, links at the bottom. Holla!</p>
->>>>>>> origin/master
         </article>
 
-<div class="clearfix"></div>
+<div class="clearfix group"></div>
     </div>
 
 </section>

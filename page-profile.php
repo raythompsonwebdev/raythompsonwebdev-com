@@ -67,11 +67,7 @@
 
             <p>My name is Raymond Thompson. I live in Hackney East London. I have developed a passion for web design and web development over the last five years, particularly front-end development, responsive web development and Wordpress web development.<br/></p>
             <hr>
-<<<<<<< HEAD
-            <p>When I am not working at my current day job as a customer service officer, I spend most of my free time building <strong><a href="http://raythompsonwebdev.co.uk/website-projects">websites and web apps</a></strong>, experimenting with new coding techniques and tools, and helping others create <strong> <a href="http://raythompsonwebdev.co.uk/raythompsonwebdev-blog">websites</a></strong>.</p>
-=======
             <p>When I am not working at my current day job as a customer service officer, I spend most of my free time building <strong><a href="http://www.raythompsonwebdev.co.uk/websites-page">websites and web apps</a></strong>, experimenting with new coding techniques and tools, and helping others create <strong> <a href="http://www.raythompsonwebdev.co.uk/blog">websites</a></strong>.</p>
->>>>>>> origin/master
             <hr>
 
             <p>I learnt web design and develeopment after attended a 7 month part-time City and Guilds Web design course at the East London Advanced Technology Training Center in East London between November 2011 and July 2012</p>
