@@ -202,7 +202,7 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 //enqueue other scripts
 function my_scripts_own() {
 
-    wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.min.js', array());
+    wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
      
 
     wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
