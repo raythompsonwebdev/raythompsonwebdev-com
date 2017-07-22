@@ -52,7 +52,7 @@
             <p>To see samples of some previous work, click big blue button on the right. To enquire about getting help with any project you have or plan to start please go to <strong><a href="http://raythompsonwebdev.co.uk/contact">contact page</a></strong>. I am also available to contact on social media, links at the bottom. Holla!</p>
         </article>
 
-<div class="clearfix group"></div>
+<div class="clearfix"></div>
     </div>
 
 </section>
