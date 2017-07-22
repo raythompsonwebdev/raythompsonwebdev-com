@@ -78,7 +78,7 @@
     wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' ));
 
   }
-    wp_nav_menu( array('menu' => 'mobile', 'container_id' => 'mobile-nav' ));
+    wp_nav_menu( array('menu' => 'mobile', 'container' => 'nav', 'container_id' => 'mobile-nav' ));
   
 
 

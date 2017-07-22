@@ -55,7 +55,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase">
   <h1>Camping Advice.com</h1>
-  <p> Advice and Forum website for newbie campers</p>
+ 
       
   <figure class="links"> 
       <!--<?//https://www.raythompsonwebdev.co.ukphp echo home_url();?>/website/camping-advice-->
@@ -80,7 +80,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content">
   <h1>Mannering Music</h1>
-  <p>Online music store selling Hip Hop, Jazz and Country music albums</p>
+  
     
   <div class="links"> <a href=" https://www.raythompsonwebdev.co.uk/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
@@ -97,7 +97,7 @@ Template Name: Websites
 
     <figcaption class="showcase-content">
     <h1>Car Rental</h1>
-    <p>Online car rental booking website</p>
+    
         
     <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/car-rental" title="www.car-rental.raythompsonwebdev.co.uk">See more..</a></div>
     </figcaption>
@@ -115,7 +115,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase-d">
   <h1>Shoestore</h1>
-  <p>Online shoe and accessories store</p>
+  
     
   <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/shoe-store/" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
   </figcaption>
@@ -133,7 +133,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase-e">
     <h1>Greenfootprints.com</h1>
-    <p>Website for UK leading recyling organisation</p>
+    
     
     <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/greenfootprints"title="www.greenfootprints.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
@@ -151,7 +151,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase-f">
   <h1>Travel Agency</h1>
-  <p>Online travel booking website</p>
+ 
   
   
  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/travel-agency" title="www.travelagency.raythompsonwebdev.co.uk">See more..</a></div>

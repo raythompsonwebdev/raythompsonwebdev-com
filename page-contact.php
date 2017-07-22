@@ -26,7 +26,7 @@ Template Name: Contact
 </div>     
 
 
-<ul class="skills" >
+<ul class="contact-details" >
     <li> <a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
     <br/>
    

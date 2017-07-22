@@ -169,14 +169,14 @@ jQuery(document).ready(function($){
  		if( $(this).scrollTop() >= position ){
  			direction = 'down';
  			if(direction !== previous){
- 				$('a.nav-toggle').addClass('hide');
+ 				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile ').addClass('hide');
 
  				previous = direction;
  			}
  		} else {
  			direction = 'up';
  			if(direction !== previous){
- 				$('a.nav-toggle').removeClass('hide');
+ 				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile').removeClass('hide');
 
  				previous = direction;
  			}
