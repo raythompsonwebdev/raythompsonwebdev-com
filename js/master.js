@@ -1,9 +1,3 @@
- 
-
-
-
-
- 
  jQuery(document).ready(function($){
 
  $('.fancybox').fancybox({
@@ -169,15 +163,25 @@ jQuery(document).ready(function($){
  		if( $(this).scrollTop() >= position ){
  			direction = 'down';
  			if(direction !== previous){
+<<<<<<< HEAD
  				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile ').addClass('hide');
+=======
+ 				$('a.nav-toggle, ul#menu-mobile').addClass('hide');
+                                
+>>>>>>> origin/master
 
  				previous = direction;
  			}
  		} else {
  			direction = 'up';
  			if(direction !== previous){
+<<<<<<< HEAD
  				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile').removeClass('hide');
 
+=======
+ 				$('a.nav-toggle, ul#menu-mobile').removeClass('hide');
+                                
+>>>>>>> origin/master
  				previous = direction;
  			}
  		}
