@@ -1,32 +1,27 @@
- 
 
-
-
-
- 
- jQuery(document).ready(function($){
+jQuery(document).ready(function($){
 
  $('.fancybox').fancybox({
       openEffect  : 'elastic',
       closeEffect : 'elastic'
 
     });
- 
- 
+
+
 });
- 
+
  jQuery(document).ready(function($){
 
 
  $('.showcase-img').click(
 
   function(){
-    
+
       $(this).find('.showcase-content').slideToggle(1000 , 'easeInOutExpo' );
- 
+
   });
- 
- 
+
+
 });
 
 
@@ -54,7 +49,7 @@ jQuery(document).ready(function($){
   });
 
 });
- 
+
  //REsponsive chart
 jQuery(document).ready(function($){
 
@@ -74,7 +69,7 @@ jQuery(document).ready(function($){
 
 
 
- 
+
 //Menu Switch
 jQuery(document).ready(function($){
 
@@ -185,3 +180,13 @@ jQuery(document).ready(function($){
  	});
 
      });
+
+
+/*
+// To be used on portfolio and blog page on mobile
+     $(document).ready(function() {
+  $('a[href=#]').click(function(e) {
+    $.scrollTo(0,'slow');
+    e.preventDefault();
+  });
+});*/

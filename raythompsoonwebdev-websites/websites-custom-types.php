@@ -69,7 +69,17 @@ function custom_post_type() {
 		/* A hierarchical CPT is like Pages and can have
 		* Parent and child items. A non-hierarchical CPT
 		* is like Posts.
-		*/
+		*//*
+		'capabilities' => array(
+		  'edit_post'          => 'edit_website',
+		  'read_post'          => 'read_website',
+		  'delete_post'        => 'delete_website',
+		  'edit_posts'         => 'edit_website',
+		  'edit_others_posts'  => 'edit_others_website',
+		  'publish_posts'      => 'publish_website',
+		  'read_private_posts' => 'read_private_website',
+		  'create_posts'       => 'edit_website',
+		),*/
 		'register_meta_box_cb' => 'add_websites_metaboxes',
 		'hierarchical'        => false,
 		'public'              => true,
@@ -92,129 +102,28 @@ function custom_post_type() {
 
 }
 
-/* Hook into the 'init' action so that the function
-* Containing our post type registration is not
-* unnecessarily executed.
-*/
+/*
 
-add_action( 'init', 'custom_post_type', 0 );
-
-
-function my_taxonomies_product() {
-
-  $labels = array(
-    'name'              => _x( 'Website Categories', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Website Category', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Website Categories' ),
-    'all_items'         => __( 'All Website Categories' ),
-    'parent_item'       => __( 'Parent Website Category' ),
-    'parent_item_colon' => __( 'Parent Website Category:' ),
-    'edit_item'         => __( 'Edit Website Category' ),
-    'update_item'       => __( 'Update Website Category' ),
-    'add_new_item'      => __( 'Add New Website Category' ),
-    'new_item_name'     => __( 'New Website Category' ),
-    'menu_name'         => __( 'Website Categories' ),
+function my_updated_messages( $messages ) {
+  global $post, $post_ID;
+  $messages['Website'] = array(
+    0 => '',
+    1 => sprintf( __('Website updated. <a href="%s">View Website</a>'), esc_url( get_permalink($post_ID) ) ),
+    2 => __('Custom field updated.'),
+    3 => __('Custom field deleted.'),
+    4 => __('Website updated.'),
+    5 => isset($_GET['revision']) ? sprintf( __('Website restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+    6 => sprintf( __('Website published. <a href="%s">View Website</a>'), esc_url( get_permalink($post_ID) ) ),
+    7 => __('Website saved.'),
+    8 => sprintf( __('Website submitted. <a target="_blank" href="%s">Preview Website</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
+    9 => sprintf( __('Website scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Website</a>'), date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
+    10 => sprintf( __('Website draft updated. <a target="_blank" href="%s">Preview Website</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
   );
-  $args = array(
-    'labels' => $labels,
-    'hierarchical' => true,
-		'query_var' => true,
-            'rewrite' => array(
-                'slug' => 'website-category', // This controls the base slug that will display before each term
-                'with_front' => false // Don't display the category base before
-							)
-
-  );
-  register_taxonomy( 'website-category', 'website', $args );
-
-
+  return $messages;
 }
-add_action( 'init', 'my_taxonomies_product', 0 );
+add_filter( 'post_updated_messages', 'my_updated_messages' );
 
-
-
-
-// Flush rewrite rules to add "review" as a permalink slug
-function my_rewrite_flush() {
-    custom_post_type();
-    flush_rewrite_rules();
-}
-register_activation_hook( __FILE__, 'my_rewrite_flush' );
-
-
-//add meta boxes
-add_action( 'add_meta_boxes', 'add_websites_metaboxes' );
-function add_websites_metaboxes() {
-	add_meta_box('website_details', esc_html__('Website Details','raythompsonwebdev-com'), 'website_fields', 'website', 'normal', 'default');
-}
-
-
-
-function website_fields (){
-
-	global $post;
-
-	$custom = get_post_custom($post->ID);
-
-	$website_name = $custom["Website Name"][0];
-	$website_description = $custom["Website Description"][0];
-	$website_code = $custom["Website Code"][0];
-	$website_url = $custom["Website URL"][0];
-	
-    ?>
-
-<p><label>Website Name:</label><br /><input size="45" name="Website Name"  value="<?php echo $website_name; ?>" /></p>
-
-<p><label>Website Description:</label><br /><textarea col="15" rows="10" name="Website Description" value="<?php echo $website_description; ?>"></textarea>
-</p>
-
-<p><label>Website Code:</label><br /><input size="45" name="Website Code" value="<?php echo $website_code; ?>" /></p>
-
-<p><label>Website URL:</label><br /><input size="45" name="Website URL" value="<?php echo $website_url; ?>" /></p>
-
-
-
-	<?php
-
-}
-
-
-add_action('save_post','save_website_attributes');
-add_action('publish_post','save_website_attributes');
-
-
-function save_website_attributes(){
-
-    global $post;
-
-    update_post_meta($post->ID, "Website Name",  $_POST["Website Name"]);
-	update_post_meta($post->ID, "Website Description", $_POST["Website Description"]);
-    update_post_meta($post->ID, "Website Code", $_POST["Website Code"]);
-    update_post_meta($post->ID, "Website URL", $_POST["Website URL"]);
-	
-
-    // Bail if we're doing an auto save
-    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
-
-    // if our nonce isn't there, or we can't verify it, bail
-    if( !isset( $_POST['meta_box_nonce'] ) || !wp_verify_nonce( $_POST['meta_box_nonce'], 'my_meta_box_nonce' ) ) return;
-
-    // if our current user can't edit this post, bail
-    if( !current_user_can( 'edit_post' ) ) return;
-
-}
-
-
-
-
-
-function check_current_screen() {
-    if( !is_admin() ) return;
-    global $current_screen;
-    print_r( $current_screen );
-}
-add_action( 'admin_notices', 'check_current_screen' );
-
+/*
 
 function conference_contextual_help() {
 
@@ -238,50 +147,151 @@ function conference_contextual_help() {
 
 add_action('admin_init', 'conference_contextual_help');
 
+*/
 
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not
+* unnecessarily executed.
+*/
 
-// The Event Location Metabox
+add_action( 'init', 'custom_post_type', 0 );
+function my_taxonomies_product() {
+  $labels = array(
+    'name'              => _x( 'Website Categories', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Website Category', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Website Categories' ),
+    'all_items'         => __( 'All Website Categories' ),
+    'parent_item'       => __( 'Parent Website Category' ),
+    'parent_item_colon' => __( 'Parent Website Category:' ),
+    'edit_item'         => __( 'Edit Website Category' ),
+    'update_item'       => __( 'Update Website Category' ),
+    'add_new_item'      => __( 'Add New Website Category' ),
+    'new_item_name'     => __( 'New Website Category' ),
+    'menu_name'         => __( 'Website Categories' ),
+  );
+  $args = array(
+	    'labels' => $labels,
+	    'hierarchical' => true,
+			'show_ui' => true,
+			'show_admin_column' => true,
+			'query_var' => true,
+	    'rewrite' => array(
+	    'slug' => 'website-category', // This controls the base slug that will display before each term
+	    'with_front' => false // Don't display the category base before
 
-function clash_location() {
+		)
+  );
+  register_taxonomy( 'website-category', 'website', $args );
+}
+add_action( 'init', 'my_taxonomies_product', 0 );
 
-    global $post;
+// Flush rewrite rules to add "review" as a permalink slug
+function my_rewrite_flush() {
+    custom_post_type();
+    flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'my_rewrite_flush' );
 
-	// Noncename needed to verify where the data originated
-	echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
-	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+//add meta boxes
+add_action( 'add_meta_boxes', 'add_websites_metaboxes' );
 
-	// Get the location data if its already been entered
-	$location = get_post_meta($post->ID, '_location', true);
+function add_websites_metaboxes() {
+	add_meta_box('website_details', esc_html__('Website Details','raythompsonwebdev-com'), 'website_fields', 'website', 'normal', 'default');
+}
 
-	// Echo out the field
-	echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+function website_fields ($post){
 
+	global $post;
 
+	$custom = get_post_custom($post->ID);
+	$website_name = $custom["Website Name"][0];
+	$website_description = $custom["Website Description"][0];
+	$website_code = $custom["Website Code"][0];
+	$website_url = $custom["Website URL"][0];
+	$website_image = $custom["Website Image"][0];
+
+	wp_nonce_field( plugin_basename( __FILE__ ), 'website_content_nonce' );
+	?>
+
+		<p><label>Website Name:</label></label>
+	 <input size="45" name="Website Name"  value="<?php echo $website_name ?>" /></p>
+		<p><label>Website Description:</label>
+	<textarea col="15" rows="10" name="Website Description" value=" <?php echo $website_description ?>"></textarea></p>
+	 <p><label>Website Code:</label>
+	<input size="45" name="Website Code" value="<?php echo $website_code ?>" /></p>
+	<p><label>Website URL:</label>
+	 <input size="45" name="Website URL" value="<?php echo $website_url ?>" /></p>
+	 <p><label>Website Image:</label>
+	<input size="45" name="Website Image" value="<?php echo $website_image ?>"/></p>
+
+<?php
 
 }
 
+add_action('save_post','save_website_attributes');
+//add_action('publish_post','save_website_attributes');
+function save_website_attributes(){
+    global $post;
+  update_post_meta($post->ID, "Website Name",  $_POST["Website Name"]);
+	update_post_meta($post->ID, "Website Description", $_POST["Website Description"]);
+  update_post_meta($post->ID, "Website Code", $_POST["Website Code"]);
+  update_post_meta($post->ID, "Website URL", $_POST["Website URL"]);
+	update_post_meta($post->ID, "Website Image", $_POST["Website Image"]);
+
+	// Checks save status
+	$is_autosave = wp_is_post_autosave( $post_id );
+	$is_revision = wp_is_post_revision( $post_id );
+	$is_valid_nonce = ( isset( $_POST[ 'website' ] ) && wp_verify_nonce( $_POST[ 'website' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+
+	// Exits script depending on save status
+	if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
+		return;
+	}
+
+	// Checks for input and sanitizes/saves if needed
+	if( isset( $_POST[ 'meta-text' ] ) ) {
+		update_post_meta( $post_id, 'meta-text', sanitize_text_field( $_POST[ 'meta-text' ] ) );
+	}
+	// Checks for input and saves if needed
+	if( isset( $_POST[ 'meta-textarea' ] ) ) {
+		update_post_meta( $post_id, 'meta-textarea', $_POST[ 'meta-textarea' ] );
+	}
+
+}
+
+function check_current_screen() {
+    if( !is_admin() ) return;
+    global $current_screen;
+    print_r( $current_screen );
+}
+add_action( 'admin_notices', 'check_current_screen' );
+
+// The Event Location Metabox
+function clash_location() {
+    global $post;
+	// Noncename needed to verify where the data originated
+	echo '<input type="hidden" name="eventmeta_noncename" id="eventmeta_noncename" value="' .
+	wp_create_nonce( plugin_basename(__FILE__) ) . '" />';
+	// Get the location data if its already been entered
+	$location = get_post_meta($post->ID, '_location', true);
+	// Echo out the field
+	echo '<input type="text" name="_location" value="' . $location  . '" class="widefat" />';
+}
 
 //Save the Metabox Data
-
-function wpt_save_clash_meta($post_id, $post) {
-
+function wpt_save_website_meta($post_id, $post) {
 	// verify this came from the our screen and with proper authorization,
 	// because save_post can be triggered at other times
 	if ( !wp_verify_nonce( $_POST['eventmeta_noncename'], plugin_basename(__FILE__) )) {
 	return $post->ID;
 	}
-
 	// Is the user allowed to edit the post or page?
 	if ( !current_user_can( 'edit_post', $post->ID ))
 		return $post->ID;
-
 	// OK, we're authenticated: we need to find and save the data
 	// We'll put it into an array to make it easier to loop though.
-
 	$events_meta['_location'] = $_POST['_location'];
-
 	// Add values of $events_meta as custom fields
-
 	foreach ($events_meta as $key => $value) { // Cycle through the $events_meta array!
 		if( $post->post_type == 'revision' ) return; // Don't store custom data twice
 		$value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
@@ -292,12 +302,9 @@ function wpt_save_clash_meta($post_id, $post) {
 		}
 		if(!$value) delete_post_meta($post->ID, $key); // Delete if blank
 	}
-
 }
 
-add_action('save_post', 'wpt_save_clash_meta', 1, 2); // save the custom fields
-
-
+add_action('save_post', 'wpt_save_website_meta', 1, 2); // save the custom fields
 
 
 ?>
