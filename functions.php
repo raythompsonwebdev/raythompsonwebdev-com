@@ -140,6 +140,13 @@ add_filter( 'script_loader_src', 'remove_version_parameter', 15, 1 );
 // filter .css files
 add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
 
+function check_current_screen() {
+	if(!is_admin()) return;
+	global $current_screen;
+	print_r($current_screen);
+}
+add_action('admin_notices', 'check_current_screen');
+
 /*deregister jquery
 function my_init()
 {
@@ -203,7 +210,7 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 function my_scripts_own() {
 
     wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
-     
+
 
     wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
 
@@ -396,6 +403,7 @@ if ( ! function_exists( 'popperscores_posted_on' ) ) :
             }
 
             echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
             if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 
                     echo '<span class="comments-link">';

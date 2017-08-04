@@ -277,12 +277,13 @@
                                     
                                     <ul id="lyndalinks">
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-front-end-web-developer">Become a Front-End Web Developer</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/css-fundamentals">CSS Fundementals</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/wordpress-building-themes-from-scratch-using-underscores">WordPress: Building Themes from Scratch Using Underscores</a></li>
+                                        <li><a class="lyndalink" href="">Javascript Essentials</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
-                                        <li><a class="lyndalink" href="">Angular JS Essentials</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/mysql-essential-training">MYSQL Essentials</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/html5-essential-training">HTML5 Essentials</a></li>
                                         
                                         
                                        <br/>  

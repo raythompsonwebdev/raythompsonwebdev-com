@@ -25,10 +25,14 @@
     ?>
 
     <?php if (have_posts()) : ?>
+    
 
 
     <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
+<h1 class="post-title">
+	<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+</h1>
 
             <header class="byline">
                 <br/>
@@ -38,13 +42,9 @@
                 </div><!-- .entry-meta -->
 
             </header>
-
-
-            <?php while (have_posts()) : the_post(); ?>
-
-                <h1 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-                </h1>
             
+ <?php while (have_posts()) : the_post(); ?> 
+                                     
             <?php if (has_post_thumbnail()) { ?>
                         <figure class="featuredImage">
                             <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
