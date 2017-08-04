@@ -20,7 +20,7 @@
             <h1>Skills Graph</h1>
 
             <article id="chart">
-                
+
                     <ul id="numbers">
 
                     <li><span>100%</span></li>
@@ -28,16 +28,16 @@
                     <li><span>80%</span></li>
 
                     <li><span>60%</span></li>
-                    
+
                     <li><span>40%</span></li>
 
                     <li><span>20%</span></li>
-                    
+
                     <li><span>0%</span></li>
 
                 </ul>
 
-                
+
                 <ul id="bars">
 
                     <li><div data-percentage="60" class="bar"></div><span>Web Design</span></li>
@@ -53,8 +53,8 @@
                     <li><div data-percentage="75" class="bar"></div><span>Javascript</span></li>
 
                 </ul>
-                            
-                               
+
+
             </article>
 
 
@@ -71,19 +71,19 @@
             <hr>
 
             <p>I learnt web design and develeopment after attended a 7 month part-time City and Guilds Web design course at the East London Advanced Technology Training Center in East London between November 2011 and July 2012</p>
-     <hr />           
+     <hr />
 <p>I have worked as part of a team of fellow students to plan and research, prototype, build, test and launch a commercial website. Working on various web development projects we created websites for our exams and helped with building real world projects for a couple clients for ELATT's in-house web service 260Web.</p>
             <hr>
-            <p>I have created my own projects and helped friends with their projects over the last few years have developed a very good understanding of coding languages HTML5, CSS3, Javascript, Jquery, PHP, Ajax, and various web development best practices to be able to produce functional high quality websites.  </p> 
+            <p>I have created my own projects and helped friends with their projects over the last few years have developed a very good understanding of coding languages HTML5, CSS3, Javascript, Jquery, PHP, Ajax, and various web development best practices to be able to produce functional high quality websites.  </p>
              <hr>
-            
+
             <div class="clearfix"></div>
         </article>
-        
-   <div class="clearfix"></div>        
+
+   <div class="clearfix"></div>
 
     </div><!--frontpage_container-->
- 
+
     <div class="frontpage_container">
 
 
@@ -92,7 +92,7 @@
             <h1>Website Development Training</h1>
 
             <article class="hero-slider"><!-- #hero-slider -->
-                
+
                 <ul id="list">
                     <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Photoshop</a></li>
                     <li><a href="#" rel="#panel-2" title="Adobe Certificate in Communication">Dreamweaver</a></li>
@@ -104,7 +104,7 @@
                     <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Digital Marketing</a></li>
                     <li><a href="#" rel="#panel-9" title="Shaw Academy course certificate">Content Marketing</a></li>
                 </ul>
-                
+
 
                 <div class="mask"><!--mask-->
                     <div class="slider-body"><!--slider body -->
@@ -115,11 +115,19 @@
 
                             <figure class="abobe">
 
+                              
                                 <a href="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
-                                     
+
                                 </a>
+                                  <span class="profile-image-rollover">
+                                <p>
+                                  Click to see Larger Image
+                                </p>
+                              </span>
+                                   
+                                   
                                     <figcaption>
                                         <h3>Visual Communication: Photoshop CS4</h3>
                                         <h4>Topics&#58;</h4>
@@ -129,15 +137,15 @@
                                             <li><a href="">Understanding Photoshop Interface</a></li>
                                             <li><a href="">Manipulating Images</a></li>
                                             <li><a href="">Evaluating Digital Images</a></li>
-                                            
+
                                         </ul>
 
                             <div class="clearfix"></div>
                                     </figcaption>
-                               
-                             
+
+
                             </figure>
-                            
+
                         </article>
 
                         <article class="panel" id="panel-2">
@@ -151,20 +159,20 @@
                                 <figcaption>
                                     <h3>Web Communication: Dreamweaver</h3>
                                     <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                             <li><a href="">Setting project requirements</a></li>
                                             <li><a href="">Planning Site Design and Page layout</a></li>
                                             <li><a href="">Understanding Dreamweaver Interface</a></li>
                                             <li><a href="">Adding Content&#44; Organizing Content</a></li>
                                             <li><a href="">Evaluating and Maintaining a Site</a></li>
-                                            
+
                                     </ul>
                                     <div class="clearfix"></div>
-                                   
+
                                 </figcaption>
                             </figure>
-                 
+
                         </article>
 
                         <article class="panel" id="panel-3">
@@ -178,25 +186,25 @@
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
                                 </a>
-                                
+
                                 <figcaption>
                                 <h3>City &#38; Gulds ITQ Level 1 &#45; Web Design</h3>
                                 <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                             <li><a href="">Improving productivity using IT</a></li>
                                             <li><a href="">IT Communication Fundementals</a></li>
-                                           
+
                                             <li><a href="">Adding Content</a></li>
                                             <li><a href="">IT User fundementals</a></li>
                                             <li><a href="">Organizing Content</a></li>
                                             <li><a href="">Using the Internet</a></li>
                                     </ul>
-                                         <div class="clearfix"></div>                   
+                                         <div class="clearfix"></div>
                                 </figcaption>
                             </figure>
 
-                            
+
                         </article>
 
                         <article class="panel" id="panel-4">
@@ -213,20 +221,20 @@
                                 <figcaption>
                                 <h3>City &#38; Gulds ITQ Level 2 &#45; Web Design</h3>
                                 <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                         <li><a href="">Database software</a></li>
                                             <li><a href="">Design Software</a></li>
                                             <li><a href="">Imaging Software</a></li>
                                             <li><a href="">Website Software</a></li>
                                             <li><a href="">Improving Productivity using IT</a></li>
-                                         
+
                                     </ul>
                                    <div class="clearfix"></div>
                                 </figcaption>
-                                
+
                             </figure>
-                            
+
                         </article>
 
                         <article class="panel" id="panel-5">
@@ -240,23 +248,23 @@
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
                                 </a>
-                                 <figcaption>  
+                                 <figcaption>
                                 <h3>City &#38; Gulds ITQ Level 3 &#45; Web Design</h3>
                                 <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                             <li><a href="">Database software</a></li>
                                             <li><a href="">Design Software</a></li>
                                             <li><a href="">Imaging Software</a></li>
                                             <li><a href="">Website Software</a></li>
                                             <li><a href="">Using Internet</a></li>
-                                         
+
                                     </ul>
                                     <div class="clearfix"></div>
-                                </figcaption>  
+                                </figcaption>
 
                             </figure>
-                           
+
 
                         </article>
 
@@ -274,12 +282,13 @@
                                 <figcaption>
                                     <h3>Udemy/Lynda.com&#45; Various</h3>
                                     <h4>Topics&#58;</h4>
-                                    
+
                                     <ul id="lyndalinks">
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-front-end-web-developer">Become a Front-End Web Developer</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/css-fundamentals">CSS Fundementals</a></li>
+<<<<<<< HEAD
                                         <li><a class="lyndalink" href="">Javascript Essentials</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/mysql-essential-training">MYSQL Essentials</a></li>
@@ -287,13 +296,23 @@
                                         
                                         
                                        <br/>  
+=======
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/javascript-essential-training">Javascript Essentials</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
+                                        <li><a class="lyndalink" href="">Bootstrap 3 Essentials</a></li>
+                                        <li><a class="lyndalink" href="">PHP Essentials</a></li>
+
+
+                                       <br/>
+>>>>>>> d62deff254e9f61916299579638f884d100032ba
                                     </ul>
                                           <div class="clearfix"></div>
                                 </figcaption>
 
                             </figure>
 
-                            
+
                         </article>
 
                         <article class="panel" id="panel-7">
@@ -307,11 +326,11 @@
                                     <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/03/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="City-and-Guilds-Level-Three">
 
                                 </a>
-                                
+
                                 <figcaption>
                                     <h3>Mobile App Development&#46;</h3>
                                     <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                         <li><a href="">Introduction to Mobile App Development</a></li>
                                             <li><a href="">Designing our App</a></li>
@@ -319,7 +338,7 @@
                                             <li><a href="">Coding Functions</a></li>
                                             <li><a href="">Web Hosting/Deploying Apps</a></li>
                                             <li><a href="">Mobile App Dev Life Cycle</a></li>
-                                         
+
                                     </ul>
                                     <div class="clearfix"></div>
                                 </figcaption>
@@ -339,11 +358,11 @@
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
-                                
+
                                 <figcaption>
                                     <h3>Diploma in Digital Marketing</h3>
                                     <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                             <li><a href="">Adwords/Pay Per Click</a></li>
                                             <li><a href="">Search Engine Optimisation</a></li>
@@ -351,14 +370,14 @@
                                             <li><a href="">Social Media</a></li>
                                             <li><a href="">Web Analytics</a></li>
                                             <li><a href="">Blogging</a></li>
-                                         
+
                                     </ul>
-                                    <div class="clearfix"></div>                                    
+                                    <div class="clearfix"></div>
                                 </figcaption>
 
                             </figure>
 
-                            
+
                         </article>
 
                         <article class="panel" id="panel-9">
@@ -372,11 +391,11 @@
                                     <img src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
-                                
+
                                 <figcaption>
                                     <h3>Diploma in Blogging &#38; Content Marketing</h3>
                                     <h4>Topics&#58;</h4>
-                                    
+
                                     <ul>
                                         <li><a href="">Blogging</a></li>
                                             <li><a href="">Vlogging</a></li>
@@ -384,26 +403,26 @@
                                             <li><a href="">Building online communities</a></li>
                                             <li><a href="">Content curation</a></li>
                                             <li><a href="">Monetising blogs</a></li>
-                                                                                     
+
                                     </ul>
-                                    
+
                                     <div class="clearfix"></div>
                                 </figcaption>
 
                             </figure>
 
-                            
+
                         </article>
 
 
                     </div><!--slider body end-->
-                </div><!-- .mask end --> 
+                </div><!-- .mask end -->
 
-     
-                
+
+
             </article><!-- hero-slider end -->
-            
-            
+
+
         </article><!--end of prof cont-->
 
        <article class="text-box">
@@ -417,14 +436,11 @@
 <hr>
   <p>If you are a sole trader or micro business and need help with any website development project please contact me via social media or go to <strong><a href="http://raythompsonwebdev.co.uk/contact-page">contact Page</a></strong> and complete contact form. I will respond within 24 hours&#46;</p>
 </article>
-        
-        
+
+
 <div class="clearfix"></div>
 </div><!--front-panel end-->
 
 </section>
 
 <?php get_footer(); ?>
-
-
-

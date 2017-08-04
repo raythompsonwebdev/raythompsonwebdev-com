@@ -1,26 +1,27 @@
- jQuery(document).ready(function($){
+
+jQuery(document).ready(function($){
 
  $('.fancybox').fancybox({
       openEffect  : 'elastic',
       closeEffect : 'elastic'
 
     });
- 
- 
+
+
 });
- 
+
  jQuery(document).ready(function($){
 
 
  $('.showcase-img').click(
 
   function(){
-    
+
       $(this).find('.showcase-content').slideToggle(1000 , 'easeInOutExpo' );
- 
+
   });
- 
- 
+
+
 });
 
 
@@ -48,7 +49,7 @@ jQuery(document).ready(function($){
   });
 
 });
- 
+
  //REsponsive chart
 jQuery(document).ready(function($){
 
@@ -68,7 +69,7 @@ jQuery(document).ready(function($){
 
 
 
- 
+
 //Menu Switch
 jQuery(document).ready(function($){
 
@@ -163,16 +164,15 @@ jQuery(document).ready(function($){
  		if( $(this).scrollTop() >= position ){
  			direction = 'down';
  			if(direction !== previous){
- 				$('a.nav-toggle, ul#menu-mobile').addClass('hide');
-                                
+ 				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile ').addClass('hide');
 
  				previous = direction;
  			}
  		} else {
  			direction = 'up';
  			if(direction !== previous){
- 				$('a.nav-toggle, ul#menu-mobile').removeClass('hide');
-                                
+ 				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile').removeClass('hide');
+
  				previous = direction;
  			}
  		}
@@ -180,3 +180,13 @@ jQuery(document).ready(function($){
  	});
 
      });
+
+
+/*
+// To be used on portfolio and blog page on mobile
+     $(document).ready(function() {
+  $('a[href=#]').click(function(e) {
+    $.scrollTo(0,'slow');
+    e.preventDefault();
+  });
+});*/

@@ -55,7 +55,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase">
   <h1>Camping Advice.com</h1>
-  
+ 
       
   <figure class="links"> 
       <!--<?//https://www.raythompsonwebdev.co.ukphp echo home_url();?>/website/camping-advice-->
@@ -151,7 +151,7 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase-f">
   <h1>Travel Agency</h1>
-  
+ 
   
   
  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/travel-agency" title="www.travelagency.raythompsonwebdev.co.uk">See more..</a></div>
@@ -170,8 +170,8 @@ Template Name: Websites
 
   <figcaption class="showcase-content showcase-g" >
 
-  <h1>Mixtape Cover</h1>
-  
+  <h1>Mixtape Covers</h1>
+  <p></p>
   
   <div class="links">
   <a href=""  title="mixtape cover " >See Image</a>  </div>
