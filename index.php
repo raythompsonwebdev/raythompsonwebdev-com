@@ -12,6 +12,7 @@
     <?php else : ?>
         <span class="social-1"></span>
     <?php endif; ?>
+    <button id="find-search">Search</button>
    <br/>
     <br/>
     <?php if (have_posts()) : ?>

@@ -1,5 +1,5 @@
-
-jQuery(document).ready(function($){
+ 
+ jQuery(document).ready(function($){
 
  $('.fancybox').fancybox({
       openEffect  : 'elastic',
@@ -7,20 +7,17 @@ jQuery(document).ready(function($){
 
     });
 
-
 });
-
+ 
  jQuery(document).ready(function($){
 
 
- $('.showcase-img').click(
-
-  function(){
-
-      $(this).find('.showcase-content').slideToggle(1000 , 'easeInOutExpo' );
-
+ $('figure.showcase-container').on('click', function(){
+    
+      $(this).find('.showcase-content').toggleClass('flipped');
+      $(this).find('.showcase-img').toggleClass('flipped');
+      
   });
-
 
 });
 
@@ -49,7 +46,7 @@ jQuery(document).ready(function($){
   });
 
 });
-
+ 
  //REsponsive chart
 jQuery(document).ready(function($){
 
@@ -69,7 +66,7 @@ jQuery(document).ready(function($){
 
 
 
-
+ 
 //Menu Switch
 jQuery(document).ready(function($){
 
@@ -148,12 +145,14 @@ jQuery(document).ready(function($){
  //search field togle
  jQuery(document).ready(function($){
 
-   $("#wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div label").click(function(){
-       $("#wrapper_container #main-content #blogrightside .blogbox .social-1 form.searchform div input").toggle();
-
+   $('button#find-search').on('click', function(){
+       
+       $('.social-1').animate({
+            
+            opacity : 'toggle',
+            height: 'toggle'
+            }, 'slow');;
    });
-
-
  });
 
  // Hide/show toggle button on scroll
@@ -164,14 +163,14 @@ jQuery(document).ready(function($){
  		if( $(this).scrollTop() >= position ){
  			direction = 'down';
  			if(direction !== previous){
- 				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile ').addClass('hide');
+ 				$('a.nav-toggle').addClass('hide');
 
  				previous = direction;
  			}
  		} else {
  			direction = 'up';
  			if(direction !== previous){
- 				$('a.nav-toggle, nav#mobile-nav ul#menu-mobile').removeClass('hide');
+ 				$('a.nav-toggle').removeClass('hide');
 
  				previous = direction;
  			}
@@ -180,13 +179,3 @@ jQuery(document).ready(function($){
  	});
 
      });
-
-
-/*
-// To be used on portfolio and blog page on mobile
-     $(document).ready(function() {
-  $('a[href=#]').click(function(e) {
-    $.scrollTo(0,'slow');
-    e.preventDefault();
-  });
-});*/

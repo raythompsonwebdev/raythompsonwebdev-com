@@ -21,7 +21,7 @@ Template Name: Contact
 <?php endif; ?>
 		
 <br/>
-<div class="social_media_container">
+<div class="map_container">
     <img id="image-5" src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/map-of-hackney.jpg" alt="map-of-hackney">
 </div>     
 

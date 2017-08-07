@@ -6,14 +6,9 @@ Template Name: Websites
 
 */
 
-
-
 ?>
 
-
-
 <?php get_header(); ?>
-
 
 <section id="main-content" class="group" role="main">
 
@@ -49,21 +44,18 @@ Template Name: Websites
 
 <div id="panel" class="dbox prod-cnt bootstrap">
 
-  <figure class="showcase-img" id="showcaseimg1">
+  <figure class="showcase-container " id="showcaseimg1">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-camping-advice-home-page-small.png" alt="CampingAdvice.com website home page" >
 
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-camping-advice-home-page-port.png" alt="CampingAdvice.com website home page" >
+  
   <figcaption class="showcase-content showcase">
   <h1>Camping Advice.com</h1>
- 
-      
-  <figure class="links"> 
+       
+  <div class="links"> 
       <!--<?//https://www.raythompsonwebdev.co.ukphp echo home_url();?>/website/camping-advice-->
-  <a href="<?php echo home_url();?>/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></figure>
+  <a href="<?php echo home_url();?>/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></div>
   </figcaption>
-
-
-
 
   </figure>
   
@@ -74,9 +66,9 @@ Template Name: Websites
 <div id="panel2" class="dbox prod-cnt webdesign">
 
 
-  <figure class="showcase-img" id="showcaseimg2">
+  <figure class="showcase-container" id="showcaseimg2">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-mannering-music-home-page-small.png" alt="Mannering Music website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-mannering-music-home-page-port.png" alt="Mannering Music website home page">
 
   <figcaption class="showcase-content">
   <h1>Mannering Music</h1>
@@ -91,9 +83,9 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <div id="panel3" class="dbox prod-cnt foundation">
 
-  <figure class="showcase-img" id="showcaseimg3">
+  <figure class="showcase-container" id="showcaseimg3">
 
-    <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-car-rental-home-page-small.png" alt="Car Rental website home page">
+    <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-car-rental-home-page-port.png" alt="Car Rental website home page">
 
     <figcaption class="showcase-content">
     <h1>Car Rental</h1>
@@ -109,9 +101,9 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <div id="panel4" class="dbox prod-cnt webdesign">
 
-  <figure class="showcase-img" id="showcaseimg4">
+  <figure class="showcase-container" id="showcaseimg4">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-shoe-store-home-page-small.png" alt="Shoestore website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-shoe-store-home-page-port.png" alt="Shoestore website home page">
 
   <figcaption class="showcase-content showcase-d">
   <h1>Shoestore</h1>
@@ -127,9 +119,9 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <div id="panel5" class="dbox prod-cnt webdesign">
 
-  <figure class="showcase-img" id="showcaseimg5">
+  <figure class="showcase-container" id="showcaseimg5">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-greenfootprints-home-page-small.png" alt="greenfootprints website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-greenfootprints-home-page-port.png" alt="greenfootprints website home page">
 
   <figcaption class="showcase-content showcase-e">
     <h1>Greenfootprints.com</h1>
@@ -145,9 +137,9 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <div id="panel6" class="dbox prod-cnt webdesign">
 
-  <figure class="showcase-img" id="showcaseimg6">
+  <figure class="showcase-container" id="showcaseimg6">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-travel-agency-home-page-small.png"  alt="Travel Agency website home page" >
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-travelagency-home-page-port.png"  alt="Travel Agency website home page" >
 
   <figcaption class="showcase-content showcase-f">
   <h1>Travel Agency</h1>
@@ -164,9 +156,9 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <div id="panel7" class="dbox prod-cnt wordpress">
 
-  <figure class="showcase-img" id="showcaseimg7">
+  <figure class="showcase-container" id="showcaseimg7">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/portfolio-graphics-mixtape-cover-small.jpg" alt="mixtape cover" >
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/portfolio-grahics-mixtape-cover-port.png" alt="mixtape cover" >
 
   <figcaption class="showcase-content showcase-g" >
 
@@ -184,9 +176,9 @@ Template Name: Websites
 <!-- Panel Container Starts Here -->
 <div id="panel8" class="dbox prod-cnt foundation">
 
-  <figure class="showcase-img" id="showcaseimg8">
+  <figure class="showcase-container" id="showcaseimg8">
 
-  <img src="<?php echo home_url();?>/wp-content/themes/raythompsonwebdev-com/images/www-fitness-club-home-page-small.png" alt="fitness club website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/08/www-fitness-club-home-page-port.png" alt="fitness club website home page">
 
   <figcaption class="showcase-content showcase-h">
 
