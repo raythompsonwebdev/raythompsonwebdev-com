@@ -40,15 +40,15 @@
 
                 <ul id="bars">
 
-                    <li><div data-percentage="60" class="bar"></div><span>Web Design</span></li>
+                    <li><div data-percentage="60" class="bar"></div><span>CSS</span></li>
 
-                    <li><div data-percentage="80" class="bar"></div><span>Jquery/Ajax</span></li>
+                    <li><div data-percentage="80" class="bar"></div><span>Jquery</span></li>
 
-                    <li><div data-percentage="90" class="bar"></div><span>HTML/CSS</span></li>
+                    <li><div data-percentage="90" class="bar"></div><span>HTML</span></li>
 
                     <li><div data-percentage="80" class="bar"></div><span>Wordpress</span></li>
 
-                    <li><div data-percentage="75" class="bar"></div><span>PHP/MySQL</span></li>
+                    <li><div data-percentage="75" class="bar"></div><span>PHP</span></li>
 
                     <li><div data-percentage="75" class="bar"></div><span>Javascript</span></li>
 

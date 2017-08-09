@@ -87,6 +87,12 @@ register_nav_menus(	array(
 endif; // my_theme_setup end
 add_action('after_setup_theme', 'my_theme_setup');
 
+// remove wordpress version number
+function wpbeginner_remove_version(){
+return  '';
+}
+add_filter('the_generator',	'wpbeginner_remove_version');
+
 
 //remove comment cookies
 remove_action('set_comment_cookies', 'wp_set_comment_cookies');
@@ -139,6 +145,31 @@ function remove_version_parameter( $src ){
 add_filter( 'script_loader_src', 'remove_version_parameter', 15, 1 );
 // filter .css files
 add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
+
+
+function check_current_screen() {
+    if( !is_admin() ) return;
+    global $current_screen;
+    print_r( $current_screen );
+}
+add_action( 'admin_notices', 'check_current_screen' );
+
+function conference_contextual_help() {
+$editspeaker = "From this screen, you can view and update all➥
+your conference's speakers...";
+$addspeaker = "Enter the details of a new speaker...";
+$editsession = "View and edit your conference's sessions...";
+$addsession = "Add a new session ...";
+$editsessiontopics = "Add and edit topics...";
+add_contextual_help('edit-conference_speaker', $editspeaker);
+add_contextual_help('conference_speaker', $addspeaker);
+add_contextual_help('edit-conference_sessions', $editsession);
+add_contextual_help('conference_sessions', $addsession);
+add_contextual_help('edit-conference_topics', $editsessiontopics);
+}
+add_action('admin_init', 'conference_contextual_help');
+
+
 
 /*deregister jquery
 function my_init()
