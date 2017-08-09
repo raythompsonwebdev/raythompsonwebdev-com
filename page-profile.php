@@ -289,11 +289,24 @@
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/css-fundamentals">CSS Fundementals</a></li>
+<<<<<<< HEAD
+                                        <li><a class="lyndalink" href="">Javascript Essentials</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/mysql-essential-training">MYSQL Essentials</a></li>
+                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/html5-essential-training">HTML5 Essentials</a></li>
+                                        
+                                        
+                                       <br/>  
+=======
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/javascript-essential-training">Javascript Essentials</a></li>
                                         <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
                                         <li><a class="lyndalink" href="">Bootstrap 3 Essentials</a></li>
                                        <br/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d62deff254e9f61916299579638f884d100032ba
+>>>>>>> 12f9a945515a03b4fdc372e16ef38fbdad1b171f
                                     </ul>
                                           <div class="clearfix"></div>
                                 </figcaption>
