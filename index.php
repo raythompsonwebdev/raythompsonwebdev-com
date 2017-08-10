@@ -4,7 +4,7 @@
 
     <h1>Interested in web design and web development&#63;</h1>
 
-    <p>Whether you have just started learning or are alreading building websites I would like to share with you what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to&#46;</p>
+    <p>Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like</p>
    
 <br/>
     <?php if (is_home() || is_archive()) : ?>
@@ -12,7 +12,6 @@
     <?php else : ?>
         <span class="social-1"></span>
     <?php endif; ?>
-   <!-- <button id="find-search">Search</button>-->
    <br/>
     <br/>
     <?php if (have_posts()) : ?>

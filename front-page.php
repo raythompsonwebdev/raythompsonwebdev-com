@@ -12,7 +12,7 @@
 
 <section id="main-content" class="group" role="main">
 
-    <h1>Web Development </h1>
+    <h1>Wordpress Web Development</h1>
 
     <div class="frontpage_container">
 
@@ -33,7 +33,7 @@
 
             <h1>Hello, I'm a Web Developer</h1>
 
-            <p>My name is Raymond. I am a web developer and I create custom WordPress themes, Customise existing Wordpress Themes and build websites and mobile web applications for sole traders, micro businesses and regular individuals wanting an on-line presence.</p>
+            <p>My name is Raymond. I am a web developer and I create custom WordPress themes, Customise existing Wordpress Themes and build websites and mobile web applications for any regular individuals wanting an on-line presence.</p>
             <hr>
             <p>Whether a website or web application is needed for your business or even for your own personal use, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.</p>
             <p>I can also provide advice with</p>
