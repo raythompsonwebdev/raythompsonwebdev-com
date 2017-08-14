@@ -1,9 +1,9 @@
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">   	
-    
-    
+<section id="main-content" class="group" role="main">
+
+
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
@@ -13,23 +13,23 @@
         <header class="byline">
 
             <div class="entry-meta">
-               
-                
+
+
             </div><!-- .entry-meta -->
 
         </header><!--end of by line-->
 
-        
+
             <figure class="websiteImage">
-          <a href="" class="fancybox.image" title="">      
+          <a href="<?php the_permalink() ?>" class="fancybox.image" title="">      
                 <?php the_post_thumbnail('websites'); ?>
-          </a>      
+          </a>
             </figure>
-        
+
 
     <div class="website-text">
         <?php the_meta(); ?>
-        <div class="links"> 
+        <div class="links">
         <p class="formats">
             <span>Website Formats</span>
             <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-desktop"></i></a></span>
@@ -38,9 +38,9 @@
 
   </p>
        </div>
-        
-       <div class="links"> 
-  
+
+       <div class="links">
+
   </div>
     </div>
 
@@ -58,10 +58,10 @@
         <!--navigation-->
 
         <nav class="navi">
-          
-            <span class="right"> </span> 
-            
-            
+
+            <span class="right"> </span>
+
+
         </nav><!--end of right navigation-->
 
         <!--end of navigation-->
@@ -72,20 +72,20 @@
         ?>
 
         <p><?php load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages'); ?></p>
-        
+
 <?php endif; ?>
 
     <section class='contact-wide'>
 
         <h1>Send your Comments</h2>
-        
+
         <?php
         // If comments are open or we have at least one comment, load up the comment template.
         if ( comments_open() || get_comments_number() ) :
                 comments_template();
         endif;
 ?>
-            
+
     </section>
 
 
@@ -95,4 +95,4 @@
 
 <div class="clearfix"></div>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>

@@ -725,8 +725,6 @@ th {
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     overflow: hidden;
     clear: both;
-    		/*background-image: url("graphics/template.gif");
-    background-repeat:none;*/
     /*Header*/
     /*main-content box*/
     /*Portfolio gallery*/
@@ -744,14 +742,17 @@ th {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     /*Navigation*/
     /*Mobile-Navigation*/
   }
   #wrapper_container header .site-logo {
     position: relative;
     top: 10px;
-    left: -2px;
-    width: 3.5em;
+    left: 3px;
+    width: 3.4em;
     height: 3.5em;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
@@ -768,7 +769,7 @@ th {
     color: white;
     text-decoration: none;
     line-height: 40px;
-    width: 85%;
+    width: 83%;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
@@ -830,9 +831,9 @@ th {
     display: block;
     float: left;
     height: 4em;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   #wrapper_container header hgroup h1#logo {
     font-size: 1.9em;
@@ -913,28 +914,25 @@ th {
     float: right;
     margin: 0.5em 0 0 0;
     height: 35px;
-    -webkit-flex: 1 0 auto;
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
   #wrapper_container header nav.menu-main-container ul#menu-main {
     padding: 0;
     margin: 0;
     height: 35px;
     width: 100%;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   #wrapper_container header nav.menu-main-container ul#menu-main li.menu-item {
     width: 19%;
     float: left;
     height: 35px;
     list-style: none;
-    margin: 0;
+    margin: 0 0.2em 0 0;
     padding: 0;
     display: inline-block;
     text-align: center;
@@ -1223,12 +1221,13 @@ th {
     justify-content: space-between;
   }
   #wrapper_container #main-content #side-bar .side-bar-box {
-    -webkit-flex: 1 1 auto;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    display: inline-block;
     height: auto;
     width: 31.9%;
-    margin: 0.5em;
+    margin: 0;
     float: left;
   }
   #wrapper_container #main-content #side-bar .side-bar-box h2 {
@@ -2791,7 +2790,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     float: left;
     width: 71%;
-    height: 420px;
+    height: 422px;
     /*new*/
     margin: 0 0 0 1%;
     overflow: hidden;
@@ -2802,7 +2801,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     width: 100%;
-    height: 419px;
+    height: 422px;
     background-color: #fff;
     border: 1px solid #CCD3DE;
     margin-bottom: 0.5em;
@@ -3053,16 +3052,16 @@ th {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: space-between;
+    align-content: space-between;
     /* style */
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     width: 100%;
     height: 44px;
     display: block;
-    margin: 0;
+    margin-bottom: 0.2em;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -3111,12 +3110,9 @@ th {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-align-content: space-between;
-    -ms-flex-line-pack: distribute;
-    align-content: space-between;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   #wrapper_container #main-content div#photocontainer div.content nav.menuSwitch {
     text-align: left;
@@ -3172,9 +3168,9 @@ th {
     top: 2px;
     overflow: hidden;
     width: 15.6%;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     margin: 0.4em;
     z-index: 1;
     height: 340px;
@@ -5843,13 +5839,13 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     width: 71%;
-    height: 420px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
-    height: 419px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.95em;
@@ -6798,7 +6794,7 @@ th {
     bottom: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars span {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     text-align: left;
@@ -6808,13 +6804,13 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     width: 71%;
-    height: 420px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
-    height: 419px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.9em;
@@ -7750,7 +7746,7 @@ th {
     height: 345px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.65em;
+    font-size: 0.7em;
     text-align: center;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li {
@@ -7771,13 +7767,13 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     width: 71%;
-    height: 420px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
-    height: 419px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.8em;
@@ -8755,7 +8751,7 @@ th {
     /*Hero Slider*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont h1 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart {
     display: block;
@@ -8771,7 +8767,7 @@ th {
     height: 19.15%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li:last-child {
     height: 7.487%;
@@ -8780,21 +8776,21 @@ th {
     height: 360px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.7em;
+    font-size: 0.8em;
     text-align: center;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
-    height: 420px;
+    height: 425px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
     width: 71%;
-    height: 420px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
-    height: 419px;
+    height: 422px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.9em;
@@ -9680,6 +9676,9 @@ th {
     height: 515px;
     /*Hero Slider*/
   }
+  #wrapper_container #main-content .frontpage_container .prof_cont h1 {
+    font-size: 1.2em;
+  }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
     font-size: 1em;
   }
@@ -9687,7 +9686,7 @@ th {
     height: 19.15%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars {
     height: 100%;
@@ -9714,7 +9713,7 @@ th {
     width: 100%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel {
-    height: 419px;
+    height: 420px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
     font-size: 0.9em;
@@ -10661,7 +10660,7 @@ th {
     /*Hero Slider*/
   }
   #wrapper_container #main-content .frontpage_container .prof_cont h1 {
-    font-size: 1.05em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers {
     font-size: 1em;
@@ -10700,7 +10699,7 @@ th {
     height: 419px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe a.fancybox {
     width: 32.59%;
@@ -11114,7 +11113,7 @@ th {
   #wrapper_container #main-content aside#side-bar {
     height: auto;
     width: 100%;
-    float: none;
+    margin: 0;
   }
   #wrapper_container #main-content aside#side-bar h2 {
     font-size: 1.15em;
@@ -11123,10 +11122,10 @@ th {
     width: 32.3%;
   }
   #wrapper_container #main-content aside#side-bar .side-bar-box .widget h2.widget-title {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   #wrapper_container #main-content aside#side-bar .side-bar-box .widget ul li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content #blogleftside {
     height: auto;
@@ -11488,11 +11487,11 @@ th {
   #wrapper_container #main-content section.contact-wide h1 {
     height: 40px;
     line-height: 40px;
-    font-size: 0.95em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content section.contact-wide h3 {
     width: 94%;
-    font-size: 0.8em;
+    font-size: 1em;
   }
   #wrapper_container #main-content section.contact-wide h3#comments {
     font-size: 0.9em;
@@ -12131,12 +12130,9 @@ th {
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: justify;
-    justify-content: space-around;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   #wrapper_container #main-content aside#side-bar h2 {
     font-size: 1.1em;
@@ -14338,7 +14334,7 @@ th {
     font-size: 0.8em;
   }
   #wrapper_container #main-content aside#side-bar {
-    width: 100%;
+    width: 99%;
   }
   #wrapper_container #main-content aside#side-bar h2 {
     font-size: 1.1em;
@@ -15971,11 +15967,11 @@ th {
     width: 80%;
   }
   #wrapper_container header hgroup h1#logo {
-    font-size: 1.3em;
+    font-size: 1.25em;
     height: 30px;
   }
   #wrapper_container header hgroup h1#logo-blog {
-    font-size: 1.3em;
+    font-size: 1.25em;
     height: 30px;
   }
   #wrapper_container header hgroup h2 {
@@ -16837,11 +16833,11 @@ th {
     width: 80%;
   }
   #wrapper_container header hgroup h1#logo {
-    font-size: 1.25em;
+    font-size: 1.15em;
     height: 30px;
   }
   #wrapper_container header hgroup h1#logo-blog {
-    font-size: 1.25em;
+    font-size: 1.15em;
     height: 30px;
   }
   #wrapper_container header hgroup h2 {
@@ -17699,11 +17695,11 @@ th {
     padding-left: 0;
   }
   #wrapper_container header hgroup h1#logo {
-    font-size: 1.1em;
+    font-size: 1.05em;
     height: 30px;
   }
   #wrapper_container header hgroup h1#logo-blog {
-    font-size: 1.1em;
+    font-size: 1.05em;
     height: 30px;
   }
   #wrapper_container header hgroup h2 {

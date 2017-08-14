@@ -1,30 +1,27 @@
-module.exports = function(grunt){
-
+module.exports = function(grunt) {
    // var mozjpeg = require('imagemin-mozjpeg');
-
     grunt.initConfig({
-
             pkg: grunt.file.readJSON('package.json'),
-        
-    /*    imagemin: {                          // Task 
-            static: {                          // Target 
-              options: {                       // Target options 
+
+    /*    imagemin: {                          // Task
+            static: {                          // Target
+              options: {                       // Target options
                 optimizationLevel: 3,
                 svgoPlugins: [{ removeViewBox: false }],
                 use: [mozjpeg()]
               },
-              files: {                         // Dictionary of files 
-                'images/optimised images/img.png': 'images/img.png', // 'destination': 'source' 
+              files: {                         // Dictionary of files
+                'images/optimised images/img.png': 'images/img.png', // 'destination': 'source'
                 'images/optimised images/img.jpg': 'images/img.jpg',
                 'images/optimised images/img.gif': 'images/img.gif'
               }
             }, */
-  /*          dynamic: {                         // Another target 
+  /*          dynamic: {                         // Another target
               files: [{
-                expand: true,                  // Enable dynamic expansion 
-                cwd: 'src/',                   // Src matches are relative to this path 
+                expand: true,                  // Enable dynamic expansion
+                cwd: 'src/',                   // Src matches are relative to this path
               src: ['**//*.{png,jpg,gif}'],   // Actual patterns to match-remove extra backslash above
-                dest: 'dist/'                  // Destination path prefix 
+                dest: 'dist/'                  // Destination path prefix
               }]
             }
           },*/
@@ -32,50 +29,50 @@ module.exports = function(grunt){
             /**
              * sass Task
              */
-            sass:{
+            sass: {
 
-                    dev:{
-                            options:{
-                                    style:"expanded",
-                                    sourcemap:'auto'
+                    dev: {
+                            options: {
+                                    style: 'expanded',
+                                    sourcemap: 'auto'
                             },
 
-                            files:{
-                                    'style.css':'css/style.scss',
-                                    'svg-style-3.css':'css/svg-style-3.scss',
-                                    
-                                    'ie.css':'css/ie.scss'
+                            files: {
+                                    'style.css': 'css/style.scss',
+                                    'svg-style-3.css': 'css/svg-style-3.scss',
+
+                                    'ie.css': 'css/ie.scss'
 
                                     /*where file goes-----/where file from*/
                             }
                     },
 
-                    dist:{
-                            options:{
-                                    style:"compressed",
-                                    sourcemap:'auto'
+                    dist: {
+                            options: {
+                                    style: 'compressed',
+                                    sourcemap: 'auto'
                             },
-                            files:{
-                                    'style-min.css':'css/style.scss',
-                                    'svg-style-3-min.css':'css/svg-style-3.scss',
-                                    
-                                    'ie-min.css':'css/ie.scss'
+                            files: {
+                                    'style-min.css' : 'css/style.scss',
+                                    'svg-style-3-min.css' : 'css/svg-style-3.scss',
+
+                                    'ie-min.css' : 'css/ie.scss'
 
                                     /*where file goes-----/where file from*/
                             }
                     }
             },
 
-            
+
             /**
              * Watch task
              */
 
-            watch:{
+            watch: {
 
-                    css:{
-                            files:'**/*.scss',
-                            tasks:['sass']
+                    css: {
+                            files: '**/*.scss',
+                            tasks: ['sass']
                     }
             }
 
@@ -85,11 +82,11 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-sass');
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    
+
     //grunt.loadNpmTasks('grunt-contrib-imagemin');
-    
+
     //grunt.registerTask('default', ['imagemin']);
-   
+
     grunt.registerTask('default', ['watch', 'sass']);
 
 
