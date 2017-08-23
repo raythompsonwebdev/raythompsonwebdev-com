@@ -74,7 +74,7 @@ Template Name: Websites
   <h1>Mannering Music</h1>
   
     
-  <div class="links"> <a href=" https://www.raythompsonwebdev.co.uk/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
+  <div class="links"> <a href=" <?php echo home_url();?>/website/mannering-music" title="www.mannering-music.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
   </figure>
 </div>
@@ -91,7 +91,7 @@ Template Name: Websites
     <h1>Car Rental</h1>
     
         
-    <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/car-rental" title="www.car-rental.raythompsonwebdev.co.uk">See more..</a></div>
+    <div class="links"><a href="<?php echo home_url();?>/website/car-rental" title="www.car-rental.raythompsonwebdev.co.uk">See more..</a></div>
     </figcaption>
 
   </figure>
@@ -109,7 +109,7 @@ Template Name: Websites
   <h1>Shoestore</h1>
   
     
-  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/shoe-store/" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
+  <div class="links"><a href="<?php echo home_url();?>/website/shoe-store/" title="www.shoestore.raythompsonwebdev.co.uk">Visit Website</a></div>
   </figcaption>
 
   </figure>
@@ -127,7 +127,7 @@ Template Name: Websites
     <h1>Greenfootprints.com</h1>
     
     
-    <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/greenfootprints"title="www.greenfootprints.raythompsonwebdev.co.uk">See more..</a></div>
+    <div class="links"><a href="<?php echo home_url();?>/website/greenfootprints"title="www.greenfootprints.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
 
   </figure>
@@ -146,7 +146,7 @@ Template Name: Websites
  
   
   
- <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/travel-agency" title="www.travelagency.raythompsonwebdev.co.uk">See more..</a></div>
+ <div class="links"><a href="<?php echo home_url();?>/website/travel-agency" title="www.travelagency.raythompsonwebdev.co.uk">See more..</a></div>
   </figcaption>
 
   </figure>
@@ -185,7 +185,7 @@ Template Name: Websites
   <h1>Fitness Club</h1>
   <p></p>
   
-  <div class="links"><a href="https://www.raythompsonwebdev.co.uk/website/fitness-club" title="www.fitness-club.raythompsonwebdev.co.uk">See more..</a>
+  <div class="links"><a href="<?php echo home_url();?>/website/fitness-club" title="www.fitness-club.raythompsonwebdev.co.uk">See more..</a>
   </div>
 
   </figcaption>

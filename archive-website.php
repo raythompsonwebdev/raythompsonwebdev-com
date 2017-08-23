@@ -1,28 +1,21 @@
-
-<?php get_header(); ?>
+<?php
+/**
+ * Locations taxonomy archive
+ */
+get_header();
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+?>
 websites
 <section id="main-content" class="group" role="main">
-<h1 class="archive-title"><?php
-        // Output the category title
-        if (is_category()) {
-            single_cat_title();
-        }
-        // Output the tag title
-        elseif (is_tag()) {
-            single_tag_title();
-            // For everything else
-        } else {
-            _e('Browsing the Archive', 'raythompsonwebdev-com');
-        }
-        ?>
 
-    </h1>
-
+<h1 class="archive-title"><?php echo apply_filters( 'the_title', $term->name ); ?></h1>
+   
     
-    
-    <?php
-    the_archive_title('<h2 class="page-title">', '</h2>');
-    ?>
+    <?php if ( !empty( $term->description ) ): ?>
+    <div class="archive-description">
+      <?php echo esc_html($term->description); ?>
+    </div>
+    <?php endif; ?>
 
     <?php if (have_posts()) : ?>
 
@@ -71,7 +64,7 @@ websites
                         <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
                     </p>
 
-                    <span class="bylinecat">Posted in <?php the_category(', ') ?> </span>
+                    <span class="bylinecat">Posted in <?php the_taxonomy(', ') ?> </span>
                     <span class="bylinecat"><?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></span>
 
 

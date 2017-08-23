@@ -33,23 +33,22 @@
 
             <h1>Hello, I'm a Web Developer</h1>
 
-            <p>My name is Raymond. I am a web developer and I create custom WordPress themes, Customise existing Wordpress Themes and build websites and mobile web applications for any regular individuals wanting an on-line presence.</p>
+            <p>My name is Raymond. I am a web developer and I create custom wordPress themes, customise wordpress themes and build websites and web applications.</p>
             <hr>
-            <p>Whether a website or web application is needed for your business or even for your own personal use, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.</p>
-            <p>I can also provide advice with</p>
-
-
+            <p>Whether it's a website or web application for your business or even for your own personal use, I can help achieve your on-line goals with a website or web application specifically tailored for your needs.</p>
+            
             <ul class="webskills">
-                <li id="fa-desktop"><span></span>Searching for a Domain Name&#46;</li>
-                <li id="fa-wordpress"><span></span>Finding a Website Host.</li>
-                <li id="fa-mobile"><span></span>Wordpress Installation and more.&#46;</li>
+                <li id="fa-desktop"><span></span>Responsive websites and web application development&#46;</li>
+                <li id="fa-wordpress"><span></span>Wordpress installation and theme development.</li>
+                <li id="fa-mobile"><span></span>Domain name registration, Finding suitable web host&#46;</li>
+                <li id="fa-mobile"><span></span>Website Optimisation, Search Engine Optimisation&#46;</li>
             </ul>
 
             <p>From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices.</p>
                   <hr>
             <p>I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.</p>
             <hr>
-            <p>To see samples of some previous work, click big blue button on the right. To enquire about getting help with any project you have or plan to start please go to <strong><a href="http://raythompsonwebdev.co.uk/contact">contact page</a></strong>. I am also available to contact on social media, links at the bottom. Holla!</p>
+            <p>Samples of some of my projects can be viewed by clicking big blue button on the right. To find out more about getting help with a project please go to <strong><a href="http://raythompsonwebdev.co.uk/contact">contact page</a></strong>. I am also available to contact via social media, links at the bottom. Holla!</p>
         </article>
 
 <div class="clearfix"></div>

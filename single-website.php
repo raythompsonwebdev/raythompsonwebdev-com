@@ -1,27 +1,24 @@
-
-<?php get_header(); ?>
+<?php
+/**
+ * website taxonomy archive
+ */
+get_header();
+$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+?>
 
 <section id="main-content" class="group" role="main">
 
 
+	
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 
         <h1><?php the_title(); ?></h1>
 
-        <header class="byline">
-
-            <div class="entry-meta">
-
-
-            </div><!-- .entry-meta -->
-
-        </header><!--end of by line-->
-
-
+<br/>
             <figure class="websiteImage">
-          <a href="<?php the_permalink() ?>" class="fancybox.image" title="">      
+          <a href="" class="fancybox.image" title="">
                 <?php the_post_thumbnail('websites'); ?>
           </a>
             </figure>
@@ -32,9 +29,9 @@
         <div class="links">
         <p class="formats">
             <span>Website Formats</span>
-            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-desktop"></i></a></span>
-            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-tablet" title="Tablet"></i></a></span>
-            <span><a href="" class="fancybox" title="Desktop"><i class="fa fa-mobile"></i></a></span>
+            <span><a href="#" class="fancybox" title="Desktop"><i class="fa fa-desktop" title="Desktop"></i></a></span>
+            <span><a href="#" class="fancybox" title="Tablet"><i class="fa fa-tablet" title="Tablet"></i></a></span>
+            <span><a href="#" class="fancybox" title="Mobile"><i class="fa fa-mobile"></i></a></span>
 
   </p>
        </div>
@@ -52,7 +49,7 @@
 
         </footer>
 
-        <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
+
     </article><!--end of post group-->
 
         <!--navigation-->
@@ -77,7 +74,7 @@
 
     <section class='contact-wide'>
 
-        <h1>Send your Comments</h2>
+        <h1>Send your Comments</h1>
 
         <?php
         // If comments are open or we have at least one comment, load up the comment template.

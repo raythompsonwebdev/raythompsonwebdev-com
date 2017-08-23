@@ -437,7 +437,7 @@ $colorseven:#accc51-green-ligh
 				width: 100%;
 				letter-spacing: 0.08em;
 				line-height: 1.9em;
-				margin: 0 0 1%;
+				margin: 0 0 1em 0;
 			}
 			ul {
 				list-style: none;
@@ -447,26 +447,7 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			ul.contact-details {
-				margin: 3% 0;
-				width: 45%;
-				display: block;
-				float: left;
-				li {
-					font-size: 0.9em;
-                    font-family: "FontAwesome", ($FontStyle);
-					&::before {
-						font-size: 1.4em;
-					}
-					a {
-						width: auto;
-						display: inline-block;
-					}
-					a:hover {
-						color: $color4;
-					}
-				}
-			}
+			
 			hr {
 				background-color: $color1;
 				height: 1px;
@@ -480,6 +461,8 @@ $colorseven:#accc51-green-ligh
 				outline: 0;
 				border: 0;
 			}
+			
+			/*contact page*/
 			.map_container {
 				float: left;
 				width: 40.7293%;
@@ -487,15 +470,50 @@ $colorseven:#accc51-green-ligh
 				margin: 0;
 				height: auto;
 				min-height: 250px;
+				border:1px solid $color1;
 			}
-			/*Right-side*/
+			ul.contact-details {
+				margin: 2em 0;
+				width: 45%;
+				display: block;
+				float: left;
+				li {
+					font-size: 1em;
+                    font-family: "FontAwesome", ($FontStyle);
+					&::before {
+						font-family: 'FontAwesome';
+						content: "\f108";
+						font-style: normal;
+						display: inline-block;
+						line-height: 40px;
+						height: 40px;
+						width: 45px;
+						text-align: center;
+						font-size: 1.4em;
+						float: left;
+					}
+					a {
+						width: auto;
+						display: inline-block;
+						font-size:0.9em;
+						&:hover {
+							color: $color4;
+						}
+					}
+					
+				}
+			}
+			/*contact page end*/
+			
+			
+			/*blog page Right-side*/
 			#side-bar {
 				padding-top: 0;
 				height: auto;
 				width: 100%;
 				font-family: ($FontStyle);
 				display: block;
-				margin: 0.75% 0 0;
+				margin: 1em 0 0 0;
 				clear: both;
 				display: -webkit-flex;
 				display: -ms-flexbox;
@@ -503,17 +521,17 @@ $colorseven:#accc51-green-ligh
 				-webkit-flex-flow: row wrap;
 				-ms-flex-flow: row wrap;
 				flex-flow: row wrap;
-				-webkit-justify-content: space-between;
-				-ms-flex-pack: justify;
-				justify-content: space-between;
+				-webkit-justify-content: flex-start;
+				-ms-flex-pack: start;
+				justify-content: flex-start;
 				.side-bar-box {
 					-webkit-flex: 0 0 auto;
 					-ms-flex: 0 0 auto;
 					flex: 0 0 auto;
 					display: inline-block;
 					height: auto;
-					width: 31.9%;
-					margin: 0;
+					width: 32.3%;
+					margin: 0.5em;
 					float: left;
 					h2 {
 						width: 100%;
@@ -596,16 +614,21 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			/*Left-side*/
+
+			/*blog page Left-side*/
 			#blogleftside {
 				height: auto;
 				width: 100%;
 				font-size: 1em;
 				margin: 0;
 			}
+			
+			//blog page content
 			.left-col {
 				margin-top: 0;
 			}
+
+			
 			/*Posts*/
 			.post {
 				background-color: $color4;
@@ -726,7 +749,8 @@ $colorseven:#accc51-green-ligh
 						clear: both;
 						line-height: 35px;
 						padding: 0;
-						border: 2px solid $color1;
+						border: 1px solid $color1;
+						font-weight:bold;
 						p {
 							line-height: 1em;
 							width: 83%;
@@ -744,8 +768,9 @@ $colorseven:#accc51-green-ligh
 							float: left;
 							font-size: 1.1em;
 							text-indent: 1%;
-							background-color: $color1;
-							color: $color4;
+							border-right:1px solid $color1;
+							background-color: $color2;
+							color: $color1;
 							margin-right: 1%;
 							line-height: 35px;
 						}
@@ -781,7 +806,8 @@ $colorseven:#accc51-green-ligh
 						clear: both;
 						line-height: 22px;
 						padding: 0;
-						border: 2px solid $color1;
+						border: 1px solid $color1;
+						font-weight:bold;
 						p {
 							line-height: 1em;
 							width: 83%;
@@ -799,8 +825,9 @@ $colorseven:#accc51-green-ligh
 							float: left;
 							font-size: 1.2em;
 							text-indent: 1%;
-							background-color: $color1;
-							color: $color4;
+							border-right:1px solid $color1;
+							background-color: $color2;
+							color: $color1;
 							margin-right: 1%;
 							line-height: 35px;
 						}
@@ -847,7 +874,7 @@ $colorseven:#accc51-green-ligh
 						display: inline-block;
 						width: 98%;
 						padding: 0;
-						border: 2px solid $color1;
+						border: 1px solid $color1;
 						a {
 							height: 100%;
 							list-style: none;
@@ -864,12 +891,13 @@ $colorseven:#accc51-green-ligh
 							text-align: center;
 							@include originTran( 50% 50%);
 							@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+							&:hover {
+								color: $color1;
+								background-color: $color2;
+								font-weight: bold;
+							}
 						}
-						a:hover {
-							color: $color1;
-							background-color: $color2;
-							font-weight: bold;
-						}
+
 						p.formats {
 							font-size: 1em;
 							width: 100%;
@@ -879,28 +907,31 @@ $colorseven:#accc51-green-ligh
 							color: $color1;
 							float: left;
 							display: block;
+							font-weight:bold;
 							span:first-of-type {
 								font-size: 0.95em;
 								width: 15%;
 								text-indent: 1%;
 								display: inline-block;
 								text-align: left;
-								height: 46px;
-								line-height: 46px;
-								color: $color4;
-								background-color: $color1;
+								height: 48px;
+								line-height: 48px;
+								color: $color1;
+								background-color: $color2;
+								border-right:1px solid $color1;
 								float: left;
 							}
 							span {
-								font-size: 0.9em;
-								width: 25%;
+								font-size: 1em;
+								width: 28.09%;
 								display: inline-block;
 								text-align: left;
-								height: 46px;
-								line-height: 46px;
+								height: 48px;
+								line-height: 48px;
+								
+								background-color: $color2;
 								color: $color1;
-								background-color: $color4;
-								float: left;
+								
 								a {
 									width: 100%;
 									display: block;
@@ -912,14 +943,15 @@ $colorseven:#accc51-green-ligh
 										width: 100%;
 										display: inline-block;
 										text-align: center;
-										height: 46px;
-										line-height: 46px;
+										height: 48px;
+										line-height: 48px;
 										color: $color1;
 										background-color: $color4;
 										@include originTran( 50% 50%);
 										@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
 									}
 								}
+								
 							}
 						}
 					}
@@ -937,9 +969,9 @@ $colorseven:#accc51-green-ligh
 					margin: 0;
 					font-size: 0.95em;
 					color: $color8;
-					font-weight: 100;
+					font-weight: normal;
 					line-height: 2.1em;
-					letter-spacing: 0.03em;
+					letter-spacing: 0.02em;
 					margin-bottom: 2%;
 				}
 				.thumb {
@@ -988,9 +1020,11 @@ $colorseven:#accc51-green-ligh
 					margin-bottom: 1em;
 					height: auto;
 					background-color: $color2;
+					
 					color: $color4;
 					text-align: left;
 					padding: 0.5em;
+					@include box-sizing($type: border-box);
 					.entry-meta,
 					.index-entry-meta {
 						height: auto;
@@ -1033,7 +1067,7 @@ $colorseven:#accc51-green-ligh
 								}
 								a:hover {
 									font-weight: bold;
-									color: $color1;
+									color: $color4;
 									margin: 0;
 									width: auto;
 									display: inline-block;
@@ -1121,14 +1155,14 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
+				div.continue-reading {
 					font-size: 0.9em;
 					padding: 0;
-					height: 35px;
-					line-height: 35px;
+					height: 40px;
+					line-height: 40px;
 					list-style: none;
 					background-color: $color3;
-					width: 15.965%;
+					width: 30%;
 					color: $color1;
 					@include originTran( 50% 50%);
 					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
@@ -1136,13 +1170,25 @@ $colorseven:#accc51-green-ligh
 					display: block;
 					text-align: center;
 					margin: 2% 0;
-					&:hover {
-						color: $color4;
-						background-color: $color1;
-						font-weight: bold;
-						margin: 2% 0;
-						letter-spacing: 0.075em;
+					a{
+						display: block;
+						height:100%;
+						width:100%;
+						color:$color4;
+						&:hover {
+							color: $color4;
+							background-color: $color1;
+							font-weight: bold;
+							margin: 2% 0;
+							letter-spacing: 0.075em;
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				/*Social media share buttons*/
 				div.sharedaddy {
@@ -1250,7 +1296,7 @@ $colorseven:#accc51-green-ligh
 					color: $color8;
 					strong {
 						display: inline-block;
-						width: 91%;
+						width: 94%;
 						a {
 							font-family: ($FontStyle);
 							display: inline-block;
@@ -1272,7 +1318,8 @@ $colorseven:#accc51-green-ligh
 							font-size: 1.9em;
 							line-height: 40px;
 							float: right;
-							width: 4%;
+							width: 3%;
+							display: inline-block;
 						}
 					}
 					span {
@@ -1610,57 +1657,93 @@ $colorseven:#accc51-green-ligh
 			/*Comment section end*/
 			#contactform {
 				float: right;
-				width: 50%;
+				width: 48%;
 				height: auto;
 				font-family: ($FontStyle);
 				padding: 10px 0;
-				font-size: 100%;
-				p {
-					font-size: 0.9em;
-					padding: 1% 0;
-				}
-				input {
-					width: 95%;
-					height: 35px;
-				}
-				label {
-					height: 30px;
-					line-height: 30px;
-				}
-				input[type="submit"] {
-					height: 35px;
-					list-style: none;
-					width: 20%;
-					background-color: $color3;
-					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
-					padding: 0;
-					border: none;
-					color: $color1;
-					font-family: ($FontStyle);
-					display: block;
-					font-size: 1.1em;
-				}
-				input[type="submit"]:hover {
-					background-color: $color1;
-					color: $color4;
-				}
-				input[type=text],
-				select,
-				textarea {
-					@include Transition(all 0.30s ease-in-out);
-					outline: none;
-					padding: 3px 0 3px 3px;
-					margin: 5px 1px 3px 0;
-					border: 1px solid #ddd;
-					width: 95%;
-				}
-				input[type=text]:focus,
-				select:focus,
-				textarea:focus {
-					box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					padding: 3px 0 3px 3px;
-					margin: 5px 1px 3px 0;
-					border: 1px solid rgba(81, 203, 238, 1);
+				font-size: 1em;
+				border:1px solid $color1;
+				padding:0.5em;
+				background-color:$color4;
+				
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+						height: 60px;
+						width: 60px;
+						display: block;
+						margin: 3% auto;
+						background-repeat:no-repeat;
+					}
+					
+					
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.9em;
+							padding: 1% 0;
+							label {
+								height: 30px;
+								line-height: 30px;
+								.wpcf7-form-control-wrap {
+									height: auto;
+									display: block;
+								}
+								textarea{
+									@include Transition(all 0.30s ease-in-out);
+									outline: none;
+									padding: 3px 0 3px 3px;
+									margin: 5px 1px 3px 0;
+									border: 1px solid #ddd;
+									width: 100%;
+
+
+								}
+								input[type=text],
+								input[type=email],
+								select {
+									@include Transition(all 0.30s ease-in-out);
+									outline: none;
+									padding: 3px 0 3px 3px;
+									margin: 5px 1px 3px 0;
+									border: 1px solid #ddd;
+									width: 100%;
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+									padding: 3px 0 3px 3px;
+									margin: 5px 1px 3px 0;
+									border: 1px solid rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								height: 35px;
+								list-style: none;
+								width: 25%;
+								background-color: $color3;
+								@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+								padding: 0;
+								border: none;
+								color: $color1;
+								font-family: ($FontStyle);
+								display: block;
+								font-size: 1.1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+									font-weight:bold;
+								}
+							}
+							
+						}
+					}
 				}
 			}
 			/*Front-page-Panel */
@@ -1679,11 +1762,11 @@ $colorseven:#accc51-green-ligh
 					margin: 0;
 					height: auto;
 					h1 {
-						font-size: 1.03em;
+						font-size: 1em;
 						margin: 0;
 						padding: 0;
 						color: $color1;
-						letter-spacing: 0.095em;
+						letter-spacing: 0.05em;
 						width: 100%;
 						display: block;
 						height: auto;
@@ -1829,6 +1912,8 @@ $colorseven:#accc51-green-ligh
 					/*new*/
 					height: 500px;
 					background-color: $color4;
+					@include box-sizing($type: border-box);
+					border:1px solid $color1;
 					margin: 0;
 					display: inline-block;
 					font-family: ($FontStyle);
@@ -1841,8 +1926,10 @@ $colorseven:#accc51-green-ligh
 						padding: 0;
 						font-size: 1.2em;
 						line-height: 50px;
-						background-color: $color7;
-						color: $color4;
+						@include box-sizing($type: border-box);
+						background-color: $color4;
+						border-bottom:1px solid $color1;
+						color: $color1;
 						text-indent: 1.5%;
 						letter-spacing: 0.05em;
 						font-weight: bold;
@@ -1863,6 +1950,7 @@ $colorseven:#accc51-green-ligh
 						height: 385px;
 						margin: 5% auto;
 						display: block;
+						
 						#numbers {
 							width: 9.5%;
 							height: 378px;
@@ -1969,7 +2057,7 @@ $colorseven:#accc51-green-ligh
 									width: 100%;
 									height: 422px;
 									background-color: $color4;
-									border: 1px solid $color2;
+									//border: 1px solid $color2;
 									margin-bottom: 0.5em;
 									h2 {
 										text-transform: uppercase;
@@ -2049,16 +2137,15 @@ $colorseven:#accc51-green-ligh
 											ul {
 												width: 100%;
 												display: block;
-												padding: 1%;
 												margin: 0;
-												padding: 0.1em;
 												li {
 													width: 100%;
-													margin: 0;
+													margin: 0 0 0.2em 0;
 													font-weight: normal;
 													color: $color1;
 													display: block;
 													height: auto;
+													background-color:$color2;
 													&:before {
 														font-family: "FontAwesome";
 														font-size: 0.95em;
@@ -2072,7 +2159,7 @@ $colorseven:#accc51-green-ligh
 														color: $color1;
 														width: auto;
 														line-height: 25px;
-														font-size: 0.85em;
+														font-size: 0.8em;
 														display: inline-block;
 														&:hover {
 															font-weight: normal;
@@ -2083,15 +2170,16 @@ $colorseven:#accc51-green-ligh
 											}
 											ul#lyndalinks {
 												width: 100%;
-												padding: 1%;
+												display: block;
+												margin: 0;
 												li {
 													width: 100%;
-													margin: 0;
+													margin: 0 0 0.2em 0;
 													font-weight: normal;
 													color: $color1;
 													display: block;
 													height: auto;
-													line-height: 20px;
+													background-color:$color2;
 													&:before {
 														font-family: "FontAwesome";
 														font-size: 0.95em;
@@ -2103,7 +2191,8 @@ $colorseven:#accc51-green-ligh
 													a.lyndalink {
 														color: $color1;
 														width: auto;
-														font-size: 0.85em;
+														line-height: 25px;
+														font-size: 0.8em;
 														display: inline-block;
 														&:hover {
 															font-weight: normal;
@@ -2161,14 +2250,15 @@ $colorseven:#accc51-green-ligh
 											ul {
 												width: 100%;
 												display: block;
-												padding: 1%;
+												
 												margin: 0;
-												padding: 0.1em;
+												
 												li {
 													width: 100%;
-													margin: 0;
+													margin: 0 0 0.2em 0;
 													font-weight: normal;
 													color: $color1;
+													background-color:$color2;
 													display: block;
 													height: auto;
 													&:before {
@@ -2182,7 +2272,7 @@ $colorseven:#accc51-green-ligh
 													a {
 														color: $color1;
 														width: auto;
-														font-size: 0.85em;
+														font-size: 0.8em;
 														line-height: 25px;
 														display: inline-block;
 														&:hover {
@@ -2220,9 +2310,13 @@ $colorseven:#accc51-green-ligh
 								height: 44px;
 								display: block;
 								margin-bottom: 0.2em;
-                -webkit-flex: 0 0 auto;
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
+								-webkit-flex: 0 0 auto;
+								-ms-flex: 0 0 auto;
+								flex: 0 0 auto;
+								
+								@include box-sizing($type: border-box);
+						
+						
 								a {
 									height: 100%;
 									outline: none;
@@ -2233,7 +2327,7 @@ $colorseven:#accc51-green-ligh
 									text-align: center;
 									margin: 0 auto;
 									letter-spacing: 0.02em;
-									background-color: $color3;
+									background-color: $color2;
 									color: $color1;
 									font-size: 0.85em;
 									line-height: 44px;
@@ -2243,8 +2337,14 @@ $colorseven:#accc51-green-ligh
 										color: $color4;
 										font-weight: bold;
 									}
+									&:active{
+										background-color: $color1;
+										color: $color4;
+									}
 								}
 							}
+							
+							
 							/* style */
 						}
 					}
@@ -2366,6 +2466,7 @@ $colorseven:#accc51-green-ligh
                             -webkit-transform-style: preserve-3d;
                             -ms-transform-style: preserve-3d;
                             transform-style: preserve-3d;
+							overflow: auto;
 
 
                             img.showcase-img {
@@ -2453,14 +2554,7 @@ $colorseven:#accc51-green-ligh
             }
 		}
 
-		div.wpcf7 img.ajax-loader {
-			border: medium none;
-			vertical-align: middle;
-			height: 100px;
-			width: 10%;
-			display: block;
-			margin: 5% auto;
-		}
+	
 		/*Portfolio gallery*/
 
 		/*Footer*/
@@ -2495,27 +2589,9 @@ $colorseven:#accc51-green-ligh
 					width: 100%;
 					height: 100%;
 				}
-				.linkedin-icon span .fa-linkedin {
-					width: 100%;
-					height: 100%;
-					text-align: center;
-					font-size: 1.9em;
-					line-height: 46px;
-				}
-				.twitter-icon span .fa-twitter {
-					width: 100%;
-					height: 100%;
-					text-align: center;
-					font-size: 1.9em;
-					line-height: 46px;
-				}
-				.facebook-icon span .fa-facebook {
-					width: 100%;
-					height: 100%;
-					text-align: center;
-					font-size: 1.9em;
-					line-height: 46px;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					width: 100%;
 					height: 100%;
@@ -2523,6 +2599,7 @@ $colorseven:#accc51-green-ligh
 					font-size: 1.9em;
 					line-height: 46px;
 				}
+				
 			}
 			p#copyr {
 				color: $color1;
@@ -2548,23 +2625,23 @@ $colorseven:#accc51-green-ligh
 					margin: 0;
 					text-indent: 0;
 					font-size: 1em;
+					
 					a {
-						width: 40%;
+						
 						text-decoration: none;
 						color: $color1;
 						margin: 0;
 						padding: 0;
 						font-size: 0.85em;
 						display: block;
-						height: 100%;
+						height: auto;
 						line-height: 25px;
 						@include originTran( 50% 50%);
 						@include Transition( all 0.2s ease-in-out);
 						&:hover {
 							color: $color4;
 							margin: 0;
-							font-size: 0.90em;
-							line-height: 1.5em;
+							font-weight:bold;
 						}
 					}
 				}
@@ -2773,7 +2850,7 @@ $colorseven:#accc51-green-ligh
 				padding: 0;
 			}
 			h1 {
-				font-size: 1.2em;
+				font-size: 1.25em;
 				line-height: 50px;
 				letter-spacing: 0.095em;
 				clear: both;
@@ -2794,7 +2871,7 @@ $colorseven:#accc51-green-ligh
 				font-size: 0.85em;
 				letter-spacing: 0.08em;
 				line-height: 1.9em;
-				margin: 0 0 1%;
+				margin: 0 0 1em 0;
 			}
 			ul {
 				list-style: none;
@@ -2815,6 +2892,37 @@ $colorseven:#accc51-green-ligh
 				outline: 0;
 				border: 0;
 			}
+			/*contact page*/
+			.map_container {
+				
+				width: 40.7293%;
+				
+				min-height: 250px;
+				
+			}
+			ul.contact-details {
+				margin: 2em 0;
+				width: 45%;
+				
+				li {
+					font-size: 1em;
+                    
+					&::before {
+						
+						font-size: 1.4em;
+						
+					}
+					a {
+						width: auto;
+						display: inline-block;
+						font-size:0.95em;
+					}
+					a:hover {
+						color: $color4;
+					}
+				}
+			}
+			/*contact page end*/
 			aside#side-bar {
 				padding-top: 0;
 				margin: 0.75% 0 0;
@@ -3348,6 +3456,29 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
+				
+				div.continue-reading {
+					font-size: 0.9em;
+					
+					width: 40%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
+					}
+					
+				}
 			}
 			/*post pagination*/
 			.navi {
@@ -3627,60 +3758,58 @@ $colorseven:#accc51-green-ligh
 			}
 			/*Comment section end*/
 			#contactform {
-				float: right;
-				width: 50%;
-				height: auto;
-				font-family: ($FontStyle);
-				padding: 10px 0;
-				font-size: 100%;
-				p {
-					font-size: 0.9em;
-					padding: 1% 0;
-				}
-				input {
-					width: 95%;
-					height: 35px;
-				}
-				label {
-					height: 30px;
-					line-height: 30px;
-				}
-				input[type="submit"] {
-					height: 35px;
-					list-style: none;
-					width: 20%;
-					background-color: $color3;
-					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
-					padding: 0;
-					border: none;
-					color: $color1;
-					font-family: ($FontStyle);
-					display: block;
-					font-size: 1.1em;
-				}
-				input[type="submit"]:hover {
-					background-color: $color1;
-					color: $color4;
-				}
-				input[type=text],
-                input[type=email],
-				select,
-				textarea {
-					@include Transition(all 0.30s ease-in-out);
-					outline: none;
-					padding: 3px 0 3px 3px;
-					margin: 5px 1px 3px 0;
-					border: 1px solid #ddd;
-					width: 100%;
-				}
-				input[type=text]:focus,
-                input[type=email]:focus,
-				select:focus,
-				textarea:focus {
-					box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-					padding: 3px 0 3px 3px;
-					margin: 5px 1px 3px 0;
-					border: 1px solid rgba(81, 203, 238, 1);
+				width: 48%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+						height: 50px;
+						width: 50px;
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.85em;
+							
+							label {
+								height: 30px;
+								line-height: 30px;
+								.wpcf7-form-control-wrap {
+									height: auto;
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
 			/*Front-page-Panel */
@@ -3696,11 +3825,11 @@ $colorseven:#accc51-green-ligh
 					margin: 0;
 					height: auto;
 					h1 {
-						font-size: 1.03em;
+						font-size: 1em;
 						margin: 0;
 						padding: 0;
 						color: $color1;
-						letter-spacing: 0.095em;
+						
 						width: 100%;
 						display: block;
 						height: auto;
@@ -4003,7 +4132,7 @@ $colorseven:#accc51-green-ligh
 											clear: both;
 											h3 {
 												font-weight: normal;
-												font-size: 1.1em;
+												font-size: 1.05em;
 												background-color: $color9;
 												color: $color4;
 												width: auto;
@@ -4034,7 +4163,7 @@ $colorseven:#accc51-green-ligh
 												padding: 0.1em;
 												li {
 													width: 100%;
-													margin: 0;
+													
 													font-weight: normal;
 													color: $color1;
 													display: block;
@@ -4052,7 +4181,7 @@ $colorseven:#accc51-green-ligh
 													a {
 														color: $color1;
 														width: auto;
-														font-size: 0.9em;
+														font-size: 0.8em;
 														display: inline-block;
 														&:hover {
 															font-weight: normal;
@@ -4066,7 +4195,7 @@ $colorseven:#accc51-green-ligh
 												padding: 1%;
 												li {
 													width: 100%;
-													margin: 0;
+													
 													font-weight: normal;
 													color: $color1;
 													display: block;
@@ -4083,7 +4212,7 @@ $colorseven:#accc51-green-ligh
 													a.lyndalink {
 														color: $color1;
 														width: auto;
-														font-size: 0.9em;
+														font-size: 0.8em;
 														display: inline-block;
 														&:hover {
 															font-weight: normal;
@@ -4113,7 +4242,7 @@ $colorseven:#accc51-green-ligh
 											clear: both;
 											h3 {
 												font-weight: normal;
-												font-size: 1.1em;
+												font-size: 1.05em;
 												background-color: $color9;
 												color: $color4;
 												width: auto;
@@ -4142,7 +4271,7 @@ $colorseven:#accc51-green-ligh
 												padding: 0.1em;
 												li {
 													width: 100%;
-													margin: 0;
+													
 													font-weight: normal;
 													color: $color1;
 													display: block;
@@ -4159,7 +4288,7 @@ $colorseven:#accc51-green-ligh
 													a {
 														color: $color1;
 														width: auto;
-														font-size: 0.9em;
+														font-size: 0.8em;
 														display: inline-block;
 														&:hover {
 															font-weight: normal;
@@ -4184,7 +4313,7 @@ $colorseven:#accc51-green-ligh
 							li {
 
 								height: 44px;
-								margin: 0 0 0.1em 0;
+								
 								a {
 									display: block;
 									font-size: 0.8em;
@@ -4287,11 +4416,6 @@ $colorseven:#accc51-green-ligh
 }
             }
 		}
-
-		div.wpcf7 img.ajax-loader {
-			width: 10%;
-			margin: 5% auto;
-		}
 		/*Portfolio gallery*/
 		/*Footer*/
 		footer {
@@ -4309,18 +4433,9 @@ $colorseven:#accc51-green-ligh
 					width: 100%;
 					height: 100%;
 				}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.8em;
-					line-height: 46px;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.8em;
-					line-height: 46px;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.8em;
-					line-height: 46px;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.8em;
 					line-height: 46px;
@@ -4337,12 +4452,12 @@ $colorseven:#accc51-green-ligh
 					height: 25px;
 					font-size: 1em;
 					a {
-						width: 40%;
+						
 						font-size: 0.80em;
 						line-height: 25px;
 						&:hover {
-							font-size: 0.85em;
-							line-height: 1.5em;
+							
+							line-height: 25px;
 						}
 					}
 				}
@@ -4417,7 +4532,7 @@ $colorseven:#accc51-green-ligh
 			}
 			/*Navigation*/
 			nav.menu-main-container {
-				width: 40%;
+				width: 45%;
 				ul#menu-main {
 					height: 35px;
 					li.menu-item {
@@ -4512,7 +4627,7 @@ $colorseven:#accc51-green-ligh
 				padding: 0;
 			}
 			h1 {
-				font-size: 1.15em;
+				font-size: 1.2em;
 			}
 			h2 {
 				font-size: 1.05em;
@@ -4531,6 +4646,37 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
+			/*contact page*/
+			.map_container {
+				
+				width: 40.7293%;
+				
+				min-height: 250px;
+				
+			}
+			ul.contact-details {
+				margin: 2em 0;
+				width: 45%;
+				
+				li {
+					font-size: 1em;
+                    
+					&::before {
+						
+						font-size: 1.4em;
+						
+					}
+					a {
+						width: auto;
+						display: inline-block;
+						font-size:0.95em;
+					}
+					a:hover {
+						color: $color4;
+					}
+				}
+			}
+			/*contact page end*/
 			hr {
 				height: 1px;
 				width: 80%;
@@ -4640,6 +4786,28 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
+				div.continue-reading {
+					font-size: 0.9em;
+					
+					width: 40%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
+					}
+					
+				}
 			}
 			.navi {
 				span.right {
@@ -4669,6 +4837,61 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
+			#contactform {
+				width: 48%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+						height: 50px;
+						width: 50px;
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.80em;
+							
+							label {
+								height: 30px;
+								line-height: 30px;
+								.wpcf7-form-control-wrap {
+									height: auto;
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
+				}
+			}
 			.frontpage_container {
 				padding: 0;
 				/*Intro Container*/
@@ -4678,7 +4901,7 @@ $colorseven:#accc51-green-ligh
 					float: left;
 					height: auto;
 					h1 {
-						font-size: 0.97em;
+						font-size: 0.95em;
 					}
 					p {
 						font-size: 0.8em;
@@ -5009,7 +5232,47 @@ $colorseven:#accc51-green-ligh
 }
             }
 		}
-
+		footer {
+			height: 120px;
+			margin-top: 1%;
+			.socialpics {
+				height: 40%;
+				width: 25%;
+				.social-icon {
+					margin-left: 4%;
+					width: 21%;
+					&:hover {}
+				}
+				span {
+					width: 100%;
+					
+				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
+				.google-icon span .fa-github {
+					font-size: 1.8em;
+				}
+				
+			}
+			p#copyr {
+				font-size: 10px;
+				width: 48%;
+			}
+			ul {
+				width: 45%;
+				li {
+					height: 25px;
+					
+					a {
+						font-size: 0.80em;
+						&:hover {
+							line-height: 25px;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -5078,8 +5341,8 @@ $colorseven:#accc51-green-ligh
 			}
 			/*Navigation*/
 			nav.menu-main-container {
-				width: 35%;
-				margin: 0.5em 0 0 0;
+				width: 45%;
+				
 				ul#menu-main {
 					height: 35px;
 					li.menu-item {
@@ -5124,7 +5387,7 @@ $colorseven:#accc51-green-ligh
 				height: auto;
 			}
 			h1 {
-				font-size: 1.1em;
+				font-size: 1.2em;
 			}
 			h2 {
 				font-size: 1em;
@@ -5138,23 +5401,36 @@ $colorseven:#accc51-green-ligh
 			blockquote {
 				font-size: 0.85em;
 			}
+			
+			/*contact page*/
+			.map_container {
+				width: 45.7293%;
+				min-height: 220px;
+			}
 			ul.contact-details {
-				margin: 1% 0 5%;
+				margin: 2em 0;
 				width: 45%;
+				
 				li {
-					font-size: 0.85em;
+					font-size: 1em;
+                    
 					&::before {
+						
 						font-size: 1.4em;
+						
 					}
 					a {
-						line-height: 40px;
-						letter-spacing: 0.05em;
-						&:hover {
-							line-height: 40px;
-						}
+						width: auto;
+						display: inline-block;
+						font-size:0.9em;
+						&::hover {
+							color: $color4;
+						}	
 					}
+					
 				}
 			}
+			/*contact page end*/
 			/*Search Box*/
 			.social-1 {
 				margin: 0;
@@ -5475,13 +5751,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					height: 35px;
-					font-size: 0.85em;
-					line-height: 35px;
-					&:hover {
-						line-height: 35px;
+				div.continue-reading {
+					font-size: 0.9em;
+					
+					width: 40%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -5606,6 +5896,61 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
+			#contactform {
+				width: 50%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+						height: 50px;
+						width: 50px;
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.75em;
+							
+							label {
+								height: 30px;
+								line-height: 30px;
+								.wpcf7-form-control-wrap {
+									height: auto;
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
+				}
+			}
 			.frontpage_container {
 				height: auto;
 				clear: both;
@@ -5615,7 +5960,7 @@ $colorseven:#accc51-green-ligh
 						font-size: 0.75em;
 					}
 					h1 {
-						font-size: 0.97em;
+						font-size: 0.9em;
 					}
 					.introimg {
 						width: 18%;
@@ -5780,7 +6125,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -5798,7 +6143,7 @@ $colorseven:#accc51-green-ligh
 														line-height: 1.5em;
 													}
 													a.lyndalink {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -5835,7 +6180,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														&:hover {
 															font-style: italic;
 														}
@@ -5861,7 +6206,7 @@ $colorseven:#accc51-green-ligh
 									font-weight: bold;
 								}
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.65em;
 								line-height: 42px;
 								&:hover {
@@ -5964,23 +6309,15 @@ $colorseven:#accc51-green-ligh
 					background-color: $color1;
 					color: $color4;
 				}
-				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.7em;
-					line-height: 46px;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.7em;
-					line-height: 46px;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.7em;
-					line-height: 46px;
-				}
+				
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.7em;
 					line-height: 46px;
 				}
+				
 			}
 			p#copyr {
 				font-size: 8px;
@@ -5994,10 +6331,10 @@ $colorseven:#accc51-green-ligh
 				li {
 					text-indent: 0;
 					a {
-						font-size: 0.78em;
+						font-size: 0.8em;
 						line-height: 25px;
 						&:hover {
-							font-size: 0.8em;
+							
 							line-height: 25px;
 						}
 					}
@@ -6072,7 +6409,7 @@ $colorseven:#accc51-green-ligh
 			}
 			/*Navigation*/
 			nav.menu-main-container {
-				width: 35%;
+				width: 49%;
 				margin: 0.5em 0 0 0;
 				height: 35px;
 				ul#menu-main {
@@ -6115,7 +6452,7 @@ $colorseven:#accc51-green-ligh
 		#main-content {
 			padding: 0;
 			h1 {
-				font-size: 1.05em;
+				font-size: 1.2em;
 				height: 40px;
 				line-height: 40px;
 			}
@@ -6129,9 +6466,37 @@ $colorseven:#accc51-green-ligh
 				font-size: 0.75em;
 				width: 95%;
 				letter-spacing: 0.1em;
-				margin: 0;
 				line-height: 1.77em;
 			}
+			/*contact page*/
+			.map_container {
+				width: 45.7293%;
+				min-height: 220px;
+			}
+			ul.contact-details {
+				margin: 2em 0;
+				width: 45%;
+				
+				li {
+					font-size:1em;
+                    
+					&::before {
+						
+						font-size: 1.4em;
+						
+					}
+					a {
+						width: auto;
+						display: inline-block;
+						font-size:0.9em;
+						&::hover {
+							color: $color4;
+						}	
+					}
+					
+				}
+			}
+			/*contact page end*/
 			social-1 {
 				form.searchform {
 					div {
@@ -6192,16 +6557,6 @@ $colorseven:#accc51-green-ligh
 					line-height: 30px;
 					height: 30px;
 				}
-				ul {
-					li {
-						width: 100%;
-						margin: 0;
-						font-size: 0.80em;
-						a {
-							margin-left: 0;
-						}
-					}
-				}
 				ul.post-list {
 					width: 90%;
 					li {
@@ -6211,9 +6566,6 @@ $colorseven:#accc51-green-ligh
 				}
 				p {
 					font-size: 0.80em;
-				}
-				.byline {
-					font-size: 0.90em;
 				}
 				.postimg {
 					margin: 4% auto;
@@ -6443,12 +6795,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					font-size: 0.8em;
-					width: 15.9652%;
-					&:hover {
-						font-weight: bold;
+				div.continue-reading {
+					font-size: 0.85em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -6570,38 +6937,67 @@ $colorseven:#accc51-green-ligh
 				}
 			}
 			#contactform {
-				input[type="submit"] {
-					font-weight: bold;
-				}
-				p {
-					font-size: 0.85em;
-				}
-				label {
-					font-size: 0.9em;
+				width: 50%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+						height: 40px;
+						width: 40px;
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.7em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
-			ul.contact-details {
-				margin: 4% 0 5%;
-				width: 45%;
-				li {
-					font-size: 0.85em;
-					&::before {
-						font-size: 1.4em;
-					}
-					a {
-						letter-spacing: 0.05em;
-					}
-					a:hover {
-						width: 90%;
-					}
-				}
-			}
+			
 			.frontpage_container {
 				height: auto;
 				.text-box {
 					width: 49%;
 					h1 {
-						font-size: 0.97em;
+						font-size: 0.9em;
 						height: auto;
 					}
 					p {
@@ -6689,7 +7085,7 @@ $colorseven:#accc51-green-ligh
 							li {
 								height: 18.282%;
 								span {
-									font-size: 0.85em;
+									font-size: 0.8em;
 								}
 							}
 						}
@@ -6704,7 +7100,7 @@ $colorseven:#accc51-green-ligh
 									&:hover {}
 								}
 							}
-							li:nth-of-type(7) {
+							li:nth-of-type(6) {
 								a {
 									font-size: 0.6em;
 								}
@@ -6748,7 +7144,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -6763,10 +7159,10 @@ $colorseven:#accc51-green-ligh
 													line-height: 20px;
 													&:before {
 														font-size: 0.9em;
-														line-height: 1.5em;
+														
 													}
 													a.lyndalink {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -6799,7 +7195,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														&:hover {
 															font-style: italic;
 														}
@@ -6884,32 +7280,7 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			.webskills {
-				margin: 0;
-				padding: 3% 0;
-				li {}
-				li#fa-desktop {
-					font-size: 0.90em;
-					line-height: 35px;
-				}
-				li#fa-desktop::before {}
-				li#fa-wordpress {
-					font-size: 0.90em;
-				}
-				li#fa-wordpress::before {}
-				li#fa-mobile {
-					font-size: 0.90em;
-				}
-				li#fa-mobile::before {
-					font-size: 1.3em;
-				}
-				li a {
-					width: 100%;
-				}
-				li a:hover {
-					width: 100%;
-				}
-			}
+		
 		}
 		footer {
 			.socialpics {
@@ -6920,18 +7291,13 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.75em;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.75em;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.75em;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.75em;
 				}
+				
 			}
 			ul {
 				width: 45%;
@@ -6945,7 +7311,7 @@ $colorseven:#accc51-green-ligh
 						line-height: 25px;
 					}
 					a:hover {
-						font-size: 0.8em;
+						
 						line-height: 25px;
 					}
 				}
@@ -7065,15 +7431,15 @@ $colorseven:#accc51-green-ligh
 		#main-content {
 			padding: 1.5em 0 0 0;
 			h1 {
-				font-size: 1.05em;
+				font-size: 1.3em;
 				text-align: center;
 			}
 			h2 {
 				text-align: center;
-				font-size: 0.95em;
+				font-size: 1.2em;
 			}
 			h3 {
-				font-size: 0.9em;
+				font-size: 1.1em;
 			}
 			p {
 				font-size: 0.7em;
@@ -7098,27 +7464,35 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
+			/*contact page*/
+			.map_container {
+				width: 45.7293%;
+				min-height: 198px;
+			}
 			ul.contact-details {
-				margin: 4% 0 5%;
+				margin: 2em 0;
 				width: 45%;
+				
 				li {
+					font-size: 1em;
+                    
 					&::before {
+						
 						font-size: 1.4em;
+						
 					}
 					a {
-						font-size: 1em;
-						letter-spacing: 0.05em;
+						width: auto;
+						display: inline-block;
+						font-size:0.9em;
+						&::hover {
+							color: $color4;
+						}	
 					}
-					a:hover {
-						width: 90%;
-					}
+					
 				}
 			}
-			.map_container {
-				width: 47%;
-				margin: 1%;
-				height: 250px;
-			}
+			/*contact page end*/
 			blockquote {
 				font-size: 0.80em;
 			}
@@ -7187,25 +7561,12 @@ $colorseven:#accc51-green-ligh
 				h3 {
 					font-size: 0.9em;
 					text-indent: 0;
-				}
-				h3 a {
-					padding-left: 0;
-				}
-				ul {
-					line-height: 1.5em;
-					font-size: 1em;
-					text-indent: 0;
-					width: 96%;
-					margin: 2% auto;
-					li {
-						width: 100%;
-						margin: 0;
-						font-size: 0.75em;
-						a {
-							margin-left: 0;
-						}
+					a {
+						padding-left: 0;
 					}
+					
 				}
+
 				.postimg {
 					width: 30%;
 					margin: 4% auto;
@@ -7437,12 +7798,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					font-size: 0.8em;
-					width: 15.9652349%;
-					&:hover {
-						font-size: 0.85em;
+				div.continue-reading {
+					font-size: 0.85em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -7570,7 +7946,7 @@ $colorseven:#accc51-green-ligh
 					padding: 0;
 					float: none;
 					h1 {
-						font-size: 1.1em;
+						font-size: 1em;
 						line-height: 45px;
 					}
 					h2 {
@@ -7813,7 +8189,7 @@ $colorseven:#accc51-green-ligh
 									}
 								}
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.75em;
 								line-height: 40px;
 								&:hover {
@@ -7898,8 +8274,59 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			#contactform p {
-				font-size: 0.85em;
+			#contactform {
+				width: 52%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.7em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		footer {
@@ -7909,20 +8336,14 @@ $colorseven:#accc51-green-ligh
 					margin-left: 4%;
 					width: 21%;
 				}
-				.social-icon:hover {}
-				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.65em;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.65em;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.65em;
-				}
+				
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.65em;
 				}
+				
 			}
 			ul {
 				width: 35%;
@@ -7933,11 +8354,11 @@ $colorseven:#accc51-green-ligh
 					height: 25px;
 					a {
 						font-size: 0.75em;
-						width: 47%;
+						
 						line-height: 25px;
 					}
 					a:hover {
-						font-size: 0.8em;
+						
 						line-height: 25px;
 					}
 				}
@@ -8053,20 +8474,49 @@ $colorseven:#accc51-green-ligh
 			padding: 1.5em 0 0 0;
 			h1 {
 				margin: 0;
-				font-size: 1em;
+				font-size: 1.25em;
 			}
 			h2 {
-				font-size: 0.95em;
+				font-size: 1.15em;
 				padding: 0;
 				letter-spacing: 0.1em;
 				width: 99.5458%;
 			}
 			h3 {
-				font-size: 0.9em;
+				font-size: 1em;
 			}
 			p {
 				font-size: 0.75em;
 			}
+			/*contact page*/
+			.map_container {
+				width: 45.7293%;
+				min-height: 189px;
+			}
+			ul.contact-details {
+				margin: 2em 0;
+				width: 45%;
+				
+				li {
+					font-size: 1em;
+                    
+					&::before {
+						
+						font-size: 1.4em;
+						
+					}
+					a {
+						width: auto;
+						display: inline-block;
+						font-size:0.9em;
+						&::hover {
+							color: $color4;
+						}	
+					}
+					
+				}
+			}
+			/*contact page end*/
 			.social-1 {
 				display: block;
 				form.searchform {
@@ -8396,13 +8846,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					font-size: 0.75em;
-					margin: 2% 0 2% 1%;
-					&:hover {
-						font-size: 0.8em;
-						margin: 2% 0 2% 1%;
+				div.continue-reading {
+					font-size: 0.80em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {}
@@ -8523,13 +8987,67 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
+			#contactform {
+				width: 52%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.7em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
+				}
+			}
 			.frontpage_container {
 				height: 860px;
 				min-height: 860px;
 				.text-box {
 					padding: 0;
 					h1 {
-						font-size: 1.1em;
+						font-size: 1em;
 					}
 					h2 {
 						font-size: 1em;
@@ -8602,7 +9120,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.abobe {
 										a.fancybox {
-											width: 32.59%;
+											width: 28.59%;
 											img {
 												&:hover {
 													opacity: 0.8;
@@ -8656,7 +9174,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 23.78%;
+											width: 20.78%;
 											img {
 												float: none;
 												height: auto;
@@ -8759,7 +9277,7 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-            div#photocontainer {
+        	div#photocontainer {
 				h3 {
 					margin: 5px 0;
 				}
@@ -8835,28 +9353,21 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-
 		}
-        footer {
+		footer {
 				.socialpics {
 					.social-icon {
 						margin-left: 4%;
 						width: 21%;
 					}
-					.social-icon:hover {}
-					span {}
-					.linkedin-icon span .fa-linkedin {
-						font-size: 1.6em;
-					}
-					.twitter-icon span .fa-twitter {
-						font-size: 1.6em;
-					}
-					.facebook-icon span .fa-facebook {
-						font-size: 1.6em;
-					}
+					
+					.linkedin-icon span .fa-linkedin,
+					.twitter-icon span .fa-twitter,
+					.facebook-icon span .fa-facebook,
 					.google-icon span .fa-github {
 						font-size: 1.6em;
 					}
+					
 				}
 				ul {
 					width: 35%;
@@ -8869,8 +9380,7 @@ $colorseven:#accc51-green-ligh
 							line-height: 25px;
 						}
 						a:hover {
-							margin: 0;
-							font-size: 0.8em;
+							
 							line-height: 25px;
 						}
 					}
@@ -8980,10 +9490,10 @@ $colorseven:#accc51-green-ligh
 			padding: 1.5em 0 0 0;
 			h1 {
 				margin: 0;
-				font-size: 1.1em;
+				font-size: 1.2em;
 			}
 			h2 {
-				font-size: 1em;
+				font-size: 1.1em;
 				padding: 0;
 				letter-spacing: 0.1em;
 			}
@@ -8993,6 +9503,35 @@ $colorseven:#accc51-green-ligh
 			p {
 				font-size: 0.75em;
 			}
+			/*contact page*/
+			.map_container {
+				width: 45.7293%;
+				min-height: 181px;
+			}
+			ul.contact-details {
+				margin: 2em 0;
+				width: 45%;
+				
+				li {
+					font-size: 1em;
+                    
+					&::before {
+						
+						font-size: 1.4em;
+						
+					}
+					a {
+						width: auto;
+						display: inline-block;
+						font-size:0.9em;
+						&::hover {
+							color: $color4;
+						}	
+					}
+					
+				}
+			}
+			/*contact page end*/
 			.social-1 {
 				display: block;
 				form.searchform {
@@ -9314,13 +9853,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					font-size: 0.75em;
-					margin: 2% 0 2% 1%;
-					&:hover {
-						font-size: 0.8em;
-						margin: 2% 0 2% 1%;
+				div.continue-reading {
+					font-size: 0.8em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {}
@@ -9444,7 +9997,7 @@ $colorseven:#accc51-green-ligh
 				.text-box {
 					padding: 0;
 					h1 {
-						font-size: 1.1em;
+						font-size: 1em;
 					}
 					h2 {
 						font-size: 1em;
@@ -9516,7 +10069,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.abobe {
 										a.fancybox {
-											width: 32.59%;
+											width: 29.59%;
 											img {
 												&:hover {
 													opacity: 0.8;
@@ -9540,7 +10093,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -9558,7 +10111,7 @@ $colorseven:#accc51-green-ligh
 														line-height: 1.5em;
 													}
 													a.lyndalink {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -9570,7 +10123,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 23.78%;
+											width: 20.78%;
 											img {
 												float: none;
 												height: auto;
@@ -9592,7 +10145,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.95em;
 													}
 													a {
-														font-size: 0.75em;
+														font-size: 0.7em;
 														&:hover {
 															font-style: italic;
 														}
@@ -9687,18 +10240,13 @@ $colorseven:#accc51-green-ligh
                 }
                 .social-icon:hover {}
                 span {}
-                .linkedin-icon span .fa-linkedin {
+                .linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
+				.google-icon span .fa-github {
                     font-size: 1.55em;
                 }
-                .twitter-icon span .fa-twitter {
-                    font-size: 1.55em;
-                }
-                .facebook-icon span .fa-facebook {
-                    font-size: 1.55em;
-                }
-                .google-icon span .fa-github {
-                    font-size: 1.55em;
-                }
+                
 }
             ul {
                 width: 35%;
@@ -9707,13 +10255,11 @@ $colorseven:#accc51-green-ligh
                     text-indent: 0;
                     height: 25px;
                     a {
-                        font-size: 0.7em;
+                        font-size: 0.75em;
                         line-height: 25px;
                     }
                     a:hover {
                         margin: 0;
-                        font-size: 0.75em;
-                        line-height: 25px;
                     }
                 }
 }
@@ -9832,11 +10378,11 @@ $colorseven:#accc51-green-ligh
 			margin-bottom: 0;
 			padding: 1em 0 0 0;
 			h1 {
-				font-size: 1.1em;
+				font-size: 1.2em;
 				text-align: center;
 			}
 			h2 {
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 			h3 {
 				font-size: 0.95em;
@@ -9880,17 +10426,19 @@ $colorseven:#accc51-green-ligh
 
 				li {
 					text-indent: 1%;
-					font-size: 0.8em;
+					font-size: 1em;
 					&::before {
 						font-size: 1.4em;
 					}
 					a {
 						letter-spacing: 0.05em;
+						font-size:0.9em;
+						&:hover {
+							
+							line-height: 40px;
+						}
 					}
-					a:hover {
-						width: 90%;
-						line-height: 40px;
-					}
+					
 				}
 			}
 			.map_container {
@@ -9949,24 +10497,14 @@ $colorseven:#accc51-green-ligh
 				h3 {
 					width: 98%;
 					font-size: 0.95em;
+					a {
+						padding-left: 0;
+						height: 100%;
+					}
+					
 				}
-				h3 a {
-					padding-left: 0;
-					height: 100%;
-				}
-				ul {
-					line-height: 1.5em;
-					text-indent: 0;
-					width: 98%;
-				}
-				ul li {
-					width: 100%;
-					margin: 0;
-					font-size: 0.8em;
-				}
-				ul li a {
-					margin-left: 0;
-				}
+				
+
 				p {
 					font-size: 0.75em;
 				}
@@ -10022,7 +10560,7 @@ $colorseven:#accc51-green-ligh
 					&:hover {}
 				}
 				ul {
-					line-height: 1.5em;
+					
 					text-indent: 0;
 					width: 91%;
 					margin: 1% auto;
@@ -10226,14 +10764,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
+				div.continue-reading {
 					font-size: 0.85em;
-					width: 20.9652349%;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
 
-					&:hover {
-						margin-left: 1%;
-						font-size: 0.90em;
 					}
+					
 				}
 				.meta {
 					font-size: 10px;
@@ -10357,7 +10908,7 @@ $colorseven:#accc51-green-ligh
 					padding: 0;
 					margin: 0 auto;
 					h1 {
-						font-size: 1.1em;
+						font-size: 1.05em;
 						margin: 0;
 						line-height: 44px;
 					}
@@ -10433,7 +10984,7 @@ $colorseven:#accc51-green-ligh
 								height: 360px;
 							}
 							li span {
-								bottom: -1.5em;
+								bottom: -2.5em;
 								font-size: 0.8em;
 							}
 						}
@@ -10479,7 +11030,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.8em;
+														font-size: 0.75em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -10497,7 +11048,7 @@ $colorseven:#accc51-green-ligh
 														line-height: 1.5em;
 													}
 													a.lyndalink {
-														font-size: 0.8em;
+														font-size: 0.75em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -10532,7 +11083,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.8em;
+														font-size: 0.75em;
 														&:hover {
 															font-style: italic;
 														}
@@ -10549,19 +11100,19 @@ $colorseven:#accc51-green-ligh
 							margin: 0;
 							li {
 								a {
-									font-size: 0.8em;
-									line-height: 40px;
+									font-size: 0.85em;
+									line-height: 44px;
 								}
 								a:hover {
-									line-height: 40px;
+									line-height: 44px;
 								}
 							}
-							li:nth-of-type(7) a {
-								line-height: 40px;
-								font-size: 0.8em;
+							li:nth-of-type(6) a {
+								line-height: 44px;
+								font-size: 0.85em;
 							}
-							li:nth-of-type(7) a:hover {
-								line-height: 40px;
+							li:nth-of-type(6) a:hover {
+								line-height: 44px;
 							}
 						}
 					}
@@ -10655,14 +11206,59 @@ $colorseven:#accc51-green-ligh
 			#contactform {
 				float: none;
 				width: 100%;
-				p {
-					font-size: 0.9em;
-				}
-				p input[type="submit"] {
-					height: 35px;
-					font-size: 1.2em;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.9em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
+		
 		}
 		footer {
 			.socialpics {
@@ -10671,20 +11267,14 @@ $colorseven:#accc51-green-ligh
 					margin-left: 4%;
 					width: 20%;
 				}
-				.social-icon:hover {}
-				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.55em;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.55em;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.55em;
-				}
+				
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.55em;
 				}
+				
 			}
 			ul {
 				width: 25%;
@@ -10692,13 +11282,12 @@ $colorseven:#accc51-green-ligh
 				li {
 					text-indent: 0;
 					a {
-						font-size: 0.70em;
-						width: 100%;
+						font-size: 0.75em;
+						
 						line-height: 25px;
 					}
 					a:hover {
-						margin: 0;
-						font-size: 0.70em;
+					
 						line-height: 25px;
 					}
 				}
@@ -10820,24 +11409,28 @@ $colorseven:#accc51-green-ligh
 			height: auto;
 			h1 {
 				width: 100%;
-				font-size: 1.05em;
+				font-size: 1.2em;
 			}
 			h2 {
 				text-indent: 0;
-				font-size: 0.95em;
+				font-size: 1.1em;
 			}
 			h3 {
-				font-size: 0.9em;
+				font-size: 1em;
 			}
 			p {
 				font-size: 0.75em;
 				width: 100%;
 				margin-left: 0;
 			}
-			li {
-				margin: 0;
-				font-size: 0.8em;
+			ul{
+				li {
+					margin: 0;
+					font-size: 0.8em;
+				}
+			
 			}
+			
 			#slider {
 				width: 64%;
 				margin: auto;
@@ -10850,7 +11443,7 @@ $colorseven:#accc51-green-ligh
 				width: 70%;
 				li {
 					margin: 0;
-					font-size: 0.85em;
+					font-size:1em;
 					text-indent: 1%;
 					&::before {
 						font-size: 1.4em;
@@ -10858,10 +11451,12 @@ $colorseven:#accc51-green-ligh
 					a {
 						line-height: 40px;
 						letter-spacing: 0.05em;
+						font-size:0.9em;
+						&:hover {
+							line-height: 40px;
+						}
 					}
-					a:hover {
-						line-height: 40px;
-					}
+					
 				}
 			}
 			.social-1 {
@@ -10930,7 +11525,7 @@ $colorseven:#accc51-green-ligh
 			}
 			.post {
 				h1 {
-					font-size: 1.15em;
+					font-size: 1.1em;
 				}
 				h2 {
 					text-indent: 0;
@@ -11163,12 +11758,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
+				div.continue-reading {
 					font-size: 0.85em;
-					width: 20.9652349%;
-					&:hover {
-						font-size: 0.90em;
+					
+					width: 50%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-content ul li {
@@ -11267,13 +11877,60 @@ $colorseven:#accc51-green-ligh
 				}
 			}
 			#contactform {
-				p {
-					font-size: 0.85em;
-				}
-				label {
-					font-size: 1em;
+
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.9em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
+		
 			.frontpage_container {
 				height: auto;
 				min-height: auto;
@@ -11282,7 +11939,7 @@ $colorseven:#accc51-green-ligh
 					display: inline-block;
 					padding: 0;
 					h1 {
-						font-size: 1.1em;
+						font-size: 1.05em;
 						margin: 0;
 						padding: 0;
 						width: 100%;
@@ -11409,10 +12066,10 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 25px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a {
-														font-size: 1em;
+														font-size: 0.9em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -11426,11 +12083,11 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 25px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 														line-height: 1.5em;
 													}
 													a.lyndalink {
-														font-size: 1em;
+														font-size: 0.9em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -11461,10 +12118,10 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 25px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a {
-														font-size: 1em;
+														font-size: 0.9em;
 														&:hover {
 															font-style: italic;
 														}
@@ -11587,10 +12244,10 @@ $colorseven:#accc51-green-ligh
 				li {
 					text-indent: 0;
 					a {
-						font-size: 0.65em;
+						font-size: 0.75em;
 					}
 					a:hover {
-						font-size: 0.65em;
+						
 					}
 				}
 			}
@@ -11636,7 +12293,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 70%;
 				h1#logo {
 					font-size: 1.55em;
 					width: 100%;
@@ -11707,15 +12364,15 @@ $colorseven:#accc51-green-ligh
 		}
 		#main-content {
 			h1 {
-				font-size: 1.05em;
+				font-size: 1.2em;
 				height: 40px;
 				line-height: 40px;
 			}
 			h2 {
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 			h3 {
-				font-size: 0.95em;
+				font-size: 1em;
 			}
 			p {
 				line-height: 1.9em;
@@ -11942,12 +12599,27 @@ $colorseven:#accc51-green-ligh
 				footer.byline {
 					font-size: 0.8em;
 				}
-				.read_more {
-					font-size: 0.8em;
-					width: 20.9652349%;
-					&:hover {
-						font-size: 0.85em;
+				div.continue-reading {
+					font-size: 0.85em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-content ul li {
@@ -12068,8 +12740,57 @@ $colorseven:#accc51-green-ligh
 				}
 			}
 			#contactform {
-				p {
-					font-size: 0.75em;
+
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.85em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
 			.frontpage_container {
@@ -12077,10 +12798,10 @@ $colorseven:#accc51-green-ligh
 				min-height: auto;
 				.text-box {
 					h1 {
-						font-size: 1.05em;
+						font-size: 1em;
 					}
 					h2 {
-						font-size: 1em;
+						font-size: 0.95em;
 					}
 					p {
 						margin: 0;
@@ -12170,7 +12891,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 25px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a {
 														font-size: 0.95em;
@@ -12187,7 +12908,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 25px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a.lyndalink {
 														font-size: 0.95em;
@@ -12219,7 +12940,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 25px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a {
 														font-size: 0.95em;
@@ -12331,23 +13052,22 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.45em;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.45em;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.45em;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.45em;
 				}
+				
 			}
 			ul {
 				li {
+					text-indent: 0;
 					a {
-						width: 100%;
+						font-size: 0.75em;
+					}
+					a:hover {
+						
 					}
 				}
 			}
@@ -12389,7 +13109,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 75%;
 				h1#logo {
 					font-size: 1.5em;
 					width: 100%;
@@ -12460,12 +13180,12 @@ $colorseven:#accc51-green-ligh
 		}
 		#main-content {
             h1 {
-				font-size: 1.05em;
+				font-size: 1.2em;
 				height: 40px;
 				line-height: 40px;
 			}
 			h2 {
-				font-size: 1em;
+				font-size: 1.1em;
 			}
 			h3 {
 				font-size: 0.95em;
@@ -12508,13 +13228,27 @@ $colorseven:#accc51-green-ligh
 					font-size: 0.75em;
 					line-height: 2.2em;
 				}
-				.read_more {
-					font-size: 0.75em;
-					height: 35px;
-					width: 20.9652349%;
-					&:hover {
-						width: 20.9652349%;
+				div.continue-reading {
+					font-size: 0.85em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -12825,8 +13559,57 @@ $colorseven:#accc51-green-ligh
 			}
 			/*end*/
 			#contactform {
-				p {
-					font-size: 0.80em;
+
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.8em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -12839,23 +13622,22 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.4em;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.4em;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.4em;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.4em;
 				}
+				
 			}
 			ul {
 				li {
+					text-indent: 0;
 					a {
-						width: 100%;
+						font-size: 0.75em;
+					}
+					a:hover {
+						
 					}
 				}
 			}
@@ -12905,7 +13687,7 @@ $colorseven:#accc51-green-ligh
 		header {
 			height: 105px;
 			hgroup {
-				width: 65%;
+				width: 75%;
 				h1#logo {
 					font-size: 1.45em;
 				}
@@ -12987,36 +13769,42 @@ $colorseven:#accc51-green-ligh
 			padding: 0.5em 0 0 0;
 			h1 {
 				width: 100%;
-				font-size: 1em;
+				font-size: 1.2em;
 				height: 40px;
 				line-height: 40px;
 			}
 			h2 {
-				font-size: 0.9em;
+				font-size: 1.1em;
 				text-indent: 0;
 				width: 100%;
 				margin: 1em auto;
 			}
 			h3 {
-				font-size: 0.85em;
+				font-size: 0.95em;
 			}
 			p {
 				line-height: 1.95em;
 				font-size: 0.75em;
 			}
+			.map_container {
+				float: none;
+				width: 85%;
+				margin: 1em auto;
+			}
 			ul.contact-details {
 				width: 95%;
 				li {
-					font-size: 0.85em;
+					font-size: 1em;
 					&::before {
 						font-size: 1.4em;
 					}
 					a {
 						line-height: 40px;
 						letter-spacing: 0.05em;
-					}
-					a:hover {
-						line-height: 40px;
+						&:hover {
+							line-height: 40px;
+							font-size:0.95em;
+						}
 					}
 				}
 			}
@@ -13291,14 +14079,27 @@ $colorseven:#accc51-green-ligh
 					width: 40%;
 					margin: 5% auto;
 				}
-				.read_more {
-					margin-left: 1%;
-					width: 25.9652%;
-					font-size: 0.75em;
-					&:hover {
-						font-size: 0.80em;
-						width: 25.9652%;
+				div.continue-reading {
+					font-size: 0.8em;
+					
+					width: 45%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-content {
@@ -13522,7 +14323,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 20px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a {
 														font-size: 0.85em;
@@ -13540,7 +14341,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 20px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 														line-height: 1.5em;
 													}
 													a.lyndalink {
@@ -13574,7 +14375,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 20px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 1em;
 													}
 													a {
 														font-size: 0.85em;
@@ -13595,17 +14396,17 @@ $colorseven:#accc51-green-ligh
 							margin: 0;
 							li {
 								margin: 0 0 0.4em 0;
-                                height: 44px;
-    							line-height: 44px;
+                                height: 40px;
+    							line-height: 40px;
 								a {
 									font-size: 0.85em;
 								}
-								a:hover {}
+								
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.8em;
 							}
-							li:nth-of-type(7) a:hover {}
+							
 						}
 						/*Hero Slider End*/
 					}
@@ -13690,32 +14491,61 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			/*end*/
 			#contactform {
-				font-size: 0.75em;
-				float: none;
-				width: 100%;
-				p {
-					font-size: 1em;
-				}
-				p input[type="submit"] {
-					font-size: 1.2em;
-					width: 15.9652%;
-				}
-			}
-			#respond {
-				.comment-form input[type="submit"] {
-					width: 35%;
-					&:hover {
-						width: 35%;
+
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.9em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
 					}
 				}
 			}
-			.map_container {
-				float: none;
-				width: 85%;
-				margin: 1em auto;
-			}
+			
 		}
 		footer {
 			.socialpics {
@@ -13726,18 +14556,13 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.4em;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.4em;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.4em;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.4em;
 				}
+				
 			}
 			ul {
 				width: 35%;
@@ -13745,19 +14570,14 @@ $colorseven:#accc51-green-ligh
 				padding: 4px;
 				li {
 					text-indent: 0;
-					height: 23%;
+					
 					a {
-						color: $color1;
-						margin: 0;
-						padding: 0;
+						
 						font-size: 0.80em;
-						height: 100%;
-						line-height: 1.7em;
 					}
 					a:hover {
 						margin: 0;
 						font-size: 0.75em;
-						line-height: 1.7em;
 					}
 				}
 			}
@@ -13866,13 +14686,13 @@ $colorseven:#accc51-green-ligh
 			padding: 0.5em 0 0 0;
 			h1 {
 				width: 100%;
-				font-size: 1em;
+				font-size: 1.1em;
 				text-align: center;
 				height: auto;
 				line-height: 40px;
 			}
 			h2 {
-				font-size: 0.9em;
+				font-size: 1em;
 				text-indent: 0;
 				width: 100%;
 				margin: 1em auto;
@@ -13881,19 +14701,22 @@ $colorseven:#accc51-green-ligh
 				line-height: 1.9em;
 				font-size: 0.7em;
 			}
+			.map_container {
+				float: none;
+				width: 85%;
+				margin: 1em auto;
+			}
 			ul.contact-details {
 				font-size: 0.8em;
 				li {
-					font-size: 0.85em;
+					font-size: 1em;
 					&::before {
 						font-size: 1.4em;
 					}
 					a {
 						line-height: 40px;
 						letter-spacing: 0.05em;
-					}
-					a:hover {
-						line-height: 40px;
+						font-size:0.9em;
 					}
 				}
 			}
@@ -14095,14 +14918,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					margin-left: 1%;
-					width: 21.9652%;
+				div.continue-reading {
 					font-size: 0.75em;
-					&:hover {
-						font-size: 0.80em;
-						width: 21.9652%;
+					
+					width: 100%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -14369,10 +15205,10 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.95em;
+														font-size: 1em;
 													}
 													a {
-														font-size: 0.85em;
+														font-size: 0.8em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -14386,11 +15222,11 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.95em;
+														font-size: 1em;
 														line-height: 1.5em;
 													}
 													a.lyndalink {
-														font-size: 0.85em;
+														font-size: 0.8em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -14419,10 +15255,10 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.95em;
+														font-size: 1em;
 													}
 													a {
-														font-size: 0.85em;
+														font-size: 0.8em;
 														&:hover {
 															font-style: italic;
 														}
@@ -14444,10 +15280,10 @@ $colorseven:#accc51-green-ligh
 								}
 								a:hover {}
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.68em;
 							}
-							li:nth-of-type(7) a:hover {}
+							
 						}
 						/*Hero Slider End*/
 					}
@@ -14520,30 +15356,65 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			/*end*/
+			
 			#contactform {
-				font-size: 0.75em;
 				float: none;
 				width: 100%;
 				display: inline-block;
-				p {
-					font-size: 1em;
-				}
-				p input[type="submit"] {
-					font-size: 1.2em;
-					width: 15.9652%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.85em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
-			#respond {
-				.comment-form input[type="submit"] {
-					width: 35%;
-				}
-			}
-			.map_container {
-				float: none;
-				width: 85%;
-				margin: 1em auto;
-			}
+			
+			
 		}
 		footer {
 			.socialpics {
@@ -14554,22 +15425,14 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.45em;
-					line-height: 48px;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.45em;
-					line-height: 48px;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.45em;
-					line-height: 48px;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.45em;
 					line-height: 48px;
 				}
+				
 			}
 			ul {
 				width: 30%;
@@ -14578,13 +15441,15 @@ $colorseven:#accc51-green-ligh
 				li {
 					text-indent: 0;
 					height: 23%;
+					a {
+						font-size: 0.7em;
+						&::hover {
+							font-size: 0.7em;
+						}
+					}
+					
 				}
-				li a {
-					font-size: 0.65em;
-				}
-				li a:hover {
-					font-size: 0.65em;
-				}
+		
 			}
 		}
 	}
@@ -14686,34 +15551,41 @@ $colorseven:#accc51-green-ligh
 			padding: 0.5em 0 0 0;
 			h1 {
 				width: 100%;
-				font-size: 1em;
+				font-size: 1.1em;
 				text-align: center;
 				height: auto;
-				line-height: 40px;
+				line-height: 30px;
+				margin-bottom: 0.5em;
 			}
 			h2 {
 				font-size: 0.9em;
 				text-indent: 0;
 				width: 100%;
+				height: auto;
+				line-height: 30px;
 				margin: 1em auto;
 			}
 			p {
 				line-height: 1.9em;
 				font-size: 0.7em;
 			}
+			.map_container {
+				float: none;
+				margin: 1em auto;
+				min-height: 173px;
+			}
 			ul.contact-details {
 				font-size: 0.8em;
 				li {
-					font-size: 0.85em;
+					font-size: 1em;
 					&::before {
 						font-size: 1.4em;
+						width: 40px;
 					}
 					a {
 						line-height: 40px;
 						letter-spacing: 0.05em;
-					}
-					a:hover {
-						line-height: 40px;
+						font-size:0.85em;
 					}
 				}
 			}
@@ -14758,11 +15630,15 @@ $colorseven:#accc51-green-ligh
 			}
 			.post {
 				h1 {
-					font-size: 1.1em;
+					font-size: 1.05em;
 					text-align: center;
+					height: auto;
+					line-height: 30px;
 				}
 				h2 {
 					font-size: 1em;
+					height: auto;
+					line-height: 30px;
 				}
 				h3 {
 					width: 100%;
@@ -14915,14 +15791,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					margin-left: 1%;
-					width: 30.9652%;
+				div.continue-reading {
 					font-size: 0.75em;
-					&:hover {
-						font-size: 0.80em;
-						width: 30.9652%;
+					
+					width: 100%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -15084,7 +15973,10 @@ $colorseven:#accc51-green-ligh
 						width: 17%;
 					}
 					h1 {
-						font-size: 1em;
+						font-size: 0.9em;
+						line-height: 30px;
+						height: auto;
+						margin-bottom: 1em;
 					}
 					p {
 						font-size: 0.7em;
@@ -15154,7 +16046,7 @@ $colorseven:#accc51-green-ligh
 									width: 95%;
 								}
 								span {
-									font-size: 0.8em;
+									font-size: 0.7em;
 									bottom: -2.5em;
 									padding: 0.5em 0;
 
@@ -15171,7 +16063,7 @@ $colorseven:#accc51-green-ligh
 								.panel {
 									height: 417px;
 									h2 {
-										font-size: 0.85em;
+										font-size: 0.8em;
 									}
 									figure.abobe {
 										a.fancybox {
@@ -15197,7 +16089,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.95em;
+														font-size: 1em;
 													}
 													a {
 														font-size: 0.8em;
@@ -15214,7 +16106,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.95em;
+														font-size: 1em;
 														line-height: 1.5em;
 													}
 													a.lyndalink {
@@ -15247,7 +16139,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.95em;
+														font-size: 1em;
 													}
 													a {
 														font-size: 0.8em;
@@ -15267,21 +16159,24 @@ $colorseven:#accc51-green-ligh
 							margin: 0;
 							li {
 								margin: 0 0 0.2em 0;
+								height: 44px;
+								line-height: 44px;
 								a {
-									font-size: 0.75em;
+									font-size: 0.7em;
 								}
-								a:hover {}
+								
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.75em;
 								line-height: 15px;
 								padding-top: 0.7em;
+								&:hover {
+									font-size: 0.75em;
+									line-height: 15px;
+									padding-top: 0.7em;
+								}
 							}
-							li:nth-of-type(7) a:hover {
-								font-size: 0.75em;
-								line-height: 15px;
-								padding-top: 0.7em;
-							}
+							
 						}
 						/*Hero Slider End*/
 					}
@@ -15358,29 +16253,62 @@ $colorseven:#accc51-green-ligh
 					}
 				}
 			}
-			/*end*/
+			
 			#contactform {
-				font-size: 0.75em;
 				float: none;
-				width: 100%;
-				display: inline-block;
-				p {
-					font-size: 1em;
-				}
-				p input[type="submit"] {
-					font-size: 1.2em;
-					width: 15.9652%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.8em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
-			#respond {
-				.comment-form input[type="submit"] {
-					width: 35%;
-				}
-			}
-			.map_container {
-				float: none;
-				margin: 1em auto;
-			}
+			
 		}
 		footer {
 			.socialpics {
@@ -15391,22 +16319,14 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.45em;
-					line-height: 48px;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.45em;
-					line-height: 48px;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.45em;
-					line-height: 48px;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.45em;
 					line-height: 48px;
 				}
+				
 			}
 			ul {
 				width: 30%;
@@ -15415,12 +16335,13 @@ $colorseven:#accc51-green-ligh
 				li {
 					text-indent: 0;
 					height: 23%;
-				}
-				li a {
-					font-size: 0.65em;
-				}
-				li a:hover {
-					font-size: 0.65em;
+					a {
+						font-size: 0.7em;
+						&::hover {
+							font-size: 0.7em;
+						}
+					}
+					
 				}
 			}
 		}
@@ -15524,34 +16445,39 @@ $colorseven:#accc51-green-ligh
 			padding: 0.5em 0 0 0;
 			h1 {
 				width: 100%;
-				font-size: 1em;
+				font-size: 1.15em;
 				text-align: center;
 				height: auto;
-				line-height: 25px;
+				line-height: 30px;
+				margin-bottom: 0.5em;
 			}
 			h2 {
-				font-size: 0.85em;
+				font-size: 1em;
 				text-indent: 0;
 				width: 100%;
-				margin: 1em auto;
+				margin-bottom: 0.5em;
+				height: auto;
+				line-height: 30px;
 			}
 			p {
 				line-height: 1.9em;
 				font-size: 0.7em;
 			}
+			.map_container {
+				float: none;
+				min-height: 165px;
+			}
 			ul.contact-details {
-				font-size: 0.8em;
+				font-size: 1em;
 				li {
-					font-size: 0.85em;
+					font-size: 1em;
 					&::before {
 						font-size: 1.4em;
+						width: 35px;
 					}
 					a {
 						line-height: 40px;
-						letter-spacing: 0.05em;
-					}
-					a:hover {
-						line-height: 40px;
+						font-size:0.85em;
 					}
 				}
 			}
@@ -15599,11 +16525,11 @@ $colorseven:#accc51-green-ligh
 			}
 			.post {
 				h1 {
-					font-size: 1.1em;
+					font-size: 1em;
 					text-align: center;
 				}
 				h2 {
-					font-size: 1em;
+					font-size: 0.95em;
                     height: auto;
 				}
 				h3 {
@@ -15757,13 +16683,27 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				.read_more {
-					width: 30.9652%;
-					font-size: 0.75em;
-					&:hover {
-						font-size: 0.80em;
-						width: 30.9652%;
+				div.continue-reading {
+					font-size: 0.7em;
+					
+					width: 100%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
 					}
+					
 				}
 				div.sharedaddy {
 					.sd-title {
@@ -15930,7 +16870,7 @@ $colorseven:#accc51-green-ligh
 						width: 17%;
 					}
 					h1 {
-						font-size: 1em;
+						font-size: 0.9em;
 					}
 					p {
 						font-size: 0.7em;
@@ -15999,7 +16939,7 @@ $colorseven:#accc51-green-ligh
 									width: 95%;
 								}
 								span {
-									font-size: 0.75em;
+									font-size: 0.7em;
 								}
 							}
 						}
@@ -16040,7 +16980,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 0.95em;
 													}
 													a {
 														font-size: 0.75em;
@@ -16057,7 +16997,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 0.95em;
 														line-height: 1.5em;
 													}
 													a.lyndalink {
@@ -16090,7 +17030,7 @@ $colorseven:#accc51-green-ligh
 												li {
 													line-height: 24px;
 													&:before {
-														font-size: 0.9em;
+														font-size: 0.95em;
 													}
 													a {
 														font-size: 0.75em;
@@ -16113,18 +17053,19 @@ $colorseven:#accc51-green-ligh
 								a {
 									font-size: 0.7em;
 								}
-								a:hover {}
+								
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.75em;
 								line-height: 15px;
 								padding-top: 0.7em;
+								&:hover {
+									font-size: 0.7em;
+									line-height: 15px;
+									padding-top: 0.7em;
+								}
 							}
-							li:nth-of-type(7) a:hover {
-								font-size: 0.7em;
-								line-height: 15px;
-								padding-top: 0.7em;
-							}
+							
 						}
 						/*Hero Slider End*/
 					}
@@ -16201,27 +17142,62 @@ $colorseven:#accc51-green-ligh
 				}
 			}
 			/*end*/
+			
 			#contactform {
-				font-size: 0.75em;
 				float: none;
-				width: 100%;
-				display: inline-block;
-				p {
-					font-size: 1em;
-				}
-				p input[type="submit"] {
-					font-size: 1.2em;
-					width: 20.9652%;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.75em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
 				}
 			}
-			#respond {
-				.comment-form input[type="submit"] {
-					width: 35%;
-				}
-			}
-			.map_container {
-				float: none;
-			}
+		
 		}
 		footer {
 			.socialpics {
@@ -16232,22 +17208,14 @@ $colorseven:#accc51-green-ligh
 				}
 				.social-icon:hover {}
 				span {}
-				.linkedin-icon span .fa-linkedin {
-					font-size: 1.4em;
-					line-height: 48px;
-				}
-				.twitter-icon span .fa-twitter {
-					font-size: 1.4em;
-					line-height: 48px;
-				}
-				.facebook-icon span .fa-facebook {
-					font-size: 1.4em;
-					line-height: 48px;
-				}
+				.linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
 				.google-icon span .fa-github {
 					font-size: 1.4em;
 					line-height: 48px;
 				}
+				
 			}
 			ul {
 				width: 30%;
@@ -16256,13 +17224,15 @@ $colorseven:#accc51-green-ligh
 				li {
 					text-indent: 0;
 					height: 23%;
+					a {
+						font-size: 0.7em;
+						&:hover {
+							font-size: 0.7em;
+						}
+					}
+					
 				}
-				li a {
-					font-size: 0.65em;
-				}
-				li a:hover {
-					font-size: 0.65em;
-				}
+
 			}
 		}
 	}
@@ -16362,34 +17332,39 @@ $colorseven:#accc51-green-ligh
             padding: 0.5em 0 0 0;
             h1 {
                 width: 100%;
-                font-size: 1em;
+                font-size: 1.2em;
                 text-align: center;
                 height: auto;
-                line-height: 25px;
+                line-height: 30px; 
+				margin-bottom: 0.5em;
             }
             h2 {
-                font-size: 0.85em;
+                font-size: 1em;
                 text-indent: 0;
                 width: 100%;
-                margin: 1em auto;
+                margin-bottom: 0.5em;
+				height: auto;
+				line-height: 30px;
             }
             p {
                 line-height: 1.9em;
                 font-size: 0.7em;
             }
+			.map_container {
+                float: none;
+                width: 85%;
+				min-height: 148px;
+            }
             ul.contact-details {
                 font-size: 0.8em;
                 li {
-                    font-size: 0.9em;
+                    font-size: 1em;
                     &::before {
                         font-size: 1.4em;
                     }
                     a {
                         line-height: 40px;
-                        letter-spacing: 0.05em;
-                    }
-                    a:hover {
-                        line-height: 40px;
+						font-size:0.85em;
                     }
                 }
             }
@@ -16595,14 +17570,28 @@ $colorseven:#accc51-green-ligh
                         }
                     }
                 }
-                .read_more {
-                    width: 35.9652%;
-                    font-size: 0.75em;
-                    &:hover {
-                        font-size: 0.80em;
-                        width: 35.9652%;
-                    }
-                }
+                div.continue-reading {
+					font-size: 0.65em;
+					
+					width: 100%;
+					
+					margin: 2% 0;
+					a{
+						display: block;
+						
+						&:hover {
+							
+							margin: 2% 0;
+							
+						}
+						span.screen-reader-text:hover{
+							color: $color4;
+						
+						}
+
+					}
+					
+				}
                 div.sharedaddy {
                     .sd-title {
                         font-size: 0.70em;
@@ -16841,7 +17830,7 @@ $colorseven:#accc51-green-ligh
                                     width: 95%;
                                 }
                                 span {
-                                    font-size: 0.7em;
+                                    font-size: 0.65em;
                                 }
                             }
                         }
@@ -16880,7 +17869,7 @@ $colorseven:#accc51-green-ligh
                                                 li {
                                                     line-height: 20px;
                                                     &:before {
-                                                        font-size: 0.85em;
+                                                        font-size: 0.9em;
                                                     }
                                                     a {
                                                         font-size: 0.68em;
@@ -16897,7 +17886,7 @@ $colorseven:#accc51-green-ligh
                                                 li {
                                                     line-height: 20px;
                                                     &:before {
-                                                        font-size: 0.85em;
+                                                        font-size: 0.9em;
                                                         line-height: 1.5em;
                                                     }
                                                     a.lyndalink {
@@ -16913,7 +17902,7 @@ $colorseven:#accc51-green-ligh
                                     }
                                     figure.cert {
                                         a.fancybox {
-                                            width: 35.78%;
+                                            width: 21.59%;
                                             img {
                                                 width: 100%;
                                             }
@@ -16930,7 +17919,7 @@ $colorseven:#accc51-green-ligh
                                                 li {
                                                     line-height: 20px;
                                                     &:before {
-                                                        font-size: 0.85em;
+                                                        font-size: 0.9em;
                                                     }
                                                     a {
                                                         font-size: 0.7em;
@@ -16959,11 +17948,11 @@ $colorseven:#accc51-green-ligh
                                 font-size: 0.65em;
                                 line-height: 15px;
                                 padding-top: 0.6em;
-                            }
-                            li:nth-of-type(7) a:hover {
-                                font-size: 0.65em;
-                                line-height: 15px;
-                                padding-top: 0.6em;
+								&:hover {
+									font-size: 0.65em;
+									line-height: 15px;
+									padding-top: 0.6em;
+								}
                             }
                         }
                         /*Hero Slider End*/
@@ -17041,30 +18030,61 @@ $colorseven:#accc51-green-ligh
                     }
                 }
             }
-            /*end*/
             #contactform {
-                font-size: 0.75em;
-                float: none;
-                width: 100%;
-                display: inline-block;
-                p {
-                    font-size: 1em;
-                }
-                p input[type="submit"] {
-                    font-size: 1.2em;
-                    width: 25.9652%;
-                }
-            }
-            #respond {
-                .comment-form input[type="submit"] {
-                    width: 35%;
-                }
-            }
-            .map_container {
-                float: none;
-                width: 85%;
-            }
-}
+				float: none;
+				padding:0.5em;
+				div.wpcf7{
+					font-size:1em;
+					span.ajax-loader {
+
+						margin: 3% auto;
+					}
+
+					form{
+					
+						padding:0.5em;
+					
+						p {
+							font-size: 0.7em;
+							
+							label {
+								height: 30px;
+								
+								.wpcf7-form-control-wrap {
+									
+									display: block;
+								}
+								textarea{
+						
+									width: 100%;
+								}
+								input[type=text],
+								input[type=email],
+								select {
+								
+									height: 35px;
+								}
+								input[type=text]:focus,
+								input[type=email]:focus,
+								select:focus,
+								textarea:focus {
+									box-shadow: 0 0 5px rgba(204, 211, 222, 1);
+								}
+								
+							}
+							input[type="submit"] {
+								width: 25%;
+								font-size: 1.2em;
+								&:hover {
+									background-color: $color1;
+									color: $color4;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
         footer {
             .socialpics {
                 width: 60%;
@@ -17074,22 +18094,14 @@ $colorseven:#accc51-green-ligh
                 }
                 .social-icon:hover {}
                 span {}
-                .linkedin-icon span .fa-linkedin {
+                .linkedin-icon span .fa-linkedin,
+				.twitter-icon span .fa-twitter,
+				.facebook-icon span .fa-facebook,
+				.google-icon span .fa-github {
                     font-size: 1.35em;
                     line-height: 48px;
                 }
-                .twitter-icon span .fa-twitter {
-                    font-size: 1.35em;
-                    line-height: 48px;
-                }
-                .facebook-icon span .fa-facebook {
-                    font-size: 1.35em;
-                    line-height: 48px;
-                }
-                .google-icon span .fa-github {
-                    font-size: 1.35em;
-                    line-height: 48px;
-                }
+                
             }
             ul {
                 width: 30%;
@@ -17098,15 +18110,16 @@ $colorseven:#accc51-green-ligh
                 li {
                     text-indent: 0;
                     height: 23%;
-                }
-                li a {
-                    font-size: 0.65em;
-                }
-                li a:hover {
-                    font-size: 0.65em;
+					a {
+						font-size: 0.7em;
+						&:hover {
+							font-size: 0.7em;
+						}
+					}
+					
                 }
             }
-}
+		}
     }
 }
 

@@ -20,9 +20,20 @@ function filter_wp_title( $title ) {
 }
 add_filter( 'wp_title', 'filter_wp_title' );
 
+function popperscores_custom_header_setup() {
+	add_theme_support( 'custom-logo', array(
+	    'width' => 96,
+	    'height' => 96,
+	    'flex-width' => false,
+	    'flex-height' => false,
+	) );
+
+
+}
+add_action( 'after_setup_theme', 'popperscores_custom_header_setup' );
+
 //set content width
 if ( ! isset( $content_width ) ) {$content_width = 600;};
-
 
 //theme set up
 if ( ! function_exists( 'my_theme_setup' ) ) :
@@ -82,7 +93,6 @@ register_nav_menus(	array(
     'Secondary' => 'Secondary',
     'mobile' => 'mobile' ));
 }
-
 
 endif; // my_theme_setup end
 add_action('after_setup_theme', 'my_theme_setup');
@@ -156,22 +166,23 @@ function my_init()
 }
 add_action('wp_enqueue_scripts', 'my_init');
 */
-//function my_init()
-//{
-//    if (!is_admin())
-//    {
-//        wp_deregister_script('jquery');
+/*
+function my_init()
+{
+    if (!is_admin())
+    {
+        wp_deregister_script('jquery');
 
-        // Load a copy of jQuery from the Google API CDN
+				// Load a copy of jQuery from the Google API CDN
         // The last parameter set to TRUE states that it should be loaded
         // in the footer.
-//        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', FALSE, '1.11.0', TRUE);
+        wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', FALSE, '1.11.0', TRUE);
 
-//        wp_enqueue_script('jquery');
-//    }
-//}
-//add_action('init', 'my_init');
-
+        wp_enqueue_script('jquery');
+    }
+}
+add_action('init', 'my_init');
+*/
 //enqueue style sheets
 function mytheme_register_styles(){
 
@@ -189,11 +200,11 @@ add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 //enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
-	if(is_page('profile') || is_singular('websites')){
+//	if(is_page_template('profile') || is_page_template('websites')){
         wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
         wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
         wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
-			}
+//			}
 }
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 
@@ -202,36 +213,36 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 function my_scripts_own() {
 
     wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
-
-		//master
+	//master
     wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
 
-		if(is_page('profile')){
+	//	if(is_page('profile')){
 			//scrollto script
-			wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
+		wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
 			//easing script
 	    wp_register_script( 'easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array('jquery'),'20161110', true );
 			//profile page scripts
 	    wp_register_script( 'profile', get_template_directory_uri() . '/js/profile.js', array('jquery'),'20161110', true );
 			//fancylightbox page scripts
 	    wp_register_script( 'fancylightbox', get_template_directory_uri() . '/js/fancylightbox.js', array('jquery'),'20161110', true );
-			
-		}
-		if(is_page('websites')){
-			//cookie
-			  wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
-				wp_register_script( 'websites', get_template_directory_uri() . '/js/websites.js', array('jquery'),'20161110', true );
 
-		}
+//		}
+	
+//		if(is_page_template('websites')){
+			//cookie
+		wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
+		wp_register_script( 'websites', get_template_directory_uri() . '/js/websites.js', array('jquery'),'20161110', true );
+
+//		}
 
     wp_enqueue_script('jquery');
     wp_enqueue_script( 'easing' );
     wp_enqueue_script( 'scrollto' );
     wp_enqueue_script( 'cookie' );
     wp_enqueue_script( 'master' );
-		wp_enqueue_script( 'fancylightbox' );
-		wp_enqueue_script( 'profile' );
-		wp_enqueue_script( 'websites' );
+	wp_enqueue_script( 'fancylightbox' );
+	wp_enqueue_script( 'profile' );
+	wp_enqueue_script( 'websites' );
 
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
@@ -280,13 +291,16 @@ function cc_mime_types( $mimes ){
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
+
+
 //read more button
+/*
 function excerpt_read_more_link($output) {
 	 global $post;
 	 return $output . '<br/><a href="'. get_permalink($post->ID) . '" class="read_more">Read More</a>';
 }
 add_filter('the_excerpt', 'excerpt_read_more_link');
-
+*/
 /**
  * Register our sidebars and widgetized areas.
  *

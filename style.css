@@ -99,7 +99,7 @@ img {
   max-width: 100%;
   height: auto;
   border: 0;
-  vertical-align: bottom;
+  vertical-align: top;
 }
 
 .post img {
@@ -996,8 +996,10 @@ th {
     font-size: 1em;
     min-height: 740px;
     /*Search Box*/
-    /*Right-side*/
-    /*Left-side*/
+    /*contact page*/
+    /*contact page end*/
+    /*blog page Right-side*/
+    /*blog page Left-side*/
     /*Posts*/
     /*post pagination*/
     /*content wide containers*/
@@ -1153,32 +1155,12 @@ th {
     width: 100%;
     letter-spacing: 0.08em;
     line-height: 1.9em;
-    margin: 0 0 1%;
+    margin: 0 0 1em 0;
   }
   #wrapper_container #main-content ul {
     list-style: none;
   }
   #wrapper_container #main-content ul li a:hover {
-    color: #fff;
-  }
-  #wrapper_container #main-content ul.contact-details {
-    margin: 3% 0;
-    width: 45%;
-    display: block;
-    float: left;
-  }
-  #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.9em;
-    font-family: "FontAwesome", "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-  }
-  #wrapper_container #main-content ul.contact-details li::before {
-    font-size: 1.4em;
-  }
-  #wrapper_container #main-content ul.contact-details li a {
-    width: auto;
-    display: inline-block;
-  }
-  #wrapper_container #main-content ul.contact-details li a:hover {
     color: #fff;
   }
   #wrapper_container #main-content hr {
@@ -1201,6 +1183,37 @@ th {
     margin: 0;
     height: auto;
     min-height: 250px;
+    border: 1px solid #062351;
+  }
+  #wrapper_container #main-content ul.contact-details {
+    margin: 2em 0;
+    width: 45%;
+    display: block;
+    float: left;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
+    font-family: "FontAwesome", "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  }
+  #wrapper_container #main-content ul.contact-details li::before {
+    font-family: 'FontAwesome';
+    content: "\f108";
+    font-style: normal;
+    display: inline-block;
+    line-height: 40px;
+    height: 40px;
+    width: 45px;
+    text-align: center;
+    font-size: 1.4em;
+    float: left;
+  }
+  #wrapper_container #main-content ul.contact-details li a {
+    width: auto;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content ul.contact-details li a:hover {
+    color: #fff;
   }
   #wrapper_container #main-content #side-bar {
     padding-top: 0;
@@ -1208,7 +1221,7 @@ th {
     width: 100%;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     display: block;
-    margin: 0.75% 0 0;
+    margin: 1em 0 0 0;
     clear: both;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1216,9 +1229,9 @@ th {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   #wrapper_container #main-content #side-bar .side-bar-box {
     -webkit-flex: 0 0 auto;
@@ -1226,8 +1239,8 @@ th {
     flex: 0 0 auto;
     display: inline-block;
     height: auto;
-    width: 31.9%;
-    margin: 0;
+    width: 32.3%;
+    margin: 0.5em;
     float: left;
   }
   #wrapper_container #main-content #side-bar .side-bar-box h2 {
@@ -1447,7 +1460,8 @@ th {
     clear: both;
     line-height: 35px;
     padding: 0;
-    border: 2px solid #062351;
+    border: 1px solid #062351;
+    font-weight: bold;
   }
   #wrapper_container #main-content .post ul.post-meta li p {
     line-height: 1em;
@@ -1466,8 +1480,9 @@ th {
     float: left;
     font-size: 1.1em;
     text-indent: 1%;
-    background-color: #062351;
-    color: #fff;
+    border-right: 1px solid #062351;
+    background-color: #CCD3DE;
+    color: #062351;
     margin-right: 1%;
     line-height: 35px;
   }
@@ -1504,7 +1519,8 @@ th {
     clear: both;
     line-height: 22px;
     padding: 0;
-    border: 2px solid #062351;
+    border: 1px solid #062351;
+    font-weight: bold;
   }
   #wrapper_container #main-content .post ul.post-meta li:nth-of-type(2) p {
     line-height: 1em;
@@ -1523,8 +1539,9 @@ th {
     float: left;
     font-size: 1.2em;
     text-indent: 1%;
-    background-color: #062351;
-    color: #fff;
+    border-right: 1px solid #062351;
+    background-color: #CCD3DE;
+    color: #062351;
     margin-right: 1%;
     line-height: 35px;
   }
@@ -1578,7 +1595,7 @@ th {
     display: inline-block;
     width: 98%;
     padding: 0;
-    border: 2px solid #062351;
+    border: 1px solid #062351;
   }
   #wrapper_container #main-content .post .website-text .links a {
     height: 100%;
@@ -1618,6 +1635,7 @@ th {
     color: #062351;
     float: left;
     display: block;
+    font-weight: bold;
   }
   #wrapper_container #main-content .post .website-text .links p.formats span:first-of-type {
     font-size: 0.95em;
@@ -1625,22 +1643,22 @@ th {
     text-indent: 1%;
     display: inline-block;
     text-align: left;
-    height: 46px;
-    line-height: 46px;
-    color: #fff;
-    background-color: #062351;
+    height: 48px;
+    line-height: 48px;
+    color: #062351;
+    background-color: #CCD3DE;
+    border-right: 1px solid #062351;
     float: left;
   }
   #wrapper_container #main-content .post .website-text .links p.formats span {
-    font-size: 0.9em;
-    width: 25%;
+    font-size: 1em;
+    width: 28.09%;
     display: inline-block;
     text-align: left;
-    height: 46px;
-    line-height: 46px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #CCD3DE;
     color: #062351;
-    background-color: #fff;
-    float: left;
   }
   #wrapper_container #main-content .post .website-text .links p.formats span a {
     width: 100%;
@@ -1654,8 +1672,8 @@ th {
     width: 100%;
     display: inline-block;
     text-align: center;
-    height: 46px;
-    line-height: 46px;
+    height: 48px;
+    line-height: 48px;
     color: #062351;
     background-color: #fff;
     -webkit-transform-origin: 50% 50%;
@@ -1681,9 +1699,9 @@ th {
     margin: 0;
     font-size: 0.95em;
     color: #000;
-    font-weight: 100;
+    font-weight: normal;
     line-height: 2.1em;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     margin-bottom: 2%;
   }
   #wrapper_container #main-content .post .thumb {
@@ -1737,6 +1755,9 @@ th {
     color: #fff;
     text-align: left;
     padding: 0.5em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   #wrapper_container #main-content .post header.byline .entry-meta,
   #wrapper_container #main-content .post header.byline .index-entry-meta {
@@ -1819,7 +1840,7 @@ th {
   #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
   #wrapper_container #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
     font-weight: bold;
-    color: #062351;
+    color: #fff;
     margin: 0;
     width: auto;
     display: inline-block;
@@ -1912,14 +1933,14 @@ th {
     font-weight: bold;
     line-height: 40px;
   }
-  #wrapper_container #main-content .post .read_more {
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.9em;
     padding: 0;
-    height: 35px;
-    line-height: 35px;
+    height: 40px;
+    line-height: 40px;
     list-style: none;
     background-color: #c0c9dd;
-    width: 15.965%;
+    width: 30%;
     color: #062351;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -1935,12 +1956,21 @@ th {
     text-align: center;
     margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
     color: #fff;
     background-color: #062351;
     font-weight: bold;
     margin: 2% 0;
     letter-spacing: 0.075em;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy {
     width: 100%;
@@ -2052,7 +2082,7 @@ th {
   }
   #wrapper_container #main-content .navi span.right strong {
     display: inline-block;
-    width: 91%;
+    width: 94%;
   }
   #wrapper_container #main-content .navi span.right strong a {
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
@@ -2082,7 +2112,8 @@ th {
     font-size: 1.9em;
     line-height: 40px;
     float: right;
-    width: 4%;
+    width: 3%;
+    display: inline-block;
   }
   #wrapper_container #main-content .navi span.right span i {
     width: 4%;
@@ -2431,28 +2462,80 @@ th {
   }
   #wrapper_container #main-content #contactform {
     float: right;
-    width: 50%;
+    width: 48%;
     height: auto;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
     padding: 10px 0;
-    font-size: 100%;
+    font-size: 1em;
+    border: 1px solid #062351;
+    padding: 0.5em;
+    background-color: #fff;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    height: 60px;
+    width: 60px;
+    display: block;
+    margin: 3% auto;
+    background-repeat: no-repeat;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
     font-size: 0.9em;
     padding: 1% 0;
   }
-  #wrapper_container #main-content #contactform input {
-    width: 95%;
-    height: 35px;
-  }
-  #wrapper_container #main-content #contactform label {
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
     height: 30px;
     line-height: 30px;
   }
-  #wrapper_container #main-content #contactform input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    height: auto;
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    padding: 3px 0 3px 3px;
+    margin: 5px 1px 3px 0;
+    border: 1px solid #ddd;
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    padding: 3px 0 3px 3px;
+    margin: 5px 1px 3px 0;
+    border: 1px solid #ddd;
+    width: 100%;
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+    padding: 3px 0 3px 3px;
+    margin: 5px 1px 3px 0;
+    border: 1px solid #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
     height: 35px;
     list-style: none;
-    width: 20%;
+    width: 25%;
     background-color: #c0c9dd;
     -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
     -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
@@ -2466,31 +2549,10 @@ th {
     display: block;
     font-size: 1.1em;
   }
-  #wrapper_container #main-content #contactform input[type="submit"]:hover {
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
     background-color: #062351;
     color: #fff;
-  }
-  #wrapper_container #main-content #contactform input[type=text],
-  #wrapper_container #main-content #contactform select,
-  #wrapper_container #main-content #contactform textarea {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    outline: none;
-    padding: 3px 0 3px 3px;
-    margin: 5px 1px 3px 0;
-    border: 1px solid #ddd;
-    width: 95%;
-  }
-  #wrapper_container #main-content #contactform input[type=text]:focus,
-  #wrapper_container #main-content #contactform select:focus,
-  #wrapper_container #main-content #contactform textarea:focus {
-    box-shadow: 0 0 5px #51cbee;
-    padding: 3px 0 3px 3px;
-    margin: 5px 1px 3px 0;
-    border: 1px solid #51cbee;
+    font-weight: bold;
   }
   #wrapper_container #main-content .frontpage_container {
     width: 100%;
@@ -2511,11 +2573,11 @@ th {
     height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.03em;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     color: #062351;
-    letter-spacing: 0.095em;
+    letter-spacing: 0.05em;
     width: 100%;
     display: block;
     height: auto;
@@ -2658,6 +2720,10 @@ th {
     /*new*/
     height: 500px;
     background-color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #062351;
     margin: 0;
     display: inline-block;
     font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
@@ -2675,8 +2741,12 @@ th {
     padding: 0;
     font-size: 1.2em;
     line-height: 50px;
-    background-color: #575A5E;
-    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #062351;
+    color: #062351;
     text-indent: 1.5%;
     letter-spacing: 0.05em;
     font-weight: bold;
@@ -2803,7 +2873,6 @@ th {
     width: 100%;
     height: 422px;
     background-color: #fff;
-    border: 1px solid #CCD3DE;
     margin-bottom: 0.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
@@ -2892,17 +2961,16 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul {
     width: 100%;
     display: block;
-    padding: 1%;
     margin: 0;
-    padding: 0.1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
     width: 100%;
-    margin: 0;
+    margin: 0 0 0.2em 0;
     font-weight: normal;
     color: #062351;
     display: block;
     height: auto;
+    background-color: #CCD3DE;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
     font-family: "FontAwesome";
@@ -2917,7 +2985,7 @@ th {
     color: #062351;
     width: auto;
     line-height: 25px;
-    font-size: 0.85em;
+    font-size: 0.8em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
@@ -2926,16 +2994,17 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks {
     width: 100%;
-    padding: 1%;
+    display: block;
+    margin: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
     width: 100%;
-    margin: 0;
+    margin: 0 0 0.2em 0;
     font-weight: normal;
     color: #062351;
     display: block;
     height: auto;
-    line-height: 20px;
+    background-color: #CCD3DE;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-family: "FontAwesome";
@@ -2948,7 +3017,8 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
     color: #062351;
     width: auto;
-    font-size: 0.85em;
+    line-height: 25px;
+    font-size: 0.8em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -3006,15 +3076,14 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul {
     width: 100%;
     display: block;
-    padding: 1%;
     margin: 0;
-    padding: 0.1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     width: 100%;
-    margin: 0;
+    margin: 0 0 0.2em 0;
     font-weight: normal;
     color: #062351;
+    background-color: #CCD3DE;
     display: block;
     height: auto;
   }
@@ -3029,7 +3098,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     color: #062351;
     width: auto;
-    font-size: 0.85em;
+    font-size: 0.8em;
     line-height: 25px;
     display: inline-block;
   }
@@ -3065,6 +3134,9 @@ th {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     height: 100%;
@@ -3076,7 +3148,7 @@ th {
     text-align: center;
     margin: 0 auto;
     letter-spacing: 0.02em;
-    background-color: #c0c9dd;
+    background-color: #CCD3DE;
     color: #062351;
     font-size: 0.85em;
     line-height: 44px;
@@ -3090,6 +3162,10 @@ th {
     background-color: #062351;
     color: #fff;
     font-weight: bold;
+  }
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:active {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container #main-content div#photocontainer {
     width: 100%;
@@ -3237,6 +3313,7 @@ th {
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    overflow: auto;
   }
   #wrapper_container #main-content div#photocontainer div.content div#panel figure.showcase-container img.showcase-img,
   #wrapper_container #main-content div#photocontainer div.content div#panel2 figure.showcase-container img.showcase-img,
@@ -3373,14 +3450,6 @@ th {
     background-color: #062351;
     font-weight: bold;
   }
-  #wrapper_container div.wpcf7 img.ajax-loader {
-    border: medium none;
-    vertical-align: middle;
-    height: 100px;
-    width: 10%;
-    display: block;
-    margin: 5% auto;
-  }
   #wrapper_container footer {
     width: 100%;
     height: 120px;
@@ -3421,27 +3490,9 @@ th {
     width: 100%;
     height: 100%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 1.9em;
-    line-height: 46px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 1.9em;
-    line-height: 46px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 1.9em;
-    line-height: 46px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     width: 100%;
     height: 100%;
@@ -3476,14 +3527,13 @@ th {
     font-size: 1em;
   }
   #wrapper_container footer ul li a {
-    width: 40%;
     text-decoration: none;
     color: #062351;
     margin: 0;
     padding: 0;
     font-size: 0.85em;
     display: block;
-    height: 100%;
+    height: auto;
     line-height: 25px;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
@@ -3498,8 +3548,7 @@ th {
   #wrapper_container footer ul li a:hover {
     color: #fff;
     margin: 0;
-    font-size: 0.90em;
-    line-height: 1.5em;
+    font-weight: bold;
   }
 }
 @media only screen and (max-width: 90em) {
@@ -3632,6 +3681,8 @@ th {
     font-size: 1em;
     min-height: 740px;
     /*Search Box*/
+    /*contact page*/
+    /*contact page end*/
     /*Left-side*/
     /*Posts*/
     /*post pagination*/
@@ -3708,7 +3759,7 @@ th {
     padding: 0;
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.2em;
+    font-size: 1.25em;
     line-height: 50px;
     letter-spacing: 0.095em;
     clear: both;
@@ -3729,7 +3780,7 @@ th {
     font-size: 0.85em;
     letter-spacing: 0.08em;
     line-height: 1.9em;
-    margin: 0 0 1%;
+    margin: 0 0 1em 0;
   }
   #wrapper_container #main-content ul {
     list-style: none;
@@ -3747,6 +3798,28 @@ th {
     width: 80%;
     outline: 0;
     border: 0;
+  }
+  #wrapper_container #main-content .map_container {
+    width: 40.7293%;
+    min-height: 250px;
+  }
+  #wrapper_container #main-content ul.contact-details {
+    margin: 2em 0;
+    width: 45%;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content ul.contact-details li::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content ul.contact-details li a {
+    width: auto;
+    display: inline-block;
+    font-size: 0.95em;
+  }
+  #wrapper_container #main-content ul.contact-details li a:hover {
+    color: #fff;
   }
   #wrapper_container #main-content aside#side-bar {
     padding-top: 0;
@@ -4305,6 +4378,20 @@ th {
   #wrapper_container #main-content .post .website-text .entry-attachment figure.attachment a {
     display: block;
   }
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.9em;
+    width: 40%;
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
+  }
   #wrapper_container #main-content .navi {
     width: 100%;
     height: 90px;
@@ -4579,69 +4666,52 @@ th {
     text-indent: 2%;
   }
   #wrapper_container #main-content #contactform {
-    float: right;
-    width: 50%;
-    height: auto;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
-    padding: 10px 0;
-    font-size: 100%;
+    width: 48%;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
-    font-size: 0.9em;
-    padding: 1% 0;
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
   }
-  #wrapper_container #main-content #contactform input {
-    width: 95%;
-    height: 35px;
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    height: 50px;
+    width: 50px;
+    margin: 3% auto;
   }
-  #wrapper_container #main-content #contactform label {
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.85em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
     height: 30px;
     line-height: 30px;
   }
-  #wrapper_container #main-content #contactform input[type="submit"] {
-    height: 35px;
-    list-style: none;
-    width: 20%;
-    background-color: #c0c9dd;
-    -webkit-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -moz-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -o-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    -ms-transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    transition: background 0.2s linear 0s, color 0.2s linear 0s;
-    padding: 0;
-    border: none;
-    color: #062351;
-    font-family: "Titillium Web", "ai_kelsor", arial, verdana, helvetica, sans-serif;
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    height: auto;
     display: block;
-    font-size: 1.1em;
   }
-  #wrapper_container #main-content #contactform input[type="submit"]:hover {
-    background-color: #062351;
-    color: #fff;
-  }
-  #wrapper_container #main-content #contactform input[type=text],
-  #wrapper_container #main-content #contactform input[type=email],
-  #wrapper_container #main-content #contactform select,
-  #wrapper_container #main-content #contactform textarea {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    outline: none;
-    padding: 3px 0 3px 3px;
-    margin: 5px 1px 3px 0;
-    border: 1px solid #ddd;
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
     width: 100%;
   }
-  #wrapper_container #main-content #contactform input[type=text]:focus,
-  #wrapper_container #main-content #contactform input[type=email]:focus,
-  #wrapper_container #main-content #contactform select:focus,
-  #wrapper_container #main-content #contactform textarea:focus {
-    box-shadow: 0 0 5px #51cbee;
-    padding: 3px 0 3px 3px;
-    margin: 5px 1px 3px 0;
-    border: 1px solid #51cbee;
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container #main-content .frontpage_container {
     margin: 0 0 2% 0;
@@ -4659,11 +4729,10 @@ th {
     height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.03em;
+    font-size: 1em;
     margin: 0;
     padding: 0;
     color: #062351;
-    letter-spacing: 0.095em;
     width: 100%;
     display: block;
     height: auto;
@@ -4971,7 +5040,7 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption h3 {
     font-weight: normal;
-    font-size: 1.1em;
+    font-size: 1.05em;
     background-color: #65686B;
     color: #fff;
     width: auto;
@@ -5003,7 +5072,6 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li {
     width: 100%;
-    margin: 0;
     font-weight: normal;
     color: #062351;
     display: block;
@@ -5022,7 +5090,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
     color: #062351;
     width: auto;
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
@@ -5035,7 +5103,6 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li {
     width: 100%;
-    margin: 0;
     font-weight: normal;
     color: #062351;
     display: block;
@@ -5053,7 +5120,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
     color: #062351;
     width: auto;
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -5081,7 +5148,7 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption h3 {
     font-weight: normal;
-    font-size: 1.1em;
+    font-size: 1.05em;
     background-color: #65686B;
     color: #fff;
     width: auto;
@@ -5111,7 +5178,6 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li {
     width: 100%;
-    margin: 0;
     font-weight: normal;
     color: #062351;
     display: block;
@@ -5129,7 +5195,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     color: #062351;
     width: auto;
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
@@ -5147,7 +5213,6 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     height: 44px;
-    margin: 0 0 0.1em 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     display: block;
@@ -5301,10 +5366,6 @@ th {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 figure.showcase-container figcaption.showcase-content div.links a:hover {
     font-weight: bold;
   }
-  #wrapper_container div.wpcf7 img.ajax-loader {
-    width: 10%;
-    margin: 5% auto;
-  }
   #wrapper_container footer {
     height: 120px;
     margin-top: 1%;
@@ -5321,18 +5382,9 @@ th {
     width: 100%;
     height: 100%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.8em;
-    line-height: 46px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.8em;
-    line-height: 46px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.8em;
-    line-height: 46px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.8em;
     line-height: 46px;
@@ -5350,13 +5402,11 @@ th {
     font-size: 1em;
   }
   #wrapper_container footer ul li a {
-    width: 40%;
     font-size: 0.80em;
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
-    font-size: 0.85em;
-    line-height: 1.5em;
+    line-height: 25px;
   }
 }
 @media only screen and (max-width: 80em) {
@@ -5425,7 +5475,7 @@ th {
     max-width: 350px;
   }
   #wrapper_container header nav.menu-main-container {
-    width: 40%;
+    width: 45%;
   }
   #wrapper_container header nav.menu-main-container ul#menu-main {
     height: 35px;
@@ -5463,6 +5513,8 @@ th {
   }
   #wrapper_container #main-content {
     /*Search Box*/
+    /*contact page*/
+    /*contact page end*/
   }
   #wrapper_container #main-content blockquote {
     width: 91%;
@@ -5519,7 +5571,7 @@ th {
     padding: 0;
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.15em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content h2 {
     font-size: 1.05em;
@@ -5534,6 +5586,28 @@ th {
     list-style: none;
   }
   #wrapper_container #main-content ul li a:hover {
+    color: #fff;
+  }
+  #wrapper_container #main-content .map_container {
+    width: 40.7293%;
+    min-height: 250px;
+  }
+  #wrapper_container #main-content ul.contact-details {
+    margin: 2em 0;
+    width: 45%;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content ul.contact-details li::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content ul.contact-details li a {
+    width: auto;
+    display: inline-block;
+    font-size: 0.95em;
+  }
+  #wrapper_container #main-content ul.contact-details li a:hover {
     color: #fff;
   }
   #wrapper_container #main-content hr {
@@ -5681,6 +5755,20 @@ th {
     font-weight: bold;
     line-height: 40px;
   }
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.9em;
+    width: 40%;
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
+  }
   #wrapper_container #main-content .navi span.right strong {
     width: 90%;
   }
@@ -5699,6 +5787,54 @@ th {
   #wrapper_container #main-content section.contact-wide ol.commentlist footer.comment-meta .comment-author img {
     width: 12%;
   }
+  #wrapper_container #main-content #contactform {
+    width: 48%;
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    height: 50px;
+    width: 50px;
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.80em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+    line-height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    height: auto;
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
+  }
   #wrapper_container #main-content .frontpage_container {
     padding: 0;
     /*Intro Container*/
@@ -5712,7 +5848,7 @@ th {
     height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.97em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.8em;
@@ -6087,6 +6223,43 @@ th {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 figure.showcase-container figcaption.showcase-content div.links a:hover {
     font-weight: bold;
   }
+  #wrapper_container footer {
+    height: 120px;
+    margin-top: 1%;
+  }
+  #wrapper_container footer .socialpics {
+    height: 40%;
+    width: 25%;
+  }
+  #wrapper_container footer .socialpics .social-icon {
+    margin-left: 4%;
+    width: 21%;
+  }
+  #wrapper_container footer .socialpics span {
+    width: 100%;
+  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
+  #wrapper_container footer .socialpics .google-icon span .fa-github {
+    font-size: 1.8em;
+  }
+  #wrapper_container footer p#copyr {
+    font-size: 10px;
+    width: 48%;
+  }
+  #wrapper_container footer ul {
+    width: 45%;
+  }
+  #wrapper_container footer ul li {
+    height: 25px;
+  }
+  #wrapper_container footer ul li a {
+    font-size: 0.80em;
+  }
+  #wrapper_container footer ul li a:hover {
+    line-height: 25px;
+  }
 }
 @media only screen and (max-width: 64em) {
   .fixed-side-social-container {
@@ -6154,8 +6327,7 @@ th {
     max-width: 350px;
   }
   #wrapper_container header nav.menu-main-container {
-    width: 35%;
-    margin: 0.5em 0 0 0;
+    width: 45%;
   }
   #wrapper_container header nav.menu-main-container ul#menu-main {
     height: 35px;
@@ -6194,6 +6366,8 @@ th {
   #wrapper_container #main-content {
     padding: 0;
     min-height: 740px;
+    /*contact page*/
+    /*contact page end*/
     /*Search Box*/
     /*blog* end*/
     /*end*/
@@ -6202,7 +6376,7 @@ th {
     height: auto;
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content h2 {
     font-size: 1em;
@@ -6216,22 +6390,27 @@ th {
   #wrapper_container #main-content blockquote {
     font-size: 0.85em;
   }
+  #wrapper_container #main-content .map_container {
+    width: 45.7293%;
+    min-height: 220px;
+  }
   #wrapper_container #main-content ul.contact-details {
-    margin: 1% 0 5%;
+    margin: 2em 0;
     width: 45%;
   }
   #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
   }
   #wrapper_container #main-content ul.contact-details li a {
-    line-height: 40px;
-    letter-spacing: 0.05em;
+    width: auto;
+    display: inline-block;
+    font-size: 0.9em;
   }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    line-height: 40px;
+  #wrapper_container #main-content ul.contact-details li a::hover {
+    color: #fff;
   }
   #wrapper_container #main-content .social-1 {
     margin: 0;
@@ -6554,13 +6733,19 @@ th {
   #wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
   }
-  #wrapper_container #main-content .post .read_more {
-    height: 35px;
-    font-size: 0.85em;
-    line-height: 35px;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.9em;
+    width: 40%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    line-height: 35px;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     line-height: 10px;
@@ -6670,6 +6855,54 @@ th {
   #wrapper_container #main-content section.contact-wide .reply a:hover {
     width: 20%;
   }
+  #wrapper_container #main-content #contactform {
+    width: 50%;
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    height: 50px;
+    width: 50px;
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+    line-height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    height: auto;
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
+  }
   #wrapper_container #main-content .frontpage_container {
     height: auto;
     clear: both;
@@ -6679,7 +6912,7 @@ th {
     font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.97em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .text-box .introimg {
     width: 18%;
@@ -6844,7 +7077,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
     font-weight: normal;
@@ -6862,7 +7095,7 @@ th {
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 0.75em;
+    font-size: 0.7em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -6895,7 +7128,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
     font-style: italic;
@@ -6916,11 +7149,11 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
     font-weight: bold;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.65em;
     line-height: 42px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a:hover {
     line-height: 42px;
   }
   #wrapper_container #main-content div#photocontainer div.content {
@@ -7060,18 +7293,9 @@ th {
     background-color: #062351;
     color: #fff;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.7em;
-    line-height: 46px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.7em;
-    line-height: 46px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.7em;
-    line-height: 46px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.7em;
     line-height: 46px;
@@ -7090,11 +7314,10 @@ th {
     text-indent: 0;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.78em;
+    font-size: 0.8em;
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
-    font-size: 0.8em;
     line-height: 25px;
   }
 }
@@ -7164,7 +7387,7 @@ th {
     max-width: 350px;
   }
   #wrapper_container header nav.menu-main-container {
-    width: 35%;
+    width: 49%;
     margin: 0.5em 0 0 0;
     height: 35px;
   }
@@ -7204,9 +7427,11 @@ th {
   }
   #wrapper_container #main-content {
     padding: 0;
+    /*contact page*/
+    /*contact page end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.05em;
+    font-size: 1.2em;
     height: 40px;
     line-height: 40px;
   }
@@ -7220,8 +7445,29 @@ th {
     font-size: 0.75em;
     width: 95%;
     letter-spacing: 0.1em;
-    margin: 0;
     line-height: 1.77em;
+  }
+  #wrapper_container #main-content .map_container {
+    width: 45.7293%;
+    min-height: 220px;
+  }
+  #wrapper_container #main-content ul.contact-details {
+    margin: 2em 0;
+    width: 45%;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content ul.contact-details li::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content ul.contact-details li a {
+    width: auto;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content ul.contact-details li a::hover {
+    color: #fff;
   }
   #wrapper_container #main-content social-1 form.searchform div label {
     font-size: 0.7em;
@@ -7265,14 +7511,6 @@ th {
     line-height: 30px;
     height: 30px;
   }
-  #wrapper_container #main-content .post ul li {
-    width: 100%;
-    margin: 0;
-    font-size: 0.80em;
-  }
-  #wrapper_container #main-content .post ul li a {
-    margin-left: 0;
-  }
   #wrapper_container #main-content .post ul.post-list {
     width: 90%;
   }
@@ -7282,9 +7520,6 @@ th {
   }
   #wrapper_container #main-content .post p {
     font-size: 0.80em;
-  }
-  #wrapper_container #main-content .post .byline {
-    font-size: 0.90em;
   }
   #wrapper_container #main-content .post .postimg {
     margin: 4% auto;
@@ -7531,12 +7766,19 @@ th {
   #wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
   }
-  #wrapper_container #main-content .post .read_more {
-    font-size: 0.8em;
-    width: 15.9652%;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.85em;
+    width: 45%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-weight: bold;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     width: 12%;
@@ -7640,30 +7882,51 @@ th {
   #wrapper_container #main-content section.contact-wide .navigation p.right a {
     height: 30px;
   }
-  #wrapper_container #main-content #contactform input[type="submit"] {
-    font-weight: bold;
+  #wrapper_container #main-content #contactform {
+    width: 50%;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
-    font-size: 0.85em;
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
   }
-  #wrapper_container #main-content #contactform label {
-    font-size: 0.9em;
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    height: 40px;
+    width: 40px;
+    margin: 3% auto;
   }
-  #wrapper_container #main-content ul.contact-details {
-    margin: 4% 0 5%;
-    width: 45%;
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
   }
-  #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.85em;
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.7em;
   }
-  #wrapper_container #main-content ul.contact-details li::before {
-    font-size: 1.4em;
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
   }
-  #wrapper_container #main-content ul.contact-details li a {
-    letter-spacing: 0.05em;
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
   }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    width: 90%;
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container #main-content .frontpage_container {
     height: auto;
@@ -7672,7 +7935,7 @@ th {
     width: 49%;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 0.97em;
+    font-size: 0.9em;
     height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
@@ -7753,7 +8016,7 @@ th {
     height: 18.282%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #numbers li span {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     margin: 0.8em auto;
@@ -7762,7 +8025,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.6em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask {
@@ -7807,7 +8070,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
     font-weight: normal;
@@ -7822,10 +8085,9 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
     font-size: 0.9em;
-    line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 0.75em;
+    font-size: 0.7em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -7854,7 +8116,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
     font-style: italic;
@@ -7977,29 +8239,6 @@ th {
     font-size: 0.90em;
     padding: 0;
   }
-  #wrapper_container #main-content .webskills {
-    margin: 0;
-    padding: 3% 0;
-  }
-  #wrapper_container #main-content .webskills li#fa-desktop {
-    font-size: 0.90em;
-    line-height: 35px;
-  }
-  #wrapper_container #main-content .webskills li#fa-wordpress {
-    font-size: 0.90em;
-  }
-  #wrapper_container #main-content .webskills li#fa-mobile {
-    font-size: 0.90em;
-  }
-  #wrapper_container #main-content .webskills li#fa-mobile::before {
-    font-size: 1.3em;
-  }
-  #wrapper_container #main-content .webskills li a {
-    width: 100%;
-  }
-  #wrapper_container #main-content .webskills li a:hover {
-    width: 100%;
-  }
   #wrapper_container footer .socialpics {
     width: 25%;
   }
@@ -8007,15 +8246,9 @@ th {
     margin-left: 4%;
     width: 21%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.75em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.75em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.75em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.75em;
   }
@@ -8033,7 +8266,6 @@ th {
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
-    font-size: 0.8em;
     line-height: 25px;
   }
 }
@@ -8146,17 +8378,19 @@ th {
   }
   #wrapper_container #main-content {
     padding: 1.5em 0 0 0;
+    /*contact page*/
+    /*contact page end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.05em;
+    font-size: 1.3em;
     text-align: center;
   }
   #wrapper_container #main-content h2 {
     text-align: center;
-    font-size: 0.95em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content p {
     font-size: 0.7em;
@@ -8179,24 +8413,27 @@ th {
     font-size: 0.75em;
     line-height: 30px;
   }
+  #wrapper_container #main-content .map_container {
+    width: 45.7293%;
+    min-height: 198px;
+  }
   #wrapper_container #main-content ul.contact-details {
-    margin: 4% 0 5%;
+    margin: 2em 0;
     width: 45%;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
   }
   #wrapper_container #main-content ul.contact-details li a {
-    font-size: 1em;
-    letter-spacing: 0.05em;
+    width: auto;
+    display: inline-block;
+    font-size: 0.9em;
   }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    width: 90%;
-  }
-  #wrapper_container #main-content .map_container {
-    width: 47%;
-    margin: 1%;
-    height: 250px;
+  #wrapper_container #main-content ul.contact-details li a::hover {
+    color: #fff;
   }
   #wrapper_container #main-content blockquote {
     font-size: 0.80em;
@@ -8265,21 +8502,6 @@ th {
   }
   #wrapper_container #main-content .post h3 a {
     padding-left: 0;
-  }
-  #wrapper_container #main-content .post ul {
-    line-height: 1.5em;
-    font-size: 1em;
-    text-indent: 0;
-    width: 96%;
-    margin: 2% auto;
-  }
-  #wrapper_container #main-content .post ul li {
-    width: 100%;
-    margin: 0;
-    font-size: 0.75em;
-  }
-  #wrapper_container #main-content .post ul li a {
-    margin-left: 0;
   }
   #wrapper_container #main-content .post .postimg {
     width: 30%;
@@ -8543,12 +8765,19 @@ th {
   #wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
   }
-  #wrapper_container #main-content .post .read_more {
-    font-size: 0.8em;
-    width: 15.9652349%;
-  }
-  #wrapper_container #main-content .post .read_more:hover {
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.85em;
+    width: 45%;
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     font-size: 0.80em;
@@ -8660,7 +8889,7 @@ th {
     float: none;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 45px;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
@@ -8893,11 +9122,11 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
     line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.75em;
     line-height: 40px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a:hover {
     line-height: 40px;
   }
   #wrapper_container #main-content div#photocontainer h3 {
@@ -9021,8 +9250,49 @@ th {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 figure.showcase-container figcaption.showcase-content div.links a {
     font-size: 0.9em;
   }
-  #wrapper_container #main-content #contactform p {
-    font-size: 0.85em;
+  #wrapper_container #main-content #contactform {
+    width: 52%;
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.7em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 30%;
@@ -9031,15 +9301,9 @@ th {
     margin-left: 4%;
     width: 21%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.65em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.65em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.65em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.65em;
   }
@@ -9054,11 +9318,9 @@ th {
   }
   #wrapper_container footer ul li a {
     font-size: 0.75em;
-    width: 47%;
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
-    font-size: 0.8em;
     line-height: 25px;
   }
   #wrapper_container footer #copyr {
@@ -9162,23 +9424,47 @@ th {
   }
   #wrapper_container #main-content {
     padding: 1.5em 0 0 0;
+    /*contact page*/
+    /*contact page end*/
     /*post*/
   }
   #wrapper_container #main-content h1 {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.25em;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.95em;
+    font-size: 1.15em;
     padding: 0;
     letter-spacing: 0.1em;
     width: 99.5458%;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content p {
     font-size: 0.75em;
+  }
+  #wrapper_container #main-content .map_container {
+    width: 45.7293%;
+    min-height: 189px;
+  }
+  #wrapper_container #main-content ul.contact-details {
+    margin: 2em 0;
+    width: 45%;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content ul.contact-details li::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content ul.contact-details li a {
+    width: auto;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content ul.contact-details li a::hover {
+    color: #fff;
   }
   #wrapper_container #main-content .social-1 {
     display: block;
@@ -9534,13 +9820,19 @@ th {
   #wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
   }
-  #wrapper_container #main-content .post .read_more {
-    font-size: 0.75em;
-    margin: 2% 0 2% 1%;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.80em;
+    width: 45%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.8em;
-    margin: 2% 0 2% 1%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 6.5%;
@@ -9638,6 +9930,50 @@ th {
   #wrapper_container #main-content section.contact-wide #respond .comment-form p.comment-notes {
     font-size: 0.7em;
   }
+  #wrapper_container #main-content #contactform {
+    width: 52%;
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.7em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
+  }
   #wrapper_container #main-content .frontpage_container {
     height: 860px;
     min-height: 860px;
@@ -9646,7 +9982,7 @@ th {
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
     font-size: 1em;
@@ -9719,7 +10055,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe a.fancybox {
-    width: 32.59%;
+    width: 28.59%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe a.fancybox img:hover {
     opacity: 0.8;
@@ -9769,7 +10105,7 @@ th {
     font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert a.fancybox {
-    width: 23.78%;
+    width: 20.78%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert a.fancybox img {
     float: none;
@@ -10036,15 +10372,9 @@ th {
     margin-left: 4%;
     width: 21%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.6em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.6em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.6em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.6em;
   }
@@ -10061,8 +10391,6 @@ th {
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
-    margin: 0;
-    font-size: 0.8em;
     line-height: 25px;
   }
 }
@@ -10159,14 +10487,16 @@ th {
   }
   #wrapper_container #main-content {
     padding: 1.5em 0 0 0;
+    /*contact page*/
+    /*contact page end*/
     /*post*/
   }
   #wrapper_container #main-content h1 {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content h2 {
-    font-size: 1em;
+    font-size: 1.1em;
     padding: 0;
     letter-spacing: 0.1em;
   }
@@ -10175,6 +10505,28 @@ th {
   }
   #wrapper_container #main-content p {
     font-size: 0.75em;
+  }
+  #wrapper_container #main-content .map_container {
+    width: 45.7293%;
+    min-height: 181px;
+  }
+  #wrapper_container #main-content ul.contact-details {
+    margin: 2em 0;
+    width: 45%;
+  }
+  #wrapper_container #main-content ul.contact-details li {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content ul.contact-details li::before {
+    font-size: 1.4em;
+  }
+  #wrapper_container #main-content ul.contact-details li a {
+    width: auto;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content ul.contact-details li a::hover {
+    color: #fff;
   }
   #wrapper_container #main-content .social-1 {
     display: block;
@@ -10520,13 +10872,19 @@ th {
   #wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
   }
-  #wrapper_container #main-content .post .read_more {
-    font-size: 0.75em;
-    margin: 2% 0 2% 1%;
-  }
-  #wrapper_container #main-content .post .read_more:hover {
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.8em;
-    margin: 2% 0 2% 1%;
+    width: 45%;
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 6.5%;
@@ -10629,7 +10987,7 @@ th {
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
     font-size: 1em;
@@ -10702,7 +11060,7 @@ th {
     font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe a.fancybox {
-    width: 32.59%;
+    width: 29.59%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe a.fancybox img:hover {
     opacity: 0.8;
@@ -10727,7 +11085,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
     font-weight: normal;
@@ -10745,14 +11103,14 @@ th {
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 0.75em;
+    font-size: 0.7em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
     font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert a.fancybox {
-    width: 23.78%;
+    width: 20.78%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert a.fancybox img {
     float: none;
@@ -10775,7 +11133,7 @@ th {
     font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
     font-style: italic;
@@ -10907,15 +11265,9 @@ th {
     margin-left: 4%;
     width: 21%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.55em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.55em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.55em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.55em;
   }
@@ -10928,13 +11280,11 @@ th {
     height: 25px;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.7em;
+    font-size: 0.75em;
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
     margin: 0;
-    font-size: 0.75em;
-    line-height: 25px;
   }
 }
 @media only screen and (max-width: 41.6875em) {
@@ -11050,11 +11400,11 @@ th {
     /*end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-align: center;
   }
   #wrapper_container #main-content h2 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content h3 {
     font-size: 0.95em;
@@ -11093,16 +11443,16 @@ th {
   }
   #wrapper_container #main-content ul.contact-details li {
     text-indent: 1%;
-    font-size: 0.8em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
   }
   #wrapper_container #main-content ul.contact-details li a {
     letter-spacing: 0.05em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content ul.contact-details li a:hover {
-    width: 90%;
     line-height: 40px;
   }
   #wrapper_container #main-content .map_container {
@@ -11155,19 +11505,6 @@ th {
   #wrapper_container #main-content .post h3 a {
     padding-left: 0;
     height: 100%;
-  }
-  #wrapper_container #main-content .post ul {
-    line-height: 1.5em;
-    text-indent: 0;
-    width: 98%;
-  }
-  #wrapper_container #main-content .post ul li {
-    width: 100%;
-    margin: 0;
-    font-size: 0.8em;
-  }
-  #wrapper_container #main-content .post ul li a {
-    margin-left: 0;
   }
   #wrapper_container #main-content .post p {
     font-size: 0.75em;
@@ -11258,7 +11595,6 @@ th {
     border: 4px solid #062351;
   }
   #wrapper_container #main-content .post ul {
-    line-height: 1.5em;
     text-indent: 0;
     width: 91%;
     margin: 1% auto;
@@ -11460,13 +11796,19 @@ th {
   #wrapper_container #main-content .post .entry-attachment figure.attachment a {
     display: block;
   }
-  #wrapper_container #main-content .post .read_more {
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.85em;
-    width: 20.9652349%;
+    width: 45%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    margin-left: 1%;
-    font-size: 0.90em;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post .meta {
     font-size: 10px;
@@ -11577,7 +11919,7 @@ th {
     margin: 0 auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.1em;
+    font-size: 1.05em;
     margin: 0;
     line-height: 44px;
   }
@@ -11655,7 +11997,7 @@ th {
     height: 360px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    bottom: -1.5em;
+    bottom: -2.5em;
     font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
@@ -11702,7 +12044,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
     font-weight: normal;
@@ -11720,7 +12062,7 @@ th {
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 0.8em;
+    font-size: 0.75em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -11751,7 +12093,7 @@ th {
     font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
     font-style: italic;
@@ -11761,18 +12103,18 @@ th {
     margin: 0;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
-    font-size: 0.8em;
-    line-height: 40px;
+    font-size: 0.85em;
+    line-height: 44px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a:hover {
-    line-height: 40px;
+    line-height: 44px;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
-    line-height: 40px;
-    font-size: 0.8em;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
+    line-height: 44px;
+    font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
-    line-height: 40px;
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a:hover {
+    line-height: 44px;
   }
   #wrapper_container #main-content blockquote {
     width: 96%;
@@ -11898,13 +12240,47 @@ th {
   #wrapper_container #main-content #contactform {
     float: none;
     width: 100%;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
     font-size: 0.9em;
   }
-  #wrapper_container #main-content #contactform p input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
     height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
     font-size: 1.2em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 40%;
@@ -11913,15 +12289,9 @@ th {
     margin-left: 4%;
     width: 20%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.55em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.55em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.55em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.55em;
   }
@@ -11933,13 +12303,10 @@ th {
     text-indent: 0;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.70em;
-    width: 100%;
+    font-size: 0.75em;
     line-height: 25px;
   }
   #wrapper_container footer ul li a:hover {
-    margin: 0;
-    font-size: 0.70em;
     line-height: 25px;
   }
   #wrapper_container footer p#copyr {
@@ -12056,21 +12423,21 @@ th {
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1.05em;
+    font-size: 1.2em;
   }
   #wrapper_container #main-content h2 {
     text-indent: 0;
-    font-size: 0.95em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content p {
     font-size: 0.75em;
     width: 100%;
     margin-left: 0;
   }
-  #wrapper_container #main-content li {
+  #wrapper_container #main-content ul li {
     margin: 0;
     font-size: 0.8em;
   }
@@ -12087,7 +12454,7 @@ th {
   }
   #wrapper_container #main-content ul.contact-details li {
     margin: 0;
-    font-size: 0.85em;
+    font-size: 1em;
     text-indent: 1%;
   }
   #wrapper_container #main-content ul.contact-details li::before {
@@ -12096,6 +12463,7 @@ th {
   #wrapper_container #main-content ul.contact-details li a {
     line-height: 40px;
     letter-spacing: 0.05em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content ul.contact-details li a:hover {
     line-height: 40px;
@@ -12154,7 +12522,7 @@ th {
     font-size: 10px;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1.15em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content .post h2 {
     text-indent: 0;
@@ -12417,12 +12785,19 @@ th {
   #wrapper_container #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
   }
-  #wrapper_container #main-content .post .read_more {
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.85em;
-    width: 20.9652349%;
+    width: 50%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.90em;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 8%;
@@ -12505,11 +12880,48 @@ th {
   #wrapper_container #main-content section.contact-wide #respond .comment-form p {
     font-size: 0.8em;
   }
-  #wrapper_container #main-content #contactform p {
-    font-size: 0.85em;
+  #wrapper_container #main-content #contactform {
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform label {
+  #wrapper_container #main-content #contactform div.wpcf7 {
     font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1.2em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container #main-content .frontpage_container {
     height: auto;
@@ -12521,7 +12933,7 @@ th {
     padding: 0;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.1em;
+    font-size: 1.05em;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -12653,10 +13065,10 @@ th {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
     font-weight: normal;
@@ -12670,11 +13082,11 @@ th {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 1em;
+    font-size: 0.9em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -12701,10 +13113,10 @@ th {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
     font-style: italic;
@@ -12850,10 +13262,7 @@ th {
     text-indent: 0;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.65em;
-  }
-  #wrapper_container footer ul li a:hover {
-    font-size: 0.65em;
+    font-size: 0.75em;
   }
   #wrapper_container footer p#copyr {
     width: 75%;
@@ -12894,7 +13303,7 @@ th {
     font-size: 1.6em;
   }
   #wrapper_container header hgroup {
-    width: 60%;
+    width: 70%;
   }
   #wrapper_container header hgroup h1#logo {
     font-size: 1.55em;
@@ -12964,15 +13373,15 @@ th {
     /*Photocontainer*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.05em;
+    font-size: 1.2em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content p {
     line-height: 1.9em;
@@ -13223,12 +13632,19 @@ th {
   #wrapper_container #main-content .post footer.byline {
     font-size: 0.8em;
   }
-  #wrapper_container #main-content .post .read_more {
-    font-size: 0.8em;
-    width: 20.9652349%;
-  }
-  #wrapper_container #main-content .post .read_more:hover {
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.85em;
+    width: 45%;
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-content ul li {
     width: 8%;
@@ -13329,18 +13745,58 @@ th {
   #wrapper_container #main-content section.contact-wide .reply a:hover {
     font-weight: bold;
   }
-  #wrapper_container #main-content #contactform p {
-    font-size: 0.75em;
+  #wrapper_container #main-content #contactform {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.85em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1.2em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container #main-content .frontpage_container {
     height: auto;
     min-height: auto;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1.05em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .text-box h2 {
-    font-size: 1em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     margin: 0;
@@ -13428,7 +13884,7 @@ th {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
     font-size: 0.95em;
@@ -13445,7 +13901,7 @@ th {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
     font-size: 0.95em;
@@ -13473,7 +13929,7 @@ th {
     line-height: 25px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     font-size: 0.95em;
@@ -13606,20 +14062,17 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.45em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.45em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.45em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.45em;
   }
+  #wrapper_container footer ul li {
+    text-indent: 0;
+  }
   #wrapper_container footer ul li a {
-    width: 100%;
+    font-size: 0.75em;
   }
   #wrapper_container footer p#copyr {
     width: 75%;
@@ -13653,7 +14106,7 @@ th {
     font-size: 1.6em;
   }
   #wrapper_container header hgroup {
-    width: 60%;
+    width: 75%;
   }
   #wrapper_container header hgroup h1#logo {
     font-size: 1.5em;
@@ -13724,12 +14177,12 @@ th {
     /*end*/
   }
   #wrapper_container #main-content h1 {
-    font-size: 1.05em;
+    font-size: 1.2em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   #wrapper_container #main-content h3 {
     font-size: 0.95em;
@@ -13764,13 +14217,19 @@ th {
     font-size: 0.75em;
     line-height: 2.2em;
   }
-  #wrapper_container #main-content .post .read_more {
-    font-size: 0.75em;
-    height: 35px;
-    width: 20.9652349%;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.85em;
+    width: 45%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    width: 20.9652349%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     font-size: 0.75em;
@@ -14113,8 +14572,48 @@ th {
   #wrapper_container #main-content div#photocontainer div.content div#panel8 figure.showcase-container figcaption.showcase-content div.links a {
     font-size: 0.8em;
   }
-  #wrapper_container #main-content #contactform p {
-    font-size: 0.80em;
+  #wrapper_container #main-content #contactform {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 {
+    font-size: 1em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
+    font-size: 1.2em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 40%;
@@ -14123,20 +14622,17 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.4em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.4em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.4em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.4em;
   }
+  #wrapper_container footer ul li {
+    text-indent: 0;
+  }
   #wrapper_container footer ul li a {
-    width: 100%;
+    font-size: 0.75em;
   }
   #wrapper_container footer p#copyr {
     width: 60%;
@@ -14194,7 +14690,7 @@ th {
     /*end of mobile Nav*/
   }
   #wrapper_container header hgroup {
-    width: 65%;
+    width: 75%;
   }
   #wrapper_container header hgroup h1#logo {
     font-size: 1.45em;
@@ -14277,32 +14773,36 @@ th {
   #wrapper_container #main-content {
     padding: 0.5em 0 0 0;
     /*Photocontainer*/
-    /*end*/
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     height: 40px;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.9em;
+    font-size: 1.1em;
     text-indent: 0;
     width: 100%;
     margin: 1em auto;
   }
   #wrapper_container #main-content h3 {
-    font-size: 0.85em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content p {
     line-height: 1.95em;
     font-size: 0.75em;
   }
+  #wrapper_container #main-content .map_container {
+    float: none;
+    width: 85%;
+    margin: 1em auto;
+  }
   #wrapper_container #main-content ul.contact-details {
     width: 95%;
   }
   #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
@@ -14313,6 +14813,7 @@ th {
   }
   #wrapper_container #main-content ul.contact-details li a:hover {
     line-height: 40px;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .social-1 {
     width: 60%;
@@ -14605,14 +15106,19 @@ th {
     width: 40%;
     margin: 5% auto;
   }
-  #wrapper_container #main-content .post .read_more {
-    margin-left: 1%;
-    width: 25.9652%;
-    font-size: 0.75em;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.8em;
+    width: 45%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.80em;
-    width: 25.9652%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-content {
     width: 75%;
@@ -14827,7 +15333,7 @@ th {
     line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
     font-size: 0.85em;
@@ -14845,7 +15351,7 @@ th {
     line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
@@ -14875,7 +15381,7 @@ th {
     line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     font-size: 0.85em;
@@ -14890,13 +15396,13 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     margin: 0 0 0.4em 0;
-    height: 44px;
-    line-height: 44px;
+    height: 40px;
+    line-height: 40px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.85em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.8em;
   }
   #wrapper_container #main-content div#photocontainer div.content {
@@ -15020,27 +15526,47 @@ th {
     font-size: 0.80em;
   }
   #wrapper_container #main-content #contactform {
-    font-size: 0.75em;
-    float: none;
-    width: 100%;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
     font-size: 1em;
   }
-  #wrapper_container #main-content #contactform p input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.9em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
     font-size: 1.2em;
-    width: 15.9652%;
   }
-  #wrapper_container #main-content #respond .comment-form input[type="submit"] {
-    width: 35%;
-  }
-  #wrapper_container #main-content #respond .comment-form input[type="submit"]:hover {
-    width: 35%;
-  }
-  #wrapper_container #main-content .map_container {
-    float: none;
-    width: 85%;
-    margin: 1em auto;
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 55%;
@@ -15049,15 +15575,9 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.4em;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.4em;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.4em;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.4em;
   }
@@ -15068,20 +15588,13 @@ th {
   }
   #wrapper_container footer ul li {
     text-indent: 0;
-    height: 23%;
   }
   #wrapper_container footer ul li a {
-    color: #062351;
-    margin: 0;
-    padding: 0;
     font-size: 0.80em;
-    height: 100%;
-    line-height: 1.7em;
   }
   #wrapper_container footer ul li a:hover {
     margin: 0;
     font-size: 0.75em;
-    line-height: 1.7em;
   }
   #wrapper_container footer p#copyr {
     width: 60%;
@@ -15181,17 +15694,16 @@ th {
   #wrapper_container #main-content {
     padding: 0.5em 0 0 0;
     /*Photocontainer*/
-    /*end*/
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
     height: auto;
     line-height: 40px;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.9em;
+    font-size: 1em;
     text-indent: 0;
     width: 100%;
     margin: 1em auto;
@@ -15200,11 +15712,16 @@ th {
     line-height: 1.9em;
     font-size: 0.7em;
   }
+  #wrapper_container #main-content .map_container {
+    float: none;
+    width: 85%;
+    margin: 1em auto;
+  }
   #wrapper_container #main-content ul.contact-details {
     font-size: 0.8em;
   }
   #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
@@ -15212,9 +15729,7 @@ th {
   #wrapper_container #main-content ul.contact-details li a {
     line-height: 40px;
     letter-spacing: 0.05em;
-  }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    line-height: 40px;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .social-1 {
     width: 70%;
@@ -15398,14 +15913,19 @@ th {
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-tablet:hover {
     font-size: 2.1em;
   }
-  #wrapper_container #main-content .post .read_more {
-    margin-left: 1%;
-    width: 21.9652%;
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.75em;
+    width: 100%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.80em;
-    width: 21.9652%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     font-size: 0.70em;
@@ -15698,10 +16218,10 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a:hover {
     font-weight: normal;
@@ -15715,11 +16235,11 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.95em;
+    font-size: 1em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
-    font-size: 0.85em;
+    font-size: 0.8em;
     display: inline-block;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink:hover {
@@ -15744,10 +16264,10 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a:hover {
     font-style: italic;
@@ -15762,7 +16282,7 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.83em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.68em;
   }
   #wrapper_container #main-content div#photocontainer {
@@ -15876,25 +16396,50 @@ th {
     font-size: 0.8em;
   }
   #wrapper_container #main-content #contactform {
-    font-size: 0.75em;
     float: none;
     width: 100%;
     display: inline-block;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
     font-size: 1em;
   }
-  #wrapper_container #main-content #contactform p input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.85em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
     font-size: 1.2em;
-    width: 15.9652%;
   }
-  #wrapper_container #main-content #respond .comment-form input[type="submit"] {
-    width: 35%;
-  }
-  #wrapper_container #main-content .map_container {
-    float: none;
-    width: 85%;
-    margin: 1em auto;
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 60%;
@@ -15903,18 +16448,9 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.45em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.45em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.45em;
-    line-height: 48px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.45em;
     line-height: 48px;
@@ -15929,10 +16465,10 @@ th {
     height: 23%;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
-  #wrapper_container footer ul li a:hover {
-    font-size: 0.65em;
+  #wrapper_container footer ul li a::hover {
+    font-size: 0.7em;
   }
 }
 /* 375px */
@@ -16027,40 +16563,46 @@ th {
   #wrapper_container #main-content {
     padding: 0.5em 0 0 0;
     /*Photocontainer*/
-    /*end*/
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.1em;
     text-align: center;
     height: auto;
-    line-height: 40px;
+    line-height: 30px;
+    margin-bottom: 0.5em;
   }
   #wrapper_container #main-content h2 {
     font-size: 0.9em;
     text-indent: 0;
     width: 100%;
+    height: auto;
+    line-height: 30px;
     margin: 1em auto;
   }
   #wrapper_container #main-content p {
     line-height: 1.9em;
     font-size: 0.7em;
   }
+  #wrapper_container #main-content .map_container {
+    float: none;
+    margin: 1em auto;
+    min-height: 173px;
+  }
   #wrapper_container #main-content ul.contact-details {
     font-size: 0.8em;
   }
   #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
+    width: 40px;
   }
   #wrapper_container #main-content ul.contact-details li a {
     line-height: 40px;
     letter-spacing: 0.05em;
-  }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    line-height: 40px;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .social-1 {
     width: 70%;
@@ -16090,11 +16632,15 @@ th {
     font-size: 1em;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1.1em;
+    font-size: 1.05em;
     text-align: center;
+    height: auto;
+    line-height: 30px;
   }
   #wrapper_container #main-content .post h2 {
     font-size: 1em;
+    height: auto;
+    line-height: 30px;
   }
   #wrapper_container #main-content .post h3 {
     width: 100%;
@@ -16244,14 +16790,19 @@ th {
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-tablet:hover {
     font-size: 2.1em;
   }
-  #wrapper_container #main-content .post .read_more {
-    margin-left: 1%;
-    width: 30.9652%;
+  #wrapper_container #main-content .post div.continue-reading {
     font-size: 0.75em;
+    width: 100%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.80em;
-    width: 30.9652%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     font-size: 0.70em;
@@ -16437,7 +16988,10 @@ th {
     width: 17%;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1em;
+    font-size: 0.9em;
+    line-height: 30px;
+    height: auto;
+    margin-bottom: 1em;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.7em;
@@ -16507,7 +17061,7 @@ th {
     width: 95%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.8em;
+    font-size: 0.7em;
     bottom: -2.5em;
     padding: 0.5em 0;
   }
@@ -16525,7 +17079,7 @@ th {
     height: 417px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe a.fancybox {
     width: 50.59%;
@@ -16553,7 +17107,7 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
     font-size: 0.8em;
@@ -16570,7 +17124,7 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.95em;
+    font-size: 1em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
@@ -16599,7 +17153,7 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     font-size: 0.8em;
@@ -16613,16 +17167,18 @@ th {
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li {
     margin: 0 0 0.2em 0;
+    height: 44px;
+    line-height: 44px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.75em;
     line-height: 15px;
     padding-top: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a:hover {
     font-size: 0.75em;
     line-height: 15px;
     padding-top: 0.7em;
@@ -16739,24 +17295,48 @@ th {
     width: 70%;
   }
   #wrapper_container #main-content #contactform {
-    font-size: 0.75em;
     float: none;
-    width: 100%;
-    display: inline-block;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
     font-size: 1em;
   }
-  #wrapper_container #main-content #contactform p input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.8em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
     font-size: 1.2em;
-    width: 15.9652%;
   }
-  #wrapper_container #main-content #respond .comment-form input[type="submit"] {
-    width: 35%;
-  }
-  #wrapper_container #main-content .map_container {
-    float: none;
-    margin: 1em auto;
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 60%;
@@ -16765,18 +17345,9 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.45em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.45em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.45em;
-    line-height: 48px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.45em;
     line-height: 48px;
@@ -16791,10 +17362,10 @@ th {
     height: 23%;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
-  #wrapper_container footer ul li a:hover {
-    font-size: 0.65em;
+  #wrapper_container footer ul li a::hover {
+    font-size: 0.7em;
   }
 }
 @media only screen and (max-width: 22.5em) {
@@ -16895,36 +17466,41 @@ th {
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.15em;
     text-align: center;
     height: auto;
-    line-height: 25px;
+    line-height: 30px;
+    margin-bottom: 0.5em;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.85em;
+    font-size: 1em;
     text-indent: 0;
     width: 100%;
-    margin: 1em auto;
+    margin-bottom: 0.5em;
+    height: auto;
+    line-height: 30px;
   }
   #wrapper_container #main-content p {
     line-height: 1.9em;
     font-size: 0.7em;
   }
+  #wrapper_container #main-content .map_container {
+    float: none;
+    min-height: 165px;
+  }
   #wrapper_container #main-content ul.contact-details {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.85em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
+    width: 35px;
   }
   #wrapper_container #main-content ul.contact-details li a {
     line-height: 40px;
-    letter-spacing: 0.05em;
-  }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    line-height: 40px;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .social-1 {
     width: 70%;
@@ -16957,11 +17533,11 @@ th {
     font-size: 1em;
   }
   #wrapper_container #main-content .post h1 {
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: center;
   }
   #wrapper_container #main-content .post h2 {
-    font-size: 1em;
+    font-size: 0.95em;
     height: auto;
   }
   #wrapper_container #main-content .post h3 {
@@ -17112,13 +17688,19 @@ th {
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-tablet:hover {
     font-size: 2.1em;
   }
-  #wrapper_container #main-content .post .read_more {
-    width: 30.9652%;
-    font-size: 0.75em;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.7em;
+    width: 100%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.80em;
-    width: 30.9652%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     font-size: 0.70em;
@@ -17304,7 +17886,7 @@ th {
     width: 17%;
   }
   #wrapper_container #main-content .frontpage_container .text-box h1 {
-    font-size: 1em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .text-box p {
     font-size: 0.7em;
@@ -17373,7 +17955,7 @@ th {
     width: 95%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     height: 83.524%;
@@ -17418,7 +18000,7 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
     font-size: 0.75em;
@@ -17435,7 +18017,7 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.9em;
+    font-size: 0.95em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
@@ -17464,7 +18046,7 @@ th {
     line-height: 24px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     font-size: 0.75em;
@@ -17482,12 +18064,12 @@ th {
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li a {
     font-size: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a {
     font-size: 0.75em;
     line-height: 15px;
     padding-top: 0.7em;
   }
-  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(7) a:hover {
+  #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider ul#list li:nth-of-type(6) a:hover {
     font-size: 0.7em;
     line-height: 15px;
     padding-top: 0.7em;
@@ -17604,23 +18186,48 @@ th {
     width: 70%;
   }
   #wrapper_container #main-content #contactform {
-    font-size: 0.75em;
     float: none;
-    width: 100%;
-    display: inline-block;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
     font-size: 1em;
   }
-  #wrapper_container #main-content #contactform p input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.75em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
     font-size: 1.2em;
-    width: 20.9652%;
   }
-  #wrapper_container #main-content #respond .comment-form input[type="submit"] {
-    width: 35%;
-  }
-  #wrapper_container #main-content .map_container {
-    float: none;
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 60%;
@@ -17629,18 +18236,9 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.4em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.4em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.4em;
-    line-height: 48px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.4em;
     line-height: 48px;
@@ -17655,10 +18253,10 @@ th {
     height: 23%;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
   #wrapper_container footer ul li a:hover {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
 }
 @media only screen and (max-width: 20em) {
@@ -17752,40 +18350,44 @@ th {
   #wrapper_container #main-content {
     padding: 0.5em 0 0 0;
     /*Photocontainer*/
-    /*end*/
   }
   #wrapper_container #main-content h1 {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.2em;
     text-align: center;
     height: auto;
-    line-height: 25px;
+    line-height: 30px;
+    margin-bottom: 0.5em;
   }
   #wrapper_container #main-content h2 {
-    font-size: 0.85em;
+    font-size: 1em;
     text-indent: 0;
     width: 100%;
-    margin: 1em auto;
+    margin-bottom: 0.5em;
+    height: auto;
+    line-height: 30px;
   }
   #wrapper_container #main-content p {
     line-height: 1.9em;
     font-size: 0.7em;
   }
+  #wrapper_container #main-content .map_container {
+    float: none;
+    width: 85%;
+    min-height: 148px;
+  }
   #wrapper_container #main-content ul.contact-details {
     font-size: 0.8em;
   }
   #wrapper_container #main-content ul.contact-details li {
-    font-size: 0.9em;
+    font-size: 1em;
   }
   #wrapper_container #main-content ul.contact-details li::before {
     font-size: 1.4em;
   }
   #wrapper_container #main-content ul.contact-details li a {
     line-height: 40px;
-    letter-spacing: 0.05em;
-  }
-  #wrapper_container #main-content ul.contact-details li a:hover {
-    line-height: 40px;
+    font-size: 0.85em;
   }
   #wrapper_container #main-content .social-1 {
     width: 70%;
@@ -17975,13 +18577,19 @@ th {
   #wrapper_container #main-content .post .website-text .links p.formats span a i.fa-tablet:hover {
     font-size: 2.1em;
   }
-  #wrapper_container #main-content .post .read_more {
-    width: 35.9652%;
-    font-size: 0.75em;
+  #wrapper_container #main-content .post div.continue-reading {
+    font-size: 0.65em;
+    width: 100%;
+    margin: 2% 0;
   }
-  #wrapper_container #main-content .post .read_more:hover {
-    font-size: 0.80em;
-    width: 35.9652%;
+  #wrapper_container #main-content .post div.continue-reading a {
+    display: block;
+  }
+  #wrapper_container #main-content .post div.continue-reading a:hover {
+    margin: 2% 0;
+  }
+  #wrapper_container #main-content .post div.continue-reading a span.screen-reader-text:hover {
+    color: #fff;
   }
   #wrapper_container #main-content .post div.sharedaddy .sd-title {
     font-size: 0.70em;
@@ -18239,7 +18847,7 @@ th {
     width: 95%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont #chart #bars li span {
-    font-size: 0.7em;
+    font-size: 0.65em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider {
     /*Hero Slider End*/
@@ -18281,7 +18889,7 @@ th {
     line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li:before {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul li a {
     font-size: 0.68em;
@@ -18298,7 +18906,7 @@ th {
     line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li:before {
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 1.5em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.abobe figcaption ul#lyndalinks li a.lyndalink {
@@ -18309,7 +18917,7 @@ th {
     font-style: italic;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert a.fancybox {
-    width: 35.78%;
+    width: 21.59%;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert a.fancybox img {
     width: 100%;
@@ -18327,7 +18935,7 @@ th {
     line-height: 20px;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li:before {
-    font-size: 0.85em;
+    font-size: 0.9em;
   }
   #wrapper_container #main-content .frontpage_container .prof_cont .hero-slider .mask div.slider-body .panel figure.cert figcaption ul li a {
     font-size: 0.7em;
@@ -18467,24 +19075,48 @@ th {
     width: 70%;
   }
   #wrapper_container #main-content #contactform {
-    font-size: 0.75em;
     float: none;
-    width: 100%;
-    display: inline-block;
+    padding: 0.5em;
   }
-  #wrapper_container #main-content #contactform p {
+  #wrapper_container #main-content #contactform div.wpcf7 {
     font-size: 1em;
   }
-  #wrapper_container #main-content #contactform p input[type="submit"] {
+  #wrapper_container #main-content #contactform div.wpcf7 span.ajax-loader {
+    margin: 3% auto;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form {
+    padding: 0.5em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p {
+    font-size: 0.7em;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label {
+    height: 30px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+    display: block;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea {
+    width: 100%;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email],
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select {
+    height: 35px;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label select:focus,
+  #wrapper_container #main-content #contactform div.wpcf7 form p label textarea:focus {
+    box-shadow: 0 0 5px #ccd3de;
+  }
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"] {
+    width: 25%;
     font-size: 1.2em;
-    width: 25.9652%;
   }
-  #wrapper_container #main-content #respond .comment-form input[type="submit"] {
-    width: 35%;
-  }
-  #wrapper_container #main-content .map_container {
-    float: none;
-    width: 85%;
+  #wrapper_container #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+    background-color: #062351;
+    color: #fff;
   }
   #wrapper_container footer .socialpics {
     width: 60%;
@@ -18493,18 +19125,9 @@ th {
     width: 23%;
     margin-left: 2%;
   }
-  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin {
-    font-size: 1.35em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter {
-    font-size: 1.35em;
-    line-height: 48px;
-  }
-  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook {
-    font-size: 1.35em;
-    line-height: 48px;
-  }
+  #wrapper_container footer .socialpics .linkedin-icon span .fa-linkedin,
+  #wrapper_container footer .socialpics .twitter-icon span .fa-twitter,
+  #wrapper_container footer .socialpics .facebook-icon span .fa-facebook,
   #wrapper_container footer .socialpics .google-icon span .fa-github {
     font-size: 1.35em;
     line-height: 48px;
@@ -18519,10 +19142,10 @@ th {
     height: 23%;
   }
   #wrapper_container footer ul li a {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
   #wrapper_container footer ul li a:hover {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
 }
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
