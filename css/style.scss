@@ -157,9 +157,9 @@ $colorseven:#accc51-green-ligh
 					}
 					span:last-of-type {
 						height: 100%;
-						margin: 0;
 						color: $color1;
 						display: inline-block;
+						margin: 0 0.1em;
 					}
 				}
 				h1#logo-blog {
@@ -182,8 +182,8 @@ $colorseven:#accc51-green-ligh
 					}
 					span:last-of-type {
 						height: 100%;
-						margin: 0;
 						color: $color1;
+						margin: 0 0.1em;
 					}
 				}
 				h2 {
@@ -712,7 +712,7 @@ $colorseven:#accc51-green-ligh
 							width: 100%;
 							margin-left: 0;
 							text-align: center;
-							display: block;
+							display: inline-block;
 							font-size: 0.9em;
 							height: 100%;
 							background-color: $color2;
@@ -752,18 +752,19 @@ $colorseven:#accc51-green-ligh
 						border: 1px solid $color1;
 						font-weight:bold;
 						p {
-							line-height: 1em;
-							width: 83%;
+							
+							width: 82%;
 							display: inline-block;
 							margin: 0;
+							color: $color1;
 							font-size: 1em;
-							padding-top: 0.5em;
+							
 							margin-bottom: 0;
-							float: left;
+							padding-left: 0.5em;
 						}
 						span.post-meta-key {
 							display: inline-block;
-							width: 15%;
+							width: 14%;
 							height: 35px;
 							float: left;
 							font-size: 1.1em;
@@ -771,25 +772,25 @@ $colorseven:#accc51-green-ligh
 							border-right:1px solid $color1;
 							background-color: $color2;
 							color: $color1;
-							margin-right: 1%;
+							
 							line-height: 35px;
 						}
 						a {
-							width: 100%;
+							width: auto;
 							margin-left: 0;
 							text-align: left;
-							display: block;
+							display: inline-block;
 							font-size: 1em;
 							height: 100%;
-							text-indent: 0;
-							line-height: 35px;
+							text-indent: 0.5em;
+							
 							color: $color1;
 							background-color: $color4;
 							&:hover {
 								color: $color1;
 								margin-left: 0;
 								display: block;
-								width: 100%;
+								
 								&::after {
 									content: " > ";
 								}
@@ -809,26 +810,27 @@ $colorseven:#accc51-green-ligh
 						border: 1px solid $color1;
 						font-weight:bold;
 						p {
-							line-height: 1em;
-							width: 83%;
+							line-height: 1.35em;
+							width: 82%;
 							display: inline-block;
 							margin: 0;
+							color: $color1;
 							font-size: 1em;
-							padding-top: 0.5em;
+							padding: 0.5em;
 							margin-bottom: 0;
-							float: left;
+							
 						}
 						span.post-meta-key {
 							display: inline-block;
-							width: 15%;
-							height: 109px;
+							width: 14%;
+							min-height: 110px;
 							float: left;
 							font-size: 1.2em;
 							text-indent: 1%;
 							border-right:1px solid $color1;
 							background-color: $color2;
 							color: $color1;
-							margin-right: 1%;
+							
 							line-height: 35px;
 						}
 						a {
@@ -837,8 +839,7 @@ $colorseven:#accc51-green-ligh
 							text-align: center;
 							display: inline-block;
 							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
+							height: auto;
 							color: $color1;
 							background-color: $color4;
 							&:hover {
@@ -910,7 +911,7 @@ $colorseven:#accc51-green-ligh
 							font-weight:bold;
 							span:first-of-type {
 								font-size: 0.95em;
-								width: 15%;
+								width: 14%;
 								text-indent: 1%;
 								display: inline-block;
 								text-align: left;
@@ -1162,7 +1163,7 @@ $colorseven:#accc51-green-ligh
 					line-height: 40px;
 					list-style: none;
 					background-color: $color3;
-					width: 30%;
+					width: 40%;
 					color: $color1;
 					@include originTran( 50% 50%);
 					@include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
@@ -1839,11 +1840,11 @@ $colorseven:#accc51-green-ligh
 							content: "\f108";
 							font-style: normal;
 							display: inline-block;
-							height: 35px;
+							line-height: 35px;
 							width: 45px;
 							text-align: center;
 							font-size: 1.4em;
-							float: left;
+							
 						}
 						li#fa-wordpress {
 							font-size: 0.9em;
@@ -1854,11 +1855,11 @@ $colorseven:#accc51-green-ligh
 							font-family: 'FontAwesome';
 							content: "\f19a";
 							display: inline-block;
-							height: 35px;
+							line-height: 35px;
 							width: 45px;
 							text-align: center;
 							font-size: 1.4em;
-							float: left;
+							
 						}
 						li#fa-mobile {
 							font-size: 0.9em;
@@ -1870,11 +1871,11 @@ $colorseven:#accc51-green-ligh
 							content: "\f05a";
 							font-style: normal;
 							display: inline-block;
-							height: 35px;
+							line-height: 35px;
 							width: 45px;
 							text-align: center;
 							font-size: 1.5em;
-							float: left;
+							
 						}
 					}
 				}
@@ -2718,7 +2719,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						margin: 0 0.1em;
 					}
 				}
 				h2 {
@@ -3056,41 +3057,23 @@ $colorseven:#accc51-green-ligh
 					text-indent: 0;
 					width: 98%;
 					margin: 0 1%;
-					display: block;
-					padding: 0;
 					li {
 						@include box-sizing($type: border-box);
 						margin: 0 0 0.5em 0;
-						height: auto;
-						display: inline-block;
 						font-size: 0.85em;
-						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
-							display: inline-block;
-							width: 20%;
+							width: 16%;
 							height: 35px;
-							float: left;
 							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
 						}
 						p {
 							width: 78%;
 							font-size: 0.9em;
 						}
 						a {
-							width: 100%;
-							margin-left: 0;
-							text-align: left;
-							display: block;
 							font-size: 0.9em;
-							height: 100%;
-							text-indent: 0;
 							line-height: 35px;
 							&:hover {
-								margin-left: 0;
 								display: block;
 								width: 100%;
 								&::after {
@@ -3101,32 +3084,23 @@ $colorseven:#accc51-green-ligh
 					}
 					li:nth-of-type(2) {
 						margin: 0 0 0.5em 0;
-						height: auto;
-						display: inline-block;
 						font-size: 0.8em;
-						clear: both;
 						line-height: 22px;
-						border: 2px solid $color1;
 						p {
-							width: 78%;
+							width: 82%;
 							font-size: 0.9em;
 						}
 						span.post-meta-key {
-							display: inline-block;
-							width: 20%;
+							
+							width: 16%;
 							height: 109px;
-							float: left;
 							font-size: 1.1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
 						}
 						a {
 							margin-left: 0;
-							display: inline-block;
 							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
+							height: 25px;
+							line-height: 25px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -3174,7 +3148,7 @@ $colorseven:#accc51-green-ligh
 					width: 77%;
 					display: inline-block;
 					.links {
-						@include box-sizing($type: border-box);
+						
 						height: 50px;
 						margin: 0 0 0 1%;
 						width: 98%;
@@ -3183,23 +3157,17 @@ $colorseven:#accc51-green-ligh
 							width: 25%;
 							letter-spacing: 0.1em;
 							font-size: 0.95em;
-							line-height: 46px;
+							
 						}
 						a:hover {
 							font-weight: bold;
 						}
 						p.formats {
-							margin: 0 0 1%;
-							letter-spacing: 0.05em;
 							line-height: 1.6em;
 							float: left;
 							span:first-of-type {
 								font-size: 0.9em;
-								width: 20%;
-								line-height: 46px;
-								height: 46px;
-								text-indent: 1%;
-
+								width: 16%;
 							}
 							p {
 								width: 73%;
@@ -3207,24 +3175,21 @@ $colorseven:#accc51-green-ligh
 							}
 							span {
 								font-size: 0.9em;
-								width: 25%;
+								width: 27.69%;
 
 								a {
 									width: 100%;
-									height: 46px;
+									height: 48px;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 1.5em;
 										width: 100%;
-										height: 46px;
-										line-height: 46px;
 									}
 									i.fa-mobile:hover,
 									i.fa-tablet:hover {
 										font-size: 1.25em;
-										height: 46px;
-										line-height: 46px;
+
 									}
 								}
 							}
@@ -3377,18 +3342,7 @@ $colorseven:#accc51-green-ligh
 							}
 						}
 					}
-					.read_more {
-						font-size: 0.9em;
-						height: 35px;
-						line-height: 35px;
-						width: 15.965%;
-						letter-spacing: 0.05em;
-						margin: 2% 0;
-						&:hover {
-							margin: 2% 0;
-							letter-spacing: 0.075em;
-						}
-					}
+					
 					/*Social media share buttons*/
 					div.sharedaddy {
 						width: 100%;
@@ -3460,7 +3414,7 @@ $colorseven:#accc51-green-ligh
 				div.continue-reading {
 					font-size: 0.9em;
 					
-					width: 40%;
+					width: 45%;
 					
 					margin: 2% 0;
 					a{
@@ -3900,7 +3854,7 @@ $colorseven:#accc51-green-ligh
 							font-style: normal;
 							display: inline-block;
 							height: 35px;
-							width: 50px;
+							width: 45px;
 							text-align: center;
 							font-size: 1.5em;
 						}
@@ -3914,7 +3868,7 @@ $colorseven:#accc51-green-ligh
 							content: "\f19a";
 							display: inline-block;
 							height: 35px;
-							width: 50px;
+							width: 45px;
 							text-align: center;
 							font-size: 1.5em;
 						}
@@ -3929,7 +3883,7 @@ $colorseven:#accc51-green-ligh
 							font-style: normal;
 							display: inline-block;
 							height: 35px;
-							width: 50px;
+							width: 45px;
 							text-align: center;
 							font-size: 1.6em;
 						}
@@ -4518,7 +4472,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -4696,6 +4650,58 @@ $colorseven:#accc51-green-ligh
 						font-size: 0.8em;
 					}
 				}
+				ul.post-meta {
+					text-indent: 0;
+					width: 98%;
+					margin: 0 1%;
+					li {
+						
+						margin: 0 0 0.5em 0;
+						font-size: 0.85em;
+						span.post-meta-key {
+
+							font-size: 0.9em;
+						}
+						p {
+							width: 82%;
+							font-size: 0.9em;
+						}
+						a {
+							font-size: 0.9em;
+
+							&:hover {
+								display: block;
+								width: 100%;
+								&::after {
+									content: " > ";
+								}
+							}
+						}
+					}
+					li:nth-of-type(2) {
+						margin: 0 0 0.5em 0;
+						font-size: 0.8em;
+						p {
+							width: 82%;
+							font-size: 0.9em;
+						}
+						span.post-meta-key {
+							
+							width: 16%;
+							height: 109px;
+							font-size: 1em;
+						}
+						a {
+							margin-left: 0;
+							font-size: 1em;
+
+							&:hover {
+								margin-left: 0;
+
+							}
+						}
+					}
+				}
 				.postimg {
 					width: 20%;
 				}
@@ -4703,6 +4709,57 @@ $colorseven:#accc51-green-ligh
 					clear: both;
 					height: auto;
 					width: 22%;
+				}
+				.website-text{
+					.links {
+						margin: 0 0 0 1%;
+						width: 98%;
+						a {
+							width: 25%;
+							letter-spacing: 0.1em;
+							font-size: 0.9em;
+						}
+						a:hover {
+							font-weight: bold;
+						}
+						p.formats {
+							line-height: 1.6em;
+							float: left;
+							span:first-of-type {
+								font-size: 0.85em;
+								width: 16%;
+							}
+							p {
+								width: 73%;
+								font-size: 0.9em;
+							}
+							span {
+								font-size: 0.9em;
+								width: 27.49%;
+
+								a {
+									width: 100%;
+									height: 48px;
+									i.fa-desktop,
+									i.fa-mobile,
+									i.fa-tablet {
+										font-size: 1.5em;
+										width: 100%;
+									}
+									i.fa-mobile:hover,
+									i.fa-tablet:hover {
+										font-size: 1.25em;
+
+									}
+								}
+							}
+						}
+						.links:last-of-type {
+							border: 0;
+						}
+					}
+				
+				
 				}
 				header.byline {
 					height: auto;
@@ -4789,7 +4846,7 @@ $colorseven:#accc51-green-ligh
 				div.continue-reading {
 					font-size: 0.9em;
 					
-					width: 40%;
+					width: 45%;
 					
 					margin: 2% 0;
 					a{
@@ -5328,7 +5385,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -5512,18 +5569,7 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 				}
-				ul {
-					line-height: 1.5em;
-					text-indent: 0;
-					li {
-						width: 100%;
-						margin: 0;
-						font-size: 0.8em;
-						a {
-							margin-left: 0;
-						}
-					}
-				}
+	
 				ul.post-list {
 					width: 90%;
 					li {
@@ -5613,23 +5659,16 @@ $colorseven:#accc51-green-ligh
 					li {
 						margin: 0 0 0.5em 0;
 						font-size: 0.8em;
-						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
-							width: 20%;
-							height: 35px;
-							font-size: 1em;
-							line-height: 35px;
+							width: 17%;
+							font-size: 0.9em;
 						}
 						p {
 							width: 78%;
 							font-size: 0.9em;
-							line-height: 2em;
 						}
 						a {
-							margin-left: 0;
-							font-size: 0.95em;
-							text-indent: 0;
+							font-size: 0.9em;
 							line-height: 35px;
 							&:hover {
 								margin-left: 0;
@@ -5641,25 +5680,20 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 					li:nth-of-type(2) {
-						margin: 0 0 0.5em 0;
 						font-size: 0.8em;
-						clear: both;
-						line-height: 20px;
 						padding: 0;
 						p {
-							width: 78%;
+							width: 82%;
 							font-size: 0.85em;
 							line-height: 1.4em;
 						}
 						span.post-meta-key {
-							width: 20%;
-							height: 109px;
-							font-size: 1em;
+							width: 17%;
+							font-size: 0.9em;
 
 						}
 						a {
 							margin-left: 0;
-							font-size: 1em;
 							&:hover {
 								margin-left: 0;
 							}
@@ -5673,53 +5707,48 @@ $colorseven:#accc51-green-ligh
 				.website-text {
 					width: 75%;
 					.links {
-						height: 50px;
+						
 						margin: 0 0 0 1%;
 						clear: left;
 						a {
-							height: 100%;
 							width: 25%;
 							font-size: 0.8em;
 							line-height: 50px;
-							float: left;
-							text-align: center;
 						}
 						a:hover {
 							font-weight: bold;
 						}
 						p.formats {
 							margin: 0 0 1%;
-							letter-spacing: 0.05em;
 							line-height: 1.6em;
 							float: left;
 							span:first-of-type {
-								font-size: 0.8em;
-								width: 20%;
+								font-size: 0.75em;
+								width: 17%;
 							}
 							p {
-								width: 78%;
+								width: 82%;
 								font-size: 0.85em;
 							}
 							span {
 								font-size: 0.95em;
-								width: 25%;
+								width: 27.19%;
+								
 								a {
-									line-height: 46px;
-									height: 46px;
+									line-height: 48px;
+									height: 48px;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 1.55em;
 										text-align: center;
-										height: 46px;
-										line-height: 46px;
+
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
 									i.fa-tablet:hover {
 										font-size: 1.45em;
-										height: 46px;
-										line-height: 46px;
+		
 									}
 								}
 							}
@@ -6396,7 +6425,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -6648,26 +6677,17 @@ $colorseven:#accc51-green-ligh
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
 						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
-							width: 20;
+							width: 17%;
 							height: 35px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
 							line-height: 35px;
 						}
 						p {
-							width: 73%;
+							width: 82%;
 							font-size: 0.9em;
-							line-height: 2em;
 						}
 						a {
 							margin-left: 0;
-							text-align: left;
-							font-size: 1em;
-							text-indent: 0;
 							line-height: 35px;
 							&:hover {
 								margin-left: 0;
@@ -6680,28 +6700,19 @@ $colorseven:#accc51-green-ligh
 					}
 					li:nth-of-type(2) {
 						margin: 0 0 0.5em 0;
-						clear: both;
-						line-height: 20px;
 						padding: 0;
 						p {
-							width: 78%;
+							width: 82%;
 							font-size: 0.8em;
 						}
 						span.post-meta-key {
-							width: 20%;
+							width: 17%;
 							height: 109px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							font-size:0.85em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
-							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -6716,15 +6727,10 @@ $colorseven:#accc51-green-ligh
 					.links {
 						height: 50px;
 						margin: 0 0 0 1%;
-						display: block;
-						padding: 0;
-						clear: left;
 						a {
 							height: 100%;
 							width: 25%;
 							font-size: 0.8em;
-							float: left;
-							text-align: center;
 						}
 						a:hover {
 							font-weight: bold;
@@ -6732,14 +6738,12 @@ $colorseven:#accc51-green-ligh
 						p.formats {
 							margin: 0 0 1%;
 							letter-spacing: 0.05em;
-							line-height: 1.6em;
 							span:first-of-type {
-								font-size: 0.75em;
-								width: 20%;
+								font-size: 0.7em;
+								width: 17%;
 							}
 							span {
 								font-size: 0.95em;
-								width: 25%;
 								a {
 									width: 100%;
 									display: block;
@@ -6749,17 +6753,12 @@ $colorseven:#accc51-green-ligh
 									i.fa-tablet {
 										font-size: 1.4em;
 										width: 100%;
-										display: inline-block;
-										text-align: center;
-										height: 46px;
-										line-height: 46px;
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
 									i.fa-tablet:hover {
 										font-size: 1.4em;
-										height: 46px;
-										line-height: 46px;
+
 									}
 								}
 							}
@@ -7357,7 +7356,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 70%;
 				h1#logo {
 					font-size: 1.6em;
 					width: 100%;
@@ -7376,7 +7375,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -7649,30 +7648,20 @@ $colorseven:#accc51-green-ligh
 					width: 98%;
 					padding: 0;
 					li {
-						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
-						clear: both;
 						line-height: 35px;
 						span.post-meta-key {
-							width: 25%;
-							height: 35px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							width: 20%;
+							text-indent: 0.5%;
+							
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.9em;
-							line-height: 2em;
 						}
 						a {
 							margin-left: 0;
-							text-align: left;
-							font-size: 1em;
-							text-indent: 0;
-							line-height: 35px;
+							
 							&:hover {
 								margin-left: 0;
 								width: 100%;
@@ -7683,30 +7672,24 @@ $colorseven:#accc51-green-ligh
 						}
 					}
 					li:nth-of-type(2) {
-						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
-						clear: both;
-						line-height: 20px;
 						padding: 0;
 						span.post-meta-key {
-							width: 25%;
+							width: 20%;
 							height: 109px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							text-indent: 0.5%;
+							margin-right: 0.5%;
+							line-height:23px;							
+
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.8em;
+							padding: 0.2em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
-							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -7721,38 +7704,28 @@ $colorseven:#accc51-green-ligh
 					.links {
 						height: 50px;
 						margin: 0 0 0 1%;
-						display: block;
-						padding: 0;
-						clear: left;
 						width: 98%;
 						a {
 							height: 100%;
 							width: 25%;
 							font-size: 0.8em;
-							line-height: 50px;
-							float: left;
-							text-align: center;
 						}
 						a:hover {
 							font-weight: bold;
 						}
 						p.formats {
-							font-size: 0.85em;
 							margin: 0 0 1%;
-							letter-spacing: 0.05em;
-							line-height: 1.6em;
-							float: left;
 							span:first-of-type {
-								font-size: 0.9em;
-								width: 25%;
+								font-size: 0.65em;
+								width: 20%;
+								text-indent: 0.5%;
 							}
 							span {
 								font-size: 0.9em;
-								width: 25%;
+								width: 25.69%;
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
@@ -7801,7 +7774,7 @@ $colorseven:#accc51-green-ligh
 				div.continue-reading {
 					font-size: 0.85em;
 					
-					width: 45%;
+					width: 55%;
 					
 					margin: 2% 0;
 					a{
@@ -8401,7 +8374,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 70%;
 				h1#logo {
 					font-size: 1.55em;
 					width: 100%;
@@ -8419,7 +8392,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -8645,27 +8618,16 @@ $colorseven:#accc51-green-ligh
 					li {
 						margin: 0 0 0.5em 0;
 						font-size: 0.7em;
-						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
-							width: 25%;
-							height: 35px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							width: 20%;
+
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.9em;
-							line-height: 2em;
 						}
 						a {
 							margin-left: 0;
-							text-align: left;
-							font-size: 1em;
-							text-indent: 0;
 							line-height: 35px;
 							&:hover {
 								margin-left: 0;
@@ -8679,29 +8641,19 @@ $colorseven:#accc51-green-ligh
 					li:nth-of-type(2) {
 						margin: 0 0 0.5em 0;
 						font-size: 0.7em;
-						clear: both;
-						line-height: 20px;
 						padding: 0;
 						span.post-meta-key {
-							width: 25%;
+							width: 20%;
 							height: 109px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.825em;
-							line-height: 1.5em
+
 						}
 						a {
 							width: auto;
 							margin-left: 0;
-							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -8716,16 +8668,10 @@ $colorseven:#accc51-green-ligh
 					.links {
 						height: 50px;
 						margin: 0 0 0 1%;
-						display: block;
-						padding: 0;
-						clear: left;
 						a {
 							height: 100%;
-							width: 25%;
 							font-size: 0.8em;
 							line-height: 50px;
-							float: left;
-							text-align: center;
 						}
 						a:hover {
 							font-weight: bold;
@@ -8733,23 +8679,15 @@ $colorseven:#accc51-green-ligh
 						p.formats {
 							margin: 0 0 1%;
 							letter-spacing: 0.05em;
-							line-height: 1.6em;
-							float: left;
 							span:first-of-type {
-								font-size: 0.9em;
-								width: 25%;
-								text-indent: 1%;
-								display: inline-block;
-								float: left;
+								font-size: 0.6em;
+								width: 20%;
 							}
 							span {
 								font-size: 0.9em;
-								width: 25%;
-								text-align: left;
-								float: left;
+
 								a {
 									width: 100%;
-									display: block;
 									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
@@ -8757,16 +8695,11 @@ $colorseven:#accc51-green-ligh
 										font-size: 1.3em;
 										width: 100%;
 										display: inline-block;
-										text-align: center;
-										height: 46px;
-										line-height: 46px;
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
 									i.fa-tablet:hover {
 										font-size: 1.3em;
-										height: 46px;
-										line-height: 46px;
 									}
 								}
 							}
@@ -8848,25 +8781,17 @@ $colorseven:#accc51-green-ligh
 				}
 				div.continue-reading {
 					font-size: 0.80em;
-					
-					width: 45%;
-					
+					width: 55%;
 					margin: 2% 0;
 					a{
 						display: block;
-						
 						&:hover {
-							
 							margin: 2% 0;
-							
 						}
 						span.screen-reader-text:hover{
 							color: $color4;
-						
 						}
-
 					}
-					
 				}
 				div.sharedaddy {
 					.sd-title {}
@@ -9418,7 +9343,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 70%;
 				h1#logo {
 					font-size: 1.55em;
 					width: 100%;
@@ -9436,7 +9361,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						padding:0;
 					}
 				}
 				h2 {
@@ -9655,25 +9580,15 @@ $colorseven:#accc51-green-ligh
 						clear: both;
 						line-height: 35px;
 						span.post-meta-key {
-							width: 25%;
-							height: 35px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							width: 20%;
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.9em;
-							line-height: 2em;
 						}
 						a {
 							margin-left: 0;
 							text-align: left;
-							font-size: 1em;
-							text-indent: 0;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								width: 100%;
@@ -9685,30 +9600,19 @@ $colorseven:#accc51-green-ligh
 					}
 					li:nth-of-type(2) {
 						margin: 0 0 0.5em 0;
-						font-size: 0.7em;
-						clear: both;
-						line-height: 20px;
-						padding: 0;
+						font-size: 0.65em;
 						span.post-meta-key {
-							width: 25%;
-							height: 109px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							width: 20%;
+							height: 119px;
 						}
 						p {
-							width: 73%;
-							font-size: 0.825em;
-							line-height: 1.5em
+							width: 79%;
+							font-size: 0.85em;
+							line-height: 1.4em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
-							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -9723,16 +9627,9 @@ $colorseven:#accc51-green-ligh
 					.links {
 						height: 50px;
 						margin: 0 0 0 1%;
-						display: block;
-						padding: 0;
-						clear: left;
 						a {
 							height: 100%;
-							width: 25%;
 							font-size: 0.8em;
-							line-height: 50px;
-							float: left;
-							text-align: center;
 						}
 						a:hover {
 							font-weight: bold;
@@ -9740,40 +9637,28 @@ $colorseven:#accc51-green-ligh
 						p.formats {
 							margin: 0 0 1%;
 							letter-spacing: 0.05em;
-							line-height: 1.6em;
-							float: left;
 							span:first-of-type {
-								font-size: 0.9em;
-								width: 25%;
-								text-indent: 1%;
-								display: inline-block;
-								float: left;
+								font-size: 0.6em;
+								width: 20%;
 							}
 							span {
 								font-size: 0.9em;
-								width: 25%;
-								text-align: left;
-								float: left;
+								width: 25.69%;
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
+	
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 1.3em;
 										width: 100%;
-										display: inline-block;
-										text-align: center;
-										height: 46px;
-										line-height: 46px;
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
 									i.fa-tablet:hover {
 										font-size: 1.3em;
-										height: 46px;
-										line-height: 46px;
+
 									}
 								}
 							}
@@ -9856,7 +9741,7 @@ $colorseven:#accc51-green-ligh
 				div.continue-reading {
 					font-size: 0.8em;
 					
-					width: 45%;
+					width: 65%;
 					
 					margin: 2% 0;
 					a{
@@ -10303,7 +10188,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 75%;
 				h1#logo {
 					font-size: 1.55em;
 					width: 100%;
@@ -10321,7 +10206,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -10590,30 +10475,20 @@ $colorseven:#accc51-green-ligh
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
 						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
 							width: 20%;
-							height: 35px;
-							float: left;
 							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
 							line-height: 35px;
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.9em;
 						}
 						a {
-							margin-left: 0;
-							text-align: left;
 							font-size: 1em;
-							text-indent: 0;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
-								width: 100%;
 								&::after {
 									content: " > ";
 								}
@@ -10624,27 +10499,19 @@ $colorseven:#accc51-green-ligh
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
 						clear: both;
-						line-height: 20px;
-						padding: 0;
 						span.post-meta-key {
 							width: 20%;
-							height: 109px;
-							float: left;
+							height: 119px;
 							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
 						}
 						p {
-							width: 73%;
+							width: 79%;
 							font-size: 0.9em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
 							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -10659,16 +10526,10 @@ $colorseven:#accc51-green-ligh
 					.links {
 						height: 50px;
 						margin: 0 0 0 1%;
-						display: block;
-						padding: 0;
-						clear: left;
 						a {
-							height: 100%;
 							width: 25%;
 							font-size: 0.8em;
 							line-height: 50px;
-							float: left;
-							text-align: center;
 						}
 						a:hover {
 							font-weight: bold;
@@ -10677,15 +10538,13 @@ $colorseven:#accc51-green-ligh
 							font-size: 0.85em;
 							margin: 0 0 1%;
 							letter-spacing: 0.05em;
-							line-height: 1.6em;
-							float: left;
 							span:first-of-type {
 								font-size: 0.85em;
 								width: 20%;
 							}
 							span {
 								font-size: 0.9em;
-								width: 25%;
+								width: 26.09%;
 								a {
 									width: 100%;
 									display: block;
@@ -10766,25 +10625,17 @@ $colorseven:#accc51-green-ligh
 				}
 				div.continue-reading {
 					font-size: 0.85em;
-					
-					width: 45%;
-					
+					width: 60%;
 					margin: 2% 0;
 					a{
 						display: block;
-						
-						&:hover {
-							
+ 						&:hover {
 							margin: 2% 0;
-							
 						}
 						span.screen-reader-text:hover{
 							color: $color4;
-						
 						}
-
 					}
-					
 				}
 				.meta {
 					font-size: 10px;
@@ -11335,7 +11186,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 60%;
+				width: 80%;
 				h1#logo {
 					font-size: 1.5em;
 					width: 100%;
@@ -11353,7 +11204,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -11618,23 +11469,18 @@ $colorseven:#accc51-green-ligh
 						clear: both;
 						line-height: 35px;
 						span.post-meta-key {
-							width: 21%;
+							width: 20%;
 							height: 35px;
-							float: left;
 							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
 							line-height: 35px;
 						}
 						p {
-							width: 77%;
+							width: 79%;
 							font-size: 0.9em;
 						}
 						a {
 							margin-left: 0;
-							text-align: left;
 							font-size: 1em;
-							text-indent: 0;
 							line-height: 35px;
 							&:hover {
 								margin-left: 0;
@@ -11649,28 +11495,20 @@ $colorseven:#accc51-green-ligh
 					li:nth-of-type(2) {
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
-						clear: both;
-						line-height: 20px;
-						padding: 0;
 						span.post-meta-key {
-							width: 21%;
+							width: 20%;
 							height: 109px;
-							float: left;
 							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
 							line-height: 35px;
 						}
 						p {
-							width: 77%;
-							font-size: 0.8em;
+							width: 79%;
+							font-size: 0.85em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
 							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -11693,7 +11531,7 @@ $colorseven:#accc51-green-ligh
 						height: 50px;
 						margin: 0 0 0 1%;
 						a {
-							width: 25%;
+							width: 20%;
 							font-size: 0.8em;
 							line-height: 50px;
 						}
@@ -11705,22 +11543,16 @@ $colorseven:#accc51-green-ligh
 							line-height: 1.6em;
 							span:first-of-type {
 								font-size: 0.9em;
-								width: 21%;
 							}
 							span {
 								font-size: 0.9em;
-								width: 25%;
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 2.3em;
-										width: 100%;
-										display: inline-block;
-										text-align: center;
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
@@ -11761,7 +11593,7 @@ $colorseven:#accc51-green-ligh
 				div.continue-reading {
 					font-size: 0.85em;
 					
-					width: 50%;
+					width: 65%;
 					
 					margin: 2% 0;
 					a{
@@ -12099,7 +11931,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 21.78%;
+											width: 23.59%;
 											img {
 												height: auto;
 												margin: 1% auto;
@@ -12143,10 +11975,10 @@ $colorseven:#accc51-green-ligh
 								}
 								a:hover {}
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.95em;
 							}
-							li:nth-of-type(7) a:hover {}
+							li:nth-of-type(6) a:hover {}
 						}
 					}
 					/*Hero Slider End*/
@@ -12293,7 +12125,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 70%;
+				width: 75%;
 				h1#logo {
 					font-size: 1.55em;
 					width: 100%;
@@ -12311,7 +12143,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -12486,31 +12318,20 @@ $colorseven:#accc51-green-ligh
 					li {
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
-						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
-							width: 22%;
-							height: 35px;
-							float: left;
-							font-size: 1em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
+							width: 21%;
+							font-size: 0.95em;
 						}
 						p {
-							width: 76%;
+							width: 79%;
 							font-size: 0.9em;
 						}
 						a {
 							margin-left: 0;
-							text-align: left;
-							font-size: 1em;
-							text-indent: 0;
 							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
-								width: 100%;
 								&::after {
 									content: " > ";
 								}
@@ -12521,22 +12342,17 @@ $colorseven:#accc51-green-ligh
 						margin: 0 0 0.5em 0;
 						font-size: 0.65em;
 						span.post-meta-key {
-							width: 22%;
+							width: 21%;
 							height: 109px;
-							font-size: 1.1em;
-							margin-right: 1%;
-							line-height: 35px;
+							font-size: 1em;
 						}
 						p {
-							width: 76%;
+							width: 79%;
 							font-size: 1em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
-							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
 							&:hover {
 								margin-left: 0;
 								font-weight: bold;
@@ -12553,38 +12369,37 @@ $colorseven:#accc51-green-ligh
 						margin: 0 0 0 1%;
 						clear: left;
 						a {
-							width: 25%;
+							
 							font-size: 0.8em;
-							line-height: 50px;
-						}
-						a:hover {
-							font-weight: bold;
+							&:hover {
+								font-weight: bold;
+							}
 						}
 						p.formats {
 							margin: 0 0 1%;
-							float: left;
+							
 							span:first-of-type {
 								font-size: 0.85em;
-								width: 22%;
+								width: 21%;
 							}
 							p {
-								width: 73%;
+								width: 78%;
 								font-size: 0.7em;
 							}
 							span {
 								font-size: 0.85em;
-								width: 25%;
+								width: 25.79%;
+								
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
+									
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 2.3em;
-										width: 100%;
 										display: inline-block;
-										text-align: center;
+
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
@@ -12601,25 +12416,18 @@ $colorseven:#accc51-green-ligh
 				}
 				div.continue-reading {
 					font-size: 0.85em;
-					
-					width: 45%;
-					
+					width: 65%;
 					margin: 2% 0;
 					a{
 						display: block;
-						
 						&:hover {
-							
 							margin: 2% 0;
-							
 						}
 						span.screen-reader-text:hover{
 							color: $color4;
 						
 						}
-
 					}
-					
 				}
 				div.sharedaddy {
 					.sd-content ul li {
@@ -12923,7 +12731,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 30.59%;
+											width: 23.59%;
 											img {
 												width: 100%;
 											}
@@ -12965,10 +12773,11 @@ $colorseven:#accc51-green-ligh
 								}
 								a:hover {}
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.85em;
 							}
-							li:nth-of-type(7) a:hover {}
+							li:nth-of-type(6) a:hover {
+							}
 						}
 					}
 				}
@@ -13109,7 +12918,7 @@ $colorseven:#accc51-green-ligh
 			.site-logo a:focus .site-firstletter,
 			.site-logo a:hover .site-firstletter {}
 			hgroup {
-				width: 75%;
+				width: 80%;
 				h1#logo {
 					font-size: 1.5em;
 					width: 100%;
@@ -13127,7 +12936,7 @@ $colorseven:#accc51-green-ligh
 						text-align: left;
 					}
 					span:last-of-type {
-						margin: 0;
+						
 					}
 				}
 				h2 {
@@ -13227,6 +13036,106 @@ $colorseven:#accc51-green-ligh
 				p {
 					font-size: 0.75em;
 					line-height: 2.2em;
+				}
+				
+				ul.post-meta {
+					width: 98%;
+					padding: 0;
+					li {
+						
+						font-size: 0.75em;
+						span.post-meta-key {
+							width: 21%;
+							
+						}
+						p {
+							width: 78%;
+							font-size: 0.9em;
+						}
+						a {
+							
+							line-height: 35px;
+							&:hover {
+								
+								font-weight: bold;
+								&::after {
+									content: " > ";
+								}
+							}
+						}
+					}
+					li:nth-of-type(2) {
+						
+						font-size: 0.65em;
+						span.post-meta-key {
+							width: 21%;
+							height: 109px;
+							
+						}
+						p {
+							width: 78%;
+							font-size: 1em;
+						}
+						a {
+							width: auto;
+							margin-left: 0;
+							&:hover {
+								margin-left: 0;
+								font-weight: bold;
+								width: auto;
+							}
+						}
+					}
+				}
+				.website-text {
+					width: 100%;
+					
+					.links {
+						
+						margin: 0 0 0 1%;
+						clear: left;
+						a {
+							
+							font-size: 0.8em;
+							&:hover {
+								font-weight: bold;
+							}
+						}
+						p.formats {
+							margin: 0 0 1%;
+							
+							span:first-of-type {
+								font-size: 0.8em;
+								
+							}
+							p {
+								width: 78%;
+								font-size: 0.7em;
+							}
+							span {
+								font-size: 0.85em;
+								width: 25.79%;
+								
+								a {
+									width: 100%;
+									display: block;
+									
+									i.fa-desktop,
+									i.fa-mobile,
+									i.fa-tablet {
+										font-size: 2.3em;
+										display: inline-block;
+
+									}
+									i.fa-desktop:hover,
+									i.fa-mobile:hover,
+									i.fa-tablet:hover {
+										font-size: 2.4em;
+									}
+								}
+							}
+						}
+					}
 				}
 				div.continue-reading {
 					font-size: 0.85em;
@@ -13402,7 +13311,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.95em;
 													}
 													a {
-														font-size: 0.95em;
+														font-size: 0.9em;
 														&:hover {
 															font-weight: normal;
 															font-style: italic;
@@ -13420,7 +13329,7 @@ $colorseven:#accc51-green-ligh
 														line-height: 1.5em;
 													}
 													a.lyndalink {
-														font-size: 0.95em;
+														font-size: 0.9em;
 														display: inline-block;
 														&:hover {
 															font-style: italic;
@@ -13432,7 +13341,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 23%;
+											width: 23.59%;
 											img {
 												width: 100%;
 											}
@@ -13452,7 +13361,7 @@ $colorseven:#accc51-green-ligh
 														font-size: 0.9em;
 													}
 													a {
-														font-size: 0.95em;
+														font-size: 0.9em;
 														&:hover {
 															font-style: italic;
 														}
@@ -13474,10 +13383,10 @@ $colorseven:#accc51-green-ligh
 								}
 								a:hover {}
 							}
-							li:nth-of-type(7) a {
+							li:nth-of-type(6) a {
 								font-size: 0.8em;
 							}
-							li:nth-of-type(7) a:hover {}
+							li:nth-of-type(6) a:hover {}
 						}
 						/*Hero Slider End*/
 					}
@@ -13687,7 +13596,7 @@ $colorseven:#accc51-green-ligh
 		header {
 			height: 105px;
 			hgroup {
-				width: 75%;
+				width: 80%;
 				h1#logo {
 					font-size: 1.45em;
 				}
@@ -13954,29 +13863,21 @@ $colorseven:#accc51-green-ligh
 					li {
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
-						clear: both;
-						line-height: 35px;
+						
 						span.post-meta-key {
 							width: 21%;
 							height: 35px;
-							float: left;
-							font-size: 0.9em;
-							text-indent: 1%;
-							line-height: 35px;
+							font-size: 0.85em;
 						}
 						p {
-							width: 73%;
+							width: 78%;
 							font-size: 0.85em;
 						}
 						a {
 							margin-left: 0;
-							text-align: left;
-							font-size: 0.9em;
-							text-indent: 0;
-							line-height: 35px;
+							font-size: 0.8em;
 							&:hover {
 								margin-left: 0;
-								font-weight: bold;
 								width: 100%;
 								&::after {
 									content: " > ";
@@ -13987,30 +13888,21 @@ $colorseven:#accc51-green-ligh
 					li:nth-of-type(2) {
 						margin: 0 0 0.5em 0;
 						font-size: 0.75em;
-						clear: both;
-						line-height: 20px;
 						padding: 0;
 						span.post-meta-key {
 							width: 21%;
-							height: 109px;
-							float: left;
+							height: 137px;
 							font-size: 0.8em;
-							text-indent: 1%;
-							margin-right: 1%;
-							line-height: 35px;
 						}
 						p {
-							width: 73%;
+							width: 78%;
 							font-size: 0.85em;
 						}
 						a {
 							width: auto;
-							margin-left: 0;
-							font-size: 1em;
-							height: 35px;
-							line-height: 35px;
+							
 							&:hover {
-								margin-left: 0;
+								
 								font-weight: bold;
 								width: auto;
 							}
@@ -14029,41 +13921,30 @@ $colorseven:#accc51-green-ligh
 							height: 100%;
 							width: 25%;
 							font-size: 0.8em;
-							line-height: 50px;
-							float: left;
-							text-align:center;
+							&:hover {
+								font-weight: bold;
+							}
 						}
-						a:hover {
-							font-weight: bold;
-						}
+
 						p.formats {
 							margin: 0 0 1%;
 							letter-spacing: 0.05em;
 							line-height: 1.6em;
-							float: left;
 							span:first-of-type {
 								font-size: 0.75em;
 								width: 21%;
-								text-indent: 1%;
-								float: left;
-							}
+									}
 							span {
 								font-size: 0.85em;
-								width: 25%;
-								display: inline-block;
-								text-align: left;
-								float: left;
+
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 2em;
 										width: 100%;
-										display: inline-block;
-										text-align: center;
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
@@ -14358,7 +14239,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 28.78%;
+											width: 25.78%;
 											img {
 												width: 100%;
 											}
@@ -14396,8 +14277,7 @@ $colorseven:#accc51-green-ligh
 							margin: 0;
 							li {
 								margin: 0 0 0.4em 0;
-                                height: 40px;
-    							line-height: 40px;
+    
 								a {
 									font-size: 0.85em;
 								}
@@ -14613,7 +14493,7 @@ $colorseven:#accc51-green-ligh
 		header {
 			height: 105px;
 			hgroup {
-				width: 80%;
+				width: 85%;
 
 				h1#logo {
 					font-size: 1.35em;
@@ -14823,23 +14703,19 @@ $colorseven:#accc51-green-ligh
 					li {
 						margin: 0 0 0.5em 0;
 						font-size: 0.7em;
-						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
-							width: 26%;
-							height: 35px;
-							font-size: 0.9em;
-							line-height: 35px;
+							width: 22%;
+							font-size: 0.8em;
 						}
 						p {
-							width: 72%;
+							width: 77%;
 							font-size: 0.8em;
 						}
 						a {
-							font-size: 0.9em;
-							text-indent: 0;
+							font-size: 0.8em;
+							
 							&:hover {
-								margin-left: 0;
+								
 								font-weight: bold;
 								&::after {
 									content: " > ";
@@ -14849,23 +14725,22 @@ $colorseven:#accc51-green-ligh
 					}
 					li:nth-of-type(2) {
 						font-size: 0.70em;
-						line-height: 20px;
+						
 						span.post-meta-key {
-							width: 26%;
-							height: 109px;
-							font-size: 0.9em;
-							line-height: 35px;
+							width: 22%;
+							height: 137px;
+							font-size: 0.8em;
+							
 						}
 						p {
-							width: 72%;
+							width: 77%;
 							font-size: 0.9em;
 						}
 						a {
 							width: auto;
-							margin-left: 0;
-							font-size: 0.9em;
+							font-size: 0.8em;
 							&:hover {
-								margin-left: 0;
+								
 								width: auto;
 							}
 						}
@@ -14875,14 +14750,10 @@ $colorseven:#accc51-green-ligh
 					width: 100%;
 					display: block;
 					.links {
-						height: 50px;
 						margin: 0 0 0 1%;
-						padding: 0;
-						clear: left;
 						a {
 							width: 25%;
 							font-size: 0.75em;
-							line-height: 50px;
 						}
 						a:hover {
 							font-weight: bold;
@@ -14890,16 +14761,15 @@ $colorseven:#accc51-green-ligh
 						p.formats {
 							margin: 0 0 1%;
 							span:first-of-type {
-								font-size: 0.7em;
-								width: 26%;
+								font-size: 0.65em;
+								width: 22%;
 							}
 							span {
 								font-size: 0.85em;
-								width: 24%;
+								
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
@@ -15238,7 +15108,7 @@ $colorseven:#accc51-green-ligh
 									}
 									figure.cert {
 										a.fancybox {
-											width: 35.78%;
+											width: 30.78%;
 											img {
 												width: 100%;
 											}
@@ -15479,7 +15349,7 @@ $colorseven:#accc51-green-ligh
 		header {
 			height: 105px;
 			hgroup {
-				width: 80%;
+				width: 85%;
 
 				h1#logo {
 					font-size: 1.25em;
@@ -15696,23 +15566,17 @@ $colorseven:#accc51-green-ligh
 					li {
 						margin: 0 0 0.5em 0;
 						font-size: 0.7em;
-						clear: both;
-						line-height: 35px;
 						span.post-meta-key {
 							width: 26%;
-							height: 35px;
 							font-size: 0.9em;
-							line-height: 35px;
 						}
 						p {
 							width: 72%;
 							font-size: 0.8em;
 						}
 						a {
-							font-size: 0.9em;
-							text-indent: 0;
+							font-size: 0.75em;
 							&:hover {
-								margin-left: 0;
 								font-weight: bold;
 								&::after {
 									content: " > ";
@@ -15725,20 +15589,20 @@ $colorseven:#accc51-green-ligh
 						line-height: 20px;
 						span.post-meta-key {
 							width: 26%;
-							height: 109px;
-							font-size: 0.9em;
+							height: 155px;
+							font-size: 0.85em;
 							line-height: 35px;
 						}
 						p {
 							width: 72%;
-							font-size: 0.9em;
+							font-size: 0.85em;
 						}
 						a {
 							width: auto;
-							margin-left: 0;
-							font-size: 0.9em;
+							
+							font-size: 0.85em;
 							&:hover {
-								margin-left: 0;
+								
 								width: auto;
 							}
 						}
@@ -15748,18 +15612,14 @@ $colorseven:#accc51-green-ligh
 					width: 100%;
 					display: block;
 					.links {
-						height: 50px;
 						margin: 0 0 0 1%;
-						padding: 0;
-						clear: left;
 						a {
-							width: 25%;
 							font-size: 0.75em;
-							line-height: 50px;
+							&:hover {
+								font-weight: bold;
+							}
 						}
-						a:hover {
-							font-weight: bold;
-						}
+
 						p.formats {
 							margin: 0 0 1%;
 							span:first-of-type {
@@ -15768,18 +15628,16 @@ $colorseven:#accc51-green-ligh
 							}
 							span {
 								font-size: 0.85em;
-								width: 24%;
+								width: 23.79%;
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
 										font-size: 2em;
 										width: 100%;
 										display: inline-block;
-										text-align: center;
 									}
 									i.fa-desktop:hover,
 									i.fa-mobile:hover,
@@ -16162,16 +16020,16 @@ $colorseven:#accc51-green-ligh
 								height: 44px;
 								line-height: 44px;
 								a {
-									font-size: 0.7em;
+									font-size: 0.66em;
 								}
 								
 							}
 							li:nth-of-type(6) a {
-								font-size: 0.75em;
+								font-size: 0.7em;
 								line-height: 15px;
 								padding-top: 0.7em;
 								&:hover {
-									font-size: 0.75em;
+									font-size: 0.7em;
 									line-height: 15px;
 									padding-top: 0.7em;
 								}
@@ -16376,7 +16234,7 @@ $colorseven:#accc51-green-ligh
 			height: 105px;
 			padding-left: 0.5em;
 			hgroup {
-				width: 80%;
+				width: 85%;
 				h1#logo {
 					font-size: 1.15em;
 					height: 30px;
@@ -16592,19 +16450,15 @@ $colorseven:#accc51-green-ligh
 						line-height: 35px;
 						span.post-meta-key {
 							width: 26%;
-							height: 35px;
 							font-size: 0.9em;
-							line-height: 35px;
 						}
 						p {
 							width: 72%;
 							font-size: 0.8em;
 						}
 						a {
-							font-size: 0.9em;
-							text-indent: 0;
+							font-size: 0.8em;
 							&:hover {
-								margin-left: 0;
 								font-weight: bold;
 								&::after {
 									content: " > ";
@@ -16617,18 +16471,17 @@ $colorseven:#accc51-green-ligh
 						line-height: 20px;
 						span.post-meta-key {
 							width: 26%;
-							height: 109px;
-							font-size: 0.9em;
-							line-height: 35px;
+							height: 155px;
+							font-size: 0.8em;
 						}
 						p {
 							width: 72%;
-							font-size: 0.9em;
+							font-size: 0.85em;
 						}
 						a {
 							width: auto;
 							margin-left: 0;
-							font-size: 0.9em;
+							font-size: 0.85em;
 							&:hover {
 								margin-left: 0;
 								width: auto;
@@ -16640,18 +16493,16 @@ $colorseven:#accc51-green-ligh
 					width: 100%;
 					display: block;
 					.links {
-						height: 50px;
 						margin: 0 0 0 1%;
-						padding: 0;
 						clear: left;
 						a {
 							width: 25%;
 							font-size: 0.75em;
-							line-height: 50px;
+							&:hover {
+								font-weight: bold;
+							}
 						}
-						a:hover {
-							font-weight: bold;
-						}
+
 						p.formats {
 							margin: 0 0 1%;
 							span:first-of-type {
@@ -16660,11 +16511,10 @@ $colorseven:#accc51-green-ligh
 							}
 							span {
 								font-size: 0.85em;
-								width: 24%;
+
 								a {
 									width: 100%;
 									display: block;
-									color: $color1;
 									i.fa-desktop,
 									i.fa-mobile,
 									i.fa-tablet {
@@ -17263,7 +17113,7 @@ $colorseven:#accc51-green-ligh
         header {
             height: 105px;
             hgroup {
-                width: 80%;
+                width: 85%;
                 padding-left: 0;
                 h1#logo {
                     font-size: 1.05em;
@@ -17424,7 +17274,7 @@ $colorseven:#accc51-green-ligh
                     font-size: 0.85em;
                 }
                 p {
-                    font-size: 0.75em;
+                    font-size: 0.7em;
                     width: 100%;
                 }
                 .postimg {
@@ -17432,7 +17282,7 @@ $colorseven:#accc51-green-ligh
                     width: 60%;
                 }
                 .featuredImage {
-                    min-height: 100px;
+                    min-height: 75px;
                     margin: 1em auto;
                 }
                 .entry-attachment {
@@ -17475,12 +17325,11 @@ $colorseven:#accc51-green-ligh
                     li {
                         margin: 0 0 0.5em 0;
                         font-size: 0.7em;
-                        clear: both;
-                        line-height: 35px;
+
                         span.post-meta-key {
                             width: 26%;
                             height: 35px;
-                            font-size: 0.9em;
+                            font-size: 0.85em;
                             line-height: 35px;
                         }
                         p {
@@ -17489,7 +17338,7 @@ $colorseven:#accc51-green-ligh
                         }
                         a {
                             font-size: 0.7em;
-                            text-indent: 0;
+                            
                             &:hover {
                                 margin-left: 0;
                                 font-weight: bold;
@@ -17504,18 +17353,17 @@ $colorseven:#accc51-green-ligh
                         line-height: 20px;
                         span.post-meta-key {
                             width: 26%;
-                            height: 109px;
-                            font-size: 0.9em;
-                            line-height: 35px;
+                            height: 155px;
+                            font-size: 0.7em;
                         }
                         p {
                             width: 72%;
-                            font-size: 0.9em;
+                            font-size: 0.8em;
                         }
                         a {
                             width: auto;
                             margin-left: 0;
-                            font-size: 0.85em;
+                            font-size: 0.8em;
                             &:hover {
                                 margin-left: 0;
                                 width: auto;
@@ -17527,31 +17375,29 @@ $colorseven:#accc51-green-ligh
                     width: 100%;
                     display: block;
                     .links {
-                        height: 50px;
+
                         margin: 0 0 0 1%;
-                        padding: 0;
-                        clear: left;
+
                         a {
                             width: 25%;
                             font-size: 0.75em;
-                            line-height: 50px;
+							&:hover {
+								font-weight: bold;
+							}
                         }
-                        a:hover {
-                            font-weight: bold;
-                        }
+
                         p.formats {
                             margin: 0 0 1%;
                             span:first-of-type {
-                                font-size: 0.7em;
+                                font-size: 0.6em;
                                 width: 26%;
                             }
                             span {
                                 font-size: 0.85em;
-                                width: 24%;
+                                
                                 a {
                                     width: 100%;
                                     display: block;
-                                    color: $color1;
                                     i.fa-desktop,
                                     i.fa-mobile,
                                     i.fa-tablet {
@@ -17770,22 +17616,28 @@ $colorseven:#accc51-green-ligh
                         padding: 5% 0;
                         li {}
                         li#fa-desktop {
-                            font-size: 0.75em;
+                            font-size: 0.7em;
+							
                         }
                         li#fa-desktop::before {
                             font-size: 1.3em;
+							width: 30px;
                         }
                         li#fa-wordpress {
-                            font-size: 0.75em;
+                            font-size: 0.7em;
+							
                         }
                         li#fa-wordpress::before {
                             font-size: 1.3em;
+							width: 30px;
                         }
                         li#fa-mobile {
-                            font-size: 0.75em;
+                            font-size: 0.7em;
+							
                         }
                         li#fa-mobile::before {
                             font-size: 1.4em;
+							width: 30px;
                         }
                     }
                 }
@@ -17848,7 +17700,7 @@ $colorseven:#accc51-green-ligh
                                     }
                                     figure.abobe {
                                         a.fancybox {
-                                            width: 50.59%;
+                                            width: 65.59%;
                                             img {
                                                 width: 100%;
                                                 &:hover {
@@ -17872,7 +17724,7 @@ $colorseven:#accc51-green-ligh
                                                         font-size: 0.9em;
                                                     }
                                                     a {
-                                                        font-size: 0.68em;
+                                                        font-size: 0.7em;
                                                         &:hover {
                                                             font-weight: normal;
                                                             font-style: italic;
@@ -17890,7 +17742,7 @@ $colorseven:#accc51-green-ligh
                                                         line-height: 1.5em;
                                                     }
                                                     a.lyndalink {
-                                                        font-size: 0.75em;
+                                                        font-size: 0.7em;
                                                         display: inline-block;
                                                         &:hover {
                                                             font-style: italic;
@@ -17902,7 +17754,7 @@ $colorseven:#accc51-green-ligh
                                     }
                                     figure.cert {
                                         a.fancybox {
-                                            width: 21.59%;
+                                            width: 40.59%;
                                             img {
                                                 width: 100%;
                                             }
@@ -17940,11 +17792,11 @@ $colorseven:#accc51-green-ligh
                             li {
                                 margin: 0 0 0.2em 0;
                                 a {
-                                    font-size: 0.65em;
+                                    font-size: 0.6em;
                                 }
                                 a:hover {}
                             }
-                            li:nth-of-type(7) a {
+                            li:nth-of-type(6) a {
                                 font-size: 0.65em;
                                 line-height: 15px;
                                 padding-top: 0.6em;

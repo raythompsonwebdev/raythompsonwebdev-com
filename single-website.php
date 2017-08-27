@@ -16,7 +16,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
         <h1><?php the_title(); ?></h1>
 
-<br/>
+
             <figure class="websiteImage">
           <a href="" class="fancybox.image" title="">
                 <?php the_post_thumbnail('websites'); ?>
