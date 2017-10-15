@@ -2,99 +2,88 @@
 <?php get_header(); ?>
 
 <section id="main-content" class="group" role="main">
-<h1 class="archive-title"><?php
-        // Output the category title
-        if (is_category()) {
-            single_cat_title();
-        }
-        // Output the tag title
-        elseif (is_tag()) {
-            single_tag_title();
-            // For everything else
-        } else {
-            _e('Browsing the Archive', 'raythompsonwebdev-com');
-        }
-        ?>
+<h1 class="archive-title">
+        <?php
+					if ( is_category() ) {
+						single_cat_title();
+					} elseif ( is_tag() ) {
+						single_tag_title();
+					} elseif ( is_author() ) {
+						the_post();
+						echo 'Author Archives: ' . get_the_author();
+						rewind_posts();
+					} elseif ( is_day() ) {
+						echo 'Daily Archives: ' . get_the_date();
+					} elseif ( is_month() ) {
+						echo 'Monthly Archives: ' . get_the_date('F Y');
+					} elseif ( is_year() ) {
+						echo 'Yearly Archives: ' . get_the_date('Y');
+					} else {
+						  _e('Browsing the Archive', 'raythompsonwebdev-com');
+					}
+				?>
 
     </h1>
 
-    
-    
     <?php
     the_archive_title('<h2 class="page-title">', '</h2>');
     ?>
 
-    <?php if (have_posts()) : ?>
-    
-
+    <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
     <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
-<h1 class="post-title">
-	<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
-</h1>
+    <article class="entry">
 
-            <header class="byline">
-                <br/>
-                <div class="entry-meta">
-                    <?php popperscores_posted_on(); ?>
+    <h2><?php _e('Browse by Month:', 'raythompsonwebdev-com');?></h2>
 
-                </div><!-- .entry-meta -->
-
-            </header>
-            
- <?php while (have_posts()) : the_post(); ?> 
-                                     
-            <?php if (has_post_thumbnail()) { ?>
-                        <figure class="featuredImage">
-                            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-                                <?php the_post_thumbnail('featured-image'); ?>
-                            </a>
-                        </figure>
-                    <?php } else { ?>
-                <figure class="featuredImage">
-                    <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-                        <?php the_post_thumbnail(); ?>
-                    </a>
-                </figure>
-            <?php }
-            ?>
-                <div class="entry">
-                  
-                    <?php the_excerpt(); ?>
-
-                </div>
-
-                <footer class="byline">
-
-                    <p class='right'>
-                        <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-                    </p>
-
-                    <span class="bylinecat">Posted in <?php the_category(', ') ?> </span>
-                    <span class="bylinecat"><?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></span>
-
-
-                    <p><?php
-                    $lastmodified = get_the_modified_time('U');
-                    $posted = get_the_time('U');
-                    if ($lastmodified > $posted) {
-                        echo "Edited " . human_time_diff(get_the_time('U'), get_the_modified_time('U')) . " later";
-                    }
-                    ?>
-                    </p>
-
-                </footer>
-
-            <?php endwhile; ?>
-        <?php else: ?>
-           
-<?php get_template_part( 'templates/content', 'none' ); ?>
-            
-    <?php endif; ?>      
+    <ul><?php // Arguments
+                    $args = array(
+                        'type' => 'monthly'
+                    );
+                    // The archives
+                    wp_get_archives( $args );
+                ?> </ul>
 
     </article>
-  	
+
+    <article class="entry">
+
+        <h2><?php _e('Browse by Category:', 'raythompsonwebdev-com');?></h2>
+
+        <ul><?php // Arguments
+                $default = array(
+                    'title_li' => ''
+                );
+                // The categories
+                wp_list_categories( $default );
+            ?>
+        </ul>
+
+    </article>
+
+    <article class="entry">
+
+        <h2><?php _e('Browse by Tag:', 'raythompsonwebdev-com');?></h2>
+
+        <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+
+    </article>
+
+    <!--<article class="entry">
+
+    <h2><?php _e('Browse by Page', 'raythompsonwebdev-com');?></h2>
+    <ul><?php wp_list_pages('title_li='); ?></ul>
+
+    </article>-->
+
+    <?php endwhile; else: ?>
+
+    <p><?php load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' ) ?></p>
+
+    <?php endif; ?>
+     </article>
+
 
     <section class="contact-wide">
 
@@ -103,16 +92,9 @@
     </section>
 
 
-    <?php get_sidebar('archive'); ?> 
+    <?php get_sidebar('archive'); ?>
 
 
 </section>
 
 <?php get_footer(); ?>
-
-
-
-
-
-
-

@@ -6,12 +6,22 @@ Template Name: Contact
 
 <?php get_header(); ?>
 
-
 <section id="main-content" class="group" role="main">
 
-<h1>Contact Page</h1>
+<h1><?php the_title(); ?></h1>
 
-<p>Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.</p>
+<?php if (have_posts()) :
+        while (have_posts()) : the_post();
+
+        get_template_part('templates/content', 'page');
+
+        endwhile;
+
+        else :
+          echo '<p>No content found</p>';
+
+        endif;
+        ?>
 
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>

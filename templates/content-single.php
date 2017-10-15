@@ -19,21 +19,19 @@
 <h1><?php the_title(); ?></h1>
 
 	<header class="byline">
-		
+
 		<div class="entry-meta">
 			<?php popperscores_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-       
+
        <div class="entry">
+         
+         
+
         <?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'popperscores' ),
-				'after'  => '</div>',
-			) );
-		?>
+		
     </div>
 
 <footer class="byline">
@@ -43,20 +41,20 @@
             </p>
 
         </footer>
-        
-        
+
+
 <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
     </article><!--end of post group-->
 
         <!--navigation-->
 
         <nav class="navi">
-          
+
             <span class="right">
                 <?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?>
-                <?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?></span> 
-            
-            
+                <?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?></span>
+
+
         </nav><!--end of right navigation-->
 
         <!--end of navigation-->
@@ -67,5 +65,5 @@
         ?>
 
         <p><?php load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages'); ?></p>
-        
+
 <?php endif; ?>

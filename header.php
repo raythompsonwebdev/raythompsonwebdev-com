@@ -7,13 +7,12 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-
 <meta name="msvalidate.01" content="4CB214A27E0A9871DDFEF492EF5A6AD2" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-
+<title><?php bloginfo('name');?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />
+<!--<link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />-->
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" />
 
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
@@ -22,7 +21,6 @@
 </head>
 
 <!--[if lt IE 9]>
-
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
@@ -77,7 +75,8 @@
     // If there is, adds the Top Menu area
     wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' ));
 
-  }
+    }
+
     wp_nav_menu( array('menu' => 'mobile', 'container' => 'nav', 'container_id' => 'mobile-nav' ));
   
 

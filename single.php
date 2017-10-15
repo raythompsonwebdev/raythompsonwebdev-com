@@ -3,7 +3,13 @@
 
 <section id="main-content" class="group" role="main">
 
-    <?php get_template_part( 'templates/content', 'single' ); ?>
+
+    <?php
+         if (get_post_format() == false) {
+           get_template_part('templates/content', 'single');
+         } else {
+           get_template_part('templates/content', get_post_format());
+         } ?>
 
 
     <section class='contact-wide'>

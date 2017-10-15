@@ -16,12 +16,18 @@ Template Name: blog
 <article id="blog" class="left-col">
 <h1>Blog 1</h1>
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-<article class="post group"><h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+<article class="post group">
+    <h1>
+        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    </h1>
 		
-<section class="byline">by <?php the_author_posts_link(); ?> on <a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></section>
- <?php the_content('Read More...'); ?>
+<section class="byline">by <?php the_author_posts_link(); ?> on <a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a>
+</section>
+    
+ <?php get_template_part( 'templates/content', get_post_format() ); ?>
 
 <?php endwhile; else: ?>
+    
 <p><?php load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' ) ?></p>
 
 <nav class="navi">
