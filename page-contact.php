@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Contact 
+Template Name: Contact
 */
 ?>
 
@@ -29,21 +29,21 @@ Template Name: Contact
 [ do default stuff if no widgets ]
 
 <?php endif; ?>
-		
+
 <br>
 <div class="map_container">
-    <img id="image-5" src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/map-of-hackney.jpg" alt="map-of-hackney">
-</div>     
+    <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/10/map-of-hackney.jpg" alt="map-of-hackney">
+</div>
 
 
 <ul class="contact-details" >
     <li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
     <br/>
-   
-    <br/>
-</ul> 
 
-<div class="clearfix"></div>				
+    <br/>
+</ul>
+
+<div class="clearfix"></div>
 
 </section>
 

@@ -15,6 +15,10 @@
 <!--<link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />-->
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" />
 
+<!--[if lt IE 9]>
+<link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ie-min.css" />
+<![endif]-->
+
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 
 <?php wp_head(); ?>

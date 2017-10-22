@@ -19,7 +19,7 @@
         <div id="svg-image-container">
 
             <figure id="image-6">
-                <img id="image-5" src="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/home-page-image.png" alt="images of different screen sizes">
+                <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/10/home-page-image.png" alt="images of different screen sizes">
             </figure>
 
             <figure id="image-7">
@@ -30,9 +30,9 @@
         </div>
 
         <article id="text-box-front" role="article">
-            
+
             <?php the_content(); ?>
-            
+
         </article>
 
 <div class="clearfix"></div>

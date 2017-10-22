@@ -25,9 +25,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
             <span>Website Formats</span>
             <span><a href="#" title="Desktop"><i class="fa fa-desktop" title="Desktop"></i></a></span>
             <span><a href="#" title="Tablet"><i class="fa fa-tablet" title="Tablet"></i></a></span>
-            <span><a href="#" title="Mobile"><i class="fa fa-mobile"></i></a></span>
-
-  </p>
+            <span><a href="#" title="Mobile"><i class="fa fa-mobile"></i></a></span> </p>
        </div>
     </div>
         <footer class="byline">
