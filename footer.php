@@ -40,8 +40,7 @@ $dt = time();
 </p>
 
 </footer>
-
-
+ 
 </div>
 
 <?php add_action('wp_footer','add_google_analytics');//Google Analytics

@@ -10,19 +10,6 @@ Template Name: Contact
 
 <h1><?php the_title(); ?></h1>
 
-<?php if (have_posts()) :
-        while (have_posts()) : the_post();
-
-        get_template_part('templates/content', 'page');
-
-        endwhile;
-
-        else :
-          echo '<p>No content found</p>';
-
-        endif;
-        ?>
-
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
@@ -31,11 +18,32 @@ Template Name: Contact
 <?php endif; ?>
 
 <br>
-<div class="map_container">
-    <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/10/map-of-hackney.jpg" alt="map-of-hackney">
+
+<div id="map_container">
+   
+    
 </div>
-
-
+ 
+  <script>
+     function initMap() {
+        var uluru = {lat: 51.55583507664607, lng: -0.06814956665039062};
+        var map = new google.maps.Map(document.getElementById('map_container'), {
+          zoom: 12,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      } 
+      
+    </script>
+       
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYuJIKNz2V8dAW5jZXFNSl8sftAxLO8s&callback=initMap">
+    </script>
+    
+    
 <ul class="contact-details" >
     <li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
     <br/>

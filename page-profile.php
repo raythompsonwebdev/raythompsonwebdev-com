@@ -96,11 +96,6 @@
 
                                 </a>
 
-                                <span class="profile-image-rollover">
-                                    <p>
-                                        Click to see Larger Image
-                                    </p>
-                                </span>
 
 
                                 <figcaption>

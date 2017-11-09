@@ -1,5 +1,5 @@
 
- //search field togle
+  //search field togle
  jQuery(document).ready(function($){
 
    $('button#find-search').on('click', function(){
@@ -32,4 +32,3 @@
  	});
 
   });
-
