@@ -8,6 +8,11 @@
  */
 ?>
 
+<?php
+// Is this the first post of the front page?
+$first_post = $wp_query->current_post == 0 && !is_paged() && is_home();
+?>
+
 <!--Post loop start -->
     <?php if (have_posts()) : ?>
    <?php while (have_posts()) : the_post(); ?>
@@ -73,26 +78,15 @@ printf(
     </div>
 
                     <!--Post entry footer-->
-                    <footer class="byline">
-
-                        <p class='right'>
-                            <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-                        </p>
-
-                        <span class="bylinecat">Posted in <?php the_category(', ') ?> </span>
-                        <span class="bylinecat"><?php comments_popup_link('No Comments &#187;', '1 Comment &#187;', '% Comments &#187;'); ?></span>
-
-
-                        <p><?php
-                            $lastmodified = get_the_modified_time('U');
-                            $posted = get_the_time('U');
-                            if ($lastmodified > $posted) {
-                                echo "Edited " . human_time_diff(get_the_time('U'), get_the_modified_time('U')) . " later";
-                            }
-                            ?>
-                        </p>
-
-                    </footer>
+                  	<?php
+		if ( $first_post == false ) { ?>
+			<footer class="byline">
+				<?php raythomp_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
+		<?php } else { 
+			echo popper_modify_read_more_link();
+		}
+?>
 
 
             </article>
