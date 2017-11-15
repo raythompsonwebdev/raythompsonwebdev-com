@@ -31,7 +31,6 @@
          
 
         <?php the_content(); ?>
-<<<<<<< HEAD
 		
     </div>
 
@@ -45,24 +44,6 @@
 
 
 <?php edit_post_link('Edit this post', '<p>Admin: ', '</p>'); ?>
-=======
-        
-		
-    </div>
-    	<?php
-		if ( $first_post == false ) { ?>
-			<footer class="byline">
-				<?php raythomp_entry_footer(); ?>
-				<p class='right'>
-<a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-</p>
-			</footer><!-- .entry-footer -->
-		<?php } else { 
-			echo popper_modify_read_more_link();
-		}
-?>
-
->>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
     </article><!--end of post group-->
 
         <!--navigation-->

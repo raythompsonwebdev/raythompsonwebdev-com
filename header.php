@@ -12,10 +12,7 @@
 <title><?php bloginfo('name');?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-<<<<<<< HEAD
 <!--<link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />-->
-=======
->>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" />
 
 <!--[if lt IE 9]>
@@ -85,7 +82,7 @@
     }
 
     wp_nav_menu( array('menu' => 'mobile', 'container' => 'nav', 'container_id' => 'mobile-nav' ));
-
+  
 
 
 
