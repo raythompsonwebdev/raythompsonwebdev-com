@@ -7,13 +7,13 @@
 
 <div class="socialpics">
 
-<a class="social-icon linkedin-icon" href="http://www.linkedin.com/in/raymond-thompson-1b42b7b8" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
+<a class="social-icon linkedin-icon" href="http://uk.linkedin.com/in/raymond-thompson-1b42b7b8" target="new" title="Follow me on LinkedIn"><span><i class="fa fa-linkedin"></i></span></a>
 
 <a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="Follow me on Twitter"><span><i class="fa fa-twitter"></i></span></a>
 
-<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Follow me on Facebook"><span><i class="fa fa-facebook"></i></span></a>
+<a class="social-icon facebook-icon" href="http://en-gb.facebook.com/raythompsonwebdeveloper" target="new" title="Follow me on Facebook"><span><i class="fa fa-facebook"></i></span></a>
 
-<a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
+<a class="social-icon google-icon" href="http://github.com/DigbyCeaser" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
 
 </div>
 

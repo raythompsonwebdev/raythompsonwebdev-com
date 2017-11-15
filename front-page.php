@@ -12,7 +12,11 @@
 
 <section id="main-content" class="group" role="main">
 
+<<<<<<< HEAD
     <h1><?php the_title(); ?></h1>
+=======
+    <h1>Web Development</h1>
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
     <div id="frontpage_container">
 

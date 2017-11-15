@@ -47,7 +47,11 @@ Template Name: Websites
   <figure class="showcase-container " id="showcaseimg1">
 
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-camping-advice-home-page-small.png" alt="CampingAdvice.com website home page" >
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-camping-advice-home-page-port.png" alt="CampingAdvice.com website home page" >
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content showcase">
   <h1>Camping Advice.com</h1>
@@ -68,7 +72,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg2">
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-mannering-music-home-page-small.png" alt="Mannering Music website home page">
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-mannering-music-home-page-port.png" alt="Mannering Music website home page">
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content">
   <h1>Mannering Music</h1>
@@ -85,7 +93,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg3">
 
+<<<<<<< HEAD
     <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-car-rental-home-page-small.png" alt="Car Rental website home page">
+=======
+    <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-car-rental-home-page-port.png" alt="Car Rental website home page">
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
     <figcaption class="showcase-content">
     <h1>Car Rental</h1>
@@ -103,7 +115,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg4">
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-shoe-store-home-page-small.png" alt="Shoestore website home page">
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-shoe-store-home-page-port.png" alt="Shoestore website home page">
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content showcase-d">
   <h1>Shoestore</h1>
@@ -121,7 +137,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg5">
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-greenfootprints-home-page-small.png" alt="greenfootprints website home page">
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-greenfootprints-home-page-port.png" alt="greenfootprints website home page">
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content showcase-e">
     <h1>Greenfootprints.com</h1>
@@ -139,7 +159,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg6">
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-travelagency-home-page-small.png"  alt="Travel Agency website home page" >
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-travelagency-home-page-port.png"  alt="Travel Agency website home page" >
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content showcase-f">
   <h1>Travel Agency</h1>
@@ -158,7 +182,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg7">
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/portfolio-grahics-mixtape-cover-small.png" alt="mixtape cover" >
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/portfolio-grahics-mixtape-cover-port.png" alt="mixtape cover" >
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content showcase-g" >
 
@@ -178,7 +206,11 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg8">
 
+<<<<<<< HEAD
   <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/11/www-fitness-club-home-page-small.png" alt="fitness club website home page">
+=======
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-fitness-club-home-page-port.png" alt="fitness club website home page">
+>>>>>>> 77f09739064381219ec7ab43fb579e85f4f1413c
 
   <figcaption class="showcase-content showcase-h">
 
