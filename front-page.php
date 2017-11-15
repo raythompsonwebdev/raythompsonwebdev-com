@@ -12,7 +12,7 @@
 
 <section id="main-content" class="group" role="main">
 
-    <h1>Web Development</h1>
+    <h1><?php the_title(); ?></h1>
 
     <div id="frontpage_container">
 

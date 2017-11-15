@@ -10,23 +10,23 @@
 
 <!--Post loop start -->
     <?php if (have_posts()) : ?>
-   <?php while (have_posts()) : the_post(); ?>
+   <?php while (have_posts()) : the_post(); ?>     
             <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
-               <?php if ( is_home() && !is_front_page() ) : ?>
+               <?php if ( is_home() && ! is_front_page() ) : ?>
                 <h1 class="post-title">
                     <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h1>
                 <?php endif; ?>
-
-
+           
+            
 				<!--Post entry Header-->
                 <header class="byline">
                     <div class="entry-meta">
                        <?php if ('post' === get_post_type()) : ?>
                         <div class="meta-content">
 
-                            <?php popperscores_index_posted_on(); ?>
+                            <?php popperscores_index_posted_on(); ?> 
 
                         </div>
                         <?php endif; ?>
@@ -52,15 +52,17 @@
                     ?>
 				</a>
                 <!--featured Image end-->
-                 
-                  <!--Post entry-->
+
+
+                   
+                  <!--Post entry--> 
                     <div class="entry">
-
+                    
                     <?php the_excerpt(); ?>
-
+                    
                     </div>
-
-
+                    
+                    
                     <div class="continue-reading">
         <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
 <?php
@@ -71,7 +73,7 @@ printf(
 ?>
         </a>
     </div>
-
+                    
                     <!--Post entry footer-->
                     <footer class="byline">
 
@@ -100,6 +102,7 @@ printf(
     <?php else: ?>
 
         <?php get_template_part( 'templates/content', 'none' ); ?>
-
-    <?php endif; ?>
+        
+    <?php endif; ?>	
 <!--Post loop end -->
+
