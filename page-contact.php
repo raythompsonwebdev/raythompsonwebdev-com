@@ -46,12 +46,7 @@ Template Name: Contact
     
 <ul class="contact-details" >
     <li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
-<<<<<<< HEAD
-    
 
-=======
->>>>>>> origin/master
-    <br/>
 
     <br/>
 </ul>

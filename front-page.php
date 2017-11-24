@@ -33,10 +33,25 @@
 
             <?php the_content(); ?>
 
+           
         </article>
 
-<div class="clearfix"></div>
+       <div class="clearfix"></div>
+  
+	
     </div>
+
+  <div class="clearfix"></div>
+   
+  
+   <section id="calltoaction">
+	  <h1 id="front-title"><a href="">See projects</a></h1>    	   
+	   <div class="frntpgbox"> Wordpress</div>
+	   <div class="frntpgbox"> SEO</div>
+	   <div class="frntpgbox">Web Apps</div>
+	   <div class="frntpgbox">Google Analytics</div>
+  	
+   </section>
 
 </section>
 

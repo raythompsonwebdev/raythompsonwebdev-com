@@ -13,11 +13,9 @@
 
 <a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Follow me on Facebook"><span><i class="fa fa-facebook"></i></span></a>
 
-<<<<<<< HEAD
+
 <a class="social-icon google-icon" href="http://github.com/raythompsonwebdev/" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
-=======
-<a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
->>>>>>> origin/master
+
 
 </div>
 
