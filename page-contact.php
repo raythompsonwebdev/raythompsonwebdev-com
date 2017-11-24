@@ -57,7 +57,7 @@ Template Name: Contact
     
 <ul class="contact-details" >
     <li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
-    <li id="fa-email"><a href="">ray_thomp@hushmail.com</a> </li>
+    
 
     <br/>
 

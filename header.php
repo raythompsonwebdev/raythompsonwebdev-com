@@ -32,7 +32,7 @@
 <div id="wrapper_container">
 
 
-<header class="group" role="banner">
+<header class="group">
 
  <?php // Display site icon or first letter as logo ?>
     <div class="site-logo">
@@ -60,13 +60,15 @@
 <?php else : ?>
 <hgroup>
     <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
-<?php endif;
+
+    <?php endif;
 
     $description = get_bloginfo( 'description', 'display' );
 
     if ( $description || is_customize_preview() ) : ?>
 
-    <h2 class="site-description"><?php echo $description; ?></h2></hgroup>
+    <h2 class="site-description"><?php echo $description; ?></h2>
+    </hgroup>
 
 
 <?php endif;?>
