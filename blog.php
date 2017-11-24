@@ -10,6 +10,7 @@ Template Name: blog
 ?>
 
 <?php get_header(); ?>
+
 <section id="main-content" class="group" role="main">
 <section id="blogleftside">       	       	      	
 
