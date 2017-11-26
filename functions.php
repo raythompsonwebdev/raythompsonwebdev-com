@@ -254,6 +254,14 @@ function profile_page_scripts() {
 			//fancylightbox page scripts
 	wp_register_script( 'fancylightbox', get_template_directory_uri() . '/js/fancylightbox.js', array('jquery'),'20161110', true );
 
+<<<<<<< HEAD
+
+	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'easing' );
+	wp_enqueue_script( 'scrollto' );
+	wp_enqueue_script( 'profile' );
+	wp_enqueue_script( 'fancylightbox' );
+=======
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script( 'easing' );
@@ -261,6 +269,11 @@ function profile_page_scripts() {
 	wp_enqueue_script( 'profile' );
 	wp_enqueue_script( 'fancylightbox' );
 
+
+}
+>>>>>>> abf856b8a011b8cc8e05b6153ed8b30af257c97d
+
+add_action( 'wp_enqueue_scripts', 'profile_page_scripts' );
 
 }
 add_action( 'wp_enqueue_scripts', 'profile_page_scripts' );
