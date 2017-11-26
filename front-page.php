@@ -10,7 +10,7 @@
 <?php get_header(); ?>
 
 
-<section id="main-content" class="group" role="main">
+<section id="main-content" class="group" >
 
     <h1><?php the_title(); ?></h1>
 
@@ -37,6 +37,50 @@
 
 <div class="clearfix"></div>
     </div>
+    
+<section id="calltoaction">
+ <h1 id="front-title">I also do..</h1>
+   
+   <article class="frntpgbox">
+   <h1>Design</h1>
+   <ul>
+   <li>Wireframes</li>
+   <li>Prototypes</li>
+   <li></li>
+   <li></li>
+   </ul>
+   
+   </article>
+   <article class="frntpgbox">
+   <h1>Optimisation</h1>
+   <ul>
+   <li>SEO</li>
+   <li>Keywords</li>
+   <li>Google Analytics</li>
+   <li>Image Optimisation</li>
+   </ul>
+
+   </article>
+   <article class="frntpgbox">
+   <h1>Validation</h1>
+   <ul>
+   <li>HTML Validation</li>
+   <li>CSS Validation</li>
+   <li></li>
+   <li></li>
+   </ul>
+   </article>
+   <article class="frntpgbox">
+       <h1>Maintenance</h1>
+       <ul>
+   <li>Wordpress Updates</li>
+   <li>Wordpress Security</li>
+   <li>Debugging</li>
+   <li></li>
+   </ul>
+       </article>
+        
+</section>
 
 </section>
 
