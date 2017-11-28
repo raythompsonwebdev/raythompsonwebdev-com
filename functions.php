@@ -189,13 +189,10 @@ add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 //enqueue lightbox script
 function raythompwebdesign_add_lightbox() {
-	
-	
-		
+			
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
-	
 	
 }
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
@@ -205,8 +202,7 @@ add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 function my_scripts_own() {
 
     wp_deregister_script('modernizr');
-	
-	
+		
     wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js-master/responsive-nav.js', array());
 	//master
     wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'20161110', true );
@@ -216,12 +212,6 @@ function my_scripts_own() {
 	wp_enqueue_script( 'responsive-nav' );
 	wp_enqueue_script( 'master' );
 	
-	
-/*	wp_localize_script( 'popper-functions', 'screenReaderText', array(
-		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'popper' ) . '</span>',
-		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'popper' ) . '</span>',
-	) );  */
-
 
 }
 add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
@@ -242,9 +232,10 @@ function website_page_script() {
 add_action( 'wp_enqueue_scripts', 'website_page_script' );
 
 
+
 //enqueue profile page scripts
 function profile_page_scripts() {
-
+	
 	//scrollto script
 	wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
 			//easing script
@@ -260,6 +251,7 @@ function profile_page_scripts() {
 	wp_enqueue_script( 'scrollto' );
 	wp_enqueue_script( 'profile' );
 	wp_enqueue_script( 'fancylightbox' );
+	
 
 
 }
@@ -267,19 +259,12 @@ function profile_page_scripts() {
 add_action( 'wp_enqueue_scripts', 'profile_page_scripts' );
 
 
+
 //mobile navigation script
 function mf_responsive_nav(){
 
 echo '<script>
-  var navigation = responsiveNav("#mobile-nav", {
-  
-  // Selector
-			animate: true, 
-			// Boolean: Use CSS3 transitions, true or false
-			transition: 284, 
-			// Integer: Speed of the transition, in milliseconds
-			label: "Menu" 
-  });
+  var navigation = responsiveNav("#mobile-nav");
   </script>';
 
 }
