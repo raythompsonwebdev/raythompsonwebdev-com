@@ -45,7 +45,6 @@ $dt = time();
  
 </div>
 
-
 <?php add_action('wp_footer','add_google_analytics');//Google Analytics
 function add_google_analytics() {
 ?>
