@@ -49,6 +49,43 @@
    <li></li>
    <li></li>
    </ul>
+<<<<<<< HEAD
+=======
+   
+   </article>
+   <article class="frntpgbox">
+   <h1>Optimisation</h1>
+   <ul>
+   <li>SEO</li>
+   <li>Keywords</li>
+   <li>Google Analytics</li>
+   <li>Image Optimisation</li>
+   </ul>
+
+   </article>
+   <article class="frntpgbox">
+   <h1>Validation</h1>
+   <ul>
+   <li>HTML Validation</li>
+   <li>CSS Validation</li>
+   <li></li>
+   <li></li>
+   </ul>
+   </article>
+   <article class="frntpgbox">
+       <h1>Maintenance</h1>
+       <ul>
+   <li>Wordpress Updates</li>
+   <li>Wordpress Security</li>
+   <li>Debugging</li>
+   <li></li>
+   </ul>
+       </article>
+        
+</section>
+
+  <div class="clearfix"></div>
+>>>>>>> origin/master
    
    </article>
    <article class="frntpgbox">
