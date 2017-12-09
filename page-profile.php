@@ -90,9 +90,9 @@
                             <figure class="abobe">
 
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
 
                                 </a>
 
@@ -124,9 +124,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
 
                                 </a>
 
@@ -156,9 +156,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
 
                                 </a>
                                 <figcaption>
@@ -186,9 +186,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                 <figcaption>
@@ -217,9 +217,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Large-Udemy-Certificate.png" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Udemy-Certificate.png" class="fancybox" title="City and Guilds Level Three">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
 
                                 </a>
                                 <figcaption>
@@ -251,9 +251,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="Mobile-web-applications-Certificate-Foundation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="Mobile-web-applications-Certificate-Foundation">
 
                                 </a>
 
@@ -283,9 +283,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
 
@@ -316,9 +316,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
 
@@ -350,8 +350,8 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
                                 <figcaption>
                                     <h3>Interactive Programming</h3>
                                     <h4>Topics&#58;</h4>

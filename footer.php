@@ -45,26 +45,6 @@ $dt = time();
  
 </div>
 
-<?php add_action('wp_footer','add_google_analytics');//Google Analytics
-function add_google_analytics() {
-?>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-86655310-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-86655310-1');
-</script>
-
-
-
-
-<?php } ?>
-
-
 
 <?php wp_footer(); ?>
 

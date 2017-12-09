@@ -17,8 +17,6 @@
     <div id="frontpage_container">
 
         <div id="svg-image-container">
-
-            <figure id="image-6">
                 <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/10/home-page-image.png" alt="images of different screen sizes">
             </figure>
 
