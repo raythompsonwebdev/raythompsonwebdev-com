@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");} ?>
 
 <html class="no-js" <?php language_attributes(); ?>>
@@ -12,7 +12,6 @@
 <title><?php bloginfo('name');?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" >
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" >
-<!--<link rel="icon" href="<?php bloginfo('siteurl'); ?>/favicon.ico" type="image/x-icon" />-->
 <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" >
 
 <!--[if lt IE 9]>
@@ -74,22 +73,18 @@
 
 <?php endif;?>
 
+<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
 
 <?php
     // Checking if there's anything in Top Menu
     if ( has_nav_menu( 'main' ) ) {
     // If there is, adds the Top Menu area
-    wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' ));
+    wp_nav_menu( array('menu' => 'Main', 'container' => 'nav', 'menu_class' => 'nav-menu' ));
 
     }
 
-    wp_nav_menu( array('menu' => 'mobile', 'container' => 'nav', 'container_id' => 'mobile-nav' ));
-  
-
-
 
  ?>
-
 
 
 </header>

@@ -17,14 +17,17 @@
     <div id="frontpage_container">
 
         <div id="svg-image-container">
-                <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/10/home-page-image.png" alt="images of different screen sizes">
-            </figure>
+        
+
+         <!--<figure id="image-6">
+             <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/12/home-page-image.png" alt="images of different screen sizes">
+            </figure>-->
 
             <figure id="image-7">
                 <object class="style-svg" type="image/svg+xml" id="image-4" data="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
                 </object>
             </figure>
-
+        
         </div>
 
         <article id="text-box-front" role="article">
@@ -44,7 +47,7 @@
    <ul>
    <li>Wireframes</li>
    <li>Prototypes</li>
-   <li></li>
+   <li>Photoshop to HTML</li>
    <li></li>
    </ul>
    
@@ -52,7 +55,7 @@
    <article class="frntpgbox">
    <h1>Optimisation</h1>
    <ul>
-   <li>SEO</li>
+   <li>Code Optimisation</li>
    <li>Keywords</li>
    <li>Google Analytics</li>
    <li>Image Optimisation</li>
