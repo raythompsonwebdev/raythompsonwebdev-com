@@ -44,13 +44,8 @@ if ( ! function_exists( 'my_theme_setup' ) ) :
 function my_theme_setup(){
 
 function wpb_add_google_fonts() {
-<<<<<<< HEAD
 		wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=PT+Sans:400,700', false );
 		wp_enqueue_style( 'wpc-google-fonts','https://fonts.googleapis.com/css?family=Cabin:400,700', false );
-=======
-		wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Titillium+Web:400,600', false );
-		wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=Amaranth:400,700', false );
->>>>>>> 76f86ff393c5cc8e46a890b0f6c849efae355cb6
 	}
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 	
