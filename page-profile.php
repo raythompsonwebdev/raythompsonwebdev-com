@@ -69,14 +69,14 @@
             <article class="hero-slider"><!-- #hero-slider -->
 
                 <ul id="list">
-                    <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Photoshop</a></li>
-                    <li><a href="#" rel="#panel-2" title="City and Guilds Web Design Certificate Level One" >City &amp; Guilds 1</a></li>
-                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level Two">City &amp; Guilds 2</a></li>
-                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Three">City &amp; Guilds 3</a></li>
+                    <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Adobe</a></li>
+                    <li><a href="#" rel="#panel-2" title="City and Guilds Web Design Certificate Level One" >ELATT</a></li>
+                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level Two">Udemy</a></li>
+                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Three">FreeCodeCamp</a></li>
                     <li><a href="#" rel="#panel-5" title="Lynda-com online course certifications">Lynda.com</a></li>
-                    <li><a href="#" rel="#panel-6" title="Shaw Academy Online course certificate">Mobile App Development</a></li>
-                    <li><a href="#" rel="#panel-7" title="Shaw Academy course certificate">Digital Marketing</a></li>
-                    <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Content Marketing</a></li>
+                    <li><a href="#" rel="#panel-6" title="Shaw Academy Online course certificate">Shaw Academy</a></li>
+                    <li><a href="#" rel="#panel-7" title="Shaw Academy course certificate">Shaw Academy</a></li>
+                    <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Shaw Academy</a></li>
                     <li><a href="#" rel="#panel-9" title="digital-futures-2017">Digital Futures 2017</a></li>
                 </ul>
 
@@ -90,9 +90,9 @@
                             <figure class="abobe">
 
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
 
                                 </a>
 
@@ -120,18 +120,18 @@
 
                         <article class="panel" id="panel-2">
 
-                            <h2>City &amp; Guilds Level 1</h2>
+                            <h2>East London Advanced Technology Training</h2>
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One, Two, Three">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-SMALL.gif" alt="City and Guilds Level One, Two, Three">
 
                                 </a>
 
                                 <figcaption>
-                                    <h3>City &#38; Gulds ITQ Level 1 &#45; Web Design</h3>
+                                    <h3>City &#38; Gulds ITQ Level 1,2,3 &#45; Web Design</h3>
                                     <h4>Topics&#58;</h4>
 
                                     <ul>
@@ -152,24 +152,24 @@
 
                         <article class="panel" id="panel-3">
 
-                            <h2>City &amp; Guilds Level 2</h2>
+                            <h2>Udemy</h2>
 
-                            <figure class="cert">
+                            <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL2-LARGE.jpg" class="fancybox" title="City and Guilds Level Two">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Large.jpg" class="fancybox" title="Udemy.com">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL2-SMALL.gif" alt="City-and-Guilds-Level-Two">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Small.jpg" alt="Udemy.com">
 
                                 </a>
                                 <figcaption>
-                                    <h3>City &#38; Gulds ITQ Level 2 &#45; Web Design</h3>
+                                    <h3>Various</h3>
                                     <h4>Topics&#58;</h4>
 
                                     <ul>
-                                        <li><a href="">Database software</a></li>
-                                        <li><a href="">Design Software</a></li>
-                                        <li><a href="">Imaging Software</a></li>
-                                        <li><a href="">Website Software</a></li>
+                                        <li><a href="">JS Essentials</a></li>
+                                        <li><a href="">Sass Workflow</a></li>
+                                        <li><a href="">Rich Snippets</a></li>
+                                        <li><a href="">Object Oriented PHP</a></li>
                                         <li><a href="">Improving Productivity using IT</a></li>
 
                                     </ul>
@@ -182,25 +182,25 @@
 
                         <article class="panel" id="panel-4">
 
-                            <h2>City &amp; Guilds Level 3</h2>
+                            <h2>FreeCodeCamp</h2>
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL3-LARGE.jpg" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-large.png" class="fancybox" title="FreeCodeCamp">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/ITQ-USERS-LEVEL3-SMALL.gif" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-small.png" alt="FreeCodeCamp">
 
                                 </a>
                                 <figcaption>
-                                    <h3>City &#38; Gulds ITQ Level 3 &#45; Web Design</h3>
+                                    <h3>Frontend Developer Certificate</h3>
                                     <h4>Topics&#58;</h4>
 
                                     <ul>
-                                        <li><a href="">Database software</a></li>
-                                        <li><a href="">Design Software</a></li>
-                                        <li><a href="">Imaging Software</a></li>
-                                        <li><a href="">Website Software</a></li>
-                                        <li><a href="">Using Internet</a></li>
+                                        <li><a href="">HTML5/CSS3</a></li>
+                                        <li><a href="">Javascript</a></li>
+                                        <li><a href="">Jquery</a></li>
+                                        <li><a href="">Basic Algorythyms</a></li>
+                                        <li><a href="">JSON/API's</a></li>
 
                                     </ul>
                                     <div class="clearfix"></div>
@@ -217,9 +217,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Large-Udemy-Certificate.png" class="fancybox" title="City and Guilds Level Three">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Large.jpg" class="fancybox" title="Lynda.com">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Small.jpg" alt="Lynda.com">
 
                                 </a>
                                 <figcaption>
@@ -251,9 +251,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="Mobile-web-applications-Certificate-Foundation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="Mobile-web-applications-Certificate-Foundation">
 
                                 </a>
 
@@ -283,9 +283,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
 
@@ -316,9 +316,9 @@
 
                             <figure class="cert">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
                                 </a>
 
@@ -350,8 +350,8 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/10/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
                                 <figcaption>
                                     <h3>Interactive Programming</h3>
                                     <h4>Topics&#58;</h4>

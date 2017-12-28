@@ -46,11 +46,5 @@
 			});
 		} );
 	} );
-	// Custom Layout Options
-	wp.customize( 'layout_setting', function( value ) {
-		value.bind( function( to ) {
-			$( '#page' ).removeClass( 'no-sidebar sidebar-left sidebar-right' );
-			$( '#page' ).addClass( to );
-		} );
-	} );
+	
 } )( jQuery );

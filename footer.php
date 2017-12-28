@@ -13,7 +13,9 @@
 
 <a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="Follow me on Facebook"><span><i class="fa fa-facebook"></i></span></a>
 
-<a class="social-icon google-icon" href="https://github.com/DigbyCeaser/RayThompWeb" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
+
+<a class="social-icon google-icon" href="http://github.com/raythompsonwebdev/" target="new" title="Follow me on GitHub"><span><i class="fa fa-github"></i></span></a>
+
 
 </div>
 
@@ -43,28 +45,22 @@ $dt = time();
  
 </div>
 
-<?php add_action('wp_footer','add_google_analytics');//Google Analytics
-function add_google_analytics() {
-?>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-86655310-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
-<?php } ?>
-
-
 
 <?php wp_footer(); ?>
+
+<script type="text/javascript" async>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-86655310-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 </body>
 
