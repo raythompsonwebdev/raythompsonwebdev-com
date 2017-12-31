@@ -51,8 +51,14 @@
         <nav class="navi">
 
             <span class="right">
-                <?php next_post_link('Newer Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?>
-                <?php previous_post_link('Older Posts: <strong>%link</strong>'); ?><?php paginate_links(); ?></span>
+
+            <span class="pagi">
+                <?php next_post_link('Newer Posts: %link'); ?><?php paginate_links(); ?>
+            </span>
+
+            <span class="pagi">
+                <?php previous_post_link('Older Posts: %link'); ?><?php paginate_links(); ?>
+            </span>
 
 
         </nav><!--end of right navigation-->

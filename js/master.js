@@ -1,22 +1,21 @@
 
   //search field togle
- jQuery(document).ready(function($){
-
-   $('header button.menu-toggle').on('click', function(){
+	/* $('header button.menu-toggle').on('click', function(){
        $('header nav.menu-main-container ul#menu-main').animate({
             opacity : 'toggle',
             height: 'toggle'
             }, 'slow');
-   });
- });
+   });*/
+
 
  // Hide/show toggle button on scroll
  jQuery(document).ready(function($){
      
-     	var position, direction, previous;
+  var position, direction, previous;
 
  	$(window).scroll(function(){
- 		if( $(this).scrollTop() >= position ){
+		 
+		if( $(this).scrollTop() >= position ){
  			direction = 'down';
  			if(direction !== previous){
  				$('header button.menu-toggle').addClass('hide');
@@ -30,6 +29,34 @@
  			}
  		}
  		position = $(this).scrollTop();
- 	});
+	 });
+
+	 $('header button.menu-toggle').on('click', function(event){
+    
+		event.preventDefault();
+	
+		// create menu variables
+		var slideoutMenu = $('header nav.menu-main-container ');
+		var slideoutMenuWidth = $('header nav.menu-main-container ').width();
+	
+		// toggle open class
+		slideoutMenu.toggleClass("open");
+	
+		// slide menu
+		if (slideoutMenu.hasClass("open")) {
+			slideoutMenu.animate({
+				left: "0px"
+			});	
+		} else {
+			slideoutMenu.animate({
+				left: -slideoutMenuWidth
+			}, 500);	
+		}
+							
+		 
+	
+	});
+	 
+
 
   });

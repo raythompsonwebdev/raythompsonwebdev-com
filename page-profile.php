@@ -166,11 +166,11 @@
                                     <h4>Topics&#58;</h4>
 
                                     <ul>
-                                        <li><a href="">JS Essentials</a></li>
+                                        <li><a href="">ES 2016 Essentials</a></li>
                                         <li><a href="">Sass Workflow</a></li>
-                                        <li><a href="">Rich Snippets</a></li>
-                                        <li><a href="">Object Oriented PHP</a></li>
-                                        <li><a href="">Improving Productivity using IT</a></li>
+                                        <li><a href="">Rich Snippets - schema.org</a></li>
+                                        <li><a href="">Object Oriented PHP </a></li>
+                                        <li><a href="">NPM for Beginners - Essentials</a></li>
 
                                     </ul>
                                     <div class="clearfix"></div>
@@ -217,9 +217,9 @@
 
                             <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Large.jpg" class="fancybox" title="Lynda.com">
+                                <a href="<?php echo home_url();?>wp-content/uploads/2017/12/lynda_logo1k-d_72x72.png" class="fancybox" title="Lynda.com">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Small.jpg" alt="Lynda.com">
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/lynda_logo1k-d_72x72.png" alt="Lynda.com">
 
                                 </a>
                                 <figcaption>
