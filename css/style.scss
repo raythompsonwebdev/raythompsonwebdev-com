@@ -775,6 +775,7 @@ Domain Path: /language
                     font-weight: bold;
                     background-color: $color4;
                     color: $color1;
+                    font-size:1em;
                     p {
 
                         width: 82%;
@@ -795,12 +796,11 @@ Domain Path: /language
                         border-right: 1px solid $color1;
                         background-color: $color1;
                         color: $color4;
-                        line-height: 35px;
+                        line-height: 36px;
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
-                        text-align: left;
+                        text-align: center;
                         display: inline-block;
                         font-size: 0.9em;
                         height: 100%;
@@ -810,11 +810,11 @@ Domain Path: /language
                         color: $color1;
                         background-color: $color4;
                         &:hover {
+                            width: auto;
+                            text-align: center;
                             color: $color1;
-                            margin-left: 0;
-                            background-color: $color2;
-                            display: block;
-
+                            background-color: $color4;
+                            display: inline-block;
                             &::after {
                                 content: " > ";
                             }
@@ -823,6 +823,7 @@ Domain Path: /language
                 }
                 li:nth-of-type(2) {
                     @include box-sizing($type: border-box);
+                    font-size:1em;
                     width: 100%;
                     margin: 0 0 0.5em 0;
                     height: auto;
@@ -846,7 +847,7 @@ Domain Path: /language
                     span.post-meta-key {
                         display: inline-block;
                         width: 14%;
-                        min-height: 110px;
+                        min-height: 130px;
                         float: left;
                         font-size: 0.9em;
                         text-indent: 0.25em;
@@ -856,9 +857,9 @@ Domain Path: /language
                         line-height: 35px;
                     }
                     a {
+                        text-indent:0;
                         width: auto;
-                        margin-left: 0;
-                        text-align: center;
+                        text-align: left;
                         display: inline-block;
                         font-size: 0.9em;
                         height: auto;
@@ -867,10 +868,13 @@ Domain Path: /language
                         @include originTran( 50% 50%);
                         @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                         &:hover {
+                            text-align: left;
                             color: $color1;
-                            margin-left: 0;
-                            font-weight: bold;
+                            text-decoration:underline;
                             width: auto;
+                            &::after {
+                                content: unset;
+                            }
                         }
                     }
                 }
@@ -2583,25 +2587,7 @@ Domain Path: /language
                         width: 22%;
                         padding: 0;
                         float: left;
-                        li:nth-of-type(6) {
-                            height: 44px;
-                            a {
-                                font-size: 0.8em;
-                                line-height: 30px;
-                                height: 100%;
-                                display:block;
-                                padding: 0.5em;
-                            }
-                            a:hover {
-                                font-weight: bold;
-                                height: 100%;
-                                line-height: 30px;
-
-                                padding: 0.5em;
-                            }
-
-                        }
-
+                       
                         li {
                             height: 44px;
                             margin-bottom: 0.2em;
@@ -3423,19 +3409,15 @@ Domain Path: /language
                     }
                     a {
                         font-size: 0.9em;
-                        line-height: 35px;
+                        
                         &:hover {
-                            display: block;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                            display: inline-block;
+ 
                         }
                     }
                 }
                 li:nth-of-type(2) {
                     margin: 0 0 0.5em 0;
-                    
                     line-height: 22px;
                     p {
                         width: 82%;
@@ -3444,18 +3426,15 @@ Domain Path: /language
                     span.post-meta-key {
 
                         width: 16%;
-                        height: 109px;
+                        min-height: 130px;
                         
                     }
                     a {
-                        margin-left: 0;
                         font-size: 0.9em;
-                        height: 25px;
-                        line-height: 25px;
+
                         &:hover {
-                            margin-left: 0;
                             font-weight: bold;
-                            width: auto;
+                      
                         }
                     }
                 }
@@ -3524,7 +3503,7 @@ Domain Path: /language
                         }
                         span {
                             font-size: 0.9em;
-                            width: 27.69%;
+                            width: 27.1%;
 
                             a {
                                 width: 100%;
@@ -4458,24 +4437,7 @@ Domain Path: /language
                     ul#list {
                         width: 22%;
 
-                        li:nth-of-type(6) {
-                            height: 44px;
-                            a {
-                                font-size: 0.8em;
-                                line-height: 15px;
-                                height: 100%;
-                                padding: 0.5em;
-                            }
-                            a:hover {
-                                font-weight: bold;
-                                height: 100%;
-                                line-height: 15px;
-
-                                padding: 0.5em;
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom: 0.2em;
@@ -4971,11 +4933,8 @@ Domain Path: /language
                         font-size: 0.9em;
 
                         &:hover {
-                            display: block;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                            display: inline-block;
+                         
                         }
                     }
                 }
@@ -4989,16 +4948,16 @@ Domain Path: /language
                     span.post-meta-key {
 
                         width: 16%;
-                        height: 109px;
+                        min-height: 130px;
                         font-size:0.85em;
                         
                     }
                     a {
-                        margin-left: 0;
+                        
                         font-size: 0.9em;
 
                         &:hover {
-                            margin-left: 0;
+                            display: inline-block;
 
                         }
                     }
@@ -5037,8 +4996,8 @@ Domain Path: /language
                             font-size: 0.9em;
                         }
                         span {
-                            font-size: 0.9em;
-                            width: 27.49%;
+                            
+                            width: 27.1%;
 
                             a {
                                 width: 100%;
@@ -5051,7 +5010,7 @@ Domain Path: /language
                                 }
                                 i.fa-mobile:hover,
                                     i.fa-tablet:hover {
-                                    font-size: 1.25em;
+                                    font-size: 1.55em;
 
                                 }
                             }
@@ -5640,23 +5599,7 @@ Domain Path: /language
                     ul#list {
                         width: 22%;
 
-                        li:nth-of-type(6) {
-                            height: 44px;
-                            a {
-                                font-size: 0.8em;
-                                line-height: 16px;
-                                height: 100%;
-                                padding: 0.5em;
-                            }
-                            a:hover {
-                                font-weight: bold;
-                                height: 100%;
-                                line-height: 16px;
-                                height: 100%;
-                                padding: 0.5em;
-                            }
-
-                        }
+                       
 
                         li {
                             height: 44px;
@@ -6355,22 +6298,19 @@ Domain Path: /language
                     margin: 0 0 0.5em 0;
                     
                     span.post-meta-key {
-                        width: 15%;
-                        font-size: 0.9em;
+                        width: 17%;
+                        
                     }
                     p {
                         width: 78%;
-                        font-size: 0.9em;
+                        font-size: 0.85em;
                     }
                     a {
                         font-size: 0.9em;
-                        line-height: 35px;
+                        
                         &:hover {
-                            margin-left: 0;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                            font-weight:bold;
+                         
                         }
                     }
                 }
@@ -6383,15 +6323,16 @@ Domain Path: /language
                         line-height: 1.4em;
                     }
                     span.post-meta-key {
-                        width: 15%;
-                        font-size: 0.85em;
+                        width: 17%;
+                        font-size: 0.75em;
+                        min-height: 150px;
 
                     }
                     a {
                         font-size: 0.85em;
-                        margin-left: 0;
+                        
                         &:hover {
-                            margin-left: 0;
+                            font-weight:bold;
                             
                         }
                     }
@@ -6411,7 +6352,7 @@ Domain Path: /language
                         width: 25%;
                         font-size: 0.8em;
                         line-height: 50px;
-                        &::hover {
+                        &:hover {
                             font-weight: bold;
                         }
                     }
@@ -6421,8 +6362,8 @@ Domain Path: /language
                         line-height: 1.6em;
                         float: left;
                         span:first-of-type {
-                            font-size: 0.7em;
-                            width: 15%;
+                            font-size: 0.75em;
+                            width: 17%;
                         }
                         p {
                             width: 82%;
@@ -6430,7 +6371,7 @@ Domain Path: /language
                         }
                         span {
                            
-                            width: 27.19%;
+                            width: 26.19%;
 
                             a {
                                 line-height: 48px;
@@ -6438,14 +6379,14 @@ Domain Path: /language
                                 i.fa-desktop,
                                 i.fa-mobile,
                                 i.fa-tablet {
-                                    font-size: 1.55em;
+                                    font-size: 1.45em;
                                     text-align: center;
 
                                 }
                                 i.fa-desktop:hover,
                                     i.fa-mobile:hover,
                                     i.fa-tablet:hover {
-                                    font-size: 1.45em;
+                                    font-size: 1.5em;
 
                                 }
                             }
@@ -7075,25 +7016,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 22%;
-
-                        li:nth-of-type(6) {
-                            height: 44px;
-                            a {
-                                font-size: 0.75em;
-                                line-height: 16px;
-                                height: 100%;
-                                padding: 0.5em;
-                            }
-                            a:hover {
-                                font-weight: bold;
-                                height: 100%;
-                                line-height: 16px;
-                                height: 100%;
-                                padding: 0.5em;
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom: 0.2em;
@@ -7600,7 +7523,7 @@ Domain Path: /language
             .websiteImage {
                 clear: both;
                 height: auto;
-                width: 27%;
+                width: 24%;
             }
             ul {
                 line-height: 1.5em;
@@ -7633,21 +7556,18 @@ Domain Path: /language
                     
                     clear: both;
                     span.post-meta-key {
-                        width: 18%;
+                        width: 19%;
                     }
                     p {
-                        width: 82%;
-                        font-size: 0.9em;
+                        width: 81%;
+                        font-size: 0.8em;
                     }
                     a {
-                        margin-left: 0;
+                        font-size: 0.8em;
                         line-height: 35px;
                         &:hover {
-                            margin-left: 0;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                            font-size: 0.8em;
+                            
                         }
                     }
                 }
@@ -7655,27 +7575,26 @@ Domain Path: /language
                     margin: 0 0 0.5em 0;
                     padding: 0;
                     p {
-                        width: 82%;
+                        width: 81%;
                         font-size: 0.8em;
                     }
                     span.post-meta-key {
-                        width: 18%;
-                        height: 109px;
-                        font-size: 0.85em;
+                        width: 19%;
+                        min-height: 160px;
+                        font-size: 0.75em;
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
+                        
                         &:hover {
-                            margin-left: 0;
-                            font-weight: bold;
+                            font-weight:bold;
                             width: auto;
                         }
                     }
                 }
             }
             .website-text {
-                width: 73%;
+                width: 75%;
                 display: inline-block;
                 .links {
                     height: 50px;
@@ -7692,12 +7611,12 @@ Domain Path: /language
                         margin: 0 0 1%;
                         letter-spacing: 0.05em;
                         span:first-of-type {
-                            font-size: 0.7em;
-                            width: 18%;
+                            font-size: 0.75em;
+                            width: 19%;
                         }
                         span {
-                            font-size: 0.95em;
-                            width: 26.69%;
+                            
+                            width: 26.19%;
                             a {
                                 width: 100%;
                                 i.fa-desktop,
@@ -7709,7 +7628,7 @@ Domain Path: /language
                                 i.fa-desktop:hover,
                                     i.fa-mobile:hover,
                                     i.fa-tablet:hover {
-                                    font-size: 1.4em;
+                                    font-size: 1.45em;
 
                                 }
                             }
@@ -8306,21 +8225,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 23%;
-                        li:nth-of-type(6) {
-                            height: 44px;
-                            a {
-                                font-size: 0.65em;
-                                line-height: 16px;
-
-                            }
-                            a:hover {
-
-                                line-height: 16px;
-                                font-weight: normal;
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom: 0.2em;
@@ -8493,8 +8398,7 @@ Domain Path: /language
                 margin-left: 4%;
                 width: 21%;
             }
-            .social-icon:hover {}
-            span {}
+            
             .linkedin-icon span .fa-linkedin,
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
@@ -8846,7 +8750,7 @@ Domain Path: /language
             .websiteImage {
                 clear: both;
                 height: auto;
-                width: 30%;
+                width: 27%;
             }
             ul {
                 line-height: 1.5em;
@@ -8884,17 +8788,14 @@ Domain Path: /language
                     }
                     p {
                         width: 79%;
-                        font-size: 0.9em;
+                        font-size: 0.8em;
                     }
                     a {
-                        margin-left: 0;
+                        width: auto;
 
                         &:hover {
-                            margin-left: 0;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                            font-weight:bold;
+                        
                         }
                     }
                 }
@@ -8903,7 +8804,7 @@ Domain Path: /language
                     padding: 0;
                     span.post-meta-key {
                         width: 20%;
-                        height: 109px;
+                        min-height: 160px;
                         text-indent: 0.5%;
                         margin-right: 0.5%;
                         line-height: 23px;
@@ -8916,17 +8817,16 @@ Domain Path: /language
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
+                        
                         &:hover {
-                            margin-left: 0;
-                            font-weight: bold;
+                            
                             width: auto;
                         }
                     }
                 }
             }
             .website-text {
-                width: 70%;
+                width: 73%;
                 display: inline-block;
                 .links {
                     height: 50px;
@@ -8948,7 +8848,7 @@ Domain Path: /language
                             text-indent: 0.5%;
                         }
                         span {
-                            font-size: 0.9em;
+                            
                             width: 25.69%;
                             a {
                                 width: 100%;
@@ -8962,7 +8862,7 @@ Domain Path: /language
                                 i.fa-desktop:hover,
                                     i.fa-mobile:hover,
                                     i.fa-tablet:hover {
-                                    font-size: 1.35em;
+                                    font-size: 1.4em;
                                 }
                             }
                         }
@@ -9329,7 +9229,7 @@ Domain Path: /language
                 p {
                     line-height: 1.9em;
                     font-size: 0.9em;
-                    width: 100%;
+                    width: 98%;
 
                 }
                 .introimg {
@@ -9527,22 +9427,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 22%;
-                        li:nth-of-type(6) {
-                            height: 44px;
-                            a {
-                                padding: 0;
-                                font-size: 0.75em;
-                                line-height: 44px;
-
-                            }
-                            a:hover {
-                                padding: 0;
-                                line-height: 44px;
-
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom: 0.2em;
@@ -10107,46 +9992,42 @@ Domain Path: /language
                     margin: 0 0 0.5em 0;
                     
                     span.post-meta-key {
-                        width: 21%;
+                        width: 23%;
 
                     }
                     p {
-                        width: 77%;
-                        font-size: 0.85em;
+                        width: 75%;
+                        font-size: 0.8em;
                     }
                     a {
-                        margin-left: 0;
-                        line-height: 35px;
+                        
+                        font-size: 0.8em;
+                        
                         &:hover {
-                            margin-left: 0;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                            width: auto;
+                       
                         }
                     }
                 }
                 li:nth-of-type(2) {
-                    margin: 0 0 0.5em 0;
-                    
+                
                     padding: 0;
                     span.post-meta-key {
-                        width: 21%;
-                        height: 109px;
-                        font-size: 0.8em;
+                        width: 23%;
+                        min-height: 180px;
+                        font-size: 0.7em;
                     }
                     p {
-                        width: 77%;
-                        font-size: 0.8em;
+                        width: 75%;
+                        font-size: 0.75em;
 
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
+                        
                         font-size: 0.85em;
                         &:hover {
-                            margin-left: 0;
-                            font-weight: bold;
+                            
                             width: auto;
                         }
                     }
@@ -10170,12 +10051,12 @@ Domain Path: /language
                         margin: 0 0 1%;
                         letter-spacing: 0.05em;
                         span:first-of-type {
-                            font-size: 0.6em;
-                            width: 21%;
+                            font-size: 0.65em;
+                            width: 23%;
                         }
                         span {
-                            font-size: 0.9em;
-                            width: 25.49%;
+                            
+                            width: 24.49%;
                             a {
                                 width: 100%;
                                 color: $color1;
@@ -10189,7 +10070,7 @@ Domain Path: /language
                                 i.fa-desktop:hover,
                                     i.fa-mobile:hover,
                                     i.fa-tablet:hover {
-                                    font-size: 1.3em;
+                                    font-size: 1.35em;
                                 }
                             }
                         }
@@ -10815,21 +10696,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 22%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.75em;
-                                line-height: 44px;
-
-                            }
-                            a:hover {
-
-                                font-weight: bold;
-                                line-height: 44px;
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom:0.2em;
@@ -11375,22 +11242,18 @@ Domain Path: /language
                     
                     clear: both;
                     span.post-meta-key {
-                        width: 20%;
+                        width: 23%;
                         font-size: 0.9em;
-                        line-height: 35px;
                     }
                     p {
-                        width: 79%;
-                        font-size: 0.95em;
+                        width: 76%;
+                        font-size: 0.85em;
                     }
                     a {
-                        
+                        width:auto;
                         &:hover {
-                            margin-left: 0;
                             font-weight: bold;
-                            &::after {
-                                content: " > ";
-                            }
+                
                         }
                     }
                 }
@@ -11398,22 +11261,20 @@ Domain Path: /language
                     margin: 0 0 0.5em 0;
                     clear: both;
                     span.post-meta-key {
-                        width: 20%;
-                        min-height: 126px;
-                        font-size: 0.8em;
+                        width: 23%;
+                        min-height: 200px;
+                        font-size: 0.85em;
                     }
                     p {
-                        width: 79%;
-                        font-size: 0.95em;
+                        width: 76%;
+                        font-size: 0.85em;
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
-                        font-size: 0.85em;
+                        font-size: 0.9em;
                         &:hover {
-                            margin-left: 0;
+                            
                             font-weight: bold;
-                            width: auto;
                         }
                     }
                 }
@@ -11437,12 +11298,12 @@ Domain Path: /language
                         margin: 0 0 1%;
                         letter-spacing: 0.05em;
                         span:first-of-type {
-                            font-size: 0.8em;
-                            width: 20%;
+                            font-size: 0.85em;
+                            width: 23%;
                         }
                         span {
-                            font-size: 0.9em;
-                            width: 26.09%;
+                            
+                            width: 23.09%;
                             a {
                                 width: 100%;
                                 display: block;
@@ -11450,14 +11311,14 @@ Domain Path: /language
                                 i.fa-desktop,
                                 i.fa-mobile,
                                 i.fa-tablet {
-                                    font-size: 2.4em;
+                                    font-size: 1.5em;
                                     display: inline-block;
                                     text-align: center;
                                 }
                                 i.fa-desktop:hover,
                                     i.fa-mobile:hover,
                                     i.fa-tablet:hover {
-                                    font-size: 2.45em;
+                                    font-size: 1.55em;
                                 }
                             }
                         }
@@ -12005,21 +11866,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 22%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.7em;
-                                line-height: 44px;
-
-                            }
-                            a:hover {
-
-                                line-height: 44px;
-
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom:0.2em;
@@ -12494,7 +12341,7 @@ Domain Path: /language
             .websiteImage {
                 clear: both;
                 height: auto;
-                width: 40%;
+                width: 45%;
             }
             ul {
                 line-height: 1.5em;
@@ -12528,42 +12375,38 @@ Domain Path: /language
                 li {
                     margin: 0 0 0.5em 0;
                     span.post-meta-key {
-                        width: 20%;
+                        width: 23%;
                         font-size: 0.9em;
                     }
                     p {
-                        width: 79%;
-                        font-size: 0.9em;
+                        width: 76%;
+                        font-size: 0.85em;
                     }
                     a {
-                        margin-left: 0;
-                        line-height: 35px;
+                        font-size: 0.75em;
+                        
                         &:hover {
-                            margin-left: 0;
                             font-weight: bold;
-                            &::after {
-                                content: " > ";
-                            }
+                            
                         }
                     }
                 }
                 li:nth-of-type(2) {
                     margin: 0 0 0.5em 0;
                     span.post-meta-key {
-                        width: 20%;
-                        height: 109px;
+                        width: 23%;
+                        min-height: 200px;
                         font-size: 0.8em;
                     }
                     p {
-                        width: 79%;
-                        font-size: 0.9em;
+                        width: 76%;
+                        font-size: 0.85em;
                     }
                     a {
                         width: auto;
                         margin-left: 0;
                         &:hover {
                             margin-left: 0;
-                            font-weight: bold;
                             width: auto;
                         }
                     }
@@ -12588,15 +12431,15 @@ Domain Path: /language
 
                         span:first-of-type {
                             font-size: 0.8em;
-                            width: 20%;
+                            width: 23%;
                         }
                         p {
-                            width: 78%;
-                            font-size: 0.7em;
+                            width: 76%;
+                            font-size: 0.8em;
                         }
                         span {
                             font-size: 0.85em;
-                            width: 25.79%;
+                            width: 22.79%;
 
                             a {
                                 width: 100%;
@@ -13168,22 +13011,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 22%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                padding-top:0.5em;
-                                font-size: 0.75em;
-                                line-height: 16px;
-
-                            }
-                            a:hover {
-                                padding-top:0.5em;
-                                line-height: 16px;
-
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom:0.2em;
@@ -13386,6 +13214,7 @@ Domain Path: /language
 //536px
 @media only screen and (max-width: 33.5em) {
     #wrapper_container {
+        width: 100%;
     }
     header {
         height: 120px;
@@ -13560,38 +13389,37 @@ Domain Path: /language
 
                     span.post-meta-key {
                         width: 24%;
+                        font-size: 0.85em;
+                        height: 37px;
 
                     }
                     p {
                         width: 75%;
-                        font-size: 0.9em;
+                        font-size: 0.8em;
                     }
                     a {
 
                         &:hover {
-
-                            font-weight: normal;
-                            &::after {
-                                content: " > ";
-                            }
+                            font-weight: bold;
+                            
                         }
                     }
                 }
                 li:nth-of-type(2) {
                     span.post-meta-key {
                         width: 24%;
-                        min-height: 180px;
-
+                        min-height: 200px;
+                        font-size: 0.75em;
                     }
                     p {
                         width: 75%;
-                        font-size: 0.9em;
+                        font-size: 0.8em;
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
+                        
                         &:hover {
-                            margin-left: 0;
+                            
                             font-weight: bold;
                             width: auto;
                         }
@@ -14162,20 +13990,6 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 22%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.65em;
-                                line-height: 16px;
-
-                            }
-                            a:hover {
-
-                                line-height: 16px;
-
-                            }
-
-                        }
 
                         li {
                             height: 44px;
@@ -14427,17 +14241,20 @@ Domain Path: /language
     }
 
     #wrapper_container {
-        width: 98%;
+        width: 100%;
+        nav.menu-main-container.hide {
+            left: -29em;
+        }
     }
     header {
         height: 105px;
         hgroup {
             width: 88%;
             h1#logo {
-                font-size: 1.4em;
+                font-size: 1.35em;
             }
             h1#logo-blog {
-                font-size: 1.4em;
+                font-size: 1.35em;
             }
             h2 {
                 font-size: 0.6em;
@@ -14605,7 +14422,7 @@ Domain Path: /language
             font-size: 0.8em;
         }
         aside#side-bar {
-            width: 99%;
+            width: 100%;
             h2 {
                 font-size: 1.1em;
             }
@@ -14698,7 +14515,7 @@ Domain Path: /language
             }
             .websiteImage {
                 height: auto;
-                width: 45%;
+                width: 55%;
             }
             ul {
                 line-height: 1.5em;
@@ -14728,22 +14545,19 @@ Domain Path: /language
                     margin: 0 0 0.5em 0;
                     
                     span.post-meta-key {
-                        width: 24%;
-                        font-size: 0.9em;
+                        width: 29%;
+                        font-size: 0.85em;
                     }
                     p {
-                        width: 75%;
+                        width: 70%;
                         font-size: 0.85em;
                     }
                     a {
-                        margin-left: 0;
-                        font-size: 0.8em;
+                        
+                        font-size: 0.75em;
                         &:hover {
-                            margin-left: 0;
-                            width: 100%;
-                            &::after {
-                                content: " > ";
-                            }
+                           font-weight:bold;
+                       
                         }
                     }
                 }
@@ -14751,13 +14565,13 @@ Domain Path: /language
                     margin: 0 0 0.5em 0;
                     padding: 0;
                     span.post-meta-key {
-                        width: 24%;
-                        min-height: 141px;
+                        width: 29%;
+                        min-height: 220px;
                         font-size: 0.75em;
                     }
                     p {
-                        width: 75%;
-                        font-size: 0.85em;
+                        width: 70%;
+                        font-size: 0.8em;
                     }
                     a {
                         width: auto;
@@ -14791,12 +14605,12 @@ Domain Path: /language
                         letter-spacing: 0.05em;
                         line-height: 1.6em;
                         span:first-of-type {
-                            font-size: 0.7em;
-                            width: 24%;
+                            font-size: 0.75em;
+                            width: 29%;
                         }
                         span {
                             font-size: 0.85em;
-                            width: 24.1%;
+                            width: 20.1%;
 
                             a {
                                 width: 100%;
@@ -14823,8 +14637,8 @@ Domain Path: /language
             }
             div.continue-reading {
                 font-size: 0.8em;
-                width: 75%;
-                margin: 2% 0;
+                width: 100%;
+                
                 a{
                     display: block;
                     &:hover {
@@ -14924,8 +14738,8 @@ Domain Path: /language
                     p.form-submit input[type="submit"] {
                         width: 35%;
                         font-weight: normal;
-                        font-size: 0.8em;
-                        &::hover {
+                        font-size: 0.85em;
+                        &:hover {
                             width: 35%;
                         }
                     }
@@ -15032,6 +14846,7 @@ Domain Path: /language
                 width: 100%;
                 display: block;
                 float: none;
+                padding:0.5em;
                 h1 {
                     font-size: 1em;
                     line-height: 25px;
@@ -15112,16 +14927,16 @@ Domain Path: /language
             /*first text block*/
             #text-box-profile {
                 width: 100%;
-                //float: left;
-                margin:0.2em;
+                margin:0;
                 height: auto;
+                padding: 0.5em;
                 h1 {
                     font-size: 1em;
                     line-height: 25px;
                 }
                 p {
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 0.85em;
                     text-align:justify;
                     letter-spacing: 0.01em;
                 }
@@ -15185,7 +15000,8 @@ Domain Path: /language
                 }
                 p {
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 0.85em;
+                    text-align:justify;
 
                 }
                 .introimg {
@@ -15243,12 +15059,13 @@ Domain Path: /language
 
             /*profile-page_container - hero-slider*/
             section#prof_cont-a {
-                width: 90%;
+                width: 98%;
                 height: 500px;
                 margin:3em auto;
                 h1 {
                     font-size: 1.1em;
                     line-height: 50px;
+                    text-indent: 0;
                 }
                 #social {
                     width: 50%;
@@ -15280,7 +15097,7 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 35.59%;
+                                        width: 45.59%;
                                         margin: 1% auto;
 
                                         &:hover {
@@ -15308,7 +15125,7 @@ Domain Path: /language
                                                     font-size: 0.95em;
                                                 }
                                                 a {
-                                                    font-size: 0.7em;
+                                                    font-size: 0.65em;
 
                                                     &:hover {
                                                         font-weight: normal;
@@ -15328,7 +15145,7 @@ Domain Path: /language
                                                 }
                                                 a.lyndalink {
 
-                                                    font-size: 0.8em;
+                                                    font-size: 0.65em;
                                                     &:hover {
                                                         font-weight: normal;
                                                         font-style: italic;
@@ -15343,7 +15160,7 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 23.78%;
+                                        width: 27.78%;
                                     }
                                     figcaption {
                                         clear: both;
@@ -15384,21 +15201,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 24%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.65em;
-                                line-height: 16px;
-
-                            }
-                            a:hover {
-
-                                line-height: 16px;
-
-                            }
-
-                        }
-
+                        
                         li {
                             height: 44px;
                             margin-bottom:0.2em;
@@ -15418,7 +15221,7 @@ Domain Path: /language
 
             /*profile-page_container - chart*/
             section#prof_cont {
-                width: 90%;
+                width: 98%;
                 height: 500px;
                 margin:3em auto;
                 h1 {
@@ -15483,7 +15286,7 @@ Domain Path: /language
                         }
                         span {
                             width: 98%;
-                            font-size: 0.65em;
+                            font-size: 0.6em;
                         }
                     }
                 }
@@ -15626,8 +15429,8 @@ Domain Path: /language
     }
 
     .menu-toggle {
-        top: 4.3em;
-        left: 2%;
+        top: 4.1em;
+        
         font-size: 0.95em;
     }
 
@@ -15642,7 +15445,10 @@ Domain Path: /language
     }
 
     #wrapper_container {
-
+        width: 100%;
+        nav.menu-main-container.hide {
+            left: -29em;
+        }
     }
     header {
         height: 105px;
@@ -15678,25 +15484,25 @@ Domain Path: /language
         .site-firstletter {
             font-size: 1.7em;
         }
-        .site-logo a:focus .site-firstletter,
-            .site-logo a:hover .site-firstletter {}
+        
+        
         .site-firstletter {
             line-height: 36px;
         }
         /*Mobile-Navigation*/
         nav.menu-main-container {
-            top: 6.5em;
+            top: 7.2em;
             
             ul#menu-main {
                 height: 14.1em;
                 li.menu-item {
                     line-height: 45px;
                     &:hover {
-                        line-height: 45px;
+                        line-height: 60px;
                     }
                     a {
-                        line-height: 45px;
-                        font-size: 0.95em;
+                        line-height: 60px;
+                        font-size: 0.9em;
                         &:hover {
                             line-height: 45px;
                         }
@@ -15812,7 +15618,7 @@ Domain Path: /language
             }
             .websiteImage {
                 height: auto;
-                width: 50%;
+                width: 60%;
             }
             ul {
                 line-height: 1.5em;
@@ -15840,40 +15646,36 @@ Domain Path: /language
                 li {
                     margin: 0 0 0.5em 0;
                     span.post-meta-key {
-                        width: 25%;
-                        font-size: 0.85em;
+                        width: 29%;
+                        font-size: 0.8em;
                     }
                     p {
-                        width: 74%;
-                        font-size: 0.9em;
+                        width: 70%;
+                        font-size: 0.75em;
                     }
                     a {
-                        font-size: 0.85em;
+                        font-size: 0.65em;
 
                         &:hover {
-
                             font-weight: bold;
-                            &::after {
-                                content: " > ";
-                            }
                         }
                     }
                 }
                 li:nth-of-type(2) {
 
                     span.post-meta-key {
-                        width: 25%;
-                        min-height: 141px;
-                        font-size: 0.85em;
+                        width: 29%;
+                        min-height: 220px;
+                        font-size: 0.7em;
 
                     }
                     p {
-                        width: 74%;
-                        font-size: 0.9em;
+                        width: 70%;
+                        font-size: 0.75em;
                     }
                     a {
                         width: auto;
-                        font-size: 0.75em;
+                        font-size: 0.70em;
                         &:hover {
 
                             width: auto;
@@ -15896,12 +15698,12 @@ Domain Path: /language
                     p.formats {
                         margin: 0 0 1%;
                         span:first-of-type {
-                            font-size: 0.6em;
-                            width: 25%;
+                            font-size: 0.7em;
+                            width: 29%;
                         }
                         span {
-                            font-size: 0.85em;
-                            width: 23.8%;
+                            
+                            width: 20.8%;
                             a {
                                 width: 100%;
                                 display: block;
@@ -16329,7 +16131,7 @@ Domain Path: /language
                 height: 500px;
                 margin:3em auto;
                 h1 {
-                    font-size: 1.1em;
+                    font-size: 1em;
                     line-height: 50px;
                 }
                 #social {
@@ -16361,7 +16163,7 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 35.59%;
+                                        width: 50.59%;
                                         margin: 1% auto;
 
                                         &:hover {
@@ -16371,12 +16173,12 @@ Domain Path: /language
                                     figcaption {
                                         clear: both;
                                         h3 {
-                                            font-size: 0.85em;
+                                            font-size: 0.8em;
                                             line-height: 30px;
 
                                         }
                                         h4 {
-                                            font-size: 0.8em;
+                                            font-size: 0.75em;
 
                                         }
                                         ul {
@@ -16424,17 +16226,17 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 23.78%;
+                                        width: 28.78%;
                                     }
                                     figcaption {
                                         clear: both;
                                         h3 {
-                                            font-size: 0.85em;
+                                            font-size: 0.8em;
                                             line-height: 30px;
 
                                         }
                                         h4 {
-                                            font-size: 0.8em;
+                                            font-size: 0.75em;
                                             line-height: 30px;
 
                                         }
@@ -16465,22 +16267,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 24%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.7em;
-                                line-height: 16px;
-                                height:100%;
-
-                            }
-                            a:hover {
-
-                                line-height: 16px;
-                                height:100%;
-
-                            }
-
-                        }
+                        
                         li:nth-of-type(9){
                             height: 44px;
                             a {
@@ -16770,7 +16557,7 @@ Domain Path: /language
     }
 
     .menu-toggle {
-        top: 4em;
+        top: 4.1em;
         left: 0;
         font-size: 0.95em;
     }
@@ -16786,8 +16573,8 @@ Domain Path: /language
     }
 
     #wrapper_container {
-
-        nav#mobile-nav ul#menu-mobile.hide {
+        width: 100%;
+        nav.menu-main-container.hide {
             left: -29em;
         }
     }
@@ -16801,7 +16588,7 @@ Domain Path: /language
                 height: 30px;
             }
             h1#logo-blog {
-                font-size: 1em;
+                font-size: 1.1em;
                 height: 30px;
             }
             h2 {
@@ -16822,8 +16609,7 @@ Domain Path: /language
         .site-firstletter {
             font-size: 1.7em;
         }
-        .site-logo a:focus .site-firstletter,
-            .site-logo a:hover .site-firstletter {}
+        
         .site-firstletter {
             line-height: 36px;
         }
@@ -16837,10 +16623,10 @@ Domain Path: /language
                 li.menu-item {
                     line-height: 45px;
                     &:hover {
-                        line-height: 45px;
+                        line-height: 60px;
                     }
                     a {
-                        line-height: 45px;
+                        line-height: 60px;
                         font-size: 0.9em;
                         &:hover {
                             line-height: 45px;
@@ -16988,7 +16774,7 @@ Domain Path: /language
             }
             .websiteImage {
                 height: auto;
-                width: 50%;
+                width: 60%;
             }
             ul {
                 line-height: 1.5em;
@@ -17018,15 +16804,16 @@ Domain Path: /language
                     clear: both;
                     line-height: 35px;
                     span.post-meta-key {
-                        width: 26%;
-                        font-size: 0.8em;
+                        width: 29%;
+                        font-size: 0.7em;
                     }
                     p {
-                        width: 72%;
-                        font-size: 0.8em;
+                        width: 70%;
+                        font-size: 0.7em;
                     }
                     a {
-                        font-size: 0.7em;
+                        font-size: 0.55em;
+                        text-indent: 0.2em;
                         &:hover {
                             font-weight: bold;
                             &::after {
@@ -17038,18 +16825,18 @@ Domain Path: /language
                 li:nth-of-type(2) {
                     line-height: 20px;
                     span.post-meta-key {
-                        width: 27%;
-                        min-height: 200px;
-                        font-size: 0.65em;
+                        width: 29%;
+                        min-height: 240px;
+                        font-size: 0.6em;
                     }
                     p {
-                        width: 72%;
-                        font-size: 0.85em;
+                        width: 70%;
+                        font-size: 0.7em;
                     }
                     a {
                         width: auto;
                         margin-left: 0;
-                        font-size: 0.85em;
+                        font-size: 0.8em;
                         &:hover {
                             margin-left: 0;
                             width: auto;
@@ -17074,12 +16861,12 @@ Domain Path: /language
                     p.formats {
                         margin: 0 0 1%;
                         span:first-of-type {
-                            font-size: 0.55em;
-                            width: 26%;
+                            font-size: 0.65em;
+                            width: 29%;
                         }
                         span {
-                            font-size: 0.85em;
-                            width: 23.5%;
+                            
+                            width: 19.5%;
                             a {
                                 width: 100%;
                                 display: block;
@@ -17374,7 +17161,7 @@ Domain Path: /language
                 }
                 p {
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 0.85em;
                 }
                 .introimg {
                     width: 14.729%;
@@ -17436,7 +17223,7 @@ Domain Path: /language
                 }
                 p {
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 0.85em;
 
                 }
                 .introimg {
@@ -17498,7 +17285,7 @@ Domain Path: /language
                 height: 500px;
                 margin:3em auto;
                 h1 {
-                    font-size: 1.1em;
+                    font-size: 0.9em;
                     line-height: 50px;
                 }
                 #social {
@@ -17522,7 +17309,7 @@ Domain Path: /language
                                 height: 420px;
                                 h2 {
                                     height: 40px;
-                                    font-size: 0.85em;
+                                    font-size: 0.8em;
                                     width: 100%;
                                 }
                                 figure.abobe {
@@ -17530,7 +17317,7 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 35.59%;
+                                        width: 50.59%;
                                         margin: 1% auto;
 
                                         &:hover {
@@ -17540,12 +17327,12 @@ Domain Path: /language
                                     figcaption {
                                         clear: both;
                                         h3 {
-                                            font-size: 0.8em;
+                                            font-size: 0.7em;
                                             line-height: 30px;
 
                                         }
                                         h4 {
-                                            font-size: 0.7em;
+                                            font-size: 0.6em;
 
                                         }
                                         ul {
@@ -17593,17 +17380,17 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 23.78%;
+                                        width: 28.78%;
                                     }
                                     figcaption {
                                         clear: both;
                                         h3 {
-                                            font-size: 0.8em;
+                                            font-size: 0.7em;
                                             line-height: 30px;
 
                                         }
                                         h4 {
-                                            font-size: 0.7em;
+                                            font-size: 0.6em;
                                             line-height: 30px;
 
                                         }
@@ -17634,21 +17421,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 25%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.7em;
-                                line-height: 16px;
-
-                            }
-                            a:hover {
-
-                                line-height: 16px;
-
-                            }
-
-                        }
-
+                       
                         li:nth-of-type(9){
                             height: 44px;
                             a {
@@ -17937,8 +17710,8 @@ Domain Path: /language
     }
 
     .menu-toggle {
-        top: 4.3em;
-        left: 2%;
+        top: 4.1em;
+        
         font-size: 0.95em;
     }
 
@@ -17947,7 +17720,10 @@ Domain Path: /language
     }
 
     #wrapper_container {
-    margin:0;   
+        width: 100%;
+        nav.menu-main-container.hide {
+            left: -29em;
+        }   
     }
     header {
         height: 105px;
@@ -17976,26 +17752,25 @@ Domain Path: /language
         .site-firstletter {
             font-size: 1.7em;
         }
-        .site-logo a:focus .site-firstletter,
-        .site-logo a:hover .site-firstletter {}
+        
         .site-firstletter {
             line-height: 36px;
         }
         /*Mobile-Navigation*/
         /*Mobile-Navigation*/
         nav.menu-main-container {
-            top: 6.5em;
+            top: 7.1em;
             
             ul#menu-main {
                 height: 14.1em;
                 li.menu-item {
-                    line-height: 45px;
+                    line-height: 60px;
                     &:hover {
-                        line-height: 45px;
+                        line-height: 60px;
                     }
                     a {
                         line-height: 45px;
-                        font-size: 0.9em;
+                        font-size: 0.85em;
                         &:hover {
                             line-height: 45px;
                         }
@@ -18150,20 +17925,20 @@ Domain Path: /language
 
                     span.post-meta-key {
                         width: 27%;
-                        height: 35px;
-                        font-size: 0.8em;
-                        line-height: 35px;
+                        height: 38px;
+                        font-size: 0.65em;
+                        
                     }
                     p {
                         width: 71%;
-                        font-size: 0.8em;
+                        font-size: 0.65em;
                         line-height: 1em;
                     }
                     a {
-                        font-size: 0.65em;
+                        font-size: 0.55em;
 
                         &:hover {
-                            margin-left: 0;
+                            
                             font-weight: bold;
                             &::after {
                                 content: " > ";
@@ -18177,18 +17952,18 @@ Domain Path: /language
                     span.post-meta-key {
                         width: 27%;
                         min-height: 220px;
-                        font-size: 0.6em;
+                        font-size: 0.55em;
                     }
                     p {
                         width: 72%;
-                        font-size: 0.75em;
+                        font-size: 0.7em;
                     }
                     a {
                         width: auto;
-                        margin-left: 0;
+                        
                         font-size: 0.8em;
                         &:hover {
-                            margin-left: 0;
+                            
                             width: auto;
                         }
                     }
@@ -18212,11 +17987,11 @@ Domain Path: /language
                     p.formats {
                         margin: 0 0 1%;
                         span:first-of-type {
-                            font-size: 0.6em;
+                            font-size: 0.55em;
                             width: 27%;
                         }
                         span {
-                            font-size: 0.85em;
+                            
                             width: 23.1%;
                             a {
                                 width: 100%;
@@ -18504,6 +18279,7 @@ Domain Path: /language
                 }
                 p {
                     line-height: 1.9em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -18563,7 +18339,7 @@ Domain Path: /language
                 }
                 p {
 
-                    font-size: 0.9em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -18623,7 +18399,7 @@ Domain Path: /language
                 height: 500px;
                 margin:3em auto;
                 h1 {
-                    font-size: 1em;
+                    font-size: 0.85em;
                     line-height: 50px;
                 }
                 #social {
@@ -18646,14 +18422,14 @@ Domain Path: /language
                                 width: 100%;
                                 h2 {
                                     height: 40px;
-                                    font-size: 0.75em;
+                                    font-size: 0.7em;
                                 }
                                 figure.abobe {
                                     margin: 0;
                                     padding: 0;
                                     img {
                                         float: none;
-                                        width: 35.59%;
+                                        width: 50.59%;
                                         margin: 1% auto;
 
                                         &:hover {
@@ -18668,7 +18444,7 @@ Domain Path: /language
 
                                         }
                                         h4 {
-                                            font-size: 0.7em;
+                                            font-size: 0.6em;
 
                                         }
                                         ul {
@@ -18679,7 +18455,7 @@ Domain Path: /language
                                                     font-size: 0.9em;
                                                 }
                                                 a {
-                                                    font-size: 0.55em;
+                                                    font-size: 0.5em;
 
                                                     &:hover {
                                                         font-style: italic;
@@ -18712,15 +18488,16 @@ Domain Path: /language
                                     padding: 0;
                                     img {
                                         float: none;
+                                        width: 28.78%;
                                     }
                                     figcaption {
                                         clear: both;
                                         h3 {
-                                            font-size: 0.8em;
+                                            font-size: 0.7em;
 
                                         }
                                         h4 {
-                                            font-size: 0.7em;
+                                            font-size: 0.6em;
 
                                         }
                                         ul {
@@ -18729,12 +18506,12 @@ Domain Path: /language
                                                 line-height: 23px;
                                                 margin-bottom:0.1em;
                                                 &:before {
-                                                    font-size: 0.9em;
+                                                    font-size: 0.8em;
                                                     line-height: 1.5em;
                                                 }
                                                 a {
 
-                                                    font-size: 0.55em;
+                                                    font-size: 0.5em;
                                                     display: inline-block;
                                                     &:hover {
                                                         font-style: italic;
@@ -18749,18 +18526,7 @@ Domain Path: /language
                     }
                     ul#list {
                         width: 26%;
-                        li:nth-of-type(6){
-                            height: 44px;
-                            a {
-                                font-size: 0.6em;
-                                line-height: 16px;
-                            }
-                            a:hover {
-
-                                line-height: 16px;
-                            }
-                        }
-
+                       
                         li:nth-of-type(9){
                             height: 44px;
                             a {
@@ -18799,7 +18565,7 @@ Domain Path: /language
                 height: 500px;
                 margin:3em auto;
                 h1 {
-                    font-size: 1.3em;
+                    font-size: 1.1em;
                     line-height: 50px;
 
                 }
@@ -18834,7 +18600,7 @@ Domain Path: /language
                         }
                         li span {
 
-                            font-size: 0.5em;
+                            font-size: 0.85em;
                             z-index: 2;
                         }
                     }
@@ -18859,7 +18625,7 @@ Domain Path: /language
                         }
                         span {
                             width: 98%;
-                            font-size: 0.65em;
+                            font-size: 0.5em;
                         }
                     }
                 }
