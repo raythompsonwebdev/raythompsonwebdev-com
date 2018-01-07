@@ -40,7 +40,10 @@
 
     </h1>
 
- 
+    <?php
+    the_archive_title('<h2 class="page-title">', '</h2>');
+    ?>
+
     <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
     <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">

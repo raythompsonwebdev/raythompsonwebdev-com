@@ -98,6 +98,7 @@
             <article class="hero-slider"><!-- #hero-slider -->
 
                 <ul id="list">
+<<<<<<< HEAD
                     <li>
                         <a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Adobe</a>
                     </li>
@@ -125,6 +126,17 @@
                     <li>
                         <a href="#" rel="#panel-9" title="digital-futures-2017">Digital Futures 2017</a>
                     </li>
+=======
+                    <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Adobe</a></li>
+                    <li><a href="#" rel="#panel-2" title="City and Guilds Web Design Certificate Level One" >ELATT</a></li>
+                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level Two">Udemy</a></li>
+                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Three">FreeCodeCamp</a></li>
+                    <li><a href="#" rel="#panel-5" title="Lynda-com online course certifications">Lynda.com</a></li>
+                    <li><a href="#" rel="#panel-6" title="Shaw Academy Online course certificate">Shaw Academy</a></li>
+                    <li><a href="#" rel="#panel-7" title="Shaw Academy course certificate">Shaw Academy</a></li>
+                    <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Shaw Academy</a></li>
+                    <li><a href="#" rel="#panel-9" title="digital-futures-2017">Digital Futures 2017</a></li>
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
                 </ul>
 
                 <div class="mask"><!--mask-->
@@ -138,6 +150,11 @@
 
                                 <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
+<<<<<<< HEAD
+=======
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
                                     <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
 
                                 </a>
@@ -175,9 +192,15 @@
 
                             <figure class="cert">
 
+<<<<<<< HEAD
                                 <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One">
 
                                     <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-SMALL.gif" alt="City-and-Guilds-Level-One">
+=======
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One, Two, Three">
+
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-SMALL.gif" alt="City and Guilds Level One, Two, Three">
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
                                 </a>
 
@@ -216,15 +239,22 @@
 
                             <figure class="abobe">
 
+<<<<<<< HEAD
                                 <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Large.jpg" class="fancybox" title="City and Guilds Level Two">
 
                                     <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Small.jpg" alt="Udemy">
+=======
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Large.jpg" class="fancybox" title="Udemy.com">
+
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Small.jpg" alt="Udemy.com">
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
                                 </a>
                                 <figcaption>
                                     <h3>Various</h3>
                                     <h4>Topics&#58;</h4>
                                     <ul>
+<<<<<<< HEAD
                                         <li>
                                             <a href="">JS Essentials</a>
                                         </li>
@@ -240,6 +270,14 @@
                                         <li>
                                             <a href="">Improving Productivity using IT</a>
                                         </li>
+=======
+                                        <li><a href="">ES 2016 Essentials</a></li>
+                                        <li><a href="">Sass Workflow</a></li>
+                                        <li><a href="">Rich Snippets - schema.org</a></li>
+                                        <li><a href="">Object Oriented PHP </a></li>
+                                        <li><a href="">NPM for Beginners - Essentials</a></li>
+
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
                                     </ul>
                                     <div class="clearfix"></div>
                                 </figcaption>
@@ -254,15 +292,22 @@
 
                             <figure class="cert">
 
+<<<<<<< HEAD
                                 <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-large.jpg" class="fancybox" title="City and Guilds Level Three">
 
                                     <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-small.png" alt="City-and-Guilds-Level-Three">
+=======
+                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-large.png" class="fancybox" title="FreeCodeCamp">
+
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-small.png" alt="FreeCodeCamp">
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
                                 </a>
                                 <figcaption>
                                     <h3>Frontend Developer Certificate</h3>
                                     <h4>Topics&#58;</h4>
                                     <ul>
+<<<<<<< HEAD
                                         <li>
                                             <a href="">HTML5/CSS3</a>
                                         </li>
@@ -278,6 +323,14 @@
                                         <li>
                                             <a href="">JSON/API's</a>
                                         </li>
+=======
+                                        <li><a href="">HTML5/CSS3</a></li>
+                                        <li><a href="">Javascript</a></li>
+                                        <li><a href="">Jquery</a></li>
+                                        <li><a href="">Basic Algorythyms</a></li>
+                                        <li><a href="">JSON/API's</a></li>
+
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
                                     </ul>
                                     <div class="clearfix"></div>
                                 </figcaption>
@@ -293,9 +346,15 @@
 
                             <figure class="abobe">
 
+<<<<<<< HEAD
                                 <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Udemy-Certificate.png" class="fancybox" title="City and Guilds Level Three">
 
                                     <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Small-Udemy-Certicate.jpg" alt="City-and-Guilds-Level-Three">
+=======
+                                <a href="<?php echo home_url();?>wp-content/uploads/2017/12/lynda_logo1k-d_72x72.png" class="fancybox" title="Lynda.com">
+
+                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/lynda_logo1k-d_72x72.png" alt="Lynda.com">
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
                                 </a>
                                 <figcaption>
@@ -468,6 +527,10 @@
                             <h2>Digital Futures 2017</h2>
 
                             <figure class="abobe">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
                                 <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
                                     <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
                                 <figcaption>

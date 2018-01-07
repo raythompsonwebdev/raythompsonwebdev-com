@@ -58,6 +58,7 @@
     </p>
 
 </footer>
+<<<<<<< HEAD
 
 </div>
 
@@ -69,6 +70,13 @@
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-86655310-1']);
     _gaq.push(['_trackPageview']);
+=======
+ 
+</div>
+
+
+<?php wp_footer(); ?>
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
     (function () {
         var ga = document.createElement('script');
@@ -79,7 +87,10 @@
         s.parentNode.insertBefore(ga, s);
     })();
 
+<<<<<<< HEAD
 </script>
+=======
+>>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
 </body>
 
