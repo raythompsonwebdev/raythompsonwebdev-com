@@ -1,5 +1,21 @@
-<?php get_header(); ?>
+<?php
+/**
+ * *PHP version 5
+ * 
+ * Blog Page | core/index.php.
+ * 
+ * @category   Blog_Page
+ * @package    Wordpress
+ * @subpackage Blog_Page
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
+?>
 
+<?php get_header(); ?>
 
 <!--Main content -->
 <section id="main-content" class="group" role="main">
@@ -16,10 +32,7 @@
     <?php else : ?>
         <span class="social-1"></span>
     <?php endif; ?>
-
-
     <br/><br/>
-
 
     <?php
     // Is this the first post of the front page?

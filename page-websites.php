@@ -1,11 +1,20 @@
 <?php
-
-/*
-
-Template Name: Websites
-
-*/
-
+/**
+ * *PHP version 5
+ * 
+ * Template Name: Websites
+ * 
+ * Websites page | core/page-websites.php.
+ *
+ * @category   Websites_Page
+ * @package    Wordpress
+ * @subpackage Websites_Page
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
+ */
 ?>
 
 <?php get_header(); ?>
@@ -47,20 +56,18 @@ Template Name: Websites
   <figure class="showcase-container " id="showcaseimg1">
 
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-camping-advice-home-page-port.png" alt="CampingAdvice.com website home page" >
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-camping-advice-home-page-small.png" alt="CampingAdvice.com website home page" >
 
   <figcaption class="showcase-content showcase">
   <h1>Camping Advice.com</h1>
 
   <div class="links">
-      <!--<?//https://www.raythompsonwebdev.co.ukphp echo home_url();?>/website/camping-advice-->
   <a href="<?php echo home_url();?>/website/campingadvice-com" title="www.campingadvice.raythompsonwebdev.co.uk">See More..</a></div>
   </figcaption>
 
   </figure>
 
 </div>
-<!-- Panel Container Ends Here -->
 
 <!-- Panel Container Starts Here -->
 <div id="panel2" class="dbox prod-cnt webdesign">
@@ -68,7 +75,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg2">
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-mannering-music-home-page-port.png" alt="Mannering Music website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-mannering-music-home-page-small.png" alt="Mannering Music website home page">
 
   <figcaption class="showcase-content">
   <h1>Mannering Music</h1>
@@ -85,7 +92,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg3">
 
-    <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-car-rental-home-page-port.png" alt="Car Rental website home page">
+    <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-car-rental-home-page-small-phpjabber.png" alt="Car Rental website home page">
 
     <figcaption class="showcase-content">
     <h1>Car Rental</h1>
@@ -103,7 +110,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg4">
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-shoe-store-home-page-port.png" alt="Shoestore website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-shoe-store-home-page-small-phpjabber.png" alt="Shoestore website home page">
 
   <figcaption class="showcase-content showcase-d">
   <h1>Shoestore</h1>
@@ -121,7 +128,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg5">
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-greenfootprints-home-page-port.png" alt="greenfootprints website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-greenfootprints-home-page-small.png" alt="greenfootprints website home page">
 
   <figcaption class="showcase-content showcase-e">
     <h1>Greenfootprints.com</h1>
@@ -139,7 +146,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg6">
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-travelagency-home-page-port.png"  alt="Travel Agency website home page" >
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-travel-agency-home-page-small-phpjabber.png"  alt="Travel Agency website home page" >
 
   <figcaption class="showcase-content showcase-f">
   <h1>Travel Agency</h1>
@@ -158,7 +165,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg7">
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/portfolio-grahics-mixtape-cover-port.png" alt="mixtape cover" >
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/portfolio-grahics-mixtape-cover-small.png" alt="mixtape cover" >
 
   <figcaption class="showcase-content showcase-g" >
 
@@ -178,7 +185,7 @@ Template Name: Websites
 
   <figure class="showcase-container" id="showcaseimg8">
 
-  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2017/10/www-fitness-club-home-page-port.png" alt="fitness club website home page">
+  <img class="showcase-img" src="<?php echo home_url();?>/wp-content/uploads/2018/01/www-fitness-club-home-page-small.png" alt="fitness club website home page">
 
   <figcaption class="showcase-content showcase-h">
 
