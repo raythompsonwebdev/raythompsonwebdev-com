@@ -1,6 +1,10 @@
 <?php
 /**
+<<<<<<< HEAD
  * *PHP version 5
+=======
+ * *PHP version 5.6
+>>>>>>> 06bb6834ff1bdf6bc417acbbb75f423890046b84
  * 
  * 404 page | core/404.php.
  *
@@ -14,11 +18,15 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 06bb6834ff1bdf6bc417acbbb75f423890046b84
 <?php get_header(); ?>
 
 
 
-<section id="blogleftside">  
+<section id="blogleftside">
 
 
 <h1>404: Page not Found!?</h1>
@@ -32,6 +40,3 @@
 
 
 <?php get_footer(); ?>
-
-
-
