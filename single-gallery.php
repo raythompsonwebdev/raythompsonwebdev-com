@@ -1,12 +1,24 @@
 <?php
 /**
- * website taxonomy archive
+ * *PHP version 5
+ * 
+ * Single-Gallery page | core/single-gallery.php.
+ *
+ * @category   Single-Galleryy_Page
+ * @package    Wordpress
+ * @subpackage Single-Gallery_Page
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       http:www.raythompsonwebdev.co.uk custom template
  */
-get_header();
-$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
+<?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
+<?php 
+$term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+?>
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -15,7 +27,9 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
         <h1><?php the_title(); ?></h1>
 
             <figure class="websiteImage">
+              <a href="<?php echo home_url();?>/wp-content/uploads/2018/02/www-<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>-home-page-large.jpg" class="fancybox" title="">
                 <?php the_post_thumbnail('websites'); ?>
+                </a>
             </figure>
 
     <div class="website-text">
@@ -65,8 +79,6 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 <?php get_sidebar(); ?>
 
-</section><!--end of main content-->
 
-<div class="clearfix"></div>
 
 <?php get_footer(); ?>

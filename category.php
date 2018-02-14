@@ -1,8 +1,8 @@
 
 <?php get_header(); ?>
-   	
-<section id="main-content" class="group" >
-  <?php 
+
+
+  <?php
     // Check if there are any posts to display
     if ( have_posts() ) : ?>
 
@@ -21,7 +21,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
-     
+
     <h1>
         <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
     </h1>
@@ -59,18 +59,18 @@
 <?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');?>
         </p>
     </footer>
-    
+
  </article>
 
 <?php endwhile;  else: ?>
 
    <?php get_template_part( 'templates/content', 'none' ); ?>
-    
+
 <?php endif; ?>
 
     <!--end of Comment box-->
-    <div class="clearfix"></div>    
+    <div class="clearfix"></div>
 <?php get_sidebar(); ?>
 </section>
- 
-<?php get_footer(); ?> 
+
+<?php get_footer(); ?>

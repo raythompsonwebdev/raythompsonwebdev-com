@@ -6,26 +6,25 @@ Template Name: Privacy
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
-   		
-  <h1><?php the_title(); ?></h1>
 
-<?php if (have_posts()) :
-        while (have_posts()) : the_post();
+<?php if (have_posts()) :   ?>
 
-        get_template_part('templates/content', 'page');
+        <?php  while (have_posts()) : the_post();
 
-        endwhile;
+        get_template_part('templates/content', 'page');  ?>
 
+      <?php endwhile;  ?>
+
+      <?php
         else :
-          echo '<p>No content found</p>';
+
+          get_template_part('templates/content', 'none');
 
         endif;
-        ?>     			
+        ?>
 
 
 <div class="clearfix"></div>
-       		
-</section>
-<div class="clearfix"></div>
+
+
 <?php get_footer(); ?>

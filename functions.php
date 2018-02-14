@@ -8,20 +8,6 @@ add_action('send_headers','fix_ie8');    // for WordPress
 add_filter( 'widget_text', 'shortcode_unautop' );
 add_filter( 'widget_text', 'do_shortcode' );
 
-//title filter
-function filter_wp_title( $title ) {
-	global $page, $paged;
-
-	if ( is_feed() ){
-		return $title;
-		$site_description = get_bloginfo( 'description' );
-		$filtered_title = $title . get_bloginfo( 'name' );
-		$filtered_title .= ( ! empty( $site_description ) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description: '';
-		$filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf( __( 'Page %s', 'raythompsonwebdev-com' ), max( $paged, $page ) ) : '';
-		return $filtered_title;
-	}
-}
-add_filter( 'wp_title', 'filter_wp_title' );
 
 //custom header
 function raythompwebdesign_custom_header_setup() {
@@ -46,13 +32,13 @@ function my_theme_setup(){
 function wpb_add_google_fonts() {
 		wp_enqueue_style( 'wpb-google-fonts','https://fonts.googleapis.com/css?family=PT+Sans:400,700', false );
 		wp_enqueue_style( 'wpc-google-fonts','https://fonts.googleapis.com/css?family=Cabin:400,700', false );
-	}
+}
 add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
-	
+
 //Localization support
 load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages');
 
-add_editor_style('css/custom-editor-style.css','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+add_editor_style('css/custom-editor-style.css',get_template_directory() . '/fonts/font-awesome/css/font-awesome.min.css' );
 
 add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'gallery', 'caption' ) );
 
@@ -98,7 +84,6 @@ register_nav_menus(	array(
 endif; // my_theme_setup end
 add_action('after_setup_theme', 'my_theme_setup');
 
-
 //remove comment cookies
 remove_action('set_comment_cookies', 'wp_set_comment_cookies');
 
@@ -120,7 +105,7 @@ function cubiq_setup () {
 }
 add_action('after_setup_theme', 'cubiq_setup');
 
-//remove 
+//remove
 function remove_change_myheaders($headers) {
 	unset($headers['X-Pingback']);
 	$headers['X-Powered-By'] = 'PHP/5';
@@ -137,17 +122,6 @@ function shapeSpace_remove_version_scripts_styles($src) {
 }
 add_filter('style_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
 add_filter('script_loader_src', 'shapeSpace_remove_version_scripts_styles', 9999);
-
-function remove_version_parameter( $src ){
-    // Check if version parameter exist
-    $parts = explode( '?ver', $src );
-    // return without version parameter
-    return $parts[0];
-}
-// filter .js files
-add_filter( 'script_loader_src', 'remove_version_parameter', 15, 1 );
-// filter .css files
-add_filter( 'style_loader_src', 'remove_version_parameter', 15, 1 );
 
 //remove wp-embed.min.js
 add_action( 'init', function() {
@@ -167,27 +141,28 @@ add_action( 'init', function() {
 }, PHP_INT_MAX - 1 );
 
 
-function your_init_yourscript() {
+/*function your_init_yourscript() {
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(),'2.2.4', true );
 }
 add_action('init', 'your_init_yourscript');
+*/
 
-
-add_action('customize_register', 'customizer');
+/*add_action('customize_register', 'customizer');
 
 function defer_parsing_of_js ( $url ) {
     if ( FALSE === strpos( $url, '.js' ) ) return $url;
     if ( strpos( $url, 'jquery.js' ) ) return $url;
     return "$url' defer ";
 }
-add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 ); 
+add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+*/
 
 //enqueue style sheets
 function mytheme_register_styles(){
 
 	wp_register_style('custom', get_stylesheet_directory_uri() . '/custom-editor-style.css', false,'1.1','all' );
-	// Add Font Awesome icons (http://fontawesome.io) 
+	// Add Font Awesome icons (http://fontawesome.io)
 	wp_enqueue_style( 'raythompsonwebdev-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 	wp_enqueue_style( 'custom' );
@@ -196,17 +171,16 @@ function mytheme_register_styles(){
 add_action('wp_enqueue_scripts','mytheme_register_styles');
 
 
-//enqueue other scripts
+//enqueue main scripts
 function my_scripts_own() {
 
-    wp_deregister_script('modernizr');
     //master
-		wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'1.0', true );
-		
-		wp_enqueue_script( 'jquery' );
+	wp_register_script( 'master', get_template_directory_uri() . '/js/master.js', array('jquery'),'1.0', true );
+
+	wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'master' );
 
-		
+
 /*  wp_localize_script( 'popper-functions', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'popper' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'popper' ) . '</span>',
@@ -217,7 +191,7 @@ add_action( 'wp_enqueue_scripts', 'my_scripts_own' );
 
 /**
  * Remove Contact Form 7 scripts + styles unless we're on the contact page
- * 
+ *
  */
 add_action( 'wp_enqueue_scripts', 'ac_remove_cf7_scripts' );
 function ac_remove_cf7_scripts() {
@@ -227,33 +201,33 @@ function ac_remove_cf7_scripts() {
 	}
 }
 
-//enqueue lightbox script
+//enqueue lightbox script for profile page and single gallery page
 add_action( 'wp_enqueue_scripts', 'raythompwebdesign_add_lightbox' );
 function raythompwebdesign_add_lightbox() {
-	
-		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
-		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-		wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
+
+		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css' ,false,'1.1','all');
+		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+		wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
 
 }
 
-//enqueue website page scripts 
-add_action( 'wp_enqueue_scripts', 'website_page_script' );
-function website_page_script() {
+//enqueue gallery page scripts
+add_action( 'wp_enqueue_scripts', 'gallery_page_script' );
+function gallery_page_script() {
 	//cookie
-	if ( is_page( 'websites' ) ) {
+	if ("gallery" == get_post_type()){
 		wp_register_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'),'20161110', true );
-		wp_register_script( 'websites', get_template_directory_uri() . '/js/websites.js', array('jquery'),'20161110', true );
+		wp_register_script( 'gallery', get_template_directory_uri() . '/js/websites.js', array('jquery'),'20161110', true );
 
 		wp_enqueue_script( 'cookie' );
-		wp_enqueue_script( 'websites' );
+		wp_enqueue_script( 'gallery' );
 	}
 }
 
 //enqueue profile page scripts
 add_action( 'wp_enqueue_scripts', 'profile_page_scripts' );
 function profile_page_scripts() {
-	
+
 	if ( is_page( 'profile' ) ) {
 		//scrollto script
 		wp_register_script( 'scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'),'20161110', true );
@@ -274,6 +248,8 @@ function profile_page_scripts() {
 }
 
 
+//Google analytics- Google Tag script
+add_action( 'wp_footer', 'google_script' );
 function google_script(){ ?>
 
 <script type="text/javascript" async>
@@ -291,31 +267,31 @@ function google_script(){ ?>
 </script>
 
 <?php }
-add_action( 'wp_footer', 'google_script' ); 
+
 
 //ie 8 styles and scripts
 function ie_scripts() {
 
 	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
+	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie-min.css', array(), '1.0' );
 	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lte IE 9' );
 
     // Load the CustomEvent Script.
-	wp_enqueue_script( 'raythompwebdesign-com-iejs', get_template_directory_uri() . '/js/ie8.js', array(), '1.0' );
+	wp_enqueue_script( 'raythompwebdesign-com-iejs', get_template_directory_uri() . '/js/old-browser-scripts/ie8.js', array(), '1.0' );
 	wp_script_add_data( 'raythompwebdesign-com-iejs', 'conditional', 'lte IE 9' );
 
 	// Load the html5.
-	wp_enqueue_script( 'raythompwebdesign-com-html5', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
+	wp_enqueue_script( 'raythompwebdesign-com-html5', get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'raythompwebdesign-com-html5', 'conditional', 'lte IE 9' );
 
 	// Load the Selectivizr.
-	wp_enqueue_script( 'raythompwebdesign-com-selectivizr', get_template_directory_uri() . '/js/selectivizr-min.js', array('jquery'), '3.7.3');
+	wp_enqueue_script( 'raythompwebdesign-com-selectivizr', get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js', array('jquery'), '3.7.3');
 	wp_script_add_data( 'raythompwebdesign-com-selectivizr', 'conditional', 'lte IE 9' );
 
 }
 add_action( 'wp_enqueue_scripts', 'ie_scripts' );
- 
-//svg
+
+//svg uploads
 function cc_mime_types( $mimes ){
 	$mimes['svg'] = 'image/svg+xml';
 	return $mimes;
@@ -324,7 +300,7 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 // Register our sidebars and widgetized areas.
 
-//Sidebar!
+//Primary Sidebar!
 if ( function_exists( 'register_sidebar' ) ) {
     register_sidebar( array (
     'name' => __( 'Primary Sidebar', 'raythompsonwebdev-com' ),
@@ -337,7 +313,7 @@ if ( function_exists( 'register_sidebar' ) ) {
     ) );
 }
 
-//social media widget area
+//social media widget
 function social_widgets_init() {
     register_sidebar( array(
     'name' => 'social',
@@ -350,7 +326,7 @@ function social_widgets_init() {
 }
 add_action( 'widgets_init', 'social_widgets_init' );
 
-//contact form area
+//contact form widget
 function contact_widgets_init() {
     register_sidebar( array(
     'name' => 'contact',
@@ -362,6 +338,7 @@ function contact_widgets_init() {
     ) );
 }
 add_action( 'widgets_init', 'contact_widgets_init' );
+
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -550,6 +527,86 @@ function popperscores_validate_gravatar($id_or_email) {
 	}
 }
 
+if ( ! function_exists( 'popper_attachment_nav' ) ) :
+/**
+ * Display navigation to next/previous image in attachment pages.
+ */
+function popper_attachment_nav() {
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<div class="post-nav-box clear">
+			<h1 class="screen-reader-text"><?php _e( 'Attachment post navigation', 'raythompsonwebdev-com' ); ?></h1>
+			<div class="nav-links">
+				<div class="nav-previous">
+					<?php previous_image_link( false, '<span class="post-title">Previous image</span>' ); ?>
+				</div>
+				<div class="nav-next">
+					<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
+				</div>
+			</div><!-- .nav-links -->
+
+
+		</div>
+	</nav>
+
+
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'popper_the_attached_image' ) ) :
+/**
+ * Print the attached image with a link to the next attached image.
+ * Appropriated from Twenty Fourteen 1.0
+ */
+function popper_the_attached_image() {
+	$post = get_post();
+	/**
+	 * Filter the default attachment size.
+	 */
+	$attachment_size = apply_filters( 'popper_attachment_size', array( 810, 810 ) );
+	$next_attachment_url = wp_get_attachment_url();
+	/*
+	 * Grab the IDs of all the image attachments in a gallery so we can get the URL
+	 * of the next adjacent image in a gallery, or the first image (if we're
+	 * looking at the last image in a gallery), or, in a gallery of one, just the
+	 * link to that image file.
+	 */
+	$attachment_ids = get_posts( array(
+		'post_parent'    => $post->post_parent,
+		'fields'         => 'ids',
+		'numberposts'    => -1,
+		'post_status'    => 'inherit',
+		'post_type'      => 'attachment',
+		'post_mime_type' => 'image',
+		'order'          => 'ASC',
+		'orderby'        => 'menu_order ID',
+	) );
+	// If there is more than 1 attachment in a gallery...
+	if ( count( $attachment_ids ) > 1 ) {
+		foreach ( $attachment_ids as $attachment_id ) {
+			if ( $attachment_id == $post->ID ) {
+				$next_id = current( $attachment_ids );
+				break;
+			}
+		}
+		// get the URL of the next image attachment...
+		if ( $next_id ) {
+			$next_attachment_url = get_attachment_link( $next_id );
+		}
+		// or get the URL of the first image attachment.
+		else {
+			$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
+		}
+	}
+	printf( '<a href="%1$s" rel="attachment">%2$s</a>',
+		esc_url( $next_attachment_url ),
+		wp_get_attachment_image( $post->ID, $attachment_size )
+	);
+}
+endif;
+
+
 /* Test if WordPress version and whether a logo has been defined */
 function popper_custom_logo() {
 	if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
@@ -560,8 +617,9 @@ function popper_custom_logo() {
 }
 /**
  * Customizer additions.
+
+/require get_template_directory() . '/inc/customizer.php';
  */
-require get_template_directory() . '/inc/customizer.php';
 
 
 

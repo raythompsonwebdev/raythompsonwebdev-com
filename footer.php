@@ -1,5 +1,9 @@
 <!-- footer-->
-<br/>
+
+</main>
+
+
+<div class="clearfix"></div>
 
 
 <footer>
@@ -20,7 +24,7 @@
 </div>
 
 
-<?php 
+<?php
   if ( has_nav_menu( 'Secondary' ) ) {
 
     wp_nav_menu( array('menu' => 'Secondary', 'container' => 'footer' ));
@@ -42,7 +46,7 @@ $dt = time();
 </p>
 
 </footer>
- 
+
 </div>
 
 

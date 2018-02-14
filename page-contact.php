@@ -6,7 +6,7 @@ Template Name: Contact
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
+
 
 <h1><?php the_title(); ?></h1>
 
@@ -14,6 +14,7 @@ Template Name: Contact
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
 [ do default stuff if no widgets ]
+
 
 <?php endif; ?>
 
@@ -53,7 +54,5 @@ Template Name: Contact
 
 <div class="clearfix"></div>
 
-</section>
 
-<div class="clearfix"></div>
 <?php get_footer(); ?>

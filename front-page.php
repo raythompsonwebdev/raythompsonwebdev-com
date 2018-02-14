@@ -10,7 +10,6 @@
 <?php get_header(); ?>
 
 
-<section id="main-content" class="group" >
 
     <h1><?php the_title(); ?></h1>
 
@@ -82,9 +81,6 @@
        </article>
         
 </section>
-
-</section>
-
 
 
 <?php get_footer(); ?>

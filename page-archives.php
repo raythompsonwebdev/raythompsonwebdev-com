@@ -7,7 +7,6 @@ Template Name: Archives-pages
 
 <?php get_header(); ?>
  	
-<section id="main-content" class="group" role="main">
     
 <h1><?php the_title(); ?> List</h1>
 
@@ -75,8 +74,7 @@ Template Name: Archives-pages
 
 <?php get_sidebar('archive'); ?> 
 
-</section>
-<div class="clearfix"></div>
+
 <?php get_footer(); ?>
 
 

@@ -1,90 +1,92 @@
 <!DOCTYPE html>
-<?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) {header("X-UA-Compatible: IE=7");} ?>
-
 <html class="no-js" <?php language_attributes(); ?>>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+        <meta charset="<?php bloginfo('charset'); ?>" >
+        <meta name="msvalidate.01" content="4CB214A27E0A9871DDFEF492EF5A6AD2" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <link rel="profile" href="http://gmpg.org/xfn/11" >
+        <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" >
+        <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" >
 
-<head>
+        <!--[if lt IE 9]>
+        <link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ie-min.css" />
+        <![endif]-->
 
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
-<meta charset="<?php bloginfo( 'charset' ); ?>" >
-<meta name="msvalidate.01" content="4CB214A27E0A9871DDFEF492EF5A6AD2" />
-<meta name="viewport" content="width=device-width, initial-scale=1" >
-<title><?php bloginfo('name');?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" >
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" >
-<link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style-min.css" >
+        <?php if (is_singular() && get_option('thread_comments')) wp_enqueue_script('comment-reply'); ?>
 
-<!--[if lt IE 9]>
-<link media="all" rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/ie-min.css" />
-<![endif]-->
+        <?php wp_head(); ?>
+    </head>
 
-<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
+    <!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-<?php wp_head(); ?>
-</head>
+    <body <?php body_class(); ?>>
 
-<!--[if lt IE 9]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<body <?php body_class(); ?>>
-
-<div id="wrapper_container">
+        <div id="wrapper_container">
 
 
-<header class="group">
+            <header class="group">
 
- <?php // Display site icon or first letter as logo ?>
-    <div class="site-logo">
-            <?php $site_title = get_bloginfo( 'name' ); ?>
-            <a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <div class="screen-reader-text">
-                        <?php printf( esc_html__('Go to the home page of %1$s', 'raythompsonwebdev-com'), $site_title ); ?>
-                    </div>
-                    <?php
-                    if ( has_custom_logo() ) {
+                <?php // Display site icon or first letter as logo ?>
+                <div class="site-logo">
+                    <?php $site_title = get_bloginfo('name'); ?>
+                    <a href=" <?php echo esc_url(home_url('/')); ?>" rel="home">
+                        <div class="screen-reader-text">
+                            <?php printf(esc_html__('Go to the home page of %1$s', 'raythompsonwebdev-com'), $site_title); ?>
+                        </div>
+                        <?php
+                        if (has_custom_logo()) {
                             the_custom_logo();
-                    } else { ?>
+                        } else {
+                            ?>
                             <div class="site-firstletter" aria-hidden="true">
-                                    <?php echo substr($site_title, 0, 1); ?>
+                                <?php echo substr($site_title, 0, 1); ?>
                             </div>
-                    <?php } ?>
-            </a>
-    </div>
+                        <?php } ?>
+                    </a>
+                </div>
 
 
-<?php  if ( is_front_page() || is_page()) : ?>
- <hgroup>
-    <h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
+                <?php if (is_front_page() || is_page()) : ?>
+                    <hgroup>
+                        <h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 
-<?php else : ?>
-<hgroup>
-    <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
+                    <?php else : ?>
+                        <hgroup>
+                            <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
 
-    <?php endif;
+                        <?php
+                        endif;
 
-    $description = get_bloginfo( 'description', 'display' );
+                        $description = get_bloginfo('description', 'display');
 
-    if ( $description || is_customize_preview() ) : ?>
+                        if ($description || is_customize_preview()) :
+                            ?>
 
-    <h2 class="site-description"><?php echo $description; ?></h2>
-    </hgroup>
-
-
-<?php endif;?>
-
-<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
-
-<?php
-    // Checking if there's anything in Top Menu
-    if ( has_nav_menu( 'main' ) ) {
-    // If there is, adds the Top Menu area
-    wp_nav_menu( array('menu' => 'Main', 'container' => 'nav', 'menu_class' => 'nav-menu' ));
-
-    }
+                            <h2 class="site-description"><?php echo $description; ?></h2>
+                        </hgroup>
 
 
- ?>
+                    <?php endif; ?>
+
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Menu', 'raythompsonwebdev-com'); ?></button>
+
+                    <?php
+                    // Checking if there's anything in Top Menu
+                    if (has_nav_menu('main')) {
+                        // If there is, adds the Top Menu area
+                        wp_nav_menu(array(
+                            'menu' => 'Main',
+                            'container' => 'nav',
+                            'menu_class' => 'nav-menu'
+                        ));
+                    }
+                    ?>
 
 
-</header>
+            </header>
+
+            <!--Main content -->
+<main id="main-content" class="group" role="main">

@@ -8,381 +8,380 @@
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
 
-    <h1><?php the_title(); ?></h1>
 
-         <!--profile panel-->
-    <div id="profile_container">
+<h1><?php the_title(); ?></h1>
 
+<!--profile panel-->
+<div id="profile_container">
 
-        <section id="prof_cont">
 
-            <h1>Web Skills Graph</h1>
+    <section id="prof_cont">
 
-            <article id="chart">
+        <h1>Web Skills Graph</h1>
 
-                <ul id="numbers">
+        <article id="chart">
 
-                    <li><span>100%</span></li>
+            <ul id="numbers">
 
-                    <li><span>80%</span></li>
+                <li><span>100%</span></li>
 
-                    <li><span>60%</span></li>
+                <li><span>80%</span></li>
 
-                    <li><span>40%</span></li>
+                <li><span>60%</span></li>
 
-                    <li><span>20%</span></li>
+                <li><span>40%</span></li>
 
-                    <li><span>0%</span></li>
+                <li><span>20%</span></li>
 
-                </ul>
+                <li><span>0%</span></li>
 
+            </ul>
 
-                <ul id="bars">
 
-                    <li><div data-percentage="60" class="bar"></div><span>Web Design</span></li>
+            <ul id="bars">
 
-                    <li><div data-percentage="80" class="bar"></div><span>Jquery/Ajax</span></li>
+                <li><div data-percentage="60" class="bar"></div><span>Web Design</span></li>
 
-                    <li><div data-percentage="90" class="bar"></div><span>HTML/CSS</span></li>
+                <li><div data-percentage="80" class="bar"></div><span>Jquery/Ajax</span></li>
 
-                    <li><div data-percentage="80" class="bar"></div><span>Wordpress</span></li>
+                <li><div data-percentage="90" class="bar"></div><span>HTML/CSS</span></li>
 
-                    <li><div data-percentage="75" class="bar"></div><span>PHP/MySQL</span></li>
+                <li><div data-percentage="80" class="bar"></div><span>Wordpress</span></li>
 
-                    <li><div data-percentage="75" class="bar"></div><span>Javascript</span></li>
+                <li><div data-percentage="75" class="bar"></div><span>PHP/MySQL</span></li>
 
-                </ul>
+                <li><div data-percentage="75" class="bar"></div><span>Javascript</span></li>
 
+            </ul>
 
-            </article>
 
-        </section><!--end of prof cont-->
+        </article>
 
-        <?php the_content(); ?>
+    </section><!--end of prof cont-->
 
-        <section id="prof_cont-a"><!--prof cont-->
+    <?php the_content(); ?>
 
-            <h1>Web Development Related Courses Taken</h1>
+    <section id="prof_cont-a"><!--prof cont-->
 
-            <article class="hero-slider"><!-- #hero-slider -->
+        <h1>Web Development Related Courses Taken</h1>
 
-                <ul id="list">
-                    <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Adobe</a></li>
-                    <li><a href="#" rel="#panel-2" title="City and Guilds Web Design Certificate Level One" >ELATT</a></li>
-                    <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level Two">Udemy</a></li>
-                    <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Three">FreeCodeCamp</a></li>
-                    <li><a href="#" rel="#panel-5" title="Lynda-com online course certifications">Lynda.com</a></li>
-                    <li><a href="#" rel="#panel-6" title="Shaw Academy Online course certificate">Shaw Academy</a></li>
-                    <li><a href="#" rel="#panel-7" title="Shaw Academy course certificate">Shaw Academy</a></li>
-                    <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Shaw Academy</a></li>
-                    <li><a href="#" rel="#panel-9" title="digital-futures-2017">Digital Futures 2017</a></li>
-                </ul>
+        <article class="hero-slider"><!-- #hero-slider -->
 
-                <div class="mask"><!--mask-->
-                    <div class="slider-body"><!--slider body -->
+            <ul id="list">
+                <li><a href="#" rel="#panel-1" class="active" title="Adobe Certificate in Visual Communication" >Adobe</a></li>
+                <li><a href="#" rel="#panel-2" title="City and Guilds Web Design Certificate Level One" >ELATT</a></li>
+                <li><a href="#" rel="#panel-3" title="City and Guilds Web Design Certificate Level Two">Udemy</a></li>
+                <li><a href="#" rel="#panel-4" title="City and Guilds Web Design Certificate Level Three">FreeCodeCamp</a></li>
+                <li><a href="#" rel="#panel-5" title="Lynda-com online course certifications">Lynda.com</a></li>
+                <li><a href="#" rel="#panel-6" title="Shaw Academy Online course certificate">Shaw Academy</a></li>
+                <li><a href="#" rel="#panel-7" title="Shaw Academy course certificate">Shaw Academy</a></li>
+                <li><a href="#" rel="#panel-8" title="Shaw Academy course certificate">Shaw Academy</a></li>
+                <li><a href="#" rel="#panel-9" title="digital-futures-2017">Digital Futures 2017</a></li>
+            </ul>
 
-                        <article class="panel" id="panel-1">
+            <div class="mask"><!--mask-->
+                <div class="slider-body"><!--slider body -->
 
-                            <h2>Adobe Certified Associates </h2>
+                    <article class="panel" id="panel-1">
 
-                            <figure class="abobe">
+                        <h2>Adobe Certified Associates </h2>
 
+                        <figure class="abobe">
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
 
-                                </a>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
 
+                            </a>
 
 
-                                <figcaption>
-                                    <h3>Visual Communication: Photoshop CS4</h3>
-                                    <h4>Topics&#58;</h4>
-                                    <ul>
-                                        <li><a href="">Setting project requirements</a></li>
-                                        <li><a href="">Identifying Design Elememts when Preparing Images</a></li>
-                                        <li><a href="">Understanding Photoshop Interface</a></li>
-                                        <li><a href="">Manipulating Images</a></li>
-                                        <li><a href="">Evaluating Digital Images</a></li>
 
-                                    </ul>
+                            <figcaption>
+                                <h3>Visual Communication: Photoshop CS4</h3>
+                                <h4>Topics&#58;</h4>
+                                <ul>
+                                    <li><a href="">Setting project requirements</a></li>
+                                    <li><a href="">Identifying Design Elememts when Preparing Images</a></li>
+                                    <li><a href="">Understanding Photoshop Interface</a></li>
+                                    <li><a href="">Manipulating Images</a></li>
+                                    <li><a href="">Evaluating Digital Images</a></li>
 
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                </ul>
 
+                                <div class="clearfix"></div>
+                            </figcaption>
 
-                            </figure>
 
-                        </article>
+                        </figure>
 
-                        <article class="panel" id="panel-2">
+                    </article>
 
-                            <h2>East London Advanced Technology Training</h2>
+                    <article class="panel" id="panel-2">
 
-                            <figure class="cert">
+                        <h2>East London Advanced Technology Training</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One, Two, Three">
+                        <figure class="cert">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/ITQ-USERS-LEVEL1-SMALL.gif" alt="City and Guilds Level One, Two, Three">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One, Two, Three">
 
-                                </a>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/ITQ-USERS-LEVEL1-SMALL.gif" alt="City and Guilds Level One, Two, Three">
 
-                                <figcaption>
-                                    <h3>City &#38; Gulds ITQ Level 1,2,3 &#45; Web Design</h3>
-                                    <h4>Topics&#58;</h4>
+                            </a>
 
-                                    <ul>
-                                        <li><a href="">Improving productivity using IT</a></li>
-                                        <li><a href="">IT Communication Fundementals</a></li>
+                            <figcaption>
+                                <h3>City &#38; Gulds ITQ Level 1,2,3 &#45; Web Design</h3>
+                                <h4>Topics&#58;</h4>
 
-                                        <li><a href="">Adding Content</a></li>
-                                        <li><a href="">IT User fundementals</a></li>
-                                        <li><a href="">Organizing Content</a></li>
-                                        <li><a href="">Using the Internet</a></li>
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </figcaption>
-                            </figure>
+                                <ul>
+                                    <li><a href="">Improving productivity using IT</a></li>
+                                    <li><a href="">IT Communication Fundementals</a></li>
 
+                                    <li><a href="">Adding Content</a></li>
+                                    <li><a href="">IT User fundementals</a></li>
+                                    <li><a href="">Organizing Content</a></li>
+                                    <li><a href="">Using the Internet</a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </figcaption>
+                        </figure>
 
-                        </article>
 
-                        <article class="panel" id="panel-3">
+                    </article>
 
-                            <h2>Udemy</h2>
+                    <article class="panel" id="panel-3">
 
-                            <figure class="abobe">
+                        <h2>Udemy</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Large.jpg" class="fancybox" title="Udemy.com">
+                        <figure class="abobe">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Udemy-Small.jpg" alt="Udemy.com">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Udemy-Large.jpg" class="fancybox" title="Udemy.com">
 
-                                </a>
-                                <figcaption>
-                                    <h3>Various</h3>
-                                    <h4>Topics&#58;</h4>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Udemy-Small.jpg" alt="Udemy.com">
 
-                                    <ul>
-                                        <li><a href="">ES 2016 Essentials</a></li>
-                                        <li><a href="">Sass Workflow</a></li>
-                                        <li><a href="">Rich Snippets - schema.org</a></li>
-                                        <li><a href="">Object Oriented PHP </a></li>
-                                        <li><a href="">NPM for Beginners - Essentials</a></li>
+                            </a>
+                            <figcaption>
+                                <h3>Various</h3>
+                                <h4>Topics&#58;</h4>
 
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                <ul>
+                                    <li><a href="">ES 2016 Essentials</a></li>
+                                    <li><a href="">Sass Workflow</a></li>
+                                    <li><a href="">Rich Snippets - schema.org</a></li>
+                                    <li><a href="">Object Oriented PHP </a></li>
+                                    <li><a href="">NPM for Beginners - Essentials</a></li>
 
-                            </figure>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </figcaption>
 
-                        </article>
+                        </figure>
 
-                        <article class="panel" id="panel-4">
+                    </article>
 
-                            <h2>FreeCodeCamp</h2>
+                    <article class="panel" id="panel-4">
 
-                            <figure class="cert">
+                        <h2>FreeCodeCamp</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-large.png" class="fancybox" title="FreeCodeCamp">
+                        <figure class="cert">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/FreeCodeCamp-small.png" alt="FreeCodeCamp">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/FreeCodeCamp-large.png" class="fancybox" title="FreeCodeCamp">
 
-                                </a>
-                                <figcaption>
-                                    <h3>Frontend Developer Certificate</h3>
-                                    <h4>Topics&#58;</h4>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/FreeCodeCamp-small.png" alt="FreeCodeCamp">
 
-                                    <ul>
-                                        <li><a href="">HTML5/CSS3</a></li>
-                                        <li><a href="">Javascript</a></li>
-                                        <li><a href="">Jquery</a></li>
-                                        <li><a href="">Basic Algorythyms</a></li>
-                                        <li><a href="">JSON/API's</a></li>
+                            </a>
+                            <figcaption>
+                                <h3>Frontend Developer Certificate</h3>
+                                <h4>Topics&#58;</h4>
 
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                <ul>
+                                    <li><a href="">HTML5/CSS3</a></li>
+                                    <li><a href="">Javascript</a></li>
+                                    <li><a href="">Jquery</a></li>
+                                    <li><a href="">Basic Algorythyms</a></li>
+                                    <li><a href="">JSON/API's</a></li>
 
-                            </figure>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </figcaption>
 
+                        </figure>
 
-                        </article>
 
-                        <article class="panel" id="panel-5">
+                    </article>
 
-                            <h2>Lynda.com</h2>
+                    <article class="panel" id="panel-5">
 
-                            <figure class="abobe">
+                        <h2>Lynda.com</h2>
 
-                                <a href="<?php echo home_url();?>wp-content/uploads/2017/12/lynda_logo1k-d_72x72.png" class="fancybox" title="Lynda.com">
+                        <figure class="abobe">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/lynda_logo1k-d_72x72.png" alt="Lynda.com">
+                            <a href="<?php echo home_url(); ?>wp-content/uploads/2018/02/lynda_logo1k-d_72x72.png" class="fancybox" title="Lynda.com">
 
-                                </a>
-                                <figcaption>
-                                    <h3>Lynda.com&#45; Various</h3>
-                                    <h4>Topics&#58;</h4>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/lynda_logo1k-d_72x72.png" alt="Lynda.com">
 
-                                    <ul id="lyndalinks">
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-front-end-web-developer">Become a Front-End Web Developer</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/css-fundamentals">CSS Fundementals</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/javascript-essential-training">Javascript Essentials</a></li>
-                                        <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
+                            </a>
+                            <figcaption>
+                                <h3>Lynda.com&#45; Various</h3>
+                                <h4>Topics&#58;</h4>
 
-                                        <br/>
+                                <ul id="lyndalinks">
+                                    <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-front-end-web-developer">Become a Front-End Web Developer</a></li>
+                                    <li><a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a></li>
+                                    <li><a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals</a></li>
+                                    <li><a class="lyndalink" href="http://www.linkedin.com/learning/css-fundamentals">CSS Fundementals</a></li>
+                                    <li><a class="lyndalink" href="http://www.linkedin.com/learning/javascript-essential-training">Javascript Essentials</a></li>
+                                    <li><a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a></li>
 
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                    <br/>
 
-                            </figure>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </figcaption>
 
+                        </figure>
 
-                        </article>
 
-                        <article class="panel" id="panel-6">
+                    </article>
 
-                            <h2>Shaw Academy</h2>
+                    <article class="panel" id="panel-6">
 
-                            <figure class="cert">
+                        <h2>Shaw Academy</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
+                        <figure class="cert">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="Mobile-web-applications-Certificate-Foundation">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
 
-                                </a>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Mobile-web-applications-Certificate-Foundation-small.jpg" alt="Mobile-web-applications-Certificate-Foundation">
 
-                                <figcaption>
-                                    <h3>Mobile App Development&#46;</h3>
-                                    <h4>Topics&#58;</h4>
+                            </a>
 
-                                    <ul>
-                                        <li><a href="">Introduction to Mobile App Development</a></li>
-                                        <li><a href="">Designing our App</a></li>
-                                        <li><a href="">User Interfaces with HTML</a></li>
-                                        <li><a href="">Coding Functions</a></li>
-                                        <li><a href="">Web Hosting/Deploying Apps</a></li>
-                                        <li><a href="">Mobile App Dev Life Cycle</a></li>
+                            <figcaption>
+                                <h3>Mobile App Development&#46;</h3>
+                                <h4>Topics&#58;</h4>
 
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                <ul>
+                                    <li><a href="">Introduction to Mobile App Development</a></li>
+                                    <li><a href="">Designing our App</a></li>
+                                    <li><a href="">User Interfaces with HTML</a></li>
+                                    <li><a href="">Coding Functions</a></li>
+                                    <li><a href="">Web Hosting/Deploying Apps</a></li>
+                                    <li><a href="">Mobile App Dev Life Cycle</a></li>
 
-                            </figure>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </figcaption>
 
-                        </article>
+                        </figure>
 
-                        <article class="panel" id="panel-7">
+                    </article>
 
-                            <h2>Shaw Academy</h2>
+                    <article class="panel" id="panel-7">
 
-                            <figure class="cert">
+                        <h2>Shaw Academy</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                        <figure class="cert">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                </a>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Digital-Marketing-Certificate-Foundation-small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
-                                <figcaption>
-                                    <h3>Diploma in Digital Marketing</h3>
-                                    <h4>Topics&#58;</h4>
+                            </a>
 
-                                    <ul>
-                                        <li><a href="">Adwords/Pay Per Click</a></li>
-                                        <li><a href="">Search Engine Optimisation</a></li>
-                                        <li><a href="">Affiliate Marketing</a></li>
-                                        <li><a href="">Social Media</a></li>
-                                        <li><a href="">Web Analytics</a></li>
-                                        <li><a href="">Blogging</a></li>
+                            <figcaption>
+                                <h3>Diploma in Digital Marketing</h3>
+                                <h4>Topics&#58;</h4>
 
-                                    </ul>
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                <ul>
+                                    <li><a href="">Adwords/Pay Per Click</a></li>
+                                    <li><a href="">Search Engine Optimisation</a></li>
+                                    <li><a href="">Affiliate Marketing</a></li>
+                                    <li><a href="">Social Media</a></li>
+                                    <li><a href="">Web Analytics</a></li>
+                                    <li><a href="">Blogging</a></li>
 
-                            </figure>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </figcaption>
 
+                        </figure>
 
-                        </article>
 
-                        <article class="panel" id="panel-8">
+                    </article>
 
-                            <h2>Shaw Academy</h2>
+                    <article class="panel" id="panel-8">
 
-                            <figure class="cert">
+                        <h2>Shaw Academy</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                        <figure class="cert">
 
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                </a>
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Content-Marketing-Certificate-Foundation-Small.jpg" alt="Digital-Marketing-Certificate-Foundation">
 
-                                <figcaption>
-                                    <h3>Diploma in Blogging &#38; Content Marketing</h3>
-                                    <h4>Topics&#58;</h4>
+                            </a>
 
-                                    <ul>
-                                        <li><a href="">Blogging</a></li>
-                                        <li><a href="">Vlogging</a></li>
-                                        <li><a href="">Content Marketing</a></li>
-                                        <li><a href="">Building online communities</a></li>
-                                        <li><a href="">Content curation</a></li>
-                                        <li><a href="">Monetising blogs</a></li>
+                            <figcaption>
+                                <h3>Diploma in Blogging &#38; Content Marketing</h3>
+                                <h4>Topics&#58;</h4>
 
-                                    </ul>
+                                <ul>
+                                    <li><a href="">Blogging</a></li>
+                                    <li><a href="">Vlogging</a></li>
+                                    <li><a href="">Content Marketing</a></li>
+                                    <li><a href="">Building online communities</a></li>
+                                    <li><a href="">Content curation</a></li>
+                                    <li><a href="">Monetising blogs</a></li>
 
-                                    <div class="clearfix"></div>
-                                </figcaption>
+                                </ul>
 
-                            </figure>
+                                <div class="clearfix"></div>
+                            </figcaption>
 
+                        </figure>
 
-                        </article>
 
-                        <article class="panel" id="panel-9">
+                    </article>
 
-                            <h2>Digital Futures 2017</h2>
+                    <article class="panel" id="panel-9">
 
-                            <figure class="abobe">
+                        <h2>Digital Futures 2017</h2>
 
-                                <a href="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
-                                    <img src="<?php echo home_url();?>/wp-content/uploads/2017/12/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
-                                <figcaption>
-                                    <h3>Interactive Programming</h3>
-                                    <h4>Topics&#58;</h4>
+                        <figure class="abobe">
 
-                                    <ul>
-                                        <li><a href="">Debate Skills with DebateMate</a></li>
-                                        <li><a href="">Musical Composition</a></li>
-                                        <li><a href="">Block programming using Crumble</a></li>
-                                        <li><a href="">Negotiation skills with CitizenUK</a></li>
-                                        <li><a href="">Music creation using Sonic Pi</a></li>
-                                        <li><a href="">Conflict Resolution</a></li>
+                            <a href="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
+                                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/02/Digital-Futures-2017-Certificate-of-Participation-small.jpg" alt="Digital-Futures-2017-Certificate-of-Participation"></a>
+                            <figcaption>
+                                <h3>Interactive Programming</h3>
+                                <h4>Topics&#58;</h4>
 
-                                    </ul>
-                                    <div class="clearfix"></div>
+                                <ul>
+                                    <li><a href="">Debate Skills with DebateMate</a></li>
+                                    <li><a href="">Musical Composition</a></li>
+                                    <li><a href="">Block programming using Crumble</a></li>
+                                    <li><a href="">Negotiation skills with CitizenUK</a></li>
+                                    <li><a href="">Music creation using Sonic Pi</a></li>
+                                    <li><a href="">Conflict Resolution</a></li>
 
-                                </figcaption>
-                            </figure>
+                                </ul>
+                                <div class="clearfix"></div>
 
-                        </article>
+                            </figcaption>
+                        </figure>
 
+                    </article>
 
-                    </div><!--slider body end-->
-                </div><!-- .mask end -->
 
-            </article><!-- hero-slider end -->
+                </div><!--slider body end-->
+            </div><!-- .mask end -->
 
-        </section><!--end of prof cont-->
+        </article><!-- hero-slider end -->
 
-        <div class="clearfix"></div>
-    </div><!--profile-panel end-->
+    </section><!--end of prof cont-->
 
-</section>
+    <div class="clearfix"></div>
+</div><!--profile-panel end-->
+
 
 <?php get_footer(); ?>

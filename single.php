@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
+
 
 
     <?php
@@ -28,8 +28,6 @@
 
 <?php get_sidebar(); ?>
 
-</section><!--end of main content-->
 
-<div class="clearfix"></div>
 
 <?php get_footer(); ?>

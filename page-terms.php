@@ -7,24 +7,24 @@ Template Name: Terms
 <?php get_header(); ?>
 
 
-<section id="main-content" class="group" role="main">
 
   <h1><?php the_title(); ?></h1>
 
-<?php if (have_posts()) :
-        while (have_posts()) : the_post();
+<?php if (have_posts()) : ?>
 
-        get_template_part('templates/content', 'page');
+<?php while (have_posts()) : the_post();
 
-        endwhile;
+        get_template_part('templates/content', 'page');?>
 
-        else :
-          echo '<p>No content found</p>';
+    <?php endwhile;?>
 
-        endif;
-        ?> 
-   		
+    <?php else :?>
+
+        <?php  get_template_part('templates/content', 'none');?>
+
+    <?php endif;
+        ?>
+
 <div class="clearfix"></div>
-</section>
 
 <?php get_footer(); ?>

@@ -1,7 +1,7 @@
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
+
 
     <?php
     if (have_posts()) :
@@ -17,7 +17,5 @@
     endif;
     ?>
 
-</section>
 
-<div class="clearfix"></div>
 <?php get_footer(); ?>

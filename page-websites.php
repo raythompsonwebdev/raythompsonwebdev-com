@@ -10,7 +10,7 @@ Template Name: Websites
 
 <?php get_header(); ?>
 
-<section id="main-content" class="group" role="main">
+
 
 <h1>Websites</h1>
 
@@ -204,8 +204,6 @@ Template Name: Websites
 
 <div class="clearfix"></div>
 
-</section><!-- End of Main Content -->
 
-<div class="clearfix"></div>
 
 <?php get_footer(); ?>
