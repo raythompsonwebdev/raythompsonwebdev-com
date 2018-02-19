@@ -8,15 +8,13 @@
  */
 ?>
 
-<article class="post group" <?php post_class() ?> id="post-<?php the_ID(); ?>">
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
-    <section class="<?php
-    if (is_404()) {
-        echo 'error-404';
-    } else {
-        echo 'no-results';
-    }
-    ?> not-found">
+    <section class="<?php if (is_404()) {
+    echo 'error-404';
+} else {
+    echo 'no-results';
+} ?> not-found">
         <header class="byline">
             <h1 class="page-title">
                 <?php
@@ -33,7 +31,7 @@
         </header><!-- .page-header -->
 
         <div class="entry">
-<?php if (is_home() && current_user_can('publish_posts')) : ?>
+            <?php if (is_home() && current_user_can('publish_posts')) : ?>
 
                 <p><?php printf(wp_kses(__('Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'raythompsonwebdev-com'), array('a' => array('href' => array()))), esc_url(admin_url('post-new.php'))); ?></p>
 
@@ -50,18 +48,12 @@
             <?php else : ?>
 
                 <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'raythompsonwebdev-com'); ?></p>
-                <?php get_search_form(); ?>
+    <?php get_search_form(); ?>
 
-<?php endif; ?>
+        <?php endif; ?>
         </div><!-- .page-content -->
 
-            <footer class="byline">
 
-            <p class='right'>
-                <a class='comments-count' href='<?php the_permalink() ?>'><?php comments_number('0', '1', '%') ?></a>
-            </p>
-
-        </footer>
 
         <?php
         if (is_404() || is_search()) {

@@ -14,7 +14,7 @@
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 
-  <article <?php post_class(); ?> <?php the_ID(); ?> >
+  <article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 
 <h1><?php the_title(); ?></h1>
 

@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
- 
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -39,9 +39,9 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'css/style.css': 'css/style.scss',
-                    'css/svg-style-3.css': 'css/svg-style-3.scss',
-                    'css/ie.css': 'css/ie.scss'
+                    'css/old-files/style.css': 'css/style.scss',
+                    'css/old-files/svg-style-3.css': 'css/svg-style-3.scss',
+                    'ie.css': 'css/ie.scss'
                             /*where file goes-----/where file from*/
                 }
             },
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
                 files: {
                     'style-min.css': 'css/style.scss',
                     'svg-style-3-min.css': 'css/svg-style-3.scss',
-                    'ie-min.css': 'css/ie.scss'
+                    'css/old-files/ie-min.css': 'css/ie.scss'
                             /*where file goes-----/where file from*/
                 }
             }
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
         }
     });
 
-	
+
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');

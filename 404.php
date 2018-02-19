@@ -1,11 +1,7 @@
 <?php
 /**
-<<<<<<< HEAD
  * *PHP version 5
-=======
- * *PHP version 5.6
->>>>>>> 06bb6834ff1bdf6bc417acbbb75f423890046b84
- * 
+ *
  * 404 page | core/404.php.
  *
  * @category   Error_Page
@@ -18,25 +14,19 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 ?>
-<<<<<<< HEAD
-=======
-
->>>>>>> 06bb6834ff1bdf6bc417acbbb75f423890046b84
 <?php get_header(); ?>
-
-
 
 <section id="blogleftside">
 
+	<h1>404: Page not Found!?</h1>
 
-<h1>404: Page not Found!?</h1>
-
-<h2>Just move along back to the <a href="<?php echo home_url();?>"><span style="color:#fff;">Homepage</span></a>.</h2>
-
+	<h2>Just move along back to the <a href="<?php echo home_url(); ?>">
+		<span style="color:#fff;">Homepage</span>
+		</a>.
+	</h2>
 
 </section>
 <?php get_sidebar(); ?>
 
-
-
 <?php get_footer(); ?>
+

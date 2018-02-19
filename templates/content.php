@@ -11,7 +11,7 @@
 <!--Post loop start -->
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-        <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+        <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
 
             <?php if (is_home() && !is_front_page()) : ?>
                 <h1 class="post-title">

@@ -1,12 +1,6 @@
 
   //search field togle
-<<<<<<< HEAD
- jQuery(document).ready(function($){
-
-   $('header button.menu-toggle').on('click', function(){
-=======
 	/* $('header button.menu-toggle').on('click', function(){
->>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
        $('header nav.menu-main-container ul#menu-main').animate({
             opacity : 'toggle',
             height: 'toggle'
@@ -17,11 +11,7 @@
  // Hide/show toggle button on scroll
  jQuery(document).ready(function($){
      
-<<<<<<< HEAD
-     	var position, direction, previous;
-=======
   var position, direction, previous;
->>>>>>> 0f8836b434da8d3e31955a7d44ed61c6333c4864
 
  	$(window).scroll(function(){
 		 
