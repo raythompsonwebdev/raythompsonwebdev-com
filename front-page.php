@@ -35,10 +35,7 @@
 
         </article>
 
-<div class="clearfix"></div>
-    </div>
-    
-<section id="calltoaction">
+        <section id="calltoaction">
  <h1 id="front-title">I also do..</h1>
    
    <article class="frntpgbox">
@@ -81,6 +78,11 @@
        </article>
         
 </section>
+
+<div class="clearfix"></div>
+    </div>
+    
+
 
 
 <?php get_footer(); ?>
