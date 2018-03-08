@@ -16,12 +16,11 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
             
-            <div class="meta-content">
+
                 <?php
-                    raythompsonwebdev_com_posted_on();
                     raythompsonwebdev_com_posted_by();
                 ?>
-            </div>
+
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

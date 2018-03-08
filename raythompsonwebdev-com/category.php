@@ -53,7 +53,6 @@ get_header(); ?>
 
                             <?php
                                 raythompsonwebdev_com_posted_on();
-                                raythompsonwebdev_com_posted_by();
                             ?>
 
                         </div>

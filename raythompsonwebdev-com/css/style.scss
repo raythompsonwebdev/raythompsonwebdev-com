@@ -1800,7 +1800,7 @@ desktop 1920px*/
                         margin: 0;
                         height: 35px;
                         list-style: none;
-                        width: 25%;
+                        width: 15%;
                         background-color: $color3;
                         @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                         padding: 0;
@@ -1810,14 +1810,14 @@ desktop 1920px*/
                         line-height: 35px;
                         text-align: center;
                         font-size: 1em;
+                        &:hover {
+                            background-color: $color1;
+                            color: $color4;
+                            font-weight: bold;
+                            line-height: 35px;
+                        }
                     }
-                    a:hover {
-                        background-color: $color1;
-                        color: $color4;
-                        font-weight: bold;
-                        width: 10%;
-                        line-height: 35px;
-                    }
+                    
                 }
             }
             #respond {
@@ -4165,12 +4165,13 @@ desktop 1440px*/
                     min-height: 35px;
 
                     a {
-                        width: 25%;
-                        font-size: 0.9em;
+                        width: 15%;
+
+                        &:hover {
+                            width: 15%;
+                        }
                     }
-                    a:hover {
-                        width: 25%;
-                    }
+
                 }
             }
             #respond {
@@ -7386,11 +7387,10 @@ desktop 1024px*/
             }
             .reply {
                 a {
-                    width: 30%;
-                    line-height: 35px;
-                    font-size: 0.85em;
+                    width: 20%;
+
                     &:hover {
-                        width: 30%;
+                        width: 20%;
                     }
                 }
             }
@@ -8848,14 +8848,14 @@ desktop 980px*/
                 }
                 .reply {
                     a {
-                        width: 30%;
-
+                        width: 20%;
                         font-size: 1em;
+                        &:hover {
+                            font-weight: bold;
+                            width: 20%;
+                        }
                     }
-                    a:hover {
-                        font-weight: bold;
-                        width: 30%;
-                    }
+                    
                 }
                 li {
                     padding: 0;
@@ -10340,13 +10340,11 @@ tablet 800px */
                 }
                 .reply {
                     a {
-                        width: 30%;
-
-                        font-size: 0.9em;
+                        width: 25%;
                         &:hover {
 
                             font-weight: bold;
-                            width: 30%;
+                            width: 25%;
                         }
                     }
                 }
@@ -11837,11 +11835,13 @@ tablet 768px */
                     }
                     .reply {
                         a {
-                            width: 30%;
+                            width: 25%;
 
-                            font-size: 0.8em;
+
+                            &:hover {
+                                width: 25%;
+                            }
                         }
-                        a:hover {}
                     }
                 }
                 li ul {
@@ -13322,12 +13322,12 @@ tablet 667px */
                 }
                 .reply {
                     a {
-                        width: 35%;
-                        font-size: 0.8em;
-                    }
-                    a:hover {
+                        width: 30%;
+                        &:hover {
 
-                        width: 35%;
+                            width: 30%;
+                        }
+
                     }
                 }
             }
@@ -14688,7 +14688,7 @@ tablet 600px */
                     .comment-author {
                         width: 47%;
                         img {
-                            width: 10%;
+                            width: 12%;
                         }
 
                         b.fn {
@@ -16056,7 +16056,7 @@ tablet 536px */
                         width: 47%;
 
                         img {
-                            width: 11%;
+                            width: 12%;
                         }
 
                     }
@@ -16832,6 +16832,11 @@ mobile 480px */
             }
         }
 
+        .seperator {
+            display: none;
+            
+        }
+
         #map_container {
             float: none;
             width: 85%;
@@ -16993,7 +16998,6 @@ mobile 480px */
             }
             h2,
             h2.entry-title {
-
                 font-size: 1.1em;
                 a{
                     display:block;
@@ -17521,12 +17525,15 @@ mobile 480px */
                         height: auto;
                     }
                 }
-                .reply a {
-                    width: 35%;
-                    &:hover {
+                .reply{
+                    a {
                         width: 35%;
+                        &:hover {
+                            width: 35%;
+                        }
                     }
-                }
+
+                } 
                 .comment-content {
                     p {
                         font-size: 0.8em;
@@ -21142,7 +21149,7 @@ mobile 320px */
         
         /*Search Box*/
         .social-1 {
-            width: 50%;
+            width: 75%;
             form.search-form {
                 text-align: left;
 

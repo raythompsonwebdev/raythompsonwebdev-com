@@ -78,7 +78,7 @@ if (! function_exists('my_theme_setup') ) :
          */
         load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
-        add_editor_style('css/custom-editor-style.css', get_template_directory() . '/fonts/font-awesome/css/font-awesome.min.css');
+        add_editor_style('custom-editor-style.css', get_template_directory() . '/fonts/font-awesome/css/font-awesome.min.css');
 
         add_theme_support('html5', array( 
             'search-form',
@@ -278,7 +278,8 @@ add_filter('clean_url', 'defer_parsing_of_js', 11, 1);
  */
 function mytheme_register_styles()
 {
-    wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'raythompsonwebdev-style', get_stylesheet_uri() );
+
     /*
      *  Add Font Awesome icons (http://fontawesome.io)
      */
@@ -298,16 +299,19 @@ function my_scripts_own()
     
    //master
     wp_register_script('master', get_template_directory_uri() . '/js/master.js', array('jquery'), '1.0', true);
-    wp_enqueue_script( 'raythompsonwebdev-com-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    
+    wp_register_script( 'raythompsonwebdev-com-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'raythompsonwebdev-com-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_register_script( 'raythompsonwebdev-com-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 	wp_enqueue_script( 'comment-reply' );
     }
     
     wp_enqueue_script('master');
-    wp_enqueue_script('jquery');
+    wp_enqueue_script('raythompsonwebdev-com-navigation');
+    wp_enqueue_script('raythompsonwebdev-com-skip-link-focus-fix');
+
 
 }
 add_action('wp_enqueue_scripts', 'my_scripts_own');
@@ -362,7 +366,7 @@ add_action('wp_enqueue_scripts', 'profile_page_scripts');
 function profile_page_scripts() 
 {
 
-    if (is_page('profile') ) {
+    if (is_page('about') ) {
         //scrollto script
         wp_register_script('scrollto', get_template_directory_uri() . '/js/scrollto.js', array('jquery'), '20161110', true);
         //easing script
@@ -543,7 +547,6 @@ function popper_custom_logo()
         return false;
     }
 }
-
 
 if ( ! function_exists( 'raythompsonwebdev_com_attachment_nav' ) ) :
 /**

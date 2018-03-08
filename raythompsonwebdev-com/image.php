@@ -18,6 +18,14 @@
 
  get_header(); ?>
 
+<?php
+// Retrieve attachment metadata.
+$metadata = wp_get_attachment_metadata();
+
+get_header();
+?>
+
+
 
 <section id="blogleftside">                                
 
@@ -56,7 +64,7 @@ if (have_posts()) : while (have_posts()) : the_post();
 
 <div class="entry-attachment">
 
-        <?php if (wp_attachment_is_image($post->id)) : $att_image = wp_get_attachment_image_src($post->id, "full"); ?>
+       <?php if (wp_attachment_is_image($post->id)) : $att_image = wp_get_attachment_image_src($post->id, "full"); ?>
 
         <figure class="attachment<?php
         if (has_excerpt()) {

@@ -24,14 +24,11 @@
             <header class="byline">
                 <div class="entry-meta">
                     <?php if ('post' === get_post_type()) : ?>
-                        <div class="meta-content">
 
                             <?php
-                                raythompsonwebdev_com_posted_on();
                                 raythompsonwebdev_com_posted_by();
                             ?>
 
-                        </div>
                     <?php endif; ?>
                 </div>
             </header>

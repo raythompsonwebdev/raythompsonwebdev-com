@@ -23,7 +23,7 @@ get_header(); ?>
 
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('contact')) : ?>
 
-[ do default stuff if no widgets ]
+[contact-form-7 id="1234" title="Contact form 1"]
 
 <?php endif; ?>
 
