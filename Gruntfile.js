@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
- 
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -11,7 +11,7 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['js/**/*.js'],
+                src: ['raythompsonwebdev-com/js/**/*.js'],
                 dest: 'dist/<%= pkg.name %>.js'
             }
         },
@@ -39,9 +39,9 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'css/style.css': 'css/style.scss',
-                    'css/svg-style-3.css': 'css/svg-style-3.scss',
-                    'css/ie.css': 'css/ie.scss'
+                    'raythompsonwebdev-com/css/old-files/style.css': 'raythompsonwebdev-com/css/style.scss',
+                    'raythompsonwebdev-com/css/old-files/svg-style-3.css': 'raythompsonwebdev-com/css/svg-style-3.scss',
+                    'raythompsonwebdev-com/ie.css': 'raythompsonwebdev-com/css/ie.scss'
                             /*where file goes-----/where file from*/
                 }
             },
@@ -52,9 +52,9 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'style-min.css': 'css/style.scss',
-                    'svg-style-3-min.css': 'css/svg-style-3.scss',
-                    'ie-min.css': 'css/ie.scss'
+                    'raythompsonwebdev-com/style-min.css': 'raythompsonwebdev-com/css/style.scss',
+                    'raythompsonwebdev-com/svg-style-3-min.css': 'raythompsonwebdev-com/css/svg-style-3.scss',
+                    'raythompsonwebdev-com/css/old-files/ie-min.css': 'raythompsonwebdev-com/css/ie.scss'
                             /*where file goes-----/where file from*/
                 }
             }
@@ -64,7 +64,7 @@ module.exports = function (grunt) {
          * JS Hint
          */
         jshint: {
-            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
+            files: ['Gruntfile.js', 'raythompsonwebdev-com/js/**/*.js', 'test/**/*.js'],
             options: {
                 // options here to override JSHint defaults
 
@@ -81,13 +81,13 @@ module.exports = function (grunt) {
          */
         watch: {
             css: {
-                files: '**/*.scss',
+                files: 'raythompsonwebdev-com/**/*.scss',
                 tasks: ['sass']
             }
         }
     });
 
-	
+
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
