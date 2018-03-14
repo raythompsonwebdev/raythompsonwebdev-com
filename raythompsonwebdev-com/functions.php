@@ -76,9 +76,15 @@ if (! function_exists('my_theme_setup') ) :
         /*
          * Localization support
          */
+<<<<<<< HEAD
         load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/language' );
 
         add_editor_style('custom-editor-style.css');
+=======
+        load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
+
+        add_editor_style('custom-editor-style.css', get_template_directory() . '/fonts/font-awesome/css/font-awesome.min.css');
+>>>>>>> refs/remotes/origin/master
 
         add_theme_support('html5', array( 
             'search-form',
@@ -278,7 +284,11 @@ add_filter('clean_url', 'defer_parsing_of_js', 11, 1);
  */
 function mytheme_register_styles()
 {
+<<<<<<< HEAD
     wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' );
+=======
+    wp_enqueue_style( 'raythompsonwebdev-style', get_stylesheet_uri() );
+>>>>>>> refs/remotes/origin/master
 
     /*
      *  Add Font Awesome icons (http://fontawesome.io)
