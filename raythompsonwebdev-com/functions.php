@@ -27,25 +27,11 @@ add_filter('widget_text', 'do_shortcode');
 /**
  * title filter
  */
-function Filter_wp_title( $title ) 
-{
-    global $page, $paged;
-
-    if (is_feed() ) {
-        return $title;
-        $site_description = get_bloginfo('description');
-        $filtered_title = $title . get_bloginfo('name');
-        $filtered_title .= ( ! empty($site_description) && ( is_home() || is_front_page() ) ) ? ' | ' . $site_description: '';
-        $filtered_title .= ( 2 <= $paged || 2 <= $page ) ? ' | ' . sprintf(__('Page %s', 'raythompsonwebdev-com'), max($paged, $page)) : '';
-        return $filtered_title;
-    }
-}
-add_filter('wp_title', 'Filter_wp_title');
 
 /*
  * custom header
  */
-function Raythompwebdesign_custom_header_setup() 
+function raythompsonwebdev_custom_header_setup() 
 {
         add_theme_support(
             'custom-logo', array(
@@ -56,7 +42,7 @@ function Raythompwebdesign_custom_header_setup()
             )
         );
 }
-add_action('after_setup_theme', 'Raythompwebdesign_custom_header_setup');
+add_action('after_setup_theme', 'raythompsonwebdev_custom_header_setup');
 
 /*
  * theme set up
@@ -76,9 +62,9 @@ if (! function_exists('my_theme_setup') ) :
         /*
          * Localization support
          */
-        load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/language' );
 
-        add_editor_style('custom-editor-style.css', get_template_directory() . '/fonts/font-awesome/css/font-awesome.min.css');
+        add_editor_style('custom-editor-style.css');
 
         add_theme_support('html5', array( 
             'search-form',
@@ -88,13 +74,7 @@ if (! function_exists('my_theme_setup') ) :
             'caption' 
             ));
         
-        add_theme_support( 'custom-logo', array(
-			'height'      => 96,
-			'width'       => 96,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
-
+        
         // Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
         
@@ -278,7 +258,7 @@ add_filter('clean_url', 'defer_parsing_of_js', 11, 1);
  */
 function mytheme_register_styles()
 {
-    wp_enqueue_style( 'raythompsonwebdev-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css' );
 
     /*
      *  Add Font Awesome icons (http://fontawesome.io)
@@ -538,15 +518,6 @@ function twentysixteen_content_image_sizes_attr( $sizes, $size )
 }
 add_filter('wp_calculate_image_sizes', 'twentysixteen_content_image_sizes_attr', 10, 2);
 
-/* Test if WordPress version and whether a logo has been defined */
-function popper_custom_logo() 
-{
-    if (function_exists('the_custom_logo') && has_custom_logo() ) {
-        return get_custom_logo();
-    } else {
-        return false;
-    }
-}
 
 if ( ! function_exists( 'raythompsonwebdev_com_attachment_nav' ) ) :
 /**
@@ -585,7 +556,7 @@ function raythompsonwebdev_com_attached_image() {
 	/**
 	 * Filter the default attachment size.
 	 */
-	$attachment_size = apply_filters( 'popper_attachment_size', array( 810, 810 ) );
+	$attachment_size = apply_filters( 'raythompsonwebdev_com_attachment_size', array( 810, 810 ) );
 	$next_attachment_url = wp_get_attachment_url();
 	/*
 	 * Grab the IDs of all the image attachments in a gallery so we can get the URL

@@ -35,6 +35,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 	 * @see raythompsonwebdev_com_custom_header_setup().
 	 */
 	function raythompsonwebdev_com_header_style() {
+
 		$header_text_color = get_header_textcolor();
 
 		/*
@@ -43,6 +44,23 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 		 */
 		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 			return;
+		}
+
+		add_theme_support( 'custom-logo', array(
+			'height'      => 96,
+			'width'       => 96,
+			'flex-width'  => true,
+			'flex-height' => true,
+		) );
+
+		/* Test if WordPress version and whether a logo has been defined */
+		function popper_custom_logo() 
+		{
+				if (function_exists('the_custom_logo') && has_custom_logo() ) {
+						return get_custom_logo();
+				} else {
+						return false;
+				}
 		}
 
 		// If we get this far, we have custom styles. Let's do this.
