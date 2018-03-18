@@ -15,7 +15,15 @@ if (! function_exists('raythompsonwebdev_com_posted_on') ) :
     {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if (get_the_time('U') !== get_the_modified_time('U') ) {
+<<<<<<< HEAD
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
+=======
+<<<<<<< HEAD
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
+=======
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
+>>>>>>> refs/remotes/origin/master
+>>>>>>> 62756e7df41bdb768ddf9bd51b34d43d4d0fc80e
         }
 
         $time_string = sprintf(
@@ -72,7 +80,15 @@ if (! function_exists('raythompsonwebdev_com_posted_by') ) :
     
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if (get_the_time('U') !== get_the_modified_time('U') ) {
+<<<<<<< HEAD
             $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
+=======
+<<<<<<< HEAD
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
+=======
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+>>>>>>> refs/remotes/origin/master
+>>>>>>> 62756e7df41bdb768ddf9bd51b34d43d4d0fc80e
         }
         
         $time_string = sprintf(
