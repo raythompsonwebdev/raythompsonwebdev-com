@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 $('figure.showcase-container').on('click', function(){
-     $(this).find('.showcase-content').toggleClass('flipped');
-     $(this).find('.showcase-img').toggleClass('flipped');
+     $(this).find('.showcase-content').toggleClass('flipped').css('display','block');
+     $(this).find('.showcase-img').toggleClass('flipped').css('display','block');
  });
 });
 

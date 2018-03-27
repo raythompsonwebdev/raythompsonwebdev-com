@@ -101,6 +101,7 @@
 
 
         </article>
+
     <?php endwhile; 
     
     the_posts_navigation();

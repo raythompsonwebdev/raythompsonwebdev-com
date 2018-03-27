@@ -57,7 +57,7 @@ the_posts_navigation();
 
 <section class="contact-wide">
 
-    <h1>Related Archives</h1>
+    <h1>Archives</h1>
 
 </section>
 

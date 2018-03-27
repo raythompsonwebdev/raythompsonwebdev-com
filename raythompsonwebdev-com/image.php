@@ -2,11 +2,11 @@
 /**
  * *PHP version 5
  *
- * Attachment | core/attachment.php.
+ * Image | core/image.php.
  *
- * @category   Attachment
+ * @category   Image
  * @package    Raythompsonwebdev-com
- * @subpackage Attachment
+ * @subpackage Image
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3

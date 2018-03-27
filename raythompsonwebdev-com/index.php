@@ -17,17 +17,21 @@ get_header(); ?>
 
 <?php
 if ( is_home() && ! is_front_page() ) : ?>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 
-			<?php
-			endif;
+<?php
+endif;
 ?>
 
-<div class="main-text">
-
-</div>
+<article class="main-text">
+<p>
+<?php _e( 'Whether you are just beginning to learn web development or are already building websites and web applications trying to keep up can be tricky sometimes.  I to aggregate all relevant information on web development I have learnt so far through the tons of valuable web development and web design related resources I have read, watched and listened to and implemented over the past few years&#46;', 'raythompsonwebdev-com' ); ?>
+</p>
 <br/>
-
+<br/>
+</article>
+<br/>
+<br/>
 <!--search form -->
 <?php if (is_home() || is_archive()) : ?>
 <span class="social-1"><?php get_search_form(true); ?></span>
