@@ -30,7 +30,7 @@
             </figure>-->
 
             <figure id="image-7">
-                <object class="style-svg" type="image/svg+xml" id="image-4" data="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
+                <object class="style-svg" type="image/svg+xml" id="image-4" data="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
                 </object>
             </figure>
         

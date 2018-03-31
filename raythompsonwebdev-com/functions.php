@@ -14,26 +14,13 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 
-function Fix_ie8() 
-{
-    if (strpos($_SERVER['HTTP_USER_AGENT'], "MSIE 8")) {
-        header("X-UA-Compatible: IE=7");
-    }
-}
-add_action('send_headers', 'Fix_ie8');    // for WordPress
-add_filter('widget_text', 'shortcode_unautop');
-add_filter('widget_text', 'do_shortcode');
 
 
-/* Test if WordPress version and whether a logo has been defined */
-function popper_custom_logo() 
-{
-    if (function_exists('the_custom_logo') && has_custom_logo() ) {
-            return get_custom_logo();
-    } else {
-            return false;
-    }
-}
+add_filter( 'widget_text', 'shortcode_unautop' );
+add_filter( 'widget_text', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'widget_text', array( $wp_embed, 'autoembed'), 8 );
+add_filter( 'widget_text', 'do_shortcode');
+
 
 /*
  * theme set up
@@ -42,13 +29,23 @@ if (! function_exists('my_theme_setup') ) :
     function my_theme_setup()
     {
 
+        /* Test if WordPress version and whether a logo has been defined 
+        function raythompsonwebdev_com_custom_logo() 
+        {
+            if (function_exists('the_custom_logo') && has_custom_logo() ) {
+                    return get_custom_logo();
+            } else {
+                    return false;
+            }
+        }*/
+
         function wpb_add_google_fonts() 
         {
             wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css?family=PT+Sans:400,700', false);
             wp_enqueue_style('wpc-google-fonts', 'https://fonts.googleapis.com/css?family=Cabin:400,700', false);
         }
         add_action('wp_enqueue_scripts', 'wpb_add_google_fonts');
-
+        
         /*
          * Localization support
          */
@@ -94,11 +91,53 @@ if (! function_exists('my_theme_setup') ) :
         add_image_size('small', 200, 9999);
         add_theme_support('title-tag');
         
-        // Set up the WordPress core custom background feature.
-        add_theme_support( 'custom-background', array(
-            'default-color' => 'CCD3DE',
-            'default-image' => '',
-            ) );
+        /*
+        *
+        * Set up the WordPress core custom background feature.
+        *
+        */
+        
+        $defaults = array(
+            'default-color'          => 'CCD3DE',
+            'wp-head-callback'       => '_custom_background_cb',
+            'admin-head-callback'    => '',
+            'admin-preview-callback' => ''
+        );
+        add_theme_support( 'custom-background', $defaults );
+
+        /*
+        * Link pages script
+        *
+        */
+        $defaults = array(
+            'before'           => '<p>' . __( 'Pages:', 'raythompsonwebdev-com' ),
+            'after'            => '</p>',
+            'link_before'      => '',
+            'link_after'       => '',
+            'next_or_number'   => 'number',
+            'separator'        => ' ',
+            'nextpagelink'     => __( 'Next page', 'raythompsonwebdev-com'),
+            'previouspagelink' => __( 'Previous page', 'raythompsonwebdev-com' ),
+            'pagelink'         => '%',
+            'echo'             => 1
+        );
+        wp_link_pages( $defaults );
+
+        add_theme_support( 'custom-logo', array(
+            'width' => 96,
+            'height' => 96,
+            'flex-width' => false,
+            'flex-height' => false,
+        ) );
+
+        /*
+         * custom header
+         */
+        $args = array(
+            'width'         => 325,
+            'height'        => 65
+        );
+        add_theme_support( 'custom-header', $args );
 
         /*
          * register menus
@@ -212,30 +251,6 @@ function remove_version_parameter( $src )
 add_filter('script_loader_src', 'remove_version_parameter', 15, 1);
 // filter .css files
 add_filter('style_loader_src', 'remove_version_parameter', 15, 1);
-
-/*
- * remove wp-embed.min.js
- */
-add_action(
-    'init', function () {
-
-        // Remove the REST API endpoint.
-        remove_action('rest_api_init', 'wp_oembed_register_route');
-
-        // Turn off oEmbed auto discovery.
-        // Don't filter oEmbed results.
-        remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
-
-        // Remove oEmbed discovery links.
-        remove_action('wp_head', 'wp_oembed_add_discovery_links');
-
-        // Remove oEmbed-specific JavaScript from the front-end and back-end.
-        remove_action('wp_head', 'wp_oembed_add_host_js');
-    }, PHP_INT_MAX - 1 
-);
-
-
-add_action('customize_register', 'customizer');
 
 
 /*
@@ -461,38 +476,75 @@ add_action('widgets_init', 'raythompsonwebdev_com_widgets_init');
 /**
  * Social media widget area
  */
-function social_widgets_init() 
+function videoh_widgets_init() 
 {
     register_sidebar(
         array(
-        'name' => 'social',
-        'id' => 'social',
-        'before_widget' => '<div id="social">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
+        'name' => esc_html__('videoh-widget-area', 'raythompsonwebdev-com'),
+        'id' => 'videoh-widget-area',
+        'description'   => esc_html__('The video widget area', 'raythompsonwebdev-com'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
         ) 
     );
 }
-add_action('widgets_init', 'social_widgets_init');
+add_action('widgets_init', 'videoh_widgets_init');
 
 /**
  * Contact form area
  */
-function contact_widgets_init() 
+function media_widgets_init() 
 {
     register_sidebar(
         array(
-        'name' => 'contact',
-        'id' => 'contact',
-        'before_widget' => '<div id="contactform">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
+        'name' => esc_html__('media-widget-area', 'raythompsonwebdev-com'),
+        'id' => 'media-widget-area',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
         ) 
     );
 }
-add_action('widgets_init', 'contact_widgets_init');
+add_action('widgets_init', 'media_widgets_init');
+
+/**
+ * archives area
+ */
+function archives_widgets_init() 
+{
+    register_sidebar(
+        array(
+        'name' => esc_html__('archives-widget-area', 'raythompsonwebdev-com'),
+        'id' => 'archives-widget-area',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        ) 
+    );
+}
+add_action('widgets_init', 'archives_widgets_init');
+
+/**
+ * archives area
+ */
+function categoree_widgets_init() 
+{
+    register_sidebar(
+        array(
+        'name' => esc_html__('categoree-widget-area', 'raythompsonwebdev-com'),
+        'id' => 'categoree-widget-area',
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget' => '</section>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+        ) 
+    );
+}
+add_action('widgets_init', 'categoree_widgets_init');
 
 /**
  * Add custom image sizes attribute to enhance responsive image functionality
@@ -647,6 +699,3 @@ require get_template_directory() . '/inc/customizer.php';
 if (defined('JETPACK__VERSION') ) {
     include get_template_directory() . '/inc/jetpack.php';
 }
-
-
-?>

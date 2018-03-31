@@ -307,4 +307,3 @@ function raythompsonwebdev_com_validate_gravatar($id_or_email)
     }
 }
 
-?>

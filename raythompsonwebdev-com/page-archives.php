@@ -75,7 +75,7 @@ get_header(); ?>
 
 <section class="contact-wide">
 
-<h1>Archive Pages</h1>
+<h1>Archive Pages Menu</h1>
   
 </section>
 

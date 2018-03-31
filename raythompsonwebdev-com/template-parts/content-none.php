@@ -9,7 +9,7 @@
 
 ?>
 
-<section class="no-results not-found">
+<article class="no-results not-found post group">
 	<header class="byline">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'raythompsonwebdev-com' ); ?></h1>
 	</header><!-- .page-header -->
@@ -47,4 +47,5 @@
 
 		endif; ?>
 	</div><!-- .page-content -->
-</section><!-- .no-results -->
+
+</article><!-- .no-results -->
