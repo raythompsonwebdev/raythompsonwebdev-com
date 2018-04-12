@@ -20,7 +20,7 @@
 
 ?>
 
-<h1><?php wp_title( '|', true, 'right' ); ?></h1>
+<h1><?php post_type_archive_title(); ?></h1>
 <div class="main-text">
     
 </div>

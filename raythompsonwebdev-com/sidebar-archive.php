@@ -29,15 +29,18 @@
     
     
     <article class="side-bar-box"> 
-        <h2>Link</h2> 
-        
+
+        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('archives-widget-area')) : ?>
+        <?php endif; ?>
 
     </article>
     
     <article class="side-bar-box"> 
-        <h2>Link</h2> 
-        
 
+    <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('videoh-widget-area')) : ?>
+        <?php endif; ?>
+ 
+    
     </article>
 
 </aside>    

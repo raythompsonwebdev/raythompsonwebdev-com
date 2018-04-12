@@ -43,11 +43,9 @@
                         </a>
                     </figure>
                 <?php } else { ?>
-                    <figure class="featuredImage">
-                        <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                    
                             <?php raythompsonwebdev_com_post_thumbnail(); ?>
-                        </a>
-                    </figure>
+                 
                 <?php }
                 ?>
             </a>

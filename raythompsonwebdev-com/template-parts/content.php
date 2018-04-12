@@ -44,11 +44,19 @@
                         </a>
                     </figure>
                 <?php } else { ?>
+<<<<<<< HEAD
                     <figure class="featuredImage">
                         <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
                         <?php the_post_thumbnail(); ?>
                         </a>
                     </figure>
+=======
+                   
+                
+                    <?php raythompsonwebdev_com_post_thumbnail(); ?>
+    
+    
+>>>>>>> b8c588072e4920ad20abaa80d18fa5715875161e
                 <?php }
                 ?>
             </a>

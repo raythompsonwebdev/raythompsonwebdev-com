@@ -115,7 +115,7 @@ desktop 1920px*/
                 }
                 div.site-firstletter {
                     font-family: ($FontStyleHeader);
-                    font-size: 4em;
+                    font-size: 1em;
                     font-weight: normal;
                     text-align: center;
                     margin: 0;
@@ -453,6 +453,8 @@ desktop 1920px*/
                 letter-spacing: 0.025em;
                 line-height: 1.9em;
                 margin: 0 0 1em 0;
+                padding:0.5em;
+                background-color:$color4;
             }
 
                         
@@ -476,6 +478,7 @@ desktop 1920px*/
                         font-size: 1em;
                         color:$color1;
                         
+<<<<<<< HEAD
                     }
                     a {
                         width: auto;
@@ -486,6 +489,18 @@ desktop 1920px*/
                             font-weight:bold;
                         }
                     }
+=======
+                    }
+                    a {
+                        width: auto;
+                        display: inline-block;
+                        line-height:40px;
+                        &:hover {
+                            color: $color4;
+                            font-weight:bold;
+                        }
+                    }
+>>>>>>> b8c588072e4920ad20abaa80d18fa5715875161e
     
                 }
             }
@@ -703,26 +718,18 @@ desktop 1920px*/
                     -ms-flex-item-align: center;
                     align-self: center;
                 }
-                #social h2 {
-                    width: 100%;
-                }
-                .tagcloud {
-                    width: 90%;
-                    margin: auto;
-                    font-size: 100%;
-                    display: block;
-                }
-                .widget {
+                section.widget {
                     display: block;
                     font-family: ($FontStyle);
                     padding: 0;
-                    .widget-title {
+                    h2.widget-title {
                         height: 40px;
                         font-size: 1.05em;
                         line-height: 40px;
                         letter-spacing: 0.1em;
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
                         width: 100%;
                         height: auto;
                         display: block;
@@ -743,7 +750,7 @@ desktop 1920px*/
                                 line-height: 45px;
                                 background-color: $color3;
                                 @include originTran( 50% 50%);
-                                @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                                @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
                                 &:hover {
                                     color: $color4;
                                     font-weight: bold;
@@ -765,9 +772,11 @@ desktop 1920px*/
                         }
                         
                     }
-                    ul.children > li {
-                        background-color: $color3;
-                        margin: 1% auto;
+                    div.tagcloud {
+                        width: 90%;
+                        margin: auto;
+                        font-size: 100%;
+                        display: block;
                     }
                 }
             }
@@ -1342,55 +1351,64 @@ desktop 1920px*/
                 width: 100%;
                 margin: 3% auto;
                 display: block;
-                .sd-title {
-                    line-height: 0;
+                h3.sd-title {
                     display: block;
                     font-size: 0.9em;
                     margin: 0;
                     outline: none;
                     float: left;
-                    height: 40px;
-                    width: 11%;
+                    line-height: 40px;
+                    width: 10%;
                 }
                 .sd-title::before {
                     border: none;
+                    width:10%;
+                    display:inline-block;
                 }
-                .sd-content {
+                div.sd-content {
                     margin: 0;
                     width: 85%;
                     display: inline-block;
                     ul {
-                        line-height: 1.5em;
                         font-size: 1em;
                         text-indent: 0;
                         width: 100%;
-                        height: 35px;
+                        height: auto;
                         display: block;
-                        margin: 0 1%;
+                        margin: 0;
                         li {
-                            width: 4%;
-                            float: left;
+                            width: 15%;
                             display: inline-block;
                             padding: 0;
-                            margin: 0 1%;
+                            margin: 0 1em;
                             height: 100%;
+                            color: $color4;
                             a {
-                                background-color: $color3;
-                                color: $color1;
+                                background-color: $color1;
+                                
                                 display: block;
                                 margin: 0;
-                                top: 0;
                                 height: 100%;
-                                padding: 20%;
                                 @include originTran( 50% 50%);
-                                @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
-                            }
-                            a:hover {
-                                color: $color1;
-                                background-color: $color3;
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+                                &:hover {
+                                    color: $color1;
+                                    background-color: $color3;
+                                    width: 100%;
+                                    
+                                }
+                                &:before{
+
+                                    display: block;
+                                    width: 21%;
+                                    float: left;
+                                    color: $color4;
+
+                                }
+                                span{
+                                    display:inline-block;
+                                    color: $color4;
+
                                 }
                             }
                         }
@@ -1398,6 +1416,7 @@ desktop 1920px*/
                 }
             }
 
+            
             /*post*/
             .entry {
                 padding: 1%;
@@ -1405,6 +1424,7 @@ desktop 1920px*/
                 width: 100%;
                 margin: 0 auto;
                 background-color: $color4;
+                                
             }
 
             /*attachment page image*/
@@ -3285,7 +3305,7 @@ desktop 1440px*/
                     
                 }
                 div.site-firstletter {
-                    font-size: 4em;
+                    font-size: 0.9em;
                 }
                 
             }
@@ -3833,8 +3853,11 @@ desktop 1440px*/
            
             /*serach page image*/
             a.post-thumbnail {
+                width:12%;
+                margin:0 auto;
+                display:block;
                 img{
-                    width: 15%;
+                    width: 100%;
 
                 }
             }
@@ -3861,7 +3884,7 @@ desktop 1440px*/
                 font-size: 0.8em;
             }
             
-            /*post header*/
+            /*blog post header*/
             header.byline {
                 padding: 0.5em;
                 
@@ -3932,36 +3955,38 @@ desktop 1440px*/
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.9em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 10%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
+                div.sd-content {
+
                     width: 85%;
-                    display: inline-block;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 15%;
+                            margin: 0 1em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -3972,6 +3997,7 @@ desktop 1440px*/
             /*post*/
             .entry {
                 padding: 1%;
+                
             }
 
             /*attachment page image*/
@@ -5609,48 +5635,52 @@ desktop 1280px*/
 
             }
 
-            /*Social media share buttons*/
-            div.sharedaddy {
+           /*Social media share buttons*/
+           div.sharedaddy {
+            margin: 3% auto;
+            h3.sd-title {
+                width: 10%;
+            }
+            .sd-title::before {
+                width:10%;
+            }
+            div.sd-content {
 
-                margin: 3% auto;
+                width: 85%;
 
-                .sd-title {
-                    font-size: 0.85em;
-                    height: 40px;
-                    width: 11%;
-                }
-                .sd-title::before {
-                    border: none;
-                }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
-                    ul {
-
-                        height: 35px;
-
-                        li {
-                            width: 4%;
-
-                            a {
-
-                                display: block;
-                            }
-                            a:hover {
-
+                ul {
+                    height: auto;
+                    margin: 0;
+                    li {
+                        width: 15%;
+                        margin: 0 1em;
+                        a {
+                           
+                            display: block;
+                            margin: 0;
+                            &:hover {
                                 width: 100%;
-                                &::after {
-                                    content: "";
-                                }
+                                
+                            }
+                            &:before{
+                                width: 21%;
+
+                            }
+                            span{
+                                display:inline-block;
+
                             }
                         }
                     }
                 }
             }
+        }
 
+            
             /*post*/
             .entry {
                 padding: 1%;
+                
             }
 
             /*attachment page image*/
@@ -7195,36 +7225,39 @@ desktop 1024px*/
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 12%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 83%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 16%;
+                            margin: 0 0.5em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
+
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -8251,6 +8284,7 @@ desktop 980px*/
                     &::before {
                         width: 4%;
                       
+<<<<<<< HEAD
                     }
                     a {
                         display:inline-block;
@@ -8258,6 +8292,15 @@ desktop 980px*/
                             font-weight:bold;
                         }
                     }
+=======
+                    }
+                    a {
+                        display:inline-block;
+                        &:hover {
+                            font-weight:bold;
+                        }
+                    }
+>>>>>>> b8c588072e4920ad20abaa80d18fa5715875161e
     
                 }
             }
@@ -8699,36 +8742,39 @@ desktop 980px*/
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 14%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 83%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 16%;
+                            margin: 0 0.5em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -9713,6 +9759,7 @@ tablet 800px */
                     &::before {
                         width: 4%;
                       
+<<<<<<< HEAD
                     }
                     a {
                         display:inline-block;
@@ -9720,6 +9767,15 @@ tablet 800px */
                             font-weight:bold;
                         }
                     }
+=======
+                    }
+                    a {
+                        display:inline-block;
+                        &:hover {
+                            font-weight:bold;
+                        }
+                    }
+>>>>>>> b8c588072e4920ad20abaa80d18fa5715875161e
     
                 }
             }
@@ -10199,36 +10255,39 @@ tablet 800px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 16%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 83%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 20%;
+                            margin: 0 0.5em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -11716,36 +11775,39 @@ tablet 768px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 20%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 79%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 25%;
+                            margin: 0 0.5em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -13193,42 +13255,47 @@ tablet 667px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 20%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 79%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 25%;
+                            margin: 0 0.25em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
                     }
                 }
             }
+
+
 
             /*post*/
             .entry {
@@ -14593,36 +14660,39 @@ tablet 600px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 20%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 79%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 25%;
+                            margin: 0 0.25em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -15976,36 +16046,40 @@ tablet 536px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
+                h3.sd-title {
+                    width: 21%;
                     font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 79%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
+                            width: 30%;
 
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -17434,36 +17508,42 @@ mobile 480px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 100%;
+                    float:none;
+                    font-size: 1em;
+                    text-align:center;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 100%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 32%;
+                            margin: 0 0.15em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -18886,36 +18966,42 @@ mobile 414px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 100%;
+                    float:none;
+                    font-size: 1em;
+                    text-align:center;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 100%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 32%;
+                            margin: 0 0.15em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -20313,36 +20399,42 @@ mobile 360px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 100%;
+                    float:none;
+                    font-size: 1em;
+                    text-align:center;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 100%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 44%;
+                            margin: 0.15em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -21712,36 +21804,42 @@ mobile 320px */
 
             /*Social media share buttons*/
             div.sharedaddy {
-
                 margin: 3% auto;
-
-                .sd-title {
-                    font-size: 0.8em;
-                    height: 40px;
-                    width: 11%;
+                h3.sd-title {
+                    width: 100%;
+                    float:none;
+                    font-size: 1em;
+                    text-align:center;
                 }
                 .sd-title::before {
-                    border: none;
+                    width:10%;
                 }
-                .sd-content {
-                    width: 85%;
-                    display: inline-block;
+                div.sd-content {
+
+                    width: 100%;
+
                     ul {
-
-                        height: 35px;
-
+                        height: auto;
+                        margin: 0;
                         li {
-                            width: 4%;
-
+                            width: 47%;
+                            margin: 0.15em;
                             a {
-
+                               
                                 display: block;
-                            }
-                            a:hover {
+                                margin: 0;
+                                &:hover {
+                                    width: 100%;
+                                    
+                                    
+                                }
+                                &:before{
+                                    width: 21%;
 
-                                width: 100%;
-                                &::after {
-                                    content: "";
+                                }
+                                span{
+                                    display:inline-block;
+
                                 }
                             }
                         }
@@ -21984,7 +22082,7 @@ mobile 320px */
                     }
                 }
                 h3#reply-title {
-                    font-size: 0.9em;
+                    font-size: 0.8em;
                 }
             }
         }
