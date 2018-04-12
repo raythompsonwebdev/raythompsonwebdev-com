@@ -22,7 +22,7 @@ get_header(); ?>
 			the_post_navigation();
 			
 		?>
-            
+     
             <section class='contact-wide'>
 
         <h1>Send your Comments</h2>

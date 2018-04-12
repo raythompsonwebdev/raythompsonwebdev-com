@@ -46,11 +46,7 @@
                 <?php } else { ?>
                     <figure class="featuredImage">
                         <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
-<<<<<<< HEAD
                         <?php the_post_thumbnail(); ?>
-=======
-                            <?php raythompsonwebdev_com_post_thumbnail(); ?>
->>>>>>> refs/remotes/origin/master
                         </a>
                     </figure>
                 <?php }
@@ -118,6 +114,7 @@
 
 
         </article>
+
     <?php endwhile; 
     
     the_posts_navigation();

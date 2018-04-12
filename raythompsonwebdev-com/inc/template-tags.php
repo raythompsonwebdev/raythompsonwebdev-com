@@ -15,13 +15,8 @@ if (! function_exists('raythompsonwebdev_com_posted_on') ) :
     {
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if (get_the_time('U') !== get_the_modified_time('U') ) {
-<<<<<<< HEAD
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
-=======
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
->>>>>>> refs/remotes/origin/master
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> - Updated: <time class="updated" datetime="%3$s">%4$s</time>';
         }
-
         $time_string = sprintf(
             $time_string,
             esc_attr(get_the_date('c')),
@@ -29,7 +24,6 @@ if (! function_exists('raythompsonwebdev_com_posted_on') ) :
             esc_attr(get_the_modified_date('c')),
             esc_html(get_the_modified_date())
         );
-
         $posted_on = sprintf(
             esc_html_x('published %s', 'post date', 'raythompsonwebdev-com'),
             '<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
@@ -40,7 +34,6 @@ if (! function_exists('raythompsonwebdev_com_posted_on') ) :
             '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
         );
                 
-
         // Display the author avatar if the author has a Gravatar
         $author_id = get_the_author_meta('ID');
                 
@@ -53,6 +46,8 @@ if (! function_exists('raythompsonwebdev_com_posted_on') ) :
     
     
         echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
+        
         if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
             echo '<span class="comments-link">';
             comments_popup_link(esc_html__('Leave a comment', 'raythompsonwebdev-com'), esc_html__('1 Comment', 'raythompsonwebdev-com'), esc_html__('% Comments', 'raythompsonwebdev-com'));
@@ -63,24 +58,17 @@ if (! function_exists('raythompsonwebdev_com_posted_on') ) :
     }
 endif;
 
-
-
 if (! function_exists('raythompsonwebdev_com_posted_by') ) :
     /**
      * Prints HTML with meta information for the current author.
      */
     function raythompsonwebdev_com_posted_by() 
     {
-
         $author_id = get_the_author_meta('ID');
     
         $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
         if (get_the_time('U') !== get_the_modified_time('U') ) {
-<<<<<<< HEAD
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>  - Updated:<time class="updated" datetime="%3$s">%4$s</time>';
-=======
-            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
->>>>>>> refs/remotes/origin/master
+            $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> - Updated: <time class="updated" datetime="%3$s">%4$s</time>';
         }
         
         $time_string = sprintf(
@@ -101,7 +89,6 @@ if (! function_exists('raythompsonwebdev_com_posted_by') ) :
             esc_html_x('by %s', 'post author', 'raythompsonwebdev-com'),
             '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
         );
-
         
         if (raythompsonwebdev_com_validate_gravatar($author_id) ) {
             echo '<div class="meta-content has-avatar">';
@@ -121,7 +108,6 @@ if (! function_exists('raythompsonwebdev_com_posted_by') ) :
 
     }
 endif;
-
 
 if (! function_exists('raythompsonwebdev_com_entry_footer') ) :
     /**
@@ -184,6 +170,7 @@ if (! function_exists('raythompsonwebdev_com_entry_footer') ) :
     }
 endif;
 
+
 if (! function_exists('raythompsonwebdev_com_post_thumbnail') ) :
     /**
      * Displays an optional post thumbnail.
@@ -241,13 +228,10 @@ function raythompsonwebdev_com_categorized_blog()
             'number'     => 2,
             ) 
         );
-
         // Count the number of categories that are attached to the posts.
         $all_the_cool_cats = count($all_the_cool_cats);
-
         set_transient('raythompsonwebdev_com_categories', $all_the_cool_cats);
     }
-
     if ($all_the_cool_cats > 1 ) {
         // This blog has more than 1 category so raythompsonwebdev_com_categorized_blog should return true.
         return true;
@@ -256,7 +240,6 @@ function raythompsonwebdev_com_categorized_blog()
         return false;
     }
 }
-
 /**
  * Flush out the transients used in raythompsonwebdev_com_categorized_blog.
  */
@@ -266,11 +249,10 @@ function raythompsonwebdev_com_category_transient_flusher()
         return;
     }
     // Like, beat it. Dig?
-    delete_transient('popperscores_categories');
+    delete_transient('raythompsonwebdev_com_categories');
 }
 add_action('edit_category', 'raythompsonwebdev_com_category_transient_flusher');
 add_action('save_post',     'raythompsonwebdev_com_category_transient_flusher');
-
 /**
  * Utility function to check if a gravatar exists for a given email or id
  *
@@ -278,7 +260,6 @@ add_action('save_post',     'raythompsonwebdev_com_category_transient_flusher');
  * @return bool if the gravatar exists or not
  * Original found at https://gist.github.com/justinph/5197810
  */
-
 function raythompsonwebdev_com_validate_gravatar($id_or_email) 
 {
     //id or email code borrowed from wp-includes/pluggable.php
@@ -295,7 +276,6 @@ function raythompsonwebdev_com_validate_gravatar($id_or_email)
         if (! empty($id_or_email->comment_type) && ! in_array($id_or_email->comment_type, (array) $allowed_comment_types) ) {
             return false;
         }
-
         if (!empty($id_or_email->user_id) ) {
             $id = (int) $id_or_email->user_id;
             $user = get_userdata($id);
@@ -308,10 +288,8 @@ function raythompsonwebdev_com_validate_gravatar($id_or_email)
     } else {
         $email = $id_or_email;
     }
-
     $hashkey = md5(strtolower(trim($email)));
     $uri = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
-
     $data = wp_cache_get($hashkey);
     if (false === $data) {
         $response = wp_remote_head($uri);
@@ -321,7 +299,6 @@ function raythompsonwebdev_com_validate_gravatar($id_or_email)
             $data = $response['response']['code'];
         }
         wp_cache_set($hashkey, $data, $group = '', $expire = 60*5);
-
     }        
     if ($data == '200') {
         return true;
@@ -330,3 +307,4 @@ function raythompsonwebdev_com_validate_gravatar($id_or_email)
     }
 }
 
+?>
