@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
- 
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -11,8 +11,8 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['js/**/*.js'],
-                dest: 'dist/<%= pkg.name %>.js'
+                src: ['raythompsonwebdev-com/js/dist/**/*.js'],
+                dest: 'raythompsonwebdev-com/js/dist/concat/<%= pkg.name %>.js'
             }
         },
 
@@ -25,7 +25,23 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    'dist/<%= pkg.name %>.min.js': ['js/**/*.js']
+                    'dist/maps.min.js': ['raythompsonwebdev-com/js/maps.js'],
+                    'dist/customizer.min.js': ['raythompsonwebdev-com/js/customizer.js'],
+                    
+                    'dist/master.min.js': ['raythompsonwebdev-com/js/master.js'],
+                    'dist/navigation.min.js': ['raythompsonwebdev-com/js/navigation.js'],
+                    'dist/profile.min.js': ['raythompsonwebdev-com/js/profile.js'],
+                    'dist/skip-link-focus-fix.min.js': ['raythompsonwebdev-com/js/skip-link-focus-fix.js'],
+                    'dist/websites.min.js': ['raythompsonwebdev-com/js/websites.js'],
+                    'dist/jquery.cookie.min.js': ['raythompsonwebdev-com/js/jquery.cookie.js'],
+
+                    'dist/inc/lightbox/js/jquery.fancybox.js.min.js': ['raythompsonwebdev-com/js/inc/lightbox/js/jquery.fancybox.js'],
+                    'dist/inc/lightbox/js/jquery.fancybox.pack.js.min.js': ['raythompsonwebdev-com/js/inc/lightbox/js/jquery.fancybox.pack.js'],
+                    'dist/inc/lightbox/js/lightbox.min.js': ['raythompsonwebdev-com/js/inc/lightbox/js/lightbox.js'],
+
+                    'dist/inc/helpers/jquery.fancybox-buttons.min.js': ['raythompsonwebdev-com/js/inc/helpers/jquery.fancybox-buttons.js'],
+                    'dist/inc/helpers/jquery.fancybox-media.min.js': ['raythompsonwebdev-com/js/inc/helpers/jquery.fancybox-media.js'],
+                    'dist/inc/helpers/jquery.fancybox-thumbs.min.js': ['raythompsonwebdev-com/js/inc/helpers/jquery.fancybox-thumbs.js']
                 }
             }
         },
@@ -39,10 +55,10 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'css/style.css': 'css/style.scss',
-                    'css/svg-style-3.css': 'css/svg-style-3.scss',
-                    'css/ie.css': 'css/ie.scss'
-                            /*where file goes-----/where file from*/
+                    'raythompsonwebdev-com/css/old-files/style.css': 'raythompsonwebdev-com/css/style.scss',
+                    'raythompsonwebdev-com/css/old-files/svg-style-3.css': 'raythompsonwebdev-com/css/svg-style-3.scss',
+                    'raythompsonwebdev-com/ie.css': 'raythompsonwebdev-com/css/ie.scss'
+                    /*where file goes-----/where file from*/
                 }
             },
 
@@ -52,10 +68,11 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'style-min.css': 'css/style.scss',
-                    'svg-style-3-min.css': 'css/svg-style-3.scss',
-                    'ie-min.css': 'css/ie.scss'
-                            /*where file goes-----/where file from*/
+                    'raythompsonwebdev-com/style-min.css': 'raythompsonwebdev-com/css/style.scss',
+                    'raythompsonwebdev-com/svg-style-3-min.css': 'raythompsonwebdev-com/css/svg-style-3.scss',
+                    'raythompsonwebdev-com/css/old-files/ie-min.css': 'raythompsonwebdev-com/css/ie.scss',
+                   'raythompsonwebdev-com/js/dist/inc/lightbox/css/jquery.fancybox.min.css': 'raythompsonwebdev-com/js/inc/lightbox/css/jquery.fancybox.css'
+                    /*where file goes-----/where file from*/
                 }
             }
         },
@@ -64,7 +81,7 @@ module.exports = function (grunt) {
          * JS Hint
          */
         jshint: {
-            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
+            files: ['Gruntfile.js', 'raythompsonwebdev-com/js/**/*.js', 'test/**/*.js'],
             options: {
                 // options here to override JSHint defaults
 
@@ -81,13 +98,13 @@ module.exports = function (grunt) {
          */
         watch: {
             css: {
-                files: '**/*.scss',
-                tasks: ['sass']
+                files: 'raythompsonwebdev-com/**/*.scss',
+                tasks: ['sass', 'jshint']
             }
         }
     });
 
-	
+
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');

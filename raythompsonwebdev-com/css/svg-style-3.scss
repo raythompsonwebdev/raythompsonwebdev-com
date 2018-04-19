@@ -1,0 +1,206 @@
+
+@import 'svg-partials/mixins.scss';
+@import 'partials/variables.scss';
+
+
+
+#svg4190{
+
+	width:100%;
+	height:100%;
+}
+
+//bg layer
+g#layer14 {
+
+  position:relative;
+  opacity: 1;
+  z-index:-1;
+
+}
+
+//responsive layer
+g#layer17 {
+
+  position:absolute;
+  opacity: 0;
+  left:-600px;
+  display:none;
+  @include transformerorigin( 50% 50% );
+  @include anime-mode( desk-slide);
+  @include durationer( 4s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 1s );
+  @include fillermode( both );
+  @include transforming-things ( translateX(-600px));
+  @include transitioner( all 0.1s ease-in-out);
+
+
+}
+@include keyframes( desk-slide ) {
+    
+  0%{display:none;}
+
+  20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
+
+  75%{left: 0; opacity:1; @include transforming-things ( rotate(360deg) translateX(0px) scale(1)); }
+
+  100%{ left: 0; opacity:0; @include transforming-things ( rotate(-2700deg) translateX(0px) scale(0)); }
+
+}
+
+//wordpress
+g#layer18 {
+  position:absolute;
+  opacity: 0;
+  left:600px;
+  display:none;
+  @include transformerorigin( 50% 50% );
+  /*@include anime-mode( mob-slide 5s ease-in-out 1 forwards 7s both);*/
+  @include anime-mode( mob-slide);
+  @include durationer( 3s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 5s );
+  @include fillermode( both );
+
+  @include transforming-things ( translateX(600px));
+  @include transitioner( all 0.1s ease-in-out);
+
+}
+@include keyframes( mob-slide ) {
+  0%{display:none;}
+
+  20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
+
+  75%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
+
+  100%{ left: 0; opacity:0; @include transforming-things ( translateX(0px) scale(10)); }
+
+}
+
+//mobile
+g#layer19 {
+  position:absolute;
+  opacity: 0;
+  left:-600px;
+  display:none;
+  @include transformerorigin( 50% 50% );
+  /*@include anime-mode( wordpress-cover-slide 5s ease-in-out 1 forwards 12s both);*/
+  @include anime-mode( wordpress-cover-slide);
+  @include durationer( 3s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 9s );
+  @include fillermode( both );
+
+  @include transforming-things ( translateX(-600px));
+  @include transitioner( all 0.1s ease-in-out);
+
+}
+@include keyframes( wordpress-cover-slide ) {
+  0%{display:none;}
+
+  20%{left: 0; opacity:1; @include transforming-things ( translateX(0px) scale(1)); }
+
+  50%{ left: 0; opacity:1; @include transforming-things ( translateX(100px) ); }
+
+  50%{ left: 0; opacity:1; @include transforming-things ( translateX(300px) ); }
+
+  100%{ left: 0; opacity:1; @include transforming-things ( translateX(600px) ); }
+
+}
+
+//coding
+g#layer20 {
+  position:absolute;
+  opacity: 0;
+  left:600px;
+  display:none;
+  @include transformerorigin( 50% 50% );
+  @include anime-mode( web-design-slide);
+  @include durationer( 3s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 12.5s );
+  @include fillermode( both );
+  @include transforming-things ( translateX(600px));
+  @include transitioner( all 0.1s ease-in-out);
+
+}
+@include keyframes( web-design-slide  ) {
+  0%{display:none;}
+
+  20%{ @include transforming-things (  translateX(0px) scale(1)); opacity:1; left: 0;}
+
+  50%{ left: 0; opacity:1; @include transforming-things (rotate(360deg) translateX(0px) scale(1) ); }
+
+  100%{ left: 0; opacity:0; @include transforming-things (rotate(2700deg) translateX(0px) scale(0) ); }
+
+}
+
+//final
+g#layer21{
+
+  position:absolute;
+  opacity: 0;
+  display:none;
+  @include transformerorigin( 277.2356px 165.47476px );
+  /*@include anime-mode( web-design-btn 4s ease-in-out 1 forwards 21s both);*/
+  @include anime-mode( web-design-btn);
+  @include durationer( 1.5s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 15.5s );
+  @include fillermode( both );
+  @include transforming-things ( translateX(600px));
+  @include transitioner( all 0.1s ease-in-out);
+
+}
+@include keyframes( web-design-btn  ) {
+
+  100%{ left: 0; opacity: 1; @include transforming-things ( translateX(0px)); }
+
+}
+
+#g4408-1{
+  width:20%;
+
+  @include transformerorigin( 50% 50% );
+  @include anime-mode( web-design-btn-ft);
+  @include durationer( 1.5s );
+  @include Timing( ease-in-out );
+  @include iteration-mode( 1 );
+  @include directions( forwards );
+  @include delayer( 18.5s );
+  @include fillermode( both );
+  @include transitioner( all 0.1s ease-in-out);
+
+
+}
+@include keyframes( web-design-btn-ft  ) {
+
+  50%{  @include transforming-things ( scaleX(1.1)); }
+  
+  100%{  @include transforming-things ( scaleX(1)); }
+
+}
+
+    
+#g4408-1:hover{
+
+    color:#c90;
+}
+
+
+
+
+/*:hover{ @include transforming-things ( scale(0.9) );}*/
+
+
