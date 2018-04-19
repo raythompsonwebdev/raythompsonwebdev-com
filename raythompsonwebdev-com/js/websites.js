@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
           }
           $('#list').click(function(){
               $.cookie('view', 'list');
-              get_list()
+              get_list();
           });
           $('#grid').click(function(){
               $.cookie('view', 'grid');
@@ -62,7 +62,7 @@ jQuery(document).ready(function($){
               $('.content .prod-cnt').each(function(){
                   if(($(this).hasClass(CategoryID)) == false){
                      $(this).css({'display':'none'});
-                  };
+                  }
               });
               $('.'+CategoryID).fadeIn();
           });

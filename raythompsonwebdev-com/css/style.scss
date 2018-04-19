@@ -314,6 +314,7 @@ desktop 1920px*/
         
         h1 {
             font-size: 1.5em;
+            font-family: ($FontStyleHeader);
             padding: 0;
             color: $color1;
             width: 100%;
@@ -325,6 +326,7 @@ desktop 1920px*/
         }
         h2 {
             font-size: 1.3em;
+            font-family: ($FontStyleHeader);
             margin: 0;
             padding: 0;
             color: $color1;
@@ -335,6 +337,7 @@ desktop 1920px*/
         }
         h3 {
             font-size: 1.1em;
+            font-family: ($FontStyleHeader);
             margin: 0;
             padding: 0;
             color: $color1;
@@ -354,7 +357,7 @@ desktop 1920px*/
             clear: both;
             font-family: ($FontStyle);
             margin-left: 0.5em;
-            form.search-form {
+            form#searchform {
                 text-align: left;
                 max-width: 100%;
                 margin: 0;
@@ -366,7 +369,7 @@ desktop 1920px*/
                 font-size: 0.9em;
 
                 label {
-                    width: 65%;
+                    width: 20%;
                     height: 100%;
                     
                     display: inline-block;
@@ -382,7 +385,7 @@ desktop 1920px*/
                     }
                 }
                 input {
-                    width: 72%;
+                    width: 50%;
                     margin: 0;
                     padding: 0;
                     display: inline-block;
@@ -394,7 +397,7 @@ desktop 1920px*/
                     margin: 0;
                     list-style: none;
                     background-color: $color3;
-                    width: 34%;
+                    width: 25%;
                     color: $color1;
                     @include originTran( 50% 50%);
                     @include Transition(color 0.2s linear 0s, color 0.2s linear 0s);
@@ -441,7 +444,8 @@ desktop 1920px*/
         }
 
         /*maintext */
-        article.main-text {
+        article.main-text,
+        div.main-text {
             width: 100%;
             height: auto;
             padding: 0.5em;
@@ -456,6 +460,7 @@ desktop 1920px*/
                 margin: 0 0 1em 0;
                 padding:0.5em;
                 background-color:$color4;
+                font-family: ($FontStyle);
             }
 
                         
@@ -463,6 +468,7 @@ desktop 1920px*/
                 margin: 2em 0;
                 width: 100%;
                 color:$color1;
+                font-family: ($FontStyle);
                 li {
                     font-family: "FontAwesome", ($FontStyle);
                     line-height: 40px;
@@ -603,7 +609,7 @@ desktop 1920px*/
                             list-style: none;
                             width: 25%;
                             background-color: $color3;
-                            @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                            @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
                             padding: 0;
                             border: none;
                             color: $color1;
@@ -2308,7 +2314,7 @@ desktop 1920px*/
                 p {
                     width: 99%;
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 0.85em;
                     font-weight: normal;
                     margin: 0;
                     letter-spacing: 0.01em;
@@ -3421,11 +3427,11 @@ desktop 1440px*/
         /*Search Box*/
         .social-1 {
             width: 30%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
+                    width: 20%;
                     font-size: 0.9em;
                     span.screen-reader-text{
                         display: inline-block;
@@ -3439,7 +3445,7 @@ desktop 1440px*/
                 }
                 input[type=submit] {
 
-                    width: 29%;
+                    width: 25%;
 
                     font-size: 0.8em;
     
@@ -3473,7 +3479,8 @@ desktop 1440px*/
         }
 
         /*maintext */
-        article.main-text {
+        article.main-text,
+        div.main-text {
             padding: 0.5em;
 
             p {
@@ -5107,7 +5114,8 @@ desktop 1280px*/
             width: 80%;
         }
 
-        article.main-text {
+        article.main-text,
+        div.main-text {
             padding: 0.5em;
 
             p {
@@ -5159,12 +5167,12 @@ desktop 1280px*/
         /*Search Box*/
         .social-1 {
             width: 35%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
-                    font-size: 0.9em;
+                    width: 20%;
+                    font-size: 0.85em;
                     span.screen-reader-text{
                         display: inline-block;
 
@@ -5177,7 +5185,7 @@ desktop 1280px*/
                 }
                 input[type=submit] {
 
-                    width: 29%;
+                    width: 25%;
 
                     font-size: 0.8em;
     
@@ -6732,7 +6740,8 @@ desktop 1024px*/
         h3 {
             font-size: 1em;
         }
-        article.main-text {
+        article.main-text,
+        div.main-text {
             padding: 0.5em;
 
             p {
@@ -6859,11 +6868,10 @@ desktop 1024px*/
         /*Search Box*/
         .social-1 {
             width: 35%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
                     font-size: 0.8em;
                     span.screen-reader-text{
                         display: inline-block;
@@ -6876,8 +6884,6 @@ desktop 1024px*/
 
                 }
                 input[type=submit] {
-
-                    width: 29%;
 
                     font-size: 0.8em;
     
@@ -8256,7 +8262,8 @@ desktop 980px*/
         blockquote {
             font-size: 0.85em;
         }
-        article.main-text {
+        article.main-text,
+        div.main-text {
             padding: 0.5em;
 
             p {
@@ -8377,11 +8384,11 @@ desktop 980px*/
         /*Search Box*/
         .social-1 {
             width: 40%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
+
                     font-size: 0.75em;
                     span.screen-reader-text{
                         display: inline-block;
@@ -8394,8 +8401,6 @@ desktop 980px*/
 
                 }
                 input[type=submit] {
-
-                    width: 29%;
 
                     font-size: 0.8em;
     
@@ -9719,7 +9724,8 @@ tablet 800px */
         h3 {
             font-size: 1.3em;
         }
-        article.main-text {
+        article.main-text,
+        div.main-text {
             padding: 0.5em;
 
             p {
@@ -9758,11 +9764,11 @@ tablet 800px */
         /*Search Box*/
         .social-1 {
             width: 40%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
+
                     font-size: 0.75em;
                     span.screen-reader-text{
                         display: inline-block;
@@ -11255,7 +11261,8 @@ tablet 768px */
             font-size: 1.15em;
         }
         
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -11380,11 +11387,10 @@ tablet 768px */
         /*Search Box*/
         .social-1 {
             width: 45%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
                     font-size: 0.75em;
                     span.screen-reader-text{
                         display: inline-block;
@@ -11397,8 +11403,6 @@ tablet 768px */
 
                 }
                 input[type=submit] {
-
-                    width: 29%;
 
                     font-size: 0.8em;
     
@@ -12740,7 +12744,8 @@ tablet 667px */
             width: 96%;
         }
 
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -12785,11 +12790,11 @@ tablet 667px */
             width: 50%;
             float:none;
             display:inline-block;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
-                    width: 65%;
+
                     font-size: 0.7em;
                     span.screen-reader-text{
                         display: inline-block;
@@ -12799,7 +12804,7 @@ tablet 667px */
                 input {
 
                     font-size: 0.7em;
-                    width: 67%;
+
                 }
                 input[type=submit] {
 
@@ -14278,7 +14283,8 @@ tablet 600px */
             }
         }
         
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -14296,16 +14302,13 @@ tablet 600px */
         /*Search Box*/
         .social-1 {
             width: 60%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
 
                     font-size: 0.8em;
-                    span.screen-reader-text{
-      
-                        width: 30%;
-                    }
+
                 }
                 input {
 
@@ -14314,7 +14317,6 @@ tablet 600px */
                 }
                 input[type=submit] {
 
-                    width: 29%;
 
                     font-size: 0.8em;
     
@@ -15667,7 +15669,8 @@ tablet 536px */
             }
         }
         
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -15685,15 +15688,13 @@ tablet 536px */
         /*Search Box*/
         .social-1 {
             width: 60%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
 
                     font-size: 0.8em;
-                    span.screen-reader-text{
-                        width: 30%;
-                    }
+
                 }
                 input {
 
@@ -17002,7 +17003,8 @@ mobile 480px */
             font-size: 1em;
             height: auto;
         }
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -17125,7 +17127,7 @@ mobile 480px */
         /*Search Box*/
         .social-1 {
             width: 60%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
@@ -17133,7 +17135,7 @@ mobile 480px */
                     font-size: 0.75em;
                     span.screen-reader-text{
       
-                        width: 30%;
+
                     }
                 }
                 input {
@@ -18509,7 +18511,8 @@ mobile 414px */
         h3 {
             font-size: 1.15em;
         }
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -18619,7 +18622,7 @@ mobile 414px */
         /*Search Box*/
         .social-1 {
             width: 100%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
@@ -18627,7 +18630,6 @@ mobile 414px */
                     font-size: 0.75em;
                     span.screen-reader-text{
       
-                        width: 30%;
                     }
                 }
                 input {
@@ -19922,7 +19924,8 @@ mobile 360px */
         h3 {
             font-size: 0.9em;
         }
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -20035,15 +20038,14 @@ mobile 360px */
         /*Search Box*/
         .social-1 {
             width: 100%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
 
                     font-size: 0.75em;
                     span.screen-reader-text{
-      
-                        width: 30%;
+
                     }
                 }
                 input {
@@ -21320,7 +21322,8 @@ mobile 320px */
         h3 {
             font-size: 0.95em;
         }
-        article.main-text{
+        article.main-text,
+        div.main-text{
             padding:0.5em;
 
             p {
@@ -21429,7 +21432,7 @@ mobile 320px */
         /*Search Box*/
         .social-1 {
             width: 100%;
-            form.search-form {
+            form#searchform{
                 text-align: left;
 
                 label {
@@ -21437,7 +21440,6 @@ mobile 320px */
                     font-size: 0.75em;
                     span.screen-reader-text{
       
-                        width: 30%;
                     }
                 }
                 input {
@@ -21447,7 +21449,6 @@ mobile 320px */
                 }
                 input[type=submit] {
 
-                    width: 25%;
 
                     font-size: 0.75em;
     

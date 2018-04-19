@@ -50,7 +50,7 @@ add_filter( 'wp_title', 'raythompsonwebdev_filter_wp_title', 10, 2 );
 /*
  * theme set up
  */
-if (! function_exists('my_theme_setup')) :
+if (! function_exists('raythompsonwebdev_theme_setup')) :
     function my_theme_setup()
     {
 
@@ -170,16 +170,7 @@ if (! function_exists('my_theme_setup')) :
         );
         add_theme_support('custom-header', $args);
 
-        /*
-         * register menus
-         */
-        register_nav_menus(
-            array(
-            'main' => esc_html__('Main nav', 'raythompsonwebdev-com'),
-            'Secondary' => esc_html__('Secondary', 'raythompsonwebdev-com'),
-            'mobile' => esc_html__('mobile', 'raythompsonwebdev-com') )
-        );
-
+        
         $defaults = array(
         'default-image'          => '',
         'random-default'         => false,
@@ -204,14 +195,28 @@ if (! function_exists('my_theme_setup')) :
         add_theme_support('customize-selective-refresh-widgets');
     }
 endif;
-add_action('after_setup_theme', 'my_theme_setup');
+add_action('after_setup_theme', 'raythompsonwebdev_theme_setup');
 
 
-function raythompsonwebdev_com_load_theme_textdomain() {
-
-    load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
+    function raythompsonwebdev_com_load_theme_textdomain()
+    {
+        load_theme_textdomain('raythompsonwebdev-com', get_template_directory() . '/languages');
     }
-    add_action( 'after_setup_theme', 'raythompsonwebdev_com_load_theme_textdomain' );
+    add_action('after_setup_theme', 'raythompsonwebdev_com_load_theme_textdomain');
+
+    /*
+    * register menus
+    */
+    function raythompsonwebdev_menu_function(){
+
+        register_nav_menus(
+            array(
+            'main' => esc_html__('Main nav', 'raythompsonwebdev-com'),
+            'Secondary' => esc_html__('Secondary', 'raythompsonwebdev-com'),
+            'mobile' => esc_html__('mobile', 'raythompsonwebdev-com') )
+        );
+    }
+    add_action( 'after_setup_theme', 'raythompsonwebdev_menu_function' );
 
 
 
