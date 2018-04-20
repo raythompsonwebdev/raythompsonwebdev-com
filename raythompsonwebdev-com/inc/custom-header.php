@@ -41,7 +41,7 @@ if (! function_exists('raythompsonwebdev_com_header_style')) :
     /**
      * Styles the header image and text displayed on the blog
      *
-     * @see popperscores_custom_header_setup().
+     * @see raythompsonwebdev_com_custom_header_setup().
      */
     function raythompsonwebdev_com_header_style()
     {

@@ -271,7 +271,7 @@ get_header(); ?>
                                 <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/lynda_logo1k-d_72x72.png" alt="Lynda.com"
                                 alt="<?php esc_attr_e(
                                     'Lynda.com',
-                                    'mannering-music'
+                                    'raythompsonwebdev-com'
                                 );?>"
                                 >
 
@@ -284,25 +284,25 @@ get_header(); ?>
                                     <li>
                               
                                     <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-front-end-web-developer"
-                                    >Become a Front-End Web Developer</a>', 'mannering-music'); ?>
+                                    >Become a Front-End Web Developer</a>', 'raythompsonwebdev-com'); ?>
 
                                     </li>
                                     <li>
-                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a>', 'mannering-music'); ?>
+                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer">Become a Junior WordPress Developer</a>', 'raythompsonwebdev-com'); ?>
                                     </li>
 
                                     <li>
-                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals </a>', 'mannering-music'); ?>
+                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/foundations-of-programming-fundamentals">Programming Fundementals </a>', 'raythompsonwebdev-com'); ?>
                                     </li>
                                     <li>
                                     <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/css-fundamentals">CSS Fundementals</a>', 
-                                    'mannering-music'); ?>
+                                    'raythompsonwebdev-com'); ?>
                                     </li>
                                     <li>
-                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/javascript-essential-training">Javascript Essentials</a>', 'mannering-music' ); ?>
+                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/javascript-essential-training">Javascript Essentials</a>', 'raythompsonwebdev-com' ); ?>
                                     </li>
                                     <li>
-                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a>', 'mannering-music'); ?>
+                                    <?php printf('<a class="lyndalink" href="http://www.linkedin.com/learning/jquery-essential-training-2">jQuery Essential Training</a>', 'raythompsonwebdev-com'); ?>
                                     </li>
 
                                     <br/>
@@ -327,7 +327,7 @@ get_header(); ?>
                                 <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Mobile-web-applications-Certificate-Foundation-small.jpg" 
                                 alt="<?php esc_attr_e(
                                     'Mobile-web-applications-Certificate-Foundation',
-                                    'mannering-music'
+                                    'raythompsonwebdev-com'
                                 );?>"
                                 
                                 >
@@ -365,7 +365,7 @@ get_header(); ?>
                                 <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Digital-Marketing-Certificate-Foundation-small.jpg" 
                                 alt="<?php esc_attr_e(
                                     'Digital-Marketing-Certificate-Foundation',
-                                    'mannering-music'
+                                    'raythompsonwebdev-com'
                                 );?>"
 
                             </a>
@@ -402,7 +402,7 @@ get_header(); ?>
                                 <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Content-Marketing-Certificate-Foundation-Small.jpg" 
                                 alt="<?php esc_attr_e(
                                     'Digital-Marketing-Certificate-Foundation',
-                                    'mannering-music'
+                                    'raythompsonwebdev-com'
                                 );?>"
 
                             </a>
@@ -439,7 +439,7 @@ get_header(); ?>
     <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Digital-Futures-2017-Certificate-of-Participation-small.jpg" 
     alt="<?php esc_attr_e(
         'Digital-Futures-2017-Certificate-of-Participation',
-        'mannering-music'
+        'raythompsonwebdev-com'
     );?>">
     </a>
 <figcaption>

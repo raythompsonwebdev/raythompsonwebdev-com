@@ -29,26 +29,26 @@
 
 <div class="socialpics">
 
-<a class="social-icon linkedin-icon" href="<?php echo esc_url('http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display'); ?>" target="new" title="<?php esc_attr_e('Follow me on LinkedIn', 'mannering-music'); ?>">
+<a class="social-icon linkedin-icon" href="<?php echo esc_url('http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display'); ?>" target="new" title="<?php esc_attr_e('Follow me on LinkedIn', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-linkedin"></i>
   </span>
 </a>
 
-<a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="<?php esc_attr_e('Follow me on Twitter', 'mannering-music'); ?>">
+<a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="<?php esc_attr_e('Follow me on Twitter', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-twitter"></i>
   </span>
 </a>
 
-<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="<?php esc_attr_e('Follow me on Facebook', 'mannering-music'); ?>">
+<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="<?php esc_attr_e('Follow me on Facebook', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-facebook"></i>
   </span>
 </a>
 
 
-<a class="social-icon google-icon" href="http://github.com/raythompsonwebdev/" target="new" title="<?php esc_attr_e('Follow me on GitHub', 'mannering-music'); ?>">
+<a class="social-icon google-icon" href="http://github.com/raythompsonwebdev/" target="new" title="<?php esc_attr_e('Follow me on GitHub', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-github"></i>
   </span>
