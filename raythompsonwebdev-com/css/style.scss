@@ -1077,7 +1077,7 @@ desktop 1920px*/
                         display: block;
                         text-align: center;
                         @include originTran( 50% 50%);
-                        @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                        @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
                         &:hover {
                             color: $color1;
                             background-color: $color2;
@@ -1134,7 +1134,7 @@ desktop 1920px*/
                                     color: $color1;
                                     background-color: $color4;
                                     @include originTran( 50% 50%);
-                                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                                    @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
                                 }
                             }
 
@@ -1149,7 +1149,7 @@ desktop 1920px*/
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 20%;
                 clear: both;
                 margin:1.5em auto;
@@ -1706,7 +1706,7 @@ desktop 1920px*/
             }
             .navigation {
                 height: auto;
-                width: 96%;
+                width: 100%;
                 margin: 1% auto;
                 background-color: $color4;
                 color: $color9;
@@ -1750,77 +1750,84 @@ desktop 1920px*/
             ol.commentlist {
                 padding-left: 0;
                 margin: 0;
-                footer.comment-meta {
-                    letter-spacing: 0.1em;
-                    padding: 0.5em;
-                    display: block;
-                    background-color: $color7;
-                    color: $color4;
-                    height: 50px;
-                    text-indent: 0;
-                    width: 96%;
-                    margin: 0 auto;
-                    .edit-link {
-                        display: inline;
-                        padding: 10px;
-                    }
-                    .comment-author {
-                        display: inline-block;
-                        height: auto;
-                        padding: 0;
-                        width: 25%;
-                        font-size: 0.9em;
-                        img {
-                            width: 8%;
-                            height: auto;
-                            margin: 0;
-                            display: inline-block;
-                            float: left;
-                        }
-                        b.fn {
-                            display: inline-block;
-                            width: auto;
-                            padding: 0 2%;
-                            text-align: center;
-                            height: 100%;
-                            font-size: 0.9em;
-                        }
-                        span.says {
-                            display: inline-block;
-                            width: auto;
-                            height: 100%;
-                        }
-                    }
-                    .comment-metadata {
-                        float: right;
-                        line-height: 30px;
-                        height: auto;
-                        padding: 0;
-                        width: auto;
-                        display: inline-block;
-                        a {
-                            color: $color4;
-                        }
-                    }
-                }
-                .comment-content {
-                    width: 96%;
-                    margin: 1% auto;
-                    font-size: 1em;
-                    min-height: 100px;
-                    p {
-                        width: 94%;
-                        font-size: 0.95em;
-                        line-height: 1.5em;
-                        margin: 0 auto;
-                    }
-                }
-                li ul {
-                    width: 100%;
-                    margin-left: 0;
-                }
+                                
+                
                 li {
                     padding: 0;
+                    .comment-body {
+                        letter-spacing: 0.1em;
+                        padding: 0.5em;
+                        display: block;
+                        background-color: $color7;
+                        height: auto;
+                        text-indent: 0;
+                        width: 96%;
+                        margin: 0 auto;
+                        .edit-link {
+                            display: inline;
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            display: inline-block;
+                            height: auto;
+                            padding: 0;
+                            width: 30%;
+                            font-size: 0.9em;
+                            background-color: $color7;
+                            color: $color7;
+                            padding: 0.5em;
+                            img {
+                                width: 8%;
+                                height: auto;
+                                margin-right: 0.5em;
+                                display: inline-block;
+                                float: left;
+                            }
+                            cite.fn {
+                                display: block;
+                                width: auto;
+                                padding: 0 2%;
+                                text-align: left;
+                                height: 100%;
+                                font-size: 0.9em;
+                                color: $color4;
+                            }
+                            span.says {
+                                display: block;
+                                width: auto;
+                                height: 100%;
+                                color: $color4;
+                                font-size: 0.9em;
+                            }
+                        }
+                        .comment-meta {
+                            float: right;
+                            line-height: 30px;
+                            height: auto;
+                            padding: 0 0.5em;
+                            width: auto;
+                            display: inline-block;
+                            background-color: $color7;
+                            font-size:0.9em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            width: 99%;
+                            font-size: 0.9em;
+                            line-height: 1.5em;
+                            margin: 0 auto;
+                            min-height: 100px;
+                            padding:0.5em;
+                            background-color: $color4;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
                 }
                 .reply {
                     width: 96%;
@@ -2011,6 +2018,16 @@ desktop 1920px*/
                     }
                 }
                 
+            }
+
+            p.nocomments{
+
+                display:block;
+                margin:0 auto;
+                width:96%;
+                line-height:40px;
+                margin-bottom:1em;
+
             }
         }
         
@@ -3820,7 +3837,7 @@ desktop 1440px*/
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 25%;
                 a{
                     img{
@@ -4195,61 +4212,65 @@ desktop 1440px*/
             }
             ol.commentlist {
                 padding-left: 0;
-
-                footer.comment-meta {
-                    height: 60px;
-                    .edit-link {
-
-                        padding: 10px;
-                    }
-                    .comment-author {
-
-                        width: 27%;
-                        img {
-                            width: 13%;
-
-                        }
-                        b.fn {
-                            padding: 0 2%;
-                            font-size: 0.9em;
-                        }
-                        span.says {
-                            height: 100%;
-                        }
-                    }
-                    .comment-metadata {
-                        line-height: 30px;
-                        height: 30px;
-                        a {
-                            color: $color4;
-                        }
-                    }
-                }
-                .comment-content {
-                    min-height: 100px;
-                    p {
-                        width: 94%;
-                    }
-                }
-                li ul {
-                    width: 100%;
-                    margin-left: 0;
-                }
+                margin: 0;
+                                
+                
                 li {
                     padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            display: inline;
+                            padding: 10px;
+                        }
+                        .comment-author {
+
+                            width: 32%;
+                            font-size: 0.9em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                padding: 0 2%;
+                                font-size: 0.9em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
+                        }
+                        .comment-meta {
+                            padding: 0 0.5em;
+                            font-size:0.9em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.9em;
+                            padding:0.5em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
+                    }
                 }
                 .reply {
                     width: 96%;
-                    min-height: 35px;
-
+                   
                     a {
+                        height: 35px;
                         width: 15%;
-
+                        font-size: 0.9em;
                         &:hover {
-                            width: 15%;
+                            line-height: 35px;
                         }
                     }
-
+                    
                 }
             }
             #respond {
@@ -4335,9 +4356,11 @@ desktop 1440px*/
                 }
             }
             p.must-log-in {
-                width: 100%;
-                text-indent: 2%;
                 line-height: 30px;
+            }
+            p.nocomments{
+
+                font-size:0.9em;
             }
         }
         /*Comment section end*/
@@ -5506,7 +5529,7 @@ desktop 1280px*/
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 25%;
                 a{
                     img{
@@ -5847,14 +5870,63 @@ desktop 1280px*/
                 font-size: 1.2em;
             }
             ol.commentlist {
-                footer.comment-meta {
-                    .comment-author {
-                        width: 30%;
-                        img {
-                            width: 7%;
+                padding-left: 0;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            width: 40%;
+                            font-size: 0.9em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.9em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.9em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.9em;
+
+                        }
+                        ul.children {
+                            width: 100%;
                         }
                     }
                 }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
+                }
+            }
+            p.nocomments{
+
+                font-size:0.9em;
             }
         }
         
@@ -7092,7 +7164,7 @@ desktop 1024px*/
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 30%;
                 a{
                     img{
@@ -7457,45 +7529,57 @@ desktop 1024px*/
             }
             ol.commentlist {
                 padding-left: 0;
-                margin: 0;
-                footer.comment-meta {
-                    height: 50px;
-                    .edit-link {
-                        padding: 8px;
-                    }
-                    .comment-author {
-                        padding: 0;
-                        width: 30%;
-                        img {
-                            width: 6%;
-                        }
-                        b.fn {
-                            padding: 0 3%;
-                            font-size: 0.9em;
-                        }
-                        span.says {
-                            font-size: 0.9em;
-                        }
-                    }
-                    .comment-metadata {
-                        padding: 0;
-                    }
-                }
+                      
+                
                 li {
                     padding: 0;
-                    ul {
-                        width: 100%;
-                        margin-left: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            width: 50%;
+                            font-size: 0.85em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.85em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.85em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.85em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
                     }
                 }
-                .comment-content {
+                .reply {
                     width: 96%;
-                    margin: 2% auto;
-                    min-height: 100px;
-                    p {
-                        font-size: 0.95em;
-                        line-height: 1.5em;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
                     }
+                    
                 }
             }
             .reply {
@@ -8598,7 +8682,7 @@ desktop 980px*/
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 30%;
                 a{
                     img{
@@ -8947,50 +9031,57 @@ desktop 980px*/
             }
             ol.commentlist {
                 padding-left: 0;
-                margin: 0;
-                footer.comment-meta {
-                    .edit-link {
-                        padding: 7px;
-                    }
-                    .comment-author {
-                        padding: 0;
-                        width: 32%;
-                        img {
-                            width: 8%;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
                         }
-                        b.fn {
-                            padding: 0 3.5%;
-                            font-size: 0.9em;
+                        .comment-author {
+                            width: 50%;
+                            font-size: 0.85em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.85em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
                         }
-                        span.says {
-                            font-size: 0.9em;
+                        .comment-meta {
+                            font-size:0.85em;
+                            a {
+                                color: $color4;
+                            }
                         }
-                    }
-                }
-                .comment-content {
-                    min-height: 100px;
-                    p {
-                        line-height: 1.5em;
-                        font-size: 0.9em;
+                        p {
+                            font-size: 0.85em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
                     }
                 }
                 .reply {
+                    width: 96%;
+                   
                     a {
-                        width: 20%;
-                        font-size: 1em;
+                        font-size: 0.9em;
                         &:hover {
-                            font-weight: bold;
-                            width: 20%;
+                            line-height: 35px;
                         }
                     }
                     
-                }
-                li {
-                    padding: 0;
-                    ul {
-                        width: 100%;
-                        margin-left: 0;
-                    }
                 }
             }
             #comments {
@@ -10102,7 +10193,7 @@ tablet 800px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 30%;
                 a{
                     img{
@@ -10454,45 +10545,58 @@ tablet 800px */
             }
             ol.commentlist {
                 padding-left: 0;
-                margin: 0;
-                footer.comment-meta {
-                    height: 50px;
-                    .comment-metadata {
-                        a {
-                            font-size: 0.9em;
-                        }
-                    }
-                    .edit-link {
-                        padding: 6px;
-                    }
-                    .comment-author {
-                        width: 40%;
-                        img {
-                            width: 11%;
-                        }
-                    }
-                }
+                      
+                
                 li {
                     padding: 0;
-                    ul {
-                        width: 100%;
-                        margin-left: 0;
-                    }
-                }
-                .comment-content {
-                    margin: 2% auto;
-                    font-size: 0.9em;
-                    width: 100%;
-                }
-                .reply {
-                    a {
-                        width: 25%;
-                        &:hover {
+                    .comment-body {
+                        width: 96%;
 
-                            font-weight: bold;
-                            width: 25%;
+                        .edit-link {
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            width: 50%;
+                            font-size: 0.85em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.85em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                                font-size:0.85em;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.85em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.85em;
+
+                        }
+                        ul.children {
+                            width: 100%;
                         }
                     }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
             #comments {
@@ -11620,7 +11724,7 @@ tablet 768px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 35%;
                 a{
                     img{
@@ -11969,52 +12073,63 @@ tablet 768px */
                     font-size: 1.2em;
                 }
             }
+            
             ol.commentlist {
                 padding-left: 0;
-                margin: 0;
-                footer.comment-meta {
-                    font-size: 0.95em;
-                    height: 45px;
-                    .edit-link {
-                        padding: 6px;
-                    }
-                    .comment-author {
-                        width: 42%;
-                        img {
-                            width: 9%;
-                        }
-
-                    }
-                    .comment-metadata {
-                        padding: 0;
-                        a {
-                            font-size: 0.8em;
-                        }
-                    }
-                    .comment-content {
-                        width: 95%;
-                        margin: 2% auto;
-                        font-size: 0.85em;
-                    }
-                    .reply {
-                        a {
-                            width: 25%;
-
-
-                            &:hover {
-                                width: 25%;
-                            }
-                        }
-                    }
-                }
-                li ul {
-                    width: 100%;
-                    margin-left: 0;
-                }
+                      
+                
                 li {
                     padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            width: 50%;
+                            font-size: 0.85em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.85em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.85em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.85em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
+                    }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
+
             #comments {
                 height: 35px;
                 min-height: 35px;
@@ -13101,7 +13216,7 @@ tablet 667px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 35%;
                 a{
                     img{
@@ -13464,59 +13579,64 @@ tablet 667px */
                     }
                 }
             }
+            
             ol.commentlist {
                 padding-left: 0;
-                margin: 0;
-                footer.comment-meta {
-                    font-size: 0.95em;
-                    width: 100%;
-                    .edit-link {
-                        padding: 5px;
-                    }
-                    .comment-author {
-                        width: 47%;
-                        img {
-                            width: 11%;
-                        }
-                        b.fn {
-                            padding: 0 3%;
-                            font-size: 0.8em;
-                        }
-                        span.says {
-                            font-size: 0.8em;
-                        }
-                    }
-                    .comment-metadata {
-                        padding: 0;
-                        a {
-                            font-size: 0.8em;
-                        }
-                    }
-                }
-                .comment-content {
-                    margin: 2% auto;
-                    p {
-                        font-size: 0.95em;
-                    }
-                }
-                li ul {
-                    width: 100%;
-                    margin-left: 0;
-                }
+                      
+                
                 li {
                     padding: 0;
-                }
-                .reply {
-                    a {
-                        width: 30%;
-                        &:hover {
+                    .comment-body {
+                        width: 96%;
 
-                            width: 30%;
+                        .edit-link {
+                            padding: 10px;
                         }
+                        .comment-author {
+                            width: 50%;
+                            font-size: 0.8em;
 
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.8em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                                font-size:0.8em;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.8em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.8em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
                     }
                 }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
+                }
             }
+
             #comments {
                 height: 35px;
                 min-height: 35px;
@@ -14504,7 +14624,7 @@ tablet 600px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 40%;
                 a{
                     img{
@@ -14852,43 +14972,58 @@ tablet 600px */
             }
             ol.commentlist {
                 padding-left: 0;
-                margin: 0;
-                .comment-content {
-                    width: 100%;
-                    margin: 2% auto;
-                    p {
-                        font-size: 0.95em;
-                    }
-                }
-                footer.comment-meta {
-                    font-size: 1em;
-                    .edit-link {
-                        padding: 3px;
-                    }
-                    .comment-author {
-                        width: 47%;
-                        img {
-                            width: 12%;
-                        }
-
-                        b.fn {
-                            padding: 0 3%;
-                            font-size: 0.8em;
-                        }
-                        span.says {
-                            font-size: 0.8em;
-                        }
-                    }
-                    .comment-metadata {
-                        padding: 0;
-                    }
-                }
-                li ul {
-                    width: 100%;
-                    margin-left: 0;
-                }
+                      
+                
                 li {
                     padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            width: 55%;
+                            font-size: 0.8em;
+
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.8em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                                font-size:0.8em;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.7em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.8em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
+                    }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
             #comments,
@@ -15889,7 +16024,7 @@ tablet 536px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 45%;
                 a{
                     img{
@@ -16226,17 +16361,58 @@ tablet 536px */
         
         section.contact-wide {
             ol.commentlist {
-                footer.comment-meta {
-                    height: 40px;
+                padding-left: 0;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
 
-                    .comment-author {
-                        width: 47%;
-
-                        img {
-                            width: 12%;
+                        .edit-link {
+                            padding: 10px;
                         }
+                        .comment-author {
+                            width: 55%;
+                            font-size: 0.8em;
 
+                            img {
+                                width: 8%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.8em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.7em;
+                            a {
+                                color: $color4;
+                            }
+                        }
+                        p {
+                            font-size: 0.8em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
                     }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -17351,7 +17527,7 @@ mobile 480px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 55%;
                 a{
                     img{
@@ -17703,41 +17879,59 @@ mobile 480px */
                 font-size: 0.8em;
             }
             ol.commentlist {
-                footer.comment-meta {
-                    height: 37px;
-                    font-size: 0.9em;
-                    .comment-author {
-                        width: 50%;
-                        img {
-                            width: 12%;
+                padding-left: 0;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
                         }
-                        b.fn {
-                            padding: 0 3%;
-                            font-size: 0.85em;
+                        .comment-author {
+                            width: 55%;
+                            font-size: 0.75em;
+
+                            img {
+                                width: 10%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.75em;
+
+                            }
+                            span.says {
+                                font-size: 0.75em;
+                            }
                         }
-                        span.says {
-                            font-size: 0.85em;
+                        .comment-meta {
+                            font-size:0.6em;
+                            padding:0;
+                            a {
+                                color: $color4;
+                            }
                         }
-                    }
-                    .comment-metadata {
-                        font-size: 0.9em;
-                        line-height: 20px;
-                        height: auto;
+                        p {
+                            font-size: 0.7em;
+
+                        }
+                        ul.children {
+                            width: 100%;
+                        }
                     }
                 }
-                .reply{
+                .reply {
+                    width: 96%;
+                   
                     a {
-                        width: 35%;
+                        font-size: 0.9em;
                         &:hover {
-                            width: 35%;
+                            line-height: 35px;
                         }
                     }
-
-                } 
-                .comment-content {
-                    p {
-                        font-size: 0.95em;
-                    }
+                    
                 }
             }
             #respond {
@@ -18806,7 +19000,7 @@ mobile 414px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 60%;
                 a{
                     img{
@@ -19152,27 +19346,60 @@ mobile 414px */
                 font-size: 0.75em;
             }
             ol.commentlist {
-                footer.comment-meta {
-                    height: 37px;
-                    .comment-author {
-                        width: 50%;
-                        img {
-                            width: 13%;
+                padding-left: 0;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
+                        padding: 0.25em;
+
+                        .edit-link {
+                            padding: 10px;
                         }
-                        b.fn {
-                            font-size: 0.75em;
-                            padding: 0 2%;
+                        .comment-author {
+                            width: 55%;
+                            font-size: 0.7em;
+
+                            img {
+                                width: 10%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.7em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
                         }
-                        span.says {
-                            font-size: 0.75em;
+                        .comment-meta {
+                            font-size:0.5em;
+                            line-height: 20px;
+                            a {
+                                color: $color4;
+                            }
                         }
-                    }
-                    .comment-metadata {
-                        font-size: 0.9em;
                         p {
-                            font-size: 0.75em;
+                            font-size: 0.7em;
+
+                        }
+                        ul.children {
+                            width: 100%;
                         }
                     }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
             #respond {
@@ -20239,7 +20466,7 @@ mobile 360px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 60%;
                 a{
                     img{
@@ -20580,29 +20807,58 @@ mobile 360px */
                 font-size: 0.75em;
             }
             ol.commentlist {
-                footer.comment-meta {
-                    height: 33px;
-                    .comment-author {
-                        width: 53%;
-                        img {
-                            width: 13%;
+                padding-left: 0;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
+
+                        .edit-link {
+                            padding: 10px;
                         }
-                        b.fn {
+                        .comment-author {
+                            width: 50%;
                             font-size: 0.7em;
-                            padding: 0 2%;
+
+                            img {
+                                width: 11%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.65em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
                         }
-                        span.says {
-                            font-size: 0.7em;
-                        }
-                    }
-                    .comment-metadata {
-                        a {
-                            font-size: 0.75em;
+                        .comment-meta {
+                            font-size:0.5em;
+                            a {
+                                color: $color4;
+                            }
                         }
                         p {
                             font-size: 0.7em;
+
+                        }
+                        ul.children {
+                            width: 100%;
                         }
                     }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
             #respond {
@@ -21643,7 +21899,7 @@ mobile 320px */
             /*gallery page styles end*/
 
             /*post images*/
-            div.postimg {
+            div.postimg{
                 width: 75%;
                 a{
                     img{
@@ -21987,32 +22243,58 @@ mobile 320px */
                 font-size: 0.75em;
             }
             ol.commentlist {
-                footer.comment-meta {
-                    height: 33px;
-                    .comment-author {
-                        width: 54.5%;
-                        img {
-                            width: 15%;
-                        }
-                        b.fn {
-                            font-size: 0.65em;
-                            padding: 0 2%;
-                        }
-                        span.says {
-                            font-size: 0.65em;
-                        }
-                    }
-                    .comment-metadata {
-                        font-size:1em;
+                padding-left: 0;
+                      
+                
+                li {
+                    padding: 0;
+                    .comment-body {
+                        width: 96%;
 
-
-                        a {
+                        .edit-link {
+                            padding: 10px;
+                        }
+                        .comment-author {
+                            width: 50%;
                             font-size: 0.7em;
+
+                            img {
+                                width: 13%;
+
+                            }
+                            cite.fn {
+                                font-size: 0.55em;
+
+                            }
+                            span.says {
+                                display: inline-block;
+                            }
+                        }
+                        .comment-meta {
+                            font-size:0.5em;
+                            a {
+                                color: $color4;
+                            }
                         }
                         p {
-                            font-size: 0.65em;
+                            font-size: 0.7em;
+
+                        }
+                        ul.children {
+                            width: 100%;
                         }
                     }
+                }
+                .reply {
+                    width: 96%;
+                   
+                    a {
+                        font-size: 0.9em;
+                        &:hover {
+                            line-height: 35px;
+                        }
+                    }
+                    
                 }
             }
             #respond {

@@ -341,8 +341,8 @@ function raythompsonwebdev_scripts_own()
      wp_script_add_data('raythompsonwebdev-com-html5', 'conditional', 'lte IE 8');
  
     // Load the Selectivizr.
-    // wp_enqueue_script('raythompsonwebdev-com-selectivizr', get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js', array('jquery'), '3.7.3');
-    // wp_script_add_data('raythompsonwebdev-com-selectivizr', 'conditional', 'lte IE 8');
+     wp_enqueue_script('raythompsonwebdev-com-selectivizr', get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js', array('jquery'), '3.7.3');
+     wp_script_add_data('raythompsonwebdev-com-selectivizr', 'conditional', 'lte IE 8');
 }
 add_action('wp_enqueue_scripts', 'raythompsonwebdev_scripts_own');
 
@@ -439,7 +439,7 @@ function raythompsonwebdev_mapcontainer()
         </script>
 
 <?php }
-//add_action('wp_footer', 'raythompsonwebdev_mapcontainer');
+add_action('wp_footer', 'raythompsonwebdev_mapcontainer');
 
 /**
  * Google analytics function

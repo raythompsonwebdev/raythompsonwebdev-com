@@ -131,8 +131,8 @@ get_header(); ?>
 
                         <figure class="abobe">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/Large-Photoshop-Certicate-.jpg" class="fancybox" title="Adobe Certificate in Visual Communication">
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/Small-photoshop-Certicate.jpg" alt="Adobe-Photoshop-Visual-Communication-Certificate">
                             </a>
 
 
@@ -173,9 +173,9 @@ get_header(); ?>
 
                         <figure class="cert">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One, Two, Three">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="City and Guilds Level One, Two, Three">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/ITQ-USERS-LEVEL1-SMALL.gif" alt="City and Guilds Level One, Two, Three">
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/ITQ-USERS-LEVEL1-SMALL.gif" alt="City and Guilds Level One, Two, Three">
 
                             </a>
 
@@ -205,9 +205,9 @@ get_header(); ?>
 
                         <figure class="abobe">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/Large-Udemy-Certicate-.jpg" class="fancybox" title="Udemy.com">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/Large-Udemy-Certicate-.jpg" class="fancybox" title="Udemy.com">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Udemy-Small.jpg" alt="Udemy.com">
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/Udemy-Small.jpg" alt="Udemy.com">
 
                             </a>
                             <figcaption>
@@ -235,9 +235,9 @@ get_header(); ?>
 
                         <figure class="cert">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/FreeCodeCamp-large.png" class="fancybox" title="FreeCodeCamp">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/FreeCodeCamp-large.png" class="fancybox" title="FreeCodeCamp">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/FreeCodeCamp-small.png" alt="FreeCodeCamp">
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/FreeCodeCamp-small.png" alt="FreeCodeCamp">
 
                             </a>
                             <figcaption>
@@ -266,9 +266,9 @@ get_header(); ?>
 
                         <figure class="abobe">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/lynda_logo1r-d_72x72.png" class="fancybox" title="Lynda.com">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/lynda_logo1r-d_72x72.png" class="fancybox" title="Lynda.com">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/lynda_logo1k-d_72x72.png" alt="Lynda.com"
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/lynda_logo1k-d_72x72.png" alt="Lynda.com"
                                 alt="<?php esc_attr_e(
                                     'Lynda.com',
                                     'raythompsonwebdev-com'
@@ -322,9 +322,9 @@ get_header(); ?>
 
                         <figure class="cert">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="Mobile-web-applications-Certificate-Foundation">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Mobile-web-applications-Certificate-Foundation-small.jpg" 
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/Mobile-web-applications-Certificate-Foundation-small.jpg" 
                                 alt="<?php esc_attr_e(
                                     'Mobile-web-applications-Certificate-Foundation',
                                     'raythompsonwebdev-com'
@@ -360,9 +360,9 @@ get_header(); ?>
 
                         <figure class="cert">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Digital-Marketing-Certificate-Foundation-small.jpg" 
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/Digital-Marketing-Certificate-Foundation-small.jpg" 
                                 alt="<?php esc_attr_e(
                                     'Digital-Marketing-Certificate-Foundation',
                                     'raythompsonwebdev-com'
@@ -397,9 +397,9 @@ get_header(); ?>
 
                         <figure class="cert">
 
-                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/04/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
+                            <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="Digital-Marketing-Certificate-Foundation">
 
-                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Content-Marketing-Certificate-Foundation-Small.jpg" 
+                                <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/Content-Marketing-Certificate-Foundation-Small.jpg" 
                                 alt="<?php esc_attr_e(
                                     'Digital-Marketing-Certificate-Foundation',
                                     'raythompsonwebdev-com'
@@ -435,8 +435,8 @@ get_header(); ?>
 
                         <figure class="abobe">
 
-<a href="<?php echo home_url();?>/wp-content/uploads/2018/04/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
-    <img src="<?php echo home_url();?>/wp-content/uploads/2018/04/Digital-Futures-2017-Certificate-of-Participation-small.jpg" 
+<a href="<?php echo home_url();?>/wp-content/uploads/2018/03/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="Digital-Futures-2017-Certificate-of-Participation">
+    <img src="<?php echo home_url();?>/wp-content/uploads/2018/03/Digital-Futures-2017-Certificate-of-Participation-small.jpg" 
     alt="<?php esc_attr_e(
         'Digital-Futures-2017-Certificate-of-Participation',
         'raythompsonwebdev-com'
