@@ -22,7 +22,7 @@ get_header(); ?>
 
 <div class="main-text">
 
-<p> <?php _e('Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com'); ?></p>
+<p> <?php esc_html_e('Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com'); ?></p>
 <br/>
 <br/>
 <br/>

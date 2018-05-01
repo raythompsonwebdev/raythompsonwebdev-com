@@ -25,7 +25,7 @@ get_header(); ?>
             
 <article class="entry">
  
-<h2><?php _e('Browse by Month:', 'raythompsonwebdev-com'); ?></h2>
+<h2><?php esc_html_e('Browse by Month:', 'raythompsonwebdev-com'); ?></h2>
     
 <ul><?php // Arguments
         $args = array('type' => 'monthly');
@@ -37,7 +37,7 @@ get_header(); ?>
 
 <article class="entry">
 
-    <h2><?php _e('Browse by Category:', 'raythompsonwebdev-com'); ?></h2>
+    <h2><?php esc_html_e('Browse by Category:', 'raythompsonwebdev-com'); ?></h2>
 
     <ul><?php // Arguments
     $default = array('title_li' => '');
@@ -50,7 +50,7 @@ get_header(); ?>
 
 <article class="entry">
 
-    <h2><?php _e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
+    <h2><?php esc_html_e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
 
     <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
 
@@ -58,7 +58,7 @@ get_header(); ?>
 
 <!--<article class="entry">
 
-<h2><?php _e('Browse by Page', 'raythompsonwebdev-com');?></h2>
+<h2><?php esc_html_e('Browse by Page', 'raythompsonwebdev-com');?></h2>
 <ul><?php wp_list_pages('title_li='); ?></ul>
    
 </article>-->
@@ -75,7 +75,7 @@ get_header(); ?>
 
 <section class="contact-wide">
 
-<h1><?php _e( 'Archive Pages Menu', 'raythompsonwebdev-com' ); ?></h1>
+<h1><?php esc_html_e( 'Archive Pages Menu', 'raythompsonwebdev-com' ); ?></h1>
   
 </section>
 

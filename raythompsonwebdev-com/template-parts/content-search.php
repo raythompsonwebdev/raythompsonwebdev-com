@@ -45,7 +45,18 @@
 </a>
 
 	<div class="entry">
-		<?php the_excerpt(); ?>
+		<?php the_excerpt(sprintf(
+                        wp_kses(
+                            /* translators: %s: Name of current post. Only visible to screen readers */
+                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+                            array(
+                                'span' => array(
+                                    'class' => array(),
+                                ),
+                            )
+                        ),
+                        get_the_title()
+                    )); ?>
 
 
 	</div><!-- .entry-summary -->

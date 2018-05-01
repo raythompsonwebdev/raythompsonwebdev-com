@@ -26,7 +26,7 @@ $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
         <h1><?php the_title(); ?></h1>
 
             <figure class="websiteImage">
-              <a href="<?php echo home_url();?>/wp-content/uploads/2018/03/www-<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute() ?> Website Image">
+              <a href="<?php echo esc_url(home_url());?>/wp-content/uploads/2018/03/www-<?php global $post; $post_slug=$post->post_name; echo $post_slug; ?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute() ?> Website Image">
                 <?php the_post_thumbnail('websites'); ?>
                 </a>
             </figure>
