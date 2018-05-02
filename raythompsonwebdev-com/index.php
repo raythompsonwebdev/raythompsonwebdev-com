@@ -30,7 +30,7 @@ get_header(); ?>
 
 <!--search form -->
 <?php if (is_home() || is_archive()) : ?>
-<span class="social-1"><?php get_search_form(true); ?></span>
+<span class="social-1"><?php get_search_form(); ?></span>
 <?php else : ?>
 <span class="social-1"></span>
 <?php endif; ?>

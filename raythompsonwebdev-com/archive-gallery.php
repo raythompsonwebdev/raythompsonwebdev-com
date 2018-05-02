@@ -33,15 +33,15 @@
   <ul>
     <?php ?>
 
-      <li class="cat-active" category="prod-cnt"><?php _e('All', 'raythompsonwebdev-com'); ?></li>
+      <li class="cat-active" category="prod-cnt"><?php esc_html_e('All', 'raythompsonwebdev-com'); ?></li>
 
-        <li class="" category="web-applications"><?php _e('From Scratch', 'raythompsonwebdev-com'); ?></li>
+        <li class="" category="web-applications"><?php esc_html_e('From Scratch', 'raythompsonwebdev-com'); ?></li>
 
-          <li class="" category="wordpress"><?php _e('Wordpress', 'raythompsonwebdev-com'); ?></li>
+          <li class="" category="wordpress"><?php esc_html_e('Wordpress', 'raythompsonwebdev-com'); ?></li>
 
-        <li class="" category="bootstrap"><?php _e('Bootstrap', 'raythompsonwebdev-com'); ?></li>
+        <li class="" category="bootstrap"><?php esc_html_e('Bootstrap', 'raythompsonwebdev-com'); ?></li>
 
-      <li class="" category="foundation"><?php _e('Foundation', 'raythompsonwebdev-com'); ?></li>
+      <li class="" category="foundation"><?php esc_html_e('Foundation', 'raythompsonwebdev-com'); ?></li>
 
   </ul>
 </nav>

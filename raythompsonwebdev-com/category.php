@@ -91,7 +91,7 @@ get_header(); ?>
                     ) );
 
                     wp_link_pages( array(
-                        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
+                        'before' => '<div class="page-links">' . esc_html_e( 'Pages:', 'raythompsonwebdev-com' ),
                         'after'  => '</div>',
                     ) );
                 ?>

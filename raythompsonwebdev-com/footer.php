@@ -35,20 +35,20 @@
   </span>
 </a>
 
-<a class="social-icon twitter-icon" href="http://twitter.com/RayThompWeb" target="new" title="<?php esc_attr_e('Follow me on Twitter', 'raythompsonwebdev-com'); ?>">
+<a class="social-icon twitter-icon" href="<?php echo esc_url('http://twitter.com/RayThompWeb', 'display'); ?>" target="new" title="<?php esc_attr_e('Follow me on Twitter', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-twitter"></i>
   </span>
 </a>
 
-<a class="social-icon facebook-icon" href="https://www.facebook.com/raythompwebdesigncom-1228332087181328" target="new" title="<?php esc_attr_e('Follow me on Facebook', 'raythompsonwebdev-com'); ?>">
+<a class="social-icon facebook-icon" href="<?php echo esc_url('https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display'); ?>" target="new" title="<?php esc_attr_e('Follow me on Facebook', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-facebook"></i>
   </span>
 </a>
 
 
-<a class="social-icon google-icon" href="http://github.com/raythompsonwebdev/" target="new" title="<?php esc_attr_e('Follow me on GitHub', 'raythompsonwebdev-com'); ?>">
+<a class="social-icon google-icon" href="<?php echo esc_url('http://github.com/raythompsonwebdev/', 'display'); ?>" target="new" title="<?php esc_attr_e('Follow me on GitHub', 'raythompsonwebdev-com'); ?>">
   <span>
     <i class="fa fa-github"></i>
   </span>
@@ -65,7 +65,7 @@ if (has_nav_menu('Secondary') ) {
 }
 ?>
 
-<p id="copyr" > &copy; 2016 - Raymond Thompson - UK :
+<p id="copyr" > <?php echo esc_attr('&copy; 2016 - Raymond Thompson - UK :');?>
         <a href="<?php echo esc_url(__('https://wordpress.org/', 'raythompsonwebdev-com')); ?>"></a>
             <span class="sep"> | </span>
     <?php printf(esc_html__('Theme: %1$s by %2$s.', 'raythompsonwebdev-com'), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>'); ?>

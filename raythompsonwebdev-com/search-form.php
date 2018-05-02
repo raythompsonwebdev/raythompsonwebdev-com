@@ -15,7 +15,7 @@
  */
 ?>
 
-<form role="search" method="get" class="searchform" action="<?php echo esc_url(home_url('/')); ?>">
+<form role="search" method="get" id="searchform" action="<?php echo esc_url(home_url('/')); ?>">
     <div>
             <label>
                     <span class="screen-reader-text">

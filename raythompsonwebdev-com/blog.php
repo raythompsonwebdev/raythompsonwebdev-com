@@ -17,18 +17,18 @@
  */
 get_header(); ?>
 
-<h1><?php esc_html__('Interested in web design and web development', 'raythompsonwebdev-com'); ?></h1>
+<h1><?php esc_html_e('Interested in web design and web development', 'raythompsonwebdev-com'); ?></h1>
 <div class="main-text">
 
 <p>
-<?php esc_html__('Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com'); ?>
+<?php esc_html_e('Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com'); ?>
 </p>
 </div>
 <br/>
 
 <!--search form -->
 <?php if (is_home() || is_archive()) : ?>
-<span class="social-1"><?php get_search_form(true); ?></span>
+<span class="social-1"><?php get_search_form(); ?></span>
 <?php else : ?>
 <span class="social-1"></span>
 <?php endif; ?>
@@ -56,7 +56,7 @@ get_template_part('template-parts/content', get_post_format());
 
 <!--Related Items -->
 <section class="contact-wide">
-<h1><?php esc_html__('Related Items', 'raythompsonwebdev-com'); ?></h1>
+<h1><?php esc_html_e('Related Items', 'raythompsonwebdev-com'); ?></h1>
 </section>
 
 <!--Side bar -->

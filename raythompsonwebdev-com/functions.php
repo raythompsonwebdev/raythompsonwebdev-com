@@ -602,7 +602,7 @@ function raythompsonwebdev_com_post_thumbnail_sizes_attr($attr, $attachment, $si
     }
     return$attr;
 }
-add_filter('wp_get_attachment_image_attributes', 'raythompsonwebdev_post_thumbnail_sizes_attr', 10, 3);
+add_filter('wp_get_attachment_image_attributes', 'raythompsonwebdev_com_post_thumbnail_sizes_attr', 10, 3);
 
 
 /**
@@ -625,7 +625,7 @@ function raythompsonwebdev_com_content_image_sizes_attr($sizes, $size)
 
     return $sizes;
 }
-add_filter('wp_calculate_image_sizes', 'raythompsonwebdev_content_image_sizes_attr', 10, 2);
+add_filter('wp_calculate_image_sizes', 'raythompsonwebdev_com_content_image_sizes_attr', 10, 2);
 
 /**
  * Attachment page script.

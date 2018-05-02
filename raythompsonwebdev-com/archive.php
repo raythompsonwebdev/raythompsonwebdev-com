@@ -13,54 +13,77 @@
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
- get_header(); ?>
+get_header(); ?>
+    
+<h1><?php the_title(); ?> List</h1>
 
-<h1 class="archive-title"><?php
-if (is_category()) {
-    single_cat_title();
-} elseif (is_tag()) {
-    single_tag_title();
-} elseif (is_author()) {
-    the_post();
-    echo 'Author Archives: ' . get_the_author();
-    rewind_posts();
-} elseif (is_day()) {
-    echo 'Daily Archives: ' . get_the_date();
-} elseif (is_month()) {
-    echo 'Monthly Archives: ' . get_the_date('F Y');
-} elseif (is_year()) {
-    echo 'Yearly Archives: ' . get_the_date('Y');
-} else {
-    _e('Browsing the Archive', 'raythompsonwebdev-com');
-}
-?></h1>
+<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
-<?php
-the_archive_description( '<div class="archive-description">', '</div>' );
-?>
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+            
+<article class="entry">
+ 
+<h2><?php esc_html_e('Browse by Month:', 'raythompsonwebdev-com'); ?></h2>
+    
+<ul><?php // Arguments
+        $args = array('type' => 'monthly');
+        // The archives
+        wp_get_archives($args);
+            ?> </ul>
+
+</article>
+
+<article class="entry">
+
+    <h2><?php esc_html_e('Browse by Category:', 'raythompsonwebdev-com'); ?></h2>
+
+    <ul><?php // Arguments
+    $default = array('title_li' => '');
+    // The categories
+    wp_list_categories($default);
+        ?>
+    </ul>
+
+</article>
+
+<article class="entry">
+
+    <h2><?php esc_html_e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
+
+    <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+
+</article>
+
+<article class="entry">
+
+<h2><?php esc_html_e('Browse by Page', 'raythompsonwebdev-com');?></h2>
+<ul><?php wp_list_pages('title_li='); ?></ul>
+   
+</article>
+        
+
+ <?php else: 
+        
+    get_template_part('template-parts/content', 'none');
+
+    ?>
 
 
-<?php
-/* Start the Loop */
+<?php endif; ?>
 
-    /*
-     * Include the Post-Type-specific template for the content.
-     * If you want to override this in a child theme, then include a file
-     * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-     */
-    get_template_part( 'template-parts/content', get_post_type() );
+<?php endwhile;    ?>
 
-
-the_posts_navigation();
-
-?>
+ </article>
 
 <section class="contact-wide">
 
-    <h1><?php esc_html__('Archives', 'raythompsonwebdev-com'); ?></h1>
-
+<h1><?php esc_html_e( 'Archive Pages Menu', 'raythompsonwebdev-com' ); ?></h1>
+  
 </section>
 
-<?php get_sidebar('archive'); ?>
+
+<?php get_sidebar('archive'); ?> 
+
 
 <?php get_footer(); ?>
+
