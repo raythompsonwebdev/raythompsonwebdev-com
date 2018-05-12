@@ -1,14 +1,12 @@
 <?php
 /**
  * *PHP version 5
- * 
- * Template Name: Archives-pages
  *
- * Archives page | core/page-archives.php.
+ * Archive List page | core/archive.php.
  *
- * @category   Archives_Page
+ * @category   Archive_List
  * @package    Raythompsonwebdev-com
- * @subpackage Archives_Page
+ * @subpackage Archive_List
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -17,7 +15,7 @@
  */
 get_header(); ?>
     
-<h1><?php the_title(); ?> List</h1>
+<h1>Archive List</h1>
 
 <?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
 
@@ -52,7 +50,21 @@ get_header(); ?>
 
     <h2><?php esc_html_e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
 
-    <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
+    <ul>
+        <?php
+            // Arguments
+            $args = array(
+                'smallest' => 8,
+                'largest' => 28,
+                'number' => 0,
+                'orderby' => 'name',
+                'order' => 'ASC'
+            );
+            // Pass the arguments
+            wp_tag_cloud($args);
+
+        ?>
+    </ul>
 
 </article>
 
@@ -75,7 +87,7 @@ get_header(); ?>
 
 <section class="contact-wide">
 
-<h1><?php esc_html_e( 'Archive Pages Menu', 'raythompsonwebdev-com' ); ?></h1>
+<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
   
 </section>
 

@@ -67,16 +67,7 @@ if (! function_exists('raythompsonwebdev_theme_setup')) :
                    
         add_editor_style('css/custom-editor-style.css');
 
-        add_theme_support(
-            'html5',
-            array(
-                'search-form',
-                'comment-list',
-                'comment-form',
-                'gallery',
-                'caption'
-            )
-        );
+       
         
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
@@ -207,19 +198,19 @@ add_action('after_setup_theme', 'raythompsonwebdev_theme_setup');
         }
         add_action('wp_enqueue_scripts', 'raythompsonwebdev_add_google_fonts');
 
-    /*
-    * register menus
-    */
-    function raythompsonwebdev_menu_function(){
+/*
+* register menus
+*/
+function raythompsonwebdev_menu_function(){
 
-        register_nav_menus(
-            array(
-            'main' => esc_html__('Main nav', 'raythompsonwebdev-com'),
-            'Secondary' => esc_html__('Secondary', 'raythompsonwebdev-com'),
-            'mobile' => esc_html__('mobile', 'raythompsonwebdev-com') )
-        );
-    }
-    add_action( 'after_setup_theme', 'raythompsonwebdev_menu_function' );
+    register_nav_menus(
+        array(
+        'main' => esc_html__('Main nav', 'raythompsonwebdev-com'),
+        'Secondary' => esc_html__('Secondary', 'raythompsonwebdev-com'),
+        'mobile' => esc_html__('mobile', 'raythompsonwebdev-com') )
+    );
+}
+add_action( 'after_setup_theme', 'raythompsonwebdev_menu_function' );
 
 
 
@@ -273,36 +264,6 @@ function raythompsonwebdev_remove_change_myheaders($headers)
 }
 add_filter('wp_headers', 'raythompsonwebdev_remove_change_myheaders');
 
-/*
- *  remove version from scripts and styles
-
-function raythompsonwebdev_remove_version_scripts_styles($src)
-{
-    if (strpos($src, 'ver=')) {
-        $src = remove_query_arg('ver', $src);
-    }
-    return $src;
-}
-add_filter('style_loader_src', 'raythompsonwebdev_remove_version_scripts_styles', 9999);
-add_filter('script_loader_src', 'raythompsonwebdev_remove_version_scripts_styles', 9999);
-
-*/
-
-/*
- * Defer parsing of JS
-
-function raythompsonwebdev_defer_parsing_of_js($url)
-{
-    if (false === strpos($url, '.js')) {
-        return $url;
-    }
-    if (strpos($url, 'jquery.js')) {
-        return $url;
-    }
-    return "$url' defer ";
-}
-add_filter('clean_url', 'raythompsonwebdev_defer_parsing_of_js', 11, 1);
- */
 
 
 /*

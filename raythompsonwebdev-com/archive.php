@@ -15,75 +15,37 @@
  */
 get_header(); ?>
     
-<h1><?php the_title(); ?> List</h1>
+    <div class="wrap">
 
-<?php if (have_posts()) :  while (have_posts()) : the_post(); ?>
-
-<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
-            
-<article class="entry">
- 
-<h2><?php esc_html_e('Browse by Month:', 'raythompsonwebdev-com'); ?></h2>
-    
-<ul><?php // Arguments
-        $args = array('type' => 'monthly');
-        // The archives
-        wp_get_archives($args);
-            ?> </ul>
-
-</article>
-
-<article class="entry">
-
-    <h2><?php esc_html_e('Browse by Category:', 'raythompsonwebdev-com'); ?></h2>
-
-    <ul><?php // Arguments
-    $default = array('title_li' => '');
-    // The categories
-    wp_list_categories($default);
+<?php if ( have_posts() ) : ?>
+    <header class="page-header">
+        <?php
+            the_archive_title( '<h1 class="page-title">', '</h1>' );
+            the_archive_description( '<div class="taxonomy-description">', '</div>' );
         ?>
-    </ul>
-
-</article>
-
-<article class="entry">
-
-    <h2><?php esc_html_e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
-
-    <ul><?php wp_tag_cloud('smallest=8&largest=28&number=0&orderby=name&order=ASC'); ?></ul>
-
-</article>
-
-<article class="entry">
-
-<h2><?php esc_html_e('Browse by Page', 'raythompsonwebdev-com');?></h2>
-<ul><?php wp_list_pages('title_li='); ?></ul>
-   
-</article>
-        
-
- <?php else: 
-        
-    get_template_part('template-parts/content', 'none');
-
-    ?>
-
-
+    </header><!-- .page-header -->
 <?php endif; ?>
 
-<?php endwhile;    ?>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
- </article>
+    <?php
+    if ( have_posts() ) : ?>
+        <?php
+        /* Start the Loop */
+        get_template_part('template-parts/content', get_post_format());
 
-<section class="contact-wide">
+    else :
 
-<h1><?php esc_html_e( 'Archive Pages Menu', 'raythompsonwebdev-com' ); ?></h1>
-  
-</section>
+        get_template_part( 'template-parts/content', 'none' );
 
+    endif; ?>
 
-<?php get_sidebar('archive'); ?> 
+    </main><!-- #main -->
+</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 
-<?php get_footer(); ?>
+</div><!-- .wrap -->
 
+<?php get_footer();
