@@ -1,4 +1,4 @@
-![https://www.raythompsonwebdev.co.uk](/screenshot.jpg)
+![https://www.raythompsonwebdev.co.uk](/raythompsonwebdev-com/screenshot.jpg)
 
 ## raythompsonwebdev.co.uk 
 
