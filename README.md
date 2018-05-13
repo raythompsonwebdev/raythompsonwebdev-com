@@ -14,7 +14,7 @@ Stable tag: 1.0.0
 
 License: GNU General Public License v2 or later
 
-PLease be aware this is a custom made personal theme. download and use at your own risk.
+## Please be aware that this theme has been completed yet. download and use at your own risk.
 
 ## Description 
 
