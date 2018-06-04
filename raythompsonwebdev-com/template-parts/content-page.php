@@ -9,10 +9,11 @@
 
 ?>
 
- <article class="main-text">
+
 
  <?php	the_content(); ?>
+
 		
-</article><!--end of post group-->
+
 
 

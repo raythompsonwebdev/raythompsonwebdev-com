@@ -13,13 +13,13 @@
 <article class="no-results not-found post group">
 	<header class="byline">
 		<h1 class="page-title">
-			<?php esc_html_e( 'Nothing Found', 'raythompsonwebdev-com' ); ?>
+			<?php _e('Nothing Found', 'raythompsonwebdev-com'); ?>
 		</h1>
 	</header><!-- .page-header -->
 
 	<div class="entry">
 		<?php
-		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+		if ( is_home() && current_user_can('publish_posts' )): ?>
 
 			<p>
 				<?php

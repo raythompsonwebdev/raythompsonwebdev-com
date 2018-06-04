@@ -21,69 +21,65 @@ get_header(); ?>
 
 <article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
             
-<article class="entry">
- 
-<h2><?php esc_html_e('Browse by Month:', 'raythompsonwebdev-com'); ?></h2>
+    <article class="entry">
     
-<ul><?php // Arguments
-        $args = array('type' => 'monthly');
-        // The archives
-        wp_get_archives($args);
-            ?> </ul>
-
-</article>
-
-<article class="entry">
-
-    <h2><?php esc_html_e('Browse by Category:', 'raythompsonwebdev-com'); ?></h2>
-
-    <ul><?php // Arguments
-    $default = array('title_li' => '');
-    // The categories
-    wp_list_categories($default);
-        ?>
-    </ul>
-
-</article>
-
-<article class="entry">
-
-    <h2><?php esc_html_e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
-
-    <ul>
-        <?php
-            // Arguments
-            $args = array(
-                'smallest' => 8,
-                'largest' => 28,
-                'number' => 0,
-                'orderby' => 'name',
-                'order' => 'ASC'
-            );
-            // Pass the arguments
-            wp_tag_cloud($args);
-
-        ?>
-    </ul>
-
-</article>
-
-<!--<article class="entry">
-
-<h2><?php esc_html_e('Browse by Page', 'raythompsonwebdev-com');?></h2>
-<ul><?php wp_list_pages('title_li='); ?></ul>
-   
-</article>-->
+        <h2><?php esc_html_e('Browse by Month:', 'raythompsonwebdev-com'); ?></h2>
         
-<?php endwhile; 
-        else: 
-        
-    get_template_part('template-parts/content', 'none');
-    ?>
+        <ul>    <?php // Arguments
+                $args = array('type' => 'monthly');
+                // The archives
+                wp_get_archives($args);
+                    ?> 
+        </ul>
+
+    </article>
+
+    <article class="entry">
+
+        <h2><?php esc_html_e('Browse by Category:', 'raythompsonwebdev-com'); ?></h2>
+
+        <ul><?php // Arguments
+        $default = array('title_li' => '');
+        // The categories
+        wp_list_categories($default);
+            ?>
+        </ul>
+
+    </article>
+
+    <article class="entry">
+
+        <h2><?php esc_html_e('Browse by Tag:', 'raythompsonwebdev-com'); ?></h2>
+
+        <ul>
+            <?php
+                // Arguments
+                $args = array(
+                    'smallest' => 8,
+                    'largest' => 28,
+                    'number' => 0,
+                    'orderby' => 'name',
+                    'order' => 'ASC'
+                );
+                // Pass the arguments
+                wp_tag_cloud($args);
+
+            ?>
+        </ul>
+
+    </article>
+            
+    <?php endwhile; 
+
+            else: 
+            
+        get_template_part('template-parts/content', 'none');
+        ?>
 
 
-<?php endif; ?>
- </article>
+    <?php endif; ?>
+
+</article>
 
 <section class="contact-wide">
 

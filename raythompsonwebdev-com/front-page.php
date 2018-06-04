@@ -25,13 +25,17 @@
         <div id="svg-image-container">
         
 
-         <!--<figure id="image-6">
-             <img id="image-5" src="<?php echo home_url();?>/wp-content/uploads/2017/12/home-page-image.png" alt="images of different screen sizes">
-            </figure>-->
+         <figure id="image-6">
+             <img id="image-5" src="<?php echo esc_url(home_url('/'));?>/wp-content/themes/raythompsonwebdev-com/raythompsonwebdev-com/images/home-page-image.png" alt="images of different screen sizes">
+            </figure>
 
             <figure id="image-7">
-                <object class="style-svg" type="image/svg+xml" id="image-4" data="<?php echo home_url(); ?>/wp-content/themes/raythompsonwebdev-com/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
-                </object>
+                <object 
+                    class="style-svg" 
+                    type="image/svg+xml" 
+                    id="image-4" 
+                    data="<?php echo esc_url(home_url('/'));?>/wp-content/themes/raythompsonwebdev-com/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
+                    </object>
             </figure>
         
         </div>

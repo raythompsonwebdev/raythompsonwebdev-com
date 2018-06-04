@@ -13,7 +13,7 @@ body {
 }
 
 #wrapper_container {
-    background: $color2;
+    
     width: 90%;
     height: auto;
     margin-right: auto;
@@ -35,6 +35,7 @@ header {
         left: 0;
         width: 3.4em;
         height: 3.5em;
+        float:left;
 
         a {
             position: absolute;
@@ -105,7 +106,7 @@ header {
 
     hgroup {
         width: 50%;
-        display: block;
+        display: inline-block;
         float: left;
         height: 4em;
 
@@ -117,7 +118,6 @@ header {
             font-weight: bold;
             line-height: 40px;
             color: $color4;
-            //text-shadow: 2px 2px $color11;
             display: block;
             letter-spacing: 0.03em;
             float: left;
@@ -142,7 +142,6 @@ header {
             font-weight: bold;
             line-height: 40px;
             color: $color4;
-            //text-shadow: 2px 3px $color11;
             display: block;
             letter-spacing: 0.03em;
             float: left;
@@ -202,9 +201,6 @@ header {
                 padding: 0;
                 display: inline-block;
                 text-align: center;
-                -webkit-flex: 0 0 auto;
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
                 a {
                     background-color: $color2;
                     font-family: ($FontStyleHeader);
@@ -343,8 +339,7 @@ header {
                 background-color: $color3;
                 width: 29%;
                 color: $color1;
-                @include originTran( 50% 50%);
-                @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+                
                 letter-spacing: 0.1em;
                 border: none;
                 font-size: 0.9em;
@@ -497,7 +492,6 @@ header {
                         input[type=text],
                         input[type=email],
                         select {
-                            @include Transition(all 0.30s ease-in-out);
                             outline: none;
                             padding: 3px 0 3px 3px;
                             margin: 5px 1px 3px 0;
@@ -509,7 +503,6 @@ header {
                             input[type=email]:focus,
                             select:focus,
                             textarea:focus {
-                            box-shadow: 0 0 5px rgba(204, 211, 222, 1);
                             padding: 3px 0 3px 3px;
                             margin: 5px 1px 3px 0;
                             border: 1px solid rgba(204, 211, 222, 1);
@@ -521,7 +514,6 @@ header {
                         list-style: none;
                         width: 25%;
                         background-color: $color3;
-                        @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                         padding: 0;
                         border: none;
                         color: $color1;
@@ -583,22 +575,8 @@ header {
         display: block;
         margin: 0;
         clear: both;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-        align-items: flex-start;
+
         .side-bar-box {
-            -webkit-flex: 0 0 auto;
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
             display: inline-block;
             height: auto;
             width: 32.3%;
@@ -617,9 +595,6 @@ header {
                 text-align: center;
                 margin: 0 auto;
                 font-weight: bold;
-                -webkit-align-self: center;
-                -ms-flex-item-align: center;
-                align-self: center;
             }
             #social h2 {
                 width: 100%;
@@ -660,8 +635,6 @@ header {
                             font-size: 0.9em;
                             line-height: 35px;
                             background-color: $color3;
-                            @include originTran( 50% 50%);
-                            @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                             &:hover {
                                 color: $color4;
                                 font-weight: bold;
@@ -821,8 +794,7 @@ header {
                     background-color: $color2;
                     line-height: 35px;
                     color: $color1;
-                    @include originTran( 50% 50%);
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                     &:hover {
                         color: $color1;
                         margin-left: 0;
@@ -844,9 +816,7 @@ header {
             margin: 0 1%;
             display: block;
             li {
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+                @include box-sizing($type: border-box);
                 width: 100%;
                 margin: 0 0 0.5em 0;
                 height: auto;
@@ -888,8 +858,6 @@ header {
                     font-size: 0.9em;
                     height: 100%;
                     text-indent: 0.5em;
-                    @include originTran( 50% 50%);
-                    @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
                     color: $color1;
                     background-color: $color4;
                     line-height: 35px;
@@ -950,8 +918,7 @@ header {
                     height: auto;
                     color: $color1;
                     background-color: $color4;
-                    @include originTran( 50% 50%);
-                    @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
+                    
                     line-height: 10px;
                     &:hover {
                         text-align: left;
@@ -974,7 +941,6 @@ header {
             display: inline-block;
             float: left;
             padding: 0;
-            @include Transition(all 0.2s linear 0s);
             &:hover {
                 //border: 4px solid $color1;
             }
@@ -1005,8 +971,6 @@ header {
                     float: left;
                     display: block;
                     text-align: center;
-                    @include originTran( 50% 50%);
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
                     &:hover {
                         color: $color1;
                         background-color: $color2;
@@ -1062,8 +1026,7 @@ header {
                                 line-height: 48px;
                                 color: $color1;
                                 background-color: $color4;
-                                @include originTran( 50% 50%);
-                                @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                             }
                         }
 
@@ -1194,8 +1157,7 @@ header {
                             width: auto;
                             display: inline-block;
                             text-align: center;
-                            @include originTran( 50% 50%);
-                            @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                         }
                         a:hover {
                             font-weight: bold;
@@ -1225,8 +1187,7 @@ header {
             background-color: $color3;
             width: 30%;
             color: $color1;
-            @include originTran( 50% 50%);
-            @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
             letter-spacing: 0.05em;
             display: block;
             text-align: center;
@@ -1297,8 +1258,7 @@ header {
                             top: 0;
                             height: 100%;
                             padding: 20%;
-                            @include originTran( 50% 50%);
-                            @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                         }
                         a:hover {
                             color: $color1;
@@ -1393,8 +1353,7 @@ header {
                     top: 0;
                     left: 0;
                     text-align: center;
-                    @include originTran( 50% 50%);
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                     display: inline-block;
                     height: 100%;
                     line-height: 40px;
@@ -1503,8 +1462,7 @@ header {
                     top: 0;
                     left: 0;
                     text-align: center;
-                    @include originTran( 50% 50%);
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                     display: inline-block;
                     height: 100%;
                     line-height: 40px;
@@ -1574,8 +1532,7 @@ header {
                 a {
                     font-family: ($FontStyle);
                     display: inline-block;
-                    @include originTran( 50% 50%);
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                     line-height: 40px;
                     margin: 0;
                     width: 100%;
@@ -1606,7 +1563,7 @@ header {
         width: 100%;
         height: auto;
         background-color: $color4;
-        box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+
         h1 {
             width: 100%;
             height: 60px;
@@ -1750,7 +1707,7 @@ header {
                     list-style: none;
                     width: 15%;
                     background-color: $color3;
-                    @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                     padding: 0;
                     border: none;
                     color: $color1;
@@ -1781,7 +1738,7 @@ header {
                 small {
                     a {
                         font-size: 0.9em;
-                        @include Transition(all 0.30s ease-in-out);
+
                         display: inline-block;
                         padding: 0 2%;
                         &:hover {
@@ -1807,7 +1764,7 @@ header {
                     margin: 0;
                 }
                 textarea#comment {
-                    @include Transition(all 0.30s ease-in-out);
+
                     outline: none;
                     padding: 3px 0 3px 3px;
                     margin: 5px 1px 3px 0;
@@ -1821,7 +1778,7 @@ header {
                         width: 30px;
                     }
                     input {
-                        @include Transition(all 0.30s ease-in-out);
+
                         outline: none;
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
@@ -1832,7 +1789,7 @@ header {
                     }
                     input:focus,
                         textarea#comment:focus {
-                        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
                         border: 1px solid rgba(81, 203, 238, 1);
@@ -1845,7 +1802,7 @@ header {
                         width: 30px;
                     }
                     input {
-                        @include Transition(all 0.30s ease-in-out);
+
                         outline: none;
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
@@ -1856,7 +1813,7 @@ header {
                     }
                     input:focus,
                         textarea#comment:focus {
-                        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
                         border: 1px solid rgba(81, 203, 238, 1);
@@ -1869,7 +1826,7 @@ header {
                         width: 30px;
                     }
                     input {
-                        @include Transition(all 0.30s ease-in-out);
+
                         outline: none;
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
@@ -1880,7 +1837,7 @@ header {
                     }
                     input:focus,
                         textarea#comment:focus {
-                        box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+
                         padding: 3px 0 3px 3px;
                         margin: 5px 1px 3px 0;
                         border: 1px solid rgba(81, 203, 238, 1);
@@ -1893,7 +1850,7 @@ header {
                         height: 35px;
                         list-style: none;
                         background-color: $color3;
-                        @include Transition(background 0.2s linear 0s, color 0.2s linear 0s);
+
                         padding: 0;
                         border: none;
                         color: $color1;
@@ -2050,15 +2007,18 @@ header {
             figure#image-6 {
                 margin: 0;
                 padding: 0;
+                display: block;
                 img#image-5 {
-                    display: none;
+                    display: block;
                     opacity: 0;
                 }
             }
             figure#image-7 {
                 margin: 0;
                 padding: 0;
+                display: none;
                 #image-4 {
+                    display: none;
                     width: 100%;
                     max-width: 100%;
                     height: 100%;
@@ -2073,29 +2033,13 @@ header {
             position:relative;
             z-index:2;
             top: 0;
-            display:inline-block;
-            display:-webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
             width:55%;
             background-color:$color2;
             height:auto;
             margin:0;
             padding:0.5em;
-            -webkit-flex-flow: row wrap;
-            -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-            -webkit-align-items: flex-start;
-            -ms-flex-align: start;
-            align-items: flex-start;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-            justify-content:space-between;
 
             h1#front-title{
-                -webkit-align-self: center;
-                -ms-flex-item-align: center;
-                align-self: center;
                 width:100%;
                 line-height:60px;
                 text-align:left;
@@ -2106,9 +2050,6 @@ header {
             }
 
             article.frntpgbox{
-                -webkit-flex: 0 0 auto;
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
                 width:23%;
                 display:inline-block;
                 background-color:$color11;
@@ -2124,6 +2065,7 @@ header {
                     text-align:left;
                     background-color:$color1;
                     color:$color4;
+                    text-indent:1em;
                     &::before {
                         font-family: 'FontAwesome';
                         content: "\f121";
@@ -2164,20 +2106,9 @@ header {
     div#profile_container {
         margin: 0 0 1em 0;
         padding: 0;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+        display:block;
         /*first text block*/
         #text-box-profile {
-            -webkit-order: 0;
-            -ms-flex-order: 0;
-            order: 0;
-            -webkit-flex: 0 0 auto;
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
             width: 50%;
             display: inline-block;
             padding: 0; //float: left;
@@ -2421,17 +2352,10 @@ header {
 
         /*profile-page_container - hero-slider*/
         section#prof_cont-a {
-            -webkit-order: 4;
-            -ms-flex-order: 4;
-            order: 4;
-            -webkit-flex: 0 0 auto;
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
             width: 48%;
             height: 500px;
             display: inline-block;
             float: right;
-            box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
             border: 1px solid $color1;
             background-color: $color4;
             margin: 0.2em;
@@ -2502,7 +2426,7 @@ header {
                                     outline: 0;
                                     display: block;
                                     /*new*/
-                                    @include Transition(all 0.2s cubic-bezier(.86, 0, .07, 1) 0s);
+
                                     &:hover {
                                         opacity: 0.8;
                                     }
@@ -2720,17 +2644,11 @@ header {
 
         /*profile-page_container - chart*/
         section#prof_cont {
-            -webkit-order: 2;
-            -ms-flex-order: 2;
-            order: 2;
-            -webkit-flex: 0 0 auto;
-            -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
+            
             width: 48%;
             height: 500px;
             display: inline-block;
             float: right;
-            box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
             border: 1px solid $color1;
             background-color: $color4;
             margin: 0.2em;
@@ -2761,7 +2679,7 @@ header {
                 #numbers {
                     width: 9.5%;
                     height: 378px;
-                    font-size: 1em;
+                    font-size: 0.8em;
                     margin: 0;
                     padding: 0;
                     display: inline-block;
@@ -2799,29 +2717,27 @@ header {
                     }
                 }
                 #bars {
-                    display: inline-block;
-                    background: $color4;
-                    width: 90%;
+                    display: block;
+                    width: 100%;
                     height: 100%;
                     padding: 0;
                     margin: 0;
                     li {
-                        display: table-cell;
-                        width: 590px;
+                        display: inline-block;
+                        width: 6.6em;
                         height: 353px;
                         margin: 0;
                         text-align: center;
                         position: relative;
                         .bar {
-                            display: block;
+                            display: inline-block;
                             width: 97%;
                             margin-left: 0;
-                            background: $color1;
                             position: absolute;
                             bottom: 0;
+                            background-color: $color1;
                         }
                         .bar:hover {
-                            background: $color2;
                             cursor: pointer;
                         }
                         .bar:hover:before {
@@ -2856,25 +2772,12 @@ header {
             padding: 0;
             overflow: hidden;
             width: 100%;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-            -webkit-align-items: flex-start;
-            -ms-flex-align: start;
-            align-items: flex-start;
-            -webkit-justify-content: flex-start;
-            -ms-flex-pack: start;
-            justify-content: flex-start;
+
             nav.menuSwitch {
                 text-align: left;
                 margin-bottom: 1.5em;
                 width: 100%;
-                -webkit-align-self: center;
-                -ms-flex-item-align: center;
-                align-self: center;
+
                 ul {
                     padding-left: 0;
                     height: auto;
@@ -2887,12 +2790,10 @@ header {
                         cursor: pointer;
                         background-color: $color3;
                         color: $color1;
-                        @include Transition(background-color 0.3s ease-in);
+
                         font-size: 1em;
                         width: 12%;
-                        -webkit-flex: 0 0 auto;
-                        -ms-flex: 0 0 auto;
-                        flex: 0 0 auto;
+
                         text-align: center;
                         margin-left: 0.1em;
                         ;
@@ -2920,35 +2821,16 @@ header {
                 position: relative;
                 top: 0;
                 overflow: hidden; //display: inline-block;
-                //float:left;
-                width: 15.6%;
-                -webkit-flex: 0 0 auto;
-                -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
+                float:left;
                 margin: 0.4em;
                 z-index: 1;
                 height: 340px;
+                width:15%;
 
                 &:hover {
                     cursor: pointer;
                 }
-
-                .flipped {
-                    transition: -webkit-transform 0.5s linear;
-                    -webkit-transition: transform 0.5s linear;
-                    transition: transform 0.5s linear;
-                    @include TransScale(rotateY(540deg));
-                }
-
-                .unflipped {
-                    transition: -webkit-transform 1s linear;
-                    -webkit-transition: transform 1s linear;
-                    transition: transform 1s linear;
-                    @include TransScale(rotateY(-180deg));
-                }
-
-                perspective: 800px;
-
+            
                 figure.showcase-container {
                     width: 100%;
                     height: 100%;
@@ -2957,37 +2839,28 @@ header {
                     position: relative;
 
                     /* allow child elements to be positioned in 3D space of their own */
-                    -webkit-transform-style: preserve-3d;
-                    -ms-transform-style: preserve-3d;
-                    transform-style: preserve-3d;
-                    overflow: hidden;
+
 
 
                     div.showcase-img {
-                        position: absolute;
+                        position: relative;
                         z-index: 1;
                         height: auto;
                         width: 100%;
                         display: block;
-                        transition: -webkit-transform 0.5s linear;
-                        -webkit-transition: transform 0.5s linear;
-                        transition: transform 0.5s linear;
-                        -webkit-backface-visibility: hidden;
-                        backface-visibility: hidden;
+
 
                     }
                     figcaption.showcase-content {
                         position: absolute;
-                        z-index: 0;
-                        top: 7%;
-                        height: 70%;
-                        background-color: $color10;
+                        z-index: 2;
+                        top:100px ;
+                        height: 100%;
                         padding: 1% 5%;
                         border: 1px $color2 solid;
+                        
                         width: 100%;
-                        transition: -webkit-transform 0.5s linear;
-                        -webkit-transition: transform 0.5s linear;
-                        transition: transform 0.5s linear;
+                        
 
 
                         /* prevent the front face from showing through the back */
@@ -2998,17 +2871,11 @@ header {
                             color: $color1;
                             line-height: 40px;
                             width: 100%;
-                            margin: 20% 0 0 0;
+                            margin: 0;
                             height: 40px;
                             text-align: center;
-                            @include TransScale(rotateY(180deg));
+                            background-color:$color2;
 
-                        }
-                        p {
-                            line-height: 1.5em;
-                            display: block;
-                            margin: 0.5em 0;
-                            font-size: 0.85em;
                         }
                         div.links {
                             height: 30px;
@@ -3016,7 +2883,7 @@ header {
                             display: block;
                             width: 100%;
                             margin: 15% 0;
-                            @include TransScale(rotateY(180deg));
+
                             a {
                                 height: 35px;
                                 list-style: none;
@@ -3032,7 +2899,7 @@ header {
                                 margin: 0 auto;
                                 display: block;
                                 text-align: center;
-                                @include Transition(background 0.2s linear 0s);
+
                             }
                             a:hover {
                                 color: $color4;
@@ -3065,8 +2932,7 @@ footer {
             display: inline-block;
             width: 21%;
             background-repeat: no-repeat;
-            @include originTran( 50% 50%);
-            @include Transition( all 0.2s ease-in-out);
+
             height: 100%;
             background-color: $color2;
             &:hover {
@@ -3126,8 +2992,7 @@ footer {
                 display: block;
                 height: auto;
                 line-height: 25px;
-                @include originTran( 50% 50%);
-                @include Transition( all 0.2s ease-in-out);
+
                 &:hover {
                     color: $color4;
                     margin: 0;

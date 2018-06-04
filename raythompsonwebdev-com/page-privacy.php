@@ -17,6 +17,11 @@
  */
 get_header(); ?>
 
+ <article class="main-text">
+
+<h1><?php the_title(); ?></h1>
+
+
 
 <?php if (have_posts()) :   ?>
 
@@ -34,7 +39,7 @@ get_header(); ?>
         endif;
         ?>
 
-
+</article>
 <div class="clearfix"></div>
 
 

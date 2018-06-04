@@ -14,38 +14,92 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 get_header(); ?>
+
+<?php
+    the_archive_title('<h1 class="page-title">', '</h1>');
+    the_archive_description('<div class="taxonomy-description">', '</div>');
+?>
+
+
+<?php while ( have_posts() ) : the_post(); ?>
+
+<article class="post group <?php post_class() ?>" id="post-<?php the_ID(); ?>">
+
+    <h1>
+        <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+    </h1>
+
+    <!--Post entry Header-->
+            <header class="byline">
+                <div class="entry-meta">
+                    <?php if ('post' === get_post_type()) : ?>
+                        <div class="meta-content">
+
+                            <?php
+                                raythompsonwebdev_com_posted_on();
+                            ?>
+
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </header>
+
+    <?php if (has_post_thumbnail()) { ?>
+        <figure class="featuredImage">
+            <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+                <?php the_post_thumbnail('featured-image'); ?>
+            </a>
+        </figure>
+    <?php } else { ?>
+    <figure class="featuredImage">
+        <a href="<?php echo esc_url(get_permalink()); ?>" rel="bookmark">
+            <?php the_post_thumbnail(); ?>
+        </a>
+    </figure>
+    <?php } ?>
+
+    <div class="entry">
+
+        <?php
+                    the_excerpt(sprintf(
+                        wp_kses(
+                            /* translators: %s: Name of current post. Only visible to screen readers */
+                            __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+                            array(
+                                'span' => array(
+                                    'class' => array(),
+                                ),
+                            )
+                        ),
+                        get_the_title()
+                    ) );
+
+                    wp_link_pages( array(
+                        'before' => '<div class="page-links">' . esc_html_e( 'Pages:', 'raythompsonwebdev-com' ),
+                        'after'  => '</div>',
+                    ) );
+                ?>
+
+    </div>
+
+    <footer class="byline">
     
-    <div class="wrap">
+         <?php raythompsonwebdev_com_entry_footer(); ?>
+    </footer>
 
-<?php if ( have_posts() ) : ?>
-    <header class="page-header">
-        <?php
-            the_archive_title( '<h1 class="page-title">', '</h1>' );
-            the_archive_description( '<div class="taxonomy-description">', '</div>' );
-        ?>
-    </header><!-- .page-header -->
-<?php endif; ?>
+ </article>
 
-<div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
+<?php endwhile;  ?>
 
-    <?php
-    if ( have_posts() ) : ?>
-        <?php
-        /* Start the Loop */
-        get_template_part('template-parts/content', get_post_format());
 
-    else :
+<section class="contact-wide">
 
-        get_template_part( 'template-parts/content', 'none' );
+<h1><?php _e('Archive Menu', 'raythompsonwebdev-com'); ?></h1>
+  
+</section>
 
-    endif; ?>
 
-    </main><!-- #main -->
-</div><!-- #primary -->
+<?php get_sidebar('archive'); ?> 
 
-<?php get_sidebar(); ?>
 
-</div><!-- .wrap -->
-
-<?php get_footer();
+<?php get_footer(); ?>

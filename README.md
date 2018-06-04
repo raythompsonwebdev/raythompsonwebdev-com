@@ -12,13 +12,14 @@ Tested up to: 4.9.5
 
 Stable tag: 1.0.0
 
-## License: GNU General Public License v2 or later
+License: GNU General Public License v2 or later
 
-## Please be aware that this theme has been completed yet. download and use at your own risk.
+## Please be aware this is a custom made personal theme. download and use at your own risk.
 
 ## Description 
 
 Custom wordpress personal portfolio.
+
 
 ## Installation 
 
@@ -36,7 +37,8 @@ Custom wordpress personal portfolio.
 
 ## Changelog 
 
-* 1.0.0- Apr 19 2015 * Initial release
+= 1.0.0- Apr 19 2015 =
+* Initial release
 
 ## Credits 
 
