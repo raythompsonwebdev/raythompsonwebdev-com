@@ -26,7 +26,7 @@
         
 
          <figure id="image-6">
-             <img id="image-5" src="<?php echo esc_url(home_url('/'));?>/wp-content/themes/raythompsonwebdev-com/raythompsonwebdev-com/images/home-page-image.png" alt="images of different screen sizes">
+             <img id="image-5" src="<?php echo esc_url(home_url('/'));?>/wp-content/themes/raythompsonwebdev-com/images/home-page-image.png" alt="images of different screen sizes">
             </figure>
 
             <figure id="image-7">
@@ -34,7 +34,7 @@
                     class="style-svg" 
                     type="image/svg+xml" 
                     id="image-4" 
-                    data="<?php echo esc_url(home_url('/'));?>/wp-content/themes/raythompsonwebdev-com/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
+                    data="<?php echo esc_url(home_url('/'));?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
                     </object>
             </figure>
         
