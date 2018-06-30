@@ -14,6 +14,11 @@ Stable tag: 1.0.0
 
 License: GNU General Public License v2 or later
 
+<<<<<<< HEAD
+=======
+## Please be aware this is a custom made personal theme. download and use at your own risk.
+
+>>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24
 ## Description 
 
 Custom wordpress personal portfolio.

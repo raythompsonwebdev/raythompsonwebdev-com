@@ -20,7 +20,10 @@ get_header(); ?>
  <article class="main-text">
 
 <h1><?php the_title(); ?></h1>
+<<<<<<< HEAD:page-privacy.php
 
+=======
+>>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/page-privacy.php
 
 
 <?php if ( have_posts() ) : ?>
@@ -39,9 +42,12 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
+<<<<<<< HEAD:page-privacy.php
 		endif;
 		?>
 
+=======
+>>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/page-privacy.php
 </article>
 <div class="clearfix"></div>
 

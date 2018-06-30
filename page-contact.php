@@ -23,7 +23,11 @@ get_header(); ?>
 
 <div class="main-text">
 
+<<<<<<< HEAD:page-contact.php
 <p> <?php esc_html_e( 'Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com' ); ?></p>
+=======
+<p> <?php _e('Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com'); ?></p>
+>>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/page-contact.php
 <br/>
 <br/>
 <br/>

@@ -15,8 +15,14 @@
  */
 get_header(); ?>
 
+<<<<<<< HEAD:index.php
 <h1><?php esc_html_e( 'Interested in web design and web development', 'raythompsonwebdev-com' ); ?></h1>
+=======
+
+>>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/index.php
 <div class="main-text">
+
+  <h1><?php _e( 'Interested in web design and web development', 'raythompsonwebdev-com' ); ?></h1>
 
 <p>
 <?php esc_html_e( 'Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com' ); ?>
@@ -39,6 +45,7 @@ get_header(); ?>
 <br/><br/>
 
 
+<<<<<<< HEAD:index.php
 <?php
 /**
  *
@@ -58,6 +65,25 @@ if ( $first_post === true ) {
 	get_template_part( 'template-parts/content', get_post_format() );
 }
 ?>
+=======
+
+  <?php
+  // Is this the first post of the front page?
+  $first_post = $wp_query->current_post == 0 && !is_paged() && !is_front_page();
+  /*
+  * Include the Post-Format-specific template for the content.
+  * If you want to override this in a child theme, then include a file
+  * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+  */
+  if ($first_post == true) {
+  get_template_part('template-parts/content', 'single');
+  } else {
+  get_template_part('template-parts/content', get_post_format());
+  }
+  ?>
+
+
+>>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/index.php
 
 <div class="clearfix"></div>
 
