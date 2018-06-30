@@ -11,8 +11,8 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['raythompsonwebdev-com/js/dist/**/*.js'],
-                dest: 'raythompsonwebdev-com/js/dist/concat/<%= pkg.name %>.js'
+                src: ['js/minified/**/*.js'],
+                dest: 'js/concat/<%= pkg.name %>.js'
             }
         },
 
@@ -25,23 +25,16 @@ module.exports = function (grunt) {
             },
             my_target: {
                 files: {
-                    'dist/maps.min.js': ['raythompsonwebdev-com/js/maps.js'],
-                    'dist/customizer.min.js': ['raythompsonwebdev-com/js/customizer.js'],
+                    'js/minified/maps.min.js': ['js/maps.js'],
+                    'js/minified/customizer.min.js': ['js/customizer.js'],
                     
-                    'dist/master.min.js': ['raythompsonwebdev-com/js/master.js'],
-                    'dist/navigation.min.js': ['raythompsonwebdev-com/js/navigation.js'],
-                    'dist/profile.min.js': ['raythompsonwebdev-com/js/profile.js'],
-                    'dist/skip-link-focus-fix.min.js': ['raythompsonwebdev-com/js/skip-link-focus-fix.js'],
-                    'dist/websites.min.js': ['raythompsonwebdev-com/js/websites.js'],
-                    'dist/jquery.cookie.min.js': ['raythompsonwebdev-com/js/jquery.cookie.js'],
-
-                    'dist/inc/lightbox/js/jquery.fancybox.js.min.js': ['raythompsonwebdev-com/js/inc/lightbox/js/jquery.fancybox.js'],
-                    'dist/inc/lightbox/js/jquery.fancybox.pack.js.min.js': ['raythompsonwebdev-com/js/inc/lightbox/js/jquery.fancybox.pack.js'],
-                    'dist/inc/lightbox/js/lightbox.min.js': ['raythompsonwebdev-com/js/inc/lightbox/js/lightbox.js'],
-
-                    'dist/inc/helpers/jquery.fancybox-buttons.min.js': ['raythompsonwebdev-com/js/inc/helpers/jquery.fancybox-buttons.js'],
-                    'dist/inc/helpers/jquery.fancybox-media.min.js': ['raythompsonwebdev-com/js/inc/helpers/jquery.fancybox-media.js'],
-                    'dist/inc/helpers/jquery.fancybox-thumbs.min.js': ['raythompsonwebdev-com/js/inc/helpers/jquery.fancybox-thumbs.js']
+                    'js/minified/master.min.js': ['js/master.js'],
+                    'js/minified/navigation.min.js': ['js/navigation.js'],
+                    'js/minified/profile.min.js': ['js/profile.js'],
+                    'js/minified/skip-link-focus-fix.min.js': ['js/skip-link-focus-fix.js'],
+                    'js/minified/websites.min.js': ['js/websites.js'],
+                    'js/minified/jquery.cookie.min.js': ['js/jquery.cookie.js']
+                   
                 }
             }
         },
@@ -55,9 +48,9 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'raythompsonwebdev-com/css/old-files/style.css': 'raythompsonwebdev-com/css/style.scss',
-                    'raythompsonwebdev-com/css/old-files/svg-style-3.css': 'raythompsonwebdev-com/css/svg-style-3.scss',
-                    'raythompsonwebdev-com/ie.css': 'raythompsonwebdev-com/css/ie.scss'
+                    'style.css': 'css/style.scss',
+                    'svg-style-3.css': 'css/svg-style-3.scss',
+                    'ie.css': 'css/ie.scss'
                     /*where file goes-----/where file from*/
                 }
             },
@@ -68,10 +61,10 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'raythompsonwebdev-com/style-min.css': 'raythompsonwebdev-com/css/style.scss',
-                    'raythompsonwebdev-com/svg-style-3-min.css': 'raythompsonwebdev-com/css/svg-style-3.scss',
-                    'raythompsonwebdev-com/css/old-files/ie-min.css': 'raythompsonwebdev-com/css/ie.scss',
-                   'raythompsonwebdev-com/js/dist/inc/lightbox/css/jquery.fancybox.min.css': 'raythompsonwebdev-com/js/inc/lightbox/css/jquery.fancybox.css'
+                    'css/minified-files/style-min.css': 'css/style.scss',
+                    'css/minified-files/svg-style-3-min.css': 'css/svg-style-3.scss',
+                    'css/minified-files/ie-min.css': 'css/ie.scss',
+                   'js/dist/inc/lightbox/css/jquery.fancybox.min.css': 'js/inc/lightbox/css/jquery.fancybox.css'
                     /*where file goes-----/where file from*/
                 }
             }
@@ -81,7 +74,7 @@ module.exports = function (grunt) {
          * JS Hint
          */
         jshint: {
-            files: ['Gruntfile.js', 'raythompsonwebdev-com/js/**/*.js', 'test/**/*.js'],
+            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
             options: {
                 // options here to override JSHint defaults
 
@@ -98,7 +91,7 @@ module.exports = function (grunt) {
          */
         watch: {
             css: {
-                files: 'raythompsonwebdev-com/**/*.scss',
+                files: '**/*.scss',
                 tasks: ['sass', 'jshint']
             }
         }

@@ -14,8 +14,6 @@ Stable tag: 1.0.0
 
 License: GNU General Public License v2 or later
 
-PLease be aware this is a custom made personal theme. download and use at your own risk.
-
 ## Description 
 
 Custom wordpress personal portfolio.
