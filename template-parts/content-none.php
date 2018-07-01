@@ -12,18 +12,15 @@
 <article class="no-results not-found post group">
 	<header class="byline">
 		<h1 class="page-title">
-			<?php _e('Nothing Found', 'raythompsonwebdev-com'); ?>
+			<?php esc_html_e( 'Nothing Found', 'raythompsonwebdev-com' ); ?>
 		</h1>
 	</header><!-- .page-header -->
 
 	<div class="entry">
 		<?php
-<<<<<<< HEAD:template-parts/content-none.php
+
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 			?>
-=======
-		if ( is_home() && current_user_can('publish_posts' )): ?>
->>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/template-parts/content-none.php
 
 			<p>
 				<?php

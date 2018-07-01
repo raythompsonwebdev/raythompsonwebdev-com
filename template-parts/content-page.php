@@ -5,14 +5,13 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package raythompsonwebdev-com
- * 
  */
 
 ?>
 
 <<<<<<< HEAD:template-parts/content-page.php
 =======
- <?php	the_content(); ?>
+	<?php	the_content(); ?>
 
 		
 

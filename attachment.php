@@ -38,15 +38,15 @@ get_header();
 
 						<div class="entry-meta">
 
-							<?php _e( 'Featured in: ', 'raythompsonwebdev-com' ); ?>
+							<?php esc_html_e( 'Featured in: ', 'raythompsonwebdev-com' ); ?>
 
 							<span class="parent-post-link">
-								<a href="<?php echo get_permalink( $post->post_parent ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?>
+								<a href="<?php echo esc_url( get_permalink( $post->post_parent ) ); ?>" rel="gallery"><?php echo get_the_title( $post->post_parent ); ?>
 								</a>
 							</span>
-							<?php _e( 'Full size image: ', 'raythompsonwebdev-com' ); ?>
+							<?php esc_html_e( 'Full size image: ', 'raythompsonwebdev-com' ); ?>
 							<span class="full-size-link">
-								<a href="<?php echo wp_get_attachment_url(); ?>"><?php echo $metadata['width']; ?> &times; <?php echo $metadata['height']; ?>
+								<a href="<?php echo esc_url( wp_get_attachment_url() ); ?>"><?php echo esc_html( $metadata['width'], 'raythompsonwebdev-com' ); ?> &times; <?php echo esc_html( $metadata['height'], 'raythompsonwebdev-com' ); ?>
 								</a>
 							</span>
 
