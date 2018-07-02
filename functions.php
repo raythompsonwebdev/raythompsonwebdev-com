@@ -41,7 +41,7 @@ function raythompsonwebdev_filter_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 ) {
-		// placeholder.
+		/* translators: %s: search term */
 		$title = "$title $sep " . sprintf( esc_attr_e( 'Page %s', 'raythompsonwebdev-com' ), max( $paged, $page ) );
 	}
 
@@ -227,8 +227,6 @@ remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
 
 /**
  *  Remove stuff.
- *
- *  @param array $headers remove some stuff.
  */
 function raythompsonwebdev_cubiq_setup() {
 
@@ -301,14 +299,14 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 /**
  *  Remove Contact Form 7 scripts + styles unless we're on the contact page.
  *
- *  add_action('wp_enqueue_scripts', 'ac_remove_cf7_scripts');
- *  function ac_remove_cf7_scripts()
- *      {
- *          if (!is_page('contact') ) {
- *          wp_deregister_style('contact-form-7');
- *          wp_deregister_script('contact-form-7');
+ *      Add_action('wp_enqueue_scripts', 'ac_remove_cf7_scripts');
+ *      function ac_remove_cf7_scripts()
+ *          {
+ *              if (!is_page('contact') ) {
+ *              Wp_deregister_style('contact-form-7');
+ *           Wp_deregister_script('contact-form-7');
+ *          }
  *      }
- *  }
  */
 
 
@@ -403,19 +401,19 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	function raythompsonwebdev_com_google_script() {
 		?>
 
-<script type="text/javascript" async>
+		<script type="text/javascript" async>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-86655310-1']);
-  _gaq.push(['_trackPageview']);
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-86655310-1']);
+		_gaq.push(['_trackPageview']);
 
-  (function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
 
-</script>
+		</script>
 		<?php
 	}
 	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
@@ -431,6 +429,7 @@ function raythompsonwebdev_com_cc_mime_types( $mimes ) {
 	return $mimes;
 }
 add_filter( 'upload_mimes', 'raythompsonwebdev_com_cc_mime_types' );
+
 
 
 /**
@@ -611,7 +610,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
 		$next_attachment_url = wp_get_attachment_url();
 
 		// Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery, or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the link to that image file.
-		$attachment_ids = get_posts(
+		$attachment_ids = new WP_Query(
 			array(
 				'post_parent'    => $post->post_parent,
 				'fields'         => 'ids',
@@ -621,6 +620,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
 				'post_mime_type' => 'image',
 				'order'          => 'ASC',
 				'orderby'        => 'menu_order ID',
+
 			)
 		);
 		// If there is more than 1 attachment in a gallery...

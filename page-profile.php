@@ -131,8 +131,8 @@ get_header(); ?>
 
 						<figure class="abobe">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Large-Photoshop-Certicate-.jpg" class="fancybox" title="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>">
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Small-photoshop-Certicate.jpg" alt="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Large-Photoshop-Certicate-.jpg" class="fancybox" title="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>">
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Small-photoshop-Certicate.jpg" alt="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>">
 							</a>
 
 
@@ -173,9 +173,9 @@ get_header(); ?>
 
 						<figure class="cert">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="<?php esc_attr_e( 'City and Guilds Level One, Two, Three', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="<?php esc_attr_e( 'City and Guilds Level One, Two, Three', 'raythompsonwebdev-com' ); ?>">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/ITQ-USERS-LEVEL1-SMALL.gif" alt="<?php esc_attr_e( 'City and Guilds Level One, Two, Three', 'raythompsonwebdev-com' ); ?>">
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/ITQ-USERS-LEVEL1-SMALL.gif" alt="<?php esc_attr_e( 'City and Guilds Level One, Two, Three', 'raythompsonwebdev-com' ); ?>">
 
 							</a>
 
@@ -213,9 +213,9 @@ get_header(); ?>
 
 						<figure class="abobe">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Large-Udemy-Certicate-.jpg" class="fancybox" title="<?php esc_attr_e( 'Udemy.com', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Large-Udemy-Certicate-.jpg" class="fancybox" title="<?php esc_attr_e( 'Udemy.com', 'raythompsonwebdev-com' ); ?>">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Udemy-Small.jpg" alt="<?php esc_attr_e( 'Udemy.com', 'raythompsonwebdev-com' ); ?>">
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Udemy-Small.jpg" alt="<?php esc_attr_e( 'Udemy.com', 'raythompsonwebdev-com' ); ?>">
 
 							</a>
 							<figcaption>
@@ -243,9 +243,9 @@ get_header(); ?>
 
 						<figure class="cert">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/FreeCodeCamp-large.png" class="fancybox" title="<?php esc_attr_e( 'FreeCode Camp', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/FreeCodeCamp-large.png" class="fancybox" title="<?php esc_attr_e( 'FreeCode Camp', 'raythompsonwebdev-com' ); ?>">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/FreeCodeCamp-small.png" alt="<?php esc_attr_e( 'FreeCode Camp', 'raythompsonwebdev-com' ); ?>">
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/FreeCodeCamp-small.png" alt="<?php esc_attr_e( 'FreeCode Camp', 'raythompsonwebdev-com' ); ?>">
 
 							</a>
 							<figcaption>
@@ -275,12 +275,12 @@ get_header(); ?>
 						<figure class="abobe">
 
 							<a 
-							href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/lynda_logo1r-d_72x72.png" 
+							href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/lynda_logo1r-d_72x72.png" 
 							class="fancybox" 
 							title="<?php esc_attr_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?>">
 
 								<img 
-								src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/lynda_logo1k-d_72x72.png" 
+								src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/lynda_logo1k-d_72x72.png" 
 								alt="<?php esc_attr_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?>"
 								>
 
@@ -347,9 +347,9 @@ get_header(); ?>
 
 						<figure class="cert">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="<?php esc_attr_e( 'Mobile-web-applications-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="<?php esc_attr_e( 'Mobile-web-applications-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Mobile-web-applications-Certificate-Foundation-small.jpg" 
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Mobile-web-applications-Certificate-Foundation-small.jpg" 
 								alt="<?php esc_attr_e( 'Mobile-web-applications-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>"
 								
 								>
@@ -382,9 +382,9 @@ get_header(); ?>
 
 						<figure class="cert">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Digital-Marketing-Certificate-Foundation-small.jpg" 
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Marketing-Certificate-Foundation-small.jpg" 
 								alt="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>"
 
 							</a>
@@ -416,9 +416,9 @@ get_header(); ?>
 
 						<figure class="cert">
 
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Content-Marketing-Certificate-Foundation-Small.jpg" 
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Content-Marketing-Certificate-Foundation-Small.jpg" 
 								alt="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>"
 
 							</a>
@@ -451,8 +451,8 @@ get_header(); ?>
 
 						<figure class="abobe">
 
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Futures-2017-Certificate-of-Participation', 'raythompsonwebdev-com' ); ?>">
-							<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/04/Digital-Futures-2017-Certificate-of-Participation-small.jpg" 
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Futures-2017-Certificate-of-Participation', 'raythompsonwebdev-com' ); ?>">
+							<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Futures-2017-Certificate-of-Participation-small.jpg" 
 							alt="<?php esc_attr_e( 'Digital-Futures-2017-Certificate-of-Participation', 'raythompsonwebdev-com' ); ?>">
 							</a>
 						<figcaption>

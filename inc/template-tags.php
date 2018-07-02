@@ -24,16 +24,18 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 		$posted_on   = sprintf(
+			/* translators: %s: post date. */
 			esc_html_x( 'published %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
+			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		// Display the author avatar if the author has a Gravatar
+		// Display the author avatar if the author has a Gravatar.
 		$author_id = get_the_author_meta( 'ID' );
 
 		if ( raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
@@ -75,6 +77,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 		);
 
 		$posted_on = sprintf(
+			/* translators: %s: post date. */
 			esc_html_x( 'Published %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);

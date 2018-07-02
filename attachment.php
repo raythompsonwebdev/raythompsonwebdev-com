@@ -73,7 +73,7 @@ get_header();
 										<?php if ( has_excerpt() ) : ?>
 									<figcaption class="wp-caption-text">
 											<?php
-											echo get_the_excerpt(
+											echo esc_html(get_the_excerpt(
 												sprintf(
 													wp_kses(
 														/* translators: %s: Name of current post. Only visible to screen readers */
@@ -84,7 +84,7 @@ get_header();
 																)
 													), get_the_title()
 												)
-											);
+											));
 											?>
 									</figcaption><!-- .entry-caption -->
 								<?php endif; ?>

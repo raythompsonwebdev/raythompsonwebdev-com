@@ -1,8 +1,9 @@
 <?php
 /**
- * raythompsonwebdev-com Theme Customizer
+ * Raythompsonwebdev-com Theme Customizer
  *
  * @package raythompsonwebdev-com
+ * 
  */
 
 /**
@@ -69,8 +70,8 @@ function raythompsonwebdev_com_customizer_css() {
 
 <style type="text/css">
 			.site-branding {
-					background: <?php echo get_theme_mod( 'raythompsonwebdev_com_header_color' ); ?>;
-					background-color: <?php echo $header_color; ?>
+					background: <?php echo esc_html( get_theme_mod( 'raythompsonwebdev_com_header_color' ) ); ?>;
+					background-color: <?php echo esc_html( $header_color ); ?>
 			}
 
 			.category-list a:hover,
@@ -83,11 +84,11 @@ function raythompsonwebdev_com_customizer_css() {
 			.entry-title a:hover,
 			.entry-content a,
 			.comment-content a {
-					color: <?php echo get_theme_mod( 'raythompsonwebdev_com_link_color' ); ?>;
+					color: <?php echo esc_html( get_theme_mod( 'raythompsonwebdev_com_link_color' ) ); ?>;
 			}
 
 			.border-custom {
-					border: <?php echo get_theme_mod( 'raythompsonwebdev_com_link_color' ); ?> solid 1px;
+					border: <?php echo esc_html( get_theme_mod( 'raythompsonwebdev_com_link_color' ) ); ?> solid 1px;
 			}
 
 	</style>

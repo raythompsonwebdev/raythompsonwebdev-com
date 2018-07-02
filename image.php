@@ -73,7 +73,7 @@
 									<?php if ( has_excerpt() ) : ?>
 								<figcaption class="wp-caption-text">
 										<?php
-										echo get_the_excerpt(
+										echo esc_html( get_the_excerpt(
 											sprintf(
 												wp_kses(
 													/* translators: %s: Name of current post. Only visible to screen readers */
@@ -84,7 +84,7 @@
 															)
 												), get_the_title()
 											)
-										);
+										));
 										?>
 								</figcaption><!-- .entry-caption -->
 							<?php endif; ?>
@@ -124,7 +124,7 @@
 
 	<h1><?php esc_html_e( 'Send Comment', 'raythompsonwebdev-com' ); ?></h1>
 	<?php
-	// If comments are open or we have at least one comment, load up the comment template
+	// If comments are open or we have at least one comment, load up the comment template.
 	if ( comments_open() || '0' !== get_comments_number() ) :
 		comments_template();
 	endif;
