@@ -14,10 +14,10 @@ jQuery(document).ready(function($){
 
 //REsponsive chart
 jQuery(document).ready(function($){
-  $("#chart #bars li .bar").each( function( key, bar ) {
+  $(" #chart #bars li .bar").each( function( key, bar ) {
     var percentage = $(this).data('percentage');
     $(this).animate({
-    'height' : percentage + '%'
+    'width' : percentage + '%'
     }, 1000);
   });
 });

@@ -54,12 +54,13 @@ if (have_comments() ) : ?>
         );
         ?>
     </ol>
-    <div class="nav-links navigation">
-<h1 class="screen-reader-text section-heading"><?php esc_html_e('Comment navigation', 'raythompsonwebdev-com'); ?></h1>
-        <div class="nav-previous"><?php previous_comments_link(esc_html__('Older Comments', 'raythompsonwebdev-com')); ?></div>
-        <div class="nav-next"><?php next_comments_link(esc_html__('Newer Comments', 'raythompsonwebdev-com')); ?></div>
-
-    </div><!-- .nav-links -->
+    <nav class="navigation">
+        <h1 class="screen-reader-text section-heading"><?php esc_html_e('Comment navigation', 'raythompsonwebdev-com'); ?></h1>
+        <div class="nav-links">
+            <div class="nav-previous"><?php previous_comments_link(esc_html__('Older Comments', 'raythompsonwebdev-com')); ?></div>
+            <div class="nav-next"><?php next_comments_link(esc_html__('Newer Comments', 'raythompsonwebdev-com')); ?></div>
+        </div>
+    </nav><!-- .nav-links -->
         
     <?php
     if (! comments_open() ) : // There are comments but comments are now closed

@@ -29,6 +29,7 @@ if ( have_posts() ) :
 				</h1>
 			</header><!-- .page-header -->
 
+			
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :

@@ -77,9 +77,9 @@ get_header();
 						</div>
 						<figcaption class="showcase-content showcase">
 							<h1> <?php the_title(); ?></h1>
+						
+								<a href="<?php esc_url(the_permalink()); ?>"><?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?></a>
 
-							<div class="links">
-								<a href="<?php the_permalink(); ?>"><?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?></a></div>
 						</figcaption>
 
 					</figure>

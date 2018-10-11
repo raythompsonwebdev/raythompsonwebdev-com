@@ -48,17 +48,17 @@ while ( have_posts() ) :
 			</header>
 
 	<?php if ( has_post_thumbnail() ) { ?>
-		<figure class="featuredImage">
-			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-				<?php the_post_thumbnail( 'featured-image' ); ?>
-			</a>
-		</figure>
+			<figure class="featuredImage">
+					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+							<?php the_post_thumbnail( 'featured-image' ); ?>
+					</a>
+			</figure>
 	<?php } else { ?>
-	<figure class="featuredImage">
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-			<?php the_post_thumbnail(); ?>
-		</a>
-	</figure>
+			<figure class="featuredImage">
+					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+							<?php the_post_thumbnail(); ?>
+					</a>
+			</figure>
 	<?php } ?>
 
 	<div class="entry">

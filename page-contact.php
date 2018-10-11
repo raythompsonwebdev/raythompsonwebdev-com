@@ -19,44 +19,17 @@
 get_header(); ?>
 
 
-<h1><?php the_title(); ?></h1>
-
-<div class="main-text">
-
-<<<<<<< HEAD:page-contact.php
-<p> <?php esc_html_e( 'Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com' ); ?></p>
-=======
-<p> <?php _e('Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com'); ?></p>
->>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/page-contact.php
-<br/>
-<br/>
-<br/>
-<br/>
-</div>
 
 
-<div id="contactform">
-<?php the_content(); ?>
-</div>
+<?php if ( have_posts() ) : ?>
+      <?php	while ( have_posts() ) :	the_post();	?>
+          <?php the_content(); ?>
+          <?php	endwhile;	?>
+      <?php endif; ?>
 
 
 <br>
 
-<div id="map_container">
-
-	
-</div>
-
-	<ul class="contact-details" >
-	<li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
-
-
-	<br/>
-
-
-
-
-</ul>
 
 <div class="clearfix"></div>
 <br>

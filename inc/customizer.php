@@ -14,7 +14,7 @@
 function raythompsonwebdev_com_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -59,39 +59,5 @@ function raythompsonwebdev_com_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'raythompsonwebdev_com_customize_preview_js' );
 
-/**
- * Inject Customizer CSS when appropriate
- */
 
-function raythompsonwebdev_com_customizer_css() {
-	$header_color = get_theme_mod( 'raythompsonwebdev_com_header_color' );
-
-	?>
-
-<style type="text/css">
-			.site-branding {
-					background: <?php echo esc_html( get_theme_mod( 'raythompsonwebdev_com_header_color' ) ); ?>;
-					background-color: <?php echo esc_html( $header_color ); ?>
-			}
-
-			.category-list a:hover,
-			.entry-meta a:hover,
-			.tag-links a:hover,
-			.widget-area a:hover,
-			.nav-links a:hover,
-			.comment-meta a:hover,
-			.continue-reading a,
-			.entry-title a:hover,
-			.entry-content a,
-			.comment-content a {
-					color: <?php echo esc_html( get_theme_mod( 'raythompsonwebdev_com_link_color' ) ); ?>;
-			}
-
-			.border-custom {
-					border: <?php echo esc_html( get_theme_mod( 'raythompsonwebdev_com_link_color' ) ); ?> solid 1px;
-			}
-
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'raythompsonwebdev_com_customizer_css' );
+?>

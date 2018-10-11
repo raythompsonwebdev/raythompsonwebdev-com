@@ -72,8 +72,10 @@ if ( has_nav_menu( 'Secondary' ) ) {
 <p id="copyr" > <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>"></a>
 			<span class="sep"> | </span>
-    
-	<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' ); ?>
+    	
+	<?php 
+/* translators: %1$s by %2$s: Theme name, raythompsonwebdev-com: Raymond Thompson. */
+printf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' ); ?>
 <br/>
 
 <?php
@@ -88,6 +90,18 @@ printf( esc_html__( 'Page was last updated :', 'raythompsonwebdev-com' ), esc_ht
 
 </p>
 
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Cabin:400,700', 'PT+Sans:400,700' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
 </footer>
 
 </div>

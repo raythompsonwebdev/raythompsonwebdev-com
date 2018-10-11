@@ -11,8 +11,8 @@ module.exports = function (grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['js/minified/**/*.js'],
-                dest: 'js/concat/<%= pkg.name %>.js'
+                src: ['js/dist/**/*.js'],
+                dest: 'js/dist/concat/<%= pkg.name %>.js'
             }
         },
 
@@ -27,14 +27,13 @@ module.exports = function (grunt) {
                 files: {
                     'js/minified/maps.min.js': ['js/maps.js'],
                     'js/minified/customizer.min.js': ['js/customizer.js'],
-                    
                     'js/minified/master.min.js': ['js/master.js'],
                     'js/minified/navigation.min.js': ['js/navigation.js'],
                     'js/minified/profile.min.js': ['js/profile.js'],
                     'js/minified/skip-link-focus-fix.min.js': ['js/skip-link-focus-fix.js'],
                     'js/minified/websites.min.js': ['js/websites.js'],
                     'js/minified/jquery.cookie.min.js': ['js/jquery.cookie.js']
-                   
+
                 }
             }
         },
@@ -61,10 +60,9 @@ module.exports = function (grunt) {
                     sourcemap: 'auto'
                 },
                 files: {
-                    'css/minified-files/style-min.css': 'css/style.scss',
-                    'css/minified-files/svg-style-3-min.css': 'css/svg-style-3.scss',
-                    'css/minified-files/ie-min.css': 'css/ie.scss',
-                   'js/dist/inc/lightbox/css/jquery.fancybox.min.css': 'js/inc/lightbox/css/jquery.fancybox.css'
+                    'css/minified/style-min.css': 'css/style.scss',
+                    'css/minified/svg-style-3-min.css': 'css/svg-style-3.scss',
+                    'css/minified/ie-min.css': 'css/ie.scss'
                     /*where file goes-----/where file from*/
                 }
             }

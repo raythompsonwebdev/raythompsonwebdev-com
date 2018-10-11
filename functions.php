@@ -49,6 +49,10 @@ function raythompsonwebdev_filter_wp_title( $title, $sep ) {
 }
 add_filter( 'wp_title', 'raythompsonwebdev_filter_wp_title', 10, 2 );
 
+function wpversion_remove_version() {
+	return '';
+	}
+	add_filter('the_generator', 'wpversion_remove_version');
 
 
 if ( ! function_exists( 'raythompsonwebdev_theme_setup' ) ) :
@@ -182,18 +186,62 @@ function raythompsonwebdev_com_load_theme_textdomain() {
 }
 	add_action( 'after_setup_theme', 'raythompsonwebdev_com_load_theme_textdomain' );
 
-
-/**
- *  Add google fonts
+ /**
+ *  Remove Query Strings – Optional Step
  */
-function raythompsonwebdev_add_google_fonts() {
-		wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=PT+Sans:400,700', false );
-		wp_enqueue_style( 'wpc-google-fonts', 'https://fonts.googleapis.com/css?family=Cabin:400,700', false );
+function _remove_script_version( $src ){
+$parts = explode( '?ver', $src );
+return $parts[0];
 }
-		add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_add_google_fonts' );
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
 /**
- *  Register menus
+ * Disable the emoji's
+ */
+function disable_emojis() {
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );	
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+}
+add_action( 'init', 'disable_emojis' );
+
+/**
+ * Filter function used to remove the tinymce emoji plugin.
+ * 
+ * @param    array  $plugins  
+ * @return   array             Difference betwen the two arrays
+ */
+function disable_emojis_tinymce( $plugins ) {
+	if ( is_array( $plugins ) ) {
+		return array_diff( $plugins, array( 'wpemoji' ) );
+	} else {
+		return array();
+	}
+}
+
+// Remove WP embed script
+function speed_stop_loading_wp_embed() {
+if (!is_admin()) {
+wp_deregister_script('wp-embed');
+}
+}
+add_action('init', 'speed_stop_loading_wp_embed');
+
+// Remove comment-reply.min.js from footer
+function comments_clean_header_hook(){
+ wp_deregister_script( 'comment-reply' );
+ }
+add_action('init','comments_clean_header_hook');
+
+
+/**
+ *  Register menus.
  */
 function raythompsonwebdev_menu_function() {
 
@@ -247,12 +295,17 @@ add_action( 'after_setup_theme', 'raythompsonwebdev_cubiq_setup' );
  */
 function raythompsonwebdev_remove_change_myheaders( $headers ) {
 	unset( $headers['X-Pingback'] );
-	$headers['X-Powered-By'] = 'PHP/5';
+	$headers['X-Powered-By'] = 'PHP/7';
 	return $headers;
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
-
+/*function to add async to all scripts*/
+function js_async_attr($tag){
+	# Add async to all remaining scripts
+	return str_replace( ' src', ' async="async" src', $tag );
+   }
+   add_filter( 'script_loader_tag', 'js_async_attr', 10 );
 
 /**
  * Enqueue style sheets.
@@ -261,7 +314,7 @@ function raythompsonwebdev_register_styles() {
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri() );
 
 	// Add Font Awesome icons (http://fontawesome.io).
-	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css' );
+	//wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css' );
 
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
@@ -317,8 +370,8 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_add_lightbox' );
  */
 function raythompsonwebdev_add_lightbox() {
 	if ( 'gallery' === get_post_type() || is_page( 'about' ) ) {
-		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.min.css', false, '1.1', 'all' );
-		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.1', 'all' );
+		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), false, true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
 	}
 }
@@ -402,16 +455,15 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 		?>
 
 		<script type="text/javascript" async>
+                    
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','http://localhost/wordpress/local-ga.js','ga');
 
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-86655310-1']);
-		_gaq.push(['_trackPageview']);
-
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
+ga('create', 'UA-86655310-1', 'auto');
+ga('send', 'pageview');
+		
 
 		</script>
 		<?php
@@ -624,7 +676,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
 			)
 		);
 		// If there is more than 1 attachment in a gallery...
-		if ( count( $attachment_ids ) > 1 ) {
+		if ( count( $attachment_ids, 0 ) > 1 ) {
 			foreach ( $attachment_ids as $attachment_id ) {
 				if ( $attachment_id === $post->ID ) {
 					$next_id = current( $attachment_ids );

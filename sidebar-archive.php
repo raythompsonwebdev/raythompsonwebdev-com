@@ -18,21 +18,14 @@
 
 <aside id="side-bar" class="group" role="complementary">
 
-<<<<<<< HEAD:sidebar-archive.php
 	
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'categoree-widget-area' ) ) : ?>
 
 		<?php endif; ?>
-=======
-    
-    <article class="side-bar-box">
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('categoree-widget-area')) : ?>
->>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/sidebar-archive.php
 
 	</article>
 
-<<<<<<< HEAD:sidebar-archive.php
 	   
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'archives-widget-area' ) ) : ?>
@@ -47,23 +40,7 @@
 <?php endif; ?>
 
 </article>
-=======
-    </article>
 
-       
-    <article class="side-bar-box">
-        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('archives-widget-area')) : ?>
-
-        <?php endif; ?>
-    </article>
->>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/sidebar-archive.php
-
-    <article class="side-bar-box">
-
-<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Primary Sidebar')) : ?>
-
-<?php endif; ?>
-
-</article>
+  
 
 </aside>    
