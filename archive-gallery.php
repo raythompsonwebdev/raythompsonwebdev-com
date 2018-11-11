@@ -19,10 +19,10 @@ get_header();
 
 <h1><?php post_type_archive_title(); ?></h1>
 <div class="main-text">
-
+<p><?php echo __('Check out websites and web applications I am currently working on.','raythompsonwebdev-com'); ?></p>
 </div>
-<div class="seperator"></div>
-<div class="seperator"></div>
+
+
 
 <div id="photocontainer" ><!-- Container Starts Here -->
 

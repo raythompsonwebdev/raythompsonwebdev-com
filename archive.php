@@ -33,32 +33,32 @@ while ( have_posts() ) :
 	</h1>
 
 	<!--Post entry Header-->
-			<header class="byline">
-				<div class="entry-meta">
-					<?php if ( 'post' === get_post_type() ) : ?>
-						<div class="meta-content">
+	<header class="byline">
+		<div class="entry-meta">
+			<?php if ( 'post' === get_post_type() ) : ?>
+				<div class="meta-content">
 
-							<?php
-								raythompsonwebdev_com_posted_on();
-							?>
+					<?php
+						raythompsonwebdev_com_posted_on();
+					?>
 
-						</div>
-					<?php endif; ?>
 				</div>
-			</header>
+			<?php endif; ?>
+		</div>
+	</header>
 
 	<?php if ( has_post_thumbnail() ) { ?>
-			<figure class="featuredImage">
-					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-							<?php the_post_thumbnail( 'featured-image' ); ?>
-					</a>
-			</figure>
+		<figure class="featuredImage">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+					<?php the_post_thumbnail( 'featured-image' ); ?>
+				</a>
+		</figure>
 	<?php } else { ?>
-			<figure class="featuredImage">
-					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-							<?php the_post_thumbnail(); ?>
-					</a>
-			</figure>
+		<figure class="featuredImage">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+					<?php the_post_thumbnail(); ?>
+				</a>
+		</figure>
 	<?php } ?>
 
 	<div class="entry">
@@ -90,8 +90,7 @@ while ( have_posts() ) :
 	</div>
 
 	<footer class="byline">
-	
-		 <?php raythompsonwebdev_com_entry_footer(); ?>
+		<?php raythompsonwebdev_com_entry_footer(); ?>
 	</footer>
 
  </article>

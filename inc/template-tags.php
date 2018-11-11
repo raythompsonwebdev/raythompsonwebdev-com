@@ -166,7 +166,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_entry_footer' ) ) :
 	}
 endif;
 
-
 if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 	/**
 	 * Displays an optional post thumbnail.
@@ -247,6 +246,7 @@ function raythompsonwebdev_com_category_transient_flusher() {
 }
 add_action( 'edit_category', 'raythompsonwebdev_com_category_transient_flusher' );
 add_action( 'save_post', 'raythompsonwebdev_com_category_transient_flusher' );
+
 /**
  * Utility function to check if a gravatar exists for a given email or id
  *

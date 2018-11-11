@@ -321,7 +321,7 @@ desktop 1920px*/
         min-height: 740px;
         
         h1 {
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-family: ($FontStyleHeader);
             padding: 0;
             color: $color1;
@@ -461,7 +461,7 @@ desktop 1920px*/
             clear: both;
             margin-bottom: 1.5em;
             p {
-                font-size: 0.90em;
+                font-size: 1em;
                 font-weight: normal;
                 width: 100%;
                 letter-spacing: 0.025em;
@@ -887,6 +887,12 @@ desktop 1920px*/
                 line-height: 65px;
                 height: auto;
                 text-align: center;
+                a{
+                    color: $color1;
+                    &:hover{
+                        color: $color3;
+                    }
+                }
             }
             h2,
             h2.entry-title {
@@ -900,7 +906,6 @@ desktop 1920px*/
                 line-height: 55px;
                 height: auto;
                 text-align: left;
-
                 a{
                     display:block;
                     text-align:center;
@@ -910,6 +915,7 @@ desktop 1920px*/
                     line-height: inherit;
                     &:hover{
                         font-weight:normal;
+                        color: $color3;
                     }
                 }
             }
@@ -925,12 +931,15 @@ desktop 1920px*/
                 a {
                     padding-left: 0;
                     height: 100%;
+                    &:hover{
+                        color: $color3;
+                    }
                 }
             }
             p {
                 width: 100%;
                 margin: 0;
-                font-size: 0.95em;
+                font-size: 1em;
                 color: $color8;
                 font-weight: normal;
                 line-height: 2.1em;
@@ -1176,6 +1185,23 @@ desktop 1920px*/
                     width: 100%; //background-color: $color2;
                     display: block;
                     margin: 0 auto;
+                    .parent-post-link,
+                    .full-size-link,
+                    .edit-link{
+                        width: auto;
+                        height: auto;
+                        line-height: 30px;
+                        text-align: left;
+                        font-family: "FontAwesome", ($FontStyle);
+                        font-size: 0.9em;
+                        letter-spacing: 0.055em;
+                        color: $color1;
+                        background-color: $color4;
+                        margin-bottom: 0.2em;
+                        display: inline-block;
+                        padding:0 0.25em;
+
+                    }
                     .has-avatar {
                         display: inline-block;
                         text-align: left;
@@ -1200,7 +1226,7 @@ desktop 1920px*/
                         .date,
                         .posted-on {
                             width: 100%;
-                            display: inline-block;
+                            display: block;
                             height: auto;
                             line-height: 30px;
                             text-align: center;
@@ -1210,8 +1236,6 @@ desktop 1920px*/
                             color: $color8;
                             background-color: $color3;
                             margin-bottom: 0.2em;
-
-
                             a {
                                 color: $color1;
                                 margin: 0 auto;
@@ -2011,7 +2035,7 @@ desktop 1920px*/
                 -webkit-order: 0;
                 -ms-flex-order: 0;
                 order: 0;
-                width: 55%;
+                width: 52%;
                 display: inline-block;
                 float: left;
                 padding: 0.5em;
@@ -2022,7 +2046,7 @@ desktop 1920px*/
                 p{
                     line-height: 1.9em;
                     font-weight:normal;
-                    font-size:0.9em;
+                    font-size:1em;
                     letter-spacing:0.025em;
                     margin-bottom: 0.25em;
                     padding: 0.25em;
@@ -2039,7 +2063,7 @@ desktop 1920px*/
                     background-color:$color2;
                     height:auto;
                     margin:0;
-                    padding:2em 0.5em;
+                    padding:1em 0em;
              
                     h1#front-title{
                         -webkit-align-self: center;
@@ -2056,7 +2080,7 @@ desktop 1920px*/
                         -webkit-flex: 0 0 auto;
                         -ms-flex: 0 0 auto;
                         flex: 0 0 auto;
-                        width:23%;
+                        width:23.5%;
                         display:inline-block;
                         background-color:$color11;
                         height:auto;
@@ -2178,11 +2202,12 @@ desktop 1920px*/
                 -webkit-order: 1;
                 -ms-flex-order: 1;
                 order: 1;
-                width: 44%;
+                width: 48%;
                 height: auto;
                 float: right;
                 display: inline-block;
                 font-family: ($FontStyle);
+                padding: 2em;
                 
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -2244,7 +2269,7 @@ desktop 1920px*/
                 }
                 p {
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 1em;
                     margin-bottom: 0.25em;
                     background-color:$color4;
                     padding: 0.5em;
@@ -2281,7 +2306,7 @@ desktop 1920px*/
                 p {
                     width: 100%;
                     line-height: 1.9em;
-                    font-size: 0.9em;
+                    font-size: 1em;
                     margin-bottom: 0.25em;
                     padding: 0.5em;
                     background-color:$color4;
@@ -2305,7 +2330,7 @@ desktop 1920px*/
                 -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
                 width: 50%;
-                height: 500px;
+                height: 520px;
                 display: inline-block;
                 float: right;
                 box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
@@ -2344,6 +2369,70 @@ desktop 1920px*/
                         overflow: hidden;
                         div.slider-body {
                             width: 100%;
+
+                            #panel-1{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Large-Photoshop-Certicate-.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-2{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/ITQ-USERS-LEVEL1-LARGE.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-3{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Udemy-Large.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-4{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/FreeCodeCamp-large.png');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-5{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/FreeCodeCamp-large.png');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-6{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Mobile-web-applications-Certificate-Foundation-large.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-7{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Content-Marketing-Certificate-Foundation.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-8{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Digital-Marketing-Certificate-Foundation.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
+                            #panel-9{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Digital-Futures-2017-Certificate-of-Participation-large.jpg');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                //background-size: cover;
+                            }
+
                             .panel {
                                 font-family: ($FontStyle);
                                 width: 100%;
@@ -2362,16 +2451,17 @@ desktop 1920px*/
                                     margin: 0;
                                     text-align: center;
                                 }
-                                figure.abobe {
+                                figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    img {
+                                    a {
                                         float: none;
                                         display:block;
-                                        width: 22.59%;
-                                        height: auto;
-                                        margin: 0.5em auto;
+                                        width: 100%;
+                                        height: 5vh;
+                                        margin: 0;
                                         outline: 0;
+                                        padding:0;
                                         @include Transition(all 0.2s cubic-bezier(.86, 0, .07, 1) 0s);
                                         &:hover {
                                             opacity: 0.8;
@@ -2379,6 +2469,8 @@ desktop 1920px*/
                                     }
                                     figcaption {
                                         clear: both;
+                                        width: 90%;
+                                        margin: auto;
                                         h3 {
                                             font-weight: normal;
                                             font-size: 1em;
@@ -2405,17 +2497,17 @@ desktop 1920px*/
                                         ul {
                                             width: 100%;
                                             display: block;
-                                            padding: 0.5em;
                                             margin: 0;
                                             padding: 0.1em;
                                             li {
                                                 width: 100%;
                                                 background-color: $color4;
                                                 font-weight: normal;
+                                                font-size: 0.8em;
                                                 color: $color1;
                                                 display: block;
                                                 height: auto;
-                                                line-height: 21px;
+                                                line-height: 25px;
                                                 margin-bottom: 0.1em;
                                                 border: 1px solid $color2;
                                                 &:before {
@@ -2426,16 +2518,6 @@ desktop 1920px*/
                                                     margin: 0 1%;
                                                     line-height: 1.5em;
                                                     color: $color1;
-                                                }
-                                                a {
-                                                    color: $color1;
-                                                    width: auto;
-                                                    font-size: 0.8em;
-                                                    display: inline-block;
-                                                    &:hover {
-                                                        font-weight: normal;
-                                                        font-style: italic;
-                                                    }
                                                 }
                                             }
                                         }
@@ -2458,76 +2540,6 @@ desktop 1920px*/
                                                     line-height: 1.5em;
                                                 }
                                                 a.lyndalink {
-                                                    color: $color1;
-                                                    width: auto;
-                                                    font-size: 0.8em;
-                                                    display: inline-block;
-                                                    &:hover {
-                                                        font-weight: normal;
-                                                        font-style: italic;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-                                        float: none;
-                                        width: 12.78%;
-                                        display:block;
-                                        height: auto;
-                                        margin: 0.5em auto;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-                                            font-weight: normal;
-                                            font-size: 1em;
-                                            background-color: $color9;
-                                            color: $color4;
-                                            text-indent: 0;
-                                            margin: 0;
-                                            letter-spacing: 0.01em;
-                                            text-align: center;
-                                        }
-                                        h4 {
-                                            margin: 0;
-                                            padding: 0;
-                                            font-size: 0.95em;
-                                            font-weight: normal;
-                                            background-color: $color1;
-                                            color: $color4;
-                                            display: block;
-                                            line-height: 30px;
-                                            text-indent: 2%;
-                                        }
-                                        ul {
-                                            width: 100%;
-                                            display: block;
-                                            margin: 0;
-                                            li {
-                                                width: 100%;
-                                                background-color: $color4;
-                                                font-weight: normal;
-                                                color: $color1;
-                                                display: block;
-                                                height: auto;
-                                                line-height: 21px;
-                                                margin-bottom: 0.1em;
-                                                border: 1px solid $color2;
-                                                &:before {
-                                                    font-family: "FontAwesome";
-                                                    font-size: 0.95em;
-                                                    color: $color1;
-                                                    content: "\f19d";
-                                                    margin: 0 1%;
-                                                    line-height: 1.5em;
-                                                }
-                                                a {
                                                     color: $color1;
                                                     width: auto;
                                                     font-size: 0.8em;
@@ -3106,8 +3118,9 @@ desktop 1440px*/
     
     /*main-content box*/
     #main-content {
-        font-size: 0.9em;
-        
+
+        min-height: 670px;
+
         hr.blog-spacer {
             margin: 2% auto;
         }
@@ -3189,7 +3202,7 @@ desktop 1440px*/
             padding: 0.5em;
 
             p {
-                font-size: 0.9em;
+                
                 line-height: 1.9em;
             }
             ul {
@@ -3454,7 +3467,7 @@ desktop 1440px*/
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -4084,17 +4097,19 @@ desktop 1440px*/
         
         /*frontpage-page-panel */
         #frontpage_container {
-                
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
 
 
             /*homepage container*/
             div#textboxfront {
-                width: 50%;
+                width: 48%;
 
                 
                 p{
                     line-height: 1.9em;
-                    font-size:0.85em;
+                    font-size: 0.95em;
 
                 }
 
@@ -4111,8 +4126,6 @@ desktop 1440px*/
                     }
         
                     article.frntpgbox{
-
-                        width:23%;
         
                         h1{
 
@@ -4180,8 +4193,8 @@ desktop 1440px*/
            
             /*front-page image container*/
             div#svg-image-container {
-                width: 49%;
-
+                width: 51%;
+                padding: 1em;
                 
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -4228,7 +4241,7 @@ desktop 1440px*/
                 }
                 p {
 
-                    font-size: 0.85em;
+                    font-size: 0.9em;
 
                 }
                 .introimg {
@@ -4254,9 +4267,7 @@ desktop 1440px*/
 
                 }
                 p {
-
-                    line-height: 1.9em;
-                    font-size: 0.85em;
+                    font-size: 0.9em;
 
                 }
                 .introimg {
@@ -4271,7 +4282,7 @@ desktop 1440px*/
             section#prof_cont-a {
 
                 width: 50%;
-                height: 500px;
+                height: 520px;
 
                 h1 {
 
@@ -4309,114 +4320,41 @@ desktop 1440px*/
                                     font-size: 0.9em;
 
                                 }
-                                figure.abobe {
+                                figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                    
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 90%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 0.9em;
-
-
+                                            font-size: 0.95em;
                                         }
                                         h4 {
-
                                             font-size: 0.9em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
+                                            padding: 0.1em;
                                             li {
-                                                width: 100%;
 
+                                                font-size: 0.75em;
+     
                                                 &:before {
 
                                                     font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
-                                            li {
-
-                                                line-height: 20px;
-
-                                                &:before {
-
-                                                    font-size: 0.95em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.8em;
-
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size:0.9em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.9em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -4604,15 +4542,14 @@ desktop 1440px*/
 
     /*Footer*/
     footer {
-        height: 120px;
+
         margin-top: 1%;
         .socialpics {
             height: 40%;
             width: 25%;
             .social-icon {
-                margin-left: 4%;
                 width: 21%;
-                &:hover {}
+
             }
             span {
                 width: 100%;
@@ -4733,17 +4670,17 @@ desktop 1280px*/
         /*Mobile-Navigation*/
     }
     #main-content {
-
+        min-height: 580px;
         hgroup {
             margin: 0;
             padding: 0;
         }
         h1 {
-            font-size: 1.4em;
+            font-size: 1.3em;
 
         }
         h2 {
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
         h3 {
             font-size: 1.1em;
@@ -5014,7 +4951,7 @@ desktop 1280px*/
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -5537,7 +5474,9 @@ desktop 1280px*/
                 
                 p{
                     line-height: 1.9em;
-                    font-size:0.8em;
+
+                    font-size: 0.9em;
+                    
 
                 }
 
@@ -5554,8 +5493,6 @@ desktop 1280px*/
                     }
         
                     article.frntpgbox{
-
-                        width:24%;
         
                         h1{
                             line-height: 30px;
@@ -5673,7 +5610,7 @@ desktop 1280px*/
                 }
                 p {
 
-                    font-size: 0.8em;
+                    font-size: 0.85em;
 
                 }
                 .introimg {
@@ -5700,13 +5637,12 @@ desktop 1280px*/
                 }
                 p {
 
-                    line-height: 1.9em;
-                    font-size: 0.8em;
+                    font-size: 0.85em;
 
                 }
                 .introimg {
-                    width: 60px;
-                    height: 60px;
+                    width: 70px;
+                    height: 70px;
 
                 }
 
@@ -5754,111 +5690,42 @@ desktop 1280px*/
                                     font-size: 0.8em;
 
                                 }
-                                figure.abobe {
+                                figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                       
+                                        width: 90%;
+                                        
                                         h3 {
 
-                                            font-size: 0.85em;
-
-
+                                            font-size: 0.9em;
                                         }
                                         h4 {
-
                                             font-size: 0.85em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
+                                            padding: 0.1em;
                                             li {
 
-                                                line-height: 20px;
-
+                                                font-size: 0.75em;
+     
                                                 &:before {
 
-                                                    font-size: 0.95em;
+                                                    font-size: 0.85em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.8em;
-
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 0.85em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.85em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -6042,15 +5909,15 @@ desktop 1280px*/
         }
     }
     footer {
-        height: 120px;
+
         margin-top: 1%;
         .socialpics {
-            height: 40%;
-            width: 25%;
+            
+            width: 30%;
             .social-icon {
-                margin-left: 4%;
+
                 width: 21%;
-                &:hover {}
+
             }
             span {
                 width: 100%;
@@ -6060,7 +5927,7 @@ desktop 1280px*/
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
             .google-icon span .fa-github {
-                font-size: 1.8em;
+                font-size: 1.7em;
             }
 
         }
@@ -6141,7 +6008,7 @@ desktop 1024px*/
                 
             }
             h2 {
-                font-size: 0.7em;
+                font-size: 0.65em;
             }
 
         }
@@ -6168,7 +6035,7 @@ desktop 1024px*/
     }
     #main-content {
         padding: 0;
-        min-height: 740px;
+        min-height: 580px;
         .introimg {
             height: auto;
         }
@@ -6186,7 +6053,7 @@ desktop 1024px*/
             padding: 0.5em;
 
             p {
-                font-size: 0.85em;
+                font-size: 0.9em;
             }
 
             ul {
@@ -6417,7 +6284,7 @@ desktop 1024px*/
                         li {
                             a {
                                 font-size: 0.9em;
-                                &:hover {}
+                                
                             }
                         }
                     }
@@ -6983,16 +6850,14 @@ desktop 1024px*/
                 
                 p{
                     line-height: 1.9em;
-                    font-size:0.8em;
+                    font-size: 0.85em;
 
                 }
 
                 /*skills table*/
                 section#calltoaction{
-                    
-                    width:100%;
-
-        
+                    padding: 1em 0.5em;
+                  
                     h1#front-title{
 
                         text-indent:0.2em;
@@ -7000,11 +6865,9 @@ desktop 1024px*/
                     }
         
                     article.frntpgbox{
-
-                        width:24%;
         
                         h1{
-                            line-height: 30px;
+                            
                             font-size:0.75em;
 
                             &::before {
@@ -7073,7 +6936,7 @@ desktop 1024px*/
             /*front-page image container*/
             div#svg-image-container {
                 width: 46%;
-                                    
+                padding: 0.5em;                    
                 /*PNG for IE8*/
                 figure#image-6 {
                     margin: 0;
@@ -7119,7 +6982,7 @@ desktop 1024px*/
                 }
                 p {
 
-                    font-size: 0.75em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -7146,8 +7009,7 @@ desktop 1024px*/
                 }
                 p {
 
-                    line-height: 1.9em;
-                    font-size: 0.75em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -7200,110 +7062,41 @@ desktop 1024px*/
                                     font-size: 0.75em;
 
                                 }
-                                figure.abobe {
+                                figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 92%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 0.8em;
-
-
+                                            font-size: 0.9em;
                                         }
                                         h4 {
-
                                             font-size: 0.8em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
+                                            padding: 0.1em;
                                             li {
 
-                                                line-height: 20px;
-
+                                                font-size: 0.75em;
+     
                                                 &:before {
 
-                                                    font-size: 0.9em;
+                                                    font-size: 0.85em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.7em;
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 0.8em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.8em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -7319,7 +7112,7 @@ desktop 1024px*/
 
                             a {
 
-                                font-size: 0.65em;
+                                font-size: 0.7em;
 
                             }
                             a:hover {
@@ -7489,9 +7282,9 @@ desktop 1024px*/
     footer {
         margin-top: 3%;
         .socialpics {
-            width: 25%;
+            width: 30%;
             .social-icon {
-                margin-left: 4%;
+
                 width: 21%;
 
             }
@@ -7545,13 +7338,13 @@ desktop 980px*/
         width: 96%;
     }
     header {
-        height: 90px;
+        height: 130px;
         .site-logo {
             position: relative;
-            top: 10px;
-            left: 2px;
+            top: 9px;
             width: 3em;
             height: 3em;
+            left: 2px;
             a {
                 width: 85%;
             }
@@ -7569,14 +7362,15 @@ desktop 980px*/
             outline: 2px solid white;
         }
         .site-firstletter {
-            font-size: 2em;
+            font-size: 1.9em;
         }
         
         hgroup {
-            width: 47%;
-            height: 4em;
+            width: 70%;
             h1#logo {
-                font-size: 1.45em;
+                font-size: 1.6em;
+                width: 100%;
+                height: 35px;
                 span {
                     padding: 0;
                 }
@@ -7585,28 +7379,29 @@ desktop 980px*/
                 }
             }
             h1#logo-blog {
-                font-size: 1.45em;
+                font-size: 1.6em;
+                height: 35px;
                 span {
                     text-align: left;
                 }
                 
             }
             h2 {
-                font-size: 0.6em;
+                font-size: 0.7em;
             }
 
         }
         /*Navigation*/
         nav.menu-main-container {
-            width: 46%;
-            height: 35px;
+            width: 100%;
+            margin: 0.5em 0 0 0;
             ul#menu-main {
                 height: 35px;
                 li.menu-item {
                     width: 19%;
                     a {
                         
-                        font-size: 0.7em;
+                        font-size: 0.8em;
                         
                     }
                 }
@@ -7621,6 +7416,7 @@ desktop 980px*/
         padding: 0;
         h1 {
             font-size: 1.2em;
+            text-align:center;
 
         }
         h2 {
@@ -7884,7 +7680,7 @@ desktop 980px*/
             h1,
             h1.page-title {
                 font-size: 1.3em;
-                line-height:60px;
+
             }
             h2,
             h2.entry-title {
@@ -7894,7 +7690,7 @@ desktop 980px*/
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -7906,7 +7702,7 @@ desktop 980px*/
                 }
             }
             p {
-                font-size: 0.8em;
+                font-size: 0.85em;
 
             }
                         
@@ -8427,26 +8223,30 @@ desktop 980px*/
             }
         }
         
-         /*frontpage-page-panel */
-         #frontpage_container {
+        /*frontpage-page-panel */
+        #frontpage_container {
             display: -webkit-flex;
             display: -ms-flexbox;
             display: flex;
-            -webkit-flex-flow: row ;
-            -ms-flex-flow: row ;
-            flex-flow: row ;
-            -webkit-align-items: center;
-            -ms-flex-align: center;
-            align-items: center;
+            -webkit-flex-flow: row wrap ;
+            -ms-flex-flow: row  wrap ;
+            flex-flow: row  wrap ;
+            align-items: flex-start;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+
                             
             /*homepage container*/
             div#textboxfront {
-                width: 45%;
-                
+                width: 100%;
+                -webkit-order: 1;
+                -ms-flex-order: 1;
+                order: 1;
                 
                 p{
                     line-height: 1.9em;
-                    font-size:0.75em;
+                    font-size:0.85em;
 
                 }
 
@@ -8463,15 +8263,13 @@ desktop 980px*/
                     }
         
                     article.frntpgbox{
-
-                        width:24%;
-        
+                               
                         h1{
-                            line-height: 30px;
-                            font-size:0.7em;
+
+                            font-size:0.75em;
 
                             &::before {
-                                font-size: 0.9em;
+                                font-size: 1em;
 
                             }
         
@@ -8483,8 +8281,8 @@ desktop 980px*/
         
                             li{
                                 
-                                font-size:0.65em;
-                                line-height: 25px;
+                                font-size:0.7em;
+                                line-height: 30px;
 
         
                             }
@@ -8535,7 +8333,11 @@ desktop 980px*/
            
             /*front-page image container*/
             div#svg-image-container {
-                width: 55%;
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                width: 65%;
+                margin: 1em;
                                     
                 /*PNG for IE8*/
                 figure#image-6 {
@@ -8561,6 +8363,7 @@ desktop 980px*/
             
         }
 
+
         /*profile-page-panel */
         div#profile_container {
 
@@ -8582,12 +8385,12 @@ desktop 980px*/
                 }
                 p {
 
-                    font-size: 0.75em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
-                    width: 50px;
-                    height: 50px;
+                    width: 70px;
+                    height: 70px;
 
                 }
                 
@@ -8609,8 +8412,7 @@ desktop 980px*/
                 }
                 p {
 
-                    line-height: 1.9em;
-                    font-size: 0.75em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -8663,108 +8465,41 @@ desktop 980px*/
                                     font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 94%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 0.75em;
-
-
+                                            font-size: 0.9em;
                                         }
                                         h4 {
-
-                                            font-size: 0.75em;
+                                            font-size: 0.85em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
+                                            padding: 0.1em;
                                             li {
 
-                                                line-height: 20px;
-
+                                                font-size: 0.7em;
+     
                                                 &:before {
 
                                                     font-size: 0.9em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.7em;
-
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 0.75em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.75em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -8950,9 +8685,9 @@ desktop 980px*/
     }
     footer {
         .socialpics {
-            width: 25%;
+            width: 35%;
             .social-icon {
-                margin-left: 4%;
+                
                 width: 21%;
             }
 
@@ -8960,7 +8695,7 @@ desktop 980px*/
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
             .google-icon span .fa-github {
-                font-size: 1.75em;
+                font-size: 1.7em;
             }
 
         }
@@ -9074,16 +8809,16 @@ tablet 800px */
     #main-content {
         padding: 1.5em 0 0 0;
         h1 {
-            font-size: 1.5em;
+            font-size: 1.4em;
             text-align: center;
         }
         h2 {
             text-align: center;
-            font-size: 1.4em;
+            font-size: 1.3em;
         }
         h3 {
             text-align: center;
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
         article.main-text,
         div.main-text {
@@ -9379,7 +9114,7 @@ tablet 800px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -9943,11 +9678,9 @@ tablet 800px */
                     }
         
                     article.frntpgbox{
-
-                        width:24%;
-        
+                               
                         h1{
-                            line-height: 30px;
+
                             font-size:0.75em;
 
                             &::before {
@@ -10057,7 +9790,7 @@ tablet 800px */
                 -webkit-order: 0;
                 -ms-flex-order: 0;
                 order: 0;
-                width:100%;
+                width:98%;
 
                  
                 //float: left;
@@ -10069,12 +9802,12 @@ tablet 800px */
                 }
                 p {
 
-                    font-size: 0.85em;
+                    font-size: 0.9em;
 
                 }
                 .introimg {
-                    width: 40px;
-                    height: 40px;
+                    width: 70px;
+                    height: 70px;
 
                 }
                 
@@ -10085,7 +9818,7 @@ tablet 800px */
                 -webkit-order: 2;
                 -ms-flex-order: 2;
                 order: 2;
-                width: 100%;
+                width: 98%;
 
                  
                 //float: left;
@@ -10098,8 +9831,7 @@ tablet 800px */
                 }
                 p {
 
-                    line-height: 1.9em;
-                    font-size: 0.8em;
+                    font-size: 0.9em;
 
                 }
                 .introimg {
@@ -10115,7 +9847,7 @@ tablet 800px */
                 -webkit-order: 3;
                 -ms-flex-order: 3;
                 order: 3;
-                width: 80%;
+                width: 90%;
                 height: 500px;
                 margin:1em;
 
@@ -10152,120 +9884,44 @@ tablet 800px */
 
                                 h2 {
 
-                                    font-size: 0.8em;
+                                    font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 94%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 1em;
-
-
+                                            font-size: 0.9em;
                                         }
                                         h4 {
-
-                                            font-size: 0.9em;
+                                            font-size: 0.85em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
+                                            padding: 0.1em;
                                             li {
-                                                width: 100%;
 
+                                                font-size: 0.7em;
+     
                                                 &:before {
 
                                                     font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
-                                            li {
-
-                                                line-height: 20px;
-
-                                                &:before {
-
-                                                    font-size: 0.95em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.8em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 1em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.9em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -10300,7 +9956,7 @@ tablet 800px */
                 -webkit-order: 1;
                 -ms-flex-order: 1;
                 order: 1;
-                width: 75%;
+                width: 90%;
                 margin:1em;
                 h1 {
 
@@ -10453,9 +10109,9 @@ tablet 800px */
     }
     footer {
         .socialpics {
-            width: 30%;
+            width: 35%;
             .social-icon {
-                margin-left: 4%;
+                
                 width: 21%;
             }
 
@@ -10876,7 +10532,7 @@ tablet 667px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -10887,7 +10543,7 @@ tablet 667px */
                 }
             }
             p {
-                font-size: 0.85em;
+                font-size: 0.9em;
 
             }
                         
@@ -11420,7 +11076,7 @@ tablet 667px */
                 
                 p{
                     line-height: 1.9em;
-                    font-size:0.8em;
+
 
                 }
 
@@ -11437,11 +11093,9 @@ tablet 667px */
                     }
         
                     article.frntpgbox{
-
-                        width:24%;
         
                         h1{
-                            line-height: 30px;
+ 
                             font-size:0.75em;
 
                             &::before {
@@ -11548,7 +11202,7 @@ tablet 667px */
 
             #text-box-profile {
 
-                width:100%;
+                width:98%;
 
                  
                 //float: left;
@@ -11564,8 +11218,8 @@ tablet 667px */
 
                 }
                 .introimg {
-                    width: 40px;
-                    height: 40px;
+                    width: 70px;
+                    height: 70px;
 
                 }
                 
@@ -11574,7 +11228,7 @@ tablet 667px */
             /*second text block*/
             #text-box-profile-a {
 
-                width: 100%;
+                width: 98%;
 
                  
                 //float: left;
@@ -11587,7 +11241,6 @@ tablet 667px */
                 }
                 p {
 
-                    line-height: 1.9em;
                     font-size: 0.8em;
 
                 }
@@ -11637,120 +11290,44 @@ tablet 667px */
 
                                 h2 {
 
-                                    font-size: 0.8em;
+                                    font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 96%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 1em;
-
-
+                                            font-size: 0.9em;
                                         }
                                         h4 {
-
-                                            font-size: 0.9em;
+                                            font-size: 0.85em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
+                                            padding: 0.1em;
                                             li {
-                                                width: 100%;
 
+                                                font-size: 0.65em;
+     
                                                 &:before {
 
                                                     font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
-                                            li {
-
-                                                line-height: 20px;
-
-                                                &:before {
-
-                                                    font-size: 0.95em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.8em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 1em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.9em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.75em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -11782,7 +11359,7 @@ tablet 667px */
 
             /*profile-page_container - chart*/
             section#prof_cont {
-                width: 80%;
+                width: 90%;
 
                 h1 {
 
@@ -11800,7 +11377,7 @@ tablet 667px */
                 }
                 /*chart*/
                 #chart {
-                    width: 80%;
+                    width: 95%;
                     height: 320px;
 
                 
@@ -11938,7 +11515,7 @@ tablet 667px */
         .socialpics {
             width: 40%;
             .social-icon {
-                margin-left: 4%;
+                
                 width: 20%;
             }
 
@@ -12220,7 +11797,7 @@ tablet 600px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -12762,8 +12339,8 @@ tablet 600px */
                 width: 23%;
                 margin-left: 2%;
             }
-            .social-icon:hover {}
-            span {}
+            
+            
             .linkedin-icon span .fa-linkedin,
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
@@ -13100,7 +12677,7 @@ tablet 536px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -13608,7 +13185,7 @@ tablet 536px */
                 
                 p{
                     line-height: 1.8em;
-                    font-size:0.75em;
+                    font-size:0.8em;
 
                 }
 
@@ -13625,11 +13202,9 @@ tablet 536px */
                     }
         
                     article.frntpgbox{
-
-                        width:24%;
         
                         h1{
-                            line-height: 30px;
+   
                             font-size:0.75em;
 
                             &::before {
@@ -13736,7 +13311,7 @@ tablet 536px */
 
             #text-box-profile {
 
-                width:100%;
+                width:98%;
 
                  
                 //float: left;
@@ -13752,8 +13327,8 @@ tablet 536px */
 
                 }
                 .introimg {
-                    width: 35px;
-                    height: 35px;
+                    width: 70px;
+                    height: 70px;
 
                 }
                 
@@ -13762,7 +13337,7 @@ tablet 536px */
             /*second text block*/
             #text-box-profile-a {
 
-                width: 100%;
+                width: 98%;
 
                  
                 //float: left;
@@ -13775,13 +13350,12 @@ tablet 536px */
                 }
                 p {
 
-                    line-height: 1.9em;
                     font-size: 0.75em;
 
                 }
                 .introimg {
-                    width: 50px;
-                    height: 50px;
+                    width: 70px;
+                    height: 70px;
 
                 }
 
@@ -13825,115 +13399,44 @@ tablet 536px */
 
                                 h2 {
 
-                                    font-size: 0.8em;
+                                    font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 32.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 96%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 1em;
-
-
+                                            font-size: 0.85em;
                                         }
                                         h4 {
-
-                                            font-size: 0.9em;
+                                            font-size: 0.8em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
+                                            padding: 0.1em;
                                             li {
-                                                width: 100%;
 
+                                                font-size: 0.65em;
+     
                                                 &:before {
 
                                                     font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
-                                            li {
-
-                                                line-height: 20px;
-
-                                                &:before {
-
-                                                    font-size: 0.95em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.7em;
-
-                                                    
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 18.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 1em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.9em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -14553,7 +14056,7 @@ mobile 480px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -15126,7 +14629,7 @@ mobile 480px */
                         width:100%;
         
                         h1{
-                            line-height: 30px;
+ 
                             font-size:0.8em;
 
                             &::before {
@@ -15233,7 +14736,7 @@ mobile 480px */
 
             #text-box-profile {
 
-                width:100%;
+                width:98%;
 
                  
                 //float: left;
@@ -15255,7 +14758,7 @@ mobile 480px */
             /*second text block*/
             #text-box-profile-a {
 
-                width: 100%;
+                width: 98%;
 
                  
                 //float: left;
@@ -15268,7 +14771,6 @@ mobile 480px */
                 }
                 p {
 
-                    line-height: 1.9em;
                     font-size: 0.75em;
 
                 }
@@ -15282,7 +14784,7 @@ mobile 480px */
 
             /*profile-page_container - hero-slider*/
             section#prof_cont-a {
-                width: 100%;
+                width: 98%;
 
                 h1 {
 
@@ -15317,115 +14819,44 @@ mobile 480px */
 
                                 h2 {
 
-                                    font-size: 0.65em;
+                                    font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 45.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 96%;
+                                        margin: auto;
                                         h3 {
 
                                             font-size: 0.8em;
-
-
                                         }
                                         h4 {
-
                                             font-size: 0.8em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
+                                            padding: 0.1em;
                                             li {
-                                                width: 100%;
 
+                                                font-size: 0.65em;
+     
                                                 &:before {
 
                                                     font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                    &:hover {
-
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
-                                            li {
-
-                                                line-height: 20px;
-
-                                                &:before {
-
-                                                    font-size: 0.95em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.7em;
-
-                                                    
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 26.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 0.8em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.8em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.9em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.7em;
-
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -15457,7 +14888,7 @@ mobile 480px */
 
             /*profile-page_container - chart*/
             section#prof_cont {
-                width: 100%;
+                width: 98%;
 
                 h1 {
 
@@ -15620,8 +15051,7 @@ mobile 480px */
                 width: 23%;
                 margin-left: 1%;
             }
-            .social-icon:hover {}
-            span {}
+            
             .linkedin-icon span .fa-linkedin,
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
@@ -15997,7 +15427,7 @@ mobile 414px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -16515,8 +15945,7 @@ mobile 414px */
                 width: 23%;
 
             }
-            .social-icon:hover {}
-            span {}
+            
             .linkedin-icon span .fa-linkedin,
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
@@ -16916,7 +16345,7 @@ mobile 360px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -17477,7 +16906,7 @@ mobile 360px */
                         width:100%;
         
                         h1{
-                            line-height: 30px;
+                   
                             font-size:0.75em;
 
                             &::before {
@@ -17600,8 +17029,8 @@ mobile 360px */
 
                 }
                 .introimg {
-                    width: 30px;
-                    height: 30px;
+                    width: 70px;
+                    height: 70px;
 
                 }
                 
@@ -17610,7 +17039,7 @@ mobile 360px */
             /*second text block*/
             #text-box-profile-a {
 
-                width: 100%;
+                width: 98%;
 
                  
                 //float: left;
@@ -17623,13 +17052,12 @@ mobile 360px */
                 }
                 p {
 
-                    line-height: 1.9em;
                     font-size: 0.75em;
 
                 }
                 .introimg {
-                    width: 50px;
-                    height: 50px;
+                    width: 70px;
+                    height: 70px;
 
                 }
 
@@ -17637,7 +17065,7 @@ mobile 360px */
 
             /*profile-page_container - hero-slider*/
             section#prof_cont-a {
-                width: 100%;
+                width: 98%;
                 height: 500px;
                 margin: 0.5em;
 
@@ -17674,112 +17102,44 @@ mobile 360px */
 
                                 h2 {
 
-                                    font-size: 0.6em;
+                                    font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 55.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 96%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 0.7em;
-
-
+                                            font-size: 0.75em;
                                         }
                                         h4 {
-
-                                            font-size: 0.7em;
+                                            font-size: 0.75em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.8em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.65em;
-
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
+                                            padding: 0.1em;
                                             li {
 
-                                                line-height: 20px;
-
+                                                font-size: 0.65em;
+     
                                                 &:before {
 
-                                                    font-size: 0.8em;
+                                                    font-size: 0.9em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.65em;
-
-                                                    
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 35.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 0.7em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.7em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.8em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.65em;
-
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -17981,8 +17341,7 @@ mobile 360px */
             .social-icon {
                 width: 23%;
             }
-            .social-icon:hover {}
-            span {}
+            
             .linkedin-icon span .fa-linkedin,
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,
@@ -18095,13 +17454,13 @@ mobile 320px */
     #main-content {
         padding: 0.5em 0 0 0;
         h1 {
-            font-size: 1.1em;
-        }
-        h2 {
             font-size: 1em;
         }
-        h3 {
+        h2 {
             font-size: 0.95em;
+        }
+        h3 {
+            font-size: 0.9em;
         }
         article.main-text,
         div.main-text{
@@ -18361,7 +17720,7 @@ mobile 320px */
                 a{
                     display:block;
                     &:hover{
-                        color: $color4;
+                        color: $color3;
                     }
                 }
             }
@@ -18919,7 +18278,7 @@ mobile 320px */
                         width:100%;
         
                         h1{
-                            line-height: 30px;
+                           
                             font-size:0.75em;
 
                             &::before {
@@ -19060,17 +18419,15 @@ mobile 320px */
                 }
                 p {
 
-                    line-height: 1.9em;
                     font-size: 0.75em;
 
                 }
-
 
             }
 
             /*profile-page_container - hero-slider*/
             section#prof_cont-a {
-                width: 100%;
+                width: 98%;
 
                 h1 {
 
@@ -19105,112 +18462,45 @@ mobile 320px */
 
                                 h2 {
 
-                                    font-size: 0.6em;
+                                    font-size: 0.7em;
 
                                 }
-                                figure.abobe {
-                                    margin: 0;
+                                figure.slider-panel {
+                                    
                                     padding: 0;
-                                    img {
-                                        /*new*/
-                                        width: 55.59%;
-
+                                    a {
+                                        height: 5vh;
+                                                                              
                                         &:hover {
                                             opacity: 0.8;
                                         }
                                     }
                                     figcaption {
-                                        clear: both;
+                                        width: 98%;
+                                        margin: auto;
                                         h3 {
 
-                                            font-size: 0.65em;
-
-
+                                            font-size: 0.75em;
+                                            line-height: 22px;
                                         }
                                         h4 {
-
-                                            font-size: 0.65em;
+                                            font-size: 0.7em;
 
                                         }
                                         ul {
-                                            width: 100%;
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.8em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.6em;
-
-                                                }
-                                            }
-                                        }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            padding: 1%;
+                                            padding: 0.1em;
                                             li {
 
-                                                line-height: 20px;
-
+                                                font-size: 0.6em;
+     
                                                 &:before {
 
-                                                    font-size: 0.8em;
+                                                    font-size: 0.9em;
   
                                                 }
-                                                a.lyndalink {
-
-                                                    font-size: 0.65em;
-
-                                                    
-                                                }
                                             }
                                         }
-                                    }
-                                }
-                                figure.cert {
-                                    margin: 0;
-                                    padding: 0;
-                                    img {
-
-                                        width: 35.78%;
-
-                                    }
-                                    figcaption {
-                                        clear: both;
-                                        h3 {
-
-                                            font-size: 0.65em;
-
-                                        }
-                                        h4 {
-
-                                            font-size: 0.65em;
-
-                                        }
-                                        ul {
-                                            width: 100%;
-
-
-                                            li {
-                                                width: 100%;
-
-                                                &:before {
-
-                                                    font-size: 0.8em;
-
-                                                }
-                                                a {
-
-                                                    font-size: 0.6em;
-
-                                                }
-                                            }
-                                        }
+ 
                                     }
                                 }
                             }
@@ -19412,8 +18702,7 @@ mobile 320px */
             .social-icon {
                 width: 23%;
             }
-            .social-icon:hover {}
-            span {}
+            
             .linkedin-icon span .fa-linkedin,
             .twitter-icon span .fa-twitter,
             .facebook-icon span .fa-facebook,

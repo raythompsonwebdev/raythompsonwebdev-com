@@ -9,7 +9,7 @@ function initMap() {
     }
 
     // New map
-    var map = new google.maps.Map(document.getElementById('map-container'), options);
+    var map = new google.maps.Map(document.getElementById('map_container'), options);
 
     // Listen for click on map
     google.maps.event.addListener(map, 'click', function (event) {

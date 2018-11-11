@@ -18,21 +18,28 @@
  */
 get_header(); ?>
 
-
-
-
-<?php if ( have_posts() ) : ?>
-      <?php	while ( have_posts() ) :	the_post();	?>
-          <?php the_content(); ?>
-          <?php	endwhile;	?>
-      <?php endif; ?>
-
+<div id="contactform">
+    <?php echo do_shortcode('[contact-form-7 id="616" title="Contact form 1"]');?>
+</div>
 
 <br>
 
+<div id="map_container"></div>
+
+<ul class="contact-details">
+    <li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a></li>
+
+    <li id="fa-email"><a href="<?php echo esc_url( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.facebook.com/raythompsonwebdeveloper/</a></li>
+
+    <li id="fa-email"><a href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">@RayThompWeb</a></li>
+
+    <li id="fa-email"><a href="<?php echo esc_url( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
+
+    <li id="fa-email"><a href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">github.com/raythompsonwebdev</a></li>
+</ul>
 
 <div class="clearfix"></div>
-<br>
-<br>
+
+<br><br>
 
 <?php get_footer(); ?>

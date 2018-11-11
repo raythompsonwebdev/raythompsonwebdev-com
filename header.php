@@ -56,7 +56,7 @@ printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), es
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 						
-						<?php elseif(is_home() || is_single()) : ?>
+						<?php elseif(is_home() || is_single('gallery')) : ?>
 			
 						<hgroup>
 						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>

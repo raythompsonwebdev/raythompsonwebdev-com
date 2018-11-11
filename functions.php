@@ -22,7 +22,7 @@
  * @param string $sep   Optional separator.
  * @return string Filtered title.
  */
-function raythompsonwebdev_filter_wp_title( $title, $sep ) {
+function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
 	global $paged, $page;
 
 	if ( is_feed() ) {
@@ -47,22 +47,17 @@ function raythompsonwebdev_filter_wp_title( $title, $sep ) {
 
 	return $title;
 }
-add_filter( 'wp_title', 'raythompsonwebdev_filter_wp_title', 10, 2 );
-
-function wpversion_remove_version() {
-	return '';
-	}
-	add_filter('the_generator', 'wpversion_remove_version');
+add_filter( 'wp_title', 'raythompsonwebdev_com_filter_wp_title', 10, 2 );
 
 
-if ( ! function_exists( 'raythompsonwebdev_theme_setup' ) ) :
+if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 
 	/**
 	 *  Description theme set up.
 	 *
 	 *  @since 4.0.0
 	 */
-	function raythompsonwebdev_theme_setup() {
+	function raythompsonwebdev_com_theme_setup() {
 
 		/**
 		 *  Test if WordPress version and whether a logo has been defined.
@@ -175,7 +170,7 @@ if ( ! function_exists( 'raythompsonwebdev_theme_setup' ) ) :
 
 	}
 endif;
-add_action( 'after_setup_theme', 'raythompsonwebdev_theme_setup' );
+add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
 
 /**
@@ -189,17 +184,17 @@ function raythompsonwebdev_com_load_theme_textdomain() {
  /**
  *  Remove Query Strings – Optional Step
  */
-function _remove_script_version( $src ){
+function raythompsonwebdev_com_remove_script_version( $src ){
 $parts = explode( '?ver', $src );
 return $parts[0];
 }
-add_filter( 'script_loader_src', '_remove_script_version', 15, 1 );
-add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
+add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_script_version', 15, 1 );
+add_filter( 'style_loader_src', 'raythompsonwebdev_com_remove_script_version', 15, 1 );
 
 /**
  * Disable the emoji's
  */
-function disable_emojis() {
+function raythompsonwebdev_com_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -209,7 +204,7 @@ function disable_emojis() {
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
 }
-add_action( 'init', 'disable_emojis' );
+add_action( 'init', 'raythompsonwebdev_com_disable_emojis' );
 
 /**
  * Filter function used to remove the tinymce emoji plugin.
@@ -217,7 +212,7 @@ add_action( 'init', 'disable_emojis' );
  * @param    array  $plugins  
  * @return   array             Difference betwen the two arrays
  */
-function disable_emojis_tinymce( $plugins ) {
+function raythompsonwebdev_com_disable_emojis_tinymce( $plugins ) {
 	if ( is_array( $plugins ) ) {
 		return array_diff( $plugins, array( 'wpemoji' ) );
 	} else {
@@ -225,25 +220,25 @@ function disable_emojis_tinymce( $plugins ) {
 	}
 }
 
-// Remove WP embed script
+/* Remove WP embed script*/
 function speed_stop_loading_wp_embed() {
-if (!is_admin()) {
-wp_deregister_script('wp-embed');
-}
+	if (!is_admin()) {
+	wp_deregister_script('wp-embed');
+	}
 }
 add_action('init', 'speed_stop_loading_wp_embed');
 
 // Remove comment-reply.min.js from footer
 function comments_clean_header_hook(){
- wp_deregister_script( 'comment-reply' );
- }
+	wp_deregister_script( 'comment-reply' );
+	}
 add_action('init','comments_clean_header_hook');
 
 
 /**
  *  Register menus.
  */
-function raythompsonwebdev_menu_function() {
+function raythompsonwebdev_com_menu_function() {
 
 	register_nav_menus(
 		array(
@@ -253,7 +248,7 @@ function raythompsonwebdev_menu_function() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'raythompsonwebdev_menu_function' );
+add_action( 'after_setup_theme', 'raythompsonwebdev_com_menu_function' );
 
 
 /**
@@ -263,10 +258,10 @@ add_action( 'after_setup_theme', 'raythompsonwebdev_menu_function' );
  *
  * @global int $content_width
  */
-function raythompsonwebdev_content_width() {
+function raythompsonwebdev_com_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'raythompsonwebdev_com_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'raythompsonwebdev_content_width', 0 );
+add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
 
 /**
  *  Remove comment cookies.
@@ -276,17 +271,14 @@ remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
 /**
  *  Remove stuff.
  */
-function raythompsonwebdev_cubiq_setup() {
+function raythompsonwebdev_com_cubiq_setup() {
 
 	add_filter( 'the_generator', '__return_false' );
 	// remove version from rss.
 	add_filter( 'the_generator', '__return_empty_string' );
-	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 }
-add_action( 'after_setup_theme', 'raythompsonwebdev_cubiq_setup' );
+add_action( 'after_setup_theme', 'raythompsonwebdev_com_cubiq_setup' );
 
 /**
  *  Remove WordPress.
@@ -300,27 +292,27 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
-/*function to add async to all scripts*/
-function js_async_attr($tag){
-	# Add async to all remaining scripts
-	return str_replace( ' src', ' async="async" src', $tag );
-   }
-   add_filter( 'script_loader_tag', 'js_async_attr', 10 );
-
+/*function to add async to all scripts
+function raythompsonwebdev_com_js_async_attr($tag){
+# Add async to all remaining scripts
+return str_replace( ' src', ' async="async" src', $tag );
+}
+add_filter( 'script_loader_tag', 'raythompsonwebdev_com_js_async_attr', 10 );
+*/
 /**
  * Enqueue style sheets.
  */
-function raythompsonwebdev_register_styles() {
+function raythompsonwebdev_com_register_styles() {
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri() );
 
 	// Add Font Awesome icons (http://fontawesome.io).
-	//wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css' );
+	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css' );
 
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array(), '1.0' );
 	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lte IE 8' );
 }
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_register_styles' );
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
 
 
 /**
@@ -364,15 +356,15 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 
 
 
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_add_lightbox' );
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
 /**
  *  Enqueue lightbox script.
  */
-function raythompsonwebdev_add_lightbox() {
+function raythompsonwebdev_com_add_lightbox() {
 	if ( 'gallery' === get_post_type() || is_page( 'about' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.1', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), false, true );
-		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'fancybox' ), false, true );
+		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), false, true );
 	}
 }
 
@@ -384,7 +376,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_gallery_script' );
 function raythompsonwebdev_com_gallery_script() {
 
 	if ( 'gallery' === get_post_type() ) {
-		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/minified/jquery.cookie.min.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
 		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/minified/websites.min.js', array( 'jquery' ), '20161110', true );
 
 	}
@@ -639,13 +631,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_attachment_nav' ) ) :
 		<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
 				</div>
 	   </div><!-- .nav-links -->
-
-
 	  </div>
 	 </nav>
 
-
-		<?php
+	<?php
 	}
 endif;
 

@@ -15,7 +15,7 @@
  * 
  *  Comments themplate - Adapted Version of Kubrick's
  *
- *  There are 2 distinct sections after the protection area ::
+ *  There are 2 distinct sections after the protection area :
  *  Display Comments is a loop surrounding the wp_list_comments() function
  *  The Form/Login section uses comment_form() to do everything
  *  ( Finally the RSS link is at the end of the page )

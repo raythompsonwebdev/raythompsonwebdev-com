@@ -24,9 +24,6 @@ get_header(); ?>
 <?php esc_html_e( 'Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com' ); ?>
 </p>
 <br/>
-<br/>
-<br/>
-<br/>
 
 </div>
 
@@ -37,9 +34,7 @@ get_header(); ?>
 <span class="social-1"></span>
 <?php endif; ?>
 
-
 <br/><br/>
-
 
 <?php
 /**
