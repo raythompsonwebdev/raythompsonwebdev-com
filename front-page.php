@@ -27,11 +27,11 @@
 <p>Whether it's for a small business or a personal goal, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.</p>
 <section id="calltoaction">
             <article class="frntpgbox">
-                <h1>Design</h1>
+                <h1>Code</h1>
                     <ul>
-                        <li>Wireframes</li>
-                        <li>Prototypes</li>
-                        <li>Photoshop</li>
+                        <li>HTML/CSS</li>
+                        <li>PHP</li>
+                        <li>Javascript(ES6)</li>
                         <li></li>
                     </ul>
             

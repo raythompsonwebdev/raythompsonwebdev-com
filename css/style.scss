@@ -198,11 +198,13 @@ desktop 1920px*/
                     margin: 0;
                     color: $color4;
                     text-align: left;
+                    display: inline-block;
                 }
                 span:last-of-type {
                     height: 100%;
                     color: $color1;
                     margin: 0 0.1em;
+                    display: inline-block;
                 }
             }
             h2 {
@@ -827,9 +829,11 @@ desktop 1920px*/
                             color: $color4;
                             background-color: $color3;
                             span.comment-author-link {
+                                font-size:0.9em;
                                 a {
                                     display: block;
                                     color: $color4;
+                                    
                                 }
                             }
                         }
@@ -838,7 +842,7 @@ desktop 1920px*/
                     div.tagcloud {
                         width: 90%;
                         margin: auto;
-                        font-size: 100%;
+                        font-size: 1em;
                         display: block;
                         padding: 1em 0;
                     }
@@ -915,7 +919,7 @@ desktop 1920px*/
                     line-height: inherit;
                     &:hover{
                         font-weight:normal;
-                        color: $color3;
+                        color: $color1;
                     }
                 }
             }
@@ -1271,7 +1275,7 @@ desktop 1920px*/
                 line-height: 40px;
                 list-style: none;
                 background-color: $color3;
-                width: 40%;
+                width: 45%;
                 color: $color1;
                 @include originTran( 50% 50%);
                 @include Transition(all 0.2s linear 0s, color 0.2s linear 0s);
@@ -1472,7 +1476,6 @@ desktop 1920px*/
                 .tags-links,
                 .edit-link,
                 .comments-link{
-
                     display:inline-block;
                     padding:0 0.5em;
                     line-height:65px;
@@ -2370,66 +2373,66 @@ desktop 1920px*/
                         div.slider-body {
                             width: 100%;
 
-                            #panel-1{ 
+                            #panel-1 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Large-Photoshop-Certicate-.jpg');
                                 background-repeat: no-repeat;
-                                background-position: center;
+                                background-position: 50% 40%;
                                 //background-size: cover;
                             }
 
-                            #panel-2{ 
+                            #panel-2 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/ITQ-USERS-LEVEL1-LARGE.jpg');
                                 background-repeat: no-repeat;
-                                background-position: center;
+                                background-position: 50% 22%;
                                 //background-size: cover;
                             }
 
-                            #panel-3{ 
+                            #panel-3 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Udemy-Large.jpg');
                                 background-repeat: no-repeat;
-                                background-position: center;
+                                background-position: 50% 22%;
                                 //background-size: cover;
                             }
 
-                            #panel-4{ 
+                            #panel-4 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/FreeCodeCamp-large.png');
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 //background-size: cover;
                             }
 
-                            #panel-5{ 
-                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/FreeCodeCamp-large.png');
+                            #panel-5 .slider-panel a.fancybox span{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/lynda_logo1k-d_72x72.png');
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 //background-size: cover;
                             }
 
-                            #panel-6{ 
+                            #panel-6 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Mobile-web-applications-Certificate-Foundation-large.jpg');
                                 background-repeat: no-repeat;
-                                background-position: center;
+                                background-position: 50% 31%;
                                 //background-size: cover;
                             }
 
-                            #panel-7{ 
-                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Content-Marketing-Certificate-Foundation.jpg');
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                //background-size: cover;
-                            }
-
-                            #panel-8{ 
+                            #panel-7 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Digital-Marketing-Certificate-Foundation.jpg');
                                 background-repeat: no-repeat;
-                                background-position: center;
+                                background-position: 50% 18%;
                                 //background-size: cover;
                             }
 
-                            #panel-9{ 
+                            #panel-8 .slider-panel a.fancybox span{ 
+                                background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Content-Marketing-Certificate-Foundation.jpg');
+                                background-repeat: no-repeat;
+                                background-position: 50% 18%;
+                                //background-size: cover;
+                            }
+
+                            #panel-9 .slider-panel a.fancybox span{ 
                                 background-image:url('http://localhost/wordpress/wp-content/themes/raythompsonwebdev-com/images/Digital-Futures-2017-Certificate-of-Participation-large.jpg');
                                 background-repeat: no-repeat;
-                                background-position: center;
+                                background-position: 50% 61%;
                                 //background-size: cover;
                             }
 
@@ -2451,25 +2454,27 @@ desktop 1920px*/
                                     margin: 0;
                                     text-align: center;
                                 }
+
                                 figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    a {
-                                        float: none;
-                                        display:block;
-                                        width: 100%;
-                                        height: 5vh;
-                                        margin: 0;
-                                        outline: 0;
-                                        padding:0;
+                                    a.fancybox {
                                         @include Transition(all 0.2s cubic-bezier(.86, 0, .07, 1) 0s);
-                                        &:hover {
-                                            opacity: 0.8;
+                                        span{
+                                            float: none;
+                                            display:block;
+                                            width: 100%;
+                                            height: 17vh;
+                                            margin: 0;
+                                            outline: 0;
+                                            padding:0;
+                                            
                                         }
+
                                     }
                                     figcaption {
                                         clear: both;
-                                        width: 90%;
+                                        width: 100%;
                                         margin: auto;
                                         h3 {
                                             font-weight: normal;
@@ -2501,7 +2506,7 @@ desktop 1920px*/
                                             padding: 0.1em;
                                             li {
                                                 width: 100%;
-                                                background-color: $color4;
+                                                background-color: $color2;
                                                 font-weight: normal;
                                                 font-size: 0.8em;
                                                 color: $color1;
@@ -2509,7 +2514,7 @@ desktop 1920px*/
                                                 height: auto;
                                                 line-height: 25px;
                                                 margin-bottom: 0.1em;
-                                                border: 1px solid $color2;
+                                                
                                                 &:before {
                                                     font-family: "FontAwesome";
                                                     font-size: 0.95em;
@@ -2517,40 +2522,11 @@ desktop 1920px*/
                                                     content: "\f19d";
                                                     margin: 0 1%;
                                                     line-height: 1.5em;
-                                                    color: $color1;
+                                                    
                                                 }
                                             }
                                         }
-                                        ul#lyndalinks {
-                                            width: 100%;
-                                            li {
-                                                width: 100%;
-                                                font-weight: normal;
-                                                color: $color1;
-                                                display: block;
-                                                height: auto;
-                                                line-height: 20px;
-                                                border: 1px solid $color2;
-                                                &:before {
-                                                    font-family: "FontAwesome";
-                                                    font-size: 0.95em;
-                                                    color: $color1;
-                                                    content: "\f19d";
-                                                    margin: 0 1%;
-                                                    line-height: 1.5em;
-                                                }
-                                                a.lyndalink {
-                                                    color: $color1;
-                                                    width: auto;
-                                                    font-size: 0.8em;
-                                                    display: inline-block;
-                                                    &:hover {
-                                                        font-weight: normal;
-                                                        font-style: italic;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        
                                     }
                                 }
                             }
@@ -3380,53 +3356,54 @@ desktop 1440px*/
             padding-top: 0;
             
             .side-bar-box {
-                width: 31.9%;
                 
                 h2 {
-                    font-size: 1.1em;
+
+                    font-size: 1.15em;
 
                 }
-                #social h2 {
-                    width: 100%;
-                }
-                .tagcloud {
-                    width: 90%;
+                section.widget {
 
-                }
-                .widget {
-
-                    padding: 0;
                     h2.widget-title {
-                        font-size: 1.05em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
-                        display: block;
-                        margin: 0;
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
                             line-height: 30px;
 
                             a {
-                                font-size: 0.85em;
 
+                                font-size: 0.9em;
                                 &:hover {
+
                                     font-weight: bold;
                                 }
                             }
+                            
+
                         }
                         li.recentcomments {
                             display: block;
-                            color: $color4;
+
                             span.comment-author-link {
                                 a {
-                                    font-size:0.9em;
                                     display: block;
-                                    color: $color4;
+
                                 }
                             }
                         }
+                        
                     }
-                    ul.children > li {
-                        margin: 1% auto;
+                    div.tagcloud {
+                        width: 90%;
+                        
+
                     }
                 }
             }
@@ -4323,12 +4300,13 @@ desktop 1440px*/
                                 figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                    
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 90%;
@@ -4497,31 +4475,19 @@ desktop 1440px*/
                         }
                                                    
                         figcaption.showcase-content {
-
-                            height: 50%;
-                            padding: 1em 0;
-
-
-                            
+  
                             h1 {
 
-                                font-size: 1em;
-
-                                width:90%;
+                                font-size: 0.95em;
+                              
 
                             }
 
                             a {
 
-                                width: 80%;
-
-                                font-size: 0.9em;
-
                                
-                                &:hover {
+                                font-size: 0.85em;
 
-
-                                }
                             }
 
                         }
@@ -4875,53 +4841,55 @@ desktop 1280px*/
             padding-top: 0;
             
             .side-bar-box {
-                width: 31.9%;
-                
+            
+                width: 32%;
                 h2 {
-                    font-size: 1.1em;
+
+                    font-size: 1.15em;
 
                 }
-                #social h2 {
-                    width: 100%;
-                }
-                .tagcloud {
-                    width: 90%;
+                section.widget {
 
-                }
-                .widget {
-
-                    padding: 0;
                     h2.widget-title {
-                        font-size: 1.05em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
-                        display: block;
-                        margin: 0;
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
                             line-height: 30px;
 
                             a {
-                                font-size: 0.8em;
 
+                                font-size: 0.8em;
                                 &:hover {
+
                                     font-weight: bold;
                                 }
                             }
+                            
+
                         }
                         li.recentcomments {
                             display: block;
-                            color: $color4;
+                            font-size:0.8em;
+                            
                             span.comment-author-link {
                                 a {
-                                    font-size:0.85em;
                                     display: block;
-                                    color: $color4;
+                                    
                                 }
                             }
                         }
+                        
                     }
-                    ul.children > li {
-                        margin: 1% auto;
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -5693,12 +5661,13 @@ desktop 1280px*/
                                 figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                        
@@ -5867,34 +5836,20 @@ desktop 1280px*/
                                                    
                         figcaption.showcase-content {
 
-                            height: 50%;
-                            padding: 1em 0;
-
-
-                            
+                         
                             h1 {
 
                                 font-size: 0.9em;
-
-                                width:90%;
 
                             }
 
                             a {
 
-                                width: 80%;
 
                                 font-size: 0.85em;
 
-                               
-                                &:hover {
-
-
-                                }
                             }
-
                         }
-
                     }
 
                     figure.showcase-container:hover div.showcase-img{
@@ -6262,31 +6217,59 @@ desktop 1024px*/
                 
         /*SideBar*/
         aside#side-bar {
+            
             h2 {
                 font-size: 1.05em;
             }
             .side-bar-box {
-                -webkit-flex: 0 1 auto;
-                -ms-flex: 0 1 auto;
-                flex: 0 1 auto; //display: inline-block;
-                height: auto;
-                width: 32.5%;
-                margin: 0.2em;
-                float: left;
-                .widget {
+                width: 31.5%;
+
+                h2 {
+
+                    font-size: 1em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
-                        height: 40px;
-                        font-size: 1.05em;
-                        line-height: 40px;
-                        letter-spacing: 0.1em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
+                            line-height: 30px;
+
                             a {
-                                font-size: 0.9em;
-                                
+
+                                font-size: 0.8em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -6317,7 +6300,7 @@ desktop 1024px*/
             h2,
             h2.entry-title {
 
-                font-size: 1.2em;
+                font-size: 1.15em;
                 a{
                     display:block;
                     &:hover{
@@ -6513,7 +6496,7 @@ desktop 1024px*/
             /* continue reading button */                     
             div.continue-reading {
                 font-size: 0.75em;
-               
+                width: 50%;
                 a {
                     display: block;
 
@@ -6629,7 +6612,6 @@ desktop 1024px*/
                 .tags-links,
                 .edit-link,
                 .comments-link{
-
                     line-height:65px;
                 }
             }
@@ -7065,12 +7047,13 @@ desktop 1024px*/
                                 figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 92%;
@@ -7237,31 +7220,17 @@ desktop 1024px*/
                         }
                                                    
                         figcaption.showcase-content {
-
-                            height: 50%;
-                            padding: 1em 0;
-
-
-                            
+                            padding: 0.5em 0; 
                             h1 {
 
-                                font-size: 0.9em;
-
-                                width:90%;
+                                font-size: 0.85em;
 
                             }
 
                             a {
 
-                                width: 80%;
-
-                                font-size: 0.85em;
-
-                               
-                                &:hover {
-
-
-                                }
+                                font-size: 0.75em;
+                         
                             }
 
                         }
@@ -7643,18 +7612,55 @@ desktop 980px*/
                 font-size: 1.05em;
             }
             .side-bar-box {
-                .widget {
+                width: 31.5%;
+
+                h2 {
+
+                    font-size: 1em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
-                        font-size: 1.05em;
-                        letter-spacing: 0.1em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
+                            line-height: 30px;
+
                             a {
-                                font-size: 0.80em;
+
+                                font-size: 0.75em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
                             }
-                            a:hover {}
+                            
+
                         }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                
+                                a {
+                                    display: block;
+                                    
+                                }
+                            }
+                        }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -7889,8 +7895,7 @@ desktop 980px*/
             
             /* continue reading button */                     
             div.continue-reading {
-                font-size: 0.75em;
-                width: 50%;
+                width: 60%;
                 a {
                     display: block;
 
@@ -8468,12 +8473,13 @@ desktop 980px*/
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 94%;
@@ -8641,34 +8647,19 @@ desktop 980px*/
                                                    
                         figcaption.showcase-content {
 
-                            height: 50%;
-                            padding: 1em 0;
-
-
                             
                             h1 {
 
-                                font-size: 0.9em;
-
-                                width:90%;
+                                font-size: 0.85em;
 
                             }
 
                             a {
 
-                                width: 80%;
-
-                                font-size: 0.85em;
-
-                               
-                                &:hover {
-
-
-                                }
+                                font-size: 0.8em;
+             
                             }
-
                         }
-
                     }
 
                     figure.showcase-container:hover div.showcase-img{
@@ -9051,34 +9042,56 @@ tablet 800px */
                 font-size: 1.05em;
             }
             .side-bar-box {
-                width: 49%;
+                width: 47.5%;
+
                 h2 {
-                    font-size: 1.1em;
+
+                    font-size: 1em;
+
                 }
-                .tagcloud {
-                    text-align: center;
-                }
-                .widget {
+                section.widget {
+
                     h2.widget-title {
+
                         font-size: 1em;
+
                     }
-                    ul {
-                        height: auto;
-                        margin: 1% 0;
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
-                            width: 96%;
-                            margin: 1% auto;
+
+                            line-height: 30px;
+
                             a {
-                                width: 100%;
-                                font-size: 0.85em;
-                                &:hover {}
+
+                                font-size: 0.8em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                font-size: 0.9em;
+                                
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
                     }
-                    ul.children > li {
-                        background-color: $color2;
-                        margin: 1% auto;
-                        font-size: 0.85em;
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -9311,8 +9324,7 @@ tablet 800px */
             
             /* continue reading button */                     
             div.continue-reading {
-                font-size: 0.75em;
-                width: 55%;
+                width: 100%;
                 a {
                     display: block;
 
@@ -9427,7 +9439,6 @@ tablet 800px */
                 .tags-links,
                 .edit-link,
                 .comments-link{
-
                     line-height:65px;
                 }
             }
@@ -9890,12 +9901,13 @@ tablet 800px */
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 94%;
@@ -10064,31 +10076,19 @@ tablet 800px */
                         }
                                                    
                         figcaption.showcase-content {
-
-                            height: 50%;
-                            padding: 1em 0;
-
-
+ 
                             
                             h1 {
 
-                                font-size: 0.9em;
-
-                                width:90%;
+                                font-size: 0.85em;
 
                             }
 
                             a {
 
-                                width: 80%;
 
-                                font-size: 0.85em;
+                                font-size: 0.75em;
 
-                               
-                                &:hover {
-
-
-                                }
                             }
 
                         }
@@ -10167,7 +10167,6 @@ tablet 667px */
             top: 10px;
             a {
                 width: 85%;
-                line-height: 34px
             }
             /* Text meant only for screen readers. */
             .screen-reader-text {
@@ -10238,11 +10237,11 @@ tablet 667px */
         margin-bottom: 0;
         padding: 1em 0 0 0;
         h1 {
-            font-size: 1.35em;
+            font-size: 1.3em;
             text-align: center;
         }
         h2 {
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
         h3 {
             font-size: 1.1em;
@@ -10479,20 +10478,56 @@ tablet 667px */
                 font-size: 1.15em;
             }
             .side-bar-box {
-                width: 49%;
-                .widget {
+                width: 47.5%;
+
+                h2 {
+
+                    font-size: 1em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
+
                         font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
+                            line-height: 30px;
+
                             a {
-                                font-size: 0.9em;
+
+                                font-size: 0.8em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
                             }
-                            a:hover {}
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                font-size: 0.9em;
+                                
+                                a {
+                                    display: block;
+                                    
+                                }
+                            }
                         }
                         
-                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -10723,8 +10758,8 @@ tablet 667px */
             
             /* continue reading button */                     
             div.continue-reading {
-                font-size: 0.75em;
-                width: 70%;
+                font-size: 0.85em;
+                width: 100%;
                 a {
                     display: block;
 
@@ -10844,7 +10879,7 @@ tablet 667px */
                 .edit-link,
                 .comments-link{
                     font-size: 0.9em;
-                    line-height:45px;
+                    
                 }
             }
         }
@@ -11166,7 +11201,7 @@ tablet 667px */
                 -webkit-order: 0;
                 -ms-flex-order: 0;
                 order: 0;
-                width: 65%;
+                width: 75%;
                 margin: 1em;
                                     
                 /*PNG for IE8*/
@@ -11296,12 +11331,13 @@ tablet 667px */
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 96%;
@@ -11430,7 +11466,7 @@ tablet 667px */
                         li {
 
                             font-size: 0.7em;
-                            width: 18%;
+                            width: 18.5%;
                         }
                         li:hover {
 
@@ -11468,30 +11504,18 @@ tablet 667px */
                                                    
                         figcaption.showcase-content {
 
-                            height: 50%;
-                            padding: 1em 0;
-
-
                             
                             h1 {
 
-                                font-size: 0.9em;
+                                font-size: 0.8em;
 
-                                width:90%;
 
                             }
 
                             a {
 
-                                width: 80%;
-
-                                font-size: 0.85em;
-
-                               
-                                &:hover {
-
-
-                                }
+                                font-size: 0.8em;
+        
                             }
 
                         }
@@ -11567,7 +11591,6 @@ tablet 600px */
             top: 9px;
             a {
                 width: 85%;
-                line-height: 34px
             }
             /* Text meant only for screen readers. */
             .screen-reader-text {
@@ -11636,15 +11659,14 @@ tablet 600px */
     
     #main-content {
         h1 {
-            font-size: 1.35em;
-            height: 40px;
-            line-height: 40px;
+            font-size: 1.2em;
+
         }
         h2 {
-            font-size: 1.25em;
+            font-size: 1.1em;
         }
         h3 {
-            font-size: 1.15em;
+            font-size: 1em;
         }
         
         #contactform {
@@ -11756,18 +11778,56 @@ tablet 600px */
                 font-size: 1.1em;
             }
             .side-bar-box {
-                width: 96.7%;
-                .widget {
+                width: 100%;
+
+                h2 {
+
+                    font-size: 1.15em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
-                        font-size: 1.1em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
+                            line-height: 30px;
+
                             a {
-                                font-size: 0.9em;
-                                &:hover {}
+
+                                font-size: 1em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                font-size:1em;
+                                
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -11848,8 +11908,7 @@ tablet 600px */
 
                 h1.post-meta-key {
                     
-                    margin-bottom:0.5em;
-                    font-size:1.1em;
+                    font-size:1em;
 
                 }
 
@@ -11990,8 +12049,7 @@ tablet 600px */
             
             /* continue reading button */                     
             div.continue-reading {
-                font-size: 0.75em;
-                
+                                
                 a {
                     display: block;
 
@@ -12107,7 +12165,6 @@ tablet 600px */
                 .tags-links,
                 .edit-link,
                 .comments-link{
-
                     line-height:45px;
                 }
             }
@@ -12440,7 +12497,7 @@ tablet 536px */
         hgroup {
             width: 80%;
             h1#logo {
-                font-size: 1.4em;
+                font-size: 1.3em;
                 width: 100%;
                 span {
                     padding: 0;
@@ -12450,7 +12507,7 @@ tablet 536px */
                 }
             }
             h1#logo-blog {
-                font-size: 1.4em;
+                font-size: 1.3em;
                 width: 100%;
                 span {
                     text-align: left;
@@ -12637,15 +12694,55 @@ tablet 536px */
                 font-size: 1.1em;
             }
             .side-bar-box {
-                width: 96.7%;
-                .widget {
-                    ul {
+                width: 97.5%;
+
+                h2 {
+
+                    font-size: 1.15em;
+
+                }
+                section.widget {
+
+                    h2.widget-title {
+
+                        font-size: 1em;
+
+                    }
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
+                            line-height: 30px;
+
                             a {
+
                                 font-size: 0.9em;
-                                &:hover {}
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                                                
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -12867,8 +12964,7 @@ tablet 536px */
             
             /* continue reading button */                     
             div.continue-reading {
-
-                width: 75%;
+                width: 100%;
                 a {
                     display: block;
 
@@ -12986,7 +13082,7 @@ tablet 536px */
                 .edit-link,
                 .comments-link{
                     width: 65%;
-                    line-height:45px;
+                    
                 }
             }
         }
@@ -13275,7 +13371,7 @@ tablet 536px */
                 -webkit-order: 0;
                 -ms-flex-order: 0;
                 order: 0;
-                width: 65%;
+                width: 75%;
                 margin: 1em;
                                     
                 /*PNG for IE8*/
@@ -13405,12 +13501,13 @@ tablet 536px */
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 96%;
@@ -13576,31 +13673,20 @@ tablet 536px */
                         }
                                                    
                         figcaption.showcase-content {
-
-                            height: 50%;
-                            padding: 1em 0;
-
-
                             
                             h1 {
 
                                 font-size: 0.9em;
-
-                                width:90%;
+      
 
                             }
 
                             a {
 
-                                width: 80%;
 
                                 font-size: 0.85em;
 
-                               
-                                &:hover {
 
-
-                                }
                             }
 
                         }
@@ -14008,24 +14094,54 @@ mobile 480px */
                 font-size: 1.1em;
             }
             .side-bar-box {
-                -webkit-flex: 0 1 auto;
-                -ms-flex: 0 1 auto;
-                flex: 0 1 auto;
-                //display: inline-block;
-                height: auto;
-                width: 95.7%;
-                margin: 0.5em;
-                .widget {
+                
+                h2 {
+
+                    font-size: 1.15em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
-                        font-size: 1.1em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
-                            font-size: 1em;
+
+                            line-height: 30px;
+
                             a {
-                                font-size: 0.9em;
+
+                                font-size: 0.8em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                                                
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -14251,8 +14367,8 @@ mobile 480px */
             
             /* continue reading button */                     
             div.continue-reading {
-                font-size: 0.75em;
-                width: 85%;
+                font-size: 0.8em;
+                width: 100%;
                 a {
                     display: block;
 
@@ -14373,7 +14489,7 @@ mobile 480px */
                 .edit-link,
                 .comments-link{
                     width: 70%;
-                    line-height:45px;
+                    
                 }
             }
         }
@@ -14825,12 +14941,13 @@ mobile 480px */
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 96%;
@@ -15000,30 +15117,19 @@ mobile 480px */
                                                    
                         figcaption.showcase-content {
 
-                            height: 50%;
-                            padding: 1em 0;
-
-
                             
                             h1 {
 
                                 font-size: 0.9em;
 
-                                width:90%;
 
                             }
 
                             a {
 
-                                width: 80%;
-
                                 font-size: 0.85em;
 
                                
-                                &:hover {
-
-
-                                }
                             }
 
                         }
@@ -15486,7 +15592,7 @@ mobile 414px */
                 }
 
                 a.webformats {
-
+                    font-size: 0.9em;
                     line-height: 40px;
                     &:hover {
                         color: $color1;
@@ -15736,8 +15842,8 @@ mobile 414px */
                 .tags-links,
                 .edit-link,
                 .comments-link{
-                    width: 70%;
-                    line-height:45px;
+                    width: 79%;
+                    
                 }
             }
         }
@@ -15837,14 +15943,12 @@ mobile 414px */
                     a {
 
                         line-height: 40px;
-                        font-size:0.8em;
 
                         &:hover {
 
                             font-weight: bold;
                         }
                         &::after {
-
                 
                             width: 10%;
  
@@ -16301,21 +16405,54 @@ mobile 360px */
         }
         #aside#side-bar {
             .side-bar-box {
-                height: auto;
-                width: 100%;
-                margin: 0;
-                float: none;
-                padding: 0;
-                .widget {
+                
+                h2 {
+
+                    font-size: 1.15em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
-                        font-size: 1.1em;
+
+                        font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
+
+                            line-height: 30px;
+
                             a {
-                                font-size: 1em;
+
+                                font-size: 0.9em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                                                
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -16536,9 +16673,7 @@ mobile 360px */
             
             /* continue reading button */                     
             div.continue-reading {
-                font-size: 0.75em;
-                width: 94%;
-                margin:0 auto; 
+
                 a {
                     display: block;
 
@@ -16657,8 +16792,7 @@ mobile 360px */
                 .tags-links,
                 .edit-link,
                 .comments-link{
-
-                    line-height:45px;
+                    width: 79%;
                 }
             }
         }
@@ -17108,12 +17242,13 @@ mobile 360px */
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 96%;
@@ -17293,30 +17428,17 @@ mobile 360px */
                                                    
                         figcaption.showcase-content {
 
-                            height: 50%;
-                            padding: 1em 0;
-
-
                             
                             h1 {
 
-                                font-size: 0.9em;
-
-                                width:90%;
-
+                                font-size: 0.85em;
                             }
 
                             a {
 
-                                width: 80%;
 
-                                font-size: 0.85em;
-
-                               
-                                &:hover {
-
-
-                                }
+                                font-size: 0.8em;
+                
                             }
 
                         }
@@ -17672,23 +17794,54 @@ mobile 320px */
         
         #aside#side-bar {
             .side-bar-box {
-                height: auto;
-                width: 100%;
-                margin: 0;
-                float: none;
-                padding: 0;
-                h2{font-size:1em;}
-                .widget {
+                
+                h2 {
+
+                    font-size: 1.15em;
+
+                }
+                section.widget {
+
                     h2.widget-title {
+
                         font-size: 1em;
+
                     }
-                    ul {
+                    ul,
+                    ul.recentcomments {
+                        width: 100%;
+
                         li {
-                                font-size: 0.8em;
+
+                            line-height: 30px;
+
                             a {
+
                                 font-size: 0.9em;
+                                &:hover {
+
+                                    font-weight: bold;
+                                }
+                            }
+                            
+
+                        }
+                        li.recentcomments {
+                            display: block;
+
+                            span.comment-author-link {
+                                                                
+                                a {
+                                    display: block;
+                                    
+                                }
                             }
                         }
+                        
+                    }
+                    div.tagcloud {
+                        width: 90%;
+
                     }
                 }
             }
@@ -18031,7 +18184,6 @@ mobile 320px */
                 .tags-links,
                 .edit-link,
                 .comments-link{
-
                     line-height:35px;
                 }
             }
@@ -18468,12 +18620,13 @@ mobile 320px */
                                 figure.slider-panel {
                                     
                                     padding: 0;
-                                    a {
-                                        height: 5vh;
-                                                                              
-                                        &:hover {
-                                            opacity: 0.8;
+                                    a.fancybox {
+                                        
+                                        span{
+                                            height: 17vh;
+                                           
                                         }
+
                                     }
                                     figcaption {
                                         width: 98%;
@@ -18654,30 +18807,20 @@ mobile 320px */
                                                    
                         figcaption.showcase-content {
 
-                            height: 50%;
-                            padding: 1em 0;
-
-
                             
                             h1 {
 
                                 font-size: 0.9em;
 
-                                width:90%;
 
                             }
 
                             a {
 
-                                width: 80%;
 
                                 font-size: 0.85em;
 
-                               
-                                &:hover {
-
-
-                                }
+                                                  
                             }
 
                         }
