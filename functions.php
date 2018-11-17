@@ -99,8 +99,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			add_theme_support( 'post-thumbnails' );
 			// Create new image sizes.
 			add_image_size( 'featured-image', 783, 9999 );
-			add_image_size( 'websites', 450, 9999 );
-			add_image_size( 'small', 200, 9999 );
+			add_image_size( 'websites', 550, 9999 );
+			add_image_size( 'small', 284, 9999 );
 			add_theme_support( 'title-tag' );
 
 		}
@@ -336,8 +336,8 @@ function raythompsonwebdev_com_scripts_own() {
 	 wp_script_add_data( 'html5', 'conditional', 'lte IE 8' );
 
 	// Load the Selectivizr.
-	 wp_enqueue_script( 'selectivizr', get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js', array( 'jquery' ), '3.7.3' );
-	 wp_script_add_data( 'selectivizr', 'conditional', 'lte IE 8' );
+	// wp_enqueue_script( 'selectivizr', get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js', array( 'jquery' ), '3.7.3' );
+	// wp_script_add_data( 'selectivizr', 'conditional', 'lte IE 8' );
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 
@@ -577,7 +577,7 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
 function raythompsonwebdev_com_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
 		$attr['sizes']   = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 60vw, (max-width: 1920px) 62vw, 840px';
-		! $attr['sizes'] = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 88vw, 1440px';
+		!$attr['sizes'] = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 88vw, 1440px';
 	}
 	return $attr;
 }
