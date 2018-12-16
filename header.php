@@ -8,11 +8,13 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
-	  
+		<link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Cabin:400,700">
+
 		<?php wp_head(); ?>
 	</head>
 
-	<!--[if lt IE 9]>
+	<!--[if lt IE 11]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
@@ -30,7 +32,10 @@
 				
 					<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<div class="screen-reader-text">
-							<?php printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), $site_title ); ?>
+							
+							<?php 
+/* translators: %1$s:, CMSname: Wordpress. */
+printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html($site_title) ); ?>
 						</div>
 						<?php
 						if ( has_custom_logo() ) {
@@ -39,7 +44,7 @@
 							?>
 							<div class="site-firstletter" aria-hidden="true">
 
-								<?php echo substr( $site_title, 0, 1 ); ?>
+								<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
 
 							</div>
 						<?php } ?>
@@ -50,6 +55,11 @@
 				<?php if ( is_front_page() || is_page() ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
+						
+						<?php elseif('gallery' == get_post_type() || is_single('gallery')) : ?>
+			
+						<hgroup>
+						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>GALLERY</h1>
 
 					<?php else : ?>
 						<hgroup>

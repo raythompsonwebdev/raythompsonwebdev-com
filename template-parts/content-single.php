@@ -49,7 +49,7 @@
 					</figure>
 				<?php } else { ?>
 					
-							<?php raythompsonwebdev_com_post_thumbnail(); ?>
+					<?php raythompsonwebdev_com_post_thumbnail(); ?>
 				  
 				<?php
 }
@@ -68,7 +68,7 @@
 								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
 								array(
 									'span' => array(
-										'class' => array(),
+                                                                        'class' => array(),
 									),
 								)
 							),
@@ -114,7 +114,7 @@
 		<?php
 	endwhile;
 
-	the_posts_navigation();
+
 
 	?>
 <?php else : ?>

@@ -16,84 +16,62 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
  get_header(); ?>
+<h1>Hello, I'm a Web Developer</h1>
+<div id="frontpage_container">
+<?php echo do_shortcode('[slider]');?>
+<div id="textboxfront">
 
+<p>My name is Raymond. I am a web developer and I create custom wordPress themes, customise wordpress themes and build websites and web applications.</p>
 
-	<h1><?php the_title(); ?></h1>
+<p>Whether it's for a small business or a personal goal, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.</p>
+<section id="calltoaction">
+            <article class="frntpgbox">
+                <h1>Code</h1>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>PHP</li>
+                        <li>Javascript(ES6)</li>
+                        <li></li>
+                    </ul>
+            
+            </article>
 
-	<div id="frontpage_container">
+            <article class="frntpgbox">
+                    <h1>Optimisation</h1>
+                    <ul>
+                        <li>CRO</li>
+                        <li>SEO</li>
+                        <li>Google Analytics</li>
+                 
+                    </ul>
 
-		<div id="svg-image-container">
-		
+            </article>
 
-		 <!--<figure id="image-6">
-			 <img id="image-5" src="/wp-content/uploads/2017/12/home-page-image.png" alt="images of different screen sizes">
-			</figure>-->
+            <article class="frntpgbox">
+                    <h1>WordPress</h1>
+                        <ul>
+                            <li>Installation</li>
+                            <li>Maintenance</li>
+                            <li>Custom Themes</li>
+                           
+                        </ul>
+            </article>
 
-			<figure id="image-7">
-				<object 
-					class="style-svg" 
-					type="image/svg+xml" 
-					id="image-4" 
-					data="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
-					</object>
-			</figure>
-		
-		</div>
-
-		<article id="text-box-front" role="article">
-
-			<?php the_content(); ?>
-
-		</article>
-
-		<section id="calltoaction">
- <h1 id="front-title">I also do..</h1>
-   
-   <article class="frntpgbox">
-   <h1><?php esc_html_e( 'Design', 'raythompsonwebdev-com' ); ?></h1>
-   <ul>
-   <li><?php esc_html_e( 'Wireframes', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'Prototypes', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'Photoshop to HTML', 'raythompsonwebdev-com' ); ?></li>
-   <li></li>
-   </ul>
-   
-   </article>
-   <article class="frntpgbox">
-   <h1><?php esc_html_e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
-   <ul>
-   <li><?php esc_html_e( 'Code Optimisation', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'Keywords', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'Google Analytics', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'Image Optimisation', 'raythompsonwebdev-com' ); ?></li>
-   </ul>
-
-   </article>
-   <article class="frntpgbox">
-   <h1><?php esc_html_e( 'Validation', 'raythompsonwebdev-com' ); ?></h1>
-   <ul>
-   <li><?php esc_html_e( 'HTML Validation', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'CSS Validation', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'Rich Snippets', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'PHP debugging', 'raythompsonwebdev-com' ); ?></li>
-   </ul>
-   </article>
-   <article class="frntpgbox">
-	   <h1>Maintenance</h1>
-	   <ul>
-   <li><?php esc_html_e( 'WordPress Security', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'WordPress Backups', 'raythompsonwebdev-com' ); ?></li>
-   <li><?php esc_html_e( 'PHP debugging', 'raythompsonwebdev-com' ); ?></li>
-   <li></li>
-   </ul>
-	   </article>
-		
-</section>
-
-<div class="clearfix"></div>
-	</div>
-	
-
+            <article class="frntpgbox">
+                <h1>Maintenance</h1>
+                    <ul>
+                        <li>Security</li>
+                        <li>Backups</li>
+                        <li>Debugging</li>
+                        
+                    </ul>
+            </article>
+            
+        </section>
+<p>From idea to launch I can help you build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.</p>
+ 
+</div>
+</div>
 
 
 <?php get_footer(); ?>

@@ -15,476 +15,52 @@
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
-get_header(); ?>
+get_header();
+?>
 
-<h1><?php the_title(); ?></h1>
-
-<!--profile panel-->
 <div id="profile_container">
 
-	<section id="prof_cont">
+    <h1>About Me</h1>
 
-		<h1><?php esc_html_e( 'Web Skills Graph', 'raythompsonwebdev-com' ); ?></h1>
+    <article id="text-box-profile">
 
-		<article id="chart">
+        <div class="introimg">
+            <a href="<?php echo esc_url ('wordpress/raythompsonwebdev','https');?>" >
 
-			<ul id="numbers">
+                <img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/raythompsonwebdev.jpg','display');?>" alt="<?php echo esc_attr_e('young-raythompsonwebdev','raythompsonwebdev-com');?>" class="aligncenter size-full wp-image-887" />
+            </a>
+        </div>
 
-				<li><span><?php esc_html_e( '100%', 'raythompsonwebdev-com' ); ?></span></li>
+        <p><?php echo __('I have a passion for web design and web development and particularly like using HTML, CSS and Javascipt for front-end development, responsive web development and php for back end development and WordPress theme development .','raythompsonwebdev-com');?></p>
 
-				<li><span><?php esc_html_e( '80%', 'raythompsonwebdev-com' ); ?></span></li>
+        <p>
+            <?php echo __('When I am not working at job in public sector revenues and benefits, I spend most of my free time building');?><strong><a href="<?php echo esc_url('https://raythompsonwebdev.co.uk/website-projects', 'display');?>" target="new"> web applications</a></strong><?php echo __(', experimenting with new coding techniques and tools, and helping others with website related');?><strong><a href="<?php echo esc_url('https://raythompsonwebdev.co.uk/raythompsonwebdev-blog','display');?>" target="new"> coding problems</a></strong>.
+        </p>
 
-				<li><span><?php esc_html_e( '60%', 'raythompsonwebdev-com' ); ?></span></li>
+        <p><?php echo __('I became interested web design and development after attend a Web design course at the East London Advanced Technology Training Center in East London between November 2011 and July 2012. I gained a city and guilds cerificate in basic web design and development');?></p>
 
-				<li><span><?php esc_html_e( '40%', 'raythompsonwebdev-com' ); ?></span></li>
+        <p><?php echo __('Since then I have spent as much time as I can learning as much as I can about web development and tech in general.');?> </p>
+        <div class="clearfix"></div>
+    </article>
 
-				<li><span><?php esc_html_e( '20%', 'raythompsonwebdev-com' ); ?></span></li>
+    <?php echo do_shortcode('[chart]');?>
 
-				<li><span><?php esc_html_e( '0%', 'raythompsonwebdev-com' ); ?></span></li>
+    <article id="text-box-profile-a">
 
-			</ul>
+        <p> 
+            <?php echo __('I keep up to date as much as time will allow with the constant changes in web development by following online tutorials and doing coding exercises and challenges on websites like');?><strong><a href="<?php echo esc_url('https://www.freecodecamp.org/raythompsonwebdev','display');?>" target="new" > FreeCode Camp</a></strong> and<strong> <a href="<?php echo esc_url('https://www.codeacademy.com','display');?>" target="new">CodeAcademy</a></strong><?php echo __(', listening to web development podcasts and attending local events, even short courses like');?> <strong><a href="<?php echo esc_url('https://vimeo.com/232481032','display');?>" target="new">Digital Futures 2017</a></strong><?php echo __(', and volunteering at');?> <strong><a href="<?php echo esc_url('https://2018.london.wordcamp.org/attendees/','display');?>" target="new">WordCamp 2018</a></strong> in London &#046;
+        </p>
 
+        <p><?php echo __('I do like coding websites and web applications from scratch but do use frameworks like Foundation , Bootstrap, Vue, Laravell or Wordpress. Other tools like Grunt, Gulp, Sass and GitHub help me manage and organise workflow and speed up development process.');?> </p>
 
-			<ul id="bars">
+        <p><?php echo __('Other than web development and my day job i enjoy spending time listeniing to music like 90\'s Hip Hop and Dancehall, Watching movies (Big Marvel movie fan) and spending time with family and friends.');?></p>
 
-				<li>
-					<div data-percentage="90" class="bar"></div>
-					<span><?php esc_html_e( 'CSS', 'raythompsonwebdev-com' ); ?></span>
-				</li>
+    </article>
 
-				<li>
-					<div data-percentage="75" class="bar"></div>
-					<span><?php esc_html_e( 'Jquery/Ajax', 'raythompsonwebdev-com' ); ?></span>
-				</li>
+    <?php echo do_shortcode('[hero]');?>
 
-				<li>
-					<div data-percentage="90" class="bar"></div>
-					<span><?php esc_html_e( 'HTML', 'raythompsonwebdev-com' ); ?></span>
-				</li>
+</div>
 
-				<li>
-					<div data-percentage="65" class="bar"></div>
-					<span><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></span>
-				</li>
-
-				<li>
-					<div data-percentage="65" class="bar"></div>
-					<span><?php esc_html_e( 'PHP/MYSQL', 'raythompsonwebdev-com' ); ?></span>
-				</li>
-
-				<li>
-					<div data-percentage="70" class="bar"></div>
-					<span><?php esc_html_e( 'Javascript', 'raythompsonwebdev-com' ); ?></span>
-				</li>
-
-			</ul>
-
-
-		</article>
-
-	</section><!--end of prof cont-->
-
-	<?php the_content(); ?>
-
-	<section id="prof_cont-a"><!--prof cont-->
-
-		<h1><?php esc_html_e( 'Web Development Related Courses Taken', 'raythompsonwebdev-com' ); ?></h1>
-
-		<article class="hero-slider"><!-- #hero-slider -->
-
-			<ul id="list">
-				<li>
-					<a href="#" rel="#panel-1" class="active" title="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>" ><?php esc_html_e( 'Adobe', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-2" title="<?php esc_attr_e( 'City and Guilds Web Design Certificate Level One', 'raythompsonwebdev-com' ); ?>"> <?php esc_html_e( 'ELATT', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-3" title="<?php esc_attr_e( 'City and Guilds Web Design Certificate Level Two', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Udacity', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-4" title="<?php esc_attr_e( 'City and Guilds Web Design Certificate Level Three', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'FreeCodeCamp', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-5" title="<?php esc_attr_e( 'Lynda-com online course certifications', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-6" title="<?php esc_attr_e( 'Shaw Academy Online course certificate', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Shaw Academy', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-7" title="<?php esc_attr_e( 'Shaw Academy course certificate', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Shaw Academy', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-8" title="<?php esc_attr_e( 'Shaw Academy course certificate', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Shaw Academy', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-				<li>
-					<a href="#" rel="#panel-9" title="<?php esc_attr_e( 'Digital-Futures-2017', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Digital Futures 2017', 'raythompsonwebdev-com' ); ?></a>
-				</li>
-			</ul>
-
-			<div class="mask"><!--mask-->
-				<div class="slider-body"><!--slider body -->
-
-					<article class="panel" id="panel-1">
-
-						<h2><?php esc_html_e( 'Adobe Certified Associates', 'raythompsonwebdev-com' ); ?> </h2>
-
-						<figure class="abobe">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Large-Photoshop-Certicate-.jpg" class="fancybox" title="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>">
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Small-photoshop-Certicate.jpg" alt="<?php esc_attr_e( 'Adobe Certificate in Visual Communication', 'raythompsonwebdev-com' ); ?>">
-							</a>
-
-
-							<figcaption>
-							<h3><?php esc_html_e( 'Visual Communication: Photoshop CS4', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-								
-								<ul>
-									<li>
-										<a href="#"><?php esc_html_e( 'Setting project requirements', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php esc_html_e( 'Identifying Design Elements', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php esc_html_e( 'Understanding Photoshop Interface', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php esc_html_e( 'Manipulating Images', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-									<li>
-										<a href="#"><?php esc_html_e( 'Evaluating Digital Images', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-
-								</ul>
-
-								<div class="clearfix"></div>
-							</figcaption>
-
-
-						</figure>
-
-					</article>
-
-					<article class="panel" id="panel-2">
-
-						<h2><?php esc_html_e( 'East London Advanced Technology Training', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="cert">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/ITQ-USERS-LEVEL1-LARGE.jpg" class="fancybox" title="<?php esc_attr_e( 'City and Guilds Level One, Two, Three', 'raythompsonwebdev-com' ); ?>">
-
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/ITQ-USERS-LEVEL1-SMALL.gif" alt="<?php esc_attr_e( 'City and Guilds Level One, Two, Three', 'raythompsonwebdev-com' ); ?>">
-
-							</a>
-
-							<figcaption>
-							<h3><?php esc_html_e( 'City & Guilds ITQ Level 1,2,3 Web Design', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-  
-								<ul>
-									<li>
-									<a href="#">
-									<?php esc_html_e( 'Improving productivity using IT', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-									<li>
-									<a href="#">
-									<?php esc_html_e( 'IT Communication Fundementals', 'raythompsonwebdev-com' ); ?>
-									
-									</a>
-									</li>
-
-									<li><a href="#"><?php esc_html_e( 'Adding Content', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'IT User fundementals', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Organizing Content', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Using the Internet', 'raythompsonwebdev-com' ); ?></a></li>
-								</ul>
-								<div class="clearfix"></div>
-							</figcaption>
-						</figure>
-
-
-					</article>
-
-					<article class="panel" id="panel-3">
-
-						<h2><?php esc_html_e( 'Udacity', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="abobe">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Large-Udemy-Certicate-.jpg" class="fancybox" title="<?php esc_attr_e( 'Udemy.com', 'raythompsonwebdev-com' ); ?>">
-
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Udemy-Small.jpg" alt="<?php esc_attr_e( 'Udemy.com', 'raythompsonwebdev-com' ); ?>">
-
-							</a>
-							<figcaption>
-								<h3><?php esc_html_e( '  Udacity', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-   
-								<ul>
-									<li><a href="#"><?php esc_html_e( 'Progressive Web Apps', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Networks for webdevelopers', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Intro to Javascript', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'ES2016', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Git', 'raythompsonwebdev-com' ); ?></a></li>
-
-								</ul>
-								<div class="clearfix"></div>
-							</figcaption>
-
-						</figure>
-
-					</article>
-
-					<article class="panel" id="panel-4">
-
-						<h2><?php esc_html_e( 'FreeCodeCamp', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="cert">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/FreeCodeCamp-large.png" class="fancybox" title="<?php esc_attr_e( 'FreeCode Camp', 'raythompsonwebdev-com' ); ?>">
-
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/FreeCodeCamp-small.png" alt="<?php esc_attr_e( 'FreeCode Camp', 'raythompsonwebdev-com' ); ?>">
-
-							</a>
-							<figcaption>
-							<h3><?php esc_html_e( 'Frontend Developer Certificate', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-
-								<ul>
-									<li><a href="#"><?php esc_html_e( 'HTML5/CSS3', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Javascript', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Jquery', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Basic Algorithims', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'JSON/APIs', 'raythompsonwebdev-com' ); ?></a></li>
-
-								</ul>
-								<div class="clearfix"></div>
-							</figcaption>
-
-						</figure>
-
-
-					</article>
-
-					<article class="panel" id="panel-5">
-
-						<h2><?php esc_html_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="abobe">
-
-							<a 
-							href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/lynda_logo1r-d_72x72.png" 
-							class="fancybox" 
-							title="<?php esc_attr_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?>">
-
-								<img 
-								src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/lynda_logo1k-d_72x72.png" 
-								alt="<?php esc_attr_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?>"
-								>
-
-							</a>
-
-							<figcaption>
-							<h3><?php esc_html_e( 'Lynda.com', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-
-								<ul id="lyndalinks">
-									<li>
-									<a 
-									class="lyndalink" 
-									href="<?php echo esc_url( 'http://www.linkedin.com/learning/paths/become-a-front-end-web-developer', 'raythompsonwebdev-com' ); ?>"
-									><?php esc_html_e( 'Become a Front-End Web Developer', 'raythompsonwebdev-com' ); ?></a>
-									
-									</li>
-									<li>
-									<a 
-									class="lyndalink" 
-									href="<?php echo esc_url( 'http://www.linkedin.com/learning/paths/become-a-junior-wordpress-developer', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Become a Junior Developer', 'raythompsonwebdev-com' ); ?> </a>
-									</li>
-
-									<li>
-									<a 
-									class="lyndalink" 
-									href=" <?php echo esc_url( 'http://www.linkedin.com/learning/foundations-of-programming-fundamentals', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Foundations of Programming Fundementals', 'raythompsonwebdev-com' ); ?> </a>
-									
-									</li>
-									<li>
-									<a 
-									class="lyndalink" 
-									href="<?php echo esc_url( 'http://www.linkedin.com/learning/css-fundamentals', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'CSS Fundementals', 'raythompsonwebdev-com' ); ?></a>
-									
-									</li>
-
-									<li>
-									<a 
-									class="lyndalink" 
-									href="<?php echo esc_url( 'http://www.linkedin.com/learning/javascript-essential-training', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'Javascript Essentials', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-
-									<li>
-								   <a 
-								   class="lyndalink" 
-								   href="<?php echo esc_url( 'http://www.linkedin.com/learning/jquery-essential-training-2', 'raythompsonwebdev-com' ); ?>">
-									<?php esc_html_e( 'jQuery Essential Training', 'raythompsonwebdev-com' ); ?></a>
-									</li>
-
-									<br/>
-
-								</ul>
-								<div class="clearfix"></div>
-							</figcaption>
-
-						</figure>
-
-
-					</article>
-
-					<article class="panel" id="panel-6">
-
-						<h2><?php esc_html_e( 'Shaw Academy', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="cert">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Mobile-web-applications-Certificate-Foundation-large.jpg" class="fancybox" title="<?php esc_attr_e( 'Mobile-web-applications-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
-
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Mobile-web-applications-Certificate-Foundation-small.jpg" 
-								alt="<?php esc_attr_e( 'Mobile-web-applications-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>"
-								
-								>
-
-							</a>
-
-							<figcaption>
-							<h3><?php esc_html_e( 'Mobile App Development', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-
-								<ul>
-									<li><a href="#"><?php esc_html_e( 'Introduction to Mobile App Development', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Designing our App', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'User Interfaces with HTML', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Coding Functions', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Web Hosting/Deploying Apps', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Mobile App Dev Life Cycle', 'raythompsonwebdev-com' ); ?></a></li>
-
-								</ul>
-								<div class="clearfix"></div>
-							</figcaption>
-
-						</figure>
-
-					</article>
-
-					<article class="panel" id="panel-7">
-
-						<h2><?php esc_html_e( 'Shaw Academy', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="cert">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Marketing-Certificate-Foundation.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
-
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Marketing-Certificate-Foundation-small.jpg" 
-								alt="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>"
-
-							</a>
-
-							<figcaption>
-							<h3><?php esc_html_e( 'Diploma in Digital Marketing', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-
-								<ul>
-									<li><a href="#"><?php esc_html_e( 'Adwords/Pay Per Click', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Search Engine Optimisation', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Affiliate Marketing', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Social Media', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Web Analytics', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Blogging', 'raythompsonwebdev-com' ); ?></a></li>
-
-								</ul>
-								<div class="clearfix"></div>
-							</figcaption>
-
-						</figure>
-
-
-					</article>
-
-					<article class="panel" id="panel-8">
-
-						<h2><?php esc_html_e( 'Shaw Academy', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="cert">
-
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Content-Marketing-Certificate-Foundation.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>">
-
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Content-Marketing-Certificate-Foundation-Small.jpg" 
-								alt="<?php esc_attr_e( 'Digital-Marketing-Certificate-Foundation', 'raythompsonwebdev-com' ); ?>"
-
-							</a>
-
-							<figcaption>
-							<h3><?php esc_html_e( 'Diploma in Blogging & Content Marketing', 'raythompsonwebdev-com' ); ?></h3>
-								<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-
-								<ul>
-									<li><a href="#"><?php esc_html_e( 'Blogging', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Vlogging', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Content Marketing', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Building online communities', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Content curation', 'raythompsonwebdev-com' ); ?></a></li>
-									<li><a href="#"><?php esc_html_e( 'Monetising blogs', 'raythompsonwebdev-com' ); ?></a></li>
-
-								</ul>
-
-								<div class="clearfix"></div>
-							</figcaption>
-
-						</figure>
-
-
-					</article>
-
-					<article class="panel" id="panel-9">
-
-						<h2><?php esc_html_e( 'Digital Futures 2017', 'raythompsonwebdev-com' ); ?></h2>
-
-						<figure class="abobe">
-
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Futures-2017-Certificate-of-Participation-large.jpg" class="fancybox" title="<?php esc_attr_e( 'Digital-Futures-2017-Certificate-of-Participation', 'raythompsonwebdev-com' ); ?>">
-							<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/2018/03/Digital-Futures-2017-Certificate-of-Participation-small.jpg" 
-							alt="<?php esc_attr_e( 'Digital-Futures-2017-Certificate-of-Participation', 'raythompsonwebdev-com' ); ?>">
-							</a>
-						<figcaption>
-							<h3><?php esc_html_e( 'Interactive Programming', 'raythompsonwebdev-com' ); ?></h3>
-							<h4><?php esc_html_e( 'Topics :', 'raythompsonwebdev-com' ); ?></h4>
-
-							<ul>
-								<li><a href=""><?php esc_html_e( 'Debate Skills with DebateMate.', 'raythompsonwebdev-com' ); ?></a></li>
-								<li><a href=""><?php esc_html_e( 'Musical Composition.', 'raythompsonwebdev-com' ); ?></a></li>
-								<li><a href=""><?php esc_html_e( 'Block programming using Crumble.', 'raythompsonwebdev-com' ); ?></a></li>
-								<li><a href=""><?php esc_html_e( 'Negotiation skills with CitizenUK.', 'raythompsonwebdev-com' ); ?></a></li>
-								<li><a href=""><?php esc_html_e( 'Music creation using Sonic Pi.', 'raythompsonwebdev-com' ); ?></a></li>
-								<li><a href=""><?php esc_html_e( 'Conflict Resolution.', 'raythompsonwebdev-com' ); ?></a></li>
-
-							</ul>
-									<div class="clearfix"></div>
-
-								</figcaption>
-							</figure>
-
-					</article>
-
-
-				</div><!--slider body end-->
-			</div><!-- .mask end -->
-
-		</article><!-- hero-slider end -->
-
-	</section><!--end of prof cont-->
-
-	<div class="clearfix"></div>
-
-</div><!--profile-panel end-->
+<div class="clearfix"></div>
 
 <?php get_footer(); ?>

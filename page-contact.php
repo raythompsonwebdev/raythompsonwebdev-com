@@ -18,48 +18,28 @@
  */
 get_header(); ?>
 
-
-<h1><?php the_title(); ?></h1>
-
-<div class="main-text">
-
-<<<<<<< HEAD:page-contact.php
-<p> <?php esc_html_e( 'Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com' ); ?></p>
-=======
-<p> <?php _e('Have any questions about website projects? complete form on the right with your details or e-mail me at e-mail address below. You can also holla at me on social media. Lnks at the bottom of the page.', 'raythompsonwebdev-com'); ?></p>
->>>>>>> 20b5c8fdc3270a567f582f269129836f52ef4a24:raythompsonwebdev-com/page-contact.php
-<br/>
-<br/>
-<br/>
-<br/>
-</div>
-
-
 <div id="contactform">
-<?php the_content(); ?>
+    <?php echo do_shortcode('[contact-form-7 id="616" title="Contact form 1"]');?>
 </div>
-
 
 <br>
 
-<div id="map_container">
+<div id="map_container"></div>
 
-	
-</div>
+<ul class="contact-details">
+    <li id="fa-email"><a href="#">raymond.thompson@raythompsonwebdev.co.uk</a></li>
 
-	<ul class="contact-details" >
-	<li id="fa-email"><a href="">raymond.thompson@raythompsonwebdev.co.uk</a> </li>
+    <li id="fa-email"><a href="<?php echo esc_url( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.facebook.com/raythompsonwebdeveloper/</a></li>
 
+    <li id="fa-email"><a href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">@RayThompWeb</a></li>
 
-	<br/>
+    <li id="fa-email"><a href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
 
-
-
-
+    <li id="fa-email"><a href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">github.com/raythompsonwebdev</a></li>
 </ul>
 
 <div class="clearfix"></div>
-<br>
-<br>
+
+<br><br>
 
 <?php get_footer(); ?>
