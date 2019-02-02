@@ -71,26 +71,26 @@ module.exports = function (grunt) {
         /**
          * JS Hint
          */
-        jshint: {
-            files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
-            options: {
+        //jshint: {
+            //files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
+            //options: {
                 // options here to override JSHint defaults
 
-                globals: {
-                    jQuery: true,
-                    console: true,
-                    module: true,
-                    document: true
-                }
-            }
-        },
+              //  globals: {
+              //      jQuery: true,
+              //      console: true,
+              //      module: true,
+               //     document: true
+              //  }
+           // }
+      //  },
         /**
          * Watch task
          */
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['sass', 'jshint']
+                tasks: ['sass']
             }
         }
     });
@@ -101,10 +101,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    
 
-    grunt.registerTask('test', ['jshint']);
-    grunt.registerTask('default', ['watch', 'jshint', 'concat', 'uglify', 'sass']);
+    
+    grunt.registerTask('default', ['watch', 'concat', 'uglify', 'sass']);
 
 
 }

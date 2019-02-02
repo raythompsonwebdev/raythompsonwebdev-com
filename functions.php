@@ -296,12 +296,25 @@ function raythompsonwebdev_com_register_styles() {
 
 	// Add Font Awesome icons (http://fontawesome.io).
 	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', '1.0', true );
-
-	// Load the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array('raythompwebdesign-com'), '1.0', true );
-	wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lt IE 11' );
+	
+	//wp_enqueue_style( 'raythompwebdesign-com-ie', get_template_directory_uri() . '/ie.css', array('raythompwebdesign-com'), '1.0', true );
+	//wp_style_add_data( 'raythompwebdesign-com-ie', 'conditional', 'lt IE 11' );
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
+
+
+/**
+ * Enqueue IE8 style sheets.
+ */
+function ie_style_sheets () {
+	// Load the Internet Explorer specific stylesheet.
+	wp_register_style( 'ie8', get_stylesheet_directory_uri() . '/ie.css'  );
+	$GLOBALS['wp_styles']->add_data( 'ie8', 'conditional', 'lte IE 8' );
+			
+	wp_enqueue_style( 'ie8' );
+	
+}
+add_action ('wp_enqueue_scripts','ie_style_sheets');
 
 
 /**
@@ -320,19 +333,28 @@ function raythompsonwebdev_com_scripts_own() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-	/**
-	 * Load the html5.
-	 *  */
-	 wp_enqueue_script( 'html5', get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js', array(), '3.7.3', true );
-	 wp_script_add_data( 'html5', 'conditional', 'lte IE 11' );
-	/**
-	 * Load the Selectivizr.
-	 * wp_enqueue_script( 'selectivizr', get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js', array( 'jquery' ), '3.7.3' );
-	 * wp_script_add_data( 'selectivizr', 'conditional', 'lte IE 8' );
-	 */
-
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
+
+/**
+	 * Load the html5.
+	 *  */
+	 
+	$conditional_scripts = array(
+		'html5shiv' => get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js',
+		'respond' => get_template_directory_uri() . '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+		'selectivizr' => get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js'
+	);
+	foreach ( $conditional_scripts as $handle => $src ) {
+		wp_enqueue_script( $handle, $src, array(), '', false );
+	}
+	add_filter( 'script_loader_tag', function( $tag, $handle ) use ( $conditional_scripts ) {
+
+		if ( array_key_exists( $handle, $conditional_scripts ) ) {
+			$tag = '<!--[if (lt IE 9) & (!IEMobile)]>'. $tag .'<![endif]-->'."\n";
+		}
+		return $tag;
+	}, 10, 2 );
 
 
 
