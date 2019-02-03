@@ -22,7 +22,7 @@
 <section id="blogleftside">                                
 
 <article id="blog" class="left-col">
-	<h1><?php esc_html__( 'Images', 'raythompsonwebdev-com' ); ?></h1>
+	<h1><?php echo esc_html__( 'Images', 'raythompsonwebdev-com' ); ?></h1>
 
 	<?php
 	if ( have_posts() ) :

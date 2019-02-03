@@ -27,7 +27,7 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 
 	<article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 
-		<h1><?php echo esc_html('Website/Web Application', 'raythompsonwebdev-com');?></h1>
+		<h1><?php echo esc_html('Website/Web Applications', 'raythompsonwebdev-com');?></h1>
 
 			<figure class="websiteImage">
 			  <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2018/07/www-

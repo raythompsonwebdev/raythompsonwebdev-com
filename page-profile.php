@@ -20,7 +20,7 @@ get_header();
 
 <div id="profile_container">
 
-    <h1>About Me</h1>
+    <h1><?php echo esc_html( 'About Me', 'raythompsonwebdev-com' ); ?></h1>
 
     <article id="text-box-profile">
 

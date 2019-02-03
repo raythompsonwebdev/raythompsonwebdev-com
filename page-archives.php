@@ -15,7 +15,7 @@
  */
 get_header(); ?>
 	
-<h1>Archive List</h1>
+	<h1><?php echo esc_html( 'Archive Pages', 'raythompsonwebdev-com' ); ?></h1>
 
 <?php
 if ( have_posts() ) :
