@@ -182,6 +182,11 @@ figure {
   padding: 0;
 }
 
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section {
+  display: block;
+}
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #9DA3AB;
@@ -249,7 +254,7 @@ div.textwidget {
 
 .newExcerpt {
   display: block;
-  padding: 1% 0;
+  padding: 0.5em 0;
   margin: 0;
 }
 
@@ -276,6 +281,7 @@ div.textwidget {
     font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
     font-size: 1em;
     border: none;
+    behavior: url(PIE.htc);
   }
 
   body {
@@ -329,6 +335,7 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-out 0s;
     -moz-transition: all 0.2s ease-out 0s;
@@ -336,6 +343,7 @@ div.textwidget {
     -ms-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
     height: auto;
+    behavior: url(PIE.htc);
     /* Text meant only for screen readers. */
   }
   header .site-logo a div.screen-reader-text {
@@ -344,6 +352,7 @@ div.textwidget {
     height: 1px;
     width: 1px;
     overflow: hidden;
+    behavior: url(PIE.htc);
   }
   header .site-logo a div.screen-reader-text:focus {
     background-color: #f1f1f1;
@@ -363,6 +372,7 @@ div.textwidget {
     top: 5px;
     width: auto;
     z-index: 100000;
+    behavior: url(PIE.htc);
   }
   header .site-logo a div.site-firstletter {
     font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
@@ -409,13 +419,12 @@ div.textwidget {
     text-align: left;
     display: inline-block;
   }
-  header hgroup h1#logo span:last-of-type,
-  header hgroup h1#logo-blog span:last-of-type {
+  header hgroup h1#logo span.slvzr-last-of-type,
+  header hgroup h1#logo-blog span.slvzr-last-of-type {
     height: 100%;
     color: #062351;
     display: inline-block;
     margin: 0 0.1em;
-    behavior: url(PIE.htc);
   }
   header hgroup h2 {
     float: none;
@@ -472,7 +481,19 @@ div.textwidget {
     display: block;
     letter-spacing: 0.1em;
     font-weight: normal;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all 0.2s ease-in 0s;
+    -moz-transition: all 0.2s ease-in 0s;
+    -o-transition: all 0.2s ease-in 0s;
+    -ms-transition: all 0.2s ease-in 0s;
+    transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
+  s
   header nav.menu-main-container ul#menu-main li.menu-item a:link {
     background-color: #CCD3DE;
     color: #062351;
@@ -517,6 +538,7 @@ div.textwidget {
     /*post navigation*/
     /*related items container*/
     /*frontpage-page-panel */
+    /*profile-page-panel */
     /*profile-page-panel */
     /*gallery container*/
   }
@@ -759,6 +781,7 @@ div.textwidget {
     border: 1px solid #CCD3DE;
     width: 100%;
     height: 150px;
+    behavior: url(PIE.htc);
   }
   #main-content #contactform div.wpcf7 form p label input[type="text"],
   #main-content #contactform div.wpcf7 form p label input[type="email"],
@@ -774,6 +797,7 @@ div.textwidget {
     border: 1px solid #CCD3DE;
     width: 100%;
     height: 35px;
+    behavior: url(PIE.htc);
   }
   #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
   #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
@@ -783,6 +807,7 @@ div.textwidget {
     padding: 3px 0 3px 3px;
     margin: 5px 1px 3px 0;
     border: 1px solid #ccd3de;
+    behavior: url(PIE.htc);
   }
   #main-content #contactform div.wpcf7 form p input[type="submit"] {
     height: 35px;
@@ -800,6 +825,7 @@ div.textwidget {
     font-family: "PT Sans", verdana, helvetica, sans-serif;
     display: block;
     font-size: 1.1em;
+    behavior: url(PIE.htc);
   }
   #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
     background-color: #062351;
@@ -961,12 +987,14 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content aside#side-bar .side-bar-box section.widget ul li a:hover,
   #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li a:hover {
@@ -1127,12 +1155,14 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content .post ul li a:hover {
     margin-left: 0;
@@ -1162,6 +1192,7 @@ div.textwidget {
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content .post .website-text {
     width: 75%;
@@ -1197,6 +1228,7 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
@@ -1204,6 +1236,7 @@ div.textwidget {
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
     line-height: 40px;
+    behavior: url(PIE.htc);
   }
   #main-content .post .website-text a.webformats:hover {
     color: #062351;
@@ -1218,6 +1251,7 @@ div.textwidget {
     display: block;
     width: 100%;
     padding: 0;
+    behavior: url(PIE.htc);
   }
   #main-content .post .website-text .links span {
     width: 33%;
@@ -1245,12 +1279,14 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content .post .website-text .links span a i.fa-github:hover,
   #main-content .post .website-text .links span a i.fa-mobile:hover,
@@ -1327,6 +1363,7 @@ div.textwidget {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    behavior: url(PIE.htc);
   }
   #main-content .post header.byline .entry-meta,
   #main-content .post header.byline .index-entry-meta {
@@ -1421,12 +1458,14 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
   #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
@@ -1467,6 +1506,7 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
@@ -1480,7 +1520,9 @@ div.textwidget {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
+    behavior: url(PIE.htc);
   }
   #main-content .post div.continue-reading a {
     display: block;
@@ -1496,7 +1538,9 @@ div.textwidget {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
+    behavior: url(PIE.htc);
   }
   #main-content .post div.continue-reading a span.screen-reader-text {
     color: #062351;
@@ -1552,12 +1596,14 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content .post div.sharedaddy div.sd-content ul li a:hover {
     color: #062351;
@@ -1634,6 +1680,7 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
@@ -1646,6 +1693,7 @@ div.textwidget {
     width: 100%;
     font-size: 1.5em;
     background-color: #CCD3DE;
+    behavior: url(PIE.htc);
   }
   #main-content .post footer.byline p.right a.comments-count:hover {
     color: #fff;
@@ -1747,6 +1795,7 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
@@ -1759,6 +1808,7 @@ div.textwidget {
     width: 100%;
     font-size: 1.5em;
     background-color: #c0c9dd;
+    behavior: url(PIE.htc);
   }
   #main-content .gallery footer.byline p.right a.comments-count:hover {
     color: #fff;
@@ -1834,6 +1884,7 @@ div.textwidget {
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
@@ -1844,6 +1895,7 @@ div.textwidget {
     margin: 0;
     width: 100%;
     text-indent: 0.5em;
+    behavior: url(PIE.htc);
   }
   #main-content nav.navigation .nav-links div.nav-previous a:hover,
   #main-content nav.navigation .nav-links div.nav-next a:hover {
@@ -2032,6 +2084,7 @@ div.textwidget {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
   }
   #main-content section.contact-wide ol.commentlist .reply a:hover {
@@ -2042,6 +2095,7 @@ div.textwidget {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
   }
   #main-content section.contact-wide #respond {
@@ -2230,7 +2284,6 @@ div.textwidget {
     padding: 0;
     /*homepage container*/
     /*front-page image container*/
-    /*PNG for IE8*/
   }
   #main-content #frontpage_container div#textboxfront {
     width: 52%;
@@ -2278,6 +2331,7 @@ div.textwidget {
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
   }
   #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
@@ -2290,6 +2344,7 @@ div.textwidget {
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
     -o-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
     border-radius: 10px 10px 0 0;
   }
   #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
@@ -2377,34 +2432,66 @@ div.textwidget {
     font-size: 1.6em;
   }
   #main-content #frontpage_container div#svg-image-container {
+    width: 45%;
+    height: auto;
+    float: right;
+    display: block;
+    font-family: "PT Sans", verdana, helvetica, sans-serif;
+    padding: 2em;
+    /*PNG for IE8*/
+  }
+  #main-content #frontpage_container div#svg-image-container figure#image-7 {
     display: none;
   }
-  #main-content #frontpage_container figure#ie8-image {
-    margin: 0;
-    padding: 0;
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image {
+    width: 100%;
     display: block;
-    width: 45%;
-    float: right;
   }
-  #main-content #frontpage_container figure#ie8-image img#image-5 {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image img#image-5 {
+    display: block;
     width: 100%;
     height: 100%;
+    /* IE filter extension */
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+    width: 100%;
+    /* Required for IE filter */
+    -moz-opacity: 0.9;
+    /* Mozilla extension */
+    -khtml-opacity: 0.9;
+    /* Konqueror extension (Safari 1.1)*/
+    opacity: 0.9;
+    /* the correct CSS3 syntax */
   }
   #main-content div#profile_container {
     margin: 0 0 1em 0;
     padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    behavior: url(PIE.htc);
     /*first text block*/
     /*second text block*/
     /*profile-page_container - hero-slider*/
     /*profile-page_container - chart*/
   }
   #main-content div#profile_container #text-box-profile {
-    width: 48%;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 53%;
     display: inline-block;
-    float: left;
     margin: 0;
     height: auto;
-    margin-bottom: 0.5em;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1.05em;
@@ -2427,11 +2514,17 @@ div.textwidget {
     display: inline-block;
   }
   #main-content div#profile_container #text-box-profile-a {
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 48%;
     display: inline-block;
-    float: left;
     margin: 0;
     height: auto;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container #text-box-profile-a h1 {
     font-size: 1em;
@@ -2453,6 +2546,12 @@ div.textwidget {
     display: inline-block;
   }
   #main-content div#profile_container section#prof_cont-a {
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 50%;
     height: 520px;
     display: inline-block;
@@ -2461,6 +2560,7 @@ div.textwidget {
     padding: 1em;
     background-color: #fff;
     margin: 0;
+    behavior: url(PIE.htc);
     /*Hero Slider*/
     /* END OF Hero Slider*/
   }
@@ -2501,46 +2601,55 @@ div.textwidget {
     background-image: url("images/large/certficates/Large-Photoshop-Certicate-.jpg");
     background-repeat: no-repeat;
     background-position: 50% 40%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-2 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/ITQ-USERS-LEVEL1-LARGE.jpg");
     background-repeat: no-repeat;
     background-position: 50% 22%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-3 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/Large-Udemy-Certicate-.jpg");
     background-repeat: no-repeat;
     background-position: 50% 22%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-4 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/FreeCodeCamp-large.png");
     background-repeat: no-repeat;
     background-position: center;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-5 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/lynda_logo1r-d_72x72.png");
     background-repeat: no-repeat;
     background-position: center;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-6 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/Mobile-web-applications-Certificate-Foundation-large.jpg");
     background-repeat: no-repeat;
     background-position: 50% 31%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-7 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/Digital-Marketing-Certificate-Foundation.jpg");
     background-repeat: no-repeat;
     background-position: 50% 18%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-8 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/Content-Marketing-Certificate-Foundation.jpg");
     background-repeat: no-repeat;
     background-position: 50% 18%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-9 .slider-panel a.fancybox span {
     background-image: url("images/large/certficates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
     background-repeat: no-repeat;
     background-position: 50% 61%;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel {
     font-family: "PT Sans", verdana, helvetica, sans-serif;
@@ -2571,6 +2680,7 @@ div.textwidget {
     -o-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
     -ms-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
     transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
     float: none;
@@ -2662,12 +2772,20 @@ div.textwidget {
     line-height: 40px;
   }
   #main-content div#profile_container section#prof_cont {
-    width: 50%;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 45%;
     height: 410px;
     display: inline-block;
+    float: right;
     box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
     margin-bottom: 1em;
+    behavior: url(PIE.htc);
     /*chart*/
     /* End of chart*/
   }
@@ -2696,18 +2814,24 @@ div.textwidget {
     font-family: "PT Sans", verdana, helvetica, sans-serif;
   }
   #main-content div#profile_container section#prof_cont #chart #bars {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
     background: #fff;
     width: 100%;
     height: 100%;
     list-style: none;
+    behavior: url(PIE.htc);
   }
   #main-content div#profile_container section#prof_cont #chart #bars li {
     width: 100%;
     height: 50px;
-    margin: 0;
+    margin: 0 0 0.2em 0;
     text-align: center;
     position: relative;
-    margin-bottom: 0.1em;
   }
   #main-content div#profile_container section#prof_cont #chart #bars li .bar {
     display: block;
@@ -2734,6 +2858,9 @@ div.textwidget {
     text-align: center;
   }
   #main-content div#profile_container section#prof_cont #chart #bars span {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
     width: 16.5%;
     position: absolute;
     left: 0;
@@ -2743,6 +2870,7 @@ div.textwidget {
     font-size: 0.8em;
     background-color: #fff;
     z-index: 3;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer {
     width: 100%;
@@ -2785,6 +2913,7 @@ div.textwidget {
     text-align: center;
     margin-left: 0.1em;
     float: left;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content nav.menuSwitch ul li:hover {
     background-color: #062351;
@@ -2835,10 +2964,11 @@ div.textwidget {
     height: 100%;
     margin: 0;
     position: relative;
-    /*-webkit-transform-style: preserve-3d;
--ms-transform-style: preserve-3d;
-transform-style: preserve-3d;*/
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
     overflow: hidden;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container div.showcase-img,
   #main-content div#photocontainer div.content div#panel2 figure.showcase-container div.showcase-img,
@@ -2856,6 +2986,7 @@ transform-style: preserve-3d;*/
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container figcaption.showcase-content,
   #main-content div#photocontainer div.content div#panel2 figure.showcase-container figcaption.showcase-content,
@@ -2877,6 +3008,7 @@ transform-style: preserve-3d;*/
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container figcaption.showcase-content h1,
   #main-content div#photocontainer div.content div#panel2 figure.showcase-container figcaption.showcase-content h1,
@@ -2919,12 +3051,14 @@ transform-style: preserve-3d;*/
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container figcaption.showcase-content a:hover,
   #main-content div#photocontainer div.content div#panel2 figure.showcase-container figcaption.showcase-content a:hover,
@@ -2940,7 +3074,9 @@ transform-style: preserve-3d;*/
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -o-border-radius: 10px;
+    -ms-border-radius: 10px;
     border-radius: 10px;
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container:hover div.showcase-img,
   #main-content div#photocontainer div.content div#panel2 figure.showcase-container:hover div.showcase-img,
@@ -2955,6 +3091,7 @@ transform-style: preserve-3d;*/
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
+    behavior: url(PIE.htc);
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container:hover figcaption.showcase-content,
   #main-content div#photocontainer div.content div#panel2 figure.showcase-container:hover figcaption.showcase-content,
@@ -2990,6 +3127,7 @@ transform-style: preserve-3d;*/
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
@@ -2998,6 +3136,7 @@ transform-style: preserve-3d;*/
     transition: all 0.2s ease-in 0s;
     height: 100%;
     background-color: #CCD3DE;
+    behavior: url(PIE.htc);
   }
   footer .socialpics .social-icon:hover {
     background-color: #062351;
@@ -3056,12 +3195,14 @@ transform-style: preserve-3d;*/
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     -webkit-transition: all 0.2s ease-in 0s;
     -moz-transition: all 0.2s ease-in 0s;
     -o-transition: all 0.2s ease-in 0s;
     -ms-transition: all 0.2s ease-in 0s;
     transition: all 0.2s ease-in 0s;
+    behavior: url(PIE.htc);
   }
   footer ul li a:hover {
     margin: 0;
@@ -3990,15 +4131,147 @@ desktop 1440px*/
   #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
     font-size: 1.6em;
   }
-  #main-content #frontpage_container div#svg-image-container {
-    display: none;
+  #main-content #frontpage_container div#profile_container {
+    margin: 0 0 1em 0;
+    padding: 0;
+    /*first text block*/
+    /*second text block*/
+    /*profile-page_container - hero-slider*/
+    /*profile-page_container - chart*/
   }
-  #main-content #frontpage_container figure#ie8-image {
-    width: 42%;
+  #main-content #frontpage_container div#profile_container #text-box-profile {
+    width: 53%;
+    margin: 0;
+    height: auto;
   }
-  #main-content #frontpage_container figure#ie8-image img#image-5 {
+  #main-content #frontpage_container div#profile_container #text-box-profile h1 {
+    font-size: 1.05em;
+  }
+  #main-content #frontpage_container div#profile_container #text-box-profile p {
+    font-size: 0.9em;
+  }
+  #main-content #frontpage_container div#profile_container #text-box-profile .introimg {
+    width: 70px;
+    height: 70px;
+  }
+  #main-content #frontpage_container div#profile_container #text-box-profile-a {
+    width: 48%;
+    margin: 0;
+    height: auto;
+  }
+  #main-content #frontpage_container div#profile_container #text-box-profile-a h1 {
+    font-size: 1em;
+    line-height: 25px;
+  }
+  #main-content #frontpage_container div#profile_container #text-box-profile-a p {
+    font-size: 0.9em;
+  }
+  #main-content #frontpage_container div#profile_container #text-box-profile-a .introimg {
+    width: 70px;
+    height: 70px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a {
+    width: 50%;
+    height: 520px;
+    /*Hero Slider*/
+    /* END OF Hero Slider*/
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a h1 {
+    font-size: 1.2em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a #social {
+    width: 50%;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a #social h3 {
     width: 100%;
-    height: 100%;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider {
+    text-align: left;
+    margin: 0;
+    width: 100%;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask {
+    width: 76%;
+    height: 420px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body {
+    width: 100%;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel {
+    height: 420px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
+    font-size: 0.9em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
+    padding: 0;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
+    height: 17vh;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    margin: auto;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
+    font-size: 0.95em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
+    font-size: 0.9em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
+    padding: 0.1em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
+    font-size: 0.75em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li:before {
+    font-size: 0.9em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider ul#list {
+    width: 22%;
+    /* style */
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider ul#list li {
+    height: 44px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider ul#list li a {
+    font-size: 0.75em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont-a .hero-slider ul#list li a:hover {
+    line-height: 40px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont {
+    width: 45%;
+    /*chart*/
+    /* End of chart*/
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont h1 {
+    font-size: 1.2em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #social {
+    width: 50%;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #social h3 {
+    width: 100%;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #chart {
+    width: 95%;
+    height: 320px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #chart #bars li {
+    height: 50px;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #chart #bars li .bar:hover {
+    background: #CCD3DE;
+    cursor: pointer;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #chart #bars li .bar:hover:after {
+    font-size: 1.1em;
+  }
+  #main-content #frontpage_container div#profile_container section#prof_cont #chart #bars span {
+    width: 16.5%;
+    font-size: 0.8em;
   }
   #main-content div#profile_container {
     margin: 0 0 1em 0;
@@ -4009,7 +4282,7 @@ desktop 1440px*/
     /*profile-page_container - chart*/
   }
   #main-content div#profile_container #text-box-profile {
-    width: 48%;
+    width: 51%;
     margin: 0;
     height: auto;
   }
@@ -5127,13 +5400,7 @@ desktop 1280px*/
   #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
     font-size: 1.6em;
   }
-  #main-content #frontpage_container div#svg-image-container {
-    display: none;
-  }
-  #main-content #frontpage_container figure#ie8-image {
-    width: 40%;
-  }
-  #main-content #frontpage_container figure#ie8-image img#image-5 {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image img#image-5 {
     width: 100%;
     height: 100%;
   }
@@ -6145,7 +6412,6 @@ desktop 1024px*/
   #main-content #frontpage_container {
     /*homepage container*/
     /*front-page image container*/
-    /*PNG for IE8*/
   }
   #main-content #frontpage_container div#textboxfront {
     width: 54%;
@@ -6204,13 +6470,13 @@ desktop 1024px*/
     font-size: 1.6em;
   }
   #main-content #frontpage_container div#svg-image-container {
-    display: none;
+    padding: 1em;
+    /*PNG for IE8*/
   }
-  #main-content #frontpage_container figure#ie8-image {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image {
     margin: 0;
-    width: 38%;
   }
-  #main-content #frontpage_container figure#ie8-image img#image-5 {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image img#image-5 {
     width: 100%;
     height: 100%;
   }
@@ -6222,7 +6488,7 @@ desktop 1024px*/
     /*profile-page_container - chart*/
   }
   #main-content div#profile_container #text-box-profile {
-    width: 48%;
+    width: 50%;
     margin: 0;
     height: auto;
   }
@@ -6230,11 +6496,11 @@ desktop 1024px*/
     font-size: 1em;
   }
   #main-content div#profile_container #text-box-profile p {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #main-content div#profile_container #text-box-profile .introimg {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
   #main-content div#profile_container #text-box-profile-a {
     width: 48%;
@@ -6246,20 +6512,20 @@ desktop 1024px*/
     line-height: 25px;
   }
   #main-content div#profile_container #text-box-profile-a p {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #main-content div#profile_container #text-box-profile-a .introimg {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
   #main-content div#profile_container section#prof_cont-a {
-    width: 48%;
-    padding: 0.5em;
+    width: 50%;
+    height: 500px;
     /*Hero Slider*/
     /* END OF Hero Slider*/
   }
   #main-content div#profile_container section#prof_cont-a h1 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
   #main-content div#profile_container section#prof_cont-a #social {
     width: 50%;
@@ -6283,7 +6549,7 @@ desktop 1024px*/
     height: 420px;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
     margin: 0;
@@ -6292,14 +6558,11 @@ desktop 1024px*/
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
     height: 17vh;
   }
-  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
-    margin: auto;
-  }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
     padding: 0.1em;
@@ -6324,7 +6587,7 @@ desktop 1024px*/
     line-height: 40px;
   }
   #main-content div#profile_container section#prof_cont {
-    width: 48%;
+    width: 45%;
     /*chart*/
     /* End of chart*/
   }
@@ -7261,7 +7524,6 @@ desktop 980px*/
   #main-content #frontpage_container {
     /*homepage container*/
     /*front-page image container*/
-    /*PNG for IE8*/
   }
   #main-content #frontpage_container div#textboxfront {
     width: 100%;
@@ -7321,12 +7583,12 @@ desktop 980px*/
     font-size: 1.6em;
   }
   #main-content #frontpage_container div#svg-image-container {
-    display: none;
+    /*PNG for IE8*/
   }
-  #main-content #frontpage_container figure#ie8-image {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image {
     margin: 0;
   }
-  #main-content #frontpage_container figure#ie8-image img#image-5 {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image img#image-5 {
     width: 100%;
     height: 100%;
   }
@@ -7338,22 +7600,22 @@ desktop 980px*/
     /*profile-page_container - chart*/
   }
   #main-content div#profile_container #text-box-profile {
-    width: 48%;
+    width: 50%;
     margin: 0;
     height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
-    font-size: 0.95em;
+    font-size: 1em;
   }
   #main-content div#profile_container #text-box-profile p {
     font-size: 0.8em;
   }
   #main-content div#profile_container #text-box-profile .introimg {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   #main-content div#profile_container #text-box-profile-a {
-    width: 48%;
+    width: 45%;
     margin: 0;
     height: auto;
   }
@@ -7369,8 +7631,7 @@ desktop 980px*/
     height: 60px;
   }
   #main-content div#profile_container section#prof_cont-a {
-    width: 50%;
-    height: 500px;
+    width: 53%;
     padding: 0.5em;
     /*Hero Slider*/
     /* END OF Hero Slider*/
@@ -7400,28 +7661,32 @@ desktop 980px*/
     height: 420px;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
+    margin: 0;
     padding: 0;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
     height: 17vh;
   }
+  #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
+    margin: auto;
+  }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
     font-size: 0.9em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
     padding: 0.1em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-    font-size: 0.7em;
+    font-size: 0.75em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li:before {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider ul#list {
     width: 22%;
@@ -7431,18 +7696,18 @@ desktop 980px*/
     height: 44px;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider ul#list li a {
-    font-size: 0.65em;
+    font-size: 0.7em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider ul#list li a:hover {
     line-height: 40px;
   }
   #main-content div#profile_container section#prof_cont {
-    width: 48%;
+    width: 50%;
     /*chart*/
     /* End of chart*/
   }
   #main-content div#profile_container section#prof_cont h1 {
-    font-size: 1em;
+    font-size: 1.2em;
   }
   #main-content div#profile_container section#prof_cont #social {
     width: 50%;
@@ -7465,8 +7730,8 @@ desktop 980px*/
     font-size: 1.1em;
   }
   #main-content div#profile_container section#prof_cont #chart #bars span {
-    width: 18.5%;
-    font-size: 0.65em;
+    width: 16.5%;
+    font-size: 0.7em;
   }
   #main-content div#photocontainer div.content {
     clear: both;
@@ -8360,7 +8625,6 @@ tablet 800px */
   #main-content #frontpage_container {
     /*homepage container*/
     /*front-page image container*/
-    /*PNG for IE8*/
   }
   #main-content #frontpage_container div#textboxfront {
     width: 100%;
@@ -8419,39 +8683,40 @@ tablet 800px */
     font-size: 1.6em;
   }
   #main-content #frontpage_container div#svg-image-container {
-    display: none;
+    /*PNG for IE8*/
   }
-  #main-content #frontpage_container figure#ie8-image {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image {
     margin: 0;
-    width: 35%;
     display: block;
   }
-  #main-content #frontpage_container figure#ie8-image img#image-5 {
+  #main-content #frontpage_container div#svg-image-container figure#ie8-image img#image-5 {
     width: 100%;
     height: 100%;
   }
   #main-content div#profile_container {
     padding: 0;
     /*first text block*/
+    /*second text block*/
+    /*profile-page_container - hero-slider*/
     /*profile-page_container - chart*/
   }
   #main-content div#profile_container #text-box-profile {
-    width: 98%;
+    width: 48%;
     margin: 0;
     height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
-    font-size: 1em;
+    font-size: 0.95em;
   }
   #main-content div#profile_container #text-box-profile p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #main-content div#profile_container #text-box-profile .introimg {
     width: 70px;
     height: 70px;
   }
   #main-content div#profile_container #text-box-profile-a {
-    width: 98%;
+    width: 40%;
     margin: 0;
     height: auto;
   }
@@ -8460,21 +8725,21 @@ tablet 800px */
     line-height: 25px;
   }
   #main-content div#profile_container #text-box-profile-a p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   #main-content div#profile_container #text-box-profile-a .introimg {
     width: 60px;
     height: 60px;
   }
   #main-content div#profile_container section#prof_cont-a {
-    width: 90%;
+    width: 56%;
     height: 500px;
-    margin: 1em;
+    padding: 0.5em;
     /*Hero Slider*/
     /* END OF Hero Slider*/
   }
   #main-content div#profile_container section#prof_cont-a h1 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   #main-content div#profile_container section#prof_cont-a #social {
     width: 50%;
@@ -8529,19 +8794,18 @@ tablet 800px */
     height: 44px;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider ul#list li a {
-    font-size: 0.75em;
+    font-size: 0.65em;
   }
   #main-content div#profile_container section#prof_cont-a .hero-slider ul#list li a:hover {
     line-height: 40px;
   }
   #main-content div#profile_container section#prof_cont {
-    width: 90%;
-    margin: 1em;
+    width: 48%;
     /*chart*/
     /* End of chart*/
   }
   #main-content div#profile_container section#prof_cont h1 {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   #main-content div#profile_container section#prof_cont #social {
     width: 50%;
@@ -8564,8 +8828,8 @@ tablet 800px */
     font-size: 1.1em;
   }
   #main-content div#profile_container section#prof_cont #chart #bars span {
-    width: 16.5%;
-    font-size: 0.8em;
+    width: 18.5%;
+    font-size: 0.65em;
   }
   #main-content div#photocontainer div.content {
     clear: both;

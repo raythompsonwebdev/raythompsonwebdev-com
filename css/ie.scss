@@ -23,6 +23,7 @@
         font-family: $FontStyleHeader;
         font-size: 1em;
         border: none;
+        behavior: url(PIE.htc);
     }
 
     body {
@@ -71,6 +72,7 @@
                     @include originTran(50% 50%);
                     @include Transition(all 0.2s ease-out 0s);
                     height: auto;
+                    behavior: url(PIE.htc);
 
                     /* Text meant only for screen readers. */
                     div.screen-reader-text {
@@ -79,7 +81,7 @@
                         height: 1px;
                         width: 1px;
                         overflow: hidden;
-
+                        behavior: url(PIE.htc);
                         &:focus {
                             background-color: #f1f1f1;
                             border-radius: 3px;
@@ -98,7 +100,7 @@
                             top: 5px;
                             width: auto;
                             z-index: 100000;
-
+                            behavior: url(PIE.htc);
                         }
 
                     }
@@ -157,12 +159,12 @@
                         display: inline-block;
                     }
 
-                    span:last-of-type {
+                    span.slvzr-last-of-type{
                         height: 100%;
                         color: $color1;
                         display: inline-block;
                         margin: 0 0.1em;
-                        behavior: url(PIE.htc);
+                        
                     }
                 }
 
@@ -227,7 +229,9 @@
                             display: block;
                             letter-spacing: 0.1em;
                             font-weight: normal;
-
+                            @include originTran( 50% 50%);
+                            @include Transition(all 0.2s ease-in 0s);
+                            behavior: url(PIE.htc);s
                             &:link {
                                 background-color: $color2;
                                 color: $color1;
@@ -541,6 +545,7 @@
                                     border: 1px solid $color2;
                                     width: 100%;
                                     height: 150px;
+                                    behavior: url(PIE.htc);
 
 
                                 }
@@ -555,6 +560,7 @@
                                     border: 1px solid $color2;
                                     width: 100%;
                                     height: 35px;
+                                    behavior: url(PIE.htc);
                                 }
 
                                 input[type="text"]:focus,
@@ -565,6 +571,7 @@
                                     padding: 3px 0 3px 3px;
                                     margin: 5px 1px 3px 0;
                                     border: 1px solid rgba(204, 211, 222, 1);
+                                    behavior: url(PIE.htc);
                                 }
 
                             }
@@ -581,6 +588,7 @@
                                 font-family: $FontStyle;
                                 display: block;
                                 font-size: 1.1em;
+                                behavior: url(PIE.htc);
 
                                 &:hover {
                                     background-color: $color1;
@@ -777,7 +785,7 @@
                                     background-color: $color3;
                                     @include originTran(50% 50%);
                                     @include Transition(all 0.2s ease-in 0s);
-
+                                    behavior: url(PIE.htc);
                                     &:hover {
                                         color: $color4;
                                         font-weight: bold;
@@ -948,7 +956,7 @@
                             color: $color1;
                             @include originTran(50% 50%);
                             @include Transition(all 0.2s ease-in 0s);
-
+                            behavior: url(PIE.htc);
                             &:hover {
                                 margin-left: 0;
                                 display: block;
@@ -977,6 +985,7 @@
                     float: left;
                     padding: 0;
                     @include Transition(all 0.2s ease-in 0s);
+                    behavior: url(PIE.htc);
 
                     &:hover {
                         //border: 4px solid $color1;
@@ -1023,6 +1032,7 @@
                         @include originTran(50% 50%);
                         @include Transition(all 0.2s ease-in 0s);
                         line-height: 40px;
+                        behavior: url(PIE.htc);
 
                         &:hover {
                             color: $color1;
@@ -1039,6 +1049,7 @@
                         display: block;
                         width: 100%;
                         padding: 0;
+                        behavior: url(PIE.htc);
 
                         span {
                             width: 33%;
@@ -1065,6 +1076,7 @@
                                     background-color: $color4;
                                     @include originTran(50% 50%);
                                     @include Transition(all 0.2s ease-in 0s);
+                                    behavior: url(PIE.htc);
 
                                     &:hover {
                                         color: $color4;
@@ -1165,7 +1177,7 @@
                     text-align: left;
                     padding: 0.5em;
                     @include box-sizing($type: border-box);
-
+                    behavior: url(PIE.htc);
                     .entry-meta,
                     .index-entry-meta {
 
@@ -1237,6 +1249,7 @@
                                     text-align: center;
                                     @include originTran(50% 50%);
                                     @include Transition(all 0.2s ease-in 0s);
+                                    behavior: url(PIE.htc);
 
                                     &:hover {
                                         font-weight: bold;
@@ -1277,6 +1290,7 @@
                     text-align: center;
                     margin: 2% 0;
                     @include boredrady (10px);
+                    behavior: url(PIE.htc);
 
                     a {
                         display: block;
@@ -1290,6 +1304,7 @@
                             margin: 2% 0;
                             letter-spacing: 0.075em;
                             @include boredrady (10px);
+                            behavior: url(PIE.htc);
                         }
 
                         span.screen-reader-text {
@@ -1356,6 +1371,7 @@
                                     height: 100%;
                                     @include originTran(50% 50%);
                                     @include Transition(all 0.2s ease-in 0s);
+                                    behavior: url(PIE.htc);
 
                                     &:hover {
                                         color: $color1;
@@ -1462,6 +1478,7 @@
                             width: 100%;
                             font-size: 1.5em;
                             background-color: $color2;
+                            behavior: url(PIE.htc);
 
                             &:hover {
                                 color: $color4;
@@ -1582,6 +1599,7 @@
                             width: 100%;
                             font-size: 1.5em;
                             background-color: $color3;
+                            behavior: url(PIE.htc);
 
                             &:hover {
                                 color: $color4;
@@ -1666,6 +1684,7 @@
                             margin: 0;
                             width: 100%;
                             text-indent: 0.5em;
+                            behavior: url(PIE.htc);
 
                             &:hover {
                                 background-color: $color1;
@@ -2258,58 +2277,80 @@
 
                 /*front-page image container*/
                 div#svg-image-container {
-
-                    display:none;
-                    
-                }
-
-                 /*PNG for IE8*/
-                 figure#ie8-image {
-                    margin: 0;
-                    padding: 0;
-                    display:block;
-                    width:45%;
-                    float:right;
-                    img#image-5 {
-                        width:100%;
-                        height:100%;
-                        
+                    width: 45%;
+                    height: auto;
+                    float: right;
+                    display: block;
+                    font-family: ($FontStyle);
+                    padding: 2em;
+                    figure#image-7{
+                        display:none;
                     }
+                    /*PNG for IE8*/
+                    figure#ie8-image {
+                        width:100%;
+                        display:block;
+                        img#image-5 {
+                            display:block;
+                            width:100%;
+                            height:100%;
+                            /* IE filter extension */
+                            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=90);
+                            width:100%; /* Required for IE filter */
+                            -moz-opacity: 0.9; /* Mozilla extension */
+                            -khtml-opacity:0.9; /* Konqueror extension (Safari 1.1)*/
+                            opacity: 0.9; /* the correct CSS3 syntax */
+                            
+                        }
+                    }
+
                 }
-
-
             }
 
+            /*profile-page-panel */
             /*profile-page-panel */
             div#profile_container {
                 margin: 0 0 1em 0;
                 padding: 0;
-
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-flow: row wrap;
+                -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+                -webkit-justify-content: space-evenly;
+                -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+                behavior: url(PIE.htc);
                 /*first text block*/
 
                 #text-box-profile {
-                    width: 48%;
+                    -webkit-order: 0;
+                    -ms-flex-order: 0;
+                    order: 0;
+                    -webkit-flex: 0 0 auto;
+                    -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
+                    width:53%;
                     display: inline-block;
-                    float: left;
+                    
                     margin: 0;
                     height: auto;
-                    margin-bottom: 0.5em;
-
+                    behavior: url(PIE.htc);
+                    
                     h1 {
                         font-size: 1.05em;
                         line-height: 40px;
                         font-weight: bold;
                         display: block;
                     }
-
                     p {
                         line-height: 1.9em;
                         font-size: 1em;
                         margin-bottom: 0.25em;
-                        background-color: $color4;
+                        background-color:$color4;
                         padding: 0.5em;
                     }
-
                     .introimg {
                         width: 50px;
                         float: left;
@@ -2317,31 +2358,36 @@
                         height: 50px;
                         display: inline-block;
                     }
-
+                    
                 }
 
                 /*second text block*/
                 #text-box-profile-a {
+                    -webkit-order: 4;
+                    -ms-flex-order: 4;
+                    order: 4;
+                    -webkit-flex: 0 0 auto;
+                    -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
                     width: 48%;
                     display: inline-block;
-                    float: left;
+                    
                     margin: 0;
                     height: auto;
-
+                    behavior: url(PIE.htc);
                     h1 {
                         font-size: 1em;
                         line-height: 25px;
-                    }
 
+                    }
                     p {
                         width: 100%;
                         line-height: 1.9em;
                         font-size: 1em;
                         margin-bottom: 0.25em;
                         padding: 0.5em;
-                        background-color: $color4;
+                        background-color:$color4;
                     }
-
                     .introimg {
                         width: 70px;
                         float: left;
@@ -2354,114 +2400,124 @@
 
                 /*profile-page_container - hero-slider*/
                 section#prof_cont-a {
+                    -webkit-order: 3;
+                    -ms-flex-order: 3;
+                    order: 3;
+                    -webkit-flex: 0 0 auto;
+                    -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
                     width: 50%;
                     height: 520px;
                     display: inline-block;
                     float: right;
                     box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-                    padding: 1em;
+                    padding:1em;
                     background-color: $color4;
                     margin: 0;
-
+                    behavior: url(PIE.htc);
                     h1 {
                         height: 50px;
                         font-size: 1.3em;
                         line-height: 50px;
                         text-indent: 1.5%;
                         letter-spacing: 0.05em;
-
+                        
                     }
-
                     #social {
                         width: 50%;
                         display: block;
                         float: left;
                         margin-top: 0;
-
                         h3 {
                             width: 100%;
                             margin: 2% 0;
                         }
                     }
-
                     /*Hero Slider*/
                     .hero-slider {
                         text-align: left;
                         margin: 0;
-                        font-family: $FontStyle;
+                        font-family:$FontStyle;
                         width: 100%;
-
                         .mask {
                             display: inline-block;
                             width: 76%;
                             height: 420px;
                             margin: 0 0 0 0.5em;
                             overflow: hidden;
-
                             div.slider-body {
                                 width: 100%;
 
-                                #panel-1 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/Large-Photoshop-Certicate-.jpg');
+                                #panel-1 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/Large-Photoshop-Certicate-.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 40%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-2 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/ITQ-USERS-LEVEL1-LARGE.jpg');
+                                #panel-2 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/ITQ-USERS-LEVEL1-LARGE.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 22%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-3 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/Large-Udemy-Certicate-.jpg');
+                                #panel-3 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/Large-Udemy-Certicate-.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 22%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-4 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/FreeCodeCamp-large.png');
+                                #panel-4 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/FreeCodeCamp-large.png');
                                     background-repeat: no-repeat;
                                     background-position: center;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-5 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/lynda_logo1r-d_72x72.png');
+                                #panel-5 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/lynda_logo1r-d_72x72.png');
                                     background-repeat: no-repeat;
                                     background-position: center;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-6 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/Mobile-web-applications-Certificate-Foundation-large.jpg');
+                                #panel-6 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/Mobile-web-applications-Certificate-Foundation-large.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 31%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-7 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/Digital-Marketing-Certificate-Foundation.jpg');
+                                #panel-7 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/Digital-Marketing-Certificate-Foundation.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 18%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-8 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/Content-Marketing-Certificate-Foundation.jpg');
+                                #panel-8 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/Content-Marketing-Certificate-Foundation.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 18%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
-                                #panel-9 .slider-panel a.fancybox span {
-                                    background-image: url('images/large/certficates/Digital-Futures-2017-Certificate-of-Participation-large.jpg');
+                                #panel-9 .slider-panel a.fancybox span{ 
+                                    background-image:url('images/large/certficates/Digital-Futures-2017-Certificate-of-Participation-large.jpg');
                                     background-repeat: no-repeat;
                                     background-position: 50% 61%;
                                     //background-size: cover;
+                                    behavior: url(PIE.htc);
                                 }
 
                                 .panel {
@@ -2469,7 +2525,6 @@
                                     width: 100%;
                                     height: 420px;
                                     background-color: $color4;
-
                                     h2 {
                                         text-transform: uppercase;
                                         padding: 0;
@@ -2487,28 +2542,25 @@
                                     figure.slider-panel {
                                         margin: 0;
                                         padding: 0;
-
                                         a.fancybox {
                                             @include Transition(all 0.2s cubic-bezier(.86, 0, .07, 1) 0s);
-
-                                            span {
+                                            behavior: url(PIE.htc);
+                                            span{
                                                 float: none;
-                                                display: block;
+                                                display:block;
                                                 width: 100%;
                                                 height: 17vh;
                                                 margin: 0;
                                                 outline: 0;
-                                                padding: 0;
-
+                                                padding:0;
+                                                
                                             }
 
                                         }
-
                                         figcaption {
                                             clear: both;
                                             width: 100%;
                                             margin: 0;
-
                                             h3 {
                                                 font-weight: normal;
                                                 font-size: 1em;
@@ -2519,7 +2571,6 @@
                                                 letter-spacing: 0.01em;
                                                 text-align: center;
                                             }
-
                                             h4 {
                                                 font-weight: normal;
                                                 margin: 0;
@@ -2533,13 +2584,11 @@
                                                 display: block;
                                                 text-indent: 2%;
                                             }
-
                                             ul {
                                                 width: 100%;
                                                 display: block;
                                                 margin: 0;
                                                 padding: 0.1em;
-
                                                 li {
                                                     width: 100%;
                                                     background-color: $color2;
@@ -2550,7 +2599,7 @@
                                                     height: auto;
                                                     line-height: 25px;
                                                     margin-bottom: 0.1em;
-
+                                                    
                                                     &:before {
                                                         font-family: "FontAwesome";
                                                         font-size: 0.95em;
@@ -2558,17 +2607,16 @@
                                                         content: "\f19d";
                                                         margin: 0 1%;
                                                         line-height: 1.5em;
-
+                                                        
                                                     }
                                                 }
                                             }
-
+                                            
                                         }
                                     }
                                 }
                             }
                         }
-
                         ul#list {
                             margin: 0;
                             list-style: outside none none;
@@ -2581,16 +2629,14 @@
                                 height: 44px;
                                 margin-bottom: 0.2em;
                                 border: 1px solid $color2;
-
                                 a {
                                     text-align: center;
                                     display: block;
                                     font-size: 0.8em;
-                                    line-height: 40px;
+                                    line-height: 40px; 
                                     // background-color: $color2;
                                     height: 100%;
                                 }
-
                                 a:hover {
                                     background-color: $color1;
                                     color: $color4;
@@ -2598,71 +2644,73 @@
                                     line-height: 40px;
                                 }
                             }
-
                             /* style */
                         }
                     }
-
                     /* END OF Hero Slider*/
                 }
 
                 /*profile-page_container - chart*/
                 section#prof_cont {
-
-                    width: 50%;
+                    -webkit-order: 2;
+                    -ms-flex-order: 2;
+                    order: 2;
+                    -webkit-flex: 0 0 auto;
+                    -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
+                    width: 45%;
                     height: 410px;
                     display: inline-block;
-                    //float: right;
+                    float: right;
                     box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-
+         
                     background-color: $color4;
                     margin-bottom: 1em;
-
+                    behavior: url(PIE.htc); 
                     h1 {
                         height: 50px;
                         font-size: 1.3em;
                         line-height: 50px;
                         text-indent: 1.5%;
                         letter-spacing: 0.05em;
-
+                        
                     }
-
                     #social {
                         width: 50%;
                         display: block;
                         float: left;
                         margin-top: 0;
-
                         h3 {
                             width: 100%;
                             margin: 2% 0;
                         }
                     }
-
                     /*chart*/
                     #chart {
                         width: 95%;
                         height: 320px;
                         margin: 2.5% auto;
                         display: block;
-                        font-family: $FontStyle;
-
-
+                        font-family:$FontStyle;
+                    
                         #bars {
-
+                            display: -webkit-flex;
+                            display: -ms-flexbox;
+                            display: flex;
+                            -webkit-flex-flow: row wrap;
+                            -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
                             background: $color4;
                             width: 100%;
                             height: 100%;
                             list-style: none;
-
+                            behavior: url(PIE.htc);
                             li {
                                 width: 100%;
                                 height: 50px;
-                                margin: 0;
+                                margin: 0 0 0.2em 0;
                                 text-align: center;
                                 position: relative;
-                                margin-bottom: 0.1em;
-
                                 .bar {
                                     display: block;
                                     margin-left: 0;
@@ -2670,46 +2718,45 @@
                                     position: absolute;
                                     left: 0;
                                     height: 100%;
-
                                     &:hover {
                                         background: $color2;
                                         cursor: pointer;
                                     }
-
                                     &:hover:after {
                                         content: attr(data-percentage) '%';
                                         position: relative;
                                         left: 101%;
-                                        display: block;
-                                        line-height: 50px;
-                                        font-size: 1.1em;
-                                        background-color: $color4;
-                                        color: $color1;
-                                        width: 70px;
-                                        text-align: center;
+                                        display:block;
+                                        line-height:50px;
+                                        font-size:1.1em;
+                                        background-color:$color4;
+                                        color:$color1;
+                                        width:70px;
+                                        text-align:center;
                                     }
                                 }
 
                             }
-
                             span {
-
+                                -webkit-align-self: flex-end;
+                                -ms-flex-item-align: end;
+                                align-self: flex-end;
                                 width: 16.5%;
                                 position: absolute;
                                 left: 0;
-                                height: auto;
+                                height:auto;
                                 text-align: left;
                                 line-height: 50px;
                                 font-size: 0.8em;
-                                background-color: $color4;
-                                z-index: 3;
+                                background-color:$color4;
+                                z-index:3;
+                                behavior: url(PIE.htc);
                             }
                         }
                     }
-
                     /* End of chart*/
                 }
-
+                
             }
 
 
@@ -2733,8 +2780,6 @@
                         text-align: left;
                         margin-bottom: 1.5em;
                         width: 100%;
-
-
                         ul {
                             padding-left: 0;
                             height: auto;
@@ -2754,6 +2799,7 @@
                                 text-align: center;
                                 margin-left: 0.1em;
                                 float:left;
+                                behavior: url(PIE.htc);
                                
                             }
 
@@ -2798,19 +2844,17 @@
                             height: 100%;
                             margin: 0;
                             position: relative;
-
-                            /*-webkit-transform-style: preserve-3d;
-                        -ms-transform-style: preserve-3d;
-                        transform-style: preserve-3d;*/
-
+                            -webkit-transform-style: preserve-3d;
+                            -ms-transform-style: preserve-3d;
+                            transform-style: preserve-3d;
                             overflow: hidden;
-
-
+                            behavior: url(PIE.htc);
                             div.showcase-img {
                                 height: auto;
                                 width: 100%;
                                 display: block;
                                 @include Transition(all 0.2s ease-in 0s);
+                                behavior: url(PIE.htc);
                             }
 
                             figcaption.showcase-content {
@@ -2822,6 +2866,7 @@
                                 width: 100%;
                                 background-color: $color4;
                                 @include Transition(all 0.2s ease-in 0s);
+                                behavior: url(PIE.htc);
 
 
                                 h1 {
@@ -2851,12 +2896,14 @@
                                     font-weight: normal;
                                     @include boredrady (10px);
                                     @include Transition(all 0.2s ease-in 0s);
+                                    behavior: url(PIE.htc);
 
                                     &:hover {
                                         color: $color1;
                                         background-color: $color2;
                                         font-weight: bold;
                                         @include boredrady (10px);
+                                        behavior: url(PIE.htc);
                                     }
                                 }
 
@@ -2867,6 +2914,7 @@
 
                         figure.showcase-container:hover div.showcase-img {
                             @include TransScale(scale(1.1));
+                            behavior: url(PIE.htc);
                         }
 
                         figure.showcase-container:hover figcaption.showcase-content {
@@ -2901,6 +2949,7 @@
                     @include Transition(all 0.2s ease-in 0s);
                     height: 100%;
                     background-color: $color2;
+                    behavior: url(PIE.htc);
 
                     &:hover {
                         background-color: $color1;
@@ -2966,6 +3015,7 @@
                         line-height: 25px;
                         @include originTran(50% 50%);
                         @include Transition(all 0.2s ease-in 0s);
+                        behavior: url(PIE.htc);
 
                         &:hover {
 
@@ -4284,20 +4334,227 @@ desktop 1440px*/
                 }
 
                 /*front-page image container*/
-                div#svg-image-container {
-
-                    display:none;
-                    
-                }
-
-                figure#ie8-image {
-                    width:42%;
-                    
-                    img#image-5 {
-                        width:100%;
-                        height:100%;
+                div#profile_container {
+                    margin: 0 0 1em 0;
+                    padding: 0;
+        
+                    /*first text block*/
+        
+                    #text-box-profile {
+        
+                        width:53%;
+        
+                         
+                        //float: left;
+                        margin: 0;
+                        height: auto;
+                        h1 {
+                            font-size: 1.05em;
+        
+                        }
+                        p {
+        
+                            font-size: 0.9em;
+        
+                        }
+                        .introimg {
+                            width: 70px;
+                            height: 70px;
+        
+                        }
                         
                     }
+        
+                    /*second text block*/
+                    #text-box-profile-a {
+        
+                        width: 48%;
+        
+                         
+                        //float: left;
+                        margin: 0;
+                        height: auto;
+                        h1 {
+                            font-size: 1em;
+                            line-height: 25px;
+        
+                        }
+                        p {
+                            font-size: 0.9em;
+        
+                        }
+                        .introimg {
+                            width: 70px;
+                            height: 70px;
+        
+                        }
+        
+                    }
+        
+                    /*profile-page_container - hero-slider*/
+                    section#prof_cont-a {
+        
+                        width: 50%;
+                        height: 520px;
+        
+                        h1 {
+        
+                            font-size: 1.2em;
+        
+                            
+                        }
+                        #social {
+                            width: 50%;
+        
+                            h3 {
+                                width: 100%;
+        
+                            }
+                        }
+                        /*Hero Slider*/
+                        .hero-slider {
+                            text-align: left;
+                            margin: 0;
+                            
+                            width: 100%;
+                            .mask {
+        
+                                width: 76%;
+                                height: 420px;
+        
+                                div.slider-body {
+                                    width: 100%;
+                                    .panel {
+        
+                                        height: 420px;
+        
+                                        h2 {
+        
+                                            font-size: 0.9em;
+        
+                                        }
+                                        figure.slider-panel {
+                                            margin: 0;
+                                            padding: 0;
+                                            a.fancybox {
+                                                
+                                                span{
+                                                    height: 17vh;
+                                                   
+                                                }
+        
+                                            }
+                                            figcaption {
+                                                
+                                                margin: auto;
+                                                h3 {
+        
+                                                    font-size: 0.95em;
+                                                }
+                                                h4 {
+                                                    font-size: 0.9em;
+        
+                                                }
+                                                ul {
+                                                    padding: 0.1em;
+                                                    li {
+        
+                                                        font-size: 0.75em;
+             
+                                                        &:before {
+        
+                                                            font-size: 0.9em;
+          
+                                                        }
+                                                    }
+                                                }
+         
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            ul#list {
+        
+                                width: 22%;
+        
+        
+                                li {
+                                    height: 44px;
+        
+                                    a {
+        
+                                        font-size: 0.75em;
+        
+                                    }
+                                    a:hover {
+        
+                                        line-height: 40px;
+                                    }
+                                }
+                                /* style */
+                            }
+                        }
+                        /* END OF Hero Slider*/
+                    }
+        
+                    /*profile-page_container - chart*/
+                    section#prof_cont {
+        
+                        width: 45%;
+        
+                        h1 {
+        
+                            font-size: 1.2em;
+        
+                            
+                        }
+                        #social {
+                            width: 50%;
+        
+                            h3 {
+                                width: 100%;
+        
+                            }
+                        }
+                        /*chart*/
+                        #chart {
+                            width: 95%;
+                            height: 320px;
+        
+                        
+                            #bars {
+        
+                                li {
+        
+                                    height: 50px;
+        
+                                    .bar {
+        
+                                        &:hover {
+                                            background: $color2;
+                                            cursor: pointer;
+                                        }
+                                        &:hover:after {
+        
+                                            font-size:1.1em;
+        
+                                        }
+                                    }
+        
+                                }
+                                span {
+        
+                                    width: 16.5%;
+        
+                                    font-size: 0.8em;
+        
+                                }
+                            }
+                        }
+                        /* End of chart*/
+                    }
+                    
                 }
 
             }
@@ -4311,7 +4568,7 @@ desktop 1440px*/
 
                 #text-box-profile {
 
-                    width: 48%;
+                    width: 51%;
 
 
                     //float: left;
@@ -5884,19 +6141,17 @@ desktop 1280px*/
                 /*front-page image container*/
                 div#svg-image-container {
 
-                    display:none;
-                    
-                }
-
-                figure#ie8-image {
-                    width:40%;
-                    
-                    img#image-5 {
-                        width:100%;
-                        height:100%;
-                        
+                    figure#ie8-image {
+                                                
+                        img#image-5 {
+                            width:100%;
+                            height:100%;
+                            
+                        }
                     }
                 }
+
+                
 
             }
 
@@ -7401,21 +7656,20 @@ desktop 1024px*/
 
             /*front-page image container*/
             div#svg-image-container {
-
-                display:none;
-                
-            }
-
-             /*PNG for IE8*/
-             figure#ie8-image {
-                margin: 0;
-                width:38%;
-                img#image-5 {
-                    width:100%;
-                    height:100%;
+                padding: 1em;
+                /*PNG for IE8*/
+                figure#ie8-image {
+                    margin: 0;
                     
+                    img#image-5 {
+                        width:100%;
+                        height:100%;
+                        
+                    }
                 }
             }
+
+            
 
 
         }
@@ -7429,30 +7683,27 @@ desktop 1024px*/
 
             #text-box-profile {
 
-                width: 48%;
+                width:50%;
 
-
+                 
                 //float: left;
                 margin: 0;
                 height: auto;
-
                 h1 {
                     font-size: 1em;
 
                 }
-
                 p {
 
-                    font-size: 0.8em;
+                    font-size: 0.9em;
 
                 }
-
                 .introimg {
-                    width: 50px;
-                    height: 50px;
+                    width: 70px;
+                    height: 70px;
 
                 }
-
+                
             }
 
             /*second text block*/
@@ -7460,26 +7711,23 @@ desktop 1024px*/
 
                 width: 48%;
 
-
+                 
                 //float: left;
                 margin: 0;
                 height: auto;
-
                 h1 {
                     font-size: 1em;
                     line-height: 25px;
 
                 }
-
                 p {
 
-                    font-size: 0.8em;
+                    font-size: 0.9em;
 
                 }
-
                 .introimg {
-                    width: 60px;
-                    height: 60px;
+                    width: 70px;
+                    height: 70px;
 
                 }
 
@@ -7488,16 +7736,15 @@ desktop 1024px*/
             /*profile-page_container - hero-slider*/
             section#prof_cont-a {
 
-                width: 48%;
-                padding: 0.5em;
+                width: 50%;
+                height: 500px;
 
                 h1 {
 
-                    font-size: 1em;
+                    font-size: 1.1em;
 
-
+                    
                 }
-
                 #social {
                     width: 50%;
 
@@ -7506,14 +7753,12 @@ desktop 1024px*/
 
                     }
                 }
-
                 /*Hero Slider*/
                 .hero-slider {
                     text-align: left;
                     margin: 0;
-
+                    
                     width: 100%;
-
                     .mask {
 
                         width: 76%;
@@ -7521,65 +7766,57 @@ desktop 1024px*/
 
                         div.slider-body {
                             width: 100%;
-
                             .panel {
 
                                 height: 420px;
 
                                 h2 {
 
-                                    font-size: 0.75em;
+                                    font-size: 0.8em;
 
                                 }
-
                                 figure.slider-panel {
                                     margin: 0;
                                     padding: 0;
-
                                     a.fancybox {
-
-                                        span {
+                                        
+                                        span{
                                             height: 17vh;
-
+                                           
                                         }
 
                                     }
-
                                     figcaption {
-
-                                        margin: auto;
-
+                                       
+                                        
+                                        
                                         h3 {
 
                                             font-size: 0.9em;
                                         }
-
                                         h4 {
-                                            font-size: 0.8em;
+                                            font-size: 0.85em;
 
                                         }
-
                                         ul {
                                             padding: 0.1em;
-
                                             li {
 
                                                 font-size: 0.75em;
-
+     
                                                 &:before {
 
                                                     font-size: 0.85em;
-
+  
                                                 }
                                             }
                                         }
-
+ 
                                     }
                                 }
                             }
                         }
                     }
-
                     ul#list {
 
                         width: 22%;
@@ -7593,32 +7830,28 @@ desktop 1024px*/
                                 font-size: 0.7em;
 
                             }
-
                             a:hover {
 
                                 line-height: 40px;
                             }
                         }
-
                         /* style */
                     }
                 }
-
                 /* END OF Hero Slider*/
             }
 
             /*profile-page_container - chart*/
             section#prof_cont {
 
-                width: 48%;
+                width: 45%;
 
                 h1 {
 
                     font-size: 1.2em;
 
-
+                    
                 }
-
                 #social {
                     width: 50%;
 
@@ -7627,13 +7860,12 @@ desktop 1024px*/
 
                     }
                 }
-
                 /*chart*/
                 #chart {
                     width: 95%;
                     height: 320px;
 
-
+                
                     #bars {
 
                         li {
@@ -7646,16 +7878,14 @@ desktop 1024px*/
                                     background: $color2;
                                     cursor: pointer;
                                 }
-
                                 &:hover:after {
 
-                                    font-size: 1.1em;
+                                    font-size:1.1em;
 
                                 }
                             }
 
                         }
-
                         span {
 
                             width: 16.5%;
@@ -7665,10 +7895,9 @@ desktop 1024px*/
                         }
                     }
                 }
-
                 /* End of chart*/
             }
-
+            
         }
 
         /*gallery container*/
@@ -8832,20 +9061,19 @@ desktop 980px*/
             /*front-page image container*/
             div#svg-image-container {
 
-                display:none;
-                
-            }
-
-             /*PNG for IE8*/
-             figure#ie8-image {
-                margin: 0;
-                
-                img#image-5 {
-                    width:100%;
-                    height:100%;
+                /*PNG for IE8*/
+                figure#ie8-image {
+                    margin: 0;
                     
+                    img#image-5 {
+                        width:100%;
+                        height:100%;
+                        
+                    }
                 }
             }
+
+            
 
             
         }
@@ -8860,14 +9088,14 @@ desktop 980px*/
 
             #text-box-profile {
 
-                width:48%;
+                width:50%;
 
                  
                 //float: left;
                 margin: 0;
                 height: auto;
                 h1 {
-                    font-size: 0.95em;
+                    font-size: 1em;
 
                 }
                 p {
@@ -8876,8 +9104,8 @@ desktop 980px*/
 
                 }
                 .introimg {
-                    width: 70px;
-                    height: 70px;
+                    width: 50px;
+                    height: 50px;
 
                 }
                 
@@ -8886,7 +9114,7 @@ desktop 980px*/
             /*second text block*/
             #text-box-profile-a {
 
-                width: 48%;
+                width: 45%;
 
                  
                 //float: left;
@@ -8913,9 +9141,9 @@ desktop 980px*/
             /*profile-page_container - hero-slider*/
             section#prof_cont-a {
 
-                width: 50%;
-                height: 500px;
-                padding:0.5em;
+                width: 53%;
+                padding: 0.5em;
+
                 h1 {
 
                     font-size: 1em;
@@ -8949,11 +9177,11 @@ desktop 980px*/
 
                                 h2 {
 
-                                    font-size: 0.7em;
+                                    font-size: 0.75em;
 
                                 }
                                 figure.slider-panel {
-                                    
+                                    margin: 0;
                                     padding: 0;
                                     a.fancybox {
                                         
@@ -8965,24 +9193,24 @@ desktop 980px*/
                                     }
                                     figcaption {
                                         
-                                        
+                                        margin: auto;
                                         h3 {
 
                                             font-size: 0.9em;
                                         }
                                         h4 {
-                                            font-size: 0.85em;
+                                            font-size: 0.8em;
 
                                         }
                                         ul {
                                             padding: 0.1em;
                                             li {
 
-                                                font-size: 0.7em;
+                                                font-size: 0.75em;
      
                                                 &:before {
 
-                                                    font-size: 0.9em;
+                                                    font-size: 0.85em;
   
                                                 }
                                             }
@@ -9003,7 +9231,7 @@ desktop 980px*/
 
                             a {
 
-                                font-size: 0.65em;
+                                font-size: 0.7em;
 
                             }
                             a:hover {
@@ -9020,11 +9248,11 @@ desktop 980px*/
             /*profile-page_container - chart*/
             section#prof_cont {
 
-                width: 48%;
+                width: 50%;
 
                 h1 {
 
-                    font-size: 1em;
+                    font-size: 1.2em;
 
                     
                 }
@@ -9064,9 +9292,9 @@ desktop 980px*/
                         }
                         span {
 
-                            width: 18.5%;
+                            width: 16.5%;
 
-                            font-size: 0.65em;
+                            font-size: 0.7em;
 
                         }
                     }
@@ -10216,22 +10444,21 @@ tablet 800px */
            
             /*front-page image container*/
             div#svg-image-container {
-
-                display:none;
                 
-            }
-
-             /*PNG for IE8*/
-             figure#ie8-image {
-                margin: 0;
-                width:35%;
-                display:block;
-                img#image-5 {
-                    width:100%;
-                    height:100%;
+                /*PNG for IE8*/
+                figure#ie8-image {
+                    margin: 0;
                     
+                    display:block;
+                    img#image-5 {
+                        width:100%;
+                        height:100%;
+                        
+                    }
                 }
             }
+
+            
 
             
         }
@@ -10244,20 +10471,20 @@ tablet 800px */
             /*first text block*/
 
             #text-box-profile {
-                
-                width:98%;
+
+                width:48%;
 
                  
                 //float: left;
                 margin: 0;
                 height: auto;
                 h1 {
-                    font-size: 1em;
+                    font-size: 0.95em;
 
                 }
                 p {
 
-                    font-size: 0.9em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -10268,10 +10495,10 @@ tablet 800px */
                 
             }
 
-            
+            /*second text block*/
             #text-box-profile-a {
-                
-                width: 98%;
+
+                width: 40%;
 
                  
                 //float: left;
@@ -10284,7 +10511,7 @@ tablet 800px */
                 }
                 p {
 
-                    font-size: 0.9em;
+                    font-size: 0.8em;
 
                 }
                 .introimg {
@@ -10295,16 +10522,15 @@ tablet 800px */
 
             }
 
-            
+            /*profile-page_container - hero-slider*/
             section#prof_cont-a {
-                
-                width: 90%;
-                height: 500px;
-                margin:1em;
 
+                width: 56%;
+                height: 500px;
+                padding:0.5em;
                 h1 {
 
-                    font-size: 1.1em;
+                    font-size: 1em;
 
                     
                 }
@@ -10351,6 +10577,7 @@ tablet 800px */
                                     }
                                     figcaption {
                                         
+                                        
                                         h3 {
 
                                             font-size: 0.9em;
@@ -10388,7 +10615,7 @@ tablet 800px */
 
                             a {
 
-                                font-size: 0.75em;
+                                font-size: 0.65em;
 
                             }
                             a:hover {
@@ -10404,12 +10631,12 @@ tablet 800px */
 
             /*profile-page_container - chart*/
             section#prof_cont {
-                
-                width: 90%;
-                margin:1em;
+
+                width: 48%;
+
                 h1 {
 
-                    font-size: 1.2em;
+                    font-size: 1em;
 
                     
                 }
@@ -10449,9 +10676,9 @@ tablet 800px */
                         }
                         span {
 
-                            width: 16.5%;
+                            width: 18.5%;
 
-                            font-size: 0.8em;
+                            font-size: 0.65em;
 
                         }
                     }
