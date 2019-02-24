@@ -331,12 +331,10 @@ function raythompsonwebdev_com_scripts_own() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	
 	}
 
-}
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
-
-/**
+	/**
 	 * Load the html5.
 	 *  */
 	 
@@ -355,6 +353,11 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 		}
 		return $tag;
 	}, 10, 2 );
+
+}
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
+
+
 
 
 
