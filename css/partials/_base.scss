@@ -1,0 +1,293 @@
+@import "mixins";
+@import "variables";
+
+
+*,
+*:after,
+*:before {
+    @include box-sizing($type: border-box);
+}
+
+* html {
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+/*Clearfix*/
+
+*.float-divider {
+    clear: both;
+    display: block;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+.group:after,
+.group:before {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+/* end of Clearfix*/
+
+
+/*images*/
+
+img#wpstats {
+    display: none;
+    width: 2px;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: top;
+}
+
+.post img {
+    max-width:100%;
+    vertical-align: bottom;
+    height: auto;
+}
+
+/*end of images*/
+
+
+/*Global Wordpress Styles*/
+.menu-toggle {
+    display: none;
+    font-family: $FontStyleHeader;
+}
+
+a {
+    text-decoration: none;
+
+    margin: 0;
+    padding: 0;
+    color: $color1;
+    font-size: 1em;
+    @include Transition(all 0.2s ease-in 0s);
+    img {
+        border: 0;
+        outline: none;
+    }
+
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.custom-logo {
+    vertical-align: top;
+}
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 4px;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    max-width:100%;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    line-height: 1.214em;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $FontStyleHeader;
+    color: $color1;
+    padding: 0;
+    margin: 0;
+    font-weight:bold;
+}
+
+p {
+    font-family: $FontStyle;
+    color: $color1;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+input{
+    margin:0;
+    padding:0;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section { display: block; }
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: $color6;
+    color: $color1;
+    padding: 0.2em 0;
+}
+
+.sticky {
+    font-size: 1em;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+.gallery-caption {
+    font-size: 1em;
+}
+
+//avatar
+.avatar-26 .photo {
+    left: 0px;
+}
+
+.container {
+    width: 38.729257%;
+    float: right;
+    margin: 0 1% 1% 2%;
+}
+
+div.textwidget {
+    height: auto;
+}
+
+.bypostauthor {
+    font-size: 1em;
+}
+
+.newExcerpt {
+    display: block;
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+blockquote {
+	position: relative;
+	margin: 1.5em 0 1.5em 2em;
+	padding: 0 1em;
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1.4em;
+}
+
+blockquote::before {
+	position: absolute;
+	left: -2em;
+	font-family: "icons";
+	content: "\e906";
+	color: #ededed;
+}
