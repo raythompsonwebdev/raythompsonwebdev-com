@@ -20,8 +20,19 @@
 
 <div id="frontpage_container">
 
-<!--SVG Slider-->
-<?php echo do_shortcode( '[slider]' ); ?>
+<div id="svg-image-container">
+    <figure id="image-7">
+		<object 
+			class="style-svg" 
+			type="image/svg+xml" 
+			id="image-4" 
+			alt="svg-image"
+			data="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
+			<img id="image-5" rel="prefetch" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
+		</object>
+	</figure>
+
+</div>
 
 	<div id="textboxfront">
 		<h1><?php echo esc_html('Hello, I\'m a Web Developer','raythompsonwebdev-com');	?></h1>
