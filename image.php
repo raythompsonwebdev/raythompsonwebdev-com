@@ -26,8 +26,7 @@
 
 	<?php
 	if ( have_posts() ) :
-		while ( have_posts() ) :
-			the_post();
+		while ( have_posts() ) : the_post();
 			?>
 
 			<article class="post group" <?php post_class(); ?> <?php the_ID(); ?>>
@@ -117,7 +116,7 @@
 
 			</article><!--end of post group-->
 
-					<?php endwhile; ?>
+		<?php endwhile; ?>
 
 	<?php endif; ?>
 

@@ -659,8 +659,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
 		$next_attachment_url = wp_get_attachment_url();
 
 		// Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery, or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the link to that image file.
-		$attachment_ids = new WP_Query(
-			array(
+		
+		$args = array(
 				'post_parent'    => $post->post_parent,
 				'fields'         => 'ids',
 				'numberposts'    => 1,
@@ -670,8 +670,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
 				'order'          => 'ASC',
 				'orderby'        => 'menu_order ID',
 
-			)
 		);
+		
+		$attachment_ids = new WP_Query($args);
+		
 		// If there is more than 1 attachment in a gallery...
 		if ( count( $attachment_ids, 0 ) > 1 ) {
 			foreach ( $attachment_ids as $attachment_id ) {
