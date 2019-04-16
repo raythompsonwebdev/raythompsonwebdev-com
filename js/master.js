@@ -1,13 +1,4 @@
 
-  //search field togle
-	/* $('header button.menu-toggle').on('click', function(){
-       $('header nav.menu-main-container ul#menu-main').animate({
-            opacity : 'toggle',
-            height: 'toggle'
-            }, 'slow');
-   });*/
-
-
  // Hide/show toggle button on scroll
  jQuery(document).ready(function($){
      
@@ -31,7 +22,8 @@
  		position = $(this).scrollTop();
 	 });
 
-	 $('header button.menu-toggle').on('click', function(event){
+	// sliding menu mobile 
+	$('header button.menu-toggle').on('click', function(event){
     
 		event.preventDefault();
 	
@@ -52,11 +44,6 @@
 				left: -slideoutMenuWidth
 			}, 500);	
 		}
-							
-		 
-	
 	});
-	 
 
-
-  });
+});

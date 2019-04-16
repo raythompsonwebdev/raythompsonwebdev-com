@@ -33,7 +33,7 @@ get_header();
 				
 				<li class="cat-active" category="prod-cnt"><?php esc_html_e( 'All', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="web-applications"><?php esc_html_e( 'Web App', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="web-applications"><?php esc_html_e( 'From Scratch', 'raythompsonwebdev-com' ); ?></li>
 
 				<li class="" category="wordpress"><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
 

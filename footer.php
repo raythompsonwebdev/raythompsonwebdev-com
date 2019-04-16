@@ -63,7 +63,7 @@
 	?>
 
 <p id="copyr" > <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>"></a>
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
 		<span class="sep"> | </span>
 		
 	<?php

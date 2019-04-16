@@ -1,95 +1,69 @@
 <?php
-/**
- * *PHP version 7.2.
- *
- * Archive List page | core/archive.php.
- *
- * @category   Archive_List
- * @package    Raythompsonwebdev-com
- * @subpackage Archive_List
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
- */
+
+/* Template Name: Archive Page Custom */
+
 get_header(); ?>
-	
-	<h1><?php echo esc_html( 'Archive Pages', 'raythompsonwebdev-com' ); ?></h1>
 
 <?php
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-		?>
+	the_archive_title( '<h1 class="page-title">', '</h1>' );
+	the_archive_description( '<div class="taxonomy-description">', '</div>' );
+?>
+
+
+<?php
+while ( have_posts() ) :
+	the_post();
+	?>
 
 <article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-			
-	<article class="entry">
+
+	<h1>
+		<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+	</h1>
+
+	<!--Post entry Header-->
+	<header class="byline">
+		<div class="entry-meta">
+			<?php if ( 'post' === get_post_type() ) : ?>
+				<div class="meta-content">
+
+					<?php
+						raythompsonwebdev_com_posted_on();
+					?>
+
+				</div>
+			<?php endif; ?>
+		</div>
+	</header>
 	
-		<h2><?php esc_html_e( 'Browse by Month:', 'raythompsonwebdev-com' ); ?></h2>
-		
-		<ul>    
-		<?php
-		// Arguments
-				$args = array( 'type' => 'monthly' );
-				// The archives
-				wp_get_archives( $args );
-		?>
-					 
-		</ul>
+	<div class="entry">
 
-	</article>
+	<?php the_content(); ?>
 
-	<article class="entry">
+	<p><strong>By Date</strong></p>
+<ul>
 
-		<h2><?php esc_html_e( 'Browse by Category:', 'raythompsonwebdev-com' ); ?></h2>
+</ul>
 
-		<ul>
-		<?php
-		// Arguments
-		$default = array( 'title_li' => '' );
-		// The categories
-		wp_list_categories( $default );
-		?>
-		</ul>
+<p><strong>Categories:</strong></p>
+<ul class="bycategories">
+	<?php wp_list_categories( 'title_li=' ); ?>
+</ul>
+<div class="clear"></div>
 
-	</article>
+<p><strong>Tags Cloud:</strong></p>
+	<?php wp_tag_cloud(); ?>
 
-	<article class="entry">
+	</div>
 
-		<h2><?php esc_html_e( 'Browse by Tag:', 'raythompsonwebdev-com' ); ?></h2>
+	<footer class="byline">
+		<?php raythompsonwebdev_com_entry_footer(); ?>
+	</footer>
 
-		<ul>
-			<?php
-				// Arguments
-				$args = array(
-					'smallest' => 8,
-					'largest'  => 28,
-					'number'   => 0,
-					'orderby'  => 'name',
-					'order'    => 'ASC',
-				);
-				// Pass the arguments
-				wp_tag_cloud( $args );
+ </article>
 
-			?>
-		</ul>
+<?php endwhile; ?>
 
-	</article>
-			
-		<?php
-	endwhile;
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-				?>
-
-
-	<?php endif; ?>
-
-</article>
 
 <section class="contact-wide">
 

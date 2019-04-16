@@ -67,23 +67,7 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-        /**
-         * JS Hint
-         */
-        //jshint: {
-            //files: ['Gruntfile.js', 'js/**/*.js', 'test/**/*.js'],
-            //options: {
-                // options here to override JSHint defaults
-
-              //  globals: {
-              //      jQuery: true,
-              //      console: true,
-              //      module: true,
-               //     document: true
-              //  }
-           // }
-      //  },
+      
         /**
          * Watch task
          */

@@ -30,9 +30,7 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 		<h1><?php echo esc_html('Website/Web Applications', 'raythompsonwebdev-com');?></h1>
 
 			<figure class="websiteImage">
-			  <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/02/www-<?php global $post;	$post_slug = $post->post_name;	echo esc_html( $post_slug, 'raythompsonwebdev-com' );?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
-					<?php the_post_thumbnail( 'websites' ); ?>
-				</a>
+			  <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/04/www-<?php global $post; $post_slug = $post->post_name; echo esc_html( $post_slug, 'raythompsonwebdev-com' );	?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?></a>
 			</figure>
 
 <div class="website-text">

@@ -23,7 +23,7 @@
 						</span>
 
 			</label>
-			<input type="text" class="search-field"  value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr( 'Search', 'label', 'raythompsonwebdev-com' ); ?>" />
+			<input type="search" class="search-field"  value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr( 'Search', 'label', 'raythompsonwebdev-com' ); ?>" />
 			<input type="submit" class="search-submit" value="Find" />
 	</div>
 </form>
