@@ -4,23 +4,23 @@
      
   var position, direction, previous;
 
- 	$(window).scroll(function(){
-		 
-		if( $(this).scrollTop() >= position ){
- 			direction = 'down';
- 			if(direction !== previous){
- 				$('header button.menu-toggle').addClass('hide');
- 				previous = direction;
- 			}
- 		} else {
- 			direction = 'up';
- 			if(direction !== previous){
- 				$('header button.menu-toggle').removeClass('hide');
- 				previous = direction;
- 			}
- 		}
- 		position = $(this).scrollTop();
-	 });
+$(window).scroll(function(){
+		
+	if( $(this).scrollTop() >= position ){
+		direction = 'down';
+		if(direction !== previous){
+			$('header button.menu-toggle').addClass('hide');
+			previous = direction;
+		}
+	} else {
+		direction = 'up';
+		if(direction !== previous){
+			$('header button.menu-toggle').removeClass('hide');
+			previous = direction;
+		}
+	}
+	position = $(this).scrollTop();
+});
 
 	// sliding menu mobile 
 	$('header button.menu-toggle').on('click', function(event){

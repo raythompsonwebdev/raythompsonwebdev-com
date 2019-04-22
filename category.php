@@ -102,15 +102,20 @@ if ( have_posts() ) :
 						get_the_title()
 					)
 				);
-
-				wp_link_pages(
-					array(
-						'before' => '<div class="page-links">' . esc_html_e( 'Pages:', 'raythompsonwebdev-com' ),
-						'after'  => '</div>',
-					)
-				);
+				
 				?>
 
+			</div>
+
+			<div class="continue-reading">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+					<?php
+					printf(
+						/* Translators: %s = Name of the current post. */
+							wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					);
+					?>
+				</a>
 			</div>
 
 			<footer class="byline">
@@ -122,7 +127,8 @@ if ( have_posts() ) :
 
 		<?php
 	endwhile;
-else :
+
+	else :
 	?>
 
 	<?php get_template_part( 'template-part/content', 'none' ); ?>

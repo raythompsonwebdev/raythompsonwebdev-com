@@ -1,6 +1,6 @@
 <?php
 
-/* Template Name: Archive Page Custom */
+/* Template Name: Archives */
 
 get_header(); ?>
 
@@ -9,11 +9,10 @@ get_header(); ?>
 	the_archive_description( '<div class="taxonomy-description">', '</div>' );
 ?>
 
-
 <?php
-while ( have_posts() ) :
+	while ( have_posts() ) :
 	the_post();
-	?>
+?>
 
 <article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
@@ -22,37 +21,21 @@ while ( have_posts() ) :
 	</h1>
 
 	<!--Post entry Header-->
-	<header class="byline">
-		<div class="entry-meta">
-			<?php if ( 'post' === get_post_type() ) : ?>
-				<div class="meta-content">
-
-					<?php
-						raythompsonwebdev_com_posted_on();
-					?>
-
-				</div>
-			<?php endif; ?>
-		</div>
-	</header>
-	
+		
 	<div class="entry">
+	
+	<h2>Archives by Month:</h2>
+		<ul class="post-list">
+			<?php wp_get_archives('type=monthly'); ?>
+		</ul>
+			<h2><strong>Categories:</strong></h2>
+		<ul class="post-list">
+			<?php wp_list_categories( 'title_li=' ); ?>
+		</ul>
+		<div class="clear"></div>
 
-	<?php the_content(); ?>
-
-	<p><strong>By Date</strong></p>
-<ul>
-
-</ul>
-
-<p><strong>Categories:</strong></p>
-<ul class="bycategories">
-	<?php wp_list_categories( 'title_li=' ); ?>
-</ul>
-<div class="clear"></div>
-
-<p><strong>Tags Cloud:</strong></p>
-	<?php wp_tag_cloud(); ?>
+		<h2><strong>Tags Cloud:</strong></h2>
+		<?php wp_tag_cloud(); ?>
 
 	</div>
 
@@ -60,19 +43,16 @@ while ( have_posts() ) :
 		<?php raythompsonwebdev_com_entry_footer(); ?>
 	</footer>
 
- </article>
+</article>
 
 <?php endwhile; ?>
 
-
 <section class="contact-wide">
 
-<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
+	<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
   
 </section>
 
-
 <?php get_sidebar( 'archive' ); ?> 
-
 
 <?php get_footer(); ?>

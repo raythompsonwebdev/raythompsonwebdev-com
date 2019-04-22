@@ -1,5 +1,7 @@
+
+
 //Hero Slider
-jQuery(document).ready(function($){
+(function($) {
  $('.hero-slider ul a').click(function() {
   //reset all the items
    $('.customBlock ul a').removeClass('active');
@@ -10,14 +12,14 @@ jQuery(document).ready(function($){
     //disable click event
      return false;
  });
-});
+})(jQuery);
 
 //REsponsive chart
-jQuery(document).ready(function($){
+(function($) {
   $(" #chart #bars li .bar").each( function( key, bar ) {
     var percentage = $(this).data('percentage');
     $(this).animate({
     'width' : percentage + '%'
     }, 1000);
   });
-});
+})(jQuery);

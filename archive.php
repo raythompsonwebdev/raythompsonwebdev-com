@@ -14,53 +14,80 @@
  * @link       http:www.raythompsonwebdev.co.uk custom template
  */
 
-get_header(); ?>
+get_header(); 
 
-<?php
 	the_archive_title( '<h1 class="page-title">', '</h1>' );
 	the_archive_description( '<div class="taxonomy-description">', '</div>' );
-?>
 
-
-<?php
-while ( have_posts() ) :
+	while ( have_posts() ) :
 	the_post();
 	?>
 
-<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+	<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
-	<h1>
-		<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-	</h1>
+		<h1>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		</h1>
 
-	<!--Post entry Header-->
-	<header class="byline">
-		<div class="entry-meta">
-			<?php if ( 'post' === get_post_type() ) : ?>
-				<div class="meta-content">
+		<!--Post entry Header-->
+		<header class="byline">
+			<div class="entry-meta">
+				<?php if ( 'post' === get_post_type() ) : ?>
+					<div class="meta-content">
 
-					<?php
-						raythompsonwebdev_com_posted_on();
-					?>
+						<?php
+							raythompsonwebdev_com_posted_on();
+						?>
 
-				</div>
-			<?php endif; ?>
+					</div>
+				<?php endif; ?>
+			</div>
+		</header>
+		
+		<div class="entry">
+
+		<?php
+			the_excerpt(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					get_the_title()
+				)
+			);
+
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
+					'after'  => '</div>',
+				)
+			);
+		?>
+
 		</div>
-	</header>
-	
-	<div class="entry">
 
-	<?php the_content(); ?>
+		<div class="continue-reading">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+					<?php
+					printf(
+						/* Translators: %s = Name of the current post. */
+							wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					);
+					?>
+				</a>
+			</div>
 
-	
-	</div>
+		
 
-	
-
- </article>
+	</article>
 
 <?php endwhile; ?>
-
 
 <section class="contact-wide">
 

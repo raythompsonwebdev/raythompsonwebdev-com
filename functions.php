@@ -168,7 +168,7 @@ add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 function raythompsonwebdev_com_load_theme_textdomain() {
 	load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 }
-	add_action( 'after_setup_theme', 'raythompsonwebdev_com_load_theme_textdomain' );
+add_action( 'after_setup_theme', 'raythompsonwebdev_com_load_theme_textdomain' );
 
 /**
  * Remove Query Strings – Optional Step.
@@ -718,3 +718,5 @@ endif;
 	if ( defined( 'JETPACK__VERSION' ) ) {
 		include get_template_directory() . '/inc/jetpack.php';
 	}
+
+	
