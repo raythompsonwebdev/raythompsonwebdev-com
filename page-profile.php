@@ -25,7 +25,7 @@ get_header();
     <article id="text-box-profile">
 
         <div class="introimg">
-            <a href="<?php echo esc_url ('wordpress/raythompsonwebdev','https');?>"  >
+            <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 
                 <img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/raythompsonwebdev.jpg','display');?>" alt="<?php echo esc_attr_e('young-raythompsonwebdev','raythompsonwebdev-com');?>" rel="prefetch" />
             </a>

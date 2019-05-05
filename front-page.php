@@ -27,9 +27,9 @@
 			type="image/svg+xml" 
 			id="image-4" 
 			alt="svg-image"
-			data="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
-			<img id="image-5" rel="prefetch" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
+			data="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
 		</object>
+		<img id="image-5" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
 	</figure>
 
 </div>

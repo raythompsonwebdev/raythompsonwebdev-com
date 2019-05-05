@@ -11,19 +11,18 @@
 
 <!--Post loop start -->
 <?php if ( have_posts() ) : ?>
-	<?php
-	while ( have_posts() ) :
-		the_post();
-		?>
+
+	<?php while ( have_posts() ) :	the_post();	?>
+
 		<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
 			<?php
-			if ( is_singular() ) :
-						the_title( '<h1 class="page-title" >', '</h1>' );
-					else :
-						the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					endif;
-					?>
+				if ( is_singular() ) :
+					the_title( '<h1 class="page-title" >', '</h1>' );
+				else :
+					the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				endif;
+			?>
 
 			<!--Post entry Header-->
 			<header class="byline">
@@ -41,19 +40,20 @@
 			<!--featured Image-->
 			<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
-				<?php if ( has_post_thumbnail() ) { ?>
-					<figure class="featuredImage">
-						<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-							<?php the_post_thumbnail( 'featured-image' ); ?>
-						</a>
-					</figure>
-				<?php } else { ?>
-					
+				<?php if ( has_post_thumbnail() ) : ?>
+
 					<?php raythompsonwebdev_com_post_thumbnail(); ?>
-				  
-				<?php
-}
-?>
+
+				<?php else : ?>
+
+					<figure class="featuredImage">
+						
+						<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+						
+					</figure>
+
+				<?php endif; ?>
+
 			</a>
 			<!--featured Image end-->
 
@@ -75,13 +75,6 @@
 							get_the_title()
 						)
 					);
-
-					wp_link_pages(
-						array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
-							'after'  => '</div>',
-						)
-					);
 				?>
 
 			</div>
@@ -90,20 +83,21 @@
 			<footer class="byline">
 
 				<p class='right'>
-					<a class='comments-count' href='<?php the_permalink(); ?>'><?php comments_number( '0', '1', '%' ); ?></a>
+					<a class='comments-count' href='<?php the_permalink(); ?>'>
+						<?php comments_number( '0', '1', '%' ); ?>
+					</a>
 				</p>
-				
-				
+								
 				<?php raythompsonwebdev_com_entry_footer(); ?>
 				
 				<p>
-				<?php
-					$lastmodified = get_the_modified_time( 'U' );
-					$posted       = get_the_time( 'U' );
-				if ( $lastmodified > $posted ) {
-					echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-				}
-				?>
+					<?php
+						$lastmodified = get_the_modified_time( 'U' );
+						$posted       = get_the_time( 'U' );
+						if ( $lastmodified > $posted ) {
+							echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+						}
+					?>
 				</p>
 
 			</footer>
@@ -113,8 +107,6 @@
 
 		<?php
 	endwhile;
-
-
 
 	?>
 <?php else : ?>

@@ -43,7 +43,26 @@ get_header();
 				<?php endif; ?>
 			</div>
 		</header>
-		
+		<!--featured Image-->
+		<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+
+<?php if ( has_post_thumbnail() ) { ?>
+
+	<?php raythompsonwebdev_com_post_thumbnail(); ?>
+
+<?php } else { ?>
+
+	<figure class="featuredImage">
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+		<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+		</a>
+	</figure>
+
+	<?php
+}
+?>
+</a>
+<!--featured Image end-->
 		<div class="entry">
 
 		<?php
