@@ -39,6 +39,12 @@
 
 		<div id="wrapper_container">
 
+		<?php if ( get_header_image() ) : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+			
+			</a>
+		<?php endif; // End header image check. ?>
 
 			<header class="group" role="banner">
 
@@ -79,7 +85,7 @@
 						<hgroup>
 						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>GALLERY</h1>
 						
-					<?php else : ?>
+						<?php else : ?>
 						<hgroup>
 							<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
 
@@ -87,22 +93,17 @@
 						endif;
 
 						$description = get_bloginfo( 'description', 'display' );
-
-
-
-if ( esc_html( $description ) || is_customize_preview() ) :
-	?>
+						if ( esc_html( $description ) || is_customize_preview() ) :	?>
 
 							<h2 class="site-description">
-							<?php _e( $description ); ?></h2>
-						</hgroup>
+								<?php _e( $description ); ?>
+							</h2>
+					</hgroup>
+				<?php endif; ?>
 
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
 
-					<?php endif; ?>
-
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
-
-					<?php
+				<?php
 					// Checking if there's anything in Top Menu.
 					if ( has_nav_menu( 'main' ) ) {
 						// If there is, adds the Top Menu area.
@@ -114,7 +115,7 @@ if ( esc_html( $description ) || is_customize_preview() ) :
 							)
 						);
 					}
-					?>
+				?>
 
 
 			</header>

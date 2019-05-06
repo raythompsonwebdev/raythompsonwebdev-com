@@ -174,24 +174,27 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function raythompsonwebdev_com_post_thumbnail() {
+
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
 
-		if ( is_singular() ) :
-			?>
+		if ( is_singular() ) :	?>
 
-		<div class="post-thumbnail">
-			<?php the_post_thumbnail(); ?>
-		</div><!-- .post-thumbnail -->
-
-		<?php else : ?>
-		
 		<figure class="featuredImage">
 						
-							<?php the_post_thumbnail( 'featured-image'); ?>
+				<?php the_post_thumbnail( 'featured-image'); ?>
+			
+		</figure>
+
+		<?php else : ?>
+
+		<div class="post-thumbnail">
+
+				<?php the_post_thumbnail('post-thumbnail'); ?>
 						
-					</figure>
+		</div><!-- .post-thumbnail -->
+		
 	
 		<?php
 		endif; // End is_singular().

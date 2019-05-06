@@ -35,7 +35,7 @@
 
 	<article class="side-bar-box">
 
-<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) : ?>
+<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'media-widget-area' ) ) : ?>
 
 <?php endif; ?>
 

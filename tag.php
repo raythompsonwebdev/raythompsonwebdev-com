@@ -14,28 +14,20 @@
  * @link       http:www.raythompsonwebdev.co.uk
  */
  get_header(); ?>
-	   
-
-	<?php
-	// Check if there are any posts to display
-	if ( have_posts() ) :
-		?>
+	   	
 
 	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
-		<?php
-		// Display optional tag description
-		if ( tag_description() ) :
-			?>
-	<div class="archive-meta"><?php echo tag_description(); ?></div>
-		<?php endif; ?>
+		
+		<!-- Display optional tag description-->
+		<?php if ( tag_description() ) : ?>
+
+				<div class="archive-meta"><?php echo tag_description(); ?></div>
+		
+			<?php endif; ?>
  
-		<?php
-		get_template_part( 'template-parts/content', get_post_format() );
+		<?php get_template_part( 'template-parts/content', get_post_format() );	?>
 
-	endif;
-	?>
-
-<?php get_sidebar(); ?>
+<?php get_sidebar('archive'); ?>
 
 
 <?php get_footer(); ?>

@@ -49,8 +49,8 @@
 				<?php else : ?>
 
 					<figure class="featuredImage">
-						
-						<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+					
+						<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 						
 					</figure>
 					
@@ -99,7 +99,7 @@
 							sprintf(
 								wp_kses(
 									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+									__( 'Continue reading<span class="continue-reading screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
 									array(
 										'span' => array(
 											'class' => array(),

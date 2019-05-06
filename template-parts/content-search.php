@@ -10,11 +10,11 @@
 ?>
 
 <article class="post group" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 	<header class="byline">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
+		
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<!-- .entry-meta -->
 		<div class="entry-meta">
@@ -38,7 +38,7 @@
 
 		<figure class="featuredImage">
 			
-				<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>"
+				<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>"
 					alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 			
 		</figure>
@@ -49,6 +49,13 @@
 	<!-- .entry-summary -->
 	<div class="entry">
 		<?php
+
+		if( 'gallery' === get_post_type()) :
+
+			the_excerpt();
+										
+			else :
+
 				the_excerpt(
 					sprintf(
 						wp_kses(
@@ -63,7 +70,9 @@
 						get_the_title()
 					)
 				);
-				?>
+
+			endif;
+		?>
 
 
 	</div>
@@ -78,11 +87,6 @@
 			?>
 		</a>
 	</div>
-
-	<!-- .entry-footer -->
-	<footer class="byline">
-		<?php raythompsonwebdev_com_entry_footer(); ?>
-	</footer>
 
 </article>
 

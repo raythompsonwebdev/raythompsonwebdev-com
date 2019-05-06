@@ -4,11 +4,6 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *
@@ -30,7 +25,7 @@ function raythompsonwebdev_com_custom_header_setup() {
 				'default-image'          => '',
 				'default-text-color'     => 'ffffff',
 				'width'                  => 1600,
-				'height'                 => 420,
+				'height'                 => 100,
 				'flex-height'            => true,
 				'wp-head-callback'       => 'raythompsonwebdev_com_header_style',
 				'admin-head-callback'    => 'raythompsonwebdev_com_admin_header_style',
@@ -49,6 +44,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 	 * @see raythompsonwebdev_com_custom_header_setup().
 	 */
 	function raythompsonwebdev_com_header_style() {
+
 		$header_text_color = get_header_textcolor();
 
 		// If no custom options for text are set, let's bail
@@ -62,8 +58,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 		<style type="text/css">
 		<?php
 			// Has the text been hidden?
-		if ( ! display_header_text() ) :
-			?>
+		if ( ! display_header_text() ) :	?>
 		.site-title,
 		.site-description {
 			position: absolute;
@@ -71,8 +66,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 		}
 			<?php
 			// If the user has set a custom color for the text use that.
-		else :
-			?>
+		else :	?>
 			.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;

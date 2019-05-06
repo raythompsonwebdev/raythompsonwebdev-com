@@ -35,7 +35,7 @@ get_header(); ?>
 		<div class="clear"></div>
 
 		<h2><strong>Tags Cloud:</strong></h2>
-		<?php wp_tag_cloud(); ?>
+		<?php wp_tag_cloud('smallest=10&largest=24unit=px&orderby=count&order=RAND'); ?>
 
 	</div>
 
