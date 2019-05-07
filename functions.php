@@ -401,7 +401,7 @@ function raythompsonwebdev_com_mapcontainer() {
 	</script>
 		
 	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpYuJIKNz2V8dAW5jZXFNSl8sftAxLO8s&callback=initMap">
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6NUsSJttHx4SuCU3lw-ANNv7yKSrlYuw&callback=initMap">
 	</script>
 
 		<?php
