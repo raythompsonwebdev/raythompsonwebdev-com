@@ -19,7 +19,7 @@
 	<div>
 			<label>
 					<span class="screen-reader-text">
-		<?php echo esc_html( 'Search', 'label', 'raythompsonwebdev-com' ); ?>
+		<?php _e( 'Search', 'label', 'raythompsonwebdev-com' ); ?>
 						</span>
 
 			</label>

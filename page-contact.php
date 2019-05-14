@@ -31,7 +31,7 @@ get_header(); ?>
 <div id="map_container"></div>
 
 <ul class="contact-details">
-    <li id="fa-email"><a href="#">raymond.thompson@raythompsonwebdev.co.uk</a></li>
+    <li id="fa-email"><a href="#"><?php _e( 'raymond.thompson@raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ); ?></a></li>
 
     <li id="fa-email"><a href="<?php echo esc_url( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.facebook.com/raythompsonwebdeveloper/</a></li>
 

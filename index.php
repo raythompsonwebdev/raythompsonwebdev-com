@@ -19,10 +19,10 @@ get_header(); ?>
 
 <div class="main-text">
 
-  <h1><?php esc_html_e( 'Interested in web design and web development', 'raythompsonwebdev-com' ); ?></h1>
+  <h1><?php _e( 'Interested in web design and web development', 'raythompsonwebdev-com' ); ?></h1>
 
 <p>
-<?php esc_html_e( 'Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com' ); ?>
+<?php _e( 'Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com' ); ?>
 </p>
 <br/>
 

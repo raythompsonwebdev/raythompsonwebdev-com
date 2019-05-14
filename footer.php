@@ -72,12 +72,11 @@
 	?>
 <br/>
 
-	<?php
-
-	$dt             = time();
-	$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
-	printf( esc_html__( 'Page was last updated :', 'raythompsonwebdev-com' ), esc_html( $mysql_datetime, 'raythompsonwebdev-com' ), 'raythompsonwebdev-com' );
-
+<?php
+	//$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
+	$today = date("F j, Y, g:i a" ); 
+	echo _e('Page was last updated : ') . $today ;
+	//printf( esc_html__( 'Page was last updated :', 'clashvibes' ), __( $today, 'clashvibes' ), 'clashvibes' );
 	?>
 
 </p>

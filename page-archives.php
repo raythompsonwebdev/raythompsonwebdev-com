@@ -24,17 +24,17 @@ get_header(); ?>
 		
 	<div class="entry">
 	
-	<h2>Archives by Month:</h2>
+	<h2><?php _e( 'Archives by Month:', 'raythompsonwebdev-com' ); ?></h2>
 		<ul class="post-list">
 			<?php wp_get_archives('type=monthly'); ?>
 		</ul>
-			<h2><strong>Categories:</strong></h2>
+			<h2><strong><?php _e( 'Categories:', 'raythompsonwebdev-com' ); ?></strong></h2>
 		<ul class="post-list">
 			<?php wp_list_categories( 'title_li=' ); ?>
 		</ul>
 		<div class="clear"></div>
 
-		<h2><strong>Tags Cloud:</strong></h2>
+		<h2><strong><?php _e( 'Tags Cloud:', 'raythompsonwebdev-com' ); ?></strong></h2>
 		<?php wp_tag_cloud('smallest=10&largest=24unit=px&orderby=count&order=RAND'); ?>
 
 	</div>

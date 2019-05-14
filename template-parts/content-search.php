@@ -39,7 +39,7 @@
 		<figure class="featuredImage">
 			
 				<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>"
-					alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+					alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 			
 		</figure>
 

@@ -99,9 +99,9 @@
 							sprintf(
 								wp_kses(
 									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Continue reading<span class="continue-reading screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+									__( 'Continue reading<div class="continue-reading screen-reader-text"> "%s"</div >', 'raythompsonwebdev-com' ),
 									array(
-										'span' => array(
+										'div' => array(
 											'class' => array(),
 										),
 									)
