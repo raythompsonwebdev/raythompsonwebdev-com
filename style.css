@@ -364,12 +364,9 @@ desktop 1920px*/
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     /*Site Logo*/
     /*Header*/
     /*Header Title*/
@@ -378,25 +375,25 @@ desktop 1920px*/
   }
   header .site-logo {
     position: relative;
-    top: 0.5em;
+    top: 0;
     left: 0;
     width: 3.4em;
-    height: 3.5em;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    height: 100%;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
   }
   header .site-logo a {
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 2px;
+    left: 0;
     display: block;
     background: #062351;
     color: #fff;
     text-decoration: none;
-    line-height: 40px;
-    width: 83%;
+    line-height: 50px;
+    width: 85%;
     -webkit-transform-origin: 50% 50%;
     -moz-transform-origin: 50% 50%;
     -o-transform-origin: 50% 50%;
@@ -408,6 +405,7 @@ desktop 1920px*/
     -ms-transition: all 0.2s ease-out 0s;
     transition: all 0.2s ease-out 0s;
     height: auto;
+    margin: 0.2em;
     /* Text meant only for screen readers. */
   }
   header .site-logo a div.screen-reader-text {
@@ -461,20 +459,19 @@ desktop 1920px*/
     display: block;
     float: left;
     height: 4em;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
     font-size: 1.7em;
     width: 100%;
-    height: 40px;
-    line-height: 40px;
+    height: 35px;
+    line-height: 35px;
     color: #062351;
     display: block;
     letter-spacing: 0.03em;
-    float: left;
   }
   header hgroup h1#logo span,
   header hgroup h1#logo-blog span {
@@ -492,7 +489,6 @@ desktop 1920px*/
     margin: 0 0.1em;
   }
   header hgroup h2 {
-    float: none;
     display: block;
     width: 100%;
     letter-spacing: 0.1em;
@@ -500,7 +496,7 @@ desktop 1920px*/
     font-size: 0.75em;
     font-weight: normal;
     padding: 0;
-    clear: left;
+    color: #062351;
   }
   header hgroup #title {
     float: left;
@@ -516,9 +512,9 @@ desktop 1920px*/
     float: right;
     margin: 0.5em 0 0 0;
     height: 35px;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
   }
   header nav.menu-main-container ul#menu-main {
     padding: 0;
@@ -528,25 +524,20 @@ desktop 1920px*/
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
   header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19.4%;
-    float: left;
     height: 35px;
+    width: 19.2%;
     list-style: none;
-    margin-right: 0.2em;
     padding: 0;
     display: inline-block;
     text-align: center;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
     background-color: #CCD3DE;
@@ -1014,20 +1005,16 @@ desktop 1920px*/
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-align-content: space-between;
+    -ms-flex-content: space-between;
+    align-content: space-between;
   }
   #main-content aside#side-bar .side-bar-box {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 32.1%;
+    -ms-flex: 1 0 32.1%;
+    flex: 1 0 32.1%;
     display: block;
     height: auto;
-    width: 32.1%;
     margin: 0.4em;
     float: left;
   }
@@ -2390,24 +2377,23 @@ desktop 1920px*/
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-align-content: center;
+    -ms-flex-content: center;
+    align-content: center;
     margin: 0 0 1em 0;
     padding: 0;
     /*homepage container*/
     /*front-page image container*/
   }
   #main-content #frontpage_container div#textboxfront {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
     width: 52%;
     display: inline-block;
-    float: left;
     padding: 0.5em;
     margin: 0;
     height: auto;
@@ -2560,15 +2546,14 @@ desktop 1920px*/
     font-size: 1.6em;
   }
   #main-content #frontpage_container div#svg-image-container {
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
     -webkit-order: 1;
     -ms-flex-order: 1;
     order: 1;
     width: 48%;
     height: auto;
-    float: right;
     display: inline-block;
     font-family: "PT Sans", verdana, helvetica, sans-serif;
     padding: 2em;
@@ -2606,12 +2591,12 @@ desktop 1920px*/
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     width: 53%;
     display: inline-block;
-    margin: 0;
+    margin: 0 0 1em 0;
     height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
@@ -2640,9 +2625,9 @@ desktop 1920px*/
     -webkit-order: 4;
     -ms-flex-order: 4;
     order: 4;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     width: 48%;
     display: inline-block;
     margin: 0;
@@ -2664,13 +2649,12 @@ desktop 1920px*/
     -webkit-order: 3;
     -ms-flex-order: 3;
     order: 3;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     width: 50%;
     height: 520px;
     display: inline-block;
-    float: right;
     box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
     padding: 1em;
     background-color: #fff;
@@ -2885,7 +2869,6 @@ desktop 1920px*/
     width: 45%;
     height: 410px;
     display: inline-block;
-    float: right;
     box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
     margin-bottom: 1em;
@@ -2992,9 +2975,6 @@ desktop 1920px*/
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-align-items: flex-start;
-    -ms-flex-align: start;
-    align-items: flex-start;
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -3053,9 +3033,9 @@ desktop 1920px*/
     top: 0;
     overflow: hidden;
     width: 15.5%;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
     margin: 0.4em;
     z-index: 1;
     height: auto;
@@ -3082,9 +3062,6 @@ desktop 1920px*/
     height: 100%;
     margin: 0;
     position: relative;
-    /*-webkit-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;*/
     overflow: hidden;
   }
   #main-content div#photocontainer div.content div#panel figure.showcase-container div.showcase-img,
@@ -3343,13 +3320,10 @@ desktop 1440px*/
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    top: 0.5em;
     width: 3.4em;
-    height: 3.5em;
   }
   header .site-logo a {
-    z-index: 1;
-    width: 83%;
+    width: 85%;
     /* Text meant only for screen readers. */
   }
   header .site-logo a div.screen-reader-text {
@@ -3361,11 +3335,10 @@ desktop 1440px*/
   header .site-logo a div.site-firstletter {
     font-size: 0.9em;
   }
-  header hgroup {
-    height: 4em;
-  }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
+    line-height: 30px;
+    height: 30px;
     font-size: 1.6em;
   }
   header hgroup h1#logo span,
@@ -3382,9 +3355,6 @@ desktop 1440px*/
   header nav.menu-main-container {
     width: 45%;
     height: 35px;
-  }
-  header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19.2%;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
     font-size: 0.8em;
@@ -3439,11 +3409,11 @@ desktop 1440px*/
     width: auto;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.9em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
     width: 25%;
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
   #main-content .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -3703,10 +3673,10 @@ desktop 1440px*/
     width: 94%;
   }
   #main-content .post ul li {
+    font-size: 0.9em;
     margin: 0.5em auto;
   }
   #main-content .post ul li a {
-    font-size: 0.9em;
     line-height: 35px;
   }
   #main-content .post ul li a:hover {
@@ -4258,7 +4228,6 @@ desktop 1440px*/
   }
   #main-content div#profile_container #text-box-profile {
     width: 53%;
-    margin: 0;
     height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
@@ -4557,9 +4526,7 @@ desktop 1280px*/
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    top: 9px;
     width: 3.25em;
-    height: 3.25em;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
@@ -4579,14 +4546,13 @@ desktop 1280px*/
     font-size: 1.8em;
   }
   header hgroup {
-    height: 4em;
     width: 48%;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
     font-size: 1.5em;
-    line-height: 35px;
-    height: 35px;
+    line-height: 30px;
+    height: 30px;
   }
   header hgroup h1#logo span,
   header hgroup h1#logo-blog span {
@@ -4605,9 +4571,6 @@ desktop 1280px*/
   }
   header nav.menu-main-container ul#menu-main {
     height: 35px;
-  }
-  header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19.1%;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
     font-size: 0.75em;
@@ -4708,7 +4671,7 @@ desktop 1280px*/
   }
   #main-content hr .social-1 form.search-form input[type="submit"] {
     width: 25%;
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content hr .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -4916,9 +4879,9 @@ desktop 1280px*/
   }
   #main-content hr .post ul li {
     margin: 0.5em auto;
+    font-size: 0.9em;
   }
   #main-content hr .post ul li a {
-    font-size: 0.9em;
     line-height: 35px;
   }
   #main-content hr .post ul li a:hover {
@@ -5512,8 +5475,6 @@ desktop 1280px*/
   }
   #main-content hr div#profile_container #text-box-profile {
     width: 53%;
-    margin: 0;
-    height: auto;
   }
   #main-content hr div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -5792,15 +5753,10 @@ desktop 1024px*/
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    position: relative;
-    top: 10px;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
     width: 85%;
-  }
-  header .site-logo .screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
   }
   header .site-logo .screen-reader-text:focus {
     border-radius: 3px;
@@ -5838,7 +5794,7 @@ desktop 1024px*/
     height: 35px;
   }
   header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19%;
+    width: 17%;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
     font-size: 0.7em;
@@ -6022,7 +5978,7 @@ desktop 1024px*/
     text-align: left;
   }
   #main-content .social-1 form.search-form label {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
     font-size: 0.85em;
@@ -6126,9 +6082,9 @@ desktop 1024px*/
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.85em;
   }
   #main-content .post ul li a {
-    font-size: 0.85em;
     line-height: 35px;
   }
   #main-content .post .websiteImage {
@@ -6272,7 +6228,6 @@ desktop 1024px*/
     width: 100%;
   }
   #main-content .post div.continue-reading {
-    font-size: 0.75em;
     width: 50%;
   }
   #main-content .post div.continue-reading a {
@@ -6583,8 +6538,6 @@ desktop 1024px*/
   }
   #main-content div#profile_container #text-box-profile {
     width: 48%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -6687,7 +6640,7 @@ desktop 1024px*/
     /* End of chart*/
   }
   #main-content div#profile_container section#prof_cont h1 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   #main-content div#profile_container section#prof_cont #social {
     width: 50%;
@@ -6883,11 +6836,8 @@ desktop 980px*/
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    position: relative;
-    top: 9px;
     width: 3em;
-    height: 3em;
-    left: 2px;
+    height: auto;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
@@ -6908,7 +6858,8 @@ desktop 980px*/
     font-size: 1.9em;
   }
   header hgroup {
-    width: 70%;
+    width: 90%;
+    height: 3.5em;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
@@ -6932,9 +6883,6 @@ desktop 980px*/
   }
   header nav.menu-main-container ul#menu-main {
     height: 35px;
-  }
-  header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19%;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
     font-size: 0.8em;
@@ -7116,10 +7064,10 @@ desktop 980px*/
     text-align: left;
   }
   #main-content .social-1 form.search-form label {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.8em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
     font-size: 0.8em;
@@ -7225,9 +7173,10 @@ desktop 980px*/
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.8em;
   }
   #main-content .post ul li a {
-    font-size: 0.8em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 35%;
@@ -7722,8 +7671,6 @@ desktop 980px*/
   }
   #main-content div#profile_container #text-box-profile {
     width: 48%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 0.95em;
@@ -7758,6 +7705,7 @@ desktop 980px*/
   }
   #main-content div#profile_container section#prof_cont-a h1 {
     font-size: 1em;
+    text-align: left;
   }
   #main-content div#profile_container section#prof_cont-a #social {
     width: 50%;
@@ -7824,6 +7772,7 @@ desktop 980px*/
   }
   #main-content div#profile_container section#prof_cont h1 {
     font-size: 1em;
+    text-align: left;
   }
   #main-content div#profile_container section#prof_cont #social {
     width: 50%;
@@ -7847,7 +7796,6 @@ desktop 980px*/
   }
   #main-content div#profile_container section#prof_cont #chart #bars span {
     width: 18.5%;
-    font-size: 0.65em;
   }
   #main-content div#photocontainer div.content {
     clear: both;
@@ -8007,11 +7955,7 @@ tablet 800px */
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    position: relative;
-    top: 9px;
     width: 3em;
-    height: 3em;
-    left: 2px;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
@@ -8032,13 +7976,12 @@ tablet 800px */
     font-size: 1.9em;
   }
   header hgroup {
-    width: 70%;
+    width: 90%;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
     font-size: 1.4em;
-    width: 100%;
-    height: 35px;
+    height: 30px;
   }
   header hgroup h1#logo span,
   header hgroup h1#logo-blog span {
@@ -8053,16 +7996,12 @@ tablet 800px */
   }
   header nav.menu-main-container {
     width: 100%;
-    margin: 0.5em 0 0 0;
   }
   header nav.menu-main-container ul#menu-main {
     height: 35px;
   }
-  header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19%;
-  }
   header nav.menu-main-container ul#menu-main li.menu-item a {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   header nav#mobile-nav {
     display: none;
@@ -8083,7 +8022,7 @@ tablet 800px */
     /*gallery container*/
   }
   #main-content h1 {
-    font-size: 1.4em;
+    font-size: 1.15em;
     text-align: center;
     line-height: 60px;
   }
@@ -8101,8 +8040,7 @@ tablet 800px */
   }
   #main-content article.main-text p,
   #main-content div.main-text p {
-    font-size: 0.9em;
-    width: 100%;
+    font-size: 0.8em;
     line-height: 1.8em;
   }
   #main-content article.main-text ul,
@@ -8141,7 +8079,7 @@ tablet 800px */
     font-size: 0.75em;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
   #main-content .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -8267,6 +8205,9 @@ tablet 800px */
     float: none;
     width: 100%;
     display: inline-block;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
   }
   #main-content aside#side-bar h2 {
     width: 100%;
@@ -8367,9 +8308,10 @@ tablet 800px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.8em;
   }
   #main-content .post ul li a {
-    font-size: 0.8em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 35%;
@@ -8825,6 +8767,12 @@ tablet 800px */
     width: 100%;
   }
   #main-content div#profile_container {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-align-items: center;
+    -ms-flex-pack: center;
+    align-items: center;
     padding: 0;
     /*first text block*/
     /*second text block*/
@@ -8836,8 +8784,6 @@ tablet 800px */
     -ms-flex-order: 0;
     order: 0;
     width: 98%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -9126,8 +9072,6 @@ tablet 667px */
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    position: relative;
-    top: 10px;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
@@ -9145,7 +9089,7 @@ tablet 667px */
     font-size: 1.6em;
   }
   header hgroup {
-    width: 75%;
+    width: 90%;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
@@ -9169,11 +9113,8 @@ tablet 667px */
   header nav.menu-main-container ul#menu-main {
     height: 35px;
   }
-  header nav.menu-main-container ul#menu-main li.menu-item {
-    width: 19%;
-  }
   header nav.menu-main-container ul#menu-main li.menu-item a {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   header nav#mobile-nav {
     display: none;
@@ -9194,11 +9135,11 @@ tablet 667px */
     /*gallery container*/
   }
   #main-content h1 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: center;
   }
   #main-content h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   #main-content h3 {
     font-size: 1.1em;
@@ -9213,10 +9154,8 @@ tablet 667px */
   #main-content article.main-text p,
   #main-content div.main-text p {
     line-height: 1.92em;
-    font-size: 0.8em;
-    width: 98.5458%;
-    margin-left: 0;
-    letter-spacing: 0.1em;
+    font-size: 0.75em;
+    width: 100%;
   }
   #main-content article.main-text ul,
   #main-content div.main-text ul {
@@ -9254,13 +9193,13 @@ tablet 667px */
     text-align: left;
   }
   #main-content .social-1 form.search-form label {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.7em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
   #main-content .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -9473,9 +9412,10 @@ tablet 667px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.85em;
   }
   #main-content .post ul li a {
-    font-size: 0.85em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 45%;
@@ -9930,8 +9870,6 @@ tablet 667px */
   }
   #main-content div#profile_container #text-box-profile {
     width: 98%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -10208,12 +10146,12 @@ tablet 600px */
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    position: relative;
-    top: 9px;
+    height: auto;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
     width: 85%;
+    line-height: 45px;
   }
   header .site-logo .screen-reader-text:focus {
     border-radius: 3px;
@@ -10227,12 +10165,12 @@ tablet 600px */
     font-size: 1.6em;
   }
   header hgroup {
-    width: 75%;
+    width: 90%;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
     font-size: 1.3em;
-    height: 30px;
+    height: 27px;
   }
   header hgroup h1#logo span,
   header hgroup h1#logo-blog span {
@@ -10256,7 +10194,7 @@ tablet 600px */
     width: 18.5%;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
-    font-size: 0.75em;
+    font-size: 0.7em;
   }
   header nav#mobile-nav {
     display: none;
@@ -10269,10 +10207,10 @@ tablet 600px */
     /*post navigation*/
   }
   #main-content h1 {
-    font-size: 1.2em;
+    font-size: 1.05em;
   }
   #main-content h2 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   #main-content h3 {
     font-size: 1em;
@@ -10339,13 +10277,13 @@ tablet 600px */
     text-align: left;
   }
   #main-content .social-1 form.search-form label {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content .social-1 form.search-form input[type="text"] {
-    font-size: 0.8em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -10452,9 +10390,10 @@ tablet 600px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.85em;
   }
   #main-content .post ul li a {
-    font-size: 0.85em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 45%;
@@ -10886,7 +10825,7 @@ tablet 536px */
     position: fixed;
     z-index: 100;
     top: 0.5em;
-    left: 84vw;
+    left: 82vw;
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
@@ -10908,6 +10847,7 @@ tablet 536px */
   .menu-toggle:hover,
   .menu-toggle:focus {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   #wrapper_container {
@@ -10920,8 +10860,6 @@ tablet 536px */
     /*Mobile-Navigation*/
   }
   header .site-logo {
-    position: relative;
-    top: 10px;
     /* Text meant only for screen readers. */
   }
   header .site-logo a {
@@ -10939,7 +10877,7 @@ tablet 536px */
     font-size: 1.6em;
   }
   header hgroup {
-    width: 80%;
+    width: 85%;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
@@ -11013,10 +10951,10 @@ tablet 536px */
     /*gallery container*/
   }
   #main-content h1 {
-    font-size: 1.15em;
+    font-size: 1em;
   }
   #main-content h2 {
-    font-size: 1.1em;
+    font-size: 1em;
   }
   #main-content h3 {
     font-size: 0.95em;
@@ -11083,13 +11021,13 @@ tablet 536px */
     text-align: left;
   }
   #main-content .social-1 form.search-form label {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.8em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
-    font-size: 0.8em;
+    font-size: 0.85em;
   }
   #main-content .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -11190,9 +11128,10 @@ tablet 536px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.85em;
   }
   #main-content .post ul li a {
-    font-size: 0.85em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 45%;
@@ -11620,8 +11559,6 @@ tablet 536px */
   }
   #main-content div#profile_container #text-box-profile {
     width: 98%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -11913,11 +11850,11 @@ mobile 480px */
   }
 
   header {
-    height: 70px;
+    height: 60px;
     /*Mobile-Navigation*/
   }
   header hgroup {
-    width: 88%;
+    width: 85%;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
@@ -11937,11 +11874,11 @@ mobile 480px */
   }
   header .site-logo {
     width: 2.5em;
-    left: 1px;
   }
   header .site-logo a {
     width: 85%;
-    line-height: 34px;
+    height: 40px;
+    line-height: 45px;
   }
   header .site-firstletter {
     font-size: 1.7em;
@@ -11974,7 +11911,7 @@ mobile 480px */
   }
 
   #main-content {
-    padding: 0.5em 0 0 0;
+    padding: 0;
     /*contact page contact details*/
     /*Search Box*/
     /*regular Posts*/
@@ -11986,11 +11923,11 @@ mobile 480px */
   }
   #main-content h1 {
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1em;
     height: auto;
   }
   #main-content h2 {
-    font-size: 1.05em;
+    font-size: 1em;
     text-indent: 0;
     width: 100%;
     margin: 1em auto;
@@ -12152,13 +12089,13 @@ mobile 480px */
     text-align: left;
   }
   #main-content .social-1 form.search-form label {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.75em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
   #main-content .social-1 form.search-form input[type="submit"]:hover {
     font-weight: bold;
@@ -12259,9 +12196,10 @@ mobile 480px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.80em;
   }
   #main-content .post ul li a {
-    font-size: 0.8em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 50%;
@@ -12738,8 +12676,6 @@ mobile 480px */
   }
   #main-content div#profile_container #text-box-profile {
     width: 98%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -13008,9 +12944,8 @@ mobile 414px */
   }
 
   .menu-toggle {
-    left: 83vw;
+    left: 84vw;
     font-size: 0.85em;
-    top: 2.5em;
   }
 
   .menu-toggle.hide {
@@ -13031,15 +12966,17 @@ mobile 414px */
   }
 
   header {
-    height: 60px;
+    height: 55px;
     /*Mobile-Navigation*/
   }
   header hgroup {
-    width: 88%;
+    width: 85%;
+    height: 3em;
   }
   header hgroup h1#logo,
   header hgroup h1#logo-blog {
     font-size: 1.1em;
+    height: 25px;
   }
   header hgroup h1#logo span,
   header hgroup h1#logo-blog span {
@@ -13056,12 +12993,9 @@ mobile 414px */
   }
   header .site-logo {
     width: 2.5em;
-    line-height: 34px;
-    left: 2px;
   }
   header .site-logo a {
     width: 85%;
-    line-height: 34px;
   }
   header .site-logo img {
     vertical-align: top;
@@ -13083,14 +13017,14 @@ mobile 414px */
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
     line-height: 35px;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   header nav.menu-main-container .nav-menu {
     padding: 1em;
   }
 
   #main-content {
-    padding: 0.5em 0 0 0;
+    padding: 0;
     /*contact page contact details*/
     /*Search Box*/
     /*regular Posts*/
@@ -13098,13 +13032,12 @@ mobile 414px */
     /*post navigation*/
   }
   #main-content h1 {
-    font-size: 1.05em;
+    font-size: 0.95em;
     text-align: center;
   }
   #main-content h2 {
-    font-size: 1em;
+    font-size: 0.9em;
     text-indent: 0;
-    margin: 1em auto;
   }
   #main-content h3 {
     font-size: 0.9em;
@@ -13251,7 +13184,7 @@ mobile 414px */
     font-size: 0.75em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.75em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
     font-size: 0.75em;
@@ -13319,9 +13252,10 @@ mobile 414px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.8em;
   }
   #main-content .post ul li a {
-    font-size: 0.8em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 50%;
@@ -13746,9 +13680,9 @@ mobile 360px */
   }
 
   .menu-toggle {
-    left: 80vw;
+    left: 82vw;
     font-size: 0.8em;
-    top: 2.5em;
+    top: 2.1em;
   }
 
   .menu-toggle.hide {
@@ -13802,14 +13736,13 @@ mobile 360px */
     top: 4.2em;
   }
   header nav.menu-main-container ul#menu-main li.menu-item a {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   header nav.menu-main-container .nav-menu {
     padding: 1em;
   }
 
   #main-content {
-    padding: 0.5em 0 0 0;
     /*contact page contact details*/
     /*Search Box*/
     /*regular Posts*/
@@ -13821,16 +13754,12 @@ mobile 360px */
   }
   #main-content h1 {
     width: 100%;
-    font-size: 1em;
-    text-align: center;
-    height: auto;
+    font-size: 0.9em;
     margin-bottom: 0.5em;
     line-height: 25px;
   }
   #main-content h2 {
     font-size: 0.9em;
-    text-indent: 0;
-    width: 100%;
     margin-bottom: 0.5em;
     height: auto;
   }
@@ -13981,7 +13910,7 @@ mobile 360px */
     font-size: 0.75em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.75em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
     font-size: 0.75em;
@@ -14083,9 +14012,10 @@ mobile 360px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.8em;
   }
   #main-content .post ul li a {
-    font-size: 0.8em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 50%;
@@ -14550,8 +14480,6 @@ mobile 360px */
   }
   #main-content div#profile_container #text-box-profile {
     width: 100%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -14685,9 +14613,6 @@ mobile 360px */
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
   }
   #main-content div#photocontainer div.content nav.menuSwitch {
     margin-bottom: 1.5em;
@@ -14833,7 +14758,7 @@ mobile 320px */
   }
 
   .menu-toggle {
-    top: 2.5em;
+    top: 2.1em;
     left: 80vw;
     font-size: 0.85em;
   }
@@ -14850,6 +14775,7 @@ mobile 320px */
   }
 
   header {
+    height: 60px;
     /*Mobile-Navigation*/
   }
   header hgroup {
@@ -14885,7 +14811,7 @@ mobile 320px */
     line-height: 36px;
   }
   header nav.menu-main-container {
-    top: 4.5em;
+    top: 4em;
   }
   header nav.menu-main-container ul#menu-main {
     height: 12.1em;
@@ -14898,7 +14824,6 @@ mobile 320px */
   }
 
   #main-content {
-    padding: 0.5em 0 0 0;
     /*contact page contact details*/
     /*Search Box*/
     /*regular Posts*/
@@ -14909,13 +14834,13 @@ mobile 320px */
     /*gallery container*/
   }
   #main-content h1 {
-    font-size: 1em;
+    font-size: 0.85em;
   }
   #main-content h2 {
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
   #main-content h3 {
-    font-size: 0.85em;
+    font-size: 0.8em;
   }
   #main-content article.main-text,
   #main-content div.main-text {
@@ -15047,7 +14972,7 @@ mobile 320px */
     font-size: 0.75em;
   }
   #main-content .social-1 form.search-form input[type="search"] {
-    font-size: 0.75em;
+    margin: 0;
   }
   #main-content .social-1 form.search-form input[type="submit"] {
     font-size: 0.75em;
@@ -15146,9 +15071,10 @@ mobile 320px */
   }
   #main-content .post ul li {
     margin: 0.5em auto;
+    font-size: 0.75em;
   }
   #main-content .post ul li a {
-    font-size: 0.75em;
+    font-size: 100%;
   }
   #main-content .post .websiteImage {
     width: 45%;
@@ -15614,8 +15540,6 @@ mobile 320px */
   }
   #main-content div#profile_container #text-box-profile {
     width: 100%;
-    margin: 0;
-    height: auto;
   }
   #main-content div#profile_container #text-box-profile h1 {
     font-size: 1em;
@@ -15733,17 +15657,6 @@ mobile 320px */
   #main-content div#profile_container section#prof_cont #chart #bars span {
     width: 23.5%;
     font-size: 0.6em;
-  }
-  #main-content div#photocontainer div.content {
-    -webkit-flex-flow: column;
-    -ms-flex-flow: column;
-    flex-flow: column;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
   }
   #main-content div#photocontainer div.content nav.menuSwitch {
     margin-bottom: 1.5em;
