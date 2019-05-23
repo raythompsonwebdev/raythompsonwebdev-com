@@ -262,9 +262,10 @@ add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
  * Enqueue style sheets.
  */
 function raythompsonwebdev_com_register_styles() {
-
+	
+	wp_enqueue_style( 'normalise', get_stylesheet_directory_uri() . '/css/normalize.css', '8.0', true );
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
-
+	
 	// Add Font Awesome icons (http://fontawesome.io).
 	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', '1.0', true );
 
@@ -351,7 +352,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_gallery_script' );
  */
 function raythompsonwebdev_com_gallery_script() {
 
-	if ( 'gallery' === get_post_type() ) {
+	if ( 'gallery' === get_post_type() || is_page( 'gallery' ) ) {
 		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
 		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/minified/websites.min.js', array( 'jquery' ), '20161110', true );
 

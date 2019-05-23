@@ -60,12 +60,13 @@ get_header();
             //the_post();
             ?>
             <!-- display slugs for custom post categories-->
-            <div id="panel" class="prod-cnt<?php
+            <div id="panel" class="prod-cnt
+            <?php
             $customterms = get_the_terms( $post->ID, 'gallery-category' );
             foreach ( $customterms as $customterm ) {
                 $pic = $customterm->slug . ' ';
                 echo esc_html( $pic );
-            }?>"<?php post_class(); ?> <?php the_ID(); ?> >
+            }?>"<?php post_class(); ?><?php the_ID(); ?> >
 
                 <figure class="showcase-container " id="showcaseimg1">
                     <div class="showcase-img">
