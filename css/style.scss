@@ -21,6 +21,7 @@ License: GNU General Public License v2 or later
 @import "partials/base";
 @import "partials/variables";
 @import "partials/mixins";
+@import "partials/dBox";
 
 /*
 desktop 1920px*/
@@ -45,6 +46,10 @@ desktop 1920px*/
         font-family: $FontStyleHeader;
         font-size: 1em;
         border: none;
+    }
+
+    .fixed-side-social-container {
+        display: none;
     }
 
     body {
@@ -218,12 +223,7 @@ desktop 1920px*/
                 color:$color1;
             }
 
-            #title {
-                float: left;
-                min-width: 280px;
-                max-width: 350px;
-                margin-left: 0;
-            }
+            
         }
 
         /*Navigation*/
@@ -278,6 +278,7 @@ desktop 1920px*/
                         display: block;
                         letter-spacing: 0.1em;
                         font-weight: normal;
+                        @include box-sizing($type: border-box);
                         @include originTran(50% 50%);
                         @include Transition(all 0.2s ease-in 0s);
 
@@ -329,7 +330,7 @@ desktop 1920px*/
 
         h1 {
             font-size: 1.4em;
-            width: 100%;
+            
             line-height: 50px;
             letter-spacing: 0.05em;
             clear: both;
@@ -338,7 +339,7 @@ desktop 1920px*/
 
         h2 {
             font-size: 1.3em;
-            width: 100%;
+            
             letter-spacing: 0.05em;
             line-height: 40px;
             height: auto;
@@ -346,7 +347,7 @@ desktop 1920px*/
 
         h3 {
             font-size: 1.1em;
-            width: 100%;
+            
             letter-spacing: 0.05em;
             line-height: 30px;
             height: auto;
@@ -662,7 +663,7 @@ desktop 1920px*/
                     font-family: 'FontAwesome';
                     content: "\f0e0";
                     font-style: normal;
-                    display: inline-block;
+                    display: block;
                     line-height: 40px;
                     height: 40px;
                     width: 45px;
@@ -1065,9 +1066,7 @@ desktop 1920px*/
                 padding: 0;
                 @include Transition(all 0.2s ease-in 0s);
 
-                &:hover {
-                    //border: 4px solid $color1;
-                }
+                
             }
 
             .website-text {
@@ -1716,7 +1715,7 @@ desktop 1920px*/
                         background-color: $color3;
                         color: $color1;
                         padding: 1.1%;
-                        display: inline-block;
+                        display: block;
                         float: right;
                         height: 100%;
                     }
@@ -1755,7 +1754,7 @@ desktop 1920px*/
                             line-height: 40px;
                             float: right;
                             width: 3%;
-                            display: inline-block;
+                            display: block;
                         }
                     }
                 }
@@ -1877,7 +1876,7 @@ desktop 1920px*/
                                 width: 16%;
                                 height: auto;
                                 margin-right: 0.5em;
-                                display: inline-block;
+                                display: block;
                                 float: left;
                             }
 
@@ -1905,7 +1904,7 @@ desktop 1920px*/
                             height: auto;
                             padding: 0 0.5em;
                             width: auto;
-                            display: inline-block;
+                            display: block;
                             background-color: $color7;
                             font-size: 0.8em;
 
@@ -2220,6 +2219,7 @@ desktop 1920px*/
                     height: auto;
                     margin: 0;
                     padding: 1em 0em;
+                    
 
                     h1#front-title {
                         -webkit-align-self: center;
@@ -2260,6 +2260,7 @@ desktop 1920px*/
                             width: 90%;
                             margin: 0 auto;
                             font-family: $FontStyle;
+                            padding:0.2em;
 
                             li {
 
@@ -2270,6 +2271,9 @@ desktop 1920px*/
                                 font-size: 0.8em;
                                 height: auto;
                                 text-align: center;
+                                background-color:$color2;
+                                margin-bottom:0.2em;
+                                
 
                             }
                         }
@@ -2438,7 +2442,7 @@ desktop 1920px*/
                     width: 10%;
                     float: left;
                     margin: 0.5em;
-                    display: inline-block;
+                    display: block;
 
                     a {
                         display: block;
@@ -3148,15 +3152,7 @@ desktop 1920px*/
 desktop 1440px*/
 @media only screen and (max-width: 90em) {
 
-    .gallery-caption {
-        font-size: 0.9em;
-    }
-
-    .bypostauthor {
-        font-size: 0.9em;
-    }
-
-   
+       
     #wrapper_container {
         width: 92%;
     }
@@ -3690,7 +3686,7 @@ desktop 1440px*/
             .websiteImage {
                 width: 25%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -4376,10 +4372,10 @@ desktop 1440px*/
                         }
 
                         ul {
-                            width: 90%;
+                            
 
                             li {
-                                line-height: 35px;
+                                
                                 font-size: 0.75em;
 
                             }
@@ -5356,7 +5352,7 @@ desktop 1280px*/
                 .websiteImage {
                     width: 25%;
 
-                    &:hover {}
+                    
                 }
 
                 .website-text {
@@ -6128,13 +6124,13 @@ desktop 1280px*/
                             }
 
                             ul {
-                                width: 90%;
+                                
                                 margin: 0 auto;
 
                                 li {
 
                                     font-size: 0.7em;
-                                    line-height: 30px;
+                                    
 
 
                                 }
@@ -6958,7 +6954,7 @@ desktop 1280px*/
             .websiteImage {
                 width: 25%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -7645,10 +7641,10 @@ desktop 1280px*/
                         }
 
                         ul {
-                            width: 90%;
+                            
 
                             li {
-                                line-height: 35px;
+                                
                                 font-size: 0.75em;
 
                             }
@@ -8102,9 +8098,8 @@ desktop 1280px*/
 /*
 desktop 1024px*/
 @media only screen and (max-width: 64em) {
-    .fixed-side-social-container {
-        display: none;
-    }
+
+    
 
     #wrapper_container {
         width: 96%;
@@ -8162,8 +8157,7 @@ desktop 1024px*/
 
         /*Navigation*/
         nav.menu-main-container {
-            width: 45%;
-
+           
             ul#menu-main {
                 height: 35px;
 
@@ -8586,7 +8580,7 @@ desktop 1024px*/
             .websiteImage {
                 width: 25%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -9144,13 +9138,13 @@ desktop 1024px*/
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
-                                font-size: 0.7em;
-                                line-height: 30px;
+                                font-size: 0.75em;
+                                
 
 
                             }
@@ -9599,9 +9593,7 @@ desktop 1024px*/
 /*
 desktop 980px*/
 @media only screen and (max-width: 980px) {
-    .fixed-side-social-container {
-        display: none;
-    }
+    
 
     #wrapper_container {
         width: 96%;
@@ -10100,7 +10092,7 @@ desktop 980px*/
                 margin: auto;
                 display: block;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -10693,13 +10685,13 @@ desktop 980px*/
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
                                 font-size: 0.8em;
-                                line-height: 30px;
+                                
 
 
                             }
@@ -11145,9 +11137,7 @@ desktop 980px*/
 /*
 tablet 800px */
 @media only screen and (max-width: 50em) {
-    .fixed-side-social-container {
-        display: none;
-    }
+    
 
     #wrapper_container {
         width: 96%;
@@ -11658,7 +11648,7 @@ tablet 800px */
                 margin: auto;
                 display: block;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -12229,13 +12219,13 @@ tablet 800px */
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
                                 font-size: 0.8em;
-                                line-height: 30px;
+                                
 
 
                             }
@@ -12696,9 +12686,7 @@ tablet 800px */
 /*
 tablet 667px */
 @media only screen and (max-width: 41.6875em) {
-    .fixed-side-social-container {
-        display: none;
-    }
+    
 
     #wrapper_container {
         width: 98%;
@@ -13766,7 +13754,7 @@ tablet 667px */
 
                         h1 {
 
-                            font-size: 0.85em;
+                            font-size: 0.9em;
 
                             &::before {
                                 font-size: 1em;
@@ -13776,13 +13764,13 @@ tablet 667px */
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
-                                font-size: 0.75em;
-                                line-height: 30px;
+                                font-size: 0.8em;
+                                
 
 
                             }
@@ -14222,9 +14210,7 @@ tablet 667px */
 /*
 tablet 600px */
 @media only screen and (max-width: 37.5em) {
-    .fixed-side-social-container {
-        display: none;
-    }
+    
 
     #wrapper_container {
         width: 98%;
@@ -14578,7 +14564,7 @@ tablet 600px */
                 margin: auto;
                 display: block;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -15156,9 +15142,7 @@ tablet 600px */
 tablet 536px */
 @media only screen and (max-width: 33.5em) {
 
-    .fixed-side-social-container {
-        display: none;
-    }
+   
 
     .menu-toggle,
     .menu-main-container.toggled ul {
@@ -15168,15 +15152,16 @@ tablet 536px */
     .menu-toggle {
         position: fixed;
         z-index: 100;
-        top: 0.5em;
-        left: 82vw;
+        top: 0.2em;
+        left: calc(84% - 1vw);
         padding: 0.7em;
         font-size: 1em;
         text-transform: uppercase;
-        background-color: #000;
-        color: #fff;
-        border: solid 2px #fff;
+        background-color: $color1;
+        color:  $color2;
+        border:none;
         transition: all ease-out 400ms;
+        height:60px;
     }
 
     .menu-toggle.hide {
@@ -15192,6 +15177,7 @@ tablet 536px */
     .menu-toggle:hover,
     .menu-toggle:focus {
         text-decoration: underline;
+        border: solid 2px $color2;
         cursor:pointer;
     }
 
@@ -15261,6 +15247,10 @@ tablet 536px */
             ul#menu-main {
 
                 height: 15.5em;
+                -webkit-flex-flow: column ;
+                -ms-flex-flow: column ;
+                flex-flow: column ;
+                
 
                 li.menu-item {
                     height: 45px;
@@ -15278,7 +15268,7 @@ tablet 536px */
                         font-size: 1em;
                         text-align: center;
                         display: block;
-                        @include box-sizing($type: border-box);
+                        
 
                         &:hover {
 
@@ -15575,7 +15565,7 @@ tablet 536px */
             .websiteImage {
                 width: 45%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -16089,7 +16079,7 @@ tablet 536px */
 
                         h1 {
 
-                            font-size: 0.85em;
+                            font-size: 0.9em;
 
                             &::before {
                                 font-size: 1em;
@@ -16099,13 +16089,13 @@ tablet 536px */
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
-                                font-size: 0.75em;
-                                line-height: 30px;
+                                font-size: 0.8em;
+                                
 
 
                             }
@@ -16548,9 +16538,7 @@ tablet 536px */
 mobile 480px */
 @media only screen and (max-width: 30em) {
 
-    .fixed-side-social-container {
-        display: none;
-    }
+    
 
     .menu-toggle,
     .menu-main-container.toggled ul {
@@ -16559,7 +16547,7 @@ mobile 480px */
 
     .menu-toggle {
 
-        left: 82vw;
+        left:calc(84% - 1vw);
     }
 
     .menu-toggle.hide {
@@ -16633,7 +16621,7 @@ mobile 480px */
 
         nav.menu-main-container {
 
-            top: 4.2em;
+            top: 3.2em;
 
             ul#menu-main {
 
@@ -16644,7 +16632,7 @@ mobile 480px */
                     width: 100%;
 
                     a {
-                        line-height: 45px;
+                        
                         font-size: 0.9em;
 
                         &:hover {
@@ -17085,7 +17073,7 @@ mobile 480px */
             .websiteImage {
                 width: 50%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -17637,12 +17625,12 @@ mobile 480px */
                 width: 100%;
 
                 h1 {
-                    font-size: 0.9em;
+                    font-size: 1em;
                 }
 
                 p {
                     line-height: 1.8em;
-                    font-size: 0.75em;
+                    font-size: 0.8em;
 
                 }
 
@@ -17667,7 +17655,7 @@ mobile 480px */
 
                         h1 {
 
-                            font-size: 0.85em;
+                            font-size: 0.95em;
 
                             &::before {
                                 font-size: 1em;
@@ -17677,13 +17665,13 @@ mobile 480px */
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
-                                font-size: 0.75em;
-                                line-height: 30px;
+                                font-size: 0.85em;
+                                line-height: 40px;
 
 
                             }
@@ -18129,7 +18117,7 @@ mobile 414px */
 
     .menu-toggle {
 
-        left: 84vw;
+        left:calc(84% - 1vw);
         font-size: 0.85em;
         
     }
@@ -18205,17 +18193,16 @@ mobile 414px */
 
         /*Mobile-Navigation*/
         nav.menu-main-container {
-            top: 4.2em;
+            top: 3.2em;
 
             ul#menu-main {
-                height: 12.1em;
-
+                
                 li.menu-item {
-                    height: 35px;
+                    
 
                     a {
-                        line-height: 35px;
-                        font-size: 0.8em;
+                        
+                        font-size: 0.85em;
 
                         
                     }
@@ -18557,7 +18544,7 @@ mobile 414px */
             .websiteImage {
                 width: 50%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -19118,9 +19105,7 @@ mobile 414px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 
-    .fixed-side-social-container {
-        display: none;
-    }
+    
 
     .menu-toggle,
     .menu-main-container.toggled ul {
@@ -19128,9 +19113,9 @@ mobile 360px */
     }
 
     .menu-toggle {
-        left: 82vw;
+        left:calc(84% - 1vw);
         font-size: 0.8em;
-        top: 2.1em
+        top: 2.4em
     }
 
     .menu-toggle.hide {
@@ -19189,14 +19174,14 @@ mobile 360px */
 
         /*Mobile-Navigation*/
         nav.menu-main-container {
-            top: 4.2em;
+            top: 3.2em;
 
             ul#menu-main {
 
                 li.menu-item {
 
                     a {
-                        font-size: 0.8em;
+                        font-size: 0.85em;
 
                     }
                 }
@@ -19606,7 +19591,7 @@ mobile 360px */
             .websiteImage {
                 width: 50%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -20146,7 +20131,7 @@ mobile 360px */
 
                 p {
                     line-height: 1.8em;
-                    font-size: 0.75em;
+                    font-size: 0.8em;
 
                 }
 
@@ -20171,7 +20156,7 @@ mobile 360px */
 
                         h1 {
 
-                            font-size: 0.85em;
+                            font-size: 0.95em;
 
                             &::before {
                                 font-size: 1em;
@@ -20181,13 +20166,13 @@ mobile 360px */
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
-                                font-size: 0.75em;
-                                line-height: 30px;
+                                font-size: 0.85em;
+                                
 
 
                             }
@@ -20636,10 +20621,7 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
 
-    .fixed-side-social-container {
-        display: none;
-    }
-
+    
     .menu-toggle,
     .menu-main-container.toggled ul {
         display: block;
@@ -20647,7 +20629,7 @@ mobile 320px */
 
     .menu-toggle {
         top: 2.1em;
-        left: 80vw;
+        left:calc(84% - 1vw);
         font-size: 0.85em;
     }
 
@@ -20707,7 +20689,7 @@ mobile 320px */
 
         /*Mobile-Navigation*/
         nav.menu-main-container {
-            top: 4em;
+            top: 3.2em;
 
             ul#menu-main {
                 height: 12.1em;
@@ -20875,7 +20857,7 @@ mobile 320px */
 
                     font-size: 0.7em;
 
-                    &:hover {}
+                    
                 }
 
             }
@@ -20892,7 +20874,7 @@ mobile 320px */
 
                     font-size: 0.7em;
 
-                    &:hover {}
+                  
                 }
 
             }
@@ -20909,7 +20891,7 @@ mobile 320px */
 
                     font-size: 0.7em;
 
-                    &:hover {}
+                    
                 }
 
             }
@@ -20926,7 +20908,7 @@ mobile 320px */
 
                     font-size: 0.7em;
 
-                    &:hover {}
+                    
                 }
 
             }
@@ -21105,7 +21087,7 @@ mobile 320px */
             .websiteImage {
                 width: 45%;
 
-                &:hover {}
+                
             }
 
             .website-text {
@@ -21655,7 +21637,7 @@ mobile 320px */
 
                         h1 {
 
-                            font-size: 0.8em;
+                            font-size: 0.9em;
 
                             &::before {
                                 font-size: 1em;
@@ -21665,13 +21647,13 @@ mobile 320px */
                         }
 
                         ul {
-                            width: 90%;
+                            
                             margin: 0 auto;
 
                             li {
 
-                                font-size: 0.75em;
-                                line-height: 30px;
+                                font-size: 0.8em;
+                                
 
 
                             }
@@ -22010,7 +21992,7 @@ mobile 320px */
                             line-height: 25px;
                         }
 
-                        li.cat-active {}
+                        
                     }
                 }
 

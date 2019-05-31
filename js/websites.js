@@ -1,6 +1,9 @@
 
 //Menu Switch
+
+ 
 jQuery(document).ready(function($){
+
    $(function(){
           var default_view = 'grid';
           if($.cookie('view') !== 'undefined'){
