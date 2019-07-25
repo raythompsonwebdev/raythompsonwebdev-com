@@ -31,8 +31,12 @@ get_header(); ?>
 <div id="map_container"></div>
 
 <ul class="contact-details">
+<<<<<<< HEAD
 
     <li id="fa-email"><a href="#">raymond.thompson@raythompsonwebdev.co.uk</a></li>
+=======
+    <li id="fa-email"><a href="#"><?php _e( 'raymond.thompson@raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ); ?></a></li>
+>>>>>>> 189c8a6e2fee8d4aafe2022de31adf5229b08828
 
     <li id="fa-email" ><a href="#" >LINK</a></li>
 

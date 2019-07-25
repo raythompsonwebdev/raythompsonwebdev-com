@@ -1,6 +1,9 @@
 
 //Menu Switch
+
+ 
 jQuery(document).ready(function($){
+
    $(function(){
           var default_view = 'grid';
           if($.cookie('view') !== 'undefined'){
@@ -53,7 +56,7 @@ jQuery(document).ready(function($){
               var CategoryID = $(this).attr('category');
               $('.menuSwitch ul li').removeClass('cat-active');
               $(this).addClass('cat-active');
-              $('.content .prod-cnt').each(function(){
+              $('div.content .prod-cnt').each(function(){
                   if(($(this).hasClass(CategoryID)) == false){
                      $(this).css({'display':'none'});
                   }

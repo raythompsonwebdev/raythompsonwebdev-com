@@ -20,7 +20,7 @@ get_header();
 
 <div id="profile_container">
 
-    <h1><?php echo esc_html( 'About Me', 'raythompsonwebdev-com' ); ?></h1>
+    <h1><?php _e( 'About Me', 'raythompsonwebdev-com' ); ?></h1>
 
     <article id="text-box-profile">
 
@@ -47,12 +47,12 @@ get_header();
     <article id="text-box-profile-a">
 
         <p> 
-            <?php echo esc_html('I continue to keep up to date as much as time will allow with the constant changes in web development by following online tutorials and doing coding exercises and challenges on websites like');?><strong><a href="<?php echo esc_url('https://www.freecodecamp.org/raythompsonwebdev','display');?>" target="new" > FreeCode Camp</a></strong> and<strong> <a href="<?php echo esc_url('https://www.codeacademy.com','display');?>" target="new">CodeAcademy</a></strong><?php echo esc_html(', listening to web development podcasts and attending local events, even short courses like');?> <strong><a href="<?php echo esc_url('https://vimeo.com/232481032','display');?>" target="new">Digital Futures 2017</a></strong><?php echo esc_html(', and volunteering at');?> <strong><a href="<?php echo esc_url('https://2018.london.wordcamp.org/attendees/','display');?>" target="new">WordCamp 2018</a></strong> in London &#046;
+            <?php _e('I continue to keep up to date as much as time will allow with the constant changes in web development by following online tutorials and doing coding exercises and challenges on websites like');?><strong><a href="<?php echo esc_url('https://www.freecodecamp.org/raythompsonwebdev','display');?>" target="new" > FreeCode Camp</a></strong> and<strong> <a href="<?php echo esc_url('https://www.codeacademy.com','display');?>" target="new">CodeAcademy</a></strong><?php _e(', listening to web development podcasts and attending local events, even short courses like');?> <strong><a href="<?php echo esc_url('https://vimeo.com/232481032','display');?>" target="new">Digital Futures 2017</a></strong><?php _e(', and volunteering at');?> <strong><a href="<?php echo esc_url('https://2018.london.wordcamp.org/attendees/','display');?>" target="new">WordCamp 2018</a></strong> in London &#046;
         </p>
 
-        <p><?php echo esc_html('I do like coding websites and web applications from scratch but in most situations I will use a framework like laravell or vue or CMS like Wordpress. I  .');?> </p>
+        <p><?php _e('I do like coding websites and web applications from scratch but in most situations I will use a framework like laravell or vue or CMS like Wordpress. I  .');?> </p>
 
-        <p><?php echo esc_html('Other than web development and my day job i enjoy spending time listeniing to music like 90\'s Hip Hop and Dancehall, Watching movies (Big Marvel movie fan) and spending time with family and friends.');?></p>
+        <p><?php _e('Other than web development and my day job i enjoy spending time listeniing to music like 90\'s Hip Hop and Dancehall, Watching movies (Big Marvel movie fan) and spending time with family and friends.');?></p>
 
     </article>
 

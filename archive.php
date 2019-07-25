@@ -110,7 +110,7 @@ get_header();
 
 <section class="contact-wide">
 
-<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
+<h1><?php _e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
   
 </section>
 
