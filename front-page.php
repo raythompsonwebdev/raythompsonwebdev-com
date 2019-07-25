@@ -45,9 +45,9 @@
 			<article class="frntpgbox">
 				<h1><?php echo esc_html( 'Code', 'raythompsonwebdev-com' ); ?></h1>
 					<ul>
-						<li><?php echo esc_html( 'HTML\/CSS', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php echo esc_html( 'PHP', 'raythompsonwebdev-com' ); ?>v</li>
-						<li><?php echo esc_html( 'Javascript(ES6)', 'raythompsonwebdev-com' ); ?></li>
+						<li><?php echo esc_html( 'HTML5/CSS3', 'raythompsonwebdev-com' ); ?></li>
+						<li><?php echo esc_html( 'PHP', 'raythompsonwebdev-com' ); ?></li>
+						<li><?php echo esc_html( 'Javascript', 'raythompsonwebdev-com' ); ?></li>
 						
 					</ul>
 			</article>
@@ -55,7 +55,7 @@
 			<article class="frntpgbox">
 					<h1><?php echo esc_html( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
 					<ul>
-						<li><?php echo esc_html( 'CRO', 'raythompsonwebdev-com' ); ?></li>
+						<li><?php echo esc_html( 'Video/Audio', 'raythompsonwebdev-com' ); ?></li>
 						<li><?php echo esc_html( 'SEO', 'raythompsonwebdev-com' ); ?></li>
 						<li><?php echo esc_html( 'Google Analytics', 'raythompsonwebdev-com' ); ?></li>
 					</ul>
@@ -65,7 +65,7 @@
 					<h1><?php echo esc_html( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 						<ul>
 							<li><?php echo esc_html( 'Installation', 'raythompsonwebdev-com' ); ?></li>
-							<li><?php echo esc_html( 'Maintenance', 'raythompsonwebdev-com' ); ?></li>
+							<li><?php echo esc_html( 'Custom Plugins', 'raythompsonwebdev-com' ); ?></li>
 							<li><?php echo esc_html( 'Custom Themes', 'raythompsonwebdev-com' ); ?></li>
 						</ul>
 			</article>
@@ -74,7 +74,7 @@
 				<h1><?php echo esc_html( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
 					<ul>
 						<li><?php echo esc_html( 'Security', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php echo esc_html( 'SEO', 'raythompsonwebdev-com' ); ?></li>
+						<li><?php echo esc_html( 'Database', 'raythompsonwebdev-com' ); ?></li>
 						<li><?php echo esc_html( 'Debugging', 'raythompsonwebdev-com' ); ?></li>
 					</ul>
 			</article>

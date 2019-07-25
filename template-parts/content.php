@@ -43,7 +43,7 @@
 			<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
 				<?php if ( has_post_thumbnail() ) : ?>
-
+					
 					<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
 				<?php else : ?>
@@ -53,6 +53,7 @@
 						<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 						
 					</figure>
+					
 					
 				<?php endif; ?>
 			</a>
@@ -99,9 +100,9 @@
 							sprintf(
 								wp_kses(
 									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Continue reading<span class="continue-reading screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+									__( 'Continue reading<div class="continue-reading screen-reader-text"> "%s"</div >', 'raythompsonwebdev-com' ),
 									array(
-										'span' => array(
+										'div' => array(
 											'class' => array(),
 										),
 									)

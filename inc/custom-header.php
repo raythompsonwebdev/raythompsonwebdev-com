@@ -23,7 +23,7 @@ function raythompsonwebdev_com_custom_header_setup() {
 			'raythompsonwebdev_com_custom_header_args',
 			array(
 				'default-image'          => '',
-				'default-text-color'     => 'ffffff',
+				'default-text-color'     => '062351',
 				'width'                  => 1600,
 				'height'                 => 100,
 				'flex-height'            => true,

@@ -32,16 +32,17 @@
 
 		<?php if ( has_post_thumbnail() ) : ?>
 
-		<?php raythompsonwebdev_com_post_thumbnail(); ?>
+		<figure class="featuredImage">
+			
+			<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>"
+					alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+			
+		</figure>
 
 		<?php else : ?>
 
-		<figure class="featuredImage">
-			
-				<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>"
-					alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-			
-		</figure>
+		
+			<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
 		<?php endif; ?>
 	</a>

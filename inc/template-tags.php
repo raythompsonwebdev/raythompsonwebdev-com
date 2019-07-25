@@ -179,7 +179,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() ) :	?>
+		if ( is_singular() || is_home() || is_archive() || is_category()  ) :	?>
 
 		<figure class="featuredImage">
 						

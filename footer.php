@@ -22,6 +22,18 @@
 
 <footer role="contentinfo">
 
+<?php
+	if ( has_nav_menu( 'Secondary' ) ) {
+
+		wp_nav_menu(
+			array(
+				'menu'      => 'Secondary',
+				'container' => 'footer',
+			)
+		);
+	}
+	?>
+
 <div class="socialpics">
 
 	<a class="social-icon linkedin-icon" href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">
@@ -36,9 +48,9 @@
 		</span>
 	</a>
 
-	<a class="social-icon facebook-icon" href="<?php echo esc_url( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">
+	<a class="social-icon facebook-icon" href="<?php echo esc_url( '#', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Link No Longer Available', 'raythompsonwebdev-com' ); ?>">
 		<span>
-			<i class="fa fa-facebook"></i>
+			
 		</span>
 	</a>
 
@@ -50,18 +62,8 @@
 
 </div>
 
-	<?php
-	if ( has_nav_menu( 'Secondary' ) ) {
 
-		wp_nav_menu(
-			array(
-				'menu'      => 'Secondary',
-				'container' => 'footer',
-			)
-		);
-	}
-	?>
-
+</footer>
 <p id="copyr" > <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
 	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
 		<span class="sep"> | </span>
@@ -81,9 +83,6 @@
 	?>
 
 </p>
-
-</footer>
-
 </div>
 
 <script type="text/javascript">

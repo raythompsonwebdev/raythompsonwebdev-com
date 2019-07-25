@@ -375,41 +375,6 @@ function raythompsonwebdev_com_about_page_scripts() {
 	}
 }
 
-/**
- * Contact page map function.
- *
- * @return void void text
- */
-function raythompsonwebdev_com_mapcontainer() {
-
-	if ( is_page( 'contact' ) ) {
-		?>
-
-<script>
-		function initMap() {
-		var uluru = {lat: 51.55583507664607, lng: -0.06814956665039062};
-		var map = new google.maps.Map(document.getElementById('map_container'), {
-			zoom: 12,
-			center: uluru
-		});
-		var marker = new google.maps.Marker({
-			position: uluru,
-			map: map
-		});
-		} 
-		
-	</script>
-		
-	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6NUsSJttHx4SuCU3lw-ANNv7yKSrlYuw&callback=initMap">
-	</script>
-
-		<?php
-
-	}
-}
-add_action( 'wp_footer', 'raythompsonwebdev_com_mapcontainer' );
-
 
 if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 
@@ -690,3 +655,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Summary Map additions.
+ */
+require get_template_directory() . '/inc/map-function.php';
