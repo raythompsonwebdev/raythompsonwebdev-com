@@ -31,13 +31,15 @@ get_header(); ?>
 <div id="map_container"></div>
 
 <ul class="contact-details">
+
+    
     <li id="fa-email"><a href="#"><?php _e( 'raymond.thompson@raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ); ?></a></li>
 
-    <li id="fa-email"><a href="<?php echo esc_url( 'https://www.facebook.com/raythompwebdesigncom-1228332087181328', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.facebook.com/raythompsonwebdeveloper/</a></li>
+    <li id="fa-email" ><a href="#" >LINK</a></li>
 
     <li id="fa-email"><a href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">@RayThompWeb</a></li>
 
-    <li id="fa-email"><a href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
+    <li id="fa-email"><a href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
 
     <li id="fa-email"><a href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">github.com/raythompsonwebdev</a></li>
 </ul>

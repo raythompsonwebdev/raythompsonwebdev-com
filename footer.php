@@ -36,11 +36,13 @@
 
 <div class="socialpics">
 
+
 	<a class="social-icon linkedin-icon" href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">
 		<span>
 			<i class="fa fa-linkedin"></i>
 		</span>
 	</a>
+
 
 	<a class="social-icon twitter-icon" href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">
 		<span>
@@ -73,6 +75,7 @@
 	printf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
 	?>
 <br/>
+
 
 	<?php
 

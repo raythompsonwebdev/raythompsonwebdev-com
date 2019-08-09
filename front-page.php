@@ -65,7 +65,11 @@
 					<h1><?php echo esc_html( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 						<ul>
 							<li><?php echo esc_html( 'Installation', 'raythompsonwebdev-com' ); ?></li>
-							<li><?php echo esc_html( 'E-commerce', 'raythompsonwebdev-com' ); ?></li>
+
+						
+
+							<li><?php echo esc_html( 'Custom Plugins', 'raythompsonwebdev-com' ); ?></li>
+
 							<li><?php echo esc_html( 'Custom Themes', 'raythompsonwebdev-com' ); ?></li>
 						</ul>
 			</article>
