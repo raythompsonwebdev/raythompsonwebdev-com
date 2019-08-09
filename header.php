@@ -76,14 +76,14 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page(array('profile','contact','privacy','archives')) ) : ?>
+				<?php if ( is_front_page() || is_page(array('about','contact','privacy-policy-2','archives')) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 						
-						<?php elseif ( is_page('gallery') || 'gallery' == get_post_type() ) : ?>
+						<?php elseif ( is_page('projects') || 'projects' == get_post_type() ) : ?>
 			
 						<hgroup>
-						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>GALLERY</h1>
+						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
 						
 						<?php else : ?>
 						<hgroup>

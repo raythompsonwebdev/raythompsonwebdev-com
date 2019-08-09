@@ -31,28 +31,39 @@ get_header();
             </a>
         </div>
 
-        <p><?php echo __('I have a passion for web design and web development and like using HTML, CSS and Javascipt for front-end development, responsive web development and PHP and MySQL for back end development and WordPress theme development .','raythompsonwebdev-com');?></p>
-<p><?php echo __('I became interested web design and development after attend a web design course at the East London Advanced Technology Training Center in East London between November 2011 and Oct 2012. I gained a city and guilds cerificate in basic web design and development');?></p>
+        <p><?php echo __('I have passion for web development dating back to 2012 and like tinkering with HTML, CSS and Javascipt, Ajax to create front end user interfaces , responsive websites and website templates. I also enjoy developing programs on the back end using PHP, MySQL, Ruby and WordPress theme development and maintenance.','raythompsonwebdev-com');?></p>
+
+<p><?php echo __('My interest for web design and development began after attending a part time web design course  in East London between November 2011 and Oct 2012 where I gained some experience of the web design and development process by completing projects for tasks in exams and collaborating with other students. I learnt a bit about the web industry from my tutors, some of which really appealed to me', 'raythompsonwebdev-com');?></p>
         <p>
-            <?php echo __('Since then whenever I am not working in public sector revenues and benefits during the day, I spend most of my free time building');?><strong><a href="<?php echo esc_url('https://raythompsonwebdev.co.uk/website-projects', 'display');?>" target="new"> web applications</a></strong><?php echo __(', experimenting with new coding techniques , attempting to solve coding problems and helping others when ever I can with any website related');?><strong><a href="<?php echo esc_url('https://raythompsonwebdev.co.uk/raythompsonwebdev-blog','display');?>" target="new"> problems</a></strong>.
+            <?php echo __('Since completing course , whenever I have the spare time, I spend most of it practising', 'raythompsonwebdev-com');?><strong><a href="<?php echo esc_url('https://raythompsonwebdev.co.uk/projects', 'display');?>" target="new"> coding , building websites and web appllications </a></strong><?php echo __(', trying out new coding techniques , attempting to solve coding problems and helping others on-line whenever I can. ', 'raythompsonwebdev-com');?><strong><a href="<?php echo esc_url('https://raythompsonwebdev.co.uk/blog','display');?>" target="new"></a></strong>
         </p>
     
 
-        <p><?php echo __('Web development I have noticed has changed rapidly over the past five years with things like responsive development being the standard and the rise of Javascript.');?> </p>
+        
         <div class="clearfix"></div>
     </article>
 
     <?php echo do_shortcode('[chart]');?>
 
     <article id="text-box-profile-a">
+    <p><?php echo __('The whole web development process has changed rapidly over the past five years with websites now becoming more like applications and the rise of Javascript.', 'raythompsonwebdev-com');?> </p>
 
-        <p> 
-            <?php _e('I continue to keep up to date as much as time will allow with the constant changes in web development by following online tutorials and doing coding exercises and challenges on websites like');?><strong><a href="<?php echo esc_url('https://www.freecodecamp.org/raythompsonwebdev','display');?>" target="new" > FreeCode Camp</a></strong> and<strong> <a href="<?php echo esc_url('https://www.codeacademy.com','display');?>" target="new">CodeAcademy</a></strong><?php _e(', listening to web development podcasts and attending local events, even short courses like');?> <strong><a href="<?php echo esc_url('https://vimeo.com/232481032','display');?>" target="new">Digital Futures 2017</a></strong><?php _e(', and volunteering at');?> <strong><a href="<?php echo esc_url('https://2018.london.wordcamp.org/attendees/','display');?>" target="new">WordCamp 2018</a></strong> in London &#046;
-        </p>
+    <p> 
+            <?php _e('I continue to keep up to date as much as I can while working full-time. I like to hear the latest news in web development. I listen to podcasts, watch videos on-line , off-line and read web devleopment related books and blogs. I have also done quite a few on-line coding courses. I particularly like websites like ' , 'raythompsonwebdev-com');?><strong><a href="<?php echo esc_url('https://www.freecodecamp.org/raythompsonwebdev','display');?>" target="new" >FreeCode Camp </a></strong>and<strong><a href="<?php echo esc_url('https://www.codeacademy.com','display');?>" target="new"> CodeAcademy  </a></strong>among others.
+            </p>
+            <p>
+            <?php _e('I also attend local meetup and events and short courses like' , 'raythompsonwebdev-com');?> 
+            <strong><a href="<?php echo esc_url('https://vimeo.com/232481032','display');?>" target="new">Digital Futures 2017</a></strong>
+            <?php _e(' and do a bit of volunteering whenever I can, like when I volunteered at', 'raythompsonwebdev-com');?> 
+            <strong><a href="<?php echo esc_url('https://2018.london.wordcamp.org/attendees/','display');?>" target="new">WordCamp 2018</a></strong> in London &#046;</p>
+            <p><?php _e('I have also helped friends and others with coding problems and issues they have had with websites and web applications mostly off-line. ', 'raythompsonwebdev-com');?> </p>
+      
 
-        <p><?php _e('I do like coding websites and web applications from scratch but in most situations I will use a framework like laravell or vue or CMS like Wordpress. I  .');?> </p>
+        <p><?php _e('My goal is to become web developer full-time producing useful and practical web applications . I want to be able to contribute to improving user experience on the web, particularly for those have difficulty accessing  websites and web applications on the internet due to weak connection or other accessibility issues. ', 'raythompsonwebdev-com');?> </p>
 
-        <p><?php _e('Other than web development and my day job i enjoy spending time listeniing to music like 90\'s Hip Hop and Dancehall, Watching movies (Big Marvel movie fan) and spending time with family and friends.');?></p>
+        <p><?php _e('I am curently seeking further development opportunities within the Web Industry.', 'raythompsonwebdev-com');?></p>
+
+        
 
     </article>
 
