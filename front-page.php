@@ -35,15 +35,15 @@
 </div>
 
 	<div id="textboxfront">
-		<h1><?php _e( 'Hello, I\'m a Web Developer', 'raythompsonwebdev-com' ); ?></h1>
+		<h1><?php echo esc_html( 'Hello', 'raythompsonwebdev-com' ); ?></h1>
 
-		<p><?php _e( 'My name is Raymond. I am a web developer and I create custom WordPress themes, customise WordPress themes and build websites and web applications.', 'raythompsonwebdev-com' ); ?></p>
+		<p><?php echo esc_html( 'My name is Raymond. I am a web developer and I create custom WordPress themes, customise WordPress themes and build websites and web applications .', 'raythompsonwebdev-com' ); ?></p>
 
-		<p><?php _e( 'Whether it\'s for a small business or a personal goal, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.', 'raythompsonwebdev-com' ); ?></p>
-	
+		<p><?php echo esc_html( 'Whether it\'s for a small business or a personal goal, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.', 'raythompsonwebdev-com' ); ?></p>
+	<p><?php echo esc_html( 'From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.', 'raythompsonwebdev-com' ); ?></p>
 		<section id="calltoaction">
 			<article class="frntpgbox">
-				<h1><?php _e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
+				<h1><?php echo esc_html( 'Code', 'raythompsonwebdev-com' ); ?></h1>
 					<ul>
 						<li><?php echo esc_html( 'HTML5/CSS3', 'raythompsonwebdev-com' ); ?></li>
 						<li><?php echo esc_html( 'PHP', 'raythompsonwebdev-com' ); ?></li>
@@ -53,7 +53,7 @@
 			</article>
 
 			<article class="frntpgbox">
-					<h1><?php _e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
+					<h1><?php echo esc_html( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
 					<ul>
 						<li><?php echo esc_html( 'Video/Audio', 'raythompsonwebdev-com' ); ?></li>
 						<li><?php echo esc_html( 'SEO', 'raythompsonwebdev-com' ); ?></li>
@@ -62,16 +62,20 @@
 			</article>
 
 			<article class="frntpgbox">
-					<h1><?php _e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
+					<h1><?php echo esc_html( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 						<ul>
 							<li><?php echo esc_html( 'Installation', 'raythompsonwebdev-com' ); ?></li>
+
+						
+
 							<li><?php echo esc_html( 'Custom Plugins', 'raythompsonwebdev-com' ); ?></li>
+
 							<li><?php echo esc_html( 'Custom Themes', 'raythompsonwebdev-com' ); ?></li>
 						</ul>
 			</article>
 
 			<article class="frntpgbox">
-				<h1><?php _e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
+				<h1><?php echo esc_html( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
 					<ul>
 						<li><?php echo esc_html( 'Security', 'raythompsonwebdev-com' ); ?></li>
 						<li><?php echo esc_html( 'Database', 'raythompsonwebdev-com' ); ?></li>
@@ -80,7 +84,8 @@
 			</article>
 			
 		</section>
-		<p><?php _e( 'From idea to launch I can help you build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.', 'raythompsonwebdev-com' ); ?></p>
+
+		
 		
 	</div>
 	

@@ -58,12 +58,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 	 *  @since 4.0.0
 	 */
 	function raythompsonwebdev_com_theme_setup() {
+	
 
 		/**
 		*  Load text domain
 		*/
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
-
+		
 		/**
 		*  add editor styles to posts and pages
 		*/
@@ -91,13 +92,15 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
+		
 
 		add_theme_support( 'post-thumbnails' );
 		// Create new image sizes.
 		add_image_size( 'featured-image', 783, 9999 );
 		add_image_size( 'websites', 550, 9999 );
 		add_image_size( 'post-thumbnail', 284, 9999 );
-
+				
+		
 		// Link pages.
 		$defaults = array(
 			'before'           => '<p>' . __( 'Pages:', 'raythompsonwebdev-com' ),
@@ -162,7 +165,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		// remove version from rss.
 		add_filter( 'the_generator', '__return_empty_string' );
 	}
-
+	
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
@@ -255,17 +258,12 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
-
-
-
 /**
  * Enqueue style sheets.
  */
 function raythompsonwebdev_com_register_styles() {
-	
-	wp_enqueue_style( 'normalise', get_stylesheet_directory_uri() . '/css/normalize.css', '8.0', true );
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
-	
+
 	// Add Font Awesome icons (http://fontawesome.io).
 	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', '1.0', true );
 
@@ -339,20 +337,20 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
  *  raythompsonwebdev lightbox code.
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'gallery' === get_post_type() || is_page( 'about' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_gallery_script' );
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_projects_script' );
 /**
  * Enqueue gallery page scripts.
  */
-function raythompsonwebdev_com_gallery_script() {
+function raythompsonwebdev_com_projects_script() {
 
-	if ( 'gallery' === get_post_type() || is_page( 'gallery' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'projects' ) ) {
 		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
 		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/minified/websites.min.js', array( 'jquery' ), '20161110', true );
 
@@ -368,7 +366,7 @@ function raythompsonwebdev_com_about_page_scripts() {
 
 	if ( is_page( 'about' ) ) {
 		// scrollto script.
-		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array(), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
 		// easing script.
 		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), '20161110', true );
 		// profile page scripts.
@@ -629,6 +627,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
 		);
 	}
 endif;
+
+
+
+
 /**
  * Summary Custom template tags for this theme.
  */

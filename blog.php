@@ -57,7 +57,7 @@ get_header();
 
 <!--Related Items -->
 <section class="contact-wide">
-	<h1><?php _e( 'Related Items', 'raythompsonwebdev-com' ); ?></h1>
+	<h1><?php esc_html_e( 'Related Items', 'raythompsonwebdev-com' ); ?></h1>
 </section>
 
 <!--Side bar -->

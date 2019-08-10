@@ -1,12 +1,12 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7
  *
- * Single Gallery | core/single-gallery.php.
+ * Single Projects | core/single-projects.php.
  *
- * @category   Single_Gallery
+ * @category   Single_Project
  * @package    Raythompsonwebdev-com
- * @subpackage Single_Gallery
+ * @subpackage Single_Project
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -27,21 +27,20 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 
 	<article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
 
-		<h1><?php _e('Website/Web Applications', 'raythompsonwebdev-com');?></h1>
+		<h1><?php _e('Web Projects', 'raythompsonwebdev-com');?></h1>
 
 			<figure class="websiteImage">
 			  <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/04/www-<?php global $post; $post_slug = $post->post_name; echo esc_html( $post_slug, 'raythompsonwebdev-com' );	?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?></a>
 			</figure>
 
 <div class="website-text">
-
 				<?php $prjct_name = get_post_meta( get_the_ID(), 'project_name', true ); ?>
 
 	<h1 class="post-meta-key">
 				<?php _e( 'Name', 'raythompsonwebdev-com' ); ?>
 	</h1>
 
-	<p class="websitetext"><?php echo esc_html( $prjct_name ); ?></p>
+	<p class="websitetext"><?php _e( $prjct_name ); ?></p>
 
 
 				<?php $prjct_descrp = get_post_meta( get_the_ID(), 'project_description', true ); ?>
@@ -50,7 +49,7 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 				<?php _e( 'Description', 'raythompsonwebdev-com' ); ?>
 	</h1>
 
-	<p class="websitetext"><?php echo esc_html( $prjct_descrp ); ?></p>
+	<p class="websitetext"><?php _e( $prjct_descrp ); ?></p>
 
 
 				<?php $prjct_code = get_post_meta( get_the_ID(), 'project_code', true ); ?>
@@ -59,7 +58,7 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 				<?php _e( 'Code', 'raythompsonwebdev-com' ); ?>
 	</h1>
 
-	<p class="websitetext"><?php echo esc_html( $prjct_code ); ?></p>
+	<p class="websitetext"><?php _e( $prjct_code ); ?></p>
 
 
 				<?php $prjct_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
@@ -69,7 +68,7 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 	</h1>
 
 
-	<a class="webformats" href="<?php echo esc_html( $prjct_url ); ?>"><?php echo esc_html( $prjct_url ); ?></a>
+	<a class="webformats" href="<?php _e( $prjct_url ); ?>"><?php _e( $prjct_url ); ?></a>
 
 	<h1 class="post-meta-key">
 				<?php _e( 'Github', 'raythompsonwebdev-com' ); ?>
@@ -93,7 +92,7 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 				<?php
 		endwhile;
 
-			if ( is_singular( 'gallery' ) ) {
+			if ( is_singular( 'project' ) ) {
 				?>
 
 			<nav class="navigation">

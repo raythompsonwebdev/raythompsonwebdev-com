@@ -2,12 +2,12 @@
 /**
  * *PHP version 7.2.
  * 
- * Template Name: Gallery
+ * Template Name: Projects
  *
- * Archive Gallery | core/page-gallery.php.
+ * Archive Gallery | core/page-projects.php.
  * 
  *
- * @category   Page_Gallery
+ * @category   Page_Projects
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -34,15 +34,15 @@ get_header();
 
 			<ul>
 				
-				<li class="cat-active" category="prod-cnt"><?php esc_html_e( 'All', 'raythompsonwebdev-com' ); ?></li>
+				<li class="cat-active" category="prod-cnt"><?php _e( 'All', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="web-applications"><?php esc_html_e( 'From Scratch', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="vanilla"><?php _e( 'Vanilla', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="wordpress"><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="wordpress"><?php _e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="bootstrap"><?php esc_html_e( 'Bootstrap', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="bootstrap"><?php _e( 'Bootstrap', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="foundation"><?php esc_html_e( 'Foundation', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="foundation"><?php _e( 'Foundation', 'raythompsonwebdev-com' ); ?></li>
 
 			</ul>
 		</nav>
@@ -52,17 +52,18 @@ get_header();
 
 		<!-- Panel Container Starts Here -->
 		<?php
-        $args = array( 'post_type' => 'gallery', 'posts_per_page' => 10 );
+        $args = array( 'post_type' => 'project', 'posts_per_page' => 10 );
         $loop = new WP_Query( $args );
+       if ( have_posts() ) :
         while ( $loop->have_posts() ) : $loop->the_post();
-		//if ( have_posts() ) :
+		
 			//while ( have_posts() ) :
             //the_post();
             ?>
             <!-- display slugs for custom post categories-->
             <div id="panel" class="prod-cnt
             <?php
-            $customterms = get_the_terms( $post->ID, 'gallery-category' );
+            $customterms = get_the_terms( $post->ID, 'project-category' );
             foreach ( $customterms as $customterm ) {
                 $pic = $customterm->slug . ' ';
                 echo esc_html( $pic );
@@ -75,7 +76,9 @@ get_header();
                     <figcaption class="showcase-content showcase">
                         <h1> <?php the_title(); ?></h1>
                     
-                            <a href="<?php esc_url( the_permalink() ); ?>"><?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?></a>
+                            <a href="<?php the_permalink(); ?>">
+                                <?php _e( 'See More..', 'raythompsonwebdev-com' ); ?>
+                            </a>
 
                     </figcaption>
 
@@ -83,10 +86,10 @@ get_header();
 
             </div>
             <!-- Panel Container Ends Here -->
-		<?php	endwhile;?>
-			
-			
-	
+        <?php	endwhile;?>
+        
+        <?php	endif;?>
+					
 
 		<div class="clearfix"></div>
 

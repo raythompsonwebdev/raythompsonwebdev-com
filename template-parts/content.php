@@ -11,7 +11,7 @@
 ?>
 
 <!--Post loop start -->
-<?php if ( have_posts() ) : $postcounter = 1; ?>
+<?php if ( have_posts() ) :  ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -59,39 +59,7 @@
 			</a>
 			<!--featured Image end-->
 
-			<?php if ($postcounter == 1) :	?>
-				<div class="entry">
-
-					<?php
-						the_content();
 			
-					?>
-
-				</div>
-				
-				<!--Post entry footer-->
-				<footer class="byline">
-
-					<p class='right'>
-						<a class='comments-count' href='<?php the_permalink(); ?>'><?php comments_number( '0', '1', '%' ); ?></a>
-					</p>
-			
-					
-					<?php raythompsonwebdev_com_entry_footer(); ?>
-					
-					<p>
-					<?php
-						$lastmodified = get_the_modified_time( 'U' );
-						$posted       = get_the_time( 'U' );
-					if ( $lastmodified > $posted ) {
-						echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-					}
-					?>
-					</p>
-
-				</footer>
-
-			<?php else : ?>
 
 				<div class="entry">
 
@@ -154,7 +122,7 @@
 
 				</footer>
 
-			<?php endif;  $postcounter++; ?>	
+				
 			
 		</article>
 

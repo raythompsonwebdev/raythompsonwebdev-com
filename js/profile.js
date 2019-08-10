@@ -1,7 +1,8 @@
 
 
 //Hero Slider
-(function($) {
+jQuery(document).ready(function($){
+
  $('.hero-slider ul a').click(function() {
   //reset all the items
    $('.customBlock ul a').removeClass('active');
@@ -12,14 +13,18 @@
     //disable click event
      return false;
  });
-})(jQuery);
 
-//REsponsive chart
-(function($) {
-  $(" #chart #bars li .bar").each( function( key, bar ) {
-    var percentage = $(this).data('percentage');
-    $(this).animate({
+ $(" #chart #bars li .bar").each( function( key, bar ) {
+
+  
+  var percentage = $(this).data('percentage');
+
+  $(this).animate({
     'width' : percentage + '%'
-    }, 1000);
-  });
-})(jQuery);
+  }, 1000);
+});
+
+ 
+});
+
+
