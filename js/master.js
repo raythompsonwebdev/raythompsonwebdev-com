@@ -1,6 +1,6 @@
 
- // Hide/show toggle button on scroll
- jQuery(document).ready(function($){
+// Hide/show toggle button on scroll
+jQuery(document).ready(function($){
      
   	var position, direction, previous;
 
