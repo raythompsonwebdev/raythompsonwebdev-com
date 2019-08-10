@@ -25,7 +25,7 @@ function raythompsonwebdev_com_mapcontainer() {
 	</script>
 		
 	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGDPBvpHN2MKD9lMLk1cfTuURAlxWHAag&callback=initMap">
+	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
 	</script>
 
 		<?php
