@@ -36,13 +36,11 @@ get_header();
 				
 				<li class="cat-active" category="prod-cnt"><?php _e( 'All', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="vanilla"><?php _e( 'Vanilla', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="vanilla"><?php _e( 'Plain code', 'raythompsonwebdev-com' ); ?></li>
 
 				<li class="" category="wordpress"><?php _e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="bootstrap"><?php _e( 'Bootstrap', 'raythompsonwebdev-com' ); ?></li>
-
-				<li class="" category="foundation"><?php _e( 'Foundation', 'raythompsonwebdev-com' ); ?></li>
+				
 
 			</ul>
 		</nav>
