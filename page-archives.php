@@ -62,8 +62,13 @@ while ( have_posts() ) :
 
 <section class="contact-wide">
 
+<<<<<<< HEAD
 	<h1><?php esc_htmlesc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
 
+=======
+	<h1><?php _e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
+  
+>>>>>>> a3dd30d6efcc65b57e1614a1a3d67bd042b75169
 </section>
 
 <?php get_sidebar( 'archive' ); ?>
