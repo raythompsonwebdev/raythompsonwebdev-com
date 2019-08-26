@@ -58,15 +58,50 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 	 *  @since 4.0.0
 	 */
 	function raythompsonwebdev_com_theme_setup() {
-	
+
+		register_meta(
+			'post',
+			'project_name',
+			[
+				'object_subtype' => 'project',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'project_description',
+			[
+				'object_subtype' => 'project',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'project_code',
+			[
+				'object_subtype' => 'project',
+				'show_in_rest'   => true,
+			]
+		);
+
+		register_meta(
+			'post',
+			'project_url',
+			[
+				'object_subtype' => 'project',
+				'show_in_rest'   => true,
+			]
+		);
 
 		/**
 		*  Load text domain
 		*/
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
-		
+
 		/**
-		*  add editor styles to posts and pages
+		*  Add editor styles to posts and pages
 		*/
 		add_editor_style( 'css/custom-editor-style.css' );
 
@@ -92,15 +127,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
-		
 
 		add_theme_support( 'post-thumbnails' );
 		// Create new image sizes.
 		add_image_size( 'featured-image', 783, 9999 );
 		add_image_size( 'websites', 550, 9999 );
 		add_image_size( 'post-thumbnail', 284, 9999 );
-				
-		
+
 		// Link pages.
 		$defaults = array(
 			'before'           => '<p>' . __( 'Pages:', 'raythompsonwebdev-com' ),
@@ -165,7 +198,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		// remove version from rss.
 		add_filter( 'the_generator', '__return_empty_string' );
 	}
-	
+
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
@@ -262,8 +295,9 @@ add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
  * Enqueue style sheets.
  */
 function raythompsonwebdev_com_register_styles() {
-	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
 
+	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '1.0', false );
+	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
 	// Add Font Awesome icons (http://fontawesome.io).
 	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', '1.0', true );
 
@@ -334,10 +368,10 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
 /**
  *  Enqueue lightbox script.
  *
- *  raythompsonwebdev lightbox code.
+ *  Raythompsonwebdev lightbox code.
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'projects' === get_post_type() || is_page( 'about' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
@@ -350,7 +384,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_projects_script' );
  */
 function raythompsonwebdev_com_projects_script() {
 
-	if ( 'projects' === get_post_type() || is_page( 'projects' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'projects' ) ) {
 		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
 		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/minified/websites.min.js', array( 'jquery' ), '20161110', true );
 
@@ -400,7 +434,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 			gtag('config', 'UA-86655310-1');
 
 		</script>
-	
+
 		<?php
 	}
 	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );

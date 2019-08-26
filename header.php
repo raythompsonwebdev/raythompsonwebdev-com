@@ -80,7 +80,7 @@
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 						
-						<?php elseif ( is_page('projects') || 'projects' == get_post_type() ) : ?>
+						<?php elseif ( is_page('projects') || 'project' == get_post_type() ) : ?>
 			
 						<hgroup>
 						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>

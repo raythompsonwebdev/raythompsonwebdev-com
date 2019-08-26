@@ -1,11 +1,10 @@
 <?php
 /**
  * *PHP version 7.2.
- * 
+ *
  * Template Name: Projects
  *
  * Archive Gallery | core/page-projects.php.
- * 
  *
  * @category   Page_Projects
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
@@ -33,16 +32,14 @@ get_header();
 		<nav class="menuSwitch" role="navigation">
 
 			<ul>
-				
-				<li class="cat-active" category="prod-cnt"><?php _e( 'All', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="vanilla"><?php _e( 'Vanilla', 'raythompsonwebdev-com' ); ?></li>
+				<li class="cat-active" category="prod-cnt"><?php esc_html_e( 'All', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="wordpress"><?php _e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="vanilla"><?php esc_htmlesc_html_e( 'Plain code', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="bootstrap"><?php _e( 'Bootstrap', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="wordpress"><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="foundation"><?php _e( 'Foundation', 'raythompsonwebdev-com' ); ?></li>
+
 
 			</ul>
 		</nav>
@@ -52,44 +49,48 @@ get_header();
 
 		<!-- Panel Container Starts Here -->
 		<?php
-        $args = array( 'post_type' => 'projects', 'posts_per_page' => 10 );
-        $loop = new WP_Query( $args );
-       if ( have_posts() ) :
-        while ( $loop->have_posts() ) : $loop->the_post();
-		
-			//while ( have_posts() ) :
-            //the_post();
-            ?>
-            <!-- display slugs for custom post categories-->
-            <div id="panel" class="prod-cnt
-            <?php
-            $customterms = get_the_terms( $post->ID, 'project-category' );
-            foreach ( $customterms as $customterm ) {
-                $pic = $customterm->slug . ' ';
-                echo esc_html( $pic );
-            }?>"<?php post_class(); ?><?php the_ID(); ?> >
+		$args = array(
+			'post_type'      => 'project',
+			'posts_per_page' => 10,
+		);
+		$loop = new WP_Query( $args );
+		if ( have_posts() ) :
+			while ( $loop->have_posts() ) :
+				$loop->the_post();
 
-                <figure class="showcase-container " id="showcaseimg1">
-                    <div class="showcase-img">
-                        <?php the_post_thumbnail( 'websites' ); ?>
-                    </div>
-                    <figcaption class="showcase-content showcase">
-                        <h1> <?php the_title(); ?></h1>
-                    
-                            <a href="<?php the_permalink(); ?>">
-                                <?php _e( 'See More..', 'raythompsonwebdev-com' ); ?>
-                            </a>
+				?>
+			<!-- display slugs for custom post categories.-->
+			<div id="panel" class="prod-cnt
+				  <?php
+					$customterms = get_the_terms( $post->ID, 'project-category' );
+					foreach ( $customterms as $customterm ) {
+						$pic = $customterm->slug . ' ';
+						echo esc_html( $pic );
+					}
+					?>
+			"<?php post_class(); ?><?php the_ID(); ?> >
 
-                    </figcaption>
+				<figure class="showcase-container " id="showcaseimg1">
+					<div class="showcase-img">
+						<?php the_post_thumbnail( 'websites' ); ?>
+					</div>
+					<figcaption class="showcase-content showcase">
+						<h1> <?php the_title(); ?></h1>
 
-                </figure>
+							<a href="<?php the_permalink(); ?>">
+								<?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?>
+							</a>
 
-            </div>
-            <!-- Panel Container Ends Here -->
-        <?php	endwhile;?>
-        
-        <?php	endif;?>
-					
+					</figcaption>
+
+				</figure>
+
+			</div>
+			<!-- Panel Container Ends Here -->
+				<?php	endwhile; ?>
+
+			<?php	endif; ?>
+
 
 		<div class="clearfix"></div>
 
@@ -104,4 +105,3 @@ get_header();
 
 
 <?php get_footer(); ?>
-
