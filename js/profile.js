@@ -24,43 +24,6 @@
   	});
 })(jQuery);
 
-/*
 
-
-	var graphBar = document.getElementsByClassName("bar");
-
-
-	for (var i = 0; i < graphBar.length; i++) {
-
-		//console.log(graphBar)
-
-		console.log(graphBar[i])
-
-		var graphItem = graphBar[i];
-
-		var percentage = graphBar[i].dataset.percentage
-
-		//console.log(graphItem)
-
-		var pos = 0;
-
-		var id = setInterval(frame, 50);
-
-		function frame() {
-
-			if (pos == this.percentage) {
-
-				clearInterval(id);
-
-			} else {
-				/* code to change the element style *//*
-				pos++;
-				graphItem.style.width =  pos + '%';
-
-			}
-		}
-	}
-
-	*/
 
 

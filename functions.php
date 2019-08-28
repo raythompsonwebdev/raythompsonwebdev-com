@@ -404,7 +404,7 @@ function raythompsonwebdev_com_about_page_scripts() {
 		// easing script.
 		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), '20161110', true );
 		// profile page scripts.
-		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/minified/profile.min.js', array( 'jquery' ), '20161110', true );
 
 	}
 }

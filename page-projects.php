@@ -35,7 +35,7 @@ get_header();
 
 				<li class="cat-active" category="prod-cnt"><?php esc_html_e( 'All', 'raythompsonwebdev-com' ); ?></li>
 
-				<li class="" category="vanilla"><?php esc_htmlesc_html_e( 'Plain code', 'raythompsonwebdev-com' ); ?></li>
+				<li class="" category="vanilla"><?php esc_html_e( 'Plain code', 'raythompsonwebdev-com' ); ?></li>
 
 				<li class="" category="wordpress"><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
 
