@@ -1,40 +1,5 @@
-
-
 //Hero Slider
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a3dd30d6efcc65b57e1614a1a3d67bd042b75169
-jQuery(document).ready(function($){
 
- $('.hero-slider ul a').click(function() {
-  //reset all the items
-   $('.customBlock ul a').removeClass('active');
-   //set current item as active
-   $(this).addClass('active');
-    //scroll it to the right position
-   $('.hero-slider .mask').scrollTo($(this).attr('rel'), 300);
-    //disable click event
-     return false;
- });
-
- $(" #chart #bars li .bar").each( function( key, bar ) {
-
-  
-  var percentage = $(this).data('percentage');
-
-  $(this).animate({
-    'width' : percentage + '%'
-  }, 1000);
-});
-
- 
-});
-
-
-<<<<<<< HEAD
-=======
-=======
 (function($) {
 	$('.hero-slider ul a').click(function() {
 		//reset all the items
@@ -49,6 +14,7 @@ jQuery(document).ready(function($){
 })(jQuery);
 
 //REsponsive chart
+
 (function($) {
   	$(" #chart #bars li .bar").each( function( key, bar ) {
     	var percentage = $(this).data('percentage');
@@ -57,5 +23,44 @@ jQuery(document).ready(function($){
     	}, 1000);
   	});
 })(jQuery);
->>>>>>> 58d42921a0881a5a17e245a161ffd18b2c6c94c8
->>>>>>> a3dd30d6efcc65b57e1614a1a3d67bd042b75169
+
+/*
+
+
+	var graphBar = document.getElementsByClassName("bar");
+
+
+	for (var i = 0; i < graphBar.length; i++) {
+
+		//console.log(graphBar)
+
+		console.log(graphBar[i])
+
+		var graphItem = graphBar[i];
+
+		var percentage = graphBar[i].dataset.percentage
+
+		//console.log(graphItem)
+
+		var pos = 0;
+
+		var id = setInterval(frame, 50);
+
+		function frame() {
+
+			if (pos == this.percentage) {
+
+				clearInterval(id);
+
+			} else {
+				/* code to change the element style *//*
+				pos++;
+				graphItem.style.width =  pos + '%';
+
+			}
+		}
+	}
+
+	*/
+
+
