@@ -304,6 +304,33 @@ function raythompsonwebdev_com_register_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
 
+/**
+ * Load the html5.
+ *  */
+
+$conditional_scripts = array(
+
+	'html5shiv'   => get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js',
+	'respond'     => get_template_directory_uri() . '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+  'selectivizr' => get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js',
+
+);
+foreach ( $conditional_scripts as $handle => $src ) {
+	wp_enqueue_script( $handle, $src, array(), '1.0', false );
+}
+add_filter(
+	'script_loader_tag',
+	function( $tag, $handle ) use ( $conditional_scripts ) {
+
+		if ( array_key_exists( $handle, $conditional_scripts ) ) {
+			$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
+		}
+		return $tag;
+	},
+	10,
+	2
+);
+
 
 /**
  * Enqueue IE8 style sheets.
@@ -318,18 +345,17 @@ function ie_style_sheets() {
 }
 add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
-
 /**
  *  Enqueue other scripts.
  */
 function raythompsonwebdev_com_scripts_own() {
 
 	// master.
-	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/minified/master.min.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array( 'jquery' ), '1.0', true );
 
-	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/minified/navigation.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/minified/skip-link-focus-fix.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -337,31 +363,6 @@ function raythompsonwebdev_com_scripts_own() {
 
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
-
-/**
- * Load the html5.
- *  */
-
-$conditional_scripts = array(
-	'html5shiv'   => get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js',
-	'respond'     => get_template_directory_uri() . '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
-	'selectivizr' => get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js',
-);
-foreach ( $conditional_scripts as $handle => $src ) {
-	wp_enqueue_script( $handle, $src, array(), '1.0', false );
-}
-add_filter(
-	'script_loader_tag',
-	function( $tag, $handle ) use ( $conditional_scripts ) {
-
-		if ( array_key_exists( $handle, $conditional_scripts ) ) {
-			$tag = '<!--[if (lt IE 9) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
-		}
-		return $tag;
-	},
-	10,
-	2
-);
 
 
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
@@ -386,7 +387,7 @@ function raythompsonwebdev_com_projects_script() {
 
 	if ( 'project' === get_post_type() || is_page( 'projects' ) ) {
 		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
-		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/minified/websites.min.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/websites.js', array( 'jquery' ), '20161110', true );
 
 	}
 }
@@ -404,11 +405,10 @@ function raythompsonwebdev_com_about_page_scripts() {
 		// easing script.
 		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), '20161110', true );
 		// profile page scripts.
-		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/minified/profile.min.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), '20161110', true );
 
 	}
 }
-
 
 if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 
@@ -580,89 +580,6 @@ function raythompsonwebdev_com_content_image_sizes_attr( $sizes, $size ) {
 	return $sizes;
 }
 add_filter( 'wp_calculate_image_sizes', 'raythompsonwebdev_com_content_image_sizes_attr', 10, 2 );
-
-/**
- * Description Attachment page script.
- *
- * @since 1.0
- */
-if ( ! function_exists( 'raythompsonwebdev_com_attachment_nav' ) ) :
-	/**
-	 * Desription Display navigation to next/previous image in attachment pages.
-	 *
-	 * @since 1.0.
-	 */
-	function raythompsonwebdev_com_attachment_nav() {
-		?>
-	<nav class="navigation post-navigation" role="navigation">
-		<div class="post-nav-box clear">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Attachment post navigation', 'raythompsonwebdev-com' ); ?></h2>
-			<div class="nav-links">
-				<div class="nav-previous">
-					<?php previous_image_link( false, '<span class="post-title">Previous image</span>' ); ?>
-				</div>
-				<div class="nav-next">
-					<?php next_image_link( false, '<span class="post-title">Next image</span>' ); ?>
-				</div>
-			</div><!-- .nav-links -->
-		</div>
-	</nav>
-		<?php
-	}
-endif;
-
-if ( ! function_exists( 'raythompsonwebdev_com_attached_image' ) ) :
-	/**
-	 * Description Print the attached image with a link to the next attached image.
-	 * Summary Appropriated from Twenty Fourteen 1.0.
-	 */
-	function raythompsonwebdev_com_attached_image() {
-		$post = get_post();
-
-		// Filter the default attachment size.
-		$attachment_size     = apply_filters( 'raythompsonwebdev_com_attachment_size', array( 810, 810 ) );
-		$next_attachment_url = wp_get_attachment_url();
-
-		// Grab the IDs of all the image attachments in a gallery so we can get the URL of the next adjacent image in a gallery, or the first image (if we're looking at the last image in a gallery), or, in a gallery of one, just the link to that image file.
-		$args = array(
-			'post_parent'    => $post->post_parent,
-			'fields'         => 'ids',
-			'numberposts'    => 1,
-			'post_status'    => 'inherit',
-			'post_type'      => 'attachment',
-			'post_mime_type' => 'image',
-			'order'          => 'ASC',
-			'orderby'        => 'menu_order ID',
-
-		);
-
-		$attachment_ids = new WP_Query( $args );
-
-		// If there is more than 1 attachment in a gallery...
-		if ( count( $attachment_ids, 0 ) > 1 ) {
-			foreach ( $attachment_ids as $attachment_id ) {
-				if ( $attachment_id === $post->ID ) {
-					$next_id = current( $attachment_ids );
-					break;
-				}
-			}
-			// get the URL of the next image attachment...
-			if ( $next_id ) {
-				$next_attachment_url = get_attachment_link( $next_id );
-			} // or get the URL of the first image attachment.
-			else {
-				$next_attachment_url = get_attachment_link( array_shift( $attachment_ids ) );
-			}
-		}
-		printf(
-			'<a href="%1$s" rel="attachment">%2$s</a>',
-			esc_url( $next_attachment_url ),
-			wp_get_attachment_image( $post->ID, $attachment_size )
-		);
-	}
-endif;
-
-
 
 
 /**
