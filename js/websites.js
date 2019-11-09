@@ -1,6 +1,6 @@
 //Menu Switch
 
-jQuery(document).ready(function($) {
+jQuery(document).ready(function(){
   $(function() {
     /* filter */
     $(".menuSwitch ul li").click(function() {
