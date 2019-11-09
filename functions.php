@@ -130,9 +130,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 
 		add_theme_support( 'post-thumbnails' );
 		// Create new image sizes.
-		add_image_size( 'featured-image', 783, 9999 );
-		add_image_size( 'websites', 550, 9999 );
-		add_image_size( 'post-thumbnail', 284, 9999 );
+		add_image_size( 'x-large', 800, 9999 );
+		add_image_size( 'featured-image', 800, 9999 );
+		add_image_size( 'large', 600, 9999 );
+		add_image_size( 'post-thumbnail', 150, 9999 );
+		add_image_size( 'medium', 500, 9999 );
+		add_image_size( 'small', 250, 9999 );
+		
+
 
 		// Link pages.
 		$defaults = array(
@@ -398,7 +403,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about' ) ) {
+	if ( is_page( 'about-page' ) ) {
 		// scrollto script.
 		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
 		// easing script.

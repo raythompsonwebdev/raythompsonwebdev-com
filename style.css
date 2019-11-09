@@ -12,7 +12,6 @@ Text Domain: raythompsonwebdev-com
 Domain Path: /language
 
 raythompsonwebdev-com WordPress Theme, Copyright 2016 WordPress.org
-
 raythompsonwebdev-com is based on Underscores http://underscores.me/,
 (C) 2012-2017 Automattic, Inc.
 License: GNU General Public License v2 or later
@@ -29,7 +28,10 @@ License: GNU General Public License v2 or later
   font-size: 1em;
   margin: 0;
   padding: 0;
-  outline: none; }
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 * html .clearfix {
   height: 1%; }
@@ -101,6 +103,21 @@ a {
   a img {
     border: 0;
     outline: none; }
+  a:link {
+    background-color: #CCD3DE;
+    color: #062351; }
+  a:visited {
+    background-color: #c0c9dd;
+    color: #062351; }
+  a:focus {
+    outline: 1px dotted #CCD3DE; }
+  a:hover {
+    background-color: #062351;
+    font-weight: bold;
+    color: #fff; }
+  a:active {
+    background-color: #062351;
+    color: #fff; }
 
 img.centered {
   display: block;
@@ -269,6 +286,9 @@ blockquote::before {
   font-family: "icons";
   content: "\e906";
   color: #ededed; }
+
+a:focus {
+  outline: 1px dotted #062351; }
 
 /*
 desktop 1920px*/
@@ -477,7 +497,7 @@ desktop 1920px*/
           -ms-flex: 0 1 auto;
           flex: 0 1 auto; }
           header nav.menu-main-container ul#menu-main li.menu-item a {
-            background-color: #CCD3DE;
+            background-color: #c0c9dd;
             font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
             width: 100%;
             height: 100%;
@@ -503,18 +523,16 @@ desktop 1920px*/
             -ms-transition: all 0.2s ease-in 0s;
             transition: all 0.2s ease-in 0s; }
             header nav.menu-main-container ul#menu-main li.menu-item a:link {
-              background-color: #CCD3DE;
               color: #062351; }
             header nav.menu-main-container ul#menu-main li.menu-item a:visited {
-              background-color: #c0c9dd;
-              color: #062351; }
-            header nav.menu-main-container ul#menu-main li.menu-item a:focus {
-              background-color: #CCD3DE; }
-            header nav.menu-main-container ul#menu-main li.menu-item a:hover {
               background-color: #062351;
-              font-weight: bold;
               color: #fff; }
+            header nav.menu-main-container ul#menu-main li.menu-item a:focus {
+              outline: 1px dotted #062351; }
             header nav.menu-main-container ul#menu-main li.menu-item a:active {
+              color: #c0c9dd;
+              background-color: #062351; }
+            header nav.menu-main-container ul#menu-main li.menu-item a:hover {
               background-color: #062351;
               color: #fff; }
     header nav#mobile-nav {
@@ -667,7 +685,7 @@ desktop 1920px*/
           color: #062351; }
           #main-content article.main-text ul li::before,
           #main-content div.main-text ul li::before {
-            font-family: 'FontAwesome';
+            font-family: "FontAwesome";
             content: "\f15b";
             font-style: normal;
             display: inline-block;
@@ -802,7 +820,7 @@ desktop 1920px*/
       #main-content ul.contact-details li {
         font-family: "FontAwesome", "PT Sans", verdana, helvetica, sans-serif; }
         #main-content ul.contact-details li:before {
-          font-family: 'FontAwesome';
+          font-family: "FontAwesome";
           content: "\f0e0";
           font-style: normal;
           display: block;
@@ -864,7 +882,6 @@ desktop 1920px*/
       height: auto;
       width: 100%;
       font-family: "PT Sans", verdana, helvetica, sans-serif;
-      display: block;
       margin: 0;
       clear: both;
       display: -webkit-flex;
@@ -873,14 +890,14 @@ desktop 1920px*/
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-align-content: space-between;
-      -ms-flex-content: space-between;
-      align-content: space-between; }
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: flex-start;
+      justify-content: flex-start; }
       #main-content aside#side-bar .side-bar-box {
-        -webkit-flex: 1 0 32.1%;
-        -ms-flex: 1 0 32.1%;
-        flex: 1 0 32.1%;
-        display: block;
+        width: 32.1%;
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
         height: auto;
         margin: 0.4em;
         float: left; }
@@ -910,21 +927,21 @@ desktop 1920px*/
             line-height: 40px;
             letter-spacing: 0.1em; }
           #main-content aside#side-bar .side-bar-box section.widget ul,
-          #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments {
+          #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments {
             width: 100%;
             height: auto;
             display: block;
             margin: 0; }
             #main-content aside#side-bar .side-bar-box section.widget ul li,
-            #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li {
+            #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li {
               list-style: none;
               line-height: 30px;
-              background-color: #c0c9dd;
+              color: #062351;
               width: 96%;
-              margin: 2% auto;
+              margin: 0.5em auto;
               text-align: center; }
               #main-content aside#side-bar .side-bar-box section.widget ul li a,
-              #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li a {
+              #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li a {
                 width: 100%;
                 display: block;
                 font-weight: 400;
@@ -942,19 +959,21 @@ desktop 1920px*/
                 -ms-transition: all 0.2s ease-in 0s;
                 transition: all 0.2s ease-in 0s; }
                 #main-content aside#side-bar .side-bar-box section.widget ul li a:hover,
-                #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li a:hover {
-                  font-weight: bold; }
+                #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li a:hover {
+                  font-weight: bold;
+                  color: #062351; }
             #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments,
-            #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li.recentcomments {
+            #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments {
               display: block;
-              color: #fff;
+              color: #062351;
               background-color: #c0c9dd;
-              font-size: 0.9em; }
+              font-size: 0.9em;
+              margin: 0.5em auto; }
               #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments span.comment-author-link,
-              #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li.recentcomments span.comment-author-link {
+              #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments span.comment-author-link {
                 font-size: 1em; }
                 #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments span.comment-author-link a,
-                #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li.recentcomments span.comment-author-link a {
+                #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments span.comment-author-link a {
                   display: block;
                   color: #fff; }
           #main-content aside#side-bar .side-bar-box section.widget div.tagcloud {
@@ -1007,10 +1026,12 @@ desktop 1920px*/
         color: #062351; }
         #main-content .post h1 a,
         #main-content .post h1.page-title a {
-          color: #062351; }
+          color: #062351;
+          background-color: unset; }
           #main-content .post h1 a:hover,
           #main-content .post h1.page-title a:hover {
-            font-weight: normal; }
+            font-weight: bold;
+            color: #575A5E; }
       #main-content .post h2,
       #main-content .post h2.entry-title {
         text-indent: 0;
@@ -1028,10 +1049,12 @@ desktop 1920px*/
           text-align: center;
           width: 100%;
           height: 100%;
-          display: block; }
+          display: block;
+          background-color: unset; }
           #main-content .post h2 a:hover,
           #main-content .post h2.entry-title a:hover {
-            font-weight: normal; }
+            font-weight: italic;
+            color: #575A5E; }
       #main-content .post h3 {
         margin: 0 auto;
         height: auto;
@@ -1163,10 +1186,12 @@ desktop 1920px*/
           -o-transition: all 0.2s ease-in 0s;
           -ms-transition: all 0.2s ease-in 0s;
           transition: all 0.2s ease-in 0s;
-          line-height: 40px; }
+          line-height: 40px;
+          background-color: unset; }
           #main-content .post .website-text a.webformats:hover {
-            color: #062351;
-            text-decoration: underline; }
+            color: #575A5E;
+            text-decoration: underline;
+            font-weight: normal; }
         #main-content .post .website-text .links {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
@@ -1242,7 +1267,7 @@ desktop 1920px*/
         color: blue;
         margin: 10px;
         padding: 10px;
-        background: #FFFFB3;
+        background: #ffffb3;
         direction: ltr;
         text-align: left; }
       #main-content .post .code {
@@ -1341,6 +1366,7 @@ desktop 1920px*/
               #main-content .post header.byline .index-entry-meta .meta-content .date a,
               #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
                 color: #062351;
+                background-color: unset;
                 margin: 0 auto;
                 width: auto;
                 display: inline-block;
@@ -1412,17 +1438,12 @@ desktop 1920px*/
           display: block;
           height: 100%;
           width: 100%;
-          color: #fff; }
+          color: #062351;
+          background-color: #c0c9dd; }
           #main-content .post div.continue-reading a:hover {
-            color: #062351;
-            font-weight: bold;
-            margin: 2% 0;
-            letter-spacing: 0.075em;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -o-border-radius: 10px;
-            -ms-border-radius: 10px;
-            border-radius: 10px; }
+            color: #fff;
+            background-color: #062351;
+            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text {
             color: #062351; }
             #main-content .post div.continue-reading a span.screen-reader-text:hover {
@@ -1573,7 +1594,8 @@ desktop 1920px*/
             margin: auto;
             width: auto;
             display: inline-block;
-            padding: 0 0.25em; }
+            padding: 0 0.25em;
+            background-color: unset; }
             #main-content .post footer.byline .cat-links a:hover,
             #main-content .post footer.byline .tags-links a:hover,
             #main-content .post footer.byline .edit-link a:hover,
@@ -1614,7 +1636,7 @@ desktop 1920px*/
           height: auto;
           line-height: 20px; }
           #main-content .gallery footer.byline .bylinecat a {
-            font-size: 0.90em;
+            font-size: 0.9em;
             color: #062351;
             margin: 0;
             width: auto;
@@ -1737,7 +1759,7 @@ desktop 1920px*/
               font-weight: bold; }
             #main-content nav.navigation .nav-links div.nav-previous a:after,
             #main-content nav.navigation .nav-links div.nav-next a:after {
-              font-family: 'FontAwesome';
+              font-family: "FontAwesome";
               content: "\f187";
               font-size: 1.6em;
               line-height: 40px;
@@ -1840,11 +1862,15 @@ desktop 1920px*/
               #main-content section.contact-wide ol.commentlist li .comment-body .comment-author b.fn,
               #main-content section.contact-wide ol.commentlist li .comment-body .comment-author cite.fn {
                 display: inline-block;
+                height: auto;
                 width: auto;
                 padding: 0;
                 text-align: left;
-                height: 100%;
+                line-height: 1.5;
                 color: #fff; }
+                #main-content section.contact-wide ol.commentlist li .comment-body .comment-author b.fn a,
+                #main-content section.contact-wide ol.commentlist li .comment-body .comment-author cite.fn a {
+                  background-color: unset; }
               #main-content section.contact-wide ol.commentlist li .comment-body .comment-author span.says {
                 display: inline-block;
                 width: auto;
@@ -1860,8 +1886,9 @@ desktop 1920px*/
               background-color: #575A5E;
               font-size: 0.8em; }
               #main-content section.contact-wide ol.commentlist li .comment-body .comment-metadata a {
-                color: #fff; }
-            #main-content section.contact-wide ol.commentlist li .comment-body p {
+                color: #fff;
+                background-color: unset; }
+            #main-content section.contact-wide ol.commentlist li .comment-body .comment-content p {
               width: 100%;
               font-size: 0.9em;
               line-height: 1.5em;
@@ -1869,6 +1896,11 @@ desktop 1920px*/
               min-height: 100px;
               padding: 0.5em;
               background-color: #fff; }
+              #main-content section.contact-wide ol.commentlist li .comment-body .comment-content p a {
+                background-color: unset; }
+                #main-content section.contact-wide ol.commentlist li .comment-body .comment-content p a:hover {
+                  color: #062351;
+                  font-weight: bold; }
             #main-content section.contact-wide ol.commentlist li .comment-body ul.children {
               width: 100%;
               margin-left: 0; }
@@ -2056,9 +2088,11 @@ desktop 1920px*/
         text-align: center; }
         #main-content section.contact-wide p.must-log-in a {
           display: inline-block;
-          line-height: 25px; }
+          line-height: 25px;
+          background-color: unset; }
           #main-content section.contact-wide p.must-log-in a:hover {
-            font-weight: bold; }
+            font-weight: bold;
+            color: #062351; }
       #main-content section.contact-wide p.nocomments {
         display: block;
         margin: 0 auto;
@@ -2071,110 +2105,112 @@ desktop 1920px*/
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-      flex-flow: row;
-      -webkit-align-content: center;
-      -ms-flex-content: center;
-      align-content: center;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       margin: 0 0 1em 0;
       padding: 0;
+      background-image: url("../raythompsonwebdev-com/raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1.0.1.png");
+      background-repeat: no-repeat;
+      background-size: 100% auto;
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
-        width: 52%;
-        display: inline-block;
+      #main-content #frontpage_container div#text-box-front {
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        width: 100%;
         padding: 0.5em;
         margin: 0;
         height: auto;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1.1em; }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.9em;
           font-weight: normal;
-          font-size: 1em;
+          font-size: 0.9em;
           letter-spacing: 0.025em;
           margin-bottom: 0.25em;
           padding: 0.25em;
           background-color: #fff; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction {
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
+          height: auto;
+          margin: 0;
+          padding: 0;
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
-          -webkit-align-content: flex-start;
-          -ms-flex-content: start;
-          align-content: flex-start;
-          width: 100%;
-          background-color: #CCD3DE;
-          height: auto;
-          margin: 0;
-          padding: 1em 0em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
+          -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -webkit-align-items: flex-start;
+          -ms-flex-align: flex-start;
+          align-items: flex-start; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            -webkit-flex: 1 0 auto;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
             -webkit-align-self: center;
             -ms-flex-item-align: center;
             align-self: center;
             line-height: 60px;
             text-align: left;
             text-indent: 0.2em;
-            font-family: "FontAwesome", "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox {
+            font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
+            margin: 0 0 0.5em 0;
+            width: 100%; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
             -webkit-flex: 1 0 auto;
             -ms-flex: 1 0 auto;
             flex: 1 0 auto;
-            width: 23.5%;
+            width: 24%;
             display: inline-block;
-            background-color: #bac7db;
+            background-color: #fff;
             height: auto;
-            margin: 0.2em;
-            padding: 0;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -o-border-radius: 10px;
-            -ms-border-radius: 10px;
-            border-radius: 10px; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-              line-height: 35px;
-              font-size: 0.9em;
+            margin: 0.1em;
+            padding: 0 0 0.5em 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto;
+              width: 100%; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                line-height: 80px;
+                height: 80px;
+                display: block;
+                color: #062351;
+                text-align: center;
+                width: 100%;
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              line-height: 40px;
+              margin: 0;
+              font-size: 1em;
               height: auto;
               text-align: center;
               color: #fff;
               background-color: #062351;
-              -webkit-border-radius: 10px 10px 0 0;
-              -moz-border-radius: 10px 10px 0 0;
-              -o-border-radius: 10px 10px 0 0;
-              -ms-border-radius: 10px 10px 0 0;
-              border-radius: 10px 10px 0 0; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-              width: 90%;
-              margin: 0 auto;
-              font-family: "PT Sans", verdana, helvetica, sans-serif;
-              padding: 0.2em; }
-              #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-                display: block;
-                width: 100%;
-                line-height: 40px;
-                color: #062351;
-                font-size: 0.8em;
-                height: auto;
-                text-align: center;
-                background-color: #CCD3DE;
-                margin-bottom: 0.2em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills {
+              font-weight: bold; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              display: block;
+              width: 96%;
+              line-height: 25px;
+              color: #062351;
+              font-size: 0.9em;
+              margin: auto;
+              text-align: center; }
+        #main-content #frontpage_container div#text-box-front ul.webskills {
           list-style: none;
           font-family: "PT Sans", verdana, helvetica, sans-serif;
           margin: 0;
           padding: 3% 0;
           width: 100%;
           display: inline-block; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li {
+          #main-content #frontpage_container div#text-box-front ul.webskills li {
             margin: 0;
             color: #062351;
             font-style: italic;
@@ -2184,17 +2220,17 @@ desktop 1920px*/
             width: 100%;
             float: none;
             max-height: 35px; }
-            #main-content #frontpage_container div#textboxfront ul.webskills li a {
+            #main-content #frontpage_container div#text-box-front ul.webskills li a {
               width: 100%; }
-              #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+              #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
                 width: 100%;
                 color: #fff; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+          #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
             font-size: 0.9em;
             line-height: 35px;
             max-height: 35px; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
-            font-family: 'FontAwesome';
+          #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
+            font-family: "FontAwesome";
             content: "\f108";
             font-style: normal;
             display: inline-block;
@@ -2202,24 +2238,24 @@ desktop 1920px*/
             width: 45px;
             text-align: center;
             font-size: 1.5em; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+          #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
             font-size: 0.9em;
             line-height: 35px;
             max-height: 35px; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
-            font-family: 'FontAwesome';
+          #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
+            font-family: "FontAwesome";
             content: "\f19a";
             display: inline-block;
             height: 35px;
             width: 45px;
             text-align: center;
             font-size: 1.5em; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+          #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
             font-size: 0.9em;
             line-height: 35px;
             max-height: 35px; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
-            font-family: 'FontAwesome';
+          #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
+            font-family: "FontAwesome";
             content: "\f05a";
             font-style: normal;
             display: inline-block;
@@ -2228,26 +2264,51 @@ desktop 1920px*/
             text-align: center;
             font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        -webkit-flex: 0 1 auto;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        -webkit-order: 1;
-        -ms-flex-order: 1;
-        order: 1;
-        width: 48%;
-        height: auto;
-        display: inline-block;
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        width: 96%;
+        height: 250px;
         font-family: "PT Sans", verdana, helvetica, sans-serif;
-        padding: 2em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        padding-top: 3%;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 4em;
+          color: #fff;
+          margin: 0;
+          padding: 0;
+          line-height: 60px;
+          display: block;
+          text-align: left; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 2em;
+          color: #fff;
+          margin: 0 0 1em 0;
+          padding: 0;
+          text-align: left; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          line-height: 60px;
+          display: block;
+          height: auto;
+          border: 5px solid white;
+          width: 300px;
+          float: right;
+          text-align: center;
+          font-size: 1.2em;
+          background-color: #062351;
+          color: #fff; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff;
+            color: #062351; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 img#image-5 {
-            width: 100%;
-            display: none; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       margin: 0 0 1em 0;
       padding: 0;
@@ -2286,6 +2347,13 @@ desktop 1920px*/
           margin-bottom: 0.25em;
           background-color: #fff;
           padding: 0.5em; }
+          #main-content div#profile_container #text-box-profile p strong {
+            display: inline-block; }
+            #main-content div#profile_container #text-box-profile p strong a {
+              background-color: unset;
+              font-weight: bold; }
+              #main-content div#profile_container #text-box-profile p strong a:hover {
+                color: #575A5E; }
         #main-content div#profile_container #text-box-profile .introimg {
           width: 10%;
           float: left;
@@ -2314,6 +2382,13 @@ desktop 1920px*/
           margin-bottom: 0.25em;
           padding: 0.5em;
           background-color: #fff; }
+          #main-content div#profile_container #text-box-profile-a p strong {
+            display: inline-block; }
+            #main-content div#profile_container #text-box-profile-a p strong a {
+              background-color: unset;
+              font-weight: bold; }
+              #main-content div#profile_container #text-box-profile-a p strong a:hover {
+                color: #575A5E; }
       #main-content div#profile_container section#prof_cont-a {
         -webkit-order: 3;
         -ms-flex-order: 3;
@@ -3051,12 +3126,12 @@ desktop 1440px*/
                 display: block; }
               #main-content #contactform div.wpcf7 form p label textarea {
                 width: 100%; }
-              #main-content #contactform div.wpcf7 form p label input[type=text],
-              #main-content #contactform div.wpcf7 form p label input[type=email],
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
               #main-content #contactform div.wpcf7 form p label select {
                 height: 35px; }
-              #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-              #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
               #main-content #contactform div.wpcf7 form p label select:focus,
               #main-content #contactform div.wpcf7 form p label textarea:focus {
                 box-shadow: 0 0 5px #ccd3de; }
@@ -3119,7 +3194,8 @@ desktop 1440px*/
           line-height: 30px; }
           #main-content aside#side-bar .side-bar-box section.widget ul li a:hover,
           #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li a:hover {
-            font-weight: bold; }
+            font-weight: bold;
+            color: #062351; }
         #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments,
         #main-content aside#side-bar .side-bar-box section.widget ul.recentcomments li.recentcomments {
           display: block;
@@ -3488,7 +3564,7 @@ desktop 1440px*/
         width: 82%;
         padding: 1.8% 0; }
         #main-content section.contact-wide #respond .comment-form p.comment-notes {
-          font-size: 0.90em;
+          font-size: 0.9em;
           width: 95%; }
         #main-content section.contact-wide #respond .comment-form textarea#comment {
           border: 1px solid #ddd; }
@@ -3528,55 +3604,62 @@ desktop 1440px*/
       #main-content section.contact-wide p.nocomments {
         font-size: 0.9em; }
     #main-content #frontpage_container {
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1280.png");
       /*homepage container*/
+      /*front-page image container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
-        width: 48%;
+      #main-content #frontpage_container div#text-box-front {
+        width: 100%;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1.05em; }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.9em;
-          font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction {
+          font-size: 0.85em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
             text-indent: 0.2em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+            height: auto; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+              font-size: 4em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+            margin: 0; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
             font-size: 0.85em; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-              font-size: 1em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-            font-size: 0.75em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 51%;
-        padding: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        height: 250px;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 3.2em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.8em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       margin: 0 0 1em 0;
       padding: 0;
@@ -3792,7 +3875,7 @@ desktop 1440px*/
     footer ul li {
       font-size: 1em; }
       footer ul li a {
-        font-size: 0.80em; } }
+        font-size: 0.8em; } }
 
 /*
 desktop 1280px*/
@@ -3947,12 +4030,12 @@ desktop 1280px*/
                   display: block; }
                 #main-content hr #contactform div.wpcf7 form p label textarea {
                   width: 100%; }
-                #main-content hr #contactform div.wpcf7 form p label input[type=text],
-                #main-content hr #contactform div.wpcf7 form p label input[type=email],
+                #main-content hr #contactform div.wpcf7 form p label input[type="text"],
+                #main-content hr #contactform div.wpcf7 form p label input[type="email"],
                 #main-content hr #contactform div.wpcf7 form p label select {
                   height: 35px; }
-                #main-content hr #contactform div.wpcf7 form p label input[type=text]:focus,
-                #main-content hr #contactform div.wpcf7 form p label input[type=email]:focus,
+                #main-content hr #contactform div.wpcf7 form p label input[type="text"]:focus,
+                #main-content hr #contactform div.wpcf7 form p label input[type="email"]:focus,
                 #main-content hr #contactform div.wpcf7 form p label select:focus,
                 #main-content hr #contactform div.wpcf7 form p label textarea:focus {
                   box-shadow: 0 0 5px #ccd3de; }
@@ -4443,63 +4526,62 @@ desktop 1280px*/
         #main-content hr section.contact-wide p.nocomments {
           font-size: 0.85em; }
       #main-content hr #frontpage_container {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: row;
-        -ms-flex-flow: row;
-        flex-flow: row;
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center;
+        background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1024.png");
         /*homepage container*/
+        /*front-page image container*/
         /*front-page image container*/ }
-        #main-content hr #frontpage_container div#textboxfront {
-          width: 54%;
+        #main-content hr #frontpage_container div#text-box-front {
+          width: 100%;
           /*skills table*/
           /*skills list - not using*/ }
-          #main-content hr #frontpage_container div#textboxfront h1 {
-            font-size: 1em; }
-          #main-content hr #frontpage_container div#textboxfront p {
+          #main-content hr #frontpage_container div#text-box-front p {
             line-height: 1.9em;
-            font-size: 0.85em; }
-          #main-content hr #frontpage_container div#textboxfront section#calltoaction {
+            font-size: 0.8em; }
+          #main-content hr #frontpage_container div#text-box-front section#calltoaction {
             width: 100%; }
-            #main-content hr #frontpage_container div#textboxfront section#calltoaction h1#front-title {
+            #main-content hr #frontpage_container div#text-box-front section#calltoaction h1#front-title {
               text-indent: 0.2em; }
-            #main-content hr #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-              line-height: 30px;
-              font-size: 0.75em; }
-              #main-content hr #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-                font-size: 1em; }
-            #main-content hr #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-              margin: 0 auto; }
-              #main-content hr #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-                font-size: 0.7em; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li a {
+            #main-content hr #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content hr #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content hr #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content hr #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              font-size: 0.85em; }
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li a {
             width: 100%; }
-            #main-content hr #frontpage_container div#textboxfront ul.webskills li a:hover {
+            #main-content hr #frontpage_container div#text-box-front ul.webskills li a:hover {
               width: 100%; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
             font-size: 0.9em; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
             font-size: 1.5em; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
             font-size: 0.9em; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
             font-size: 1.5em; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
             font-size: 0.9em; }
-          #main-content hr #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+          #main-content hr #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
             font-size: 1.6em; }
         #main-content hr #frontpage_container div#svg-image-container {
-          width: 45%;
-          /*SVG*/ }
-          #main-content hr #frontpage_container div#svg-image-container figure#image-7 {
+          height: 250px;
+          /*PNG for IE8*/ }
+          #main-content hr #frontpage_container div#svg-image-container h1 {
+            font-size: 3.1em; }
+          #main-content hr #frontpage_container div#svg-image-container h2 {
+            font-size: 1.7em; }
+          #main-content hr #frontpage_container div#svg-image-container a#projectLink {
+            font-size: 1.2em; }
+            #main-content hr #frontpage_container div#svg-image-container a#projectLink:hover {
+              background-color: #fff; }
+          #main-content hr #frontpage_container div#svg-image-container figure#image-6 {
             margin: 0;
             padding: 0; }
-            #main-content hr #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-              width: 100%; }
+            #main-content hr #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+              display: none;
+              opacity: 0; }
       #main-content hr div#profile_container {
         padding: 0;
         /*first text block*/
@@ -4756,12 +4838,12 @@ desktop 1280px*/
                 display: block; }
               #main-content #contactform div.wpcf7 form p label textarea {
                 width: 100%; }
-              #main-content #contactform div.wpcf7 form p label input[type=text],
-              #main-content #contactform div.wpcf7 form p label input[type=email],
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
               #main-content #contactform div.wpcf7 form p label select {
                 height: 35px; }
-              #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-              #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
               #main-content #contactform div.wpcf7 form p label select:focus,
               #main-content #contactform div.wpcf7 form p label textarea:focus {
                 box-shadow: 0 0 5px #ccd3de; }
@@ -5193,7 +5275,7 @@ desktop 1280px*/
         width: 82%;
         padding: 1.8% 0; }
         #main-content section.contact-wide #respond .comment-form p.comment-notes {
-          font-size: 0.90em;
+          font-size: 0.9em;
           width: 95%; }
         #main-content section.contact-wide #respond .comment-form textarea#comment {
           border: 1px solid #ddd; }
@@ -5233,55 +5315,62 @@ desktop 1280px*/
       #main-content section.contact-wide p.nocomments {
         font-size: 0.9em; }
     #main-content #frontpage_container {
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.png");
       /*homepage container*/
+      /*front-page image container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
-        width: 48%;
+      #main-content #frontpage_container div#text-box-front {
+        width: 100%;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1.05em; }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.9em;
-          font-size: 0.85em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction {
+          font-size: 0.8em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
             text-indent: 0.2em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-            font-size: 0.75em; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-              font-size: 1em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-            font-size: 0.75em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+            height: auto; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+              font-size: 4em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+            margin: 0; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+            font-size: 0.85em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 51%;
-        padding: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        height: 250px;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 3em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.6em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       margin: 0 0 1em 0;
       padding: 0;
@@ -5493,7 +5582,7 @@ desktop 1280px*/
       footer .socialpics .google-icon span .fa-github {
         font-size: 1.7em; }
     footer ul li a {
-      font-size: 0.80em; } }
+      font-size: 0.8em; } }
 
 /*
 desktop 1024px*/
@@ -5602,12 +5691,12 @@ desktop 1024px*/
                 display: block; }
               #main-content #contactform div.wpcf7 form p label textarea {
                 width: 100%; }
-              #main-content #contactform div.wpcf7 form p label input[type=text],
-              #main-content #contactform div.wpcf7 form p label input[type=email],
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
               #main-content #contactform div.wpcf7 form p label select {
                 height: 35px; }
-              #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-              #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
               #main-content #contactform div.wpcf7 form p label select:focus,
               #main-content #contactform div.wpcf7 form p label textarea:focus {
                 box-shadow: 0 0 5px #ccd3de; }
@@ -6019,54 +6108,62 @@ desktop 1024px*/
       #main-content section.contact-wide .reply a:hover {
         width: 20%; }
     #main-content #frontpage_container {
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.png");
       /*homepage container*/
+      /*front-page image container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
-        width: 54%;
+      #main-content #frontpage_container div#text-box-front {
+        width: 100%;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.9em;
-          font-size: 0.85em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction {
-          padding: 1em 0.5em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
-            text-indent: 0.2em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-            font-size: 0.75em; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-              font-size: 1em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-            margin: 0 auto; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-              font-size: 0.75em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+          font-size: 0.8em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            text-indent: 0.2em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+            height: auto; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+              font-size: 4em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+            margin: 0; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+            font-size: 0.85em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
+          width: 100%; }
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 46%;
-        padding: 0.5em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        height: 250px;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 3em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.6em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       padding: 0;
       /*first text block*/
@@ -6173,7 +6270,7 @@ desktop 1024px*/
           padding-left: 0;
           height: auto; }
           #main-content div#photocontainer div.content nav.menuSwitch ul li {
-            font-size: 0.80em;
+            font-size: 0.8em;
             width: 16%; }
           #main-content div#photocontainer div.content nav.menuSwitch ul li:hover {
             font-weight: bold; }
@@ -6393,12 +6490,12 @@ desktop 980px*/
               display: block; }
             #main-content #contactform div.wpcf7 form p label textarea {
               width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type=text],
-            #main-content #contactform div.wpcf7 form p label input[type=email],
+            #main-content #contactform div.wpcf7 form p label input[type="text"],
+            #main-content #contactform div.wpcf7 form p label input[type="email"],
             #main-content #contactform div.wpcf7 form p label select {
               height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
             #main-content #contactform div.wpcf7 form p label select:focus,
             #main-content #contactform div.wpcf7 form p label textarea:focus {
               box-shadow: 0 0 5px #ccd3de; }
@@ -6816,7 +6913,7 @@ desktop 980px*/
       #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"]:hover {
         width: 25%; }
     #main-content section.contact-wide #respond .comment-form p.comment-notes {
-      font-size: 0.80em; }
+      font-size: 0.8em; }
     #main-content section.contact-wide .navigation {
       width: 96%; }
       #main-content section.contact-wide .navigation h1 {
@@ -7238,12 +7335,12 @@ tablet 800px */
                 display: block; }
               #main-content #contactform div.wpcf7 form p label textarea {
                 width: 100%; }
-              #main-content #contactform div.wpcf7 form p label input[type=text],
-              #main-content #contactform div.wpcf7 form p label input[type=email],
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
               #main-content #contactform div.wpcf7 form p label select {
                 height: 35px; }
-              #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-              #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
               #main-content #contactform div.wpcf7 form p label select:focus,
               #main-content #contactform div.wpcf7 form p label textarea:focus {
                 box-shadow: 0 0 5px #ccd3de; }
@@ -7294,7 +7391,7 @@ tablet 800px */
           #main-content ul.contact-details li:nth-of-type(5) a:hover {
             font-weight: bold; }
     #main-content blockquote {
-      font-size: 0.80em; }
+      font-size: 0.8em; }
     #main-content aside#side-bar {
       float: none;
       width: 100%;
@@ -7665,54 +7762,74 @@ tablet 800px */
     #main-content section.contact-wide #respond .comment-form p.comment-notes {
       font-size: 0.85em; }
     #main-content #frontpage_container {
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.png");
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
+      #main-content #frontpage_container div#text-box-front {
         width: 100%;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.9em;
-          font-size: 0.85em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction {
+          font-size: 0.8em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
             text-indent: 0.2em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-            font-size: 0.9em; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-              font-size: 1em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-            margin: 0 auto; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-              font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
+            width: 80%;
+            margin: 1em auto;
+            display: block; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              font-size: 0.85em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 65%;
-        margin: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        width: 96%;
+        margin: 0;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 2.8em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.5em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.1em;
+          width: 250px;
+          border: 2.5px solid white; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       -webkit-flex-flow: column;
       -ms-flex-flow: column;
@@ -8090,12 +8207,12 @@ tablet 667px */
                 display: block; }
               #main-content #contactform div.wpcf7 form p label textarea {
                 width: 100%; }
-              #main-content #contactform div.wpcf7 form p label input[type=text],
-              #main-content #contactform div.wpcf7 form p label input[type=email],
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
               #main-content #contactform div.wpcf7 form p label select {
                 height: 35px; }
-              #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-              #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
               #main-content #contactform div.wpcf7 form p label select:focus,
               #main-content #contactform div.wpcf7 form p label textarea:focus {
                 box-shadow: 0 0 5px #ccd3de; }
@@ -8468,51 +8585,66 @@ tablet 667px */
     #main-content section.contact-wide #comments {
       font-size: 0.8em; }
     #main-content #frontpage_container {
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.png");
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
+      #main-content #frontpage_container div#text-box-front {
         width: 100%;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront p {
-          line-height: 1.9em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
-          text-indent: 0.2em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-          font-size: 0.9em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-            font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-          margin: 0 auto; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-            font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+        #main-content #frontpage_container div#text-box-front p {
+          line-height: 1.9em;
+          font-size: 0.8em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            text-indent: 0.2em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
+            width: 85%; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              font-size: 0.8em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
+          width: 100%; }
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 75%;
-        margin: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        height: 240px;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 2.5em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.3em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       padding: 0;
       /*first text block*/
@@ -8781,12 +8913,12 @@ tablet 600px */
               display: block; }
             #main-content #contactform div.wpcf7 form p label textarea {
               width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type=text],
-            #main-content #contactform div.wpcf7 form p label input[type=email],
+            #main-content #contactform div.wpcf7 form p label input[type="text"],
+            #main-content #contactform div.wpcf7 form p label input[type="email"],
             #main-content #contactform div.wpcf7 form p label select {
               height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
             #main-content #contactform div.wpcf7 form p label select:focus,
             #main-content #contactform div.wpcf7 form p label textarea:focus {
               box-shadow: 0 0 5px #ccd3de; }
@@ -9326,12 +9458,12 @@ tablet 536px */
               display: block; }
             #main-content #contactform div.wpcf7 form p label textarea {
               width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type=text],
-            #main-content #contactform div.wpcf7 form p label input[type=email],
+            #main-content #contactform div.wpcf7 form p label input[type="text"],
+            #main-content #contactform div.wpcf7 form p label input[type="email"],
             #main-content #contactform div.wpcf7 form p label select {
               height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
             #main-content #contactform div.wpcf7 form p label select:focus,
             #main-content #contactform div.wpcf7 form p label textarea:focus {
               box-shadow: 0 0 5px #ccd3de; }
@@ -9699,54 +9831,66 @@ tablet 536px */
         #main-content section.contact-wide ol.commentlist .reply a:hover {
           line-height: 35px; }
     #main-content #frontpage_container {
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.png");
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
+      #main-content #frontpage_container div#text-box-front {
         width: 100%;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 0.95em; }
-        #main-content #frontpage_container div#textboxfront p {
-          line-height: 1.8em;
+        #main-content #frontpage_container div#text-box-front p {
+          line-height: 1.9em;
           font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
-          text-indent: 0.2em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox {
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-            font-size: 0.9em; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-              font-size: 1em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-            margin: 0 auto; }
-            #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            text-indent: 0.2em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
+            width: 85%; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
               font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 75%;
-        margin: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        height: 240px;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 2.5em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.3em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       padding: 0;
       /*first text block*/
@@ -10078,12 +10222,12 @@ mobile 480px */
                 display: block; }
               #main-content #contactform div.wpcf7 form p label textarea {
                 width: 100%; }
-              #main-content #contactform div.wpcf7 form p label input[type=text],
-              #main-content #contactform div.wpcf7 form p label input[type=email],
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
               #main-content #contactform div.wpcf7 form p label select {
                 height: 35px; }
-              #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-              #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
               #main-content #contactform div.wpcf7 form p label select:focus,
               #main-content #contactform div.wpcf7 form p label textarea:focus {
                 box-shadow: 0 0 5px #ccd3de; }
@@ -10216,7 +10360,7 @@ mobile 480px */
         width: 94%; }
         #main-content .post ul li {
           margin: 0.5em auto;
-          font-size: 0.80em; }
+          font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
       #main-content .post .websiteImage {
@@ -10500,7 +10644,7 @@ mobile 480px */
             #main-content section.contact-wide ol.commentlist .reply a:hover {
               line-height: 35px; }
       #main-content section.contact-wide #respond .comment-form p.comment-notes {
-        font-size: 0.80em; }
+        font-size: 0.8em; }
       #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"] {
         width: 35%;
         font-weight: normal;
@@ -10510,53 +10654,75 @@ mobile 480px */
       #main-content section.contact-wide p.must-log-in {
         font-size: 0.8em; }
     #main-content #frontpage_container {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
+      #main-content #frontpage_container div#text-box-front {
         width: 100%;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront h1 {
-          font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.8em;
-          font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
-          text-indent: 0.2em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-          font-size: 0.95em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-            font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-          margin: 0 auto; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-            font-size: 0.85em;
-            line-height: 40px; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+          font-size: 0.75em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            text-indent: 0.2em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
+            width: 85%; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              font-size: 0.8em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
+          width: 100%; }
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 75%;
-        margin: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        height: 230px;
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 2.2em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1.2em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       padding: 0;
       /*first text block*/
@@ -10865,12 +11031,12 @@ mobile 414px */
               display: block; }
             #main-content #contactform div.wpcf7 form p label textarea {
               width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type=text],
-            #main-content #contactform div.wpcf7 form p label input[type=email],
+            #main-content #contactform div.wpcf7 form p label input[type="text"],
+            #main-content #contactform div.wpcf7 form p label input[type="email"],
             #main-content #contactform div.wpcf7 form p label select {
               height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
             #main-content #contactform div.wpcf7 form p label select:focus,
             #main-content #contactform div.wpcf7 form p label textarea:focus {
               box-shadow: 0 0 5px #ccd3de; }
@@ -11254,7 +11420,7 @@ mobile 414px */
           #main-content section.contact-wide ol.commentlist .reply a:hover {
             line-height: 35px; }
       #main-content section.contact-wide #respond .comment-form p.comment-notes {
-        font-size: 0.80em; }
+        font-size: 0.8em; }
       #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"] {
         width: 40%;
         font-weight: normal;
@@ -11384,12 +11550,12 @@ mobile 360px */
               display: block; }
             #main-content #contactform div.wpcf7 form p label textarea {
               width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type=text],
-            #main-content #contactform div.wpcf7 form p label input[type=email],
+            #main-content #contactform div.wpcf7 form p label input[type="text"],
+            #main-content #contactform div.wpcf7 form p label input[type="email"],
             #main-content #contactform div.wpcf7 form p label select {
               height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
             #main-content #contactform div.wpcf7 form p label select:focus,
             #main-content #contactform div.wpcf7 form p label textarea:focus {
               box-shadow: 0 0 5px #ccd3de; }
@@ -11792,7 +11958,7 @@ mobile 360px */
       #main-content section.contact-wide #respond .comment-form p {
         font-size: 0.7em; }
       #main-content section.contact-wide #respond .comment-form p.comment-notes {
-        font-size: 0.80em; }
+        font-size: 0.8em; }
       #main-content section.contact-wide #respond .comment-form p.form-submit input[type="submit"] {
         width: 40%;
         font-weight: normal;
@@ -11804,50 +11970,68 @@ mobile 360px */
       #main-content section.contact-wide p.must-log-in {
         font-size: 0.75em; }
     #main-content #frontpage_container {
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-360.png");
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
+      #main-content #frontpage_container div#text-box-front {
         width: 100%;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.8em;
-          font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
-          text-indent: 0.2em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-          font-size: 0.95em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-            font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-          margin: 0 auto; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-            font-size: 0.85em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+          font-size: 0.75em; }
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
+          -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            text-indent: 0.2em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
+            width: 90%; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              font-size: 0.75em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
+          width: 100%; }
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 75%;
-        margin: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 2em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.2em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       padding: 0;
       /*first text block*/
@@ -12161,12 +12345,12 @@ mobile 320px */
               display: block; }
             #main-content #contactform div.wpcf7 form p label textarea {
               width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type=text],
-            #main-content #contactform div.wpcf7 form p label input[type=email],
+            #main-content #contactform div.wpcf7 form p label input[type="text"],
+            #main-content #contactform div.wpcf7 form p label input[type="email"],
             #main-content #contactform div.wpcf7 form p label select {
               height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type=text]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type=email]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
             #main-content #contactform div.wpcf7 form p label select:focus,
             #main-content #contactform div.wpcf7 form p label textarea:focus {
               box-shadow: 0 0 5px #ccd3de; }
@@ -12571,50 +12755,68 @@ mobile 320px */
       #main-content section.contact-wide #respond h3#reply-title {
         font-size: 0.8em; }
     #main-content #frontpage_container {
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-320.png");
       /*homepage container*/
       /*front-page image container*/ }
-      #main-content #frontpage_container div#textboxfront {
+      #main-content #frontpage_container div#text-box-front {
         width: 100%;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
         /*skills table*/
         /*skills list - not using*/ }
-        #main-content #frontpage_container div#textboxfront p {
+        #main-content #frontpage_container div#text-box-front p {
           line-height: 1.8em;
           font-size: 0.75em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction h1#front-title {
-          text-indent: 0.2em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1 {
-          font-size: 0.9em; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox h1::before {
-            font-size: 1em; }
-        #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul {
-          margin: 0 auto; }
-          #main-content #frontpage_container div#textboxfront section#calltoaction article.frntpgbox ul li {
-            font-size: 0.8em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li a {
+        #main-content #frontpage_container div#text-box-front section#calltoaction {
+          -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
           width: 100%; }
-          #main-content #frontpage_container div#textboxfront ul.webskills li a:hover {
+          #main-content #frontpage_container div#text-box-front section#calltoaction h1#front-title {
+            text-indent: 0.2em; }
+          #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox {
+            width: 85%; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span {
+              height: auto; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox span i {
+                font-size: 4em; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox h1 {
+              margin: 0; }
+            #main-content #frontpage_container div#text-box-front section#calltoaction article.frntpgbox p {
+              font-size: 0.7em; }
+        #main-content #frontpage_container div#text-box-front ul.webskills li a {
+          width: 100%; }
+          #main-content #frontpage_container div#text-box-front ul.webskills li a:hover {
             width: 100%; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-desktop::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-desktop::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-wordpress::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-wordpress::before {
           font-size: 1.5em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile {
           font-size: 0.9em; }
-        #main-content #frontpage_container div#textboxfront ul.webskills li#fa-mobile::before {
+        #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        width: 75%;
-        margin: 1em;
-        /*SVG*/ }
-        #main-content #frontpage_container div#svg-image-container figure#image-7 {
+        /*PNG for IE8*/ }
+        #main-content #frontpage_container div#svg-image-container h1 {
+          font-size: 1.8em; }
+        #main-content #frontpage_container div#svg-image-container h2 {
+          font-size: 1em; }
+        #main-content #frontpage_container div#svg-image-container a#projectLink {
+          font-size: 1.1em; }
+          #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
+            background-color: #fff; }
+        #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
-          #main-content #frontpage_container div#svg-image-container figure#image-7 #image-4 {
-            width: 100%; }
+          #main-content #frontpage_container div#svg-image-container figure#image-6 img#image-5 {
+            display: none;
+            opacity: 0; }
     #main-content div#profile_container {
       padding: 0;
       /*first text block*/

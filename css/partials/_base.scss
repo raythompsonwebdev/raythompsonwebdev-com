@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     outline: none;
+    @include box-sizing($type: border-box);
 }
 
 * html .clearfix {
@@ -91,7 +92,6 @@ img {
 
 a {
     text-decoration: none;
-
     margin: 0;
     padding: 0;
     color: $color1;
@@ -100,6 +100,32 @@ a {
     img {
         border: 0;
         outline: none;
+    }
+    &:link {
+        background-color: $color2;
+        color: $color1;
+    }
+
+    &:visited {
+        background-color: $color3;
+        color: $color1;
+    }
+
+    &:focus {
+        //background-color: $color2;
+        outline:1px dotted $color2;
+
+    }
+
+    &:hover {
+        background-color: $color1;
+        font-weight: bold;
+        color: $color4;
+    }
+
+    &:active {
+        background-color: $color1;
+        color: $color4
     }
 
 }
@@ -300,4 +326,10 @@ blockquote::before {
 	font-family: "icons";
 	content: "\e906";
 	color: #ededed;
+}
+
+a{
+    &:focus {
+        outline:1px dotted $color1;
+    }
 }

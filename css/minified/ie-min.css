@@ -9,7 +9,10 @@
   font-size: 1em;
   margin: 0;
   padding: 0;
-  outline: none; }
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 * html .clearfix {
   height: 1%; }
@@ -81,6 +84,21 @@ a {
   a img {
     border: 0;
     outline: none; }
+  a:link {
+    background-color: #CCD3DE;
+    color: #062351; }
+  a:visited {
+    background-color: #c0c9dd;
+    color: #062351; }
+  a:focus {
+    outline: 1px dotted #CCD3DE; }
+  a:hover {
+    background-color: #062351;
+    font-weight: bold;
+    color: #fff; }
+  a:active {
+    background-color: #062351;
+    color: #fff; }
 
 img.centered {
   display: block;
@@ -249,6 +267,9 @@ blockquote::before {
   font-family: "icons";
   content: "\e906";
   color: #ededed; }
+
+a:focus {
+  outline: 1px dotted #062351; }
 
 @media only screen and (max-width: 1920px) {
   .cookie-notice-container {

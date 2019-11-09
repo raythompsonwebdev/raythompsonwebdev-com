@@ -21,7 +21,15 @@
 <div id="frontpage_container">
 
 <div id="svg-image-container">
-	<figure id="image-7">
+
+<h1><?php _e( 'Hello, I\'m Raymond', 'raythompsonwebdev-com' ); ?></h1>
+      <h2><?php _e( 'I build beautiful web applications', 'raythompsonwebdev-com' ); ?></h2>
+      <a id="projectLink" hrref="#">See Current Projects</a>
+
+
+        <figure id="image-7"></figure>
+
+	<!--<figure id="image-7">
 		<object 
 			class="style-svg" 
 			type="image/svg+xml" 
@@ -30,11 +38,11 @@
 			data="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
 		</object>
 		<img id="image-5" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
-	</figure>
+	</figure>-->
 
 </div>
 
-	<div id="textboxfront">
+	<div id="text-box-front">
 		
 		<h1><?php _e( 'Hello', 'raythompsonwebdev-com' ); ?></h1>
 
@@ -42,54 +50,54 @@
 
 		<p><?php _e( 'Whether it\'s for a small business or a personal goal, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.', 'raythompsonwebdev-com' ); ?></p>
 	<p><?php _e( 'From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.', 'raythompsonwebdev-com' ); ?></p>
-		<section id="calltoaction">
+				
+  
+
+    <section id="calltoaction">
+    <h1><?php _e( 'What I can do', 'raythompsonwebdev-com' ); ?></h1>
 			<article class="frntpgbox">
+			<span><i class="fa fa-wordpress"></i></span>
 				<h1><?php _e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
-					<ul>
-						<li><?php _e( 'HTML5/CSS3', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php _e( 'PHP', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php _e( 'Javascript', 'raythompsonwebdev-com' ); ?></li>
+					
+        <p><?php _e( 'HTML5/CSS3', 'raythompsonwebdev-com' ); ?></p>
+        <p><?php _e( 'PHP', 'raythompsonwebdev-com' ); ?></p>
+        <p><?php _e( 'Javascript', 'raythompsonwebdev-com' ); ?></p>
 						
-					</ul>
+					
 			</article>
 
 			<article class="frntpgbox">
+				<span><i class="fa fa-laptop"></i></span>
 					<h1><?php _e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
-					<ul>
-						<li><?php _e( 'Video/Audio', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php _e( 'SEO', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php _e( 'Google Analytics', 'raythompsonwebdev-com' ); ?></li>
-					</ul>
+					
+						<p><?php _e( 'Video/Audio', 'raythompsonwebdev-com' ); ?></p>
+						<p><?php _e( 'SEO', 'raythompsonwebdev-com' ); ?></p>
+						<p><?php _e( 'Google Analytics', 'raythompsonwebdev-com' ); ?></p>
+					
 			</article>
 
 			<article class="frntpgbox">
+			<span><i class="fa fa-wrench"></i></span>
 					<h1><?php _e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
-						<ul>
-							<li><?php _e( 'Installation', 'raythompsonwebdev-com' ); ?></li>
-
 						
-
-							<li><?php _e( 'Custom Plugins', 'raythompsonwebdev-com' ); ?></li>
-
-							<li><?php _e( 'Custom Themes', 'raythompsonwebdev-com' ); ?></li>
-						</ul>
+							<p><?php _e( 'Installation', 'raythompsonwebdev-com' ); ?></p>
+							<p><?php _e( 'Custom Plugins', 'raythompsonwebdev-com' ); ?></p>
+							<p><?php _e( 'Custom Themes', 'raythompsonwebdev-com' ); ?></p>
+						
 			</article>
 
 			<article class="frntpgbox">
+      <span><i class="fa fa-wrench"></i></span>
 				<h1><?php _e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
-					<ul>
-						<li><?php _e( 'Security', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php _e( 'Database', 'raythompsonwebdev-com' ); ?></li>
-						<li><?php _e( 'Debugging', 'raythompsonwebdev-com' ); ?></li>
-					</ul>
+					
+						<p><?php _e( 'Security', 'raythompsonwebdev-com' ); ?></p>
+						<p><?php _e( 'Database', 'raythompsonwebdev-com' ); ?></p>
+						<p><?php _e( 'Debugging', 'raythompsonwebdev-com' ); ?></p>
+					
 			</article>
 			
 		</section>
-
-		
-		
 	</div>
-	
 </div>
 
 <?php get_footer(); ?>
