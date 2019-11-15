@@ -77,7 +77,7 @@ get_header();
 						<h1> <?php the_title(); ?></h1>
 
 							<a href="<?php the_permalink(); ?>">
-								<?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?>
+								<?php _e( 'See More..', 'raythompsonwebdev-com' ); ?>
 							</a>
 
 					</figcaption>

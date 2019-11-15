@@ -296,6 +296,15 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
+// include custom jQuery
+function shapeSpace_include_custom_jquery() {
+
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
+
+}
+add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');
+
 /**
  * Enqueue style sheets.
  */
@@ -353,6 +362,7 @@ add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 /**
  *  Enqueue other scripts.
  */
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 function raythompsonwebdev_com_scripts_own() {
 
 	// master.
@@ -367,7 +377,7 @@ function raythompsonwebdev_com_scripts_own() {
 	}
 
 }
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
+
 
 
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );

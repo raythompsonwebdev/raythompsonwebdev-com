@@ -1,6 +1,6 @@
 
 // Hide/show toggle button on scroll
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 
   var position, direction, previous;
 
@@ -29,7 +29,7 @@ jQuery(document).ready(function(){
 
 		// create menu variables
 		var slideoutMenu = $('header nav.menu-main-container ');
-		var slideoutMenuWidth = $('header nav.menu-main-container ').width();
+		var slideoutMenuHeight = $('header nav.menu-main-container ').height();
 
 		// toggle open class
 		slideoutMenu.toggleClass("open");
@@ -37,11 +37,11 @@ jQuery(document).ready(function(){
 		// slide menu
 		if (slideoutMenu.hasClass("open")) {
 			slideoutMenu.animate({
-				left: "0px"
+				top: "0px"
 			});
 		} else {
 			slideoutMenu.animate({
-				left: -slideoutMenuWidth
+				top: -slideoutMenuHeight
 			}, 500);
 		}
 	});

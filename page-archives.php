@@ -37,23 +37,23 @@ while ( have_posts() ) :
 
 	<div class="entry">
 
-	<h2><?php esc_html_e( 'Archives by Month:', 'raythompsonwebdev-com' ); ?></h2>
+	<h2><?php _e( 'Archives by Month:', 'raythompsonwebdev-com' ); ?></h2>
 		<ul class="post-list">
 		<?php wp_get_archives( 'type=monthly' ); ?>
 		</ul>
-			<h2><strong><?php esc_html_e( 'Categories:', 'raythompsonwebdev-com' ); ?></strong></h2>
+			<h2><strong><?php _e( 'Categories:', 'raythompsonwebdev-com' ); ?></strong></h2>
 		<ul class="post-list">
 		<?php wp_list_categories( 'title_li=' ); ?>
 		</ul>
 		<div class="clear"></div>
 
-		<h2><strong><?php esc_html_e( 'Tags Cloud:', 'raythompsonwebdev-com' ); ?></strong></h2>
+		<h2><strong><?php _e( 'Tags Cloud:', 'raythompsonwebdev-com' ); ?></strong></h2>
 	<?php wp_tag_cloud( 'smallest=10&largest=24unit=px&orderby=count&order=RAND' ); ?>
 
 	</div>
 
 	<footer class="byline">
-	<?php raythompsonwebdev_comesc_html_entry_footer(); ?>
+	<?php raythompsonwebdev_com_entry_footer(); ?>
 	</footer>
 
 </article>
@@ -62,13 +62,8 @@ while ( have_posts() ) :
 
 <section class="contact-wide">
 
-<<<<<<< HEAD
-	<h1><?php esc_htmlesc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
-
-=======
 	<h1><?php _e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
-  
->>>>>>> a3dd30d6efcc65b57e1614a1a3d67bd042b75169
+
 </section>
 
 <?php get_sidebar( 'archive' ); ?>

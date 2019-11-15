@@ -816,7 +816,8 @@ desktop 1920px*/
       margin: 2em 0;
       width: 45%;
       display: block;
-      float: left; }
+      float: left;
+      background-color: unset; }
       #main-content ul.contact-details li {
         font-family: "FontAwesome", "PT Sans", verdana, helvetica, sans-serif; }
         #main-content ul.contact-details li:before {
@@ -881,6 +882,7 @@ desktop 1920px*/
       padding-top: 0;
       height: auto;
       width: 100%;
+      background-color: unset;
       font-family: "PT Sans", verdana, helvetica, sans-serif;
       margin: 0;
       clear: both;
@@ -890,6 +892,9 @@ desktop 1920px*/
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
+      -webkit-align-content: flex-start;
+      -ms-flex-content: flex-start;
+      align-content: flex-start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: flex-start;
       justify-content: flex-start; }
@@ -1132,28 +1137,43 @@ desktop 1920px*/
               display: block;
               background-color: #062351;
               font-weight: bold; }
-      #main-content .post .websiteImage {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        clear: both;
-        height: auto;
-        width: 25%;
-        margin: 0;
-        display: block;
-        float: left;
-        padding: 0;
-        -webkit-transition: all 0.2s ease-in 0s;
-        -moz-transition: all 0.2s ease-in 0s;
-        -o-transition: all 0.2s ease-in 0s;
-        -ms-transition: all 0.2s ease-in 0s;
-        transition: all 0.2s ease-in 0s; }
       #main-content .post .website-text {
-        width: 75%;
+        width: 100%;
         display: inline-block;
-        padding: 1em;
-        background-color: #fff;
+        padding: 0.5em;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-auto-flow: dense;
         /*gallery page styles*/ }
+        #main-content .post .website-text .item1 {
+          grid-row: 1 / span 5; }
+        #main-content .post .website-text .item2 {
+          grid-column: 2 / span 2; }
+        #main-content .post .website-text .item3 {
+          grid-column: 2 / span 2; }
+        #main-content .post .website-text .item4 {
+          grid-column: 2 / span 2; }
+        #main-content .post .website-text .item5 {
+          grid-column: 1 / span 3;
+          grid-auto-rows: 50px; }
+        #main-content .post .website-text .item6 {
+          grid-column: 1 / span 3;
+          grid-auto-rows: 50px; }
+        #main-content .post .website-text .websiteImage {
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          height: auto;
+          width: 96%;
+          margin: 2% 0;
+          padding: 0;
+          -webkit-transition: all 0.2s ease-in 0s;
+          -moz-transition: all 0.2s ease-in 0s;
+          -o-transition: all 0.2s ease-in 0s;
+          -ms-transition: all 0.2s ease-in 0s;
+          transition: all 0.2s ease-in 0s; }
         #main-content .post .website-text h1.post-meta-key {
           display: block;
           border-bottom: 1px solid #062351;
@@ -1448,7 +1468,8 @@ desktop 1920px*/
           #main-content .post div.continue-reading a span.screen-reader-text {
             color: #062351; }
             #main-content .post div.continue-reading a span.screen-reader-text:hover {
-              font-weight: bold; }
+              font-weight: bold;
+              color: #062351; }
       #main-content .post div.sharedaddy {
         width: 100%;
         margin: 3% auto;
@@ -1586,7 +1607,7 @@ desktop 1920px*/
           display: inline-block;
           padding: 0 0.5em;
           line-height: 65px;
-          font-size: 0.9em; }
+          font-size: 1em; }
           #main-content .post footer.byline .cat-links a,
           #main-content .post footer.byline .tags-links a,
           #main-content .post footer.byline .edit-link a,
@@ -1621,88 +1642,33 @@ desktop 1920px*/
         margin: 0 auto;
         background-color: #fff; }
       #main-content .gallery footer.byline {
-        width: 100%;
-        margin: 1% auto;
-        height: auto;
-        display: inline-block;
-        clear: both; }
+        width: 100%; }
         #main-content .gallery footer.byline p {
-          margin: 0;
-          display: inline-block;
-          padding: 0 1em;
-          width: auto; }
+          margin: 0; }
         #main-content .gallery footer.byline .bylinecat {
-          width: 10%;
-          display: inline-block;
-          height: auto;
-          line-height: 20px; }
+          width: 10%; }
           #main-content .gallery footer.byline .bylinecat a {
             font-size: 0.9em;
-            color: #062351;
-            margin: 0;
-            width: auto;
-            display: inline-block;
             padding: 0.5%; }
             #main-content .gallery footer.byline .bylinecat a:hover {
               font-weight: bold;
-              color: #fff;
-              margin: 0;
-              width: auto;
-              display: inline-block;
               padding: 0.5%; }
         #main-content .gallery footer.byline p.right {
-          width: 6%;
-          float: right;
-          display: block;
-          line-height: 40px;
-          background-color: #c0c9dd; }
+          width: 6%; }
           #main-content .gallery footer.byline p.right a.comments-count {
-            position: relative;
-            top: 0;
-            left: 0;
-            text-align: center;
-            -webkit-transform-origin: 50% 50%;
-            -moz-transform-origin: 50% 50%;
-            -o-transform-origin: 50% 50%;
-            -ms-transform-origin: 50% 50%;
-            transform-origin: 50% 50%;
-            -webkit-transition: all 0.2s ease-in 0s;
-            -moz-transition: all 0.2s ease-in 0s;
-            -o-transition: all 0.2s ease-in 0s;
-            -ms-transition: all 0.2s ease-in 0s;
-            transition: all 0.2s ease-in 0s;
-            display: inline-block;
-            height: 100%;
-            line-height: 40px;
-            width: 100%;
-            font-size: 1.5em;
-            background-color: #c0c9dd; }
+            font-size: 1.5em; }
             #main-content .gallery footer.byline p.right a.comments-count:hover {
-              color: #fff;
-              background-color: #062351;
-              font-weight: bold;
-              line-height: 40px; }
-        #main-content .gallery footer.byline .cat-links,
-        #main-content .gallery footer.byline .tags-links,
-        #main-content .gallery footer.byline .edit-link,
-        #main-content .gallery footer.byline .comments-link {
-          display: inline-block;
-          padding: 0 0.5em;
-          line-height: 65px; }
-          #main-content .gallery footer.byline .cat-links a,
-          #main-content .gallery footer.byline .tags-links a,
-          #main-content .gallery footer.byline .edit-link a,
-          #main-content .gallery footer.byline .comments-link a {
-            font-size: 0.95em;
-            color: #062351;
-            margin: auto;
-            width: 100%; }
-            #main-content .gallery footer.byline .cat-links a:hover,
-            #main-content .gallery footer.byline .tags-links a:hover,
-            #main-content .gallery footer.byline .edit-link a:hover,
-            #main-content .gallery footer.byline .comments-link a:hover {
-              font-weight: bold;
-              cursor: pointer; }
+              font-weight: bold; }
+        #main-content .gallery footer.byline .cat-links a,
+        #main-content .gallery footer.byline .tags-links a,
+        #main-content .gallery footer.byline .edit-link a,
+        #main-content .gallery footer.byline .comments-link a {
+          font-size: 0.95em; }
+          #main-content .gallery footer.byline .cat-links a:hover,
+          #main-content .gallery footer.byline .tags-links a:hover,
+          #main-content .gallery footer.byline .edit-link a:hover,
+          #main-content .gallery footer.byline .comments-link a:hover {
+            cursor: pointer; }
     #main-content nav.navigation {
       height: auto; }
       #main-content nav.navigation h2 {
@@ -2114,7 +2080,7 @@ desktop 1920px*/
       align-items: center;
       margin: 0 0 1em 0;
       padding: 0;
-      background-image: url("../raythompsonwebdev-com/raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1.0.1.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1.0.1.webp");
       background-repeat: no-repeat;
       background-size: 100% auto;
       /*homepage container*/
@@ -2303,7 +2269,8 @@ desktop 1920px*/
           color: #fff; }
           #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
             background-color: #fff;
-            color: #062351; }
+            color: #062351;
+            cursor: pointer; }
         #main-content #frontpage_container div#svg-image-container figure#image-6 {
           margin: 0;
           padding: 0; }
@@ -2335,7 +2302,7 @@ desktop 1920px*/
         flex: 0 1 auto;
         width: 53%;
         display: inline-block;
-        margin: 0 0.5em 1em 0;
+        margin: 0 0 1em 0;
         height: auto; }
         #main-content div#profile_container #text-box-profile h1 {
           font-size: 1.05em;
@@ -2403,7 +2370,7 @@ desktop 1920px*/
         box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
         padding: 1em;
         background-color: #fff;
-        margin: 0 0.5em 0 0;
+        margin: 0;
         /*Hero Slider*/
         /* END OF Hero Slider*/ }
         #main-content div#profile_container section#prof_cont-a h1 {
@@ -2434,39 +2401,39 @@ desktop 1920px*/
             #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body {
               width: 100%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-1 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Large-Photoshop-Certicate-.jpg");
+                background-image: url("images/certificates/Large-Photoshop-Certicate-.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 40%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-2 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
+                background-image: url("images/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 22%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-3 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Large-Udemy-Certicate-.jpg");
+                background-image: url("images/certificates/Large-Udemy-Certicate-.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 22%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-4 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
+                background-image: url("images/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
                 background-repeat: no-repeat;
                 background-position: center; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-5 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/lynda_logo1r-d_72x72.png");
+                background-image: url("images/certificates/lynda_logo1r-d_72x72.png");
                 background-repeat: no-repeat;
                 background-position: center; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-6 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
+                background-image: url("images/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 31%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-7 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
+                background-image: url("images/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
                 background-repeat: no-repeat;
                 background-position: 50% 18%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-8 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Udacity_logo.png");
+                background-image: url("images/certificates/Udacity_logo.png");
                 background-repeat: no-repeat;
                 background-position: 50% 18%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body #panel-9 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
+                background-image: url("images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 61%; }
               #main-content div#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel {
@@ -3111,8 +3078,7 @@ desktop 1440px*/
       width: 48.7293%;
       min-height: 250px; }
     #main-content #contactform {
-      width: 48%;
-      padding: 0.5em; }
+      width: 48%; }
       #main-content #contactform div.wpcf7 {
         font-size: 1em; }
         #main-content #contactform div.wpcf7 span.ajax-loader {
@@ -3261,11 +3227,10 @@ desktop 1440px*/
             line-height: 35px; }
             #main-content .post ul li a:hover {
               display: block; }
-      #main-content .post .websiteImage {
-        width: 25%; }
       #main-content .post .website-text {
-        width: 75%;
-        /*gallery page styles*/ }
+        width: 100%; }
+        #main-content .post .website-text .websiteImage {
+          width: 96%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -3409,8 +3374,7 @@ desktop 1440px*/
       #main-content .post footer.byline p {
         padding: 0 1em; }
       #main-content .post footer.byline .bylinecat {
-        width: 10%;
-        line-height: 20px; }
+        width: 10%; }
         #main-content .post footer.byline .bylinecat a {
           font-size: 0.85em;
           padding: 0.5%; }
@@ -3423,16 +3387,11 @@ desktop 1440px*/
           #main-content .post footer.byline p.right a.comments-count:hover {
             background-color: #062351;
             cursor: pointer; }
-      #main-content .post footer.byline .cat-links,
-      #main-content .post footer.byline .tags-links,
-      #main-content .post footer.byline .edit-link,
-      #main-content .post footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          cursor: pointer; }
+      #main-content .post footer.byline .cat-links a:hover,
+      #main-content .post footer.byline .tags-links a:hover,
+      #main-content .post footer.byline .edit-link a:hover,
+      #main-content .post footer.byline .comments-link a:hover {
+        cursor: pointer; }
     #main-content .gallery {
       /*serach page image*/
       /*post*/
@@ -3457,21 +3416,16 @@ desktop 1440px*/
           font-size: 1.3em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             cursor: pointer; }
-      #main-content .gallery footer.byline .cat-links,
-      #main-content .gallery footer.byline .tags-links,
-      #main-content .gallery footer.byline .edit-link,
-      #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.9em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            cursor: pointer; }
+      #main-content .gallery footer.byline .cat-links a,
+      #main-content .gallery footer.byline .tags-links a,
+      #main-content .gallery footer.byline .edit-link a,
+      #main-content .gallery footer.byline .comments-link a {
+        font-size: 0.9em; }
+        #main-content .gallery footer.byline .cat-links a:hover,
+        #main-content .gallery footer.byline .tags-links a:hover,
+        #main-content .gallery footer.byline .edit-link a:hover,
+        #main-content .gallery footer.byline .comments-link a:hover {
+          cursor: pointer; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -3605,7 +3559,7 @@ desktop 1440px*/
       #main-content section.contact-wide p.nocomments {
         font-size: 0.9em; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1280.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1280.webp");
       /*homepage container*/
       /*front-page image container*/
       /*front-page image container*/ }
@@ -4015,35 +3969,32 @@ desktop 1280px*/
         width: 48.7293%;
         min-height: 250px; }
       #main-content hr #contactform {
-        width: 48%;
-        padding: 0.5em; }
-        #main-content hr #contactform div.wpcf7 {
-          font-size: 1em; }
-          #main-content hr #contactform div.wpcf7 span.ajax-loader {
-            margin: 3% auto; }
-          #main-content hr #contactform div.wpcf7 form {
-            padding: 0.5em; }
-            #main-content hr #contactform div.wpcf7 form p {
-              font-size: 0.9em; }
-              #main-content hr #contactform div.wpcf7 form p label {
-                line-height: 30px; }
-                #main-content hr #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
-                  display: block; }
-                #main-content hr #contactform div.wpcf7 form p label textarea {
-                  width: 100%; }
-                #main-content hr #contactform div.wpcf7 form p label input[type="text"],
-                #main-content hr #contactform div.wpcf7 form p label input[type="email"],
-                #main-content hr #contactform div.wpcf7 form p label select {
-                  height: 35px; }
-                #main-content hr #contactform div.wpcf7 form p label input[type="text"]:focus,
-                #main-content hr #contactform div.wpcf7 form p label input[type="email"]:focus,
-                #main-content hr #contactform div.wpcf7 form p label select:focus,
-                #main-content hr #contactform div.wpcf7 form p label textarea:focus {
-                  box-shadow: 0 0 5px #ccd3de; }
-              #main-content hr #contactform div.wpcf7 form p input[type="submit"] {
-                width: 25%; }
-                #main-content hr #contactform div.wpcf7 form p input[type="submit"]:hover {
-                  color: #fff; }
+        width: 48%; }
+        #main-content hr #contactform div.wpcf7 span.ajax-loader {
+          margin: 3% auto; }
+        #main-content hr #contactform div.wpcf7 form {
+          padding: 0.5em; }
+          #main-content hr #contactform div.wpcf7 form p {
+            font-size: 0.9em; }
+            #main-content hr #contactform div.wpcf7 form p label {
+              line-height: 30px; }
+              #main-content hr #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+                display: block; }
+              #main-content hr #contactform div.wpcf7 form p label textarea {
+                width: 100%; }
+              #main-content hr #contactform div.wpcf7 form p label input[type="text"],
+              #main-content hr #contactform div.wpcf7 form p label input[type="email"],
+              #main-content hr #contactform div.wpcf7 form p label select {
+                height: 35px; }
+              #main-content hr #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content hr #contactform div.wpcf7 form p label input[type="email"]:focus,
+              #main-content hr #contactform div.wpcf7 form p label select:focus,
+              #main-content hr #contactform div.wpcf7 form p label textarea:focus {
+                box-shadow: 0 0 5px #ccd3de; }
+            #main-content hr #contactform div.wpcf7 form p input[type="submit"] {
+              width: 25%; }
+              #main-content hr #contactform div.wpcf7 form p input[type="submit"]:hover {
+                color: #fff; }
       #main-content hr ul.contact-details {
         margin: 2em 0;
         width: 45%; }
@@ -4162,11 +4113,11 @@ desktop 1280px*/
               line-height: 35px; }
               #main-content hr .post ul li a:hover {
                 font-size: 1em; }
-        #main-content hr .post .websiteImage {
-          width: 25%; }
         #main-content hr .post .website-text {
-          width: 75%;
+          width: 100%;
           /*gallery page styles*/ }
+          #main-content hr .post .website-text .websiteImage {
+            width: 96%; }
           #main-content hr .post .website-text h1.post-meta-key {
             margin-bottom: 0.5em; }
           #main-content hr .post .website-text p.websitetext {
@@ -4311,11 +4262,9 @@ desktop 1280px*/
         #main-content hr .post footer.byline p {
           padding: 0 1em; }
         #main-content hr .post footer.byline .bylinecat {
-          width: 10%;
-          line-height: 20px; }
+          width: 10%; }
           #main-content hr .post footer.byline .bylinecat a {
-            font-size: 0.9em;
-            padding: 0.5%; }
+            font-size: 0.9em; }
             #main-content hr .post footer.byline .bylinecat a:hover {
               font-weight: bold; }
         #main-content hr .post footer.byline p.right {
@@ -4324,16 +4273,11 @@ desktop 1280px*/
             font-size: 1.3em; }
             #main-content hr .post footer.byline p.right a.comments-count:hover {
               background-color: #062351; }
-        #main-content hr .post footer.byline .cat-links,
-        #main-content hr .post footer.byline .tags-links,
-        #main-content hr .post footer.byline .edit-link,
-        #main-content hr .post footer.byline .comments-link {
-          line-height: 65px; }
-          #main-content hr .post footer.byline .cat-links a:hover,
-          #main-content hr .post footer.byline .tags-links a:hover,
-          #main-content hr .post footer.byline .edit-link a:hover,
-          #main-content hr .post footer.byline .comments-link a:hover {
-            font-weight: bold; }
+        #main-content hr .post footer.byline .cat-links a:hover,
+        #main-content hr .post footer.byline .tags-links a:hover,
+        #main-content hr .post footer.byline .edit-link a:hover,
+        #main-content hr .post footer.byline .comments-link a:hover {
+          font-weight: bold; }
       #main-content hr .gallery {
         /*serach page image*/
         /*post*/
@@ -4357,21 +4301,16 @@ desktop 1280px*/
             font-size: 1.3em; }
             #main-content hr .gallery footer.byline p.right a.comments-count:hover {
               font-weight: bold; }
-        #main-content hr .gallery footer.byline .cat-links,
-        #main-content hr .gallery footer.byline .tags-links,
-        #main-content hr .gallery footer.byline .edit-link,
-        #main-content hr .gallery footer.byline .comments-link {
-          line-height: 65px; }
-          #main-content hr .gallery footer.byline .cat-links a,
-          #main-content hr .gallery footer.byline .tags-links a,
-          #main-content hr .gallery footer.byline .edit-link a,
-          #main-content hr .gallery footer.byline .comments-link a {
-            font-size: 0.9em; }
-            #main-content hr .gallery footer.byline .cat-links a:hover,
-            #main-content hr .gallery footer.byline .tags-links a:hover,
-            #main-content hr .gallery footer.byline .edit-link a:hover,
-            #main-content hr .gallery footer.byline .comments-link a:hover {
-              font-weight: bold; }
+        #main-content hr .gallery footer.byline .cat-links a,
+        #main-content hr .gallery footer.byline .tags-links a,
+        #main-content hr .gallery footer.byline .edit-link a,
+        #main-content hr .gallery footer.byline .comments-link a {
+          font-size: 0.9em; }
+          #main-content hr .gallery footer.byline .cat-links a:hover,
+          #main-content hr .gallery footer.byline .tags-links a:hover,
+          #main-content hr .gallery footer.byline .edit-link a:hover,
+          #main-content hr .gallery footer.byline .comments-link a:hover {
+            font-weight: bold; }
       #main-content hr nav.navigation h2 {
         text-indent: 0.5em; }
       #main-content hr nav.navigation .nav-links {
@@ -4527,7 +4466,7 @@ desktop 1280px*/
         #main-content hr section.contact-wide p.nocomments {
           font-size: 0.85em; }
       #main-content hr #frontpage_container {
-        background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1024.png");
+        background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1024.webp");
         /*homepage container*/
         /*front-page image container*/
         /*front-page image container*/ }
@@ -4972,11 +4911,10 @@ desktop 1280px*/
             line-height: 35px; }
             #main-content .post ul li a:hover {
               display: block; }
-      #main-content .post .websiteImage {
-        width: 25%; }
       #main-content .post .website-text {
-        width: 75%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 96%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -5134,16 +5072,11 @@ desktop 1280px*/
           #main-content .post footer.byline p.right a.comments-count:hover {
             background-color: #062351;
             cursor: pointer; }
-      #main-content .post footer.byline .cat-links,
-      #main-content .post footer.byline .tags-links,
-      #main-content .post footer.byline .edit-link,
-      #main-content .post footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          cursor: pointer; }
+      #main-content .post footer.byline .cat-links a:hover,
+      #main-content .post footer.byline .tags-links a:hover,
+      #main-content .post footer.byline .edit-link a:hover,
+      #main-content .post footer.byline .comments-link a:hover {
+        cursor: pointer; }
     #main-content .gallery {
       /*serach page image*/
       /*post*/
@@ -5316,7 +5249,7 @@ desktop 1280px*/
       #main-content section.contact-wide p.nocomments {
         font-size: 0.9em; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.webp");
       /*homepage container*/
       /*front-page image container*/
       /*front-page image container*/ }
@@ -5832,11 +5765,10 @@ desktop 1024px*/
           font-size: 0.85em; }
           #main-content .post ul li a {
             line-height: 35px; }
-      #main-content .post .websiteImage {
-        width: 25%; }
       #main-content .post .website-text {
-        width: 75%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 96%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -6109,7 +6041,7 @@ desktop 1024px*/
       #main-content section.contact-wide .reply a:hover {
         width: 20%; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.webp");
       /*homepage container*/
       /*front-page image container*/
       /*front-page image container*/ }
@@ -6635,14 +6567,14 @@ desktop 980px*/
           font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 35%;
-        float: none;
-        margin: auto;
-        display: block; }
       #main-content .post .website-text {
         width: 100%;
-        /*gallery page styles*/ }
+        display: block; }
+        #main-content .post .website-text .websiteImage {
+          width: 35%;
+          float: none;
+          margin: auto;
+          display: block; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em;
           font-size: 1.1em; }
@@ -7478,14 +7410,11 @@ tablet 800px */
           font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 35%;
-        float: none;
-        margin: auto;
-        display: block; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 35%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -7641,7 +7570,8 @@ tablet 800px */
           #main-content .post footer.byline .bylinecat a:hover {
             font-weight: bold; }
       #main-content .post footer.byline p.right {
-        width: 10%; }
+        width: 10%;
+        line-height: 55px; }
         #main-content .post footer.byline p.right a.comments-count {
           font-size: 1.3em; }
           #main-content .post footer.byline p.right a.comments-count:hover {
@@ -7650,7 +7580,7 @@ tablet 800px */
       #main-content .post footer.byline .tags-links,
       #main-content .post footer.byline .edit-link,
       #main-content .post footer.byline .comments-link {
-        line-height: 65px;
+        line-height: 55px;
         font-size: 0.8em; }
         #main-content .post footer.byline .cat-links a:hover,
         #main-content .post footer.byline .tags-links a:hover,
@@ -7680,21 +7610,16 @@ tablet 800px */
           font-size: 1.3em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .gallery footer.byline .cat-links,
-      #main-content .gallery footer.byline .tags-links,
-      #main-content .gallery footer.byline .edit-link,
-      #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.85em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
+      #main-content .gallery footer.byline .cat-links a,
+      #main-content .gallery footer.byline .tags-links a,
+      #main-content .gallery footer.byline .edit-link a,
+      #main-content .gallery footer.byline .comments-link a {
+        font-size: 0.85em; }
+        #main-content .gallery footer.byline .cat-links a:hover,
+        #main-content .gallery footer.byline .tags-links a:hover,
+        #main-content .gallery footer.byline .edit-link a:hover,
+        #main-content .gallery footer.byline .comments-link a:hover {
+          font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -7763,7 +7688,7 @@ tablet 800px */
     #main-content section.contact-wide #respond .comment-form p.comment-notes {
       font-size: 0.85em; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.webp");
       /*homepage container*/
       /*front-page image container*/ }
       #main-content #frontpage_container div#text-box-front {
@@ -7816,7 +7741,7 @@ tablet 800px */
         margin: 0;
         /*PNG for IE8*/ }
         #main-content #frontpage_container div#svg-image-container h1 {
-          font-size: 2.8em; }
+          font-size: 2.5em; }
         #main-content #frontpage_container div#svg-image-container h2 {
           font-size: 1.5em; }
         #main-content #frontpage_container div#svg-image-container a#projectLink {
@@ -8071,7 +7996,7 @@ tablet 667px */
       width: 90%; }
       header hgroup h1#logo,
       header hgroup h1#logo-blog {
-        font-size: 1.35em; }
+        font-size: 1.3em; }
         header hgroup h1#logo span,
         header hgroup h1#logo-blog span {
           padding: 0; }
@@ -8312,6 +8237,8 @@ tablet 667px */
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 35%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -8503,21 +8430,16 @@ tablet 667px */
           font-size: 1.2em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .gallery footer.byline .cat-links,
-      #main-content .gallery footer.byline .tags-links,
-      #main-content .gallery footer.byline .edit-link,
-      #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.8em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
+      #main-content .gallery footer.byline .cat-links a,
+      #main-content .gallery footer.byline .tags-links a,
+      #main-content .gallery footer.byline .edit-link a,
+      #main-content .gallery footer.byline .comments-link a {
+        font-size: 0.8em; }
+        #main-content .gallery footer.byline .cat-links a:hover,
+        #main-content .gallery footer.byline .tags-links a:hover,
+        #main-content .gallery footer.byline .edit-link a:hover,
+        #main-content .gallery footer.byline .comments-link a:hover {
+          font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -8586,7 +8508,7 @@ tablet 667px */
     #main-content section.contact-wide #comments {
       font-size: 0.8em; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.webp");
       /*homepage container*/
       /*front-page image container*/ }
       #main-content #frontpage_container div#text-box-front {
@@ -8633,7 +8555,7 @@ tablet 667px */
         height: 240px;
         /*PNG for IE8*/ }
         #main-content #frontpage_container div#svg-image-container h1 {
-          font-size: 2.5em; }
+          font-size: 2.3em; }
         #main-content #frontpage_container div#svg-image-container h2 {
           font-size: 1.3em; }
         #main-content #frontpage_container div#svg-image-container a#projectLink {
@@ -9032,14 +8954,11 @@ tablet 600px */
           font-size: 0.85em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 45%;
-        float: none;
-        margin: auto;
-        display: block; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 40%; }
         #main-content .post .website-text h1.post-meta-key {
           font-size: 1em; }
         #main-content .post .website-text p.websitetext {
@@ -9233,21 +9152,16 @@ tablet 600px */
           font-size: 1.2em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .gallery footer.byline .cat-links,
-      #main-content .gallery footer.byline .tags-links,
-      #main-content .gallery footer.byline .edit-link,
-      #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.8em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
+      #main-content .gallery footer.byline .cat-links a,
+      #main-content .gallery footer.byline .tags-links a,
+      #main-content .gallery footer.byline .edit-link a,
+      #main-content .gallery footer.byline .comments-link a {
+        font-size: 0.8em; }
+        #main-content .gallery footer.byline .cat-links a:hover,
+        #main-content .gallery footer.byline .tags-links a:hover,
+        #main-content .gallery footer.byline .edit-link a:hover,
+        #main-content .gallery footer.byline .comments-link a:hover {
+          font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -9340,9 +9254,10 @@ tablet 536px */
     display: block; }
   .menu-toggle {
     position: fixed;
-    z-index: 100;
-    top: 0.2em;
-    left: calc(84% - 1vw);
+    z-index: 105;
+    display: block;
+    top: 0;
+    left: 86%;
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
@@ -9352,10 +9267,8 @@ tablet 536px */
     transition: all ease-out 400ms;
     height: 60px; }
   .menu-toggle.hide {
-    left: 100vw; }
+    left: 110vw; }
   /* Make sure the button doesn't hide when menu is open. */
-  .toggled .menu-toggle.hide {
-    bottom: 1em; }
   .menu-toggle:hover,
   .menu-toggle:focus {
     text-decoration: underline;
@@ -9364,7 +9277,7 @@ tablet 536px */
   #wrapper_container {
     width: 100%; }
   header {
-    height: 70px;
+    height: 55px;
     /*Navigation*/
     /*Mobile-Navigation*/ }
     header .site-logo {
@@ -9383,7 +9296,7 @@ tablet 536px */
       width: 85%; }
       header hgroup h1#logo,
       header hgroup h1#logo-blog {
-        font-size: 1.3em; }
+        font-size: 1.2em; }
         header hgroup h1#logo span,
         header hgroup h1#logo-blog span {
           padding: 0; }
@@ -9394,13 +9307,14 @@ tablet 536px */
         font-size: 0.6em; }
     header nav.menu-main-container {
       position: fixed;
-      top: 5em;
+      top: 0;
       z-index: 100;
-      left: -250px;
-      width: 250px;
-      height: auto; }
+      top: -250px;
+      width: 100vw;
+      height: 250px;
+      overflow: hidden; }
       header nav.menu-main-container ul#menu-main {
-        height: 15.5em;
+        height: 100%;
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
         flex-flow: column; }
@@ -9453,27 +9367,29 @@ tablet 536px */
           margin: 3% auto; }
         #main-content #contactform div.wpcf7 form {
           padding: 0.5em; }
-          #main-content #contactform div.wpcf7 form p label {
-            height: 30px; }
-            #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
-              display: block; }
-            #main-content #contactform div.wpcf7 form p label textarea {
-              width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type="text"],
-            #main-content #contactform div.wpcf7 form p label input[type="email"],
-            #main-content #contactform div.wpcf7 form p label select {
-              height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
-            #main-content #contactform div.wpcf7 form p label select:focus,
-            #main-content #contactform div.wpcf7 form p label textarea:focus {
-              box-shadow: 0 0 5px #ccd3de; }
-          #main-content #contactform div.wpcf7 form p input[type="submit"] {
-            width: 25%;
-            font-size: 1.2em; }
-            #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
-              background-color: #062351;
-              color: #fff; }
+          #main-content #contactform div.wpcf7 form p {
+            font-size: 0.85em; }
+            #main-content #contactform div.wpcf7 form p label {
+              height: 30px; }
+              #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+                display: block; }
+              #main-content #contactform div.wpcf7 form p label textarea {
+                width: 100%; }
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
+              #main-content #contactform div.wpcf7 form p label select {
+                height: 35px; }
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
+              #main-content #contactform div.wpcf7 form p label select:focus,
+              #main-content #contactform div.wpcf7 form p label textarea:focus {
+                box-shadow: 0 0 5px #ccd3de; }
+            #main-content #contactform div.wpcf7 form p input[type="submit"] {
+              width: 25%;
+              font-size: 1.2em; }
+              #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+                background-color: #062351;
+                color: #fff; }
     #main-content article.main-text,
     #main-content div.main-text {
       padding: 0.5em; }
@@ -9573,11 +9489,11 @@ tablet 536px */
           font-size: 0.85em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 45%; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 45%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -9735,16 +9651,11 @@ tablet 536px */
           font-size: 0.85em; }
           #main-content .post footer.byline p.right a.comments-count:hover {
             background-color: #062351; }
-      #main-content .post footer.byline .cat-links,
-      #main-content .post footer.byline .tags-links,
-      #main-content .post footer.byline .edit-link,
-      #main-content .post footer.byline .comments-link {
-        width: 65%; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          font-weight: bold; }
+      #main-content .post footer.byline .cat-links a:hover,
+      #main-content .post footer.byline .tags-links a:hover,
+      #main-content .post footer.byline .edit-link a:hover,
+      #main-content .post footer.byline .comments-link a:hover {
+        font-weight: bold; }
     #main-content .gallery {
       /*serach page image*/
       /*post*/
@@ -9832,7 +9743,7 @@ tablet 536px */
         #main-content section.contact-wide ol.commentlist .reply a:hover {
           line-height: 35px; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.webp");
       /*homepage container*/
       /*front-page image container*/ }
       #main-content #frontpage_container div#text-box-front {
@@ -9876,10 +9787,10 @@ tablet 536px */
         #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        height: 240px;
+        height: 230px;
         /*PNG for IE8*/ }
         #main-content #frontpage_container div#svg-image-container h1 {
-          font-size: 2.5em; }
+          font-size: 2.1em; }
         #main-content #frontpage_container div#svg-image-container h2 {
           font-size: 1.3em; }
         #main-content #frontpage_container div#svg-image-container a#projectLink {
@@ -10096,7 +10007,7 @@ mobile 480px */
   .menu-main-container.toggled ul {
     display: block; }
   .menu-toggle {
-    left: calc(84% - 1vw); }
+    left: 84%; }
   .menu-toggle.hide {
     left: 100vw; }
   /* Make sure the button doesn't hide when menu is open. */
@@ -10116,7 +10027,7 @@ mobile 480px */
       width: 85%; }
       header hgroup h1#logo,
       header hgroup h1#logo-blog {
-        font-size: 1.2em; }
+        font-size: 1.1em; }
         header hgroup h1#logo span,
         header hgroup h1#logo-blog span {
           padding: 0; }
@@ -10136,19 +10047,17 @@ mobile 480px */
       font-size: 1.7em; }
     header .site-firstletter {
       line-height: 36px; }
-    header nav.menu-main-container {
-      top: 3.2em; }
-      header nav.menu-main-container ul#menu-main {
-        height: 15.3em; }
-        header nav.menu-main-container ul#menu-main li.menu-item {
-          width: 100%; }
-          header nav.menu-main-container ul#menu-main li.menu-item a {
-            font-size: 0.9em; }
-            header nav.menu-main-container ul#menu-main li.menu-item a:hover {
-              font-weight: bold; }
-      header nav.menu-main-container .nav-menu {
-        padding: 1em;
-        margin-bottom: 3em; }
+    header nav.menu-main-container ul#menu-main {
+      height: 100%; }
+      header nav.menu-main-container ul#menu-main li.menu-item {
+        width: 100%; }
+        header nav.menu-main-container ul#menu-main li.menu-item a {
+          font-size: 0.9em; }
+          header nav.menu-main-container ul#menu-main li.menu-item a:hover {
+            font-weight: bold; }
+    header nav.menu-main-container .nav-menu {
+      padding: 1em;
+      margin-bottom: 3em; }
     header nav.menu-main-container.hide {
       left: -5.5em; }
   #main-content {
@@ -10216,7 +10125,7 @@ mobile 480px */
         #main-content #contactform div.wpcf7 form {
           padding: 0.5em; }
           #main-content #contactform div.wpcf7 form p {
-            font-size: 0.85em; }
+            font-size: 0.8em; }
             #main-content #contactform div.wpcf7 form p label {
               height: 30px; }
               #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
@@ -10364,11 +10273,11 @@ mobile 480px */
           font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 50%; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 45%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -10708,14 +10617,17 @@ mobile 480px */
         #main-content #frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
           font-size: 1.6em; }
       #main-content #frontpage_container div#svg-image-container {
-        height: 230px;
+        height: 220px;
         /*PNG for IE8*/ }
         #main-content #frontpage_container div#svg-image-container h1 {
-          font-size: 2.2em; }
+          font-size: 2em; }
         #main-content #frontpage_container div#svg-image-container h2 {
           font-size: 1.2em; }
         #main-content #frontpage_container div#svg-image-container a#projectLink {
-          font-size: 1.2em; }
+          font-size: 1.1em;
+          margin: auto;
+          float: none;
+          display: block; }
           #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
             background-color: #fff; }
         #main-content #frontpage_container div#svg-image-container figure#image-6 {
@@ -10926,8 +10838,7 @@ mobile 414px */
   .menu-main-container.toggled ul {
     display: block; }
   .menu-toggle {
-    left: calc(84% - 1vw);
-    font-size: 0.85em; }
+    left: 82%; }
   .menu-toggle.hide {
     left: 100vw; }
   /* Make sure the button doesn't hide when menu is open. */
@@ -10946,7 +10857,7 @@ mobile 414px */
       height: 3em; }
       header hgroup h1#logo,
       header hgroup h1#logo-blog {
-        font-size: 1.1em;
+        font-size: 1em;
         height: 25px; }
         header hgroup h1#logo span,
         header hgroup h1#logo-blog span {
@@ -10968,12 +10879,10 @@ mobile 414px */
       font-size: 1.7em; }
     header .site-firstletter {
       line-height: 36px; }
-    header nav.menu-main-container {
-      top: 3.2em; }
-      header nav.menu-main-container ul#menu-main li.menu-item a {
-        font-size: 0.85em; }
-      header nav.menu-main-container .nav-menu {
-        padding: 1em; }
+    header nav.menu-main-container ul#menu-main li.menu-item a {
+      font-size: 0.85em; }
+    header nav.menu-main-container .nav-menu {
+      padding: 1em; }
   #main-content {
     padding: 0;
     /*contact page contact details*/
@@ -10982,7 +10891,6 @@ mobile 414px */
     /*custom post*/
     /*post navigation*/ }
     #main-content h1 {
-      font-size: 0.95em;
       text-align: center; }
     #main-content h2 {
       font-size: 0.9em;
@@ -11144,11 +11052,11 @@ mobile 414px */
           font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 50%; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 50%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -11346,21 +11254,16 @@ mobile 414px */
           font-size: 1.1em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             color: #fff; }
-      #main-content .gallery footer.byline .cat-links,
-      #main-content .gallery footer.byline .tags-links,
-      #main-content .gallery footer.byline .edit-link,
-      #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.8em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            background-color: #062351; }
+      #main-content .gallery footer.byline .cat-links a,
+      #main-content .gallery footer.byline .tags-links a,
+      #main-content .gallery footer.byline .edit-link a,
+      #main-content .gallery footer.byline .comments-link a {
+        font-size: 0.8em; }
+        #main-content .gallery footer.byline .cat-links a:hover,
+        #main-content .gallery footer.byline .tags-links a:hover,
+        #main-content .gallery footer.byline .edit-link a:hover,
+        #main-content .gallery footer.byline .comments-link a:hover {
+          background-color: #062351; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -11446,9 +11349,9 @@ mobile 360px */
   .menu-main-container.toggled ul {
     display: block; }
   .menu-toggle {
-    left: calc(84% - 1vw);
-    font-size: 0.8em;
-    top: 2.4em; }
+    left: 80%;
+    font-size: 0.9em;
+    top: 2em; }
   .menu-toggle.hide {
     left: 100vw; }
   /* Make sure the button doesn't hide when menu is open. */
@@ -11481,12 +11384,10 @@ mobile 360px */
       font-size: 1.6em; }
     header .site-firstletter {
       line-height: 36px; }
-    header nav.menu-main-container {
-      top: 3.2em; }
-      header nav.menu-main-container ul#menu-main li.menu-item a {
-        font-size: 0.85em; }
-      header nav.menu-main-container .nav-menu {
-        padding: 1em; }
+    header nav.menu-main-container ul#menu-main li.menu-item a {
+      font-size: 0.85em; }
+    header nav.menu-main-container .nav-menu {
+      padding: 1em; }
   #main-content {
     /*contact page contact details*/
     /*Search Box*/
@@ -11498,7 +11399,6 @@ mobile 360px */
     /*gallery container*/ }
     #main-content h1 {
       width: 100%;
-      font-size: 0.9em;
       margin-bottom: 0.5em;
       line-height: 25px; }
     #main-content h2 {
@@ -11545,27 +11445,29 @@ mobile 360px */
           margin: 3% auto; }
         #main-content #contactform div.wpcf7 form {
           padding: 0.5em; }
-          #main-content #contactform div.wpcf7 form p label {
-            height: 30px; }
-            #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
-              display: block; }
-            #main-content #contactform div.wpcf7 form p label textarea {
-              width: 100%; }
-            #main-content #contactform div.wpcf7 form p label input[type="text"],
-            #main-content #contactform div.wpcf7 form p label input[type="email"],
-            #main-content #contactform div.wpcf7 form p label select {
-              height: 35px; }
-            #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
-            #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
-            #main-content #contactform div.wpcf7 form p label select:focus,
-            #main-content #contactform div.wpcf7 form p label textarea:focus {
-              box-shadow: 0 0 5px #ccd3de; }
-          #main-content #contactform div.wpcf7 form p input[type="submit"] {
-            width: 25%;
-            font-size: 1.2em; }
-            #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
-              background-color: #062351;
-              color: #fff; }
+          #main-content #contactform div.wpcf7 form p {
+            font-size: 0.75em; }
+            #main-content #contactform div.wpcf7 form p label {
+              height: 30px; }
+              #main-content #contactform div.wpcf7 form p label .wpcf7-form-control-wrap {
+                display: block; }
+              #main-content #contactform div.wpcf7 form p label textarea {
+                width: 100%; }
+              #main-content #contactform div.wpcf7 form p label input[type="text"],
+              #main-content #contactform div.wpcf7 form p label input[type="email"],
+              #main-content #contactform div.wpcf7 form p label select {
+                height: 35px; }
+              #main-content #contactform div.wpcf7 form p label input[type="text"]:focus,
+              #main-content #contactform div.wpcf7 form p label input[type="email"]:focus,
+              #main-content #contactform div.wpcf7 form p label select:focus,
+              #main-content #contactform div.wpcf7 form p label textarea:focus {
+                box-shadow: 0 0 5px #ccd3de; }
+            #main-content #contactform div.wpcf7 form p input[type="submit"] {
+              width: 25%;
+              font-size: 1.2em; }
+              #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
+                background-color: #062351;
+                color: #fff; }
     #main-content ul.contact-details li:before {
       font-size: 1.2em; }
     #main-content ul.contact-details li a {
@@ -11688,11 +11590,11 @@ mobile 360px */
           font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 50%; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 50%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -11971,7 +11873,7 @@ mobile 360px */
       #main-content section.contact-wide p.must-log-in {
         font-size: 0.75em; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-360.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-360.webp");
       /*homepage container*/
       /*front-page image container*/ }
       #main-content #frontpage_container div#text-box-front {
@@ -12020,11 +11922,11 @@ mobile 360px */
       #main-content #frontpage_container div#svg-image-container {
         /*PNG for IE8*/ }
         #main-content #frontpage_container div#svg-image-container h1 {
-          font-size: 2em; }
+          font-size: 1.8em; }
         #main-content #frontpage_container div#svg-image-container h2 {
           font-size: 1em; }
         #main-content #frontpage_container div#svg-image-container a#projectLink {
-          font-size: 1.2em; }
+          font-size: 1.1em; }
           #main-content #frontpage_container div#svg-image-container a#projectLink:hover {
             background-color: #fff; }
         #main-content #frontpage_container div#svg-image-container figure#image-6 {
@@ -12245,8 +12147,7 @@ mobile 320px */
     display: block; }
   .menu-toggle {
     top: 2.1em;
-    left: calc(84% - 1vw);
-    font-size: 0.85em; }
+    left: 77%; }
   .menu-toggle.hide {
     left: 100vw; }
   #wrapper_container {
@@ -12279,14 +12180,12 @@ mobile 320px */
       font-size: 1.5em; }
     header .site-firstletter {
       line-height: 36px; }
-    header nav.menu-main-container {
-      top: 3.2em; }
-      header nav.menu-main-container ul#menu-main {
-        height: 12.1em; }
-        header nav.menu-main-container ul#menu-main li.menu-item a {
-          font-size: 0.85em; }
-      header nav.menu-main-container .nav-menu {
-        padding: 1em; }
+    header nav.menu-main-container ul#menu-main {
+      height: 12.1em; }
+      header nav.menu-main-container ul#menu-main li.menu-item a {
+        font-size: 0.85em; }
+    header nav.menu-main-container .nav-menu {
+      padding: 1em; }
   #main-content {
     /*contact page contact details*/
     /*Search Box*/
@@ -12472,11 +12371,11 @@ mobile 320px */
           font-size: 0.75em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .websiteImage {
-        width: 45%; }
       #main-content .post .website-text {
         width: 100%;
         /*gallery page styles*/ }
+        #main-content .post .website-text .websiteImage {
+          width: 50%; }
         #main-content .post .website-text h1.post-meta-key {
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
@@ -12756,7 +12655,7 @@ mobile 320px */
       #main-content section.contact-wide #respond h3#reply-title {
         font-size: 0.8em; }
     #main-content #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-320.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-320.webp");
       /*homepage container*/
       /*front-page image container*/ }
       #main-content #frontpage_container div#text-box-front {
@@ -12805,7 +12704,7 @@ mobile 320px */
       #main-content #frontpage_container div#svg-image-container {
         /*PNG for IE8*/ }
         #main-content #frontpage_container div#svg-image-container h1 {
-          font-size: 1.8em; }
+          font-size: 1.6em; }
         #main-content #frontpage_container div#svg-image-container h2 {
           font-size: 1em; }
         #main-content #frontpage_container div#svg-image-container a#projectLink {

@@ -1,6 +1,6 @@
 
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 
   //Hero Slider
 	$('.hero-slider ul a').click(function() {

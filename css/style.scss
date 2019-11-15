@@ -21,6 +21,8 @@ License: GNU General Public License v2 or later
 @import "partials/variables";
 @import "partials/mixins";
 
+
+
 /*
 desktop 1920px*/
 @media only screen and (max-width: 1920px) {
@@ -738,9 +740,9 @@ desktop 1920px*/
       -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-    //  -webkit-align-content: flex-start;
-    //  -ms-flex-content: flex-start;
-    //  align-content: flex-start;
+      -webkit-align-content: flex-start;
+      -ms-flex-content: flex-start;
+      align-content: flex-start;
       -webkit-justify-content: flex-start;
       -ms-flex-pack: flex-start;
       justify-content: flex-start;
@@ -1020,25 +1022,66 @@ desktop 1920px*/
           }
         }
       }
-
-      .websiteImage {
-        @include box-sizing($type: border-box);
-        clear: both;
-        height: auto;
-        width: 25%;
-        margin: 0;
-        display: block;
-        float: left;
-        padding: 0;
-        @include Transition(all 0.2s ease-in 0s);
-      }
+      
 
       .website-text {
-        width: 75%;
+        width: 100%;
         display: inline-block;
-        padding: 1em;
+        padding: 0.5em;
 
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-auto-flow: dense;
+
+        .item1 { 
+          grid-row: 1 / span 5;
+          
+        }
+        .item2 {
+          grid-column: 2 / span 2;
+          
+          
+          
+        }
+        .item3 {
+          grid-column: 2 / span 2;
+          
+          
+          
+        }
+        .item4 {
+          grid-column: 2 / span 2;
+          
+          
+        }
+        .item5 {
+          grid-column: 1 / span 3;
+          grid-auto-rows:50px;
+          
+        }
+        .item6 {
+          grid-column: 1 / span 3;
+          grid-auto-rows:50px;
+          
+        }
+
+        
+        
         /*gallery page styles*/
+
+        .websiteImage {
+          @include box-sizing($type: border-box);
+          height: auto;
+          width: 96%;
+          margin: 2% 0;
+          padding: 0;
+          @include Transition(all 0.2s ease-in 0s);
+          
+        }
+
+                
 
         h1.post-meta-key {
           display: block;
@@ -1049,6 +1092,7 @@ desktop 1920px*/
           text-align: left;
           margin-bottom: 0.5em;
           font-size: 1.2em;
+          
         }
 
         p.websitetext {
@@ -1057,6 +1101,7 @@ desktop 1920px*/
           height: auto;
           margin-bottom: 0.5em;
           color: $color1;
+          
         }
 
         a.webformats {
@@ -1071,6 +1116,7 @@ desktop 1920px*/
           @include Transition(all 0.2s ease-in 0s);
           line-height: 40px;
           background-color:unset;
+          
 
           &:hover {
             color: $color7;
@@ -1086,6 +1132,7 @@ desktop 1920px*/
           display: block;
           width: 100%;
           padding: 0;
+          
 
           span {
             width: 33%;
@@ -1312,7 +1359,7 @@ desktop 1920px*/
           background-color:$color3;
 
           &:hover {
-            color: $color4;
+            color:$color4;
             background-color:$color1;
             font-weight: bold;
           }
@@ -1322,6 +1369,7 @@ desktop 1920px*/
 
             &:hover {
               font-weight: bold;
+              color: $color1;
             }
           }
         }
@@ -1496,7 +1544,7 @@ desktop 1920px*/
           display: inline-block;
           padding: 0 0.5em;
           line-height: 65px;
-          font-size: 0.9em;
+          font-size: 1em;
 
           a {
             color: $color1;
@@ -1540,39 +1588,25 @@ desktop 1920px*/
       /*post footer*/
       footer.byline {
         width: 100%;
-        margin: 1% auto;
-        height: auto;
-
-        display: inline-block;
-        clear: both;
+        
 
         p {
           margin: 0;
-          display: inline-block;
-          padding: 0 1em;
-          width: auto;
+          
         }
 
         .bylinecat {
           width: 10%;
-          display: inline-block;
-          height: auto;
-          line-height: 20px;
+          
 
           a {
             font-size: 0.9em;
-            color: $color1;
-            margin: 0;
-            width: auto;
-            display: inline-block;
+            
             padding: 0.5%;
 
             &:hover {
               font-weight: bold;
-              color: $color4;
-              margin: 0;
-              width: auto;
-              display: inline-block;
+              
               padding: 0.5%;
             }
           }
@@ -1580,30 +1614,18 @@ desktop 1920px*/
 
         p.right {
           width: 6%;
-          float: right;
-          display: block;
-          line-height: 40px;
-          background-color: $color3;
+          
+          
 
           a.comments-count {
-            position: relative;
-            top: 0;
-            left: 0;
-            text-align: center;
-            @include originTran(50% 50%);
-            @include Transition(all 0.2s ease-in 0s);
-            display: inline-block;
-            height: 100%;
-            line-height: 40px;
-            width: 100%;
+            
             font-size: 1.5em;
-            background-color: $color3;
+            
 
             &:hover {
-              color: $color4;
-              background-color: $color1;
+              
               font-weight: bold;
-              line-height: 40px;
+              
             }
           }
         }
@@ -1612,18 +1634,14 @@ desktop 1920px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          display: inline-block;
-          padding: 0 0.5em;
-          line-height: 65px;
+          
 
           a {
             font-size: 0.95em;
-            color: $color1;
-            margin: auto;
-            width: 100%;
+            
 
             &:hover {
-              font-weight: bold;
+              
               cursor: pointer;
             }
           }
@@ -2131,7 +2149,7 @@ desktop 1920px*/
       align-items: center;
       margin: 0 0 1em 0;
       padding: 0;
-      background-image: url("../raythompsonwebdev-com/raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1.0.1.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1.0.1.webp");
       background-repeat: no-repeat;
       background-size: 100% auto;
 
@@ -2363,6 +2381,7 @@ desktop 1920px*/
           &:hover {
             background-color: $color4;
             color: $color1;
+            cursor:pointer;
           }
         }
 
@@ -2538,63 +2557,63 @@ desktop 1920px*/
               width: 100%;
 
               #panel-1 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Large-Photoshop-Certicate-.jpg");
+                background-image: url("images/certificates/Large-Photoshop-Certicate-.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 40%;
                 //background-size: cover;
               }
 
               #panel-2 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
+                background-image: url("images/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 22%;
                 //background-size: cover;
               }
 
               #panel-3 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Large-Udemy-Certicate-.jpg");
+                background-image: url("images/certificates/Large-Udemy-Certicate-.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 22%;
                 //background-size: cover;
               }
 
               #panel-4 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
+                background-image: url("images/certificates/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 //background-size: cover;
               }
 
               #panel-5 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/lynda_logo1r-d_72x72.png");
+                background-image: url("images/certificates/lynda_logo1r-d_72x72.png");
                 background-repeat: no-repeat;
                 background-position: center;
                 //background-size: cover;
               }
 
               #panel-6 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
+                background-image: url("images/certificates/Mobile-web-applications-Certificate-Foundation-large.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 31%;
                 //background-size: cover;
               }
 
               #panel-7 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
+                background-image: url("images/certificates/codecademy-users-raythompsonwebdev-achievements-.png");
                 background-repeat: no-repeat;
                 background-position: 50% 18%;
-                //background-size: cover;
+                
               }
 
               #panel-8 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Udacity_logo.png");
+                background-image: url("images/certificates/Udacity_logo.png");
                 background-repeat: no-repeat;
                 background-position: 50% 18%;
-                //background-size: cover;
+                
               }
 
               #panel-9 .slider-panel a.fancybox span {
-                background-image: url("images/large/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
+                background-image: url("images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
                 background-repeat: no-repeat;
                 background-position: 50% 61%;
                 //background-size: cover;
@@ -3322,7 +3341,7 @@ desktop 1440px*/
 
     #contactform {
       width: 48%;
-      padding: 0.5em;
+      
 
       div.wpcf7 {
         font-size: 1em;
@@ -3586,13 +3605,17 @@ desktop 1440px*/
         }
       }
 
-      .websiteImage {
-        width: 25%;
-      }
+
+
+      
 
       .website-text {
-        width: 75%;
-        /*gallery page styles*/
+        width: 100%;
+        
+                
+        .websiteImage {
+          width: 96%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -3805,7 +3828,7 @@ desktop 1440px*/
 
         .bylinecat {
           width: 10%;
-          line-height: 20px;
+          
 
           a {
             font-size: 0.85em;
@@ -3834,7 +3857,7 @@ desktop 1440px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           a {
             &:hover {
@@ -3894,7 +3917,7 @@ desktop 1440px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           a {
             font-size: 0.9em;
@@ -4154,7 +4177,7 @@ desktop 1440px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1280.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1280.webp");
 
       /*homepage container*/
       div#text-box-front {
@@ -4752,10 +4775,10 @@ desktop 1280px*/
 
       #contactform {
         width: 48%;
-        padding: 0.5em;
+        
 
         div.wpcf7 {
-          font-size: 1em;
+          
 
           span.ajax-loader {
             margin: 3% auto;
@@ -5008,13 +5031,15 @@ desktop 1280px*/
           }
         }
 
-        .websiteImage {
-          width: 25%;
-        }
+        
 
         .website-text {
-          width: 75%;
+          width: 100%;
           /*gallery page styles*/
+
+          .websiteImage {
+            width: 96%;
+          }
 
           h1.post-meta-key {
             margin-bottom: 0.5em;
@@ -5227,11 +5252,11 @@ desktop 1280px*/
 
           .bylinecat {
             width: 10%;
-            line-height: 20px;
+            
 
             a {
               font-size: 0.9em;
-              padding: 0.5%;
+              
 
               &:hover {
                 font-weight: bold;
@@ -5255,7 +5280,7 @@ desktop 1280px*/
           .tags-links,
           .edit-link,
           .comments-link {
-            line-height: 65px;
+            
 
             a {
               &:hover {
@@ -5315,8 +5340,7 @@ desktop 1280px*/
           .tags-links,
           .edit-link,
           .comments-link {
-            line-height: 65px;
-
+            
             a {
               font-size: 0.9em;
 
@@ -5629,7 +5653,7 @@ desktop 1280px*/
 
       /*frontpage-page-panel */
       #frontpage_container {
-        background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1024.png");
+        background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1024.webp");
         /*homepage container*/
         div#text-box-front {
           width: 100%;
@@ -6353,13 +6377,14 @@ desktop 1280px*/
         }
       }
 
-      .websiteImage {
-        width: 25%;
-      }
+      
 
       .website-text {
-        width: 75%;
+        
         /*gallery page styles*/
+        .websiteImage {
+          width: 96%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -6601,8 +6626,7 @@ desktop 1280px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
-
+          
           a {
             &:hover {
               cursor: pointer;
@@ -6921,7 +6945,7 @@ desktop 1280px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.webp");
       /*homepage container*/
       div#text-box-front {
         width: 100%;
@@ -7737,13 +7761,15 @@ desktop 1024px*/
         }
       }
 
-      .websiteImage {
-        width: 25%;
-      }
+      
 
       .website-text {
-        width: 75%;
+        
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 96%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -8187,7 +8213,7 @@ desktop 1024px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.webp");
       /*homepage container*/
       div#text-box-front {
         width: 100%;
@@ -9015,16 +9041,22 @@ desktop 980px*/
         }
       }
 
-      .websiteImage {
-        width: 35%;
-        float: none;
-        margin: auto;
-        display: block;
-      }
+      
 
       .website-text {
         width: 100%;
-        /*gallery page styles*/
+        display: block;
+        
+
+        
+
+        .websiteImage {
+          
+          width: 35%;
+          float: none;
+          margin: auto;
+          display: block;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -10328,16 +10360,16 @@ tablet 800px */
         }
       }
 
-      .websiteImage {
-        width: 35%;
-        float: none;
-        margin: auto;
-        display: block;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 35%;
+          
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -10567,6 +10599,7 @@ tablet 800px */
 
         p.right {
           width: 10%;
+          line-height: 55px;
 
           a.comments-count {
             font-size: 1.3em;
@@ -10581,7 +10614,7 @@ tablet 800px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          line-height: 55px;
           font-size: 0.8em;
 
           a {
@@ -10642,7 +10675,7 @@ tablet 800px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           a {
             font-size: 0.85em;
@@ -10792,7 +10825,7 @@ tablet 800px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.webp");
 
       /*homepage container*/
       div#text-box-front {
@@ -10885,7 +10918,7 @@ tablet 800px */
         //background-color:$color4;
 
         h1 {
-          font-size: 2.8em;
+          font-size: 2.5em;
         }
         h2 {
           font-size: 1.5em;
@@ -11253,7 +11286,7 @@ tablet 667px */
 
       h1#logo,
       h1#logo-blog {
-        font-size: 1.35em;
+        font-size: 1.3em;
 
         span {
           padding: 0;
@@ -11654,6 +11687,9 @@ tablet 667px */
       .website-text {
         width: 100%;
         /*gallery page styles*/
+        .websiteImage {
+          width: 35%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -11960,7 +11996,7 @@ tablet 667px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           a {
             font-size: 0.8em;
@@ -12108,7 +12144,7 @@ tablet 667px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.webp");
 
       /*homepage container*/
       div#text-box-front {
@@ -12194,7 +12230,7 @@ tablet 667px */
         height: 240px;
 
         h1 {
-          font-size: 2.5em;
+          font-size: 2.3em;
         }
         h2 {
           font-size: 1.3em;
@@ -12806,16 +12842,16 @@ tablet 600px */
         }
       }
 
-      .websiteImage {
-        width: 45%;
-        float: none;
-        margin: auto;
-        display: block;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 40%;
+          
+        }
 
         h1.post-meta-key {
           font-size: 1em;
@@ -13121,8 +13157,7 @@ tablet 600px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
-
+          
           a {
             font-size: 0.8em;
 
@@ -13308,6 +13343,7 @@ tablet 600px */
 /*
 tablet 536px */
 @media only screen and (max-width: 33.5em) {
+  
   .menu-toggle,
   .menu-main-container.toggled ul {
     display: block;
@@ -13315,9 +13351,10 @@ tablet 536px */
 
   .menu-toggle {
     position: fixed;
-    z-index: 100;
-    top: 0.2em;
-    left: calc(84% - 1vw);
+    z-index: 105;
+    display: block;
+    top: 0;
+    left: 86%;
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
@@ -13329,15 +13366,12 @@ tablet 536px */
   }
 
   .menu-toggle.hide {
-    left: 100vw;
+    left: 110vw;
   }
 
   /* Make sure the button doesn't hide when menu is open. */
 
-  .toggled .menu-toggle.hide {
-    bottom: 1em;
-  }
-
+  
   .menu-toggle:hover,
   .menu-toggle:focus {
     text-decoration: underline;
@@ -13350,7 +13384,7 @@ tablet 536px */
   }
 
   header {
-    height: 70px;
+    height: 55px;
 
     .site-logo {
       a {
@@ -13380,7 +13414,7 @@ tablet 536px */
 
       h1#logo,
       h1#logo-blog {
-        font-size: 1.3em;
+        font-size: 1.2em;
 
         span {
           padding: 0;
@@ -13400,14 +13434,15 @@ tablet 536px */
 
     nav.menu-main-container {
       position: fixed;
-      top: 5em;
+      top: 0;
       z-index: 100;
-      left: -250px;
-      width: 250px;
-      height: auto;
+      top: -250px;
+      width: 100vw;
+      height: 250px;
+      overflow: hidden;
 
       ul#menu-main {
-        height: 15.5em;
+        height: 100%;
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
         flex-flow: column;
@@ -13482,6 +13517,7 @@ tablet 536px */
           padding: 0.5em;
 
           p {
+            font-size: 0.85em;
             label {
               height: 30px;
 
@@ -13679,13 +13715,15 @@ tablet 536px */
         }
       }
 
-      .websiteImage {
-        width: 45%;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+        .websiteImage {
+          width: 45%;
+          
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -13926,8 +13964,7 @@ tablet 536px */
         .tags-links,
         .edit-link,
         .comments-link {
-          width: 65%;
-
+          
           a {
             &:hover {
               font-weight: bold;
@@ -14097,7 +14134,7 @@ tablet 536px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.webp");
 
       /*homepage container*/
       div#text-box-front {
@@ -14180,10 +14217,10 @@ tablet 536px */
 
       /*front-page image container*/
       div#svg-image-container {
-        height: 240px;
+        height: 230px;
 
         h1 {
-          font-size: 2.5em;
+          font-size: 2.1em;
         }
         h2 {
           font-size: 1.3em;
@@ -14502,7 +14539,7 @@ mobile 480px */
   }
 
   .menu-toggle {
-    left: calc(84% - 1vw);
+    left: 84%;
   }
 
   .menu-toggle.hide {
@@ -14536,7 +14573,7 @@ mobile 480px */
 
       h1#logo,
       h1#logo-blog {
-        font-size: 1.2em;
+        font-size: 1.1em;
 
         span {
           padding: 0;
@@ -14575,10 +14612,10 @@ mobile 480px */
     /*Mobile-Navigation*/
 
     nav.menu-main-container {
-      top: 3.2em;
+      
 
       ul#menu-main {
-        height: 15.3em;
+        height: 100%;
 
         li.menu-item {
           width: 100%;
@@ -14686,7 +14723,7 @@ mobile 480px */
           padding: 0.5em;
 
           p {
-            font-size: 0.85em;
+            font-size: 0.8em;
 
             label {
               height: 30px;
@@ -14952,13 +14989,15 @@ mobile 480px */
         }
       }
 
-      .websiteImage {
-        width: 50%;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 45%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -15516,17 +15555,21 @@ mobile 480px */
 
       /*front-page image container*/
       div#svg-image-container {
-        height: 230px;
+        height: 220px;
 
         h1 {
-          font-size: 2.2em;
+          font-size: 2em;
         }
         h2 {
           font-size: 1.2em;
         }
 
         a#projectLink {
-          font-size: 1.2em;
+          font-size: 1.1em;
+          margin:auto;
+          float:none;
+          display:block;
+
 
           &:hover {
             background-color: $color4;
@@ -15832,8 +15875,8 @@ mobile 414px */
   }
 
   .menu-toggle {
-    left: calc(84% - 1vw);
-    font-size: 0.85em;
+    left: 82%;
+    
   }
 
   .menu-toggle.hide {
@@ -15862,7 +15905,7 @@ mobile 414px */
       height: 3em;
       h1#logo,
       h1#logo-blog {
-        font-size: 1.1em;
+        font-size: 1em;
         height: 25px;
 
         span {
@@ -15904,7 +15947,7 @@ mobile 414px */
 
     /*Mobile-Navigation*/
     nav.menu-main-container {
-      top: 3.2em;
+      
 
       ul#menu-main {
         li.menu-item {
@@ -15924,7 +15967,7 @@ mobile 414px */
     padding: 0;
 
     h1 {
-      font-size: 0.95em;
+      
       text-align: center;
     }
 
@@ -16198,13 +16241,15 @@ mobile 414px */
         }
       }
 
-      .websiteImage {
-        width: 50%;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 50%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -16516,7 +16561,7 @@ mobile 414px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           a {
             font-size: 0.8em;
@@ -16693,9 +16738,9 @@ mobile 360px */
   }
 
   .menu-toggle {
-    left: calc(84% - 1vw);
-    font-size: 0.8em;
-    top: 2.4em;
+    left: 80%;
+    font-size: 0.9em;
+    top: 2em;
   }
 
   .menu-toggle.hide {
@@ -16753,7 +16798,7 @@ mobile 360px */
 
     /*Mobile-Navigation*/
     nav.menu-main-container {
-      top: 3.2em;
+      
 
       ul#menu-main {
         li.menu-item {
@@ -16772,7 +16817,6 @@ mobile 360px */
   #main-content {
     h1 {
       width: 100%;
-      font-size: 0.9em;
       margin-bottom: 0.5em;
       line-height: 25px;
     }
@@ -16842,6 +16886,7 @@ mobile 360px */
           padding: 0.5em;
 
           p {
+            font-size: 0.75em;
             label {
               height: 30px;
 
@@ -17098,13 +17143,15 @@ mobile 360px */
         }
       }
 
-      .websiteImage {
-        width: 50%;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 50%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -17560,7 +17607,7 @@ mobile 360px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-360.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-360.webp");
 
       /*homepage container*/
       div#text-box-front {
@@ -17648,14 +17695,14 @@ mobile 360px */
       /*front-page image container*/
       div#svg-image-container {
         h1 {
-          font-size: 2em;
+          font-size: 1.8em;
         }
         h2 {
           font-size: 1em;
         }
 
         a#projectLink {
-          font-size: 1.2em;
+          font-size: 1.1em;
 
           &:hover {
             background-color: $color4;
@@ -17973,8 +18020,7 @@ mobile 320px */
 
   .menu-toggle {
     top: 2.1em;
-    left: calc(84% - 1vw);
-    font-size: 0.85em;
+    left:77%;
   }
 
   .menu-toggle.hide {
@@ -18033,7 +18079,7 @@ mobile 320px */
 
     /*Mobile-Navigation*/
     nav.menu-main-container {
-      top: 3.2em;
+      
 
       ul#menu-main {
         height: 12.1em;
@@ -18355,13 +18401,15 @@ mobile 320px */
         }
       }
 
-      .websiteImage {
-        width: 45%;
-      }
+      
 
       .website-text {
         width: 100%;
         /*gallery page styles*/
+
+        .websiteImage {
+          width: 50%;
+        }
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
@@ -18813,7 +18861,7 @@ mobile 320px */
 
     /*frontpage-page-panel */
     #frontpage_container {
-      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-320.png");
+      background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-320.webp");
 
       /*homepage container*/
       div#text-box-front {
@@ -18901,7 +18949,7 @@ mobile 320px */
       /*front-page image container*/
       div#svg-image-container {
         h1 {
-          font-size: 1.8em;
+          font-size: 1.6em;
         }
         h2 {
           font-size: 1em;

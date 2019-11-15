@@ -2,6 +2,8 @@
 
 ## raythompsonwebdev.co.uk 
 
+Web developer portfolio website built using Custom wordpress theme with custom posts to display information, links and images each individual web project, a projects gallery page, an about page, a contact page and a blog page which will display links to a collection of blog posts related to web development sorted into categories. 
+
 Contributors: Raymond Thompson
 
 Tags: left-sidebar, flexible-header, custom-background, custom-header, editor-style, custom-logo, featured-images, custom-menu, portfolio 
@@ -19,15 +21,6 @@ License: GNU General Public License v2 or later
 ## Description 
 
 Custom wordpress personal portfolio.
-
-
-## Installation 
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-
-2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
-
-3. Click Activate to use your new theme right away.
 
 ## Frequently Asked Questions 
 
