@@ -296,6 +296,7 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
+/*
 // include custom jQuery
 function shapeSpace_include_custom_jquery() {
 
@@ -401,8 +402,8 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_projects_script' );
 function raythompsonwebdev_com_projects_script() {
 
 	if ( 'project' === get_post_type() || is_page( 'projects' ) ) {
-		wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
-		wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/websites.js', array( 'jquery' ), '20161110', true );
+		//wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
+		//wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/websites.js', array( 'jquery' ), '20161110', true );
 
 	}
 }
@@ -629,3 +630,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Summary Map additions.
  */
 require get_template_directory() . '/inc/map-function.php';
+
+/*
+
+function defer_parsing_of_js ( $url ) {
+	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	return "$url' defer ";
+	}
+	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+*/

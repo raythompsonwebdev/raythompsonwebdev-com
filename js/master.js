@@ -1,49 +1,56 @@
 
 // Hide/show toggle button on scroll
-jQuery(document).ready(function($){
 
-  var position, direction, previous;
+var prevScrollpos = window.pageYOffset;
 
-	$(window).scroll(function(){
+window.onscroll = function() {
 
-		if( $(this).scrollTop() >= position ){
-			direction = 'down';
-			if(direction !== previous){
-				$('header button.menu-toggle').addClass('hide');
-				previous = direction;
-			}
-		} else {
-			direction = 'up';
-			if(direction !== previous){
-				$('header button.menu-toggle').removeClass('hide');
-				previous = direction;
-			}
-		}
-		position = $(this).scrollTop();
-	});
+	var currentScrollPos = window.pageYOffset;
 
-	// sliding menu mobile
-	$('header button.menu-toggle').on('click', function(event){
+	if (prevScrollpos > currentScrollPos) {
 
-		event.preventDefault();
+		document.querySelector('.menu-toggle').classList.remove('hide');
 
-		// create menu variables
-		var slideoutMenu = $('header nav.menu-main-container ');
-		var slideoutMenuHeight = $('header nav.menu-main-container ').height();
+	} else {
+		document.querySelector('.menu-toggle').classList.add('hide');
+	}
 
-		// toggle open class
-		slideoutMenu.toggleClass("open");
+	prevScrollpos = currentScrollPos;
 
-		// slide menu
-		if (slideoutMenu.hasClass("open")) {
-			slideoutMenu.animate({
-				top: "0px"
-			});
-		} else {
-			slideoutMenu.animate({
-				top: -slideoutMenuHeight
-			}, 500);
-		}
-	});
+}
+
+// sliding menu mobile
+
+var menuToggle = document.querySelector('.menu-toggle');
+
+menuToggle.addEventListener('click', function(event){
+
+	event.preventDefault();
+
+	// create menu variables
+	var slideoutMenu = document.querySelector('.menu-main-container ');
+
+	var slideoutMenuHeight = slideoutMenu.offsetHeight;
+	
+	// toggle open class
+	slideoutMenu.classList.toggle("open");
+
+	slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
+
+	// slide menu
+	if (slideoutMenu.classList.contains("open")) {
+
+		slideoutMenu.style.top = "0px";
+		
+
+	} else {
+
+		
+		slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
+		slideoutMenu.style.top = -slideoutMenuHeight + 'px';
+	}
+
 
 });
+
+

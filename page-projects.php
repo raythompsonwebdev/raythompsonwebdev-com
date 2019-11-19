@@ -18,7 +18,7 @@
 get_header();
 ?>
 
-<h1><?php post_type_archive_title(); ?></h1>
+<h1><?php the_title(); ?></h1>
 <div class="main-text">
 <p><?php echo esc_html( 'Check out websites and web applications I am currently working on.', 'raythompsonwebdev-com' ); ?></p>
 </div>
@@ -29,22 +29,7 @@ get_header();
 
 	<div class="content">
 
-		<nav class="menuSwitch" role="navigation">
-
-			<ul>
-
-				<li class="cat-active" category="prod-cnt"><?php esc_html_e( 'All', 'raythompsonwebdev-com' ); ?></li>
-
-				<li class="" category="vanilla"><?php esc_html_e( 'Plain code', 'raythompsonwebdev-com' ); ?></li>
-
-				<li class="" category="wordpress"><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></li>
-
-
-			</ul>
-		</nav>
-
 		<br/>
-
 
 		<!-- Panel Container Starts Here -->
 		<?php

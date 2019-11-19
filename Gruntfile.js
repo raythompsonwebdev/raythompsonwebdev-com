@@ -30,14 +30,10 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          "js/minified/maps.min.js": ["js/maps.js"],
+          
           "js/minified/customizer.min.js": ["js/customizer.js"],
-          "js/minified/master.min.js": ["js/master.js"],
-          "js/minified/navigation.min.js": ["js/navigation.js"],
-          "js/minified/profile.min.js": ["js/profile.js"],
-          "js/minified/skip-link-focus-fix.min.js": [
-            "js/skip-link-focus-fix.js"
-          ],
+          "js/minified/master.min.js": ["js/master.js"],          
+          "js/minified/profile.min.js": ["js/profile.js"],          
           "js/minified/websites.min.js": ["js/websites.js"]
         }
       }

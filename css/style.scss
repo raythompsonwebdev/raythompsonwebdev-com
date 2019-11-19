@@ -46,6 +46,7 @@ desktop 1920px*/
     border: none;
   }
 
+    
   .fixed-side-social-container {
     display: none;
   }
@@ -160,9 +161,7 @@ desktop 1920px*/
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
       background: $color4;
-      color: $color8;
-      font-weight: normal;
-      text-align: center;
+      
     }
 
     /*Header Title*/
@@ -227,7 +226,7 @@ desktop 1920px*/
       -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
       flex: 1 0 auto;
-
+      
       ul#menu-main {
         padding: 0;
         margin: 0;
@@ -292,11 +291,25 @@ desktop 1920px*/
         }
       }
     }
+    
 
     /*Mobile-Navigation*/
     nav#mobile-nav {
       display: none;
     }
+
+    .menuDown{
+
+      top:0;
+  
+    }
+  
+    .menuUp{
+  
+      top:-250px;
+  
+    }
+
   }
 
   /*main-content box*/
@@ -341,13 +354,13 @@ desktop 1920px*/
       clear: both;
       font-family: $FontStyle;
       margin-left: 0.5em;
+      float:right;
 
       form.search-form {
         text-align: left;
         max-width: 100%;
         margin: 0;
         padding: 0;
-        float: right;
         height: 100%;
         display: block;
         width: 100%;
@@ -355,13 +368,13 @@ desktop 1920px*/
 
         label {
           width: auto;
-          display: block;
-          float: left;
+          display: inline-block;
           line-height: 30px;
           height: 30px;
           padding: 0;
           color: $color1;
           text-align: left;
+          width: 73%;
 
           span.screen-reader-text {
             width: auto;
@@ -369,13 +382,13 @@ desktop 1920px*/
         }
 
         input[type="search"] {
-          width: 96%;
+          width: 100%;
           margin: 0;
           padding: 0;
-          display: inline-block;
           border: none;
           line-height: 30px;
           height: 30px;
+          font-size:1em;
         }
 
         input[type="submit"] {
@@ -1886,8 +1899,9 @@ desktop 1920px*/
                 line-height: 1.5em;
                 margin: 0 auto;
                 min-height: 100px;
-                padding: 0.5em;
+                
                 background-color: $color4;
+                text-align: left;
                 a{
                   background-color:unset;
                   &:hover{
@@ -1942,7 +1956,7 @@ desktop 1920px*/
       #respond {
         display: block;
         clear: both;
-        padding-bottom: 1em;
+        
 
         h3#reply-title {
           width: 92%;
@@ -2100,23 +2114,54 @@ desktop 1920px*/
             }
           }
         }
+
+
       }
 
       p {
         padding: 0.5em;
+        a{
+          background-color:unset;
+          
+          &:hover{
+            color:$color1;
+            font-weight:bold;
+          }
+        }
+
       }
+
+      p:last-of-type{
+        background-color:$color2;
+        text-align:center;
+        a{
+          background-color:unset;
+          line-height:40px;
+          display:inline-block;
+          width:auto;
+          margin:0 0.25em;
+          
+          &:hover{
+            color:$color1;
+            font-weight:bold;
+          }
+        }
+      }
+      
 
       p.must-log-in {
         width: 90%;
-        display: inline-block;
+        display: block;
         line-height: 35px;
         margin: 1em auto;
         text-align: center;
+        background-color:$color2;
 
         a {
           display: inline-block;
           line-height: 25px;
-          background-color:unset;
+          background-color: unset;
+          width: auto;
 
           &:hover {
             font-weight: bold;
@@ -2828,8 +2873,9 @@ desktop 1920px*/
                 margin-left: 0;
                 background: $color1;
                 position: absolute;
-                left: 0;
+                left: 16.5%;
                 height: 100%;
+                width:0%;
                 @include Transition(all 0.2s ease-in 0s);
 
                 &:hover {
@@ -2840,16 +2886,18 @@ desktop 1920px*/
                 &:hover:after {
                   content: attr(data-percentage) "%";
                   position: relative;
-                  left: 101%;
+                  left: 100%;
                   display: block;
                   line-height: 50px;
                   font-size: 1.1em;
                   background-color: $color4;
                   color: $color1;
-                  width: 70px;
+                  width: 45px;
                   text-align: center;
                 }
               }
+             
+              
             }
 
             span {
@@ -3184,11 +3232,12 @@ desktop 1440px*/
     }
 
     hgroup {
+
       h1#logo,
       h1#logo-blog {
         line-height: 30px;
         height: 30px;
-        font-size: 1.6em;
+        font-size: 1.5em;
 
         span {
           height: 100%;
@@ -3265,8 +3314,7 @@ desktop 1440px*/
         }
 
         input[type="submit"] {
-          width: 25%;
-
+          
           font-size: 0.9em;
 
           &:hover {
@@ -4463,7 +4511,8 @@ desktop 1440px*/
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:45px;
+                  font-size: 1em;
                 }
               }
             }
@@ -4624,8 +4673,7 @@ desktop 1280px*/
       h1#logo,
       h1#logo-blog {
         font-size: 1.5em;
-        line-height: 30px;
-        height: 30px;
+        
 
         span {
           padding: 0;
@@ -4741,13 +4789,13 @@ desktop 1280px*/
 
       /*Search Box*/
       .social-1 {
-        width: 35%;
+        width: 30%;
 
         form.search-form {
           text-align: left;
 
           label {
-            font-size: 0.85em;
+            font-size: 0.9em;
           }
 
           input[type="search"] {
@@ -5189,6 +5237,7 @@ desktop 1280px*/
 
         /*Social media share buttons*/
         div.sharedaddy {
+
           h3.sd-title {
             width: 10%;
           }
@@ -5935,7 +5984,8 @@ desktop 1280px*/
                   }
 
                   &:hover:after {
-                    font-size: 1.1em;
+                    width:40px;
+                    font-size: 0.9em;
                   }
                 }
               }
@@ -6533,6 +6583,7 @@ desktop 1280px*/
 
       /*Social media share buttons*/
       div.sharedaddy {
+
         h3.sd-title {
           width: 10%;
         }
@@ -7230,7 +7281,8 @@ desktop 1280px*/
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:40px;
+                  font-size: 0.9em;
                 }
               }
             }
@@ -7384,7 +7436,7 @@ desktop 1024px*/
 
       h1#logo,
       h1#logo-blog {
-        font-size: 1.45em;
+        font-size: 1.4em;
 
         span {
           padding: 0;
@@ -7422,7 +7474,7 @@ desktop 1024px*/
 
   #main-content {
     padding: 0;
-    min-height: 580px;
+    
 
     h1 {
       font-size: 1.2em;
@@ -7919,6 +7971,7 @@ desktop 1024px*/
 
       /*Social media share buttons*/
       div.sharedaddy {
+
         h3.sd-title {
           width: 12%;
         }
@@ -8497,7 +8550,8 @@ desktop 1024px*/
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:40px;
+                  font-size: 0.9em;
                 }
               }
             }
@@ -8657,7 +8711,7 @@ desktop 980px*/
       height: 3.5em;
       h1#logo,
       h1#logo-blog {
-        font-size: 1.45em;
+        font-size: 1.4em;
 
         span {
           padding: 0;
@@ -8898,13 +8952,13 @@ desktop 980px*/
 
     /*Search Box*/
     .social-1 {
-      width: 40%;
+      width: 35%;
 
       form.search-form {
         text-align: left;
 
         label {
-          font-size: 0.8em;
+          font-size: 0.9em;
         }
 
         input[type="search"] {
@@ -9208,6 +9262,7 @@ desktop 980px*/
 
       /*Social media share buttons*/
       div.sharedaddy {
+
         h3.sd-title {
           width: 14%;
         }
@@ -9812,7 +9867,8 @@ desktop 980px*/
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:40px;
+                  font-size: 0.9em;
                 }
               }
             }
@@ -10520,8 +10576,8 @@ tablet 800px */
 
       /*Social media share buttons*/
       div.sharedaddy {
-        margin: 3% auto;
 
+        
         h3.sd-title {
           width: 16%;
         }
@@ -11138,7 +11194,8 @@ tablet 800px */
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:40px;
+                  font-size: 0.9em;
                 }
               }
             }
@@ -11251,7 +11308,6 @@ tablet 667px */
 @media only screen and (max-width: 41.6875em) {
   #wrapper_container {
     width: 98%;
-    height: auto;
     margin: 0 auto;
   }
 
@@ -11304,7 +11360,7 @@ tablet 667px */
 
     /*Navigation*/
     nav.menu-main-container {
-      width: 100%;
+      
       margin: 0;
 
       ul#menu-main {
@@ -11841,8 +11897,7 @@ tablet 667px */
 
       /*Social media share buttons*/
       div.sharedaddy {
-        margin: 3% auto;
-
+        
         h3.sd-title {
           width: 20%;
         }
@@ -12428,7 +12483,8 @@ tablet 667px */
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:40px;
+                  font-size: 0.85em;
                 }
               }
             }
@@ -12595,7 +12651,7 @@ tablet 600px */
 
     /*Navigation*/
     nav.menu-main-container {
-      width: 100%;
+      
       margin: 0;
 
       ul#menu-main {
@@ -13000,8 +13056,7 @@ tablet 600px */
 
       /*Social media share buttons*/
       div.sharedaddy {
-        margin: 3% auto;
-
+        
         h3.sd-title {
           width: 20%;
         }
@@ -13344,11 +13399,7 @@ tablet 600px */
 tablet 536px */
 @media only screen and (max-width: 33.5em) {
   
-  .menu-toggle,
-  .menu-main-container.toggled ul {
-    display: block;
-  }
-
+  
   .menu-toggle {
     position: fixed;
     z-index: 105;
@@ -13434,30 +13485,32 @@ tablet 536px */
 
     nav.menu-main-container {
       position: fixed;
-      top: 0;
       z-index: 100;
       top: -250px;
       width: 100vw;
       height: 250px;
       overflow: hidden;
+      margin:0;
 
       ul#menu-main {
         height: 100%;
         -webkit-flex-flow: column;
         -ms-flex-flow: column;
         flex-flow: column;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
 
         li.menu-item {
-          height: 45px;
+          height: 50px;
           list-style: none;
           width: 100%;
           display: block;
           background-color: $color2;
-          height: 45px;
-          margin-bottom: 0.25em;
+          margin-bottom: 0em;
 
           a {
-            line-height: 45px;
+            line-height: 50px;
             margin: 0;
             letter-spacing: 0.1em;
             font-size: 1em;
@@ -13481,9 +13534,7 @@ tablet 536px */
       }
     }
 
-    nav.menu-main-container.hide {
-      left: -5.5em;
-    }
+    
 
     /*Mobile-Navigation*/
   }
@@ -13580,7 +13631,7 @@ tablet 536px */
         text-align: left;
 
         label {
-          font-size: 0.85em;
+          font-size: 0.9em;
         }
 
         input[type="search"] {
@@ -13873,6 +13924,7 @@ tablet 536px */
 
       /*Social media share buttons*/
       div.sharedaddy {
+
         h3.sd-title {
           font-size: 0.8em;
         }
@@ -14420,7 +14472,8 @@ tablet 536px */
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:35px;
+                  font-size: 0.8em;
                 }
               }
             }
@@ -14533,11 +14586,7 @@ tablet 536px */
 /*
 mobile 480px */
 @media only screen and (max-width: 30em) {
-  .menu-toggle,
-  .menu-main-container.toggled ul {
-    display: block;
-  }
-
+  
   .menu-toggle {
     left: 84%;
   }
@@ -14560,9 +14609,7 @@ mobile 480px */
   #wrapper_container {
     width: 100%;
 
-    nav.menu-main-container.hide {
-      left: -29em;
-    }
+    
   }
 
   header {
@@ -14636,9 +14683,7 @@ mobile 480px */
       }
     }
 
-    nav.menu-main-container.hide {
-      left: -5.5em;
-    }
+    
   }
 
   #main-content {
@@ -15148,6 +15193,7 @@ mobile 480px */
 
       /*Social media share buttons*/
       div.sharedaddy {
+
         h3.sd-title {
           width: 100%;
           float: none;
@@ -15757,7 +15803,8 @@ mobile 480px */
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:35px;
+                  font-size: 0.8em;
                 }
               }
             }
@@ -15869,10 +15916,7 @@ mobile 480px */
 /*
 mobile 414px */
 @media only screen and (max-width: 25.875em) {
-  .menu-toggle,
-  .menu-main-container.toggled ul {
-    display: block;
-  }
+  
 
   .menu-toggle {
     left: 82%;
@@ -15892,9 +15936,7 @@ mobile 414px */
   #wrapper_container {
     width: 100%;
 
-    nav.menu-main-container.hide {
-      left: -29em;
-    }
+    
   }
 
   header {
@@ -15973,7 +16015,7 @@ mobile 414px */
 
     h2 {
       font-size: 0.9em;
-      text-indent: 0;
+      
     }
 
     h3 {
@@ -16150,7 +16192,7 @@ mobile 414px */
 
     /*Search Box*/
     .social-1 {
-      width: 100%;
+      
 
       form.search-form {
         text-align: left;
@@ -16400,11 +16442,12 @@ mobile 414px */
 
       /*Social media share buttons*/
       div.sharedaddy {
+
         h3.sd-title {
-          width: 100%;
-          float: none;
+                           
           font-size: 1em;
-          text-align: center;
+          
+          
         }
 
         .sd-title::before {
@@ -16732,11 +16775,7 @@ mobile 414px */
 /*
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
-  .menu-toggle,
-  .menu-main-container.toggled ul {
-    display: block;
-  }
-
+  
   .menu-toggle {
     left: 80%;
     font-size: 0.9em;
@@ -16756,9 +16795,7 @@ mobile 360px */
   #wrapper_container {
     width: 100%;
 
-    nav.menu-main-container.hide {
-      left: -29em;
-    }
+    
   }
 
   header {
@@ -16768,7 +16805,7 @@ mobile 360px */
       h1#logo,
       h1#logo-blog {
         font-size: 1em;
-        height: 30px;
+        
         line-height: 35px;
       }
 
@@ -16823,8 +16860,8 @@ mobile 360px */
 
     h2 {
       font-size: 0.9em;
-      margin-bottom: 0.5em;
-      height: auto;
+      
+      
     }
 
     h3 {
@@ -17005,7 +17042,7 @@ mobile 360px */
 
     /*Search Box*/
     .social-1 {
-      width: 100%;
+      
 
       form.search-form {
         text-align: left;
@@ -17302,10 +17339,9 @@ mobile 360px */
       /*Social media share buttons*/
       div.sharedaddy {
         h3.sd-title {
-          width: 100%;
-          float: none;
-          font-size: 1em;
-          text-align: center;
+
+          font-size: 0.9em;
+          
         }
 
         .sd-title::before {
@@ -17895,7 +17931,8 @@ mobile 360px */
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width:30px;
+                  font-size: 0.75em;
                 }
               }
             }
@@ -18013,11 +18050,7 @@ mobile 360px */
 /*
 mobile 320px */
 @media only screen and (max-width: 20em) {
-  .menu-toggle,
-  .menu-main-container.toggled ul {
-    display: block;
-  }
-
+  
   .menu-toggle {
     top: 2.1em;
     left:77%;
@@ -18029,10 +18062,7 @@ mobile 320px */
 
   #wrapper_container {
     width: 100%;
-
-    nav.menu-main-container.hide {
-      left: -29em;
-    }
+   
   }
 
   header {
@@ -18082,8 +18112,7 @@ mobile 320px */
       
 
       ul#menu-main {
-        height: 12.1em;
-
+        
         li.menu-item {
           a {
             font-size: 0.85em;
@@ -18266,7 +18295,7 @@ mobile 320px */
 
     /*Search Box*/
     .social-1 {
-      width: 100%;
+      
 
       form.search-form {
         text-align: left;
@@ -18562,10 +18591,9 @@ mobile 320px */
       /*Social media share buttons*/
       div.sharedaddy {
         h3.sd-title {
-          width: 100%;
-          float: none;
-          font-size: 1em;
-          text-align: center;
+          
+          font-size: 0.9em;
+          
         }
 
         .sd-title::before {
@@ -19139,7 +19167,8 @@ mobile 320px */
                 }
 
                 &:hover:after {
-                  font-size: 1.1em;
+                  width: 30px;
+                  font-size: 0.75em;
                 }
               }
             }
