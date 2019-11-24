@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-<!--<h1><?php _e( 'Web Developer and Enthusiatic WordPress User ?', 'raythompsonwebdev-com' ); ?></h1>
+<!-- <h1><?php _e( 'Web Developer and Enthusiatic WordPress User ?', 'raythompsonwebdev-com' ); ?></h1>
 
 <article class="main-text">
   
@@ -26,7 +26,7 @@ get_header(); ?>
 
   <br/>
 
-</article>-->
+</article> -->
 
   <!--search form -->
   <?php if ( is_home() || is_archive() ) : ?>

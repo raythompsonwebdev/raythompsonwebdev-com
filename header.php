@@ -2,7 +2,7 @@
 /**
  * *PHP version 7.2.
  *
- * Footer | core/footer.php.
+ * Header | core/header.php.
  *
  * @category   Header
  * @package    Raythompsonwebdev-com
@@ -26,8 +26,8 @@
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		
-		<link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Cabin:400,700">
-
+		<link href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" rel="stylesheet">
+		
 		<?php wp_head(); ?>
 	</head>
 
@@ -101,7 +101,7 @@
 					</hgroup>
 				<?php endif; ?>
 
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
+				<button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
 
 				<?php
 					// Checking if there's anything in Top Menu.

@@ -24,7 +24,7 @@
 
 <h1><?php _e( 'Hello, I\'m Raymond', 'raythompsonwebdev-com' ); ?></h1>
       <h2><?php _e( 'I build beautiful web applications', 'raythompsonwebdev-com' ); ?></h2>
-      <a id="projectLink" hrref="#">See Current Projects</a>
+      <a id="projectLink" href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/projects/'); ?>"><?php _e( 'See Current Projects', 'raythompsonwebdev-com' ); ?></a>
 
 
         <figure id="image-7"></figure>
@@ -35,9 +35,9 @@
 			type="image/svg+xml" 
 			id="image-4" 
 			alt="svg-image"
-			data="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
+			data="wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
 		</object>
-		<img id="image-5" src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
+		<img id="image-5" src="wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
 	</figure>-->
 
 </div>

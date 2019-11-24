@@ -23,9 +23,9 @@ function raythompsonwebdev_com_mapcontainer() {
 		} 
 		
 	</script>
-		
-	<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+		<!--AIzaSyBGDPBvpHN2MKD9lMLk1cfTuURAlxWHAag-->
+	<script rel="preconnect"
+	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" crossorigin>
 	</script>
 
 		<?php

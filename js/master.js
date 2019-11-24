@@ -1,24 +1,4 @@
 
-// Hide/show toggle button on scroll
-
-var prevScrollpos = window.pageYOffset;
-
-window.onscroll = function() {
-
-	var currentScrollPos = window.pageYOffset;
-
-	if (prevScrollpos > currentScrollPos) {
-
-		document.querySelector('.menu-toggle').classList.remove('hide');
-
-	} else {
-		document.querySelector('.menu-toggle').classList.add('hide');
-	}
-
-	prevScrollpos = currentScrollPos;
-
-}
-
 // sliding menu mobile
 
 var menuToggle = document.querySelector('.menu-toggle');
@@ -52,5 +32,25 @@ menuToggle.addEventListener('click', function(event){
 
 
 });
+
+// Hide/show toggle button on scroll
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+
+	var currentScrollPos = window.pageYOffset;
+
+	if (prevScrollpos > currentScrollPos) {
+
+		document.querySelector('.menu-toggle').classList.remove('hide');
+
+	} else {
+		document.querySelector('.menu-toggle').classList.add('hide');
+	}
+
+	prevScrollpos = currentScrollPos;
+
+}
 
 

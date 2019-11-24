@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 5
+ * *PHP version 7.2
  *
  * Functions | core/functions.php.
  *
@@ -108,12 +108,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-		/*
-		* Let WordPress manage the document title.
-		* By adding theme support, we declare that this theme does not use a
-		* hard-coded <title> tag in the document head, and expect WordPress to
-		* provide it for us.
-		*/
+		
 		add_theme_support( 'title-tag' );
 
 		// add theme support html5.
@@ -296,15 +291,15 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
-/*
+
 // include custom jQuery
-function shapeSpace_include_custom_jquery() {
+// function shapeSpace_include_custom_jquery() {
 
-	wp_deregister_script('jquery');
-	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
+// 	wp_deregister_script('jquery');
+// 	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), null, true);
 
-}
-add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');
+// }
+// add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');
 
 /**
  * Enqueue style sheets.
@@ -367,7 +362,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 function raythompsonwebdev_com_scripts_own() {
 
 	// master.
-	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array(), '1.0', true );
 
 	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -435,7 +430,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	 */
 	function raythompsonwebdev_com_google_script() {
 
-		wp_enqueue_script( 'googletagmanager', 'https://www.googletagmanager.com/gtag/js?id=UA-86655310-1', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'googletagmanager', 'https://www.googletagmanager.com/gtag/js?id=UA-86655310-1', array(), '20161110', true );
 
 		?>
 
@@ -631,12 +626,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 require get_template_directory() . '/inc/map-function.php';
 
-/*
 
-function defer_parsing_of_js ( $url ) {
-	if ( FALSE === strpos( $url, '.js' ) ) return $url;
-	if ( strpos( $url, 'jquery.js' ) ) return $url;
-	return "$url' defer ";
-	}
-	add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
-*/
+
+// function defer_parsing_of_js ( $url ) {
+// if ( FALSE === strpos( $url, '.js' ) ) return $url;
+// if ( strpos( $url, 'jquery.js' ) ) return $url;
+// return "$url' defer ";
+// }
+// add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
