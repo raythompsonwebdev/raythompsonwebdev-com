@@ -35,7 +35,8 @@ jQuery(document).ready(function($) {
       } else {
         percentage++;
 
-        key.style.width = `${percentageMaxWidth}%`;
+        //key.style.width = `${percentageMaxWidth}%`;
+        key.style.width = "".concat(percentageMaxWidth, "%");
       }
     }
   });

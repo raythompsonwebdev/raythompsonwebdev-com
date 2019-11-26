@@ -20,7 +20,7 @@
 
 <div id="frontpage_container">
 
-<div id="svg-image-container">
+<section id="svg-image-container">
 
 <h1><?php _e( 'Hello, I\'m Raymond', 'raythompsonwebdev-com' ); ?></h1>
       <h2><?php _e( 'I build beautiful web applications', 'raythompsonwebdev-com' ); ?></h2>
@@ -40,11 +40,11 @@
 		<img id="image-5" src="wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
 	</figure>-->
 
-</div>
+</section>
 
 	<div id="text-box-front">
 		
-		<h1><?php _e( 'Hello', 'raythompsonwebdev-com' ); ?></h1>
+		<h3><?php _e( 'Hello', 'raythompsonwebdev-com' ); ?></h3>
 
 		<p><?php _e( 'My name is Raymond. I am a web developer and I create custom WordPress themes, customise WordPress themes and build websites and web applications .', 'raythompsonwebdev-com' ); ?></p>
 
@@ -55,7 +55,8 @@
 
     <section id="calltoaction">
     <h1><?php _e( 'What I can do', 'raythompsonwebdev-com' ); ?></h1>
-			<article class="frntpgbox">
+
+			<section class="frntpgbox">
 			<span><i class="fa fa-wordpress"></i></span>
 				<h1><?php _e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
 					
@@ -64,9 +65,9 @@
         <p><?php _e( 'Javascript', 'raythompsonwebdev-com' ); ?></p>
 						
 					
-			</article>
+			</section>
 
-			<article class="frntpgbox">
+			<section class="frntpgbox">
 				<span><i class="fa fa-laptop"></i></span>
 					<h1><?php _e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
 					
@@ -74,9 +75,9 @@
 						<p><?php _e( 'SEO', 'raythompsonwebdev-com' ); ?></p>
 						<p><?php _e( 'Google Analytics', 'raythompsonwebdev-com' ); ?></p>
 					
-			</article>
+			</section>
 
-			<article class="frntpgbox">
+			<section class="frntpgbox">
 			<span><i class="fa fa-wrench"></i></span>
 					<h1><?php _e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 						
@@ -84,9 +85,9 @@
 							<p><?php _e( 'Custom Plugins', 'raythompsonwebdev-com' ); ?></p>
 							<p><?php _e( 'Custom Themes', 'raythompsonwebdev-com' ); ?></p>
 						
-			</article>
+			</section>
 
-			<article class="frntpgbox">
+			<section class="frntpgbox">
       <span><i class="fa fa-wrench"></i></span>
 				<h1><?php _e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
 					
@@ -94,10 +95,10 @@
 						<p><?php _e( 'Database', 'raythompsonwebdev-com' ); ?></p>
 						<p><?php _e( 'Debugging', 'raythompsonwebdev-com' ); ?></p>
 					
-			</article>
+			</section>
 			
 		</section>
-	</div>
+</section>
 </div>
 
 <?php get_footer(); ?>

@@ -333,6 +333,18 @@ desktop 1920px*/
       height: auto;
     }
 
+    p {
+      font-size: 1em;
+      font-weight: normal;
+      width: 100%;
+      letter-spacing: 0.025em;
+      line-height: 1.9em;
+      margin: 0 0 1em 0;
+      padding: 0.5em;
+      background-color: $color4;
+      font-family: $FontStyle;
+    }
+
     /*Search Box*/
     .social-1 {
       height: 35px;
@@ -431,25 +443,12 @@ desktop 1920px*/
     }
 
     /*maintext */
-    article.main-text,
-    div.main-text {
+    section.main-text{
       width: 100%;
       height: auto;
       padding: 0.5em;
       clear: both;
-
-      p {
-        font-size: 1em;
-        font-weight: normal;
-        width: 100%;
-        letter-spacing: 0.025em;
-        line-height: 1.9em;
-        margin: 0 0 1em 0;
-        padding: 0.5em;
-        background-color: $color4;
-        font-family: $FontStyle;
-      }
-
+      
       ul {
         margin: 2em 0;
         width: 100%;
@@ -481,6 +480,7 @@ desktop 1920px*/
 
             &:hover {
               color: $color4;
+              background-color:unset;
               font-weight: bold;
             }
           }
@@ -494,25 +494,7 @@ desktop 1920px*/
         width: 80%;
       }
     }
-
-    .seperator {
-      display: block;
-      height: 40px;
-      clear: both;
-    }
-
-    hgroup {
-      margin: 0;
-      padding: 0;
-    }
-
-    hr.blog-spacer {
-      margin: 2% auto;
-      width: 80%;
-      color: $color2;
-      outline: 0;
-      border: 0;
-    }
+           
 
     /*contact page map*/
     #map_container {
@@ -620,17 +602,31 @@ desktop 1920px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       margin: 2em 0;
       width: 45%;
       display: block;
       float: left;
 
       li {
-        font-family: "FontAwesome", $FontStyle;
+        font-family: $FontStyle;
+        list-style:none;
+        line-height: 40px;
 
-        &:before {
-          font-family: "FontAwesome";
+        a {
+          width: auto;
+          display: inline-block;
+          font-size: 1em;
+          line-height: 40px;
+          font-family: "FontAwesome", $FontStyle;
+
+          &:hover {
+            font-weight: bold;
+            background-color:unset;
+          }
+        }
+
+        a[href^="mailto"]:before {          
           content: "\f0e0";
           font-style: normal;
           display: block;
@@ -642,89 +638,49 @@ desktop 1920px*/
           float: left;
         }
 
-        a {
-          width: auto;
-          display: inline-block;
-          font-size: 1em;
-          line-height: 40px;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-          content: "\f39e";
-          font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
+        // a[href^="https://twitter.com"]:before {
+        //   content: "\f39e";
+        //   font-size: 1.4em;
+        // } 
+        
+        a[href^="https://twitter.com"]:before {
           content: "\f099";
+          font-style: normal;
+          display: block;
+          line-height: 40px;
+          height: 40px;
+          width: 45px;
+          text-align: center;
           font-size: 1.4em;
-        }
+          float: left;
+        }  
 
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-      background-color:unset;
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
+        a[href^="https://www.linkedin.com"]:before {
           content: "\f0e1";
+          font-style: normal;
+          display: block;
+          line-height: 40px;
+          height: 40px;
+          width: 45px;
+          text-align: center;
           font-size: 1.4em;
-        }
-
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
+          float: left;
+        }   
+       
+        a[href^="https://github.com"]:before {
           content: "\f09b";
+          font-style: normal;
+          display: block;
+          line-height: 40px;
+          height: 40px;
+          width: 45px;
+          text-align: center;
           font-size: 1.4em;
+          float: left;
         }
 
-        a {
-          width: auto;
-          font-size: 1em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
+      
     }
 
     /*sidebars*/
@@ -902,7 +858,6 @@ desktop 1920px*/
           }
         }
       }
-
       h2,
       h2.entry-title {
         text-indent: 0;
@@ -1024,7 +979,6 @@ desktop 1920px*/
         }
       }
       
-
       .website-text {
         width: 100%;
         display: inline-block;
@@ -2239,7 +2193,7 @@ desktop 1920px*/
             width:100%;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             -webkit-flex: 1 0 auto;
             -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -2370,7 +2324,7 @@ desktop 1920px*/
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
         flex: 1 0 auto;
@@ -3089,7 +3043,7 @@ desktop 1920px*/
     -ms-flex-content: justify;
     justify-content: space-between;
 
-    .socialpics {
+    aside.social-icons {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -3133,7 +3087,7 @@ desktop 1920px*/
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 20%;
       margin: 0;
       padding: 0;
@@ -3142,7 +3096,7 @@ desktop 1920px*/
       -webkit-flex: 0 1 auto;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-      li {
+      li.menu-item {
         height: 25px;
         list-style: none;
         width: 100%;
@@ -3165,6 +3119,7 @@ desktop 1920px*/
           &:hover {
             margin: 0;
             font-weight: bold;
+            background-color:unset;
           }
         }
       }
@@ -3262,11 +3217,7 @@ desktop 1440px*/
   /*main-content box*/
   #main-content {
     min-height: 700px;
-
-    hgroup {
-      margin: 0;
-      padding: 0;
-    }
+    
 
     h1 {
       font-size: 1.3em;
@@ -3280,6 +3231,10 @@ desktop 1440px*/
 
     h3 {
       font-size: 1.1em;
+    }
+
+    p {
+      font-size: 0.9em;
     }
 
     /*Search Box*/
@@ -3334,14 +3289,9 @@ desktop 1440px*/
     }
 
     /*maintext */
-    article.main-text,
-    div.main-text {
+    section.main-text{
       padding: 0.5em;
-
-      p {
-        font-size: 0.9em;
-      }
-
+      
       ul {
         width: 100%;
 
@@ -3364,8 +3314,7 @@ desktop 1440px*/
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -3431,85 +3380,42 @@ desktop 1440px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        font-size: 0.9em;
-
-        &:before {
-          font-size: 1.3em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.9em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
+        a[href^="mailto"]:before {          
+          content: "\f0e0";
+          font-size: 1.4em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
 
-        &:before {
-          font-size: 1.3em;
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -3580,11 +3486,12 @@ desktop 1440px*/
       }
 
       .seperator {
+        display: block;
         height: 1%;
+        clear: both;
       }
 
-      /*global*/
-      h1,
+      h1,      
       h1.page-title {
         font-size: 1.3em;
         line-height: 60px;
@@ -4232,7 +4139,7 @@ desktop 1440px*/
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             span {
               height: auto;
 
@@ -4291,7 +4198,7 @@ desktop 1440px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         height: 250px;
 
         //background-color:$color4;
@@ -4592,7 +4499,7 @@ desktop 1440px*/
   footer {
     margin-top: 1%;
 
-    .socialpics {
+    aside.social-icons {
       width: 25%;
 
       span {
@@ -4608,8 +4515,8 @@ desktop 1440px*/
       }
     }
 
-    ul {
-      li {
+    ul#menu-secondary {
+      li.menu-item {
         font-size: 1em;
 
         a {
@@ -4703,10 +4610,7 @@ desktop 1280px*/
   #main-content {
     min-height: 580px;
 
-    hgroup {
-      margin: 0;
-      padding: 0;
-    }
+    
 
     h1 {
       font-size: 1.2em;
@@ -4720,17 +4624,18 @@ desktop 1280px*/
       font-size: 1.1em;
     }
 
+    p {
+      font-size: 0.9em;
+    }
+
     hr {
       height: 1px;
       width: 80%;
 
-      article.main-text,
-      div.main-text {
+      section.main-text{
         padding: 0.5em;
 
-        p {
-          font-size: 0.9em;
-        }
+        
 
         ul {
           width: 100%;
@@ -4754,8 +4659,7 @@ desktop 1280px*/
 
         hr {
           height: 1px;
-          margin: 5% auto;
-          width: 80%;
+
         }
       }
 
@@ -4863,89 +4767,45 @@ desktop 1280px*/
         }
       }
 
-      ul.contact-details {
+      address#contact-details {
         margin: 2em 0;
         width: 45%;
 
         li {
-          font-size: 1em;
-
-          &::before {
+          font-family: $FontStyle;
+  
+          a {
+            
+            font-size: 1em;
+            
+  
+            &:hover {
+              font-weight: bold;
+              
+            }
+          }
+  
+          a[href^="mailto"]:before {          
+            content: "\f0e0";
+            font-size: 1.4em;
+            
+          }
+          
+          a[href^="https://twitter.com"]:before {
+            content: "\f099";
+            font-size: 1.4em;
+          }  
+  
+          a[href^="https://www.linkedin.com"]:before {
+            content: "\f0e1";
+            font-size: 1.4em;
+          }   
+         
+          a[href^="https://github.com"]:before {
+            content: "\f09b";
             font-size: 1.4em;
           }
-
-          a {
-            width: auto;
-            display: inline-block;
-
-            &:hover {
-              font-weight: bold;
-            }
-          }
-        }
-
-        li:nth-of-type(2) {
-          font-size: 1em;
-
-          &:before {
-            font-size: 1.3em;
-          }
-
-          a {
-            font-size: 0.9em;
-
-            &:hover {
-              font-weight: bold;
-            }
-          }
-        }
-
-        li:nth-of-type(3) {
-          font-size: 1em;
-
-          &:before {
-            font-size: 1.3em;
-          }
-
-          a {
-            font-size: 0.9em;
-
-            &:hover {
-              font-weight: bold;
-            }
-          }
-        }
-
-        li:nth-of-type(4) {
-          font-size: 1em;
-
-          &:before {
-            font-size: 1.3em;
-          }
-
-          a {
-            font-size: 0.9em;
-
-            &:hover {
-              font-weight: bold;
-            }
-          }
-        }
-
-        li:nth-of-type(5) {
-          font-size: 1em;
-
-          &:before {
-            font-size: 1.3em;
-          }
-
-          a {
-            font-size: 0.9em;
-
-            &:hover {
-              font-weight: bold;
-            }
-          }
+  
         }
       }
 
@@ -5001,7 +4861,7 @@ desktop 1280px*/
 
       /*regular Posts*/
       .post {
-        /*seperators*/
+        
         hr.blog-spacer {
           margin: 2% auto;
         }
@@ -5010,8 +4870,7 @@ desktop 1280px*/
           height: 1%;
         }
 
-        /*global*/
-        h1,
+        h1,       
         h1.page-title {
           font-size: 1.3em;
         }
@@ -5708,7 +5567,7 @@ desktop 1280px*/
               text-indent: 0.2em;
             }
 
-            article.frntpgbox {
+            section.frntpgbox {
               span {
                 height: auto;
 
@@ -5767,7 +5626,7 @@ desktop 1280px*/
 
         /*front-page image container*/
         /*front-page image container*/
-        div#svg-image-container {
+        section#svg-image-container {
           height: 250px;
 
           //background-color:$color4;
@@ -6109,42 +5968,7 @@ desktop 1280px*/
       }
     }
 
-    /*maintext */
-    article.main-text,
-    div.main-text {
-      padding: 0.5em;
-
-      p {
-        font-size: 0.85em;
-      }
-
-      ul {
-        width: 100%;
-
-        li {
-          font-size: 0.9em;
-
-          &::before {
-            width: 3%;
-          }
-
-          a {
-            display: inline-block;
-
-            &:hover {
-              font-weight: bold;
-            }
-          }
-        }
-      }
-
-      hr {
-        height: 1px;
-        margin: 5% auto;
-        width: 80%;
-      }
-    }
-
+    
     /*contact page map*/
     #map_container {
       width: 48.7293%;
@@ -6207,85 +6031,43 @@ desktop 1280px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        font-size: 0.9em;
-
-        &:before {
-          font-size: 1.3em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.9em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
+        a[href^="mailto"]:before {          
+          content: "\f0e0";
+          font-size: 1.4em;
+          
+        }
+                 
+      
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
 
-        &:before {
-          font-size: 1.3em;
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -6348,7 +6130,7 @@ desktop 1280px*/
 
     /*regular Posts*/
     .post {
-      /*seperators*/
+     
       hr.blog-spacer {
         margin: 2% auto;
       }
@@ -6357,7 +6139,7 @@ desktop 1280px*/
         height: 1%;
       }
 
-      /*global*/
+      
       h1,
       h1.page-title {
         font-size: 1.3em;
@@ -7002,7 +6784,7 @@ desktop 1280px*/
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             span {
               height: auto;
 
@@ -7061,7 +6843,7 @@ desktop 1280px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         height: 250px;
 
         //background-color:$color4;
@@ -7361,7 +7143,7 @@ desktop 1280px*/
   footer {
     margin-top: 1%;
 
-    .socialpics {
+    aside.social-icons {
       width: 30%;
 
       span {
@@ -7376,8 +7158,8 @@ desktop 1280px*/
       }
     }
 
-    ul {
-      li {
+    ul#menu-secondary {
+      li.menu-item {
         a {
           font-size: 0.8em;
         }
@@ -7476,13 +7258,14 @@ desktop 1024px*/
       font-size: 1em;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      font-size: 0.9em;
+    }
+
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.9em;
-      }
+      
 
       ul {
         width: 100%;
@@ -7576,86 +7359,42 @@ desktop 1024px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        font-size: 0.9em;
-        font-family: "FontAwesome", ($FontStyle);
-
-        &:before {
-          font-size: 1.3em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.9em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
+        a[href^="#"]:before {
+          
           font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
+
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -7739,7 +7478,7 @@ desktop 1024px*/
 
     /*regular Posts*/
     .post {
-      /*seperators*/
+     
       hr.blog-spacer {
         margin: 2% auto;
       }
@@ -7748,8 +7487,7 @@ desktop 1024px*/
         height: 1%;
       }
 
-      /*global*/
-      h1,
+      h1,      
       h1.page-title {
         font-size: 1.3em;
       }
@@ -8272,7 +8010,7 @@ desktop 1024px*/
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             span {
               height: auto;
 
@@ -8331,7 +8069,7 @@ desktop 1024px*/
 
       /*front-page image container*/
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         height: 250px;
 
         //background-color:$color4;
@@ -8628,7 +8366,7 @@ desktop 1024px*/
   footer {
     margin-top: 3%;
 
-    .socialpics {
+    aside.social-icons {
       width: 30%;
 
       .social-icon:hover {
@@ -8644,8 +8382,8 @@ desktop 1024px*/
       }
     }
 
-    ul {
-      li {
+    ul#menu-secondary {
+      li.menu-item {
         text-indent: 0;
 
         a {
@@ -8758,13 +8496,14 @@ desktop 980px*/
       font-size: 0.85em;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      font-size: 0.85em;
+    }
+
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.85em;
-      }
+      
 
       ul {
         width: 100%;
@@ -8788,8 +8527,7 @@ desktop 980px*/
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+   
       }
     }
 
@@ -8854,85 +8592,42 @@ desktop 980px*/
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        font-size: 0.9em;
-
-        &:before {
-          font-size: 1.3em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.9em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
+        a[href^="#"]:before {
+          
           font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
+
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -9020,7 +8715,7 @@ desktop 980px*/
 
     /*regular Posts*/
     .post {
-      /*seperators*/
+      
       hr.blog-spacer {
         margin: 2% auto;
       }
@@ -9028,9 +8723,7 @@ desktop 980px*/
       .seperator {
         height: 1%;
       }
-
-      /*global*/
-      h1,
+      h1,      
       h1.page-title {
         font-size: 1.3em;
       }
@@ -9603,7 +9296,7 @@ desktop 980px*/
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 48.5%;
             h1 {
               font-size: 0.9em;
@@ -9662,7 +9355,7 @@ desktop 980px*/
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
@@ -9941,7 +9634,7 @@ desktop 980px*/
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       width: 30%;
 
       .linkedin-icon span .fa-linkedin,
@@ -9952,10 +9645,10 @@ desktop 980px*/
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 45%;
 
-      li {
+      li.menu-item {
         a {
           font-size: 0.8em;
         }
@@ -10063,14 +9756,15 @@ tablet 800px */
       font-size: 1.2em;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      font-size: 0.8em;
+      line-height: 1.8em;
+    }
+
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.8em;
-        line-height: 1.8em;
-      }
+      
 
       ul {
         width: 100%;
@@ -10094,8 +9788,7 @@ tablet 800px */
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -10189,85 +9882,44 @@ tablet 800px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       width: 100%;
 
       li {
-        &:before {
-          font-size: 1.3em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.9em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
+        a[href^="#"]:before {
+          
           font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
+
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -10345,16 +9997,15 @@ tablet 800px */
 
     /*regular Posts*/
     .post {
-      /*seperators*/
+     
       hr.blog-spacer {
         margin: 2% auto;
       }
 
       .seperator {
         height: 1%;
-      }
+      } 
 
-      /*global*/
       h1,
       h1.page-title {
         font-size: 1.3em;
@@ -10891,7 +10542,7 @@ tablet 800px */
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 80%;
             margin: 1em auto;
             display: block;
@@ -10952,7 +10603,7 @@ tablet 800px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         -webkit-order: 0;
         -ms-flex-order: 0;
         order: 0;
@@ -11268,7 +10919,7 @@ tablet 800px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       .social-icon {
         width: 50%;
       }
@@ -11281,8 +10932,8 @@ tablet 800px */
       }
     }
 
-    ul {
-      li {
+    ul#menu-secondary {
+      li.menu-item {
         a {
           font-size: 0.75em;
         }
@@ -11392,14 +11043,15 @@ tablet 667px */
       width: 96%;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      font-size: 0.75em;
+      width: 100%;
+    }
+
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.75em;
-        width: 100%;
-      }
+      
 
       ul {
         width: 100%;
@@ -11424,8 +11076,7 @@ tablet 667px */
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -11457,83 +11108,42 @@ tablet 667px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        &:before {
-          font-size: 1.3em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.9em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
+        a[href^="#"]:before {
+          
           font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
+
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.3em;
-        }
-
-        a {
-          font-size: 0.9em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -11665,7 +11275,7 @@ tablet 667px */
 
     /*regular Posts*/
     .post {
-      /*seperators*/
+      
       hr.blog-spacer {
         margin: 2% auto;
       }
@@ -11674,7 +11284,6 @@ tablet 667px */
         height: 1%;
       }
 
-      /*global*/
       h1,
       h1.page-title {
         font-size: 1.2em;
@@ -12209,7 +11818,7 @@ tablet 667px */
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 85%;
 
             span {
@@ -12269,7 +11878,7 @@ tablet 667px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         height: 240px;
 
         h1 {
@@ -12559,7 +12168,7 @@ tablet 667px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       .linkedin-icon span .fa-linkedin,
       .twitter-icon span .fa-twitter,
       .facebook-icon span .fa-facebook,
@@ -12568,10 +12177,10 @@ tablet 667px */
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 25%;
 
-      li {
+      li.menu-item {
         a {
           font-size: 0.75em;
         }
@@ -12675,6 +12284,10 @@ tablet 600px */
       font-size: 1em;
     }
 
+    p {
+      font-size: 0.75em;
+    }
+
     #contactform {
       padding: 0.5em;
 
@@ -12728,18 +12341,12 @@ tablet 600px */
       }
     }
 
-    article.main-text,
-    div.main-text {
+    section.main-text{
       padding: 0.5em;
-
-      p {
-        font-size: 0.75em;
-      }
-
+      
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -12827,7 +12434,7 @@ tablet 600px */
 
     /*regular Posts*/
     .post {
-      /*seperators*/
+      
       hr.blog-spacer {
         margin: 2% auto;
       }
@@ -12836,7 +12443,6 @@ tablet 600px */
         height: 1%;
       }
 
-      /*global*/
       h1,
       h1.page-title {
         font-size: 1.2em;
@@ -13360,7 +12966,7 @@ tablet 600px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       .social-icon {
         width: 25%;
       }
@@ -13373,8 +12979,8 @@ tablet 600px */
       }
     }
 
-    ul {
-      li {
+    ul#menu-secondary {
+      li.menu-item{
         a {
           font-size: 0.75em;
         }
@@ -13475,10 +13081,11 @@ tablet 536px */
       position: fixed;
       z-index: 100;
       top: -250px;
-      width: 100vw;
+      width: 100%;
       height: 250px;
       overflow: hidden;
       margin:0;
+      left:0;
 
       ul#menu-main {
         height: 100%;
@@ -13542,6 +13149,10 @@ tablet 536px */
       font-size: 0.95em;
     }
 
+    p {
+      font-size: 0.75em;
+    }
+
     #contactform {
       padding: 0.5em;
 
@@ -13596,18 +13207,14 @@ tablet 536px */
       }
     }
 
-    article.main-text,
-    div.main-text {
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.75em;
-      }
+      
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -13692,7 +13299,7 @@ tablet 536px */
     .post {
       padding: 0 1%;
 
-      /*seperators*/
+      
       hr.blog-spacer {
         margin: 2% auto;
       }
@@ -13701,7 +13308,6 @@ tablet 536px */
         height: 1%;
       }
 
-      /*global*/
       h1,
       h1.page-title {
         font-size: 1.2em;
@@ -14196,7 +13802,7 @@ tablet 536px */
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 85%;
 
             span {
@@ -14256,7 +13862,7 @@ tablet 536px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         height: 230px;
 
         h1 {
@@ -14546,7 +14152,7 @@ tablet 536px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       width: 40%;
 
       .social-icon {
@@ -14561,8 +14167,8 @@ tablet 536px */
       }
     }
 
-    ul {
-      li {
+    ul#menu-secondary {
+      li.menu-item{
         a {
           font-size: 0.75em;
         }
@@ -14696,15 +14302,20 @@ mobile 480px */
       height: auto;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      
+      letter-spacing: 0.02em;
+    }
+
+
+    section.main-text{
       padding: 0.5em;
 
       p {
         text-align: justify;
-        letter-spacing: 0.02em;
+        
       }
-
+     
       ul {
         width: 100%;
 
@@ -14732,10 +14343,7 @@ mobile 480px */
       }
     }
 
-    .seperator {
-      display: none;
-    }
-
+    
     #map_container {
       float: none;
       width: 85%;
@@ -14798,83 +14406,42 @@ mobile 480px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        &:before {
-          font-size: 1.2em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.8em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(2) {
-        font-size: 1em;
+        a[href^="#"]:before {
+          
+          font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
 
-        &:before {
-          font-size: 1.2em;
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -14964,11 +14531,8 @@ mobile 480px */
         margin: 2% auto;
       }
 
-      .seperator {
-        height: 1%;
-      }
+      
 
-      /*global*/
       h1,
       h1.page-title {
         font-size: 1.1em;
@@ -15528,7 +15092,7 @@ mobile 480px */
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 85%;
 
             span {
@@ -15588,7 +15152,7 @@ mobile 480px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         height: 220px;
 
         h1 {
@@ -15880,7 +15444,7 @@ mobile 480px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       .linkedin-icon span .fa-linkedin,
       .twitter-icon span .fa-twitter,
       .facebook-icon span .fa-facebook,
@@ -15889,10 +15453,10 @@ mobile 480px */
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 35%;
 
-      li {
+      li.menu-item {
         a {
           font-size: 0.7em;
         }
@@ -16010,13 +15574,13 @@ mobile 414px */
       font-size: 0.9em;
     }
 
-    article.main-text,
-    div.main-text {
-      padding: 0.5em;
+    p {
+      font-size: 0.75em;
+    }
 
-      p {
-        font-size: 0.75em;
-      }
+    section.main-text{
+      padding: 0.5em;
+     
 
       ul {
         width: 100%;
@@ -16040,8 +15604,7 @@ mobile 414px */
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -16102,79 +15665,42 @@ mobile 414px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        &:before {
-          font-size: 1.2em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.8em;
-        }
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.8em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
+        a[href^="#"]:before {
+          
+          font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
 
-        &:before {
-          font-size: 1.2em;
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.8em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -16214,11 +15740,7 @@ mobile 414px */
         margin: 2% auto;
       }
 
-      .seperator {
-        height: 1%;
-      }
-
-      /*global*/
+      
       h1,
       h1.page-title {
         font-size: 1.2em;
@@ -16738,7 +16260,7 @@ mobile 414px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       .linkedin-icon span .fa-linkedin,
       .twitter-icon span .fa-twitter,
       .facebook-icon span .fa-facebook,
@@ -16748,10 +16270,10 @@ mobile 414px */
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 30%;
 
-      li {
+      li.menu-item {
         a {
           font-size: 0.7em;
         }
@@ -16856,13 +16378,14 @@ mobile 360px */
       font-size: 0.85em;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      font-size: 0.75em;
+    }
+
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.75em;
-      }
+      
 
       ul {
         width: 100%;
@@ -16886,8 +16409,7 @@ mobile 360px */
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -16952,79 +16474,42 @@ mobile 360px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        &:before {
-          font-size: 1.2em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.7em;
-        }
-      }
-
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.7em;
+          
+          font-size: 1em;
+          
 
           &:hover {
             font-weight: bold;
+            
           }
         }
-      }
 
-      li:nth-of-type(3) {
-        font-size: 1em;
+        a[href^="#"]:before {
+          
+          font-size: 1.3em;
+          
+        }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
 
-        &:before {
-          font-size: 1.2em;
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.7em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.7em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.7em;
-
-          &:hover {
-            font-weight: bold;
-          }
-        }
       }
     }
 
@@ -17111,12 +16596,7 @@ mobile 360px */
         margin: 2% auto;
       }
 
-      .seperator {
-        height: 1%;
-      }
-
-      /*global*/
-      h1,
+      h1,      
       h1.page-title {
         font-size: 1.1em;
       }
@@ -17657,7 +17137,7 @@ mobile 360px */
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 90%;
 
             span {
@@ -17717,7 +17197,7 @@ mobile 360px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         h1 {
           font-size: 1.8em;
         }
@@ -18013,7 +17493,7 @@ mobile 360px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
       .linkedin-icon span .fa-linkedin,
       .twitter-icon span .fa-twitter,
       .facebook-icon span .fa-facebook,
@@ -18023,10 +17503,10 @@ mobile 360px */
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 30%;
 
-      li {
+      li.menu-item {
         a {
           font-size: 0.7em;
         }
@@ -18127,13 +17607,14 @@ mobile 320px */
       font-size: 0.8em;
     }
 
-    article.main-text,
-    div.main-text {
+    p {
+      font-size: 0.7em;
+    }
+
+    section.main-text{
       padding: 0.5em;
 
-      p {
-        font-size: 0.7em;
-      }
+      
 
       ul {
         width: 100%;
@@ -18157,8 +17638,7 @@ mobile 320px */
 
       hr {
         height: 1px;
-        margin: 5% auto;
-        width: 80%;
+
       }
     }
 
@@ -18221,69 +17701,47 @@ mobile 320px */
     }
 
     /*contact page contact details*/
-    ul.contact-details {
+    address#contact-details {
       li {
-        &:before {
-          font-size: 1.2em;
-        }
+        font-family: $FontStyle;
 
         a {
-          font-size: 0.7em;
-        }
-      }
+          
+          font-size: 1em;
+          
 
-      li:nth-of-type(2) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.7em;
-        }
-      }
-
-      li:nth-of-type(3) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
+          &:hover {
+            font-weight: bold;
+            
+          }
         }
 
-        a {
-          font-size: 0.7em;
+        a[href^="#"]:before {
+          
+          font-size: 1.3em;
+          
         }
-      }
+        
+        a[href^="https://twitter.com"]:before {
+          content: "\f099";
+          font-size: 1.4em;
+        }  
 
-      li:nth-of-type(4) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
-        }
-
-        a {
-          font-size: 0.7em;
-        }
-      }
-
-      li:nth-of-type(5) {
-        font-size: 1em;
-
-        &:before {
-          font-size: 1.2em;
+        a[href^="https://www.linkedin.com"]:before {
+          content: "\f0e1";
+          font-size: 1.4em;
+        }   
+       
+        a[href^="https://github.com"]:before {
+          content: "\f09b";
+          font-size: 1.4em;
         }
 
-        a {
-          font-size: 0.7em;
-        }
       }
     }
 
     /*Search Box*/
-    .social-1 {
-      
+    .social-1 {     
 
       form.search-form {
         text-align: left;
@@ -18304,6 +17762,7 @@ mobile 320px */
           }
         }
       }
+
     }
 
     blockquote {
@@ -18360,12 +17819,8 @@ mobile 320px */
       hr.blog-spacer {
         margin: 2% auto;
       }
-
-      .seperator {
-        height: 1%;
-      }
-
-      /*global*/
+      
+     
       h1,
       h1.page-title {
         font-size: 1em;
@@ -18417,8 +17872,7 @@ mobile 320px */
           }
         }
       }
-
-      
+     
 
       .website-text {
         width: 100%;
@@ -18903,7 +18357,7 @@ mobile 320px */
             text-indent: 0.2em;
           }
 
-          article.frntpgbox {
+          section.frntpgbox {
             width: 85%;
 
             span {
@@ -18963,7 +18417,7 @@ mobile 320px */
       }
 
       /*front-page image container*/
-      div#svg-image-container {
+      section#svg-image-container {
         h1 {
           font-size: 1.6em;
         }
@@ -19242,7 +18696,8 @@ mobile 320px */
   }
 
   footer {
-    .socialpics {
+    aside.social-icons {
+
       .linkedin-icon span .fa-linkedin,
       .twitter-icon span .fa-twitter,
       .facebook-icon span .fa-facebook,
@@ -19252,10 +18707,10 @@ mobile 320px */
       }
     }
 
-    ul {
+    ul#menu-secondary {
       width: 30%;
 
-      li {
+      li.menu-item {
         a {
           font-size: 0.7em;
         }

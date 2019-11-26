@@ -17,7 +17,7 @@
  */
 get_header(); ?>
 
-<div class="main-text">
+<section class="main-text">
 
 	<h1><?php _e( 'Privacy Policy', 'raythompsonwebdev-com' ); ?></h1>
 
@@ -175,6 +175,6 @@ get_header(); ?>
 
 	<p>v.3.0 November 2017 Edited &amp; customised by:RAYTHOMPSONWEBDEV.CO.UK</p>
 
-</div>
+</section>
 
 <?php get_footer(); ?>

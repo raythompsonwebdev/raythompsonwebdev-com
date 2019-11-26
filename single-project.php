@@ -113,16 +113,17 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
 ?>
 
 <nav class="navigation">
+  
   <h2 ><?php _e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
   <div class="nav-links">
 
-  <div class="nav-previous">
-      <?php previous_post_link( '%link' ); ?>
-  </div>
+    <div class="nav-previous">
+        <?php previous_post_link( '%link' ); ?>
+    </div>
 
-  <div class="nav-next">
-      <?php next_post_link( '%link' ); ?>
-  </div>
+    <div class="nav-next">
+        <?php next_post_link( '%link' ); ?>
+    </div>
 
   </div>
 

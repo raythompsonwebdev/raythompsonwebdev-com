@@ -17,7 +17,7 @@
 
 get_header(); ?>
 
-<div class="main-text">
+<section class="main-text">
 	<h1><?php esc_html_e( '404: Page not Found!?', 'raythompsonwebdev-com' ); ?></h1>
 
 	<h2>
@@ -27,6 +27,6 @@ get_header(); ?>
 		</a>.
 	</h2>
 
-</div>
+</section>
 
 <?php get_footer(); ?>

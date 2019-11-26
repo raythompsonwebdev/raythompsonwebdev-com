@@ -18,7 +18,7 @@ get_header(); ?>
 
 <!-- <h1><?php _e( 'Web Developer and Enthusiatic WordPress User ?', 'raythompsonwebdev-com' ); ?></h1>
 
-<article class="main-text">
+<section class="main-text">
   
   <p>
     <?php _e( ' I would like to share with you what I have learnt through the numerous tutorials tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46;', 'raythompsonwebdev-com' ); ?>
@@ -26,7 +26,7 @@ get_header(); ?>
 
   <br/>
 
-</article> -->
+</section> -->
 
   <!--search form -->
   <?php if ( is_home() || is_archive() ) : ?>
@@ -35,7 +35,7 @@ get_header(); ?>
     <span class="social-1"></span>
   <?php endif; ?>
 
-  <br/><br/>
+
 
   <?php  get_template_part( 'template-parts/content', get_post_format() ); ?>
 

@@ -28,41 +28,40 @@
 		wp_nav_menu(
 			array(
 				'menu'      => 'Secondary',
-				'container' => 'footer',
+				'container' => 'footer'
 			)
 		);
 	}
 	?>
 
-<div class="socialpics">
+	<aside class="social-icons">
+
+		<a class="social-icon linkedin-icon" href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">
+			<span>
+				<i class="fa fa-linkedin"></i>
+			</span>
+		</a>
 
 
-	<a class="social-icon linkedin-icon" href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">
-		<span>
-			<i class="fa fa-linkedin"></i>
-		</span>
-	</a>
+		<a class="social-icon twitter-icon" href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">
+			<span>
+				<i class="fa fa-twitter"></i>
+			</span>
+		</a>
 
+		<a class="social-icon facebook-icon" href="<?php echo esc_url( '#', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Link No Longer Available', 'raythompsonwebdev-com' ); ?>">
+			<span>
+				
+			</span>
+		</a>
 
-	<a class="social-icon twitter-icon" href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">
-		<span>
-			<i class="fa fa-twitter"></i>
-		</span>
-	</a>
+		<a class="social-icon google-icon" href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
+			<span>
+				<i class="fa fa-github"></i>
+			</span>
+		</a>
 
-	<a class="social-icon facebook-icon" href="<?php echo esc_url( '#', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Link No Longer Available', 'raythompsonwebdev-com' ); ?>">
-		<span>
-			
-		</span>
-	</a>
-
-	<a class="social-icon google-icon" href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
-		<span>
-			<i class="fa fa-github"></i>
-		</span>
-	</a>
-
-</div>
+	</aside>
 
 
 </footer>
@@ -88,7 +87,7 @@
 </p>
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 WebFontConfig = {
 	google: { families: [ 'Cabin:400,700', 'PT+Sans:400,700' ] }
 };
@@ -99,7 +98,7 @@ WebFontConfig = {
 	wf.async = 'true';
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(wf, s);
-})(); </script>
+})(); </script> -->
 
 <?php wp_footer(); ?>
 
