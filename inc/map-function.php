@@ -23,7 +23,11 @@ function raythompsonwebdev_com_mapcontainer() {
 		} 
 		
 	</script>
+<<<<<<< HEAD
 		<!---->
+=======
+		
+>>>>>>> 001fe1c36d05fe2196ac5a5e6da9b5146cf509d0
 	<script rel="preconnect"
 	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" crossorigin>
 	</script>
