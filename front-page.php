@@ -44,9 +44,9 @@
 
 	<div id="text-box-front">
 		
-		<h3><?php _e( 'Hello', 'raythompsonwebdev-com' ); ?></h3>
+		<!-- <h3><?php _e( 'Hello', 'raythompsonwebdev-com' ); ?></h3> -->
 
-		<p><?php _e( 'My name is Raymond. I am a web developer and I create custom WordPress themes, customise WordPress themes and build websites and web applications .', 'raythompsonwebdev-com' ); ?></p>
+		<p><?php _e( 'I am a web developer and I love to create custom WordPress themes, customise WordPress themes and build web applications.', 'raythompsonwebdev-com' ); ?></p>
 
 		<p><?php _e( 'Whether it\'s for a small business or a personal goal, I can help you achieve your on-line goals with a website or web application specifically tailored for your needs.', 'raythompsonwebdev-com' ); ?></p>
 	<p><?php _e( 'From idea to launch I can help build your project with the focus on simplicity, usability and accessibility for all your users. I use clean semantic code and following latest web standards compliances and best practices. I can ensure any website or web application built can be found by most search engines, viewed within in most modern browsers and have fast page loading for a great user experience.', 'raythompsonwebdev-com' ); ?></p>
@@ -54,7 +54,7 @@
   
 
     <section id="calltoaction">
-    <h1><?php _e( 'What I can do', 'raythompsonwebdev-com' ); ?></h1>
+    <h1 id="front-title"><?php _e( 'What I can do', 'raythompsonwebdev-com' ); ?></h1>
 
 			<section class="frntpgbox">
 			<span><i class="fa fa-wordpress"></i></span>

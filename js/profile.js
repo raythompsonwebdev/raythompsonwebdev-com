@@ -11,15 +11,13 @@ jQuery(document).ready(function($) {
     //disable click event
     return false;
   });
+
+
 });
-
-/*
-
-*/
 
 
 //Responsive chart
-(function responsiveGraph() {
+function responsiveGraph() {
   var chartBar = document.querySelectorAll(".bar");
 
   chartBar.forEach(function(key) {
@@ -40,4 +38,6 @@ jQuery(document).ready(function($) {
       }
     }
   });
-})();
+};
+
+responsiveGraph();

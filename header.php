@@ -26,7 +26,7 @@
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		
-		<!-- <link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" > -->
+		<link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" >
 		
 		<?php wp_head(); ?>
 	</head>

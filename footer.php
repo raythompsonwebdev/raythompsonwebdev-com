@@ -87,7 +87,7 @@
 </p>
 </div>
 
-<!-- <script type="text/javascript">
+ <script type="text/javascript">
 WebFontConfig = {
 	google: { families: [ 'Cabin:400,700', 'PT+Sans:400,700' ] }
 };
@@ -98,7 +98,7 @@ WebFontConfig = {
 	wf.async = 'true';
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(wf, s);
-})(); </script> -->
+})(); </script> 
 
 <?php wp_footer(); ?>
 
