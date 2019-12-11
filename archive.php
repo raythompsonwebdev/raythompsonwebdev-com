@@ -53,8 +53,8 @@ get_header();
 <?php } else { ?>
 
 	<figure class="featuredImage">
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<img src="<?php echo esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+		<a href="<?= esc_url( get_permalink() ); ?>" rel="bookmark">
+		<img src="<?= esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<? esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 		</a>
 	</figure>
 

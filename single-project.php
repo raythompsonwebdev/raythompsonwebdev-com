@@ -16,8 +16,9 @@
 
 get_header();
 
-$customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
+
+
 
 <?php
   if ( have_posts() ) :
@@ -34,15 +35,12 @@ $customterm = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxo
     <div class="item item1">
       
       <figure class="websiteImage">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/04/www-
-          <?php
-          global $post;
-          $post_slug = $post->post_name;
-          echo _( $post_slug, 'raythompsonwebdev-com' );
-          ?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/12/www-<?php $post_slug = $post->post_name; _e( $post_slug, 'raythompsonwebdev-com' ); ?>-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?>
         </a>
       </figure>
     </div>
+
+    
 
     <?php $project_name = get_post_meta( get_the_ID(), 'project_name', true ); ?>
 

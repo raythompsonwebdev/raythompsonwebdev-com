@@ -22,6 +22,9 @@
  * @param string $sep   Optional separator.
  * @return string Filtered title.
  */
+
+require_once( get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php');
+
 function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
 	global $paged, $page;
 
@@ -317,30 +320,32 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
 /**
  * Load the html5.
  *  */
+add_action( 'wp_enqueue_scripts', function ()
+{
+	$conditional_scripts = [
 
-$conditional_scripts = array(
+		'html5shiv'   => '/js/old-browser-scripts/html5shiv.min.js',
+		'respond'     => '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+		'selectivizr' => '/js/old-browser-scripts/selectivizr-min.js',
 
-	'html5shiv'   => get_template_directory_uri() . '/js/old-browser-scripts/html5shiv.min.js',
-	'respond'     => get_template_directory_uri() . '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
-  'selectivizr' => get_template_directory_uri() . '/js/old-browser-scripts/selectivizr-min.js',
+	];
+	foreach ( $conditional_scripts as $handle => $src ) {
+		wp_enqueue_script( $handle, get_template_directory_uri() , array(), '1.0', false );
+	}
+	add_filter(
+		'script_loader_tag',
 
-);
-foreach ( $conditional_scripts as $handle => $src ) {
-	wp_enqueue_script( $handle, $src, array(), '1.0', false );
-}
-add_filter(
-	'script_loader_tag',
-	function( $tag, $handle ) use ( $conditional_scripts ) {
+		function( $tag, $handle ) use ( $conditional_scripts ) {
 
-		if ( array_key_exists( $handle, $conditional_scripts ) ) {
-			$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
-		}
-		return $tag;
-	},
-	10,
-	2
-);
-
+			if ( array_key_exists( $handle, $conditional_scripts ) ) {
+				$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
+			}
+			return $tag;
+		},
+		10,
+		2
+	);
+}, 11 );
 
 /**
  * Enqueue IE8 style sheets.
@@ -563,8 +568,8 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
  */
 function raythompsonwebdev_com_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
-		$attr['sizes']   = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 60vw, (max-width: 1920px) 62vw, 840px';
-		! $attr['sizes'] = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 88vw, 1440px';
+		$attr['sizes']   = '(max-width: 736px) 85vw, (max-width: 67px) 67vw, (max-width: 60px) 60vw, (max-width: 62px) 62vw, 85px';
+		! $attr['sizes'] = '(max-width: 736px) 736vw, (max-width: 1024px) 1024vw, (max-width: 1920px) 1920vw, 1920px';
 	}
 	return $attr;
 }

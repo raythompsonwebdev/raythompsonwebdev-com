@@ -21,12 +21,12 @@ get_header();
 <h1><?php the_title(); ?></h1>
 <section class="main-text">
 	
-<p><?php echo esc_html( 'Check out websites and web applications I am currently working on.', 'raythompsonwebdev-com' ); ?></p>
+<p><?= _e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
 </section>
 
 
-
-<div id="photocontainer" ><!-- Container Starts Here -->
+<!-- End of PhotoContainer -->
+<div id="showcaseContainer" >
 
 	<div class="content">
 
@@ -34,24 +34,24 @@ get_header();
 
 		<!-- Panel Container Starts Here -->
 		<?php
-		$args = array(
-			'post_type'      => 'project',
-			'posts_per_page' => 10,
-		);
-		$loop = new WP_Query( $args );
-		if ( have_posts() ) :
-			while ( $loop->have_posts() ) :
-				$loop->the_post();
+			$args = array(
+				'post_type'      => 'project',
+				'posts_per_page' => 10,
+			);
+			$loop = new WP_Query( $args );
+			if ( have_posts() ) :
+				while ( $loop->have_posts() ) :
+					$loop->the_post();
 
-				?>
+		?>
 			<!-- display slugs for custom post categories.-->
 			<div id="panel" class="prod-cnt
 				  <?php
-					$customterms = get_the_terms( $post->ID, 'project-category' );
-					foreach ( $customterms as $customterm ) {
-						$pic = $customterm->slug . ' ';
-						echo esc_html( $pic );
-					}
+						$customterms = get_the_terms( $post->ID, 'project-category' );
+						foreach ( $customterms as $customterm ) {
+							$pic = $customterm->slug . ' ';
+							echo esc_html( $pic );
+						}
 					?>
 			"<?php post_class(); ?><?php the_ID(); ?> >
 
@@ -75,7 +75,8 @@ get_header();
 				<?php	endwhile; ?>
 
 			<?php	endif; ?>
-
+			
+			<?php wp_reset_query(); ?>
 
 		<div class="clearfix"></div>
 
@@ -83,7 +84,7 @@ get_header();
 
 	<div class="clearfix"></div>
 
-</div><!-- End of PhotoContainer -->
+</div>
 
 <div class="clearfix"></div>
 

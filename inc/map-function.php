@@ -4,9 +4,13 @@
  *
  * @return void void text
  */
+
+
 function raythompsonwebdev_com_mapcontainer() {
 
 	if ( is_page( 'contact' ) ) {
+
+		
 		?>
 
 	<script>
@@ -23,13 +27,9 @@ function raythompsonwebdev_com_mapcontainer() {
 		} 
 		
 	</script>
-<<<<<<< HEAD
-		<!---->
-=======
 		
->>>>>>> 001fe1c36d05fe2196ac5a5e6da9b5146cf509d0
 	<script rel="preconnect"
-	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" crossorigin>
+	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" >
 	</script>
 
 		<?php
@@ -37,3 +37,5 @@ function raythompsonwebdev_com_mapcontainer() {
 	}
 }
 add_action( 'wp_footer', 'raythompsonwebdev_com_mapcontainer' );
+
+

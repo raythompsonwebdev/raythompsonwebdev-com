@@ -27,23 +27,26 @@ get_header();
 		<div class="introimg">
 			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 
-				<img src="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/raythompsonwebdev.jpg', 'display' ); ?>" alt="<?php echo esc_attr_e( 'young-raythompsonwebdev', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+				<img src="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/raythompsonwebdev.jpg', 'display' ); ?>" alt="<?php esc_attr_e( 'young-raythompsonwebdev', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 			</a>
 		</div>
 
-		<p><?php echo _e( 'I have passion for web development dating back to 2012 and like tinkering with HTML, CSS and Javascipt, Ajax to create front end user interfaces , responsive websites and website templates. I also enjoy developing programs on the back end using PHP, MySQL, Ruby and WordPress theme development and maintenance.', 'raythompsonwebdev-com' ); ?></p>
+		<p><?php _e( 'I have passion for web development dating back to 2012 and like tinkering with HTML, CSS and Javascipt, Ajax to create front end user interfaces , responsive websites and website templates. I also enjoy developing programs on the back end using PHP, MySQL, Ruby and WordPress theme development and maintenance.', 'raythompsonwebdev-com' ); ?></p>
 
-<p><?php echo _e( 'My interest for web design and development began after attending a part time web design course  in East London between November 2011 and Oct 2012 where I gained some experience of the web design and development process by completing projects for tasks in exams and collaborating with other students. I learnt a bit about the web industry from my tutors, some of which really appealed to me.', 'raythompsonwebdev-com' ); ?></p>
+<p><?php _e( 'My interest for web design and development began after attending a part time web design course  in East London between November 2011 and Oct 2012 where I gained some experience of the web design and development process by completing projects for tasks in exams and collaborating with other students. I learnt a bit about the web industry from my tutors, some of which really appealed to me.', 'raythompsonwebdev-com' ); ?></p>
 		<p>
-			<?php echo _e( 'Since then , whenever I have the spare time, I spend most of it practicing coding, ', 'raythompsonwebdev-com' ); ?><strong><a href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/projects', 'display' ); ?>" target="new">building web applications</a></strong><?php echo _e( ',  trying out new coding techniques , attempting to solve coding problems and helping others on-line whenever I can. ', 'raythompsonwebdev-com' ); ?><strong><a href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/blog', 'display' ); ?>" target="new"></a></strong>
+			<?php _e( 'Since then , whenever I have the spare time, I spend most of it practicing coding, ', 'raythompsonwebdev-com' ); ?><strong><a href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/projects', 'display' ); ?>" target="new">building web applications</a></strong><? _e( ',  trying out new coding techniques , attempting to solve coding problems and helping others on-line whenever I can. ', 'raythompsonwebdev-com' ); ?><strong><a href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/blog', 'display' ); ?>" target="new"></a></strong>
 		</p>
-
-
-
-		<div class="clearfix"></div>
+	<div class="clearfix"></div>
 	</article>
 
-	<?php echo do_shortcode( '[chart]' ); ?>
+	<?php 
+	
+		//echo do_shortcode( '[chart]' ); 
+
+		include get_template_directory() . '/inc/profile-page/profile-chart.php';
+		
+		?>
 
 	<article id="text-box-profile-a">
 	<p><?php _e( 'The whole web development process has changed rapidly over the past five years with websites now becoming more like applications and the rise of Javascript.', 'raythompsonwebdev-com' ); ?> </p>
@@ -67,7 +70,13 @@ get_header();
 
 	</article>
 
-	<?php echo do_shortcode( '[hero]' ); ?>
+	<?php 
+			//echo do_shortcode( '[hero]' ); 
+			
+
+			include get_template_directory() . '/inc/profile-page/profile-slider.php';
+	
+	?>
 
 </div>
 

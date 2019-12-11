@@ -40,8 +40,8 @@
 		<div id="wrapper_container">
 
 		<?php if ( get_header_image() ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+			<a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" width="<?= esc_attr( get_custom_header()->width ); ?>" height="<?= esc_attr( get_custom_header()->height ); ?>" alt="">
 			
 			</a>
 		<?php endif; // End header image check. ?>
@@ -68,7 +68,7 @@
 							?>
 							<div class="site-firstletter" aria-hidden="true">
 
-								<?php echo esc_html( substr( $site_title, 0, 1 ) ); ?>
+								<?= esc_html( substr( $site_title, 0, 1 ) ); ?>
 
 							</div>
 						<?php } ?>
@@ -76,7 +76,7 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page(array('about','contact','privacy-policy-2','archives')) ) : ?>
+				<?php if ( is_front_page() || is_page(array('about-page','contact','privacy-policy-2','archives')) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 						
