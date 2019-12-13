@@ -11,7 +11,7 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk
+ * @link       https:www.raythompsonwebdev.co.uk
  */
 
 get_header();
@@ -35,7 +35,7 @@ get_header();
     <div class="item item1">
       
       <figure class="websiteImage">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/12/www-<?php $post_slug = $post->post_name; _e( $post_slug, 'raythompsonwebdev-com' ); ?>-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?>
+        <a href="<?= esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/12/www-<?php $post_slug = $post->post_name; _e( $post_slug, 'raythompsonwebdev-com' ); ?>-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?>
         </a>
       </figure>
     </div>

@@ -13,7 +13,7 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
  get_header(); ?>
@@ -28,18 +28,7 @@
 
 
         <figure id="image-7"></figure>
-
-	<!--<figure id="image-7">
-		<object 
-			class="style-svg" 
-			type="image/svg+xml" 
-			id="image-4" 
-			alt="svg-image"
-			data="wp-content/themes/raythompsonwebdev-com/images/responsive-design-devices-2.1.svg" >
-		</object>
-		<img id="image-5" src="wp-content/themes/raythompsonwebdev-com/images/home-page-image.jpg" alt="Your Browser does not support SVG" >
-	</figure>-->
-
+	
 </section>
 
 	<div id="text-box-front">

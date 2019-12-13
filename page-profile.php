@@ -13,7 +13,7 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 get_header();
 ?>
@@ -25,9 +25,9 @@ get_header();
 	<article id="text-box-profile">
 
 		<div class="introimg">
-			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+			<a href="<?= esc_url( get_permalink() ); ?>" rel="bookmark">
 
-				<img src="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/raythompsonwebdev.jpg', 'display' ); ?>" alt="<?php esc_attr_e( 'young-raythompsonwebdev', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+				<img src="<?= esc_url( 'https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/raythompsonwebdev.jpg', 'display' ); ?>" alt="<?php esc_attr_e( 'young-raythompsonwebdev', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 			</a>
 		</div>
 
@@ -35,7 +35,7 @@ get_header();
 
 <p><?php _e( 'My interest for web design and development began after attending a part time web design course  in East London between November 2011 and Oct 2012 where I gained some experience of the web design and development process by completing projects for tasks in exams and collaborating with other students. I learnt a bit about the web industry from my tutors, some of which really appealed to me.', 'raythompsonwebdev-com' ); ?></p>
 		<p>
-			<?php _e( 'Since then , whenever I have the spare time, I spend most of it practicing coding, ', 'raythompsonwebdev-com' ); ?><strong><a href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/projects', 'display' ); ?>" target="new">building web applications</a></strong><? _e( ',  trying out new coding techniques , attempting to solve coding problems and helping others on-line whenever I can. ', 'raythompsonwebdev-com' ); ?><strong><a href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/blog', 'display' ); ?>" target="new"></a></strong>
+			<?php _e( 'Since then , whenever I have the spare time, I spend most of it practicing coding, ', 'raythompsonwebdev-com' ); ?><strong><a href="<?= esc_url( 'https://raythompsonwebdev.co.uk/projects', 'display' ); ?>" target="new">building web applications</a></strong><? _e( ',  trying out new coding techniques , attempting to solve coding problems and helping others on-line whenever I can. ', 'raythompsonwebdev-com' ); ?><strong><a href="<?= esc_url( 'https://raythompsonwebdev.co.uk/blog', 'display' ); ?>" target="new"></a></strong>
 		</p>
 	<div class="clearfix"></div>
 	</article>

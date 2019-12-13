@@ -11,7 +11,7 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 ?>
 
@@ -53,7 +53,7 @@
 
 					<?php $site_title = get_bloginfo( 'name' ); ?>
 				
-					<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<a href=" <?= esc_url( home_url( '/' ) ); ?>" rel="home">
 						<div class="screen-reader-text">
 							
 							<?php

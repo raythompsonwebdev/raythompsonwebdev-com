@@ -11,7 +11,7 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk
+ * @link       https:www.raythompsonwebdev.co.uk
  */
  get_header(); ?>
 	   	
@@ -21,7 +21,7 @@
 		<!-- Display optional tag description-->
 		<?php if ( tag_description() ) : ?>
 
-				<div class="archive-meta"><?php echo tag_description(); ?></div>
+				<div class="archive-meta"><?= tag_description(); ?></div>
 		
 			<?php endif; ?>
  

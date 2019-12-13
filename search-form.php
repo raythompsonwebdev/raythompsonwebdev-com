@@ -11,11 +11,11 @@
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       http:www.raythompsonwebdev.co.uk custom template
+ * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 ?>
 
-<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" id="searchform" action="<?= esc_url( home_url( '/' ) ); ?>">
 	<div>
 			<label>
 					<span class="screen-reader-text">
@@ -23,7 +23,7 @@
 						</span>
 
 			</label>
-			<input type="search" class="search-field"  value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr( 'Search', 'label', 'raythompsonwebdev-com' ); ?>" />
+			<input type="search" class="search-field"  value="<?= get_search_query(); ?>" name="s" title="<?= esc_attr( 'Search', 'label', 'raythompsonwebdev-com' ); ?>" />
 			<input type="submit" class="search-submit" value="Find" />
 	</div>
 </form>
