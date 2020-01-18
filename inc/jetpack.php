@@ -4,7 +4,8 @@
  *
  * @link https://jetpack.com/
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 /**

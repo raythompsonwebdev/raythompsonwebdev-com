@@ -7,8 +7,8 @@
  * Contact page | core/page-contact.php.
  *
  * @category   Contact_Page
- * @package    Raythompsonwebdev-com
- * @subpackage Contact_Page
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3

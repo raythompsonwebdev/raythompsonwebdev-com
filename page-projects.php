@@ -12,7 +12,9 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk
- * @package    raythompsonwebdev.co.uk
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
+ * 
  */
 
 get_header();
@@ -25,7 +27,7 @@ get_header();
 </section>
 
 
-<!-- End of PhotoContainer -->
+<!--PhotoContainer -->
 <div id="showcaseContainer" >
 
 	<div class="content">

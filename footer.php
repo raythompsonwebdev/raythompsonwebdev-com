@@ -5,8 +5,8 @@
  * Footer | core/footer.php.
  *
  * @category   Footer
- * @package    Raythompsonwebdev-com
- * @subpackage Footer
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3

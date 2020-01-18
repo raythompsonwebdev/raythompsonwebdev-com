@@ -7,7 +7,8 @@
  *
  * @link http://codex.wordpress.org/Custom_Headers
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 /**
@@ -31,6 +32,18 @@ function raythompsonwebdev_com_custom_header_setup() {
 				'admin-head-callback'    => 'raythompsonwebdev_com_admin_header_style',
 				'admin-preview-callback' => 'raythompsonwebdev_com_admin_header_image',
 			)
+		)
+	);
+
+	// custom logo.
+	add_theme_support(
+		'custom-logo',
+		array(
+			'width'       => 96,
+			'height'      => 96,
+			'flex-width'  => true,
+			'flex-height' => true,
+			'header-text' => array( 'site-title', 'site-description' ),
 		)
 	);
 }

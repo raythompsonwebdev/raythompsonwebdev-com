@@ -1,5 +1,6 @@
 <?php
 
+
 $chartBars = '[
   {
 		"id": "1",

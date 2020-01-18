@@ -5,8 +5,8 @@
  * Single Projects | core/single-projects.php.
  *
  * @category   Single_Project
- * @package    Raythompsonwebdev-com
- * @subpackage Single_Project
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  * @author     Raymond Thompson <ray_thomp@hushmail.com>
  * @copyright  2017 Raymond Thompson
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
@@ -35,7 +35,11 @@ get_header();
     <div class="item item1">
       
       <figure class="websiteImage">
-        <a href="<?= esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/12/www-<?php $post_slug = $post->post_name; _e( $post_slug, 'raythompsonwebdev-com' ); ?>-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image"><?php the_post_thumbnail( 'websites' ); ?>
+        <a href="<?= esc_url( home_url( '/' ) ); ?>wp-content/uploads/2019/12/www-<?php $post_slug = $post->post_name; _e( $post_slug, 'raythompsonwebdev-com' ); ?>-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+        
+        <?php the_post_thumbnail( 'websites' ); ?>
+
+        
         </a>
       </figure>
     </div>

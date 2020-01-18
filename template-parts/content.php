@@ -4,7 +4,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  * 
  */
 

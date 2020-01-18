@@ -10,7 +10,8 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
- * @package    raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 get_header();

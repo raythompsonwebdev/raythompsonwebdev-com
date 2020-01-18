@@ -2,7 +2,8 @@
 /**
  * Raythompsonwebdev-com Theme Customizer
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 /**

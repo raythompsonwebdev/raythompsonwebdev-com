@@ -4,7 +4,8 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
@@ -179,26 +180,17 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() || is_home() || is_archive() || is_category()  ) :	?>
-
-		<figure class="featuredImage">
-						
-				<?php the_post_thumbnail( 'featured-image'); ?>
-			
-		</figure>
-
-		<?php else : ?>
-
-		<div class="post-thumbnail">
-
-				<?php the_post_thumbnail('post-thumbnail'); ?>
-						
-		</div><!-- .post-thumbnail -->
-		
-	
-		<?php
+		if ( is_singular() || is_home() || is_archive() || is_category()  ) :	
+							
+			the_post_thumbnail( 'featured-image'); 
+							
+		else : 
+		 
+			the_post_thumbnail('post-thumbnail'); 
+				
 		endif; // End is_singular().
 	}
+
 endif;
 
 /**
@@ -229,6 +221,7 @@ function raythompsonwebdev_com_categorized_blog() {
 		return false;
 	}
 }
+
 /**
  * Flush out the transients used in raythompsonwebdev_com_categorized_blog.
  */
@@ -294,3 +287,35 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 		return false;
 	}
 }
+
+function raythompsonwebdev_com_mapcontainer() {
+
+	if ( is_page( 'contact' ) ) {
+
+		
+		?>
+
+	<script>
+		function initMap() {
+		var uluru = {lat: 51.55583507664607, lng: -0.06814956665039062};
+		var map = new google.maps.Map(document.getElementById('map_container'), {
+			zoom: 12,
+			center: uluru
+		});
+		var marker = new google.maps.Marker({
+			position: uluru,
+			map: map
+		});
+		} 
+		
+	</script>
+		
+	<script rel="preconnect"
+	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" >
+	</script>
+
+		<?php
+
+	}
+}
+add_action( 'wp_footer', 'raythompsonwebdev_com_mapcontainer' );

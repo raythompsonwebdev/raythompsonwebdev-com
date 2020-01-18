@@ -126,16 +126,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 
-		add_theme_support( 'post-thumbnails' );
+		add_theme_support( 'post-thumbnails');
+
 		// Create new image sizes.
-		add_image_size( 'x-large', 800, 9999 );
 		add_image_size( 'featured-image', 800, 9999 );
-		add_image_size( 'large', 600, 9999 );
-		add_image_size( 'post-thumbnail', 150, 9999 );
+		add_image_size( 'large', 600, 9999 );		
 		add_image_size( 'medium', 500, 9999 );
 		add_image_size( 'small', 250, 9999 );
-		
-
+		add_image_size( 'post-thumbnail', 150, 9999 );
 
 		// Link pages.
 		$defaults = array(
@@ -151,18 +149,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			'echo'             => 1,
 		);
 		wp_link_pages( $defaults );
-
-		// custom logo.
-		add_theme_support(
-			'custom-logo',
-			array(
-				'width'       => 96,
-				'height'      => 96,
-				'flex-width'  => false,
-				'flex-height' => false,
-			)
-		);
-
+		
 		// nav- menus.
 		$defaults = array(
 			'default-image'          => '',
@@ -603,7 +590,6 @@ add_filter( 'wp_calculate_image_sizes', 'raythompsonwebdev_com_content_image_siz
  */
  require get_template_directory() . '/inc/custom-header.php';
 
-
 /**
  * Summary Custom template tags for this theme.
  */
@@ -629,13 +615,13 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Summary Map additions.
  */
-require get_template_directory() . '/inc/map-function.php';
+//require get_template_directory() . '/inc/map-function.php';
 
 
 
-// function defer_parsing_of_js ( $url ) {
-// if ( FALSE === strpos( $url, '.js' ) ) return $url;
-// if ( strpos( $url, 'jquery.js' ) ) return $url;
-// return "$url' defer ";
-// }
-// add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+function defer_parsing_of_js ( $url ) {
+if ( FALSE === strpos( $url, '.js' ) ) return $url;
+if ( strpos( $url, 'jquery.js' ) ) return $url;
+return "$url' defer ";
+}
+add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );

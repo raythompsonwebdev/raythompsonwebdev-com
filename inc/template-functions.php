@@ -2,7 +2,8 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 /**
