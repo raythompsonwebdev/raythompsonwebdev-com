@@ -609,6 +609,7 @@ desktop 1920px*/
     padding: 0;
     font-size: 1em;
     min-height: 800px;
+    clear: both;
     /*maintext */
     /*contact page map*/
     /*Contact page form*/
@@ -972,14 +973,15 @@ desktop 1920px*/
       margin: 0; }
     #main-content .left-col {
       margin-top: 0; }
-    #main-content article.rtwd-post {
-      width: 50%;
+    #main-content article.rtwd-post,
+    #main-content article.search-results {
+      width: 48%;
       display: inline-block; }
     #main-content .post {
       background-color: rgba(255, 255, 255, 0.8);
-      padding: 0 2%;
+      padding: 0 1%;
       width: 100%;
-      margin: 0 1% 1% 0;
+      margin: 0.5em;
       clear: both;
       /*seperators*/
       /*global*/
@@ -1123,23 +1125,23 @@ desktop 1920px*/
         padding: 0.5em;
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, auto);
         grid-auto-flow: dense;
         /*gallery page styles*/ }
         #main-content .post .website-text .item1 {
           grid-row: 1 / span 5; }
         #main-content .post .website-text .item2 {
-          grid-column: 2 / span 2; }
+          grid-column: 2 / span 3; }
         #main-content .post .website-text .item3 {
-          grid-column: 2 / span 2; }
+          grid-column: 2 / span 3; }
         #main-content .post .website-text .item4 {
-          grid-column: 2 / span 2; }
+          grid-column: 2 / span 3; }
         #main-content .post .website-text .item5 {
-          grid-column: 1 / span 3;
+          grid-column: 1 / span 4;
           grid-auto-rows: 50px; }
         #main-content .post .website-text .item6 {
-          grid-column: 1 / span 3;
+          grid-column: 1 / span 4;
           grid-auto-rows: 50px; }
         #main-content .post .website-text .websiteImage {
           -webkit-box-sizing: border-box;
@@ -1240,10 +1242,11 @@ desktop 1920px*/
                   background-color: #062351; }
       #main-content .post a.post-thumbnail {
         margin: 0 auto;
-        width: 35%;
+        width: 90%;
         background-color: unset; }
         #main-content .post a.post-thumbnail img {
-          display: block; }
+          display: block;
+          margin: auto; }
       #main-content .post .featuredImage {
         clear: both;
         height: auto;
@@ -1529,7 +1532,7 @@ desktop 1920px*/
           display: inline-block;
           padding: 0 0.5em;
           width: auto;
-          line-height: 65px;
+          line-height: 45px;
           font-size: 0.9em;
           background-color: unset; }
         #main-content .post footer.byline .bylinecat {
@@ -1581,7 +1584,7 @@ desktop 1920px*/
         #main-content .post footer.byline .comments-link {
           display: inline-block;
           padding: 0 0.5em;
-          line-height: 65px;
+          line-height: 50px;
           font-size: 1em; }
           #main-content .post footer.byline .cat-links a,
           #main-content .post footer.byline .tags-links a,
@@ -1619,7 +1622,9 @@ desktop 1920px*/
       #main-content .gallery footer.byline {
         width: 100%; }
         #main-content .gallery footer.byline p {
-          margin: 0; }
+          margin: 0;
+          line-height: 45px;
+          padding: 0 0.5em; }
         #main-content .gallery footer.byline .bylinecat {
           width: 10%; }
           #main-content .gallery footer.byline .bylinecat a {
@@ -1634,16 +1639,21 @@ desktop 1920px*/
             font-size: 1.5em; }
             #main-content .gallery footer.byline p.right a.comments-count:hover {
               font-weight: bold; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.95em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            cursor: pointer; }
+        #main-content .gallery footer.byline .cat-links,
+        #main-content .gallery footer.byline .tags-links,
+        #main-content .gallery footer.byline .edit-link,
+        #main-content .gallery footer.byline .comments-link {
+          line-height: 50px; }
+          #main-content .gallery footer.byline .cat-links a,
+          #main-content .gallery footer.byline .tags-links a,
+          #main-content .gallery footer.byline .edit-link a,
+          #main-content .gallery footer.byline .comments-link a {
+            font-size: 0.95em; }
+            #main-content .gallery footer.byline .cat-links a:hover,
+            #main-content .gallery footer.byline .tags-links a:hover,
+            #main-content .gallery footer.byline .edit-link a:hover,
+            #main-content .gallery footer.byline .comments-link a:hover {
+              cursor: pointer; }
     #main-content nav.navigation {
       height: auto; }
       #main-content nav.navigation h2 {
@@ -2061,6 +2071,7 @@ desktop 1920px*/
         text-align: center;
         font-size: 1.1em; }
     #main-content #frontpage_container {
+      width: 100%;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -2284,7 +2295,7 @@ desktop 1920px*/
       -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
-      /*first text block*/
+      width: 100%;
       /*second text block*/
       /*profile-page_container - hero-slider*/
       /*profile-page_container - chart*/ }
@@ -2583,7 +2594,7 @@ desktop 1920px*/
             list-style: none; }
             #main-content div#profile_container section#prof_cont #chart #bars li {
               width: 100%;
-              height: 50px;
+              height: 60px;
               margin: 0;
               text-align: center;
               position: relative; }
@@ -3181,10 +3192,8 @@ desktop 1440px*/
           margin-bottom: 0.5em; }
         #main-content .post .website-text p.websitetext {
           margin-bottom: 0.5em; }
-        #main-content .post .website-text a.webformats {
-          line-height: 40px; }
-          #main-content .post .website-text a.webformats:hover {
-            color: #062351; }
+        #main-content .post .website-text h3:hover {
+          color: #062351; }
         #main-content .post .website-text .links {
           height: 50px;
           margin: 0;
@@ -3644,14 +3653,12 @@ desktop 1440px*/
         #main-content div#profile_container section#prof_cont #chart {
           width: 95%;
           height: 320px; }
-          #main-content div#profile_container section#prof_cont #chart #bars li {
-            height: 60px; }
-            #main-content div#profile_container section#prof_cont #chart #bars li .bar:hover {
-              background: #CCD3DE;
-              cursor: pointer; }
-            #main-content div#profile_container section#prof_cont #chart #bars li .bar:hover:after {
-              width: 45px;
-              font-size: 1em; }
+          #main-content div#profile_container section#prof_cont #chart #bars li .bar:hover {
+            background: #CCD3DE;
+            cursor: pointer; }
+          #main-content div#profile_container section#prof_cont #chart #bars li .bar:hover:after {
+            width: 45px;
+            font-size: 1em; }
           #main-content div#profile_container section#prof_cont #chart #bars span {
             width: 16.5%;
             font-size: 0.8em; }
@@ -4951,7 +4958,8 @@ desktop 1024px*/
       #main-content .post footer.byline .tags-links,
       #main-content .post footer.byline .edit-link,
       #main-content .post footer.byline .comments-link {
-        line-height: 65px; }
+        line-height: 40px;
+        font-size: 0.85em; }
         #main-content .post footer.byline .cat-links a:hover,
         #main-content .post footer.byline .tags-links a:hover,
         #main-content .post footer.byline .edit-link a:hover,
@@ -4983,7 +4991,7 @@ desktop 1024px*/
       #main-content .gallery footer.byline .tags-links,
       #main-content .gallery footer.byline .edit-link,
       #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
+        line-height: 40px; }
         #main-content .gallery footer.byline .cat-links:hover,
         #main-content .gallery footer.byline .tags-links:hover,
         #main-content .gallery footer.byline .edit-link:hover,
@@ -5705,16 +5713,11 @@ desktop 980px*/
           font-size: 1.3em; }
           #main-content .post footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .post footer.byline .cat-links,
-      #main-content .post footer.byline .tags-links,
-      #main-content .post footer.byline .edit-link,
-      #main-content .post footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .post footer.byline .cat-links:hover,
-        #main-content .post footer.byline .tags-links:hover,
-        #main-content .post footer.byline .edit-link:hover,
-        #main-content .post footer.byline .comments-link:hover {
-          font-weight: bold; }
+      #main-content .post footer.byline .cat-links:hover,
+      #main-content .post footer.byline .tags-links:hover,
+      #main-content .post footer.byline .edit-link:hover,
+      #main-content .post footer.byline .comments-link:hover {
+        font-weight: bold; }
     #main-content .gallery {
       /*post image*/
       /*post*/
@@ -5738,21 +5741,16 @@ desktop 980px*/
           font-size: 1.3em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .gallery footer.byline .cat-links,
-      #main-content .gallery footer.byline .tags-links,
-      #main-content .gallery footer.byline .edit-link,
-      #main-content .gallery footer.byline .comments-link {
-        line-height: 65px; }
-        #main-content .gallery footer.byline .cat-links a,
-        #main-content .gallery footer.byline .tags-links a,
-        #main-content .gallery footer.byline .edit-link a,
-        #main-content .gallery footer.byline .comments-link a {
-          font-size: 0.85em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
+      #main-content .gallery footer.byline .cat-links a,
+      #main-content .gallery footer.byline .tags-links a,
+      #main-content .gallery footer.byline .edit-link a,
+      #main-content .gallery footer.byline .comments-link a {
+        font-size: 0.85em; }
+        #main-content .gallery footer.byline .cat-links a:hover,
+        #main-content .gallery footer.byline .tags-links a:hover,
+        #main-content .gallery footer.byline .edit-link a:hover,
+        #main-content .gallery footer.byline .comments-link a:hover {
+          font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -6511,13 +6509,17 @@ tablet 800px */
       #main-content .post footer.byline .tags-links,
       #main-content .post footer.byline .edit-link,
       #main-content .post footer.byline .comments-link {
-        line-height: 55px;
-        font-size: 0.8em; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          font-weight: bold; }
+        line-height: 35px; }
+        #main-content .post footer.byline .cat-links a,
+        #main-content .post footer.byline .tags-links a,
+        #main-content .post footer.byline .edit-link a,
+        #main-content .post footer.byline .comments-link a {
+          font-size: 0.8em; }
+          #main-content .post footer.byline .cat-links a:hover,
+          #main-content .post footer.byline .tags-links a:hover,
+          #main-content .post footer.byline .edit-link a:hover,
+          #main-content .post footer.byline .comments-link a:hover {
+            font-weight: bold; }
     #main-content .gallery {
       /*post image*/
       /*post*/
@@ -6541,16 +6543,21 @@ tablet 800px */
           font-size: 1.3em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .gallery footer.byline .cat-links a,
-      #main-content .gallery footer.byline .tags-links a,
-      #main-content .gallery footer.byline .edit-link a,
-      #main-content .gallery footer.byline .comments-link a {
-        font-size: 0.85em; }
-        #main-content .gallery footer.byline .cat-links a:hover,
-        #main-content .gallery footer.byline .tags-links a:hover,
-        #main-content .gallery footer.byline .edit-link a:hover,
-        #main-content .gallery footer.byline .comments-link a:hover {
-          font-weight: bold; }
+      #main-content .gallery footer.byline .cat-links,
+      #main-content .gallery footer.byline .tags-links,
+      #main-content .gallery footer.byline .edit-link,
+      #main-content .gallery footer.byline .comments-link {
+        line-height: 35px; }
+        #main-content .gallery footer.byline .cat-links a,
+        #main-content .gallery footer.byline .tags-links a,
+        #main-content .gallery footer.byline .edit-link a,
+        #main-content .gallery footer.byline .comments-link a {
+          font-size: 0.85em; }
+          #main-content .gallery footer.byline .cat-links a:hover,
+          #main-content .gallery footer.byline .tags-links a:hover,
+          #main-content .gallery footer.byline .edit-link a:hover,
+          #main-content .gallery footer.byline .comments-link a:hover {
+            font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -7991,12 +7998,17 @@ tablet 600px */
       #main-content .post footer.byline .tags-links,
       #main-content .post footer.byline .edit-link,
       #main-content .post footer.byline .comments-link {
-        line-height: 45px; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          font-weight: bold; }
+        line-height: 35px; }
+        #main-content .post footer.byline .cat-links a,
+        #main-content .post footer.byline .tags-links a,
+        #main-content .post footer.byline .edit-link a,
+        #main-content .post footer.byline .comments-link a {
+          font-size: 0.8em; }
+          #main-content .post footer.byline .cat-links a:hover,
+          #main-content .post footer.byline .tags-links a:hover,
+          #main-content .post footer.byline .edit-link a:hover,
+          #main-content .post footer.byline .comments-link a:hover {
+            font-weight: bold; }
     #main-content .gallery {
       /*post image*/
       /*post*/
@@ -8021,16 +8033,21 @@ tablet 600px */
           font-size: 1.2em; }
           #main-content .gallery footer.byline p.right a.comments-count:hover {
             font-weight: bold; }
-      #main-content .gallery footer.byline .cat-links a,
-      #main-content .gallery footer.byline .tags-links a,
-      #main-content .gallery footer.byline .edit-link a,
-      #main-content .gallery footer.byline .comments-link a {
-        font-size: 0.8em; }
-        #main-content .gallery footer.byline .cat-links a:hover,
-        #main-content .gallery footer.byline .tags-links a:hover,
-        #main-content .gallery footer.byline .edit-link a:hover,
-        #main-content .gallery footer.byline .comments-link a:hover {
-          font-weight: bold; }
+      #main-content .gallery footer.byline .cat-links,
+      #main-content .gallery footer.byline .tags-links,
+      #main-content .gallery footer.byline .edit-link,
+      #main-content .gallery footer.byline .comments-link {
+        line-height: 35px; }
+        #main-content .gallery footer.byline .cat-links a,
+        #main-content .gallery footer.byline .tags-links a,
+        #main-content .gallery footer.byline .edit-link a,
+        #main-content .gallery footer.byline .comments-link a {
+          font-size: 0.8em; }
+          #main-content .gallery footer.byline .cat-links a:hover,
+          #main-content .gallery footer.byline .tags-links a:hover,
+          #main-content .gallery footer.byline .edit-link a:hover,
+          #main-content .gallery footer.byline .comments-link a:hover {
+            font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links {
@@ -8124,8 +8141,8 @@ tablet 536px */
     position: fixed;
     z-index: 105;
     display: block;
-    top: 2.5em;
-    left: 86%;
+    top: 0.5em;
+    left: 85%;
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
@@ -9028,6 +9045,10 @@ mobile 480px */
             display: block; }
       #main-content aside#side-bar .side-bar-box section.widget div.tagcloud {
         width: 90%; }
+    #main-content article.rtwd-post,
+    #main-content article.search-results {
+      width: 96%;
+      display: block; }
     #main-content .post {
       /*seperators*/
       /*gallery page styles*/
@@ -9415,9 +9436,11 @@ mobile 480px */
         height: 220px;
         /*PNG for IE8*/ }
         #main-content #frontpage_container section#svg-image-container h1 {
-          font-size: 2em; }
+          font-size: 2em;
+          line-height: 50px; }
         #main-content #frontpage_container section#svg-image-container h2 {
-          font-size: 1.2em; }
+          font-size: 1.2em;
+          line-height: 30px; }
         #main-content #frontpage_container section#svg-image-container a#projectLink {
           font-size: 1.1em;
           margin: auto;
@@ -9633,8 +9656,8 @@ mobile 480px */
 mobile 414px */
 @media only screen and (max-width: 25.875em) {
   .menu-toggle {
-    left: 82%;
-    top: 2.2em; }
+    left: 81%;
+    top: 1.7em; }
   .menu-toggle.hide {
     left: 100vw; }
   /* Make sure the button doesn't hide when menu is open. */
@@ -11186,7 +11209,7 @@ mobile 320px */
       #main-content .post footer.byline .tags-links,
       #main-content .post footer.byline .edit-link,
       #main-content .post footer.byline .comments-link {
-        line-height: 35px; }
+        line-height: 55px; }
         #main-content .post footer.byline .cat-links a,
         #main-content .post footer.byline .tags-links a,
         #main-content .post footer.byline .edit-link a,

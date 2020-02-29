@@ -23,6 +23,10 @@
  * @return string Filtered title.
  */
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 require_once( get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php');
 
 function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
@@ -129,15 +133,11 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		add_theme_support( 'post-thumbnails');
 
 		// Create new image sizes.
-		add_image_size( 'featured-image', 800, 9999 );
-		// add_image_size( 'large', 600, 9999 );		
-		// add_image_size( 'medium', 500, 9999 );
-		// add_image_size( 'small', 250, 9999 );
+		add_image_size( 'featured-image', 800, 999 );
+		
+		add_image_size( 'post-thumbnail', 600, 999 );
 
-		add_image_size( 'post-thumbnail', 300, 300 );
-
-		set_post_thumbnail_size( 300, 300, true );
-
+	
 		// Link pages.
 		$defaults = array(
 			'before'           => '<p>' . __( 'Pages:', 'raythompsonwebdev-com' ),
@@ -555,8 +555,8 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
  */
 function raythompsonwebdev_com_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
-		$attr['sizes']   = '(max-width: 736px) 85vw, (max-width: 67px) 67vw, (max-width: 60px) 60vw, (max-width: 62px) 62vw, 85px';
-		! $attr['sizes'] = '(max-width: 736px) 736vw, (max-width: 1024px) 1024vw, (max-width: 1920px) 1920vw, 1920px';
+		$attr['sizes']   = '(max-width: 1024px) 85vw, (max-width: 67px) 67vw, (max-width: 60px) 60vw, (max-width: 62px) 62vw, 85px';
+		! $attr['sizes'] = '(max-width: 736px) 73vw, (max-width: 1024px) 67vw, (max-width: 1920px) 60vw, 1920px';
 	}
 	return $attr;
 }
@@ -571,12 +571,12 @@ add_filter( 'wp_get_attachment_image_attributes', 'raythompsonwebdev_com_post_th
  */
 function raythompsonwebdev_com_content_image_sizes_attr( $sizes, $size ) {
 	$width                  = $size[0];
-	736 <= $width && $sizes = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 62vw, 980px';
+	736 <= $width && $sizes = '(max-width: 800px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 62vw, 980px';
 
 	if ( 'page' === get_post_type() ) {
 		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
-		736 > $width && 360 <= $width && $sizes = '(max-width: 736px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 667px';
+		736 > $width && 360 <= $width && $sizes = '(max-width: 800px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 800px';
 		360 > $width && $sizes                  = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
 

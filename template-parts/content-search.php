@@ -8,9 +8,14 @@
  * @subpackage Raythompsonwebdev-com
  */
 
+$classess = array(
+	'post',
+	'search-results'
+) 
+
 ?>
 
-<article class="post group" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($classess); ?>>
 <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 	<header class="byline">
@@ -38,7 +43,7 @@
 
 			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 				
-					<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2019/12/image-not-available.gif','display');?>"
+					<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/02/placeholder-1.jpg','display');?>"
 						alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 				
 			</a>
@@ -60,7 +65,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
 							array(
 								'span' => array(
 									'class' => array(),

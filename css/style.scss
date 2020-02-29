@@ -378,6 +378,7 @@ desktop 1920px*/
     padding: 0;
     font-size: 1em;
     min-height: 800px;
+    clear:both;
 
     h1 {
       font-size: 1.4em;
@@ -827,9 +828,10 @@ desktop 1920px*/
       margin-top: 0;
     }
 
-    article.rtwd-post{
+    article.rtwd-post,
+    article.search-results{
 
-      width:50%;
+      width:48%;
       display:inline-block;
       
 
@@ -838,9 +840,9 @@ desktop 1920px*/
     /*regular Posts*/
     .post {
       background-color: $color10;
-      padding: 0 2%;
+      padding: 0 1%;
       width: 100%;
-      margin: 0 1% 1% 0;
+      margin: 0.5em;
       clear: both;
 
       /*seperators*/
@@ -1004,38 +1006,35 @@ desktop 1920px*/
 
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(5, auto);
         grid-auto-flow: dense;
 
         .item1 { 
-          grid-row: 1 / span 5;
-          
+          grid-row: 1 / span 5;          
         }
         .item2 {
-          grid-column: 2 / span 2;
-          
+          grid-column: 2 / span 3;
           
           
         }
         .item3 {
-          grid-column: 2 / span 2;
+          grid-column: 2 / span 3;
           
           
           
         }
         .item4 {
-          grid-column: 2 / span 2;
+          grid-column: 2 / span 3;
           
           
         }
         .item5 {
-          grid-column: 1 / span 3;
-          grid-auto-rows:50px;
+          grid-column: 1 / span 4;          grid-auto-rows:50px;
           
         }
         .item6 {
-          grid-column: 1 / span 3;
+          grid-column: 1 / span 4;
           grid-auto-rows:50px;
           
         }
@@ -1146,10 +1145,11 @@ desktop 1920px*/
       /*post image*/
       a.post-thumbnail{
         margin: 0 auto;
-        width: 35%;
+        width: 90%;
         background-color:unset;
         img {
           display: block;
+          margin:auto;
         }
       }
 
@@ -1447,7 +1447,7 @@ desktop 1920px*/
           display: inline-block;
           padding: 0 0.5em;
           width: auto;
-          line-height: 65px;
+          line-height: 45px;
           font-size: 0.9em;
           background-color:unset;
         }
@@ -1505,7 +1505,7 @@ desktop 1920px*/
         .comments-link {
           display: inline-block;
           padding: 0 0.5em;
-          line-height: 65px;
+          line-height: 50px;
           font-size: 1em;
 
           a {
@@ -1555,6 +1555,8 @@ desktop 1920px*/
 
         p {
           margin: 0;
+          line-height: 45px;
+          padding: 0 0.5em;
           
         }
 
@@ -1597,7 +1599,7 @@ desktop 1920px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          
+          line-height: 50px;
 
           a {
             font-size: 0.95em;
@@ -2133,6 +2135,7 @@ desktop 1920px*/
 
     /*frontpage-page-panel */
     #frontpage_container {
+      width: 100%;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -2409,7 +2412,7 @@ desktop 1920px*/
       -webkit-justify-content: space-evenly;
       -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
-      /*first text block*/
+      width: 100%;
 
       #text-box-profile {
         -webkit-order: 0;
@@ -2815,7 +2818,7 @@ desktop 1920px*/
 
             li {
               width: 100%;
-              height: 50px;
+              height: 60px;
               margin: 0;
               text-align: center;
               position: relative;
@@ -3572,9 +3575,7 @@ desktop 1440px*/
         p.websitetext {
           margin-bottom: 0.5em;
         }
-
-        a.webformats {
-          line-height: 40px;
+        h3 {
 
           &:hover {
             color: $color1;
@@ -4392,8 +4393,7 @@ desktop 1440px*/
 
           #bars {
             li {
-              height: 60px;
-
+              
               .bar {
                 &:hover {
                   background: $color2;
@@ -6552,7 +6552,8 @@ desktop 1024px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          line-height: 40px;
+          font-size: 0.85em;
 
           a {
             &:hover {
@@ -6610,7 +6611,7 @@ desktop 1024px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          line-height: 40px;
 
           &:hover {
             font-weight: bold;
@@ -7796,7 +7797,7 @@ desktop 980px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           &:hover {
             font-weight: bold;
@@ -7854,7 +7855,7 @@ desktop 980px*/
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 65px;
+          
 
           a {
             font-size: 0.85em;
@@ -9079,10 +9080,11 @@ tablet 800px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 55px;
-          font-size: 0.8em;
+          line-height: 35px;
+          
 
           a {
+            font-size: 0.8em;
             &:hover {
               font-weight: bold;
             }
@@ -9140,7 +9142,7 @@ tablet 800px */
         .tags-links,
         .edit-link,
         .comments-link {
-          
+          line-height: 35px;
 
           a {
             font-size: 0.85em;
@@ -11523,9 +11525,10 @@ tablet 600px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 45px;
+          line-height: 35px;
 
           a {
+            font-size: 0.8em;
             &:hover {
               font-weight: bold;
             }
@@ -11586,7 +11589,7 @@ tablet 600px */
         .tags-links,
         .edit-link,
         .comments-link {
-          
+          line-height: 35px;
           a {
             font-size: 0.8em;
 
@@ -11791,8 +11794,8 @@ tablet 536px */
     position: fixed;
     z-index: 105;
     display: block;
-    top: 2.5em;
-    left: 86%;
+    top: 0.5em;
+    left: 85%;
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
@@ -13317,6 +13320,15 @@ mobile 480px */
       }
     }
 
+    article.rtwd-post,
+    article.search-results{
+
+      width: 96%;
+      display: block;
+      
+
+    }
+
     /*regular Posts*/
     .post {
       /*seperators*/
@@ -13940,9 +13952,11 @@ mobile 480px */
 
         h1 {
           font-size: 2em;
+          line-height: 50px;
         }
         h2 {
           font-size: 1.2em;
+          line-height: 30px;
         }
 
         a#projectLink {
@@ -14271,8 +14285,8 @@ mobile 414px */
   
 
   .menu-toggle {
-    left: 82%;
-    top: 2.2em;
+    left: 81%;
+    top: 1.7em;
     
   }
 
@@ -16924,7 +16938,7 @@ mobile 320px */
         .tags-links,
         .edit-link,
         .comments-link {
-          line-height: 35px;
+          line-height: 55px;
 
           a {
             font-size: 0.8em;

@@ -48,7 +48,7 @@
 
 						<figure class="featuredImage">
 							
-								<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2019/12/image-not-available.gif','display');?>"
+								<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/02/placeholder-1.jpg','display');?>"
 									alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
 							
 						</figure>
@@ -70,13 +70,7 @@
 		   
 			<!--Post entry footer-->
 			<footer class="byline">
-
-				<p class='right'>
-					<a class='comments-count' href='<?php the_permalink(); ?>'>
-						<?php comments_number( '0', '1', '%' ); ?>
-					</a>
-				</p>
-								
+											
 				<?php raythompsonwebdev_com_entry_footer(); ?>
 				
 				<p>
