@@ -76,7 +76,7 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page(array('about-page','contact','privacy-policy-2','archives')) ) : ?>
+				<?php if ( is_front_page() || is_page(array('about','contact','privacy-policy-2','archives')) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 						
@@ -111,7 +111,9 @@
 							array(
 								'menu'       => 'Main',
 								'container'  => 'nav',
+								'container_id' => 'main-menu',
 								'menu_class' => 'nav-menu',
+								
 							)
 						);
 					}
@@ -119,6 +121,11 @@
 
 
 			</header>
-
+ <!--search form -->
+ <?php if ( is_home() || is_archive() ) : ?>
+    <span class="social-1"><?php get_search_form(); ?></span>
+  <?php else : ?>
+    <span class="social-1"></span>
+  <?php endif; ?>
 			<!--Main content -->
 <main id="main-content" class="group" role="main">

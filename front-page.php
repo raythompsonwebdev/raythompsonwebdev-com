@@ -23,7 +23,7 @@
 <section id="svg-image-container">
 
 <h1><?php _e( 'Hello, I\'m Raymond', 'raythompsonwebdev-com' ); ?></h1>
-      <h2><?php _e( 'I\'m a web developer and I love using code to create web applications, web interfaces and more..  ', 'raythompsonwebdev-com' ); ?></h2>
+      <h2><?php _e( 'I\'m a web developer and I love using code to create web applications.  ', 'raythompsonwebdev-com' ); ?></h2>
       <a id="projectLink" href="<?php echo esc_url( 'https://raythompsonwebdev.co.uk/projects/'); ?>"><?php _e( 'See Current Projects', 'raythompsonwebdev-com' ); ?></a>
 
 

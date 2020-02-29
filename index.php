@@ -16,26 +16,6 @@
 
 get_header(); ?>
 
-<!-- <h1><?php _e( 'Web Developer and Enthusiatic WordPress User ?', 'raythompsonwebdev-com' ); ?></h1>
-
-<section class="main-text">
-  
-  <p>
-    <?php _e( ' I would like to share with you what I have learnt through the numerous tutorials tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46;', 'raythompsonwebdev-com' ); ?>
-  </p>
-
-  <br/>
-
-</section> -->
-
-  <!--search form -->
-  <?php if ( is_home() || is_archive() ) : ?>
-    <span class="social-1"><?php get_search_form(); ?></span>
-  <?php else : ?>
-    <span class="social-1"></span>
-  <?php endif; ?>
-
-
 
   <?php  get_template_part( 'template-parts/content', get_post_format() ); ?>
 

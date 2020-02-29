@@ -85,7 +85,7 @@ get_header();
       <h1 class="post-meta-key">
             <?php _e( 'URL', 'raythompsonwebdev-com' ); ?>
       </h1>
-      <a class="webformats" href="<?php _e( $project_url ); ?>"><?php _e( $project_url ); ?></a>
+      <a class="webformats" href="<?php _e( $project_url ); ?>" target="blank"><?php _e( $project_url ); ?></a>
     </div>
 
     <div class="item item6">

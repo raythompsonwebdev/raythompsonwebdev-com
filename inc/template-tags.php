@@ -180,13 +180,23 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() || is_home() || is_archive() || is_category()  ) :	
-							
-			the_post_thumbnail( 'featured-image'); 
-							
-		else : 
-		 
-			the_post_thumbnail('post-thumbnail'); 
+		if ( is_singular() ):	?>
+
+			<figure class="featuredImage">
+			
+					<?php the_post_thumbnail( 'featured-image' ); ?>
+				
+		</figure><!-- .post-thumbnail -->
+	
+	<?php	else: ?> 
+
+		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
+	
+			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+	
+		</a>
+
+		<?php	
 				
 		endif; // End is_singular().
 	}
@@ -288,6 +298,7 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 	}
 }
 
+/*
 function raythompsonwebdev_com_mapcontainer() {
 
 	if ( is_page( 'contact' ) ) {
@@ -319,3 +330,4 @@ function raythompsonwebdev_com_mapcontainer() {
 	}
 }
 add_action( 'wp_footer', 'raythompsonwebdev_com_mapcontainer' );
+*/

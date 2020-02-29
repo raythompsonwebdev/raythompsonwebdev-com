@@ -9,32 +9,32 @@ function raythompsonwebdev_com_register_post_type() {
 
 	// Set UI labels for Custom Post Type.
 	$labels = array(
-		'name'                  => _x( 'Projects', 'Post Type General Name', 'RTWDDOMAIN' ),
-		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'RTWDDOMAIN' ),
-		'menu_name'             => __( 'Projects', 'RTWDDOMAIN' ),
-		'name_admin_bar'        => __( 'Projects', 'RTWDDOMAIN' ),
-		'parent_item_colon'     => __( 'Parent Project', 'RTWDDOMAIN' ),
+		'name'                  => _x( 'Projects', 'Post Type General Name', 'raythompsonwebdev-com' ),
+		'singular_name'         => _x( 'Project', 'Post Type Singular Name', 'raythompsonwebdev-com' ),
+		'menu_name'             => __( 'Projects', 'raythompsonwebdev-com' ),
+		'name_admin_bar'        => __( 'Projects', 'raythompsonwebdev-com' ),
+		'parent_item_colon'     => __( 'Parent Project', 'raythompsonwebdev-com' ),
 		// 'menu_icon' => get_stylesheet_directory_uri() . '/images/portfolio-icon.png'.
 		// 'menu_icon' => 'dashicons-download'.
-		'all_items'             => __( 'Projects', 'RTWDDOMAIN' ),
-		'view_item'             => __( 'View Projects', 'RTWDDOMAIN' ),
-		'add_new_item'          => __( 'Add New Project', 'RTWDDOMAIN' ),
-		'add_new'               => __( 'Add Project', 'RTWDDOMAIN' ),
-		'edit_item'             => __( 'Edit Project', 'RTWDDOMAIN' ),
-		'update_item'           => __( 'Update Project', 'RTWDDOMAIN' ),
-		'search_items'          => __( 'Search Project', 'RTWDDOMAIN' ),
-		'not_found'             => __( 'Not Found', 'RTWDDOMAIN' ),
-		'not_found_in_trash'    => __( 'Not found in Trash', 'RTWDDOMAIN' ),
-		'featured_image'        => __( 'Featured Image', 'RTWDDOMAIN' ),
-		'set_featured_image'    => __( 'Set featured image', 'RTWDDOMAIN' ),
-		'remove_featured_image' => __( 'Remove featured image', 'RTWDDOMAIN' ),
-		'use_featured_image'    => __( 'Use as featured image', 'RTWDDOMAIN' ),
+		'all_items'             => __( 'Projects', 'raythompsonwebdev-com' ),
+		'view_item'             => __( 'View Projects', 'raythompsonwebdev-com' ),
+		'add_new_item'          => __( 'Add New Project', 'raythompsonwebdev-com' ),
+		'add_new'               => __( 'Add Project', 'raythompsonwebdev-com' ),
+		'edit_item'             => __( 'Edit Project', 'raythompsonwebdev-com' ),
+		'update_item'           => __( 'Update Project', 'raythompsonwebdev-com' ),
+		'search_items'          => __( 'Search Project', 'raythompsonwebdev-com' ),
+		'not_found'             => __( 'Not Found', 'raythompsonwebdev-com' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'raythompsonwebdev-com' ),
+		'featured_image'        => __( 'Featured Image', 'raythompsonwebdev-com' ),
+		'set_featured_image'    => __( 'Set featured image', 'raythompsonwebdev-com' ),
+		'remove_featured_image' => __( 'Remove featured image', 'raythompsonwebdev-com' ),
+		'use_featured_image'    => __( 'Use as featured image', 'raythompsonwebdev-com' ),
 	);
 
 	// Set other options for Custom Post Type.
 	$args = array(
-		'label'                => __( 'Projects', 'RTWDDOMAIN' ),
-		'description'          => __( 'Web Development Projects', 'RTWDDOMAIN' ),
+		'label'                => __( 'Projects', 'raythompsonwebdev-com' ),
+		'description'          => __( 'Web Development Projects', 'raythompsonwebdev-com' ),
 		'labels'               => $labels,
 		// Features this CPT supports in Post Editor.
 		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),

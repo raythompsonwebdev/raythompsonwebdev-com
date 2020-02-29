@@ -16,7 +16,7 @@
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+		<article <?php post_class('rtwd-post'); ?> id="post-<?php the_ID(); ?>">
 
 			<?php
 			if ( is_singular() ) :
@@ -41,23 +41,23 @@
 			</header>
 
 			<!--featured Image-->
-			<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+		
 
 				<?php if ( has_post_thumbnail() ) : ?>
 					
 					<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
-				<?php else : ?>
+					<?php else : ?>
 
-					<figure class="featuredImage">
-					
-						<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-						
-					</figure>
-					
-					
+						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+							
+								<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2019/12/image-not-available.gif','display');?>"
+									alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+							
+					</a>
+												
 				<?php endif; ?>
-			</a>
+		
 			<!--featured Image end-->
 
 			
@@ -89,6 +89,7 @@
 					?>
 
 				</div>
+				
 				<div class="continue-reading">
 					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 						<?php

@@ -22,7 +22,9 @@ get_header(); ?>
 
 <div id="contactform">
     
-    <?php the_content();?>
+  <?php  /**
+     * the_content();
+     */  ?>
     
 </div>
 
