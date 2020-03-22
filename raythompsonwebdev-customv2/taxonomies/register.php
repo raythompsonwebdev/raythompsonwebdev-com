@@ -1,6 +1,15 @@
 <?php
 /**
- *  Project Taxonomies.
+ * Project Taxonomies
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
+ */
+
+/**
+ * Project
  */
 function raythompsonwebdev_com_register_taxonomies() {
 
@@ -22,23 +31,22 @@ function raythompsonwebdev_com_register_taxonomies() {
 	);
 	$args   = array(
 		'labels'                => $labels,
-    'hierarchical'          => true,
-    'public'                => true,
-    'show_admin_column'      => true,
-    'show_in_quick_edit'    => true,
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_admin_column'     => true,
+		'show_in_quick_edit'    => true,
 		'show_ui'               => true,
-		'show_in_rest' 		   => true,			
+		'show_in_rest'          => true,
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
 		'rewrite'               => array(
-			'slug'       => 'project-category', // This controls the base slug that will display before each term.
+			'slug'         => 'project-category', // This controls the base slug that will display before each term.
 			'hierarchical' => true,
-			'has_front' => true, // Don't display the category base before.
+			'has_front'    => true, // Don't display the category base before.
 		),
-  );
-  
-  $post_types =array('project');
+	);
 
+	$post_types = array( 'project' );
 
 	register_taxonomy( 'project-category', 'project', $args );
 }

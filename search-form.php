@@ -15,15 +15,15 @@
  */
 ?>
 
-<form role="search" method="get" id="searchform" action="<?= esc_url( home_url( '/' ) ); ?>">
+<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 	<div>
 			<label>
 					<span class="screen-reader-text">
-		<?php _e( 'Search', 'label', 'raythompsonwebdev-com' ); ?>
+		<?php esc_html_e( 'Search', 'raythompsonwebdev-com' ); ?>
 						</span>
 
 			</label>
-			<input type="search" class="search-field"  value="<?= get_search_query(); ?>" name="s" title="<?= esc_attr( 'Search', 'label', 'raythompsonwebdev-com' ); ?>" />
+			<input type="search" class="search-field"  value="<?php echo get_search_query(); ?>" name="s" title="<?php esc_attr_e( 'Search', 'raythompsonwebdev-com' ); ?>" />
 			<input type="submit" class="search-submit" value="Find" />
 	</div>
 </form>

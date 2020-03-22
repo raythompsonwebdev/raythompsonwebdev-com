@@ -22,7 +22,8 @@ get_header();
 /**
  * Check if there are any posts to display.
  */
-if ( have_posts() ) : ?>
+if ( have_posts() ) :
+	?>
 
 	<h1 class="archive-title">
 		Category: <?php single_cat_title( '', true ); ?>
@@ -32,15 +33,19 @@ if ( have_posts() ) : ?>
 	/**
 	 * Display optional category description.
 	 */
-	if ( category_description() ) :	?>
+	if ( category_description() ) :
+		?>
 
 		<div class="archive-meta"><?php echo category_description(); ?></div>
 
 		<?php endif; ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			?>
 
-		<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+		<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
 			<h1>
 				<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
@@ -72,7 +77,8 @@ if ( have_posts() ) : ?>
 
 					<figure class="featuredImage">
 						
-						<img src="<?php echo esc_url('https://site.test/wordpress/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<?php echo esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+					<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1-1.jpg"
+									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 						
 					</figure>
 
@@ -83,16 +89,17 @@ if ( have_posts() ) : ?>
 
 			<div class="entry">
 
-				<?php	the_excerpt();	?>
+				<?php	the_excerpt(); ?>
 
 			</div>
 
 			<div class="continue-reading">
-				<a href="<?= esc_url( get_permalink() ); ?>" rel="bookmark">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 					<?php
 					printf(
 						/* Translators: %s = Name of the current post. */
-							wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+						wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					);
 					?>
 				</a>
@@ -105,13 +112,13 @@ if ( have_posts() ) : ?>
 
 		</article>
 
-		<?php
+			<?php
 	endwhile;
 
 	else :
-	?>
+		?>
 
-	<?php get_template_part( 'template-part/content', 'none' ); ?>
+		<?php get_template_part( 'template-part/content', 'none' ); ?>
 
 <?php endif; ?>
 <section class="contact-wide">
@@ -122,7 +129,7 @@ if ( have_posts() ) : ?>
 <!--end of Comment box-->
 <div class="clearfix"></div>
 
-<?php get_sidebar('archive'); ?>
+<?php get_sidebar( 'archive' ); ?>
 
 </section>
 

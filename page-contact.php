@@ -14,18 +14,14 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
- * 
  */
 get_header(); ?>
 
-<h1><?php _e( 'Contact Page', 'raythompsonwebdev-com' ); ?></h1>
+<h1><?php esc_html_e( 'Contact Page', 'raythompsonwebdev-com' ); ?></h1>
 
 <div id="contactform">
-    
-  <?php  /**
-     * the_content();
-     */  ?>
-    
+	
+	
 </div>
 
 <br>
@@ -34,13 +30,13 @@ get_header(); ?>
 
 <address id="contact-details">
 
-    <li><a href="mailto:name@mydomain.com">raymond.thompson@raythompsonwebdev.co.uk</a></li>
+	<li><a href="mailto:name@mydomain.com">raymond.thompson@raythompsonwebdev.co.uk</a></li>
 
-    <li><a href="<?= esc_url( 'https://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">@RayThompWeb</a></li>
+	<li><a href="<?php echo esc_url( 'https://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">@RayThompWeb</a></li>
 
-    <li><a href="<?= esc_url( 'https://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
 
-    <li><a href="<?= esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">github.com/raythompsonwebdev</a></li>
+	<li><a href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">github.com/raythompsonwebdev</a></li>
 </address>
 
 <div class="clearfix"></div>

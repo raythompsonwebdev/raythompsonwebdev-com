@@ -180,7 +180,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 			return;
 		}
 
-		if ( is_singular() ):	?>
+		if ( is_singular() ) :   ?>
 
 			<figure class="featuredImage">
 			
@@ -188,7 +188,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 				
 		</figure><!-- .post-thumbnail -->
 	
-	<?php	else: ?> 
+	<?php	else : ?> 
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
 	
@@ -196,8 +196,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 	
 		</a>
 
-		<?php	
-				
+		<?php
+
 		endif; // End is_singular().
 	}
 
@@ -298,36 +298,4 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 	}
 }
 
-/*
-function raythompsonwebdev_com_mapcontainer() {
 
-	if ( is_page( 'contact' ) ) {
-
-		
-		?>
-
-	<script>
-		function initMap() {
-		var uluru = {lat: 51.55583507664607, lng: -0.06814956665039062};
-		var map = new google.maps.Map(document.getElementById('map_container'), {
-			zoom: 12,
-			center: uluru
-		});
-		var marker = new google.maps.Marker({
-			position: uluru,
-			map: map
-		});
-		} 
-		
-	</script>
-		
-	<script rel="preconnect"
-	src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" >
-	</script>
-
-		<?php
-
-	}
-}
-add_action( 'wp_footer', 'raythompsonwebdev_com_mapcontainer' );
-*/

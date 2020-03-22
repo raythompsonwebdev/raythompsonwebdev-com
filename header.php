@@ -40,8 +40,8 @@
 		<div id="wrapper_container">
 
 		<?php if ( get_header_image() ) : ?>
-			<a href="<?= esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?= esc_attr( get_custom_header()->width ); ?>" height="<?= esc_attr( get_custom_header()->height ); ?>" alt="">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php header_image(); ?>" width="<?php esc_attr_e( get_custom_header()->width ); ?>" height="<?php esc_attr_e( get_custom_header()->height ); ?>" alt="">
 			
 			</a>
 		<?php endif; // End header image check. ?>
@@ -53,7 +53,7 @@
 
 					<?php $site_title = get_bloginfo( 'name' ); ?>
 				
-					<a href=" <?= esc_url( home_url( '/' ) ); ?>" rel="home">
+					<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<div class="screen-reader-text">
 							
 							<?php
@@ -68,7 +68,7 @@
 							?>
 							<div class="site-firstletter" aria-hidden="true">
 
-								<?= esc_html( substr( $site_title, 0, 1 ) ); ?>
+								<?php esc_html_e( substr( $site_title, 0, 1 ) ); ?>
 
 							</div>
 						<?php } ?>
@@ -76,11 +76,11 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page(array('about','contact','privacy-policy-2','archives')) ) : ?>
+				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archives' ) ) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 						
-						<?php elseif ( is_page('projects') || 'project' == get_post_type() ) : ?>
+						<?php elseif ( is_page( 'projects' ) || 'project' === get_post_type() ) : ?>
 			
 						<hgroup>
 						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
@@ -89,14 +89,15 @@
 						<hgroup>
 							<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
 
-						<?php
+							<?php
 						endif;
 
 						$description = get_bloginfo( 'description', 'display' );
-						if ( esc_html( $description ) || is_customize_preview() ) :	?>
+						if ( esc_html( $description ) || is_customize_preview() ) :
+							?>
 
 							<h2 class="site-description">
-								<?php _e( $description ); ?>
+								<?php esc_html_e( $description ); ?>
 							</h2>
 					</hgroup>
 				<?php endif; ?>
@@ -105,27 +106,27 @@
 
 				<?php
 					// Checking if there's anything in Top Menu.
-					if ( has_nav_menu( 'main' ) ) {
-						// If there is, adds the Top Menu area.
-						wp_nav_menu(
-							array(
-								'menu'       => 'Main',
-								'container'  => 'nav',
-								'container_id' => 'main-menu',
-								'menu_class' => 'nav-menu',
-								
-							)
-						);
-					}
+				if ( has_nav_menu( 'main' ) ) {
+					// If there is, adds the Top Menu area.
+					wp_nav_menu(
+						array(
+							'menu'         => 'Main',
+							'container'    => 'nav',
+							'container_id' => 'main-menu',
+							'menu_class'   => 'nav-menu',
+
+						)
+					);
+				}
 				?>
 
 
 			</header>
  <!--search form -->
  <?php if ( is_home() || is_archive() ) : ?>
-    <span class="social-1"><?php get_search_form(); ?></span>
+	<span class="social-1"><?php get_search_form(); ?></span>
   <?php else : ?>
-    <span class="social-1"></span>
+	<span class="social-1"></span>
   <?php endif; ?>
 			<!--Main content -->
 <main id="main-content" class="group" role="main">

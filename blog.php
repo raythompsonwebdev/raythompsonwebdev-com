@@ -21,23 +21,12 @@ get_header();
 
 <h1><?php the_title(); ?></h1>
 <section class="main-text">
-<h1><?php _e( 'Interested in web design and web development', 'raythompsonwebdev-com' ); ?></h1>
+<h1><?php esc_html_e( 'Interested in web design and web development', 'raythompsonwebdev-com' ); ?></h1>
 	<p>
-<?php _e( 'Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com' ); ?>
+<?php esc_html_e( 'Whether you are just beginning to learn or are alreading building websites I would like to share  what I have learnt so far about web design and web development through the tons of valuable web development and web design related resources I have read, watched and listened to over the past few years&#46; content like', 'raythompsonwebdev-com' ); ?>
 	</p>
 </section>
 <br/>
-
-<!--search form -->
-<?php if ( is_home() || is_archive() ) : ?>
-	<span class="social-1"><?php get_search_form(); ?></span>
-<?php else : ?>
-	<span class="social-1"></span>
-<?php endif; ?>
-
-
-<br/><br/>
-
 
 <?php
 // Is this the first post of the front page?.

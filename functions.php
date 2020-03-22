@@ -23,11 +23,11 @@
  * @return string Filtered title.
  */
 
-@ini_set( 'upload_max_size' , '64M' );
-@ini_set( 'post_max_size', '64M');
-@ini_set( 'max_execution_time', '300' );
+// @ini_set( 'upload_max_size', '64M' );.
+// @ini_set( 'post_max_size', '64M' );.
+// @ini_set( 'max_execution_time', '300' );.
 
-require_once( get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php');
+require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
 
 function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -115,7 +115,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
-		
 		add_theme_support( 'title-tag' );
 
 		// add theme support html5.
@@ -130,14 +129,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 
-		add_theme_support( 'post-thumbnails');
+		add_theme_support( 'post-thumbnails' );
 
 		// Create new image sizes.
-		add_image_size( 'featured-image', 800, 999 );
-		
-		add_image_size( 'post-thumbnail', 600, 999 );
+		add_image_size( 'featured-image', 900, 999 );
 
-	
+		add_image_size( 'post-thumbnail', 450, 999 );
+
 		// Link pages.
 		$defaults = array(
 			'before'           => '<p>' . __( 'Pages:', 'raythompsonwebdev-com' ),
@@ -152,7 +150,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			'echo'             => 1,
 		);
 		wp_link_pages( $defaults );
-		
+
 		// nav- menus.
 		$defaults = array(
 			'default-image'          => '',
@@ -284,11 +282,13 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
-if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+if ( ! is_admin() ) {
+	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
+}
 function my_jquery_enqueue() {
-   wp_deregister_script('jquery');
-   wp_register_script('jquery', "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", false, null);
-   wp_enqueue_script('jquery');
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
+	wp_enqueue_script( 'jquery' );
 }
 
 /**
@@ -307,32 +307,34 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
 /**
  * Load the html5.
  *  */
-add_action( 'wp_enqueue_scripts', function ()
-{
-	$conditional_scripts = [
+add_action(
+	'wp_enqueue_scripts',
+	function () {
+		$conditional_scripts = [
 
-		'html5shiv'   => '/js/old-browser-scripts/html5shiv.min.js',
-		'respond'     => '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
-		'selectivizr' => '/js/old-browser-scripts/selectivizr-min.js',
+			'html5shiv'   => '/js/old-browser-scripts/html5shiv.min.js',
+			'respond'     => '/js/old-browser-scripts/Respond-master/dest/respond.src.js',
+			'selectivizr' => '/js/old-browser-scripts/selectivizr-min.js',
 
-	];
-	foreach ( $conditional_scripts as $handle => $src ) {
-		wp_enqueue_script( $handle, get_template_directory_uri() , array(), '1.0', false );
-	}
-	add_filter(
-		'script_loader_tag',
+		];
+		foreach ( $conditional_scripts as $handle => $src ) {
+			wp_enqueue_script( $handle, get_template_directory_uri(), array(), '1.0', false );
+		}
+		add_filter(
+			'script_loader_tag',
+			function( $tag, $handle ) use ( $conditional_scripts ) {
 
-		function( $tag, $handle ) use ( $conditional_scripts ) {
-
-			if ( array_key_exists( $handle, $conditional_scripts ) ) {
-				$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
-			}
-			return $tag;
-		},
-		10,
-		2
-	);
-}, 11 );
+				if ( array_key_exists( $handle, $conditional_scripts ) ) {
+					$tag = '<!--[if (lt IE 8) & (!IEMobile)]>' . $tag . '<![endif]-->' . "\n";
+				}
+				return $tag;
+			},
+			10,
+			2
+		);
+	},
+	11
+);
 
 /**
  * Enqueue IE8 style sheets.
@@ -348,7 +350,9 @@ function ie_style_sheets() {
 add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
 /**
- *  Enqueue other scripts.
+ *  Master Scripts.
+ *
+ *  @copyright 2020 Ray.
  */
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 function raythompsonwebdev_com_scripts_own() {
@@ -382,18 +386,6 @@ function raythompsonwebdev_com_add_lightbox() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_projects_script' );
-/**
- * Enqueue gallery page scripts.
- */
-function raythompsonwebdev_com_projects_script() {
-
-	if ( 'project' === get_post_type() || is_page( 'projects' ) ) {
-		//wp_enqueue_script( 'cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array( 'jquery' ), '20161110', true );
-		//wp_enqueue_script( 'raythompsonwebdev-com-website', get_template_directory_uri() . '/js/websites.js', array( 'jquery' ), '20161110', true );
-
-	}
-}
 
 
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
@@ -555,7 +547,7 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
  */
 function raythompsonwebdev_com_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
-		$attr['sizes']   = '(max-width: 1024px) 85vw, (max-width: 67px) 67vw, (max-width: 60px) 60vw, (max-width: 62px) 62vw, 85px';
+		$attr['sizes']   = '(max-width: 1024px) 85vw, (max-width: 800px) 67vw, (max-width: 600px) 60vw, (max-width: 480px) 62vw, 85px';
 		! $attr['sizes'] = '(max-width: 736px) 73vw, (max-width: 1024px) 67vw, (max-width: 1920px) 60vw, 1920px';
 	}
 	return $attr;
@@ -576,7 +568,7 @@ function raythompsonwebdev_com_content_image_sizes_attr( $sizes, $size ) {
 	if ( 'page' === get_post_type() ) {
 		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
-		736 > $width && 360 <= $width && $sizes = '(max-width: 800px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 800px';
+		736 > $width && 360 <= $width && $sizes = '(max-width: 1200px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 900px';
 		360 > $width && $sizes                  = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
 
@@ -615,7 +607,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * Summary Map additions.
  */
-//require get_template_directory() . '/inc/map-function.php';
+// require get_template_directory() . '/inc/map-function.php';.
 
 
 

@@ -6,17 +6,19 @@
  *
  * @package    WordPress
  * @subpackage Raythompsonwebdev-com
- * 
  */
 
 ?>
 
 <!--Post loop start -->
-<?php if ( have_posts() ) :  ?>
+<?php if ( have_posts() ) : ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php
+	while ( have_posts() ) :
+		the_post();
+		?>
 
-		<article <?php post_class('rtwd-post'); ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
 			<?php
 			if ( is_singular() ) :
@@ -51,8 +53,8 @@
 
 						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 							
-								<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/02/placeholder-1.jpg','display');?>"
-									alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-2.jpg"
+									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 							
 					</a>
 												
@@ -93,9 +95,10 @@
 				<div class="continue-reading">
 					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 						<?php
-						printf(
+						sprintf(
 							/* Translators: %s = Name of the current post. */
-								wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
+							wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
+							the_title( '<span class="screen-reader-text">"', '"</span>', false )
 						);
 						?>
 					</a>

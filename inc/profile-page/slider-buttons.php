@@ -1,6 +1,6 @@
 <?php
 
-$sliderButtons = '[
+$slider_buttons = '[
   {
     "id": "1",    
     "buttonname": "Adobe"

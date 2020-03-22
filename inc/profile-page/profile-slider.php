@@ -1,83 +1,97 @@
-  <?php
+<?php
+/**
+ * *PHP version 7.2.
+ *
+ * Profile Page Courses Slider | inc/profile-chart.php.
+ *
+ * @category   Profile page courses slider
+ * @package    WordPress
+ * @subpackage raythompsonwebdev-com
+ * @since      1.0
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3 *
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       https:www.raythompsonwebdev.co.uk custom template
+ * 
+ */
 
-    include 'sliderpaneltext.php';
-    include 'sliderButtons.php';
+	require 'slider-panel-text.php';
+	require 'slider-buttons.php';
 
-    $sliders = json_decode($sliderPanelText, true);
+	$slider_panels = json_decode( $slider_panel_text, true );
+	$courses_tabs  = json_decode( $slider_buttons, true );
 
-    //var_dump($sliders);
-    $tabs = json_decode($sliderButtons, true);
+?>
+	<section id="prof_cont-a">
 
-  ?>
-    <section id="prof_cont-a">
+	<h1><?php esc_html_e( 'Web Development Courses', 'raythompsonwebdev-com' ); ?></h1>
 
-    <h1><?php _e('Web Development Courses', 'raythompsonwebdev-com'); ?></h1>
+	<!-- #hero-slider -->
+	<article class="hero-slider">
 
-    <!-- #hero-slider -->
-    <article class="hero-slider">
+	  <ul id="list">
+			<?php foreach ( $courses_tabs as $courses_tab ) : ?>   
+			  
+		  <li>
+			  <a href="#" rel="#panel-<?php echo esc_html( $courses_tab['id'] ); ?>" class="hero-btn active" title="<?php echo esc_html( $courses_tab['title'] ); ?>" ><?php echo esc_html( $courses_tab['buttonname'] ); ?></a>
+		  </li>             
+			  
+		<?php endforeach; ?>
 
-      <ul id="list">
-        <?php foreach($tabs as $tab): ?>   
-              
-          <li>
-              <a href="#" rel="#panel-<?= $tab['id'] ?>" class="hero-btn active" title="<?php esc_attr_e($tab['title'], 'raythompsonwebdev-com'); ?>" ><?php _e($tab['buttonname'], 'raythompsonwebdev-com'); ?></a>
-          </li>             
-              
-        <?php endforeach;?>
+	  </ul>
+	  <!--mask-->
+	  <div class="mask">
+		  <!--slider body -->
+		  <div class="slider-body">
 
-      </ul>
-      <!--mask-->
-      <div class="mask">
-          <!--slider body -->
-          <div class="slider-body">
+			  <?php foreach ( $slider_panels as $slider_panel ) : ?> 
 
-              <?php foreach($sliders as $slider): ?> 
+				<article class="panel" id="panel-<?php echo esc_html( $slider_panel['id'] ); ?>">
 
-                <article class="panel" id="panel-<?= $slider['id'] ?>">
+					<h2><?php echo esc_html( $slider_panel['title'], 'raythompsonwebdev-com' ); ?> </h2>
 
-                    <h2><?php _e($slider['title'], 'raythompsonwebdev-com'); ?> </h2>
+					<figure class="slider-panel">
 
-                    <figure class="slider-panel">
+						<a 
+						  href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo esc_html( $slider_panel['bgimage'] ); ?>" 
+						  class="fancybox" 
+						  title="<?php echo esc_attr( $slider_panel['title'], 'raythompsonwebdev-com' ); ?>">
+						  <span></span>                                  
+						</a>
 
-                        <a 
-                          href="<?= esc_url(home_url('/')); ?><?= $slider['bgimag'] ?>" 
-                          class="fancybox" 
-                          title="<?php esc_attr_e($slider['title'], 'raythompsonwebdev-com'); ?>">
-                          <span></span>                                  
-                        </a>
+						<figcaption>
+							<h3><?php echo esc_html( $slider_panel['header'], 'raythompsonwebdev-com' ); ?></h3>
+							<h4><?php echo esc_html( $slider_panel['topics'], 'raythompsonwebdev-com' ); ?></h4>
 
-                        <figcaption>
-                            <h3><?php _e($slider['header'], 'raythompsonwebdev-com'); ?></h3>
-                            <h4><?php _e($slider['topics'], 'raythompsonwebdev-com'); ?></h4>
+							<ul>
+								<li><?php echo esc_html( $slider_panel['task1'], 'raythompsonwebdev-com' ); ?></li>
+								<li><?php echo esc_html( $slider_panel['task2'], 'raythompsonwebdev-com' ); ?></li>
+								<li><?php echo esc_html( $slider_panel['task3'], 'raythompsonwebdev-com' ); ?></li>
+								<li><?php echo esc_html( $slider_panel['task4'], 'raythompsonwebdev-com' ); ?></li>
+								<li><?php echo esc_html( $slider_panel['task5'], 'raythompsonwebdev-com' ); ?></li>
+							</ul>
 
-                            <ul>
-                                <li><?php _e($slider['task1'], 'raythompsonwebdev-com'); ?></li>
-                                <li><?php _e($slider['task2'], 'raythompsonwebdev-com'); ?></li>
-                                <li><?php _e($slider['task3'], 'raythompsonwebdev-com'); ?></li>
-                                <li><?php _e($slider['task4'], 'raythompsonwebdev-com'); ?></li>
-                                <li><?php _e($slider['task5'], 'raythompsonwebdev-com'); ?></li>
-                            </ul>
+							<div class="clearfix"></div>
 
-                            <div class="clearfix"></div>
+						</figcaption>
 
-                        </figcaption>
+					</figure>
 
-                    </figure>
+				</article>
+			  <?php endforeach; ?>
 
-                </article>
-              <?php endforeach;?>
+		  </div>
+		  <!--slider body end-->
+	  </div>
+	  <!-- .mask end -->
 
-          </div>
-          <!--slider body end-->
-      </div>
-      <!-- .mask end -->
-
-    </article>
-    <!-- hero-slider end -->
+	</article>
+	<!-- hero-slider end -->
 
   </section>
 <?php
-   
+
 
 
 

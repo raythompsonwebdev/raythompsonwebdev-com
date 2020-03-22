@@ -13,17 +13,20 @@
 <!--Post loop start -->
 <?php if ( have_posts() ) : ?>
 
-	<?php while ( have_posts() ) :	the_post();	?>
+	<?php
+	while ( have_posts() ) :
+		the_post();
+		?>
 
-		<article <?php post_class('single-post'); ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class( 'single-post' ); ?> id="post-<?php the_ID(); ?>">
 
 			<?php
-				if ( is_singular() ) :
-					the_title( '<h1 class="page-title" >', '</h1>' );
+			if ( is_singular() ) :
+				the_title( '<h1 class="page-title" >', '</h1>' );
 				else :
 					the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 				endif;
-			?>
+				?>
 
 			<!--Post entry Header-->
 			<header class="byline">
@@ -48,8 +51,8 @@
 
 						<figure class="featuredImage">
 							
-								<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/02/placeholder-1.jpg','display');?>"
-									alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+								<img src="<?php echo esc_url( 'https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/03/placeholder-2.jpg', 'display' ); ?>"
+									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 							
 						</figure>
 
@@ -77,9 +80,9 @@
 					<?php
 						$lastmodified = get_the_modified_time( 'U' );
 						$posted       = get_the_time( 'U' );
-						if ( $lastmodified > $posted ) {
-							echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-						}
+					if ( $lastmodified > $posted ) {
+						echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+					}
 					?>
 				</p>
 

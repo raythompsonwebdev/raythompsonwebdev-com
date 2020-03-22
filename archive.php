@@ -14,16 +14,16 @@
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
-get_header(); 
+get_header();
 
 	the_archive_title( '<h1 class="page-title">', '</h1>' );
 	the_archive_description( '<div class="taxonomy-description">', '</div>' );
 
-	while ( have_posts() ) :
+while ( have_posts() ) :
 	the_post();
 	?>
 
-	<article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
 		<h1>
 			<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
@@ -32,7 +32,7 @@ get_header();
 		<!--Post entry Header-->
 		<header class="byline">
 			<div class="entry-meta">
-				<?php if ( 'post' === get_post_type() ) : ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
 					<div class="meta-content">
 
 						<?php
@@ -46,59 +46,61 @@ get_header();
 		<!--featured Image-->
 		<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
-<?php if ( has_post_thumbnail() ) { ?>
+	<?php if ( has_post_thumbnail() ) { ?>
 
-	<?php raythompsonwebdev_com_post_thumbnail(); ?>
+		<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
-<?php } else { ?>
+	<?php } else { ?>
 
 	<figure class="featuredImage">
-		<a href="<?= esc_url( get_permalink() ); ?>" rel="bookmark">
-		<img src="<?= esc_url('https://raythompsonwebdev.co.uk/wp-content/themes/raythompsonwebdev-com/images/placeholder.jpg','display');?>" alt="<? esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+		<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1-1.jpg"
+				alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 		</a>
 	</figure>
 
-	<?php
-}
-?>
+		<?php
+	}
+	?>
 </a>
 <!--featured Image end-->
 		<div class="entry">
 
-		<?php
-			the_excerpt(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
+	<?php
+		the_excerpt(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
 
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
-					'after'  => '</div>',
-				)
-			);
-		?>
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
+				'after'  => '</div>',
+			)
+		);
+	?>
 
 		</div>
 
 		<div class="continue-reading">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-					<?php
-					printf(
-						/* Translators: %s = Name of the current post. */
-							wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ), the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					);
-					?>
+				<?php
+				printf(
+					/* Translators: %s = Name of the current post. */
+					wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
+					the_title( '<span class="screen-reader-text">"', '"</span>', false )
+				);
+				?>
 				</a>
 			</div>
 
@@ -110,7 +112,7 @@ get_header();
 
 <section class="contact-wide">
 
-<h1><?php _e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
+<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
   
 </section>
 

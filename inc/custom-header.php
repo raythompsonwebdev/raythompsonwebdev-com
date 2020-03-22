@@ -4,7 +4,6 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
- *
  * @link http://codex.wordpress.org/Custom_Headers
  *
  * @package    WordPress
@@ -71,7 +70,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 		<style type="text/css">
 		<?php
 			// Has the text been hidden?
-		if ( ! display_header_text() ) :	?>
+		if ( ! display_header_text() ) :
+			?>
 		.site-title,
 		.site-description {
 			position: absolute;
@@ -79,7 +79,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_header_style' ) ) :
 		}
 			<?php
 			// If the user has set a custom color for the text use that.
-		else :	?>
+		else :
+			?>
 			.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;

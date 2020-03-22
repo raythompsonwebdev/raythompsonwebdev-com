@@ -14,7 +14,6 @@
  * @link       https:www.raythompsonwebdev.co.uk
  * @package    WordPress
  * @subpackage Raythompsonwebdev-com
- * 
  */
 
 get_header();
@@ -23,7 +22,7 @@ get_header();
 <h1><?php the_title(); ?></h1>
 <section class="main-text">
 	
-<p><?= _e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
+<p><?php esc_html_e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
 </section>
 
 
@@ -45,15 +44,15 @@ get_header();
 				while ( $loop->have_posts() ) :
 					$loop->the_post();
 
-		?>
+					?>
 			<!-- display slugs for custom post categories.-->
 			<div id="panel" class="prod-cnt
-				  <?php
+					<?php
 						$customterms = get_the_terms( $post->ID, 'project-category' );
-						foreach ( $customterms as $customterm ) {
-							$pic = $customterm->slug . ' ';
-							echo esc_html( $pic );
-						}
+					foreach ( $customterms as $customterm ) {
+						$pic = $customterm->slug . ' ';
+						echo esc_html( $pic );
+					}
 					?>
 			"<?php post_class(); ?><?php the_ID(); ?> >
 
@@ -65,7 +64,7 @@ get_header();
 						<h1> <?php the_title(); ?></h1>
 
 							<a href="<?php the_permalink(); ?>">
-								<?php _e( 'See More..', 'raythompsonwebdev-com' ); ?>
+								<?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?>
 							</a>
 
 					</figcaption>
@@ -78,7 +77,7 @@ get_header();
 
 			<?php	endif; ?>
 			
-			<?php wp_reset_query(); ?>
+			<?php wp_reset_postdata(); ?>
 
 		<div class="clearfix"></div>
 

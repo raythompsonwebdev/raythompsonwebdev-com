@@ -17,13 +17,13 @@
 get_header(); ?>
 
 
-  <?php  get_template_part( 'template-parts/content', get_post_format() ); ?>
+  <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
   <div class="clearfix"></div>
 
   <!--Related Items -->
   <section class="contact-wide">
-    <h1><?php _e( 'Related Items', 'raythompsonwebdev-com' ); ?></h1>
+	<h1><?php esc_html_e( 'Related Items', 'raythompsonwebdev-com' ); ?></h1>
   </section>
 
 <!--Side bar -->

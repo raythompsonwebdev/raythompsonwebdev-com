@@ -1,5 +1,12 @@
 <?php
-
+/**
+ * Custom Post Type
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
+ */
 
 /**
  *
@@ -33,35 +40,34 @@ function raythompsonwebdev_com_register_post_type() {
 
 	// Set other options for Custom Post Type.
 	$args = array(
-		'label'                => __( 'Projects', 'raythompsonwebdev-com' ),
-		'description'          => __( 'Web Development Projects', 'raythompsonwebdev-com' ),
-		'labels'               => $labels,
+		'label'               => __( 'Projects', 'raythompsonwebdev-com' ),
+		'description'         => __( 'Web Development Projects', 'raythompsonwebdev-com' ),
+		'labels'              => $labels,
 		// Features this CPT supports in Post Editor.
-		'supports'             => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
+		'supports'            => array( 'title', 'editor', 'post-formats', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields' ),
 		// You can associate this CPT with a taxonomy or custom taxonomy.
-		'taxonomies'           => array( 'project-category', 'post_tag' ),
+		'taxonomies'          => array( 'project-category', 'post_tag' ),
 
 		// A hierarchical CPT is like Pages and can have Parent and child items. A non-hierarchical CPT is like Posts.
-		//'register_meta_box_cb' => 'raythompsonwebdev_com_register_metaboxes',
-		'hierarchical'         => false,
-		'public'               => true,
-		'show_ui'              => true,
-		'show_in_menu'         => true,
-		'show_in_nav_menus'    => true,
-		'show_in_rest' 		   => true,	
-		        		
-		'menu_icon' 		   => 'dashicons-welcome-widgets-menus',
-		'show_in_admin_bar'    => true,
-		'menu_position'        => 5,
-		'query_var'            => true,
-		'rewrite'              => array( 'slug' => 'project' ),
-		'can_export'           => true,
-		'has_archive'          => true,
-		'exclude_from_search'  => false,
-		'publicly_queryable'   => true,
-		'capability_type'      => 'post'
-  );  
-  
+		// 'register_meta_box_cb' => 'raythompsonwebdev_com_register_metaboxes'.
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_rest'        => true,
+
+		'menu_icon'           => 'dashicons-welcome-widgets-menus',
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'query_var'           => true,
+		'rewrite'             => array( 'slug' => 'project' ),
+		'can_export'          => true,
+		'has_archive'         => false,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
 
 	// Registering your Custom Post Type.
 	register_post_type( 'project', $args );

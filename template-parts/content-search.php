@@ -10,12 +10,12 @@
 
 $classess = array(
 	'post',
-	'search-results'
-) 
+	'search-results',
+)
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class($classess); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( $classess ); ?>>
 <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 	<header class="byline">
@@ -35,30 +35,30 @@ $classess = array(
 
 	<!--featured Image-->
 	
-		<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( has_post_thumbnail() ) : ?>
+					
+					<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
-		<?php raythompsonwebdev_com_post_thumbnail(); ?>
+					<?php else : ?>
 
-		<?php else : ?>
-
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-				
-					<img src="<?php echo esc_url('https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/02/placeholder-1.jpg','display');?>"
-						alt="<?php esc_attr_e('No image Available','raythompsonwebdev-com');?>" rel="prefetch" />
-				
-			</a>
-		
-		<?php endif; ?>
+						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+							
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/02/placeholder-1-1.jpg"
+									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+							
+					</a>
+												
+				<?php endif; ?>
 	</a>
 
 	<!-- .entry-summary -->
 	<div class="entry">
 		<?php
 
-		if( 'gallery' === get_post_type()) :
+		if ( 'gallery' === get_post_type() ) :
 
 			the_excerpt();
-										
+
 			else :
 
 				the_excerpt(
@@ -77,7 +77,7 @@ $classess = array(
 				);
 
 			endif;
-		?>
+			?>
 
 
 	</div>
@@ -85,19 +85,19 @@ $classess = array(
 	<div class="continue-reading">
 		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 			<?php
-				printf(					
-					wp_kses( 
+				sprintf(
+					wp_kses(
 						/* Translators: %s = Name of the current post. */
-						__( 'Continue reading %s', 'raythompsonwebdev-com' ), 
-						array( 
-							'span' => array( 
-								'class' => array() 
-							) 
+						__( 'Continue reading %s', 'raythompsonwebdev-com' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
 						)
-					), 
+					),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				);
-			?>
+				?>
 		</a>
 	</div>
 
