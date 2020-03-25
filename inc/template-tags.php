@@ -187,7 +187,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 					<?php the_post_thumbnail( 'featured-image' ); ?>
 				
 		</figure><!-- .post-thumbnail -->
-	
+
+		
 	<?php	else : ?> 
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">

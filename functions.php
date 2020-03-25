@@ -14,6 +14,9 @@
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
+require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
+
+
 /**
  * Creates a nicely formatted and more specific title element text
  * for output in head of document, based on current view.
@@ -22,13 +25,6 @@
  * @param string $sep   Optional separator.
  * @return string Filtered title.
  */
-
-// @ini_set( 'upload_max_size', '64M' );.
-// @ini_set( 'post_max_size', '64M' );.
-// @ini_set( 'max_execution_time', '300' );.
-
-require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
-
 function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
 	global $paged, $page;
 
@@ -135,6 +131,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		add_image_size( 'featured-image', 900, 999 );
 
 		add_image_size( 'post-thumbnail', 450, 999 );
+
+		add_image_size( 'website-image', 400, 650 );
 
 		// Link pages.
 		$defaults = array(
@@ -285,6 +283,12 @@ add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 if ( ! is_admin() ) {
 	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
 }
+
+/**
+ * Undocumented function
+ *
+ * @return void
+ */
 function my_jquery_enqueue() {
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
@@ -349,12 +353,13 @@ function ie_style_sheets() {
 }
 add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
-/**
- *  Master Scripts.
- *
- *  @copyright 2020 Ray.
- */
+
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
+/**
+ * Master Scripts
+ *
+ * @return void
+ */
 function raythompsonwebdev_com_scripts_own() {
 
 	// master.
@@ -547,8 +552,8 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
  */
 function raythompsonwebdev_com_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( 'post-thumbnail' === $size ) {
-		$attr['sizes']   = '(max-width: 1024px) 85vw, (max-width: 800px) 67vw, (max-width: 600px) 60vw, (max-width: 480px) 62vw, 85px';
-		! $attr['sizes'] = '(max-width: 736px) 73vw, (max-width: 1024px) 67vw, (max-width: 1920px) 60vw, 1920px';
+		$attr['sizes']   = '(max-width: 480px) 85vw, (max-width: 800px) 67vw, (max-width: 1024px) 60vw, (max-width: 1920px) 90vw, 900px';
+		! $attr['sizes'] = '(max-width: 736px) 73vw, (max-width: 1024px) 67vw, (max-width: 1920px) 60vw, 900px';
 	}
 	return $attr;
 }
@@ -562,14 +567,14 @@ add_filter( 'wp_get_attachment_image_attributes', 'raythompsonwebdev_com_post_th
  *  @param  array $size     Registered image size or flat array of height and width dimensions.
  */
 function raythompsonwebdev_com_content_image_sizes_attr( $sizes, $size ) {
-	$width                  = $size[0];
+	$width = $size[0];
 	736 <= $width && $sizes = '(max-width: 800px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 62vw, 980px';
 
 	if ( 'page' === get_post_type() ) {
 		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	} else {
-		736 > $width && 360 <= $width && $sizes = '(max-width: 1200px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 45vw, 900px';
-		360 > $width && $sizes                  = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
+		736 > $width && 360 <= $width && $sizes = '(max-width: 480px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 85vw, 900px';
+		360 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
 	}
 
 	return $sizes;
@@ -604,10 +609,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	include get_template_directory() . '/inc/jetpack.php';
 }
 
-/**
- * Summary Map additions.
- */
-// require get_template_directory() . '/inc/map-function.php';.
+
 
 
 

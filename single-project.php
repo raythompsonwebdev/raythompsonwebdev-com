@@ -42,7 +42,7 @@ if ( have_posts() ) :
 							?>
 		-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
 		
-		<?php the_post_thumbnail( 'websites' ); ?>
+		<?php the_post_thumbnail( 'website-image' ); ?>
 
 		
 		</a>
