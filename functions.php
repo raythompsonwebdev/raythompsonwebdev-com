@@ -98,10 +98,25 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			]
 		);
 
+		// Set content-width.
+		global $content_width;
+		if ( ! isset( $content_width ) ) {
+			$content_width = 1024;
+		}
+
+		// Add support for full and wide align images.
+		add_theme_support( 'align-wide' );
+
 		/**
 		*  Load text domain
 		*/
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
+
+		$locale      = get_locale();
+		$locale_file = get_template_directory() . "/languages/$locale.php";
+		if ( is_readable( $locale_file ) ) {
+			require_once $locale_file;
+		}
 
 		/**
 		*  Add editor styles to posts and pages
@@ -128,9 +143,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// Create new image sizes.
-		add_image_size( 'featured-image', 900, 999 );
-
-		add_image_size( 'post-thumbnail', 450, 999 );
+		add_image_size( 'featured-image', 1200, 630 );
 
 		add_image_size( 'website-image', 400, 650 );
 
@@ -191,17 +204,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function raythompsonwebdev_com_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'raythompsonwebdev_com_content_width', 1024 );
-}
-add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
 
 /**
  * Remove Query Strings – Optional Step.
@@ -399,7 +401,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about-page' ) ) {
+	if ( is_page( 'about' ) ) {
 		// scrollto script.
 		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
 		// easing script.
@@ -439,17 +441,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	}
 	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
 endif;
-
-/**
- *  SVG function.
- *
- *  @param array $mimes svg support.
- */
-function raythompsonwebdev_com_cc_mime_types( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}
-add_filter( 'upload_mimes', 'raythompsonwebdev_com_cc_mime_types' );
 
 
 /**
@@ -539,47 +530,6 @@ function raythompsonwebdev_com_categoree_widgets_init() {
 }
 add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
 
-/**
- * Add custom image sizes attribute to enhance responsive image functionality
- * for post thumbnails.
- *
- * @since Twenty Sixteen 1.0
- *
- * @param  array $attr       Attributes for the image markup.
- * @param  int   $attachment Image attachment ID.
- * @param  array $size       Registered image size or flat array of height and width dimensions.
- * @return string A source size value for use in a post thumbnail 'sizes' attribute.
- */
-function raythompsonwebdev_com_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
-	if ( 'post-thumbnail' === $size ) {
-		$attr['sizes']   = '(max-width: 480px) 85vw, (max-width: 800px) 67vw, (max-width: 1024px) 60vw, (max-width: 1920px) 90vw, 900px';
-		! $attr['sizes'] = '(max-width: 736px) 73vw, (max-width: 1024px) 67vw, (max-width: 1920px) 60vw, 900px';
-	}
-	return $attr;
-}
-add_filter( 'wp_get_attachment_image_attributes', 'raythompsonwebdev_com_post_thumbnail_sizes_attr', 10, 3 );
-
-
-/**
- *  Responsive images.
- *
- *  @param  array $sizes    Registered image size or flat array of height and width dimensions.
- *  @param  array $size     Registered image size or flat array of height and width dimensions.
- */
-function raythompsonwebdev_com_content_image_sizes_attr( $sizes, $size ) {
-	$width = $size[0];
-	736 <= $width && $sizes = '(max-width: 800px) 85vw, (max-width: 1024px) 67vw, (max-width: 1920px) 62vw, 980px';
-
-	if ( 'page' === get_post_type() ) {
-		736 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-	} else {
-		736 > $width && 360 <= $width && $sizes = '(max-width: 480px) 85vw, (max-width: 1024px) 67vw, (max-width: 1280px) 61vw, (max-width: 1920px) 85vw, 900px';
-		360 > $width && $sizes = '(max-width: ' . $width . 'px) 85vw, ' . $width . 'px';
-	}
-
-	return $sizes;
-}
-add_filter( 'wp_calculate_image_sizes', 'raythompsonwebdev_com_content_image_sizes_attr', 10, 2 );
 
 
 /**
