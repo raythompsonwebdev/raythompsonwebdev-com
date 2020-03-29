@@ -399,7 +399,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about-page' ) ) {
+	if ( is_page( 'about' ) ) {
 		// scrollto script.
 		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
 		// easing script.

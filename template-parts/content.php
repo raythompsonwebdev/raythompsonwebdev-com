@@ -81,13 +81,8 @@
 				
 				<div class="continue-reading">
 					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-						<?php
-						printf(
-							/* Translators: %s = Name of the current post. */
-							wp_kses( __( 'Continue reading %1$s %2$s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
-							esc_html( the_title( '<span class="screen-reader-text">"', '"</span>', false ) ),
-							'raythompsonwebdev-com'
-						);
+						<?php												
+							esc_html(the_title("Continue Reading : "), 'raythompsonwebdev-com');						
 						?>
 					</a>
 				</div>
