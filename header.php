@@ -25,8 +25,12 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
-		
-		<link rel="dns-prefetch" href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" >
+								
+		<link rel="preconnect" href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" >
+
+		<script src="https://kit.fontawesome.com/3ef7bd2328.js" crossorigin="anonymous" defer ></script>
+		<!-- Global site tag (gtag.js) - Google Analytics-->
+		<script src="https://www.googletagmanager.com/gtag/js?id=UA-86655310-1" async></script>
 		
 		<?php wp_head(); ?>
 	</head>

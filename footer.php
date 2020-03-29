@@ -93,18 +93,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 </p>
 </div>
 
- <script type="text/javascript">
-WebFontConfig = {
-	google: { families: [ 'Cabin:400,700', 'PT+Sans:400,700' ] }
-};
-(function() {
-	var wf = document.createElement('script');
-	wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	wf.type = 'text/javascript';
-	wf.async = 'true';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(wf, s);
-})(); </script> 
+
 
 <?php wp_footer(); ?>
 

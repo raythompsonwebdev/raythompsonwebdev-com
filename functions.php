@@ -304,8 +304,6 @@ function raythompsonwebdev_com_register_styles() {
 
 	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '1.0', false );
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
-	// Add Font Awesome icons (http://fontawesome.io).
-	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css', '1.0', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
@@ -421,12 +419,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	 */
 	function raythompsonwebdev_com_google_script() {
 
-		wp_enqueue_script( 'googletagmanager', 'https://www.googletagmanager.com/gtag/js?id=UA-86655310-1', array(), '20161110', true );
-
 		?>
-
-		<!-- Global site tag (gtag.js) - Google Analytics-->
-
 		<script>
 
 			window.dataLayer = window.dataLayer || [];
@@ -439,7 +432,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 
 		<?php
 	}
-	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
+	add_action( 'wp_head', 'raythompsonwebdev_com_google_script' );
 endif;
 
 
