@@ -67,14 +67,10 @@
 				<div class="entry">
 
 					<?php
-						the_excerpt();
 
-						wp_link_pages(
-							array(
-								'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
-								'after'  => '</div>',
-							)
-						);
+						the_excerpt();
+						
+												
 					?>
 
 				</div>
@@ -104,17 +100,13 @@
 					</p>
 
 				</footer>
-
-				
 			
 		</article>
 
 		<?php
 
 	endwhile;
-
-	the_posts_navigation();
-
+	
 	?>
 <?php else : ?>
 

@@ -17,6 +17,14 @@
 require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
 
 
+add_filter( 'login_errors', 'cwpl_error_message');
+/**
+ * Returns a custom login error message.
+ */
+function cwpl_error_message() {
+	return 'Well, that was not it!';
+}
+
 /**
  * Creates a nicely formatted and more specific title element text
  * for output in head of document, based on current view.
@@ -51,6 +59,17 @@ function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'raythompsonwebdev_com_filter_wp_title', 10, 2 );
+
+/**
+*  Load text domain
+*/
+load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
+
+$locale      = get_locale();
+$locale_file = get_template_directory() . "/languages/$locale.php";
+if ( is_readable( $locale_file ) ) {
+	require_once $locale_file;
+}
 
 
 if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
@@ -106,18 +125,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
-
-		/**
-		*  Load text domain
-		*/
-		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
-
-		$locale      = get_locale();
-		$locale_file = get_template_directory() . "/languages/$locale.php";
-		if ( is_readable( $locale_file ) ) {
-			require_once $locale_file;
-		}
-
+		
 		/**
 		*  Add editor styles to posts and pages
 		*/
@@ -215,11 +223,11 @@ function raythompsonwebdev_com_remove_script_version( $src ) {
 	return $parts[0];
 }
 add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_script_version', 15, 1 );
-add_filter( 'style_loader_src', 'raythompsonwebdev_com_remove_script_version', 15, 1 );
+
 
 /**
  * Disable the emoji's
- * add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+ * 
  */
 function raythompsonwebdev_com_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -246,6 +254,7 @@ function raythompsonwebdev_com_disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
+add_filter( 'tiny_mce_plugins', 'raythompsonwebdev_com_disable_emojis_tinymce' );
 
 /**
  * Remove WP embed script.
@@ -285,7 +294,6 @@ add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 if ( ! is_admin() ) {
 	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
 }
-
 /**
  * Undocumented function
  *

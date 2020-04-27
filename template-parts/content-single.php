@@ -65,9 +65,7 @@
 			<!--Post entry-->
 			<div class="entry">
 
-				<?php
-					the_content();
-				?>
+				<?php	the_content(); ?>
 
 			</div>
 		   
@@ -91,10 +89,25 @@
 
 		</article>
 
-		<?php
-	endwhile;
+		<?php	endwhile;	?>
 
-	?>
+		<nav class="navigation">
+			
+			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
+			<div class="nav-links">
+
+			<div class="nav-previous">
+				<?php previous_post_link( '%link' ); ?>
+			</div>
+
+			<div class="nav-next">
+				<?php next_post_link( '%link' ); ?>
+			</div>
+
+			</div>
+
+		</nav>
+		
 <?php else : ?>
 
 	<?php get_template_part( 'template-part/content', 'none' ); ?>

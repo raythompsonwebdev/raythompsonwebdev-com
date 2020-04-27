@@ -37,50 +37,57 @@ if ( post_password_required() ) { ?>
 // Display Comments Section
 if ( have_comments() ) :
 	?>
-	<h3 id="comments">
-		<?php comments_number( 'No Responses', 'One Response', '% Responses' ); ?> <?php sprintf( 'to "%s"', the_title( '', '', false ) ); ?></h3>
-		 <ol class="commentlist">
-	
-		<?php
-		wp_list_comments(
-			array(
-			/**
-			*
-			*  See http://codex.wordpress.org/Function_Reference/wp_list_comments.
-			* 'login_text'        => 'Login to reply',
-			* 'callback'          => null,
-			* 'end-callback'      => null,
-			* 'type'              => 'all',
-			* 'avatar_size'       => 32,
-			* 'reverse_top_level' => null,
-			* 'reverse_children'  =>
-			*  */
 
-			)
-		);
+	<!--Comment List Header-->
+	<h3 id="comments">
+	<?php
+		printf( _nx( 'One comment on "%2$s"', '%1$s comments on "%2$s"', get_comments_number(), 'comments title'),
+			number_format_i18n( get_comments_number() ), get_the_title() );
+		?>
+	</h3>
+
+	<!--Comment List-->	
+	<ol class="commentlist">	
+		<?php
+			wp_list_comments(
+				array(			
+				//  See http://codex.wordpress.org/Function_Reference/wp_list_comments.
+				'short_ping'  => true,
+				'avatar_size'       => 74,								
+				
+				)
+			);
 		?>
 	</ol>
+	<?php
+    // Are there comments to navigate through?
+    if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+?>
+	<!--Comment Navigation-->	
+					
 	<nav class="navigation">
-		<h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h1>
+	<h3 class="section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h3>
 		<div class="nav-links">
 			<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'raythompsonwebdev-com' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompsonwebdev-com' ) ); ?></div>
 		</div>
 	</nav>
-		
+	<?php endif; // Check for comment navigation ?>
+	
+
 	<?php
 	if ( ! comments_open() ) : // There are comments but comments are now closed.
 		echo "<p class='nocomments'>Comments are closed.</p>";
 	endif;
 
-else : // I.E. There are no Comments
-	// Comments are open, but there are none yet.
-	if ( comments_open() ) :
-		 echo '<p>Be the first to write a comment.</p>';
-	else : // comments are closed.
-		echo "<p class='nocomments'>Comments are closed.</p>";
+	else : // I.E. There are no Comments
+		// Comments are open, but there are none yet.
+		if ( comments_open() ) :
+			echo '<p>Be the first to write a comment.</p>';
+		else : // comments are closed.
+			echo "<p class='nocomments'>Comments are closed.</p>";
+		endif;
 	endif;
-endif;
 
 // Display Form/Login info Section.
 // the comment_form() function handles this and can be used without any paramaters simply as "comment_form()".

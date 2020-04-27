@@ -47,9 +47,7 @@ if ( have_posts() ) :
 		
 		</a>
 	  </figure>
-	</div>
-
-	
+	</div>	
 
 		<?php $project_name = get_post_meta( get_the_ID(), 'project_name', true ); ?>
 
@@ -105,38 +103,40 @@ if ( have_posts() ) :
 
 	</div>
 
-
   </div>
+
   <footer class="byline">
 
   </footer>
 
 </article><!--end of post group-->
 
-		<?php
-  endwhile;
+	<?php
 
-	if ( is_singular( 'project' ) ) {
-		?>
+		endwhile;
 
-<nav class="navigation">
-  
-  <h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
-  <div class="nav-links">
+		if ( is_singular( 'project' ) ) :
+	
+	?>
 
-	<div class="nav-previous">
-		<?php previous_post_link( '%link' ); ?>
-	</div>
+		<nav class="navigation">
+			
+			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
+			<div class="nav-links">
 
-	<div class="nav-next">
-		<?php next_post_link( '%link' ); ?>
-	</div>
+			<div class="nav-previous">
+				<?php previous_post_link( '%link' ); ?>
+			</div>
 
-  </div>
+			<div class="nav-next">
+				<?php next_post_link( '%link' ); ?>
+			</div>
 
-</nav>
+			</div>
 
-<?php } ?>
+		</nav>
+
+	<?php endif; ?>
 
 <?php endif; ?>
 

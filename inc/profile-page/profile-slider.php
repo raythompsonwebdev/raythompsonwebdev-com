@@ -34,7 +34,7 @@
 			<?php foreach ( $courses_tabs as $courses_tab ) : ?>   
 			  
 		  <li>
-			  <a href="#" rel="#panel-<?php echo esc_html( $courses_tab['id'] ); ?>" class="hero-btn active" title="<?php echo esc_html( $courses_tab['title'] ); ?>" ><?php echo esc_html( $courses_tab['buttonname'] ); ?></a>
+			  <a href="#" rel="#panel-<?php echo esc_html( $courses_tab['id'] ); ?>" class="hero-btn active" title="<?php echo esc_html( $courses_tab['buttonname'] ); ?>" ><?php echo esc_html( $courses_tab['buttonname'] ); ?></a>
 		  </li>             
 			  
 		<?php endforeach; ?>
@@ -62,7 +62,7 @@
 
 						<figcaption>
 							<h3><?php echo esc_html( $slider_panel['header'], 'raythompsonwebdev-com' ); ?></h3>
-							<h4><?php echo esc_html( $slider_panel['topics'], 'raythompsonwebdev-com' ); ?></h4>
+							<h4><?php echo esc_html( $slider_panel['subheader'], 'raythompsonwebdev-com' ); ?></h4>
 
 							<ul>
 								<li><?php echo esc_html( $slider_panel['task1'], 'raythompsonwebdev-com' ); ?></li>
