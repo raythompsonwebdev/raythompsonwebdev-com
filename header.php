@@ -25,13 +25,10 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
-								
+
 		<link rel="preconnect" href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" >
 
-		<script src="https://kit.fontawesome.com/3ef7bd2328.js" crossorigin="anonymous" defer ></script>
-		<!-- Global site tag (gtag.js) - Google Analytics-->
-		<script src="https://www.googletagmanager.com/gtag/js?id=UA-86655310-1" async></script>
-		
+
 		<?php wp_head(); ?>
 	</head>
 
@@ -46,7 +43,7 @@
 		<?php if ( get_header_image() ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<img src="<?php header_image(); ?>" width="<?php esc_attr_e( get_custom_header()->width ); ?>" height="<?php esc_attr_e( get_custom_header()->height ); ?>" alt="">
-			
+
 			</a>
 		<?php endif; // End header image check. ?>
 
@@ -56,10 +53,10 @@
 				<div class="site-logo">
 
 					<?php $site_title = get_bloginfo( 'name' ); ?>
-				
+
 					<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<div class="screen-reader-text">
-							
+
 							<?php
 							/* translators: %1$s:, CMSname: WordPress. */
 							printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html( $site_title ) );
@@ -83,12 +80,12 @@
 				<?php if ( is_front_page() || is_page( array( 'about-page', 'contact-page', 'privacy-policy-2', 'archives' ) ) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
-						
+
 						<?php elseif ( is_page( 'projects' ) || 'project' === get_post_type() ) : ?>
-			
+
 						<hgroup>
 						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
-						
+
 						<?php else : ?>
 						<hgroup>
 							<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>

@@ -78,6 +78,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 	 *  Description theme set up.
 	 *
 	 *  @since 4.0.0
+         *
 	 */
 	function raythompsonwebdev_com_theme_setup() {
 
@@ -117,15 +118,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			]
 		);
 
-		// Set content-width.
-		global $content_width;
-		if ( ! isset( $content_width ) ) {
-			$content_width = 1024;
-		}
-
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
-		
+
 		/**
 		*  Add editor styles to posts and pages
 		*/
@@ -212,6 +207,21 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function clashvibes_content_width() {
+	// This variable is intended to be overruled from themes.
+	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
+
 
 /**
  * Remove Query Strings – Optional Step.
@@ -227,7 +237,7 @@ add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_script_version', 
 
 /**
  * Disable the emoji's
- * 
+ *
  */
 function raythompsonwebdev_com_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -310,8 +320,9 @@ function my_jquery_enqueue() {
  */
 function raythompsonwebdev_com_register_styles() {
 
-	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '1.0', false );
+	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_template_directory_uri() . '/css/normalize.css', array(), '1.0', false );
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fontawesome/css/all.css', array(), '1.0', false );
 
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
@@ -392,7 +403,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
  *  Raythompsonwebdev lightbox code.
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about-page' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
@@ -407,7 +418,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about' ) ) {
+	if ( is_page( 'about-page' ) ) {
 		// scrollto script.
 		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
 		// easing script.
@@ -559,8 +570,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	include get_template_directory() . '/inc/jetpack.php';
 }
-
-
-
-
-

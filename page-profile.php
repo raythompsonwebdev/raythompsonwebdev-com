@@ -46,9 +46,7 @@ get_header();
 	</article>
 
 	<?php
-
-		// echo do_shortcode( '[chart]' );
-
+	
 		require get_template_directory() . '/inc/profile-page/profile-chart.php';
 
 	?>
@@ -76,9 +74,7 @@ get_header();
 	</article>
 
 	<?php
-
-			// echo do_shortcode( '[hero]' );.
-
+			
 			require get_template_directory() . '/inc/profile-page/profile-slider.php';
 
 	?>

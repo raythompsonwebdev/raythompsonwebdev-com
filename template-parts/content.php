@@ -53,7 +53,7 @@
 
 						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 							
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/nothing.jpg"
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/06/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 							
 					</a>
@@ -110,7 +110,7 @@
 	?>
 <?php else : ?>
 
-	<?php get_template_part( 'templat-parts/content', 'none' ); ?>
+	<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 <?php endif; ?>
 <!--Post loop end -->

@@ -35,7 +35,7 @@ if ( have_posts() ) :
 	<div class="item item1">
 	  
 	  <figure class="websiteImage">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/www-
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/06/www-
 							<?php
 							$post_slug = $post->post_name;
 							esc_html_e( $post_slug, 'raythompsonwebdev-com' );
