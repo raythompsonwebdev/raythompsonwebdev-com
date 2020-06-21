@@ -21,7 +21,7 @@ get_header(); ?>
 
 <div id="contactform">
 	
-	
+	<?php the_content() ?>
 	
 </div>
 

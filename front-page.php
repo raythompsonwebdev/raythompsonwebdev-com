@@ -45,7 +45,7 @@
 	<h1 id="front-title"><?php esc_html_e( 'What I do', 'raythompsonwebdev-com' ); ?></h1>
 
 			<section class="frntpgbox">
-			<span><i class="fa fa-wrench"></i></span>
+			<span><i class="fas fa-code"></i></span>
 				<h1><?php esc_html_e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
 					
 		<p><?php esc_html_e( 'HTML/CSS', 'raythompsonwebdev-com' ); ?></p>
@@ -56,7 +56,7 @@
 			</section>
 
 			<section class="frntpgbox">
-				<span><i class="fa fa-laptop"></i></span>
+				<span><i class="fas fa-photo-video"></i></span>
 					<h1><?php esc_html_e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
 					
 						<p><?php esc_html_e( 'Video/Audio/Image', 'raythompsonwebdev-com' ); ?></p>
@@ -66,7 +66,7 @@
 			</section>
 
 			<section class="frntpgbox">
-			<span><i class="fa fa-wordpress"></i></span>
+			<span><i class="fab fa-wordpress"></i></span>
 					<h1><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 						
 							<p><?php esc_html_e( 'Installation', 'raythompsonwebdev-com' ); ?></p>
@@ -76,7 +76,7 @@
 			</section>
 
 			<section class="frntpgbox">
-	  <span><i class="fa fa-wrench"></i></span>
+	  <span><i class="fas fa-wrench"></i></span>
 				<h1><?php esc_html_e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
 					
 						<p><?php esc_html_e( 'Security', 'raythompsonwebdev-com' ); ?></p>

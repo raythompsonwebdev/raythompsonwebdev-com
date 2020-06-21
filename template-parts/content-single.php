@@ -51,7 +51,7 @@
 
 						<figure class="featuredImage">
 							
-								<img src="<?php echo esc_url( 'https://raythompsonwebdevlocal.com/wordpress/wp-content/uploads/2020/06/nothing.jpg', 'display' ); ?>"
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/06/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 							
 						</figure>

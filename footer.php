@@ -38,34 +38,29 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 		<a class="social-icon" href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">
 			<span>
-				<i class="fa fa-linkedin"></i>
+				<i class="fab fa-linkedin"></i>
 			</span>
 		</a>
 
 
 		<a class="social-icon" href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">
 			<span>
-				<i class="fa fa-twitter"></i>
+				<i class="fab fa-twitter"></i>
 			</span>
 		</a>
 
 		<a class="social-icon" href="<?php echo esc_url( '#', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Link No Longer Available', 'raythompsonwebdev-com' ); ?>">
 			<span>
-				
+			<i class="fab fa-facebook"></i>
 			</span>
 		</a>
 
 		<a class="social-icon" href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
 			<span>
-				<i class="fa fa-github"></i>
+				<i class="fab fa-github"></i>
 			</span>
 		</a>
-
-		<a class="social-icon" href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
-			<span>
-				<i class="fa fa-google"></i>
-			</span>
-		</a>
+		
 
 	</aside>
 
