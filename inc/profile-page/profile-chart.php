@@ -45,7 +45,7 @@ $bars = json_decode( $chart_bars, true );
 	
 	<section id="prof_cont">
 
-		<h1><?php esc_html_e( 'Web Skills Graph', 'raythompsonwebdev-com' ); ?></h1>
+		<h1><?php esc_html_e( 'Coding Languages', 'raythompsonwebdev-com' ); ?></h1>
 
 		<article id="chart">
 			

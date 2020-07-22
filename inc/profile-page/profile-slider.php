@@ -25,7 +25,7 @@
 ?>
 	<section id="prof_cont-a">
 
-	<h1><?php esc_html_e( 'Web Development Courses', 'raythompsonwebdev-com' ); ?></h1>
+	<h1><?php esc_html_e( 'Web Development Activities', 'raythompsonwebdev-com' ); ?></h1>
 
 	<!-- #hero-slider -->
 	<article class="hero-slider">

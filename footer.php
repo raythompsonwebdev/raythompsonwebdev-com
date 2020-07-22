@@ -49,7 +49,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 			</span>
 		</a>
 
-		<a class="social-icon" href="<?php echo esc_url( '#', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Link No Longer Available', 'raythompsonwebdev-com' ); ?>">
+		<a class="social-icon" href="<?php echo esc_url( 'https://www.facebook.com/raythompsonwebdeveloper', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">
 			<span>
 			<i class="fab fa-facebook"></i>
 			</span>
@@ -71,8 +71,10 @@ if ( has_nav_menu( 'Secondary' ) ) {
 		<span class="sep"> | </span>
 		
 	<?php
-	/* translators: %1$s by %2$s: Theme name, raythompsonwebdev-com: Raymond Thompson. */
-	sprintf( esc_html_e( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
+	
+	sprintf(
+		
+		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
 	?>
 <br/>
 
