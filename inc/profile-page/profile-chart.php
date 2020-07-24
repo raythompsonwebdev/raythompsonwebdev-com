@@ -27,15 +27,15 @@ $chart_bars = '[
   }, {
     "id": "3",    
     "language":"Javascript",    
-    "datapercentage": "60"
+    "datapercentage": "80"
   }, {
     "id": "4",
     "language":"PHP",    
-    "datapercentage": "70"
+    "datapercentage": "80"
   }, {
     "id": "5",
     "language":"MYSQL",    
-    "datapercentage": "60"
+    "datapercentage": "70"
   }
 ]';
 

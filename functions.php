@@ -403,7 +403,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
  *  Raythompsonwebdev lightbox code.
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'project' === get_post_type() || is_page( 'about-page' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );

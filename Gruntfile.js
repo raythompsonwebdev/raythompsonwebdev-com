@@ -7,6 +7,18 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
+    babel: {
+      files: {
+          expand: true,
+          src: ['js/*.js'],
+          dest:'js/babelfiles/',
+          ext: '-compiled.js'
+      },
+      options: {
+          sourceMap: true,
+          presets: ['@babel/preset-env']
+      }
+    },
     /**
      * Concat
      */
@@ -19,7 +31,6 @@ module.exports = function(grunt) {
         dest: "js/dist/concat/<%= pkg.name %>.js"
       }
     },
-
     /**
      * Uglify
      */
@@ -73,6 +84,8 @@ module.exports = function(grunt) {
         tasks: ["sass"]
       }
     }
+
+
   });
 
 
@@ -80,7 +93,8 @@ module.exports = function(grunt) {
     "watch",
     "concat",
     "uglify",
-    "sass"
+    "sass",
+    "babel"
   ]);
 };
 
