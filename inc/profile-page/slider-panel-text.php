@@ -11,7 +11,7 @@ $slider_panel_text = '[
     "task4": "Manipulating Images",
     "task5": "Evaluating Digital Images",
     "buttonname": "Adobe",
-    "bgimage": "wp-content/uploads/2020/03/Large-Photoshop-Certicate-.jpg"
+    "bgimage": "wp-content/uploads/2020/07/Large-Photoshop-Certicate-.jpg"
   }, {
     "id": "2",
     "title": "ELATT",
@@ -23,7 +23,7 @@ $slider_panel_text = '[
     "task4": "IT User fundementals",
     "task5": "Organizing Content",
     "buttonname": "ELATT",
-    "bgimage": "wp-content/uploads/2020/03/ITQ-USERS-LEVEL1-LARGE.jpg"
+    "bgimage": "wp-content/uploads/2020/07/ITQ-USERS-LEVEL1-LARGE.jpg"
   }, {
     "id": "3",
     "title": "Udemy",
@@ -35,7 +35,7 @@ $slider_panel_text = '[
     "task4": "Learn Complete WordPress Security",
     "task5": "Up and Running with NodeJs",
     "buttonname": "Udemy",
-    "bgimage": "wp-content/uploads/2020/03/Large-Udemy-Certicate-.jpg"
+    "bgimage": "wp-content/uploads/2020/07/Large-Udemy-Certicate-.jpg"
   }, {
     "id": "4",
     "title": "FreeCodeCamp",
@@ -47,7 +47,7 @@ $slider_panel_text = '[
     "task4": "Basic JavaScript",
     "task5": "Responsive Web Design Projects",
     "buttonname": "FreeCodeCamp",
-    "bgimage": "wp-content/uploads/2020/03/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png"
+    "bgimage": "wp-content/uploads/2020/07/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png"
   }, {
     "id": "5",
     "title": "Lynda.com",
@@ -59,7 +59,7 @@ $slider_panel_text = '[
     "task4": "CSS Fundementals",
     "task5": "Javascript Essentials",
     "buttonname": "Lynda.com",
-    "bgimage": "wp-content/uploads/2020/03/lynda_logo1r-d_72x72.png"
+    "bgimage": "wp-content/uploads/2020/07/lynda_logo1r-d_72x72.png"
   }, {
     "id": "6",
     "title": "Mobile App Development",
@@ -71,7 +71,7 @@ $slider_panel_text = '[
     "task4": "Coding Functions",
     "task5": "Web Hosting/Deploying Apps",
     "buttonname": "Shaw Academy",
-    "bgimage": "wp-content/uploads/2020/03/Mobile-web-applications-Certificate-Foundation-large.jpg"
+    "bgimage": "wp-content/uploads/2020/07/Mobile-web-applications-Certificate-Foundation-large.jpg"
   }, {
     "id": "7",
     "title": "Code Academy",
@@ -83,7 +83,7 @@ $slider_panel_text = '[
     "task4": "",
     "task5": "",
     "buttonname": "Code Academy",
-    "bgimage": "wp-content/uploads/2020/03/codecademy-users-raythompsonwebdev-achievements-.png"
+    "bgimage": "wp-content/uploads/2020/07/codecademy-users-raythompsonwebdev-achievements-.png"
   }, {
     "id": "8",
     "title": "Udacity",
@@ -95,7 +95,7 @@ $slider_panel_text = '[
     "task4": "Website Performance Optimisation",
     "task5": "Version Control with Git",
     "buttonname": "Udacity",
-    "bgimage": "wp-content/uploads/2020/03/Udacity_logo.png"
+    "bgimage": "wp-content/uploads/2020/07/Udacity_logo.png"
   }, {
     "id": "9",
     "title": "Digital Futures 2017",
@@ -107,7 +107,7 @@ $slider_panel_text = '[
     "task4": "Negotiation skills with CitizenUK.",
     "task5": "Music creation using Sonic Pi",
     "buttonname": "Digital Futures",
-    "bgimage": "wp-content/uploads/2020/03/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
+    "bgimage": "wp-content/uploads/2020/07/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
   }
 ]';
 

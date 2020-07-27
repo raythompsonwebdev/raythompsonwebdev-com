@@ -1038,7 +1038,26 @@ desktop 1920px*/
           color: $color1;
         }
 
-        
+        a.webformats {
+          font-family: $FontStyle;
+          text-indent: 0;
+          text-align: left;
+          display: block;
+          height: auto;
+          color: $color1;
+          margin-bottom: 1em;
+          @include originTran(50% 50%);
+          @include Transition(all 0.2s ease-in 0s);
+          line-height: 40px;
+          background-color:unset;
+          
+
+          &:hover {
+            color: $color7;
+            text-decoration: underline;
+            font-weight:normal;
+          }
+        }
 
         .links {
           @include box-sizing($type: border-box);
@@ -1550,6 +1569,7 @@ desktop 1920px*/
         background-color: $color9;
         color: $color4;
         text-indent: 0.5em;
+        font-size: 1.2em;
       }
 
       .nav-links {
@@ -1606,6 +1626,8 @@ desktop 1920px*/
               float: right;
               width: 3%;
               display: block;
+              text-align:center;
+              text-indent: 0;
             }
           }
         }
@@ -1650,12 +1672,7 @@ desktop 1920px*/
         div.nav-previous,
         div.nav-next {
           width: 100%;
-          display: inline-block;
-          font-size: 1em;
-          font-weight: bold;
-          line-height: 40px;
-          color: $color8;
-          margin-top: 0.25em;
+
 
           a {
             height: 40px;
@@ -2760,7 +2777,7 @@ desktop 1920px*/
                 &:hover:after {
                   content: attr(data-percentage) "%";
                   position: relative;
-                  left: 100%;
+                  left: 90%;
                   display: block;
                   line-height: 60px;
                   font-size: 1.1em;
@@ -2781,7 +2798,7 @@ desktop 1920px*/
               height: auto;
               text-align: left;
               line-height: 60px;
-              font-size: 0.8em;
+              font-size: 0.9em;
               background-color: $color4;
               z-index: 3;
             }
@@ -3118,7 +3135,7 @@ desktop 1440px*/
       ul#menu-main {
         li.menu-item {
           a {
-            font-size: 0.9em;
+            font-size: 0.85em;
           }
         }
       }
@@ -3468,9 +3485,13 @@ desktop 1440px*/
         p.websitetext {
           margin-bottom: 0.5em;
         }
-        h3 {
+
+        a.webformats {
+          font-size:0.95em;          
+
           &:hover {
-            color: $color1;
+            color: $color7;
+
           }
         }
 
@@ -3765,7 +3786,7 @@ desktop 1440px*/
         span {
           i {
             width: 4%;
-            font-size: 1.2em;
+
           }
         }
 
@@ -4281,9 +4302,8 @@ desktop 1440px*/
             }
 
             span {
-              width: 16.5%;
-
-              font-size: 0.8em;
+  
+              font-size: 0.85em;
             }
           }
         }
@@ -4459,7 +4479,7 @@ desktop 1280px*/
 
         li.menu-item {
           a {
-            font-size: 0.85em;
+            font-size: 0.8em;
           }
         }
       }
@@ -4784,7 +4804,7 @@ desktop 1280px*/
           margin-bottom: 0.5em;
         }
 
-        
+                
 
         .links {
           height: 50px;
@@ -5075,7 +5095,7 @@ desktop 1280px*/
         span {
           i {
             width: 4%;
-            font-size: 1.1em;
+
           }
         }
 
@@ -5648,9 +5668,8 @@ desktop 1280px*/
             }
 
             span {
-              width: 16.5%;
 
-              font-size: 0.7em;
+              font-size: 0.85em;
             }
           }
         }
@@ -5818,7 +5837,7 @@ desktop 1024px*/
 
         li.menu-item {
           a {
-            font-size: 0.85em;
+            font-size: 0.8em;
           }
         }
       }
@@ -6131,6 +6150,15 @@ desktop 1024px*/
           margin-bottom: 0.5em;
         }
 
+        a.webformats {
+          font-size:0.95em;          
+
+          &:hover {
+            color: $color7;
+
+          }
+        }
+
         
 
         .links {
@@ -6423,7 +6451,7 @@ desktop 1024px*/
         span {
           i {
             width: 4%;
-            font-size: 1em;
+
           }
         }
 
@@ -6826,7 +6854,6 @@ desktop 1024px*/
             }
 
             span {
-              width: 16.5%;
 
               font-size: 0.7em;
             }
@@ -7622,7 +7649,7 @@ desktop 980px*/
         span {
           i {
             width: 4%;
-            font-size: 1em;
+
           }
         }
 
@@ -7638,7 +7665,7 @@ desktop 980px*/
             }
 
             &::after {
-              font-size: 1.2em;
+              font-size: 1.3em;
             }
           }
         }
@@ -8066,7 +8093,7 @@ desktop 980px*/
             }
 
             span {
-              width: 18.5%;
+              width: 16.5%;
             }
           }
         }
@@ -8239,7 +8266,7 @@ tablet 800px */
 
         li.menu-item {
           a {
-            font-size: 0.75em;
+            font-size: 0.8em;
           }
         }
       }
@@ -8579,6 +8606,14 @@ tablet 800px */
           font-size: 0.9em;
         }
 
+        a.webformats {
+          font-size:0.85em;         
+
+          &:hover {
+            color: $color7;
+          }
+        }
+
         
 
         .links {
@@ -8878,7 +8913,7 @@ tablet 800px */
         span {
           i {
             width: 4%;
-            font-size: 1em;
+   
           }
         }
 
@@ -9326,7 +9361,6 @@ tablet 800px */
             }
 
             span {
-              width: 16.5%;
 
               font-size: 0.8em;
             }
@@ -9834,7 +9868,16 @@ tablet 667px */
 
         p.websitetext {
           margin-bottom: 0.5em;
-          font-size: 0.8em;
+          font-size: 0.85em;
+        }
+
+        a.webformats {
+          font-size:0.9em;          
+
+          &:hover {
+            color: $color7;
+
+          }
         }
 
         
@@ -10135,7 +10178,7 @@ tablet 667px */
         span {
           i {
             width: 4%;
-            font-size: 1em;
+
           }
         }
 
@@ -10144,7 +10187,7 @@ tablet 667px */
           line-height: 40px;
 
           a {
-            font-size: 0.8em;
+            font-size: 1em;
 
             &:hover {
               font-weight: bold;
@@ -10958,7 +11001,7 @@ tablet 600px */
 
         p.websitetext {
           margin-bottom: 0.5em;
-          font-size: 0.85em;
+
         }
 
         
@@ -11259,7 +11302,7 @@ tablet 600px */
         span {
           i {
             width: 4%;
-            font-size: 1em;
+
           }
         }
 
@@ -12085,7 +12128,7 @@ tablet 536px */
         span {
           i {
             width: 4%;
-            font-size: 1em;
+
           }
         }
 
@@ -13258,7 +13301,7 @@ mobile 480px */
         span {
           i {
             width: 4%;
-            font-size: 1em;
+
           }
         }
 
@@ -14125,12 +14168,22 @@ mobile 414px */
 
         h1.post-meta-key {
           margin-bottom: 0.5em;
+          font-size: 0.9em;
         }
 
         p.websitetext {
           margin-bottom: 0.5em;
           font-size: 0.8em;
           
+        }
+
+        a.webformats {
+          font-size:0.85em;          
+
+          &:hover {
+            color: $color7;
+
+          }
         }
 
         
@@ -14433,7 +14486,7 @@ mobile 414px */
         span {
           i {
             width: 4%;
-            font-size: 1em;
+ 
           }
         }
 
@@ -15236,7 +15289,7 @@ mobile 360px */
       .nav-links {
         span {
           i {
-            font-size: 1em;
+            font-size: 1.2em;
           }
         }
 
@@ -16119,6 +16172,16 @@ mobile 320px */
 
         p.websitetext {
           margin-bottom: 0.5em;
+          font-size:0.75em;
+        }
+
+        a.webformats {
+          font-size:0.8em;          
+
+          &:hover {
+            color: $color7;
+
+          }
         }
 
         
