@@ -254,13 +254,13 @@ desktop 1920px*/
           flex: 0 1 auto;
 
           a {
-            background-color: $color3;
+            background-color: $color1;
             font-family: ($FontStyleHeader);
             width: 100%;
             height: 100%;
             text-decoration: none;
             line-height: 35px;
-            color: $color1;
+            color: $wbg;
             margin: 0;
             font-size: 0.9em;
             display: block;
@@ -269,23 +269,16 @@ desktop 1920px*/
             @include box-sizing($type: border-box);
             @include originTran(50% 50%);
             @include Transition(all 0.2s ease-in 0s);
-            &:link {
-              color: $color1;
-            }
-            &:visited {
-              background-color: $color1;
-              color: $color4;
-            }
             &:focus {
               outline: 1px dotted $color1;
             }
             &:active {
-              color: $color3;
-              background-color: $color1;
+              color: $wbg;
+              background-color: $btnhover;
             }
             &:hover {
-              background-color: $color1;
-              color: $color4;
+              background-color: $btnhover;
+              color: $wbg;
             }
           }
         }
@@ -347,9 +340,9 @@ desktop 1920px*/
       input[type="submit"] {
         display: inline-block;
         margin: 0;
-        background-color: $color3;
+        background-color: $color1;
         width: 25%;
-        color: $color1;
+        color: $color4;
         @include originTran(50% 50%);
         @include Transition(all 0.2s ease-in 0s);
         letter-spacing: 0.1em;
@@ -359,9 +352,10 @@ desktop 1920px*/
         height: 30px;
 
         &:hover {
-          color: $color4;
-          background-color: $color1;
+          color: $color1;
+          background-color: $color4;
           font-weight: bold;
+          cursor:pointer;
         }
       }
     }
@@ -718,7 +712,7 @@ desktop 1920px*/
           padding: 0;
           font-size: 1.2em;
           line-height: 40px;
-          background-color: $color7;
+          background-color: $color5;
           color: $color4;
           letter-spacing: 0.1em;
           text-align: center;
@@ -749,8 +743,8 @@ desktop 1920px*/
             margin: 0;
 
             li {
-              list-style: none;              
-              color: $color1;
+              list-style: none;            
+              
               width: 96%;
               margin: 0.5em auto;
               text-align: center;
@@ -759,27 +753,32 @@ desktop 1920px*/
                 width: 100%;
                 display: block;
                 line-height: 35px;
-                font-weight: 400;
+                color: $color4;
                 letter-spacing: 0.02em;
-                background-color: $color3;
+                background-color: $color1;
                 @include originTran(50% 50%);
                 @include Transition(all 0.2s ease-in 0s);
                 &:hover {
                   font-weight: bold;
-                  color: $color1;
+                  background-color: $color4;
                 }
               }
             }
 
             li.recentcomments {
               display: block;
-              color: $color1;
-              background-color: $color3;
               margin: 0.5em auto;
-              span.comment-author-link {
-                
+              background-color: $color1;
+              color: $color4;
+              span.comment-author-link {                
                 a {
                   color: $color4;
+                  background-color: $color1;
+                  &:hover{
+                    color: $color4;
+                    background-color: $color1;
+                    font-weight:bold;
+                  }
                 }
               }
             }
@@ -817,7 +816,7 @@ desktop 1920px*/
 
     /*regular Posts*/
     .post {
-      background-color: $color10;
+      background-color: $wbg ;
       padding: 0 1%;
       width: 100%;
       margin: 0.5em;
@@ -851,7 +850,7 @@ desktop 1920px*/
 
           &:hover {
             font-weight: bold;
-            color: $color7;
+            color: $color5;
           }
         }
       }
@@ -877,7 +876,7 @@ desktop 1920px*/
 
           &:hover {
             font-weight: italic;
-            color: $color7;
+            color: $color5;
           }
         }
       }
@@ -904,6 +903,7 @@ desktop 1920px*/
       }
 
       p {
+        background-color:$wbg ;
         width: 100%;
         margin: 0;
         font-size: 1em;
@@ -1053,7 +1053,7 @@ desktop 1920px*/
           
 
           &:hover {
-            color: $color7;
+            color: $color5;
             text-decoration: underline;
             font-weight:normal;
           }
@@ -1154,11 +1154,10 @@ desktop 1920px*/
 
       /*post header*/
       header.byline {
-        width: 100%;
-        margin-bottom: 1em;
+        width: 99%;
+        margin-bottom: 0.5em;
         height: auto;
-        background-color: $color2;       
-        color: $color1;
+        background-color: $color1 ;       
         text-align: left;
         padding: 0.5em;
         @include box-sizing($type: border-box);
@@ -1275,12 +1274,12 @@ desktop 1920px*/
           display: block;
           height: 100%;
           width: 100%;
-          color: $color1;
-          background-color: $color3;
+          color: $color4;
+          background-color: $color1;
 
           &:hover {
-            color: $color4;
-            background-color: $color1;
+            color: $color1;
+            background-color: $color4;
             font-weight: bold;
           }
 
@@ -1375,7 +1374,7 @@ desktop 1920px*/
         height: auto;
         width: 100%;
         margin: 0 auto;
-        background-color: $color4;
+        background-color: $wbg;
       }
 
       /*attachment page image*/
@@ -1393,16 +1392,16 @@ desktop 1920px*/
 
       /*post footer*/
       footer.byline {
-        width: 100%;
+        width: 99%;
         margin: 1% auto;
         height: auto;
-
         display: inline-block;
         clear: both;
-        background-color: $color3;
+        background-color: $color1;
 
         p {
           margin: 0;
+          color:$color4;
           display: inline-block;
           padding: 0 0.5em;
           width: auto;
@@ -1419,14 +1418,14 @@ desktop 1920px*/
 
           a {
             font-size: 0.9em;
-            color: $color1;
+            color: $color4;
             margin: 0;
             width: auto;
             display: inline-block;
             padding: 0.5%;
 
             &:hover {
-              color: $color3;
+              color: $color5;
             }
           }
         }
@@ -1466,9 +1465,10 @@ desktop 1920px*/
           padding: 0 0.5em;
           line-height: 50px;
           font-size: 1em;
+          color: $color4;
 
           a {
-            color: $color1;
+            color: $color4;
             margin: auto;
             width: auto;
             display: inline-block;
@@ -1611,10 +1611,12 @@ desktop 1920px*/
             margin: 0;
             width: 100%;
             text-indent: 0.5em;
+            background-color: $color1;
+            color: $color4;
 
             &:hover {
-              background-color: $color1;
-              color: $color4;
+              background-color: $color4;
+              color: $color1;
               font-weight: bold;
             }
 
@@ -1648,7 +1650,7 @@ desktop 1920px*/
         padding: 0;
         font-size: 1.3em;
         line-height: 60px;
-        background-color: $color7;
+        background-color: $color5;
         color: $color4;
         text-indent: 1%;
         letter-spacing: 0.1em;
@@ -1708,7 +1710,7 @@ desktop 1920px*/
             letter-spacing: 0.1em;
             padding: 0.5em;
             display: block;
-            background-color: $color7;
+            background-color: $color5;
             height: auto;
             text-indent: 0;
             width: 96%;
@@ -1730,8 +1732,8 @@ desktop 1920px*/
               padding: 0;
               width: auto;
               font-size: 0.9em;
-              background-color: $color7;
-              color: $color7;
+              background-color: $color5;
+              color: $color5;
               padding: 0.25em;
 
               img {
@@ -1771,7 +1773,7 @@ desktop 1920px*/
               padding: 0 0.5em;
               width: auto;
               display: block;
-              background-color: $color7;
+              background-color: $color5;
               font-size: 0.8em;
 
               a {
@@ -1819,10 +1821,10 @@ desktop 1920px*/
             height: 35px;
             list-style: none;
             width: 25%;
-            background-color: $color3;
+            background-color: $color1;
             padding: 0;
             border: none;
-            color: $color1;
+            color: $color4;
             font-family: ($FontStyle);
             line-height: 35px;
             text-align: center;
@@ -1830,11 +1832,9 @@ desktop 1920px*/
             @include boredrady(10px);
 
             &:hover {
-              background-color: $color1;
-              color: $color4;
+              background-color: $color4;
+              color: $color1;
               font-weight: bold;
-              line-height: 35px;
-              @include boredrady(10px);
             }
           }
         }
@@ -1849,7 +1849,7 @@ desktop 1920px*/
           margin: 1em auto;
           padding: 0;
           font-size: 1em;
-          background-color: $color7;
+          background-color: $color5;
           color: $color4;
 
           line-height: 35px;
@@ -1982,17 +1982,17 @@ desktop 1920px*/
             input[type="submit"] {
               height: 35px;
               list-style: none;
-              background-color: $color3;
+              background-color: $color1;
               @include Transition(all 0.2s ease-in 0s);
               padding: 0;
               border: none;
-              color: $color1;
+              color: $color4;
               font-family: $FontStyle;
               width: 15%;
 
               &:hover {
-                background-color: $color1;
-                color: $color4;
+                background-color: $color4;
+                color: $color1;
                 font-weight: bold;
                 width: 15%;
                 cursor: pointer;
@@ -2015,16 +2015,18 @@ desktop 1920px*/
       }
 
       p:last-of-type {
-        background-color: $color3;
+        
         text-align: center;
         a {
-          background-color: unset;
+          background-color: $color1;
           line-height: 40px;
           display: inline-block;
           width: auto;
           margin: 0 0.25em;
+          color: $color4;
 
           &:hover {
+            background-color: $color4;
             color: $color1;
             font-weight: bold;
           }
@@ -2101,7 +2103,7 @@ desktop 1920px*/
           letter-spacing: 0.025em;
           margin-bottom: 0.25em;
           padding: 0.25em;
-          background-color: $color4;
+          background-color:$wbg;
         }
 
         /*skills table*/
@@ -2133,6 +2135,7 @@ desktop 1920px*/
             margin: 0 0 0.5em 0;
             width: 100%;
             font-size: 1.1em;
+            color: $wbg;
           }
 
           section.frntpgbox {
@@ -2141,7 +2144,7 @@ desktop 1920px*/
             flex: 1 0 auto;
             width: 24%;
             display: inline-block;
-            background-color: $color4;
+            background-color:$wbg;
             height: auto;
             margin: 0.1em;
             padding: 0 0 0.5em 0;
@@ -2168,7 +2171,7 @@ desktop 1920px*/
               font-size: 1em;
               height: auto;
               text-align: center;
-              color: $color4;
+              color: $wbg;
               background-color: $color1;
               font-weight: bold;
             }
@@ -2282,7 +2285,7 @@ desktop 1920px*/
 
         h1 {
           font-size: 3em;
-          color: $color4;
+          color: $wbg;
           margin: 0;
           padding: 0;
           line-height: 60px;
@@ -2292,7 +2295,7 @@ desktop 1920px*/
         }
         h2 {
           font-size: 2em;
-          color: $color4;
+          color: $wbg;
           margin: 0 0 1em 0;
           padding: 0;
           text-align: left;
@@ -2305,6 +2308,7 @@ desktop 1920px*/
           float: left;
           padding: 1em;
           font-size: 1em;
+          background-color:$wbg;
         }
 
         a#projectLink {
@@ -2317,9 +2321,9 @@ desktop 1920px*/
           text-align: center;
           font-size: 1.2em;
           background-color: $color1;
-          color: $color4;
+          color: $wbg;;
           &:hover {
-            background-color: $color4;
+            background-color: $wbg;
             color: $color1;
             cursor: pointer;
           }
@@ -2376,7 +2380,7 @@ desktop 1920px*/
           line-height: 1.9em;
           font-size: 1em;
           margin-bottom: 0.25em;
-          background-color: $color4;
+          background-color: $wbg;
           padding: 0.5em;
           strong {
             display: inline-block;
@@ -2384,7 +2388,7 @@ desktop 1920px*/
               background-color: unset;
               font-weight: bold;
               &:hover {
-                color: $color7;
+                color: $color5;
               }
             }
           }
@@ -2426,7 +2430,7 @@ desktop 1920px*/
           font-size: 1em;
           margin-bottom: 0.25em;
           padding: 0.5em;
-          background-color: $color4;
+          background-color: $wbg;
           strong {
             display: inline-block;
             width: auto;
@@ -2435,7 +2439,7 @@ desktop 1920px*/
               font-weight: bold;
               width: auto;
               &:hover {
-                color: $color7;
+                color: $color5;
               }
             }
           }
@@ -2455,7 +2459,7 @@ desktop 1920px*/
         display: inline-block;
         box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
         padding: 0 0.5em;
-        background-color: $color4;
+        background-color: $wbg;
         margin: 0;
 
         h1 {
@@ -2632,10 +2636,10 @@ desktop 1920px*/
 
                       li {
                         width: 100%;
-                        background-color: $color2;
+                        background-color: $color1;
                         font-weight: normal;
                         font-size: 0.8em;
-                        color: $color1;
+                        color: $color4;
                         display: block;
                         height: auto;
                         line-height: 25px;
@@ -2645,7 +2649,7 @@ desktop 1920px*/
                         &:before {
                           font-family: "Font Awesome 5 Free";
                           font-size: 0.95em;
-                          color: $color1;
+                          color: $color4;
                           content: "\f005";
                           margin: 0 1%;
                           line-height: 1.5em;
@@ -2676,12 +2680,13 @@ desktop 1920px*/
                 display: block;
                 font-size: 0.8em;
                 line-height: 40px;
-                // background-color: $color2;
+                background-color: $color1;
+                color: $color4;
                 height: 100%;
               }
 
               a:hover {
-                background-color: $color1;
+                background-color: $btnhover;
                 color: $color4;
                 font-weight: bold;
                 line-height: 40px;
@@ -2706,10 +2711,8 @@ desktop 1920px*/
         width: 45%;
         height: 410px;
         display: inline-block;
-
         box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-
-        background-color: $color4;
+        background-color: $wbg;
         margin-bottom: 1em;
 
         h1 {
@@ -2747,7 +2750,7 @@ desktop 1920px*/
             -webkit-flex-flow: row wrap;
             -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-            background: $color4;
+            background: $wbg;
             width: 100%;
             height: 100%;
             list-style: none;
@@ -2770,7 +2773,7 @@ desktop 1920px*/
                 @include Transition(all 0.2s ease-in 0s);
 
                 &:hover {
-                  background: $color2;
+                  background: $btnhover;
                   cursor: pointer;
                 }
 
@@ -2781,7 +2784,7 @@ desktop 1920px*/
                   display: block;
                   line-height: 60px;
                   font-size: 1.1em;
-                  color: $color1;
+                  color: $wbg;
                   width: 15%;
                   text-align: center;
                 }
@@ -2799,7 +2802,7 @@ desktop 1920px*/
               text-align: left;
               line-height: 60px;
               font-size: 0.9em;
-              background-color: $color4;
+              background-color: $wbg;
               z-index: 3;
             }
           }
@@ -2950,9 +2953,8 @@ desktop 1920px*/
 
                 &:hover {
                   color: $color1;
-                  background-color: $color2;
+                  background-color: $color4;
                   font-weight: bold;
-                  @include boredrady(10px);
                 }
               }
             }
@@ -3490,7 +3492,7 @@ desktop 1440px*/
           font-size:0.95em;          
 
           &:hover {
-            color: $color7;
+            color: $color5;
 
           }
         }
@@ -6154,7 +6156,7 @@ desktop 1024px*/
           font-size:0.95em;          
 
           &:hover {
-            color: $color7;
+            color: $color5;
 
           }
         }
@@ -8610,7 +8612,7 @@ tablet 800px */
           font-size:0.85em;         
 
           &:hover {
-            color: $color7;
+            color: $color5;
           }
         }
 
@@ -9875,7 +9877,7 @@ tablet 667px */
           font-size:0.9em;          
 
           &:hover {
-            color: $color7;
+            color: $color5;
 
           }
         }
@@ -14181,7 +14183,7 @@ mobile 414px */
           font-size:0.85em;          
 
           &:hover {
-            color: $color7;
+            color: $color5;
 
           }
         }
@@ -16179,7 +16181,7 @@ mobile 320px */
           font-size:0.8em;          
 
           &:hover {
-            color: $color7;
+            color: $color5;
 
           }
         }

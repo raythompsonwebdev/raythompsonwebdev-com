@@ -23,9 +23,9 @@
 <section id="fntpage_banner">
 
 		<h1><?php esc_html_e( 'Hello, I\'m Raymond', 'raythompsonwebdev-com' ); ?></h1>
-	  <h2><?php esc_html_e( 'I\'m a web developer. I live in London. I enjoy coding and the challenges it brings.  ', 'raythompsonwebdev-com' ); ?></h2>
+	  <h2><?php esc_html_e( 'I\'m a web developer. I enjoy coding and the challenges it brings.  ', 'raythompsonwebdev-com' ); ?></h2>
 	  
-		<p><?php esc_html_e( 'I enjoy creating web applications and website interfaces that provide effective solutions to meet your on-line needs. I use clean semantic code and follow the latest web standards compliances and best practices. That ensures that websites can be found by most search engines, viewed within in most modern browsers and have speedy page loading for a better user experience.', 'raythompsonwebdev-com' ); ?></p>
+		<p><?php esc_html_e( 'I create web applications and website interfaces that provide effective solutions to meet your on-line needs. I use clean semantic code and follow the latest web standards compliances and best practices. That ensures that websites can be found by most search engines, viewed within in most modern browsers and have speedy page loading for a better user experience.', 'raythompsonwebdev-com' ); ?></p>
 		
 		<p><?php esc_html_e( ' Whether its website interface or a full web application I can create elegant and maintainable solutions. To see some of my past work click button on the right', 'raythompsonwebdev-com' ); ?></p>
 
