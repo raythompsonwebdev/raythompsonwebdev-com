@@ -309,11 +309,11 @@ if ( ! is_admin() ) {
  *
  * @return void
  */
-function my_jquery_enqueue() {
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
-	wp_enqueue_script( 'jquery' );
-}
+// function my_jquery_enqueue() {
+// 	wp_deregister_script( 'jquery' );
+// 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
+// 	wp_enqueue_script( 'jquery' );
+// }
 
 /**
  * Enqueue style sheets.
