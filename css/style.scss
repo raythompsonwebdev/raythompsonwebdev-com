@@ -33,9 +33,9 @@ desktop 1920px*/
     margin: 0;
     height: 100%;
     list-style: none;
-    background-color: $color1;
+    background-color: $colorwhite;
     width: 23.9652349%;
-    color: $wbg;
+    color: $blackcolor;
     @include Transition(all 0.2s ease-out 0s);
     letter-spacing: 0.1em;
     border: none;
@@ -49,13 +49,13 @@ desktop 1920px*/
   }
 
   body {
-    background: $color1;
+    background: $colorwhite;
     margin: 0;
     padding: 0;
   }
 
   #wrapper_container {
-    background: $color1;
+    background: $colorwhite;
     width: 90%;
     height: auto;
     margin-right: auto;
@@ -70,7 +70,7 @@ desktop 1920px*/
     height: 100px;
     margin: 0;
     padding: 0;
-    background-color: $color1;
+    background-color: $colorwhite;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -98,10 +98,10 @@ desktop 1920px*/
         top: 0;
         left: 0;
         display: block;
-        background: $wbg;
-        color: $color1;
+        background: $blackcolor;
+        color: $colorwhite;
         text-decoration: none;
-        line-height: 50px;
+        line-height: 60px;
         width: 85%;
         @include originTran(50% 50%);
         @include Transition(all 0.2s ease-out 0s);
@@ -154,14 +154,15 @@ desktop 1920px*/
 
     .site-logo a:focus,
     .site-logo a:hover {
-      outline: 2px solid $color1;
+      outline: 2px solid $colorwhite;
     }
 
     /*Header*/
     .site-logo a:focus .site-firstletter,
     .site-logo a:hover .site-firstletter {
-      background: $color3;
-      color: $color1;
+      background: $blackcolor;
+      color: $colorwhite;
+      font-weight:bold;
     }
     /*Header Title*/
     hgroup {
@@ -175,27 +176,28 @@ desktop 1920px*/
       font-family: $FontStyleHeader;
       h1#logo,
       h1#logo-blog {
-        font-size: 1.7em;
+        font-size: 1.6em;
         width: 100%;
         height: 35px;
         line-height: 35px;
-        color: $wbg;
+        color: $blackcolor;
         font-family: $FontStyleHeader;
         display: block;
-        letter-spacing: 0.01em;
-
+        letter-spacing: 0.01em;       
+        
 
         span {
           height: 100%;
           margin: 0;
-          color: $wbg;
+          color: $blackcolor;
           text-align: left;
           display: inline-block;
+          
         }
 
         span:last-of-type {
           height: 100%;
-          color: #DEC928;
+          color: #F21F2B;
           display: inline-block;
           margin: 0 0.1em;
           
@@ -244,7 +246,7 @@ desktop 1920px*/
 
         li.menu-item {
           height: 35px;
-          width: 19.2%;
+          width: 19.5%;
           list-style: none;
           padding: 0;
           display: inline-block;
@@ -254,14 +256,14 @@ desktop 1920px*/
           flex: 0 1 auto;
 
           a {
-            background-color: $color1;
+            background-color: $colorwhite;
             font-family: ($FontStyleHeader);
-            border:3px solid $wbg;
+            border:2px solid $blackcolor;
             width: 100%;
             height: 100%;
             text-decoration: none;
-            line-height: 29px;
-            color: $wbg;
+            line-height: 31px;
+            color: $blackcolor;
             margin: 0;
             font-size: 0.9em;
             display: block;
@@ -271,15 +273,15 @@ desktop 1920px*/
             @include originTran(50% 50%);
             @include Transition(all 0.2s ease-in 0s);
             &:focus {
-              outline: 1px dotted $wbg;
+              outline: 1px solid $yellowcolor;
             }
             &:active {
-              color: $color1;
-              background-color: $btnhover;
+              color: $yellowcolor;
+              background-color: $blackcolor;
             }
             &:hover {
-              background-color: $btnhover;
-              color: $color1;
+              background-color: $blackcolor;
+              color: $yellowcolor;
             }
           }
         }
@@ -319,7 +321,7 @@ desktop 1920px*/
         line-height: 30px;
         height: 30px;
         padding: 0;
-        color: $color1;
+        color: $colorwhite;
         text-align: left;
         width: 73%;
 
@@ -341,9 +343,9 @@ desktop 1920px*/
       input[type="submit"] {
         display: inline-block;
         margin: 0;
-        background-color: $color1;
+        background-color: $blackcolor;
         width: 25%;
-        color: $textcolor;
+        color: $colorwhite;
         @include originTran(50% 50%);
         @include Transition(all 0.2s ease-in 0s);
         letter-spacing: 0.1em;
@@ -353,8 +355,8 @@ desktop 1920px*/
         height: 30px;
 
         &:hover {
-          color: $color1;
-          background-color: $textcolor;
+          color: $colorwhite;
+          background-color: $blackcolor;
           font-weight: bold;
           cursor:pointer;
         }
@@ -377,7 +379,7 @@ desktop 1920px*/
       letter-spacing: 0.05em;
       clear: both;
       height: auto;
-      color:$wbg;
+      color:$blackcolor;
     }
 
     h2 {
@@ -385,6 +387,7 @@ desktop 1920px*/
       letter-spacing: 0.05em;
       line-height: 40px;
       height: auto;
+      color:$blackcolor;
     }
 
     h3 {
@@ -392,6 +395,7 @@ desktop 1920px*/
       letter-spacing: 0.05em;
       line-height: 30px;
       height: auto;
+      color:$blackcolor;
     }
 
     p {
@@ -402,7 +406,7 @@ desktop 1920px*/
       line-height: 1.9em;
       margin: 0 0 1em 0;
       padding: 0.5em;
-      background-color: $wbg;
+      color: $blackcolor;
       font-family: $FontStyle;
     }
 
@@ -411,14 +415,14 @@ desktop 1920px*/
       width: 8em;
 
       &:hover {
-        color: $btntexthover;
+        color: $yellowcolor;
       }
     }
 
     blockquote {
       width: 91%;
       margin: 1.8% auto;
-      color: $color1;
+      color: $colorwhite;
       line-height: 1.8em;
       font-style: italic;
       letter-spacing: 0.05em;
@@ -444,14 +448,12 @@ desktop 1920px*/
       ul {
         margin: 2em 0;
         width: 100%;
-        color: $color1;
         font-family: $FontStyle;
 
         li {
           font-family: "FontAwesome", $FontStyle;
           line-height: 40px;
-          color: $color1;
-
+          color: $blackcolor;
           &::before {
             font-family: "FontAwesome";
             content: "\f15b";
@@ -462,21 +464,19 @@ desktop 1920px*/
             width: 3%;
             text-align: center;
             font-size: 1em;
-            color: $color1;
+            color: $blackcolor;
           }
 
           a {
             width: auto;
             display: inline-block;
             line-height: 40px;
-
+            color: $blackcolor;
             &:visited {
-              background-color: unset;
+              font-weight:bold;
             }
-
             &:hover {
-              color: $textcolor;
-              background-color: unset;
+              color: $blackcolor;
               font-weight: bold;
             }
           }
@@ -484,7 +484,7 @@ desktop 1920px*/
       }
 
       hr {
-        background-color: $color1;
+        background-color: $colorwhite;
         height: 1px;
         margin: 5% auto;
         width: 80%;
@@ -499,6 +499,7 @@ desktop 1920px*/
       margin: 0;
       height: auto;
       min-height: 250px;
+      border:2px solid $blackcolor;
     }
 
     /*Contact page form*/
@@ -510,7 +511,7 @@ desktop 1920px*/
       padding: 10px 0;
       font-size: 1em;
       padding: 0.5em;
-      background-color: $textcolor;
+      background-color: $colorwhite;
 
       div.wpcf7 {
         font-size: 1em;
@@ -544,7 +545,7 @@ desktop 1920px*/
                 outline: none;
                 padding: 3px 0 3px 3px;
                 margin: 5px 1px 3px 0;
-                border: 1px solid $wbg;
+                border: 1px solid $blackcolor;
                 width: 100%;
                 height: 150px;
               }
@@ -556,7 +557,7 @@ desktop 1920px*/
                 outline: none;
                 padding: 3px 0 3px 3px;
                 margin: 5px 1px 3px 0;
-                border: 1px solid $wbg;
+                border: 1px solid $blackcolor;
                 width: 100%;
                 height: 35px;
               }
@@ -576,18 +577,17 @@ desktop 1920px*/
               height: 35px;
               list-style: none;
               width: 25%;
-              background-color: $color3;
+              background-color: $colorwhite;
+              border:2px solid $blackcolor;
               @include Transition(all 0.2s ease-in 0s);
               padding: 0;
-              border: none;
-              color: $color1;
+              color: $blackcolor;
               font-family: $FontStyle;
               display: block;
               font-size: 1.1em;
 
               &:hover {
-                background-color: $color1;
-                color: $textcolor;
+
                 font-weight: bold;
               }
             }
@@ -614,12 +614,14 @@ desktop 1920px*/
           font-size: 1em;
           line-height: 40px;
           font-family: "Font Awesome 5 Free", $FontStyle;
+          color:$blackcolor;
           &:visited {
-            background-color: unset;
+            font-weight: bold;
+            color:$blackcolor;
           }
           &:hover {
             font-weight: bold;
-            background-color: unset;
+            color:$blackcolor;
           }
         }
 
@@ -735,6 +737,7 @@ desktop 1920px*/
             font-size: 1.05em;
             line-height: 40px;
             letter-spacing: 0.1em;
+            color:$colorwhite;
           }
 
           ul,
@@ -745,24 +748,25 @@ desktop 1920px*/
             margin: 0;
 
             li {
-              list-style: none;            
-              
+              list-style: none;
               width: 96%;
               margin: 0.5em auto;
               text-align: center;
               font-size: 1em;
+              border:2px solid $blackcolor;
               a {
                 width: 100%;
                 display: block;
-                line-height: 35px;
-                color: $textcolor;
+                line-height: 45px;
+                color: $blackcolor;
                 letter-spacing: 0.02em;
-                background-color: $color1;
                 @include originTran(50% 50%);
                 @include Transition(all 0.2s ease-in 0s);
                 &:hover {
                   font-weight: bold;
-                  background-color: $textcolor;
+                  background-color: $blackcolor;
+                  color: $blackcolor;
+                  cursor:pointer;
                 }
               }
             }
@@ -770,16 +774,18 @@ desktop 1920px*/
             li.recentcomments {
               display: block;
               margin: 0.5em auto;
-              background-color: $color1;
-              color: $textcolor;
+              border:2px solid $blackcolor;
+              color: $blackcolor;
               span.comment-author-link {                
                 a {
-                  color: $textcolor;
-                  background-color: $color1;
+                  color: $blackcolor;
+                  background-color: $colorwhite;
+                  line-height: 25px;
                   &:hover{
-                    color: $textcolor;
-                    background-color: $color1;
-                    font-weight:bold;
+                    background-color: $colorwhite;
+                    color: $blackcolor;
+                    font-weight:bold;                    
+                    cursor:pointer;
                   }
                 }
               }
@@ -818,17 +824,19 @@ desktop 1920px*/
 
     /*regular Posts*/
     .post {
-      background-color: $wbg ;
+      background-color: $colorwhite;
       padding: 0 1%;
       width: 100%;
       margin: 0.5em 0;
       clear: both;
+      //border: 1px solid #ccc;
+      box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
 
       /*seperators*/
       hr.blog-spacer {
         margin: 2% auto;
         width: 80%;
-        color: $wbg;
+        color: $blackcolor;
         outline: 0;
         border: 0;
       }
@@ -844,15 +852,15 @@ desktop 1920px*/
         line-height: 65px;
         height: auto;
         text-align: center;
-        color: $color1;
+        color: $blackcolor;
 
         a {
-          color: $color1;
+          color: $blackcolor;
           background-color: unset;
 
           &:hover {
             font-weight: bold;
-            color: $headercolor;
+
           }
         }
       }
@@ -864,8 +872,8 @@ desktop 1920px*/
         padding: 0;
         letter-spacing: 0.04em;
         width: 100%;
-        color: $wbg;
-        background:$color1;
+        color: $blackcolor;
+        background:$colorwhite;
         line-height: 50px;
         height: auto;
         text-align: left;
@@ -875,7 +883,7 @@ desktop 1920px*/
           width: 100%;
           height: 100%;
           display: block;
-          color:$wbg;
+          color:$blackcolor;
 
           &:hover {
             font-weight: italic;
@@ -891,7 +899,7 @@ desktop 1920px*/
         text-indent: 0;
         width: 100%;
         text-align: left;
-        color: $color1;
+        color: $colorwhite;
 
         a {
           padding-left: 0;
@@ -905,11 +913,11 @@ desktop 1920px*/
       }
 
       p {
-        background-color:$color1 ;
+        background-color:$colorwhite ;
         width: 100%;
         margin: 0;
         font-size: 1em;
-        color: $wbg;
+        color: $blackcolor;
         font-weight: normal;
         line-height: 2.1em;
         letter-spacing: 0.02em;
@@ -930,13 +938,13 @@ desktop 1920px*/
             width: 100%;
             margin-left: 0;
             text-align: center;
-            background-color: $color1;
-            color: $wbg;
+            background-color: $colorwhite;
+            color: $blackcolor;
 
             &:hover {
               margin-left: 0;
               display: block;
-              background-color: $color1;
+              background-color: $colorwhite;
               font-weight: bold;
             }
           }
@@ -954,6 +962,7 @@ desktop 1920px*/
           font-family: $FontStyle;
           height: auto;
           padding: 0.5em;
+          background-color: $colorwhite;
 
           a {
             width: 100%;
@@ -962,16 +971,16 @@ desktop 1920px*/
             display: inline-block;
             font-size: 0.9em;
             height: 100%;
-            background-color: $color1;
+            background-color: $colorwhite;
             line-height: 35px;
-            color: $color1;
+            color: $blackcolor;
             @include originTran(50% 50%);
             @include Transition(all 0.2s ease-in 0s);
 
             &:hover {
               margin-left: 0;
               display: block;
-              background-color: $color1;
+              background-color: $colorwhite;
               font-weight: bold;
             }
           }
@@ -1023,12 +1032,11 @@ desktop 1920px*/
 
         h1.post-meta-key {
           display: block;
-          border-bottom: 1px solid $color1;
-          color: $color1;
+          border-bottom: 1px solid $colorwhite;
+          color: $blackcolor;
           line-height: 40px;
           height: 40px;
           text-align: left;
-          margin-bottom: 0.5em;
           font-size: 1.2em;
         }
 
@@ -1037,7 +1045,7 @@ desktop 1920px*/
           display: block;
           height: auto;
           margin-bottom: 0.5em;
-          color: $color1;
+          color: $blackcolor;
         }
 
         a.webformats {
@@ -1046,7 +1054,7 @@ desktop 1920px*/
           text-align: left;
           display: block;
           height: auto;
-          color: $color1;
+          color: $blackcolor;
           margin-bottom: 1em;
           @include originTran(50% 50%);
           @include Transition(all 0.2s ease-in 0s);
@@ -1090,14 +1098,14 @@ desktop 1920px*/
                 text-align: center;
                 height: 48px;
                 line-height: 48px;
-                color: $color1;
+                color: $colorwhite;
                 background-color: $textcolor;
                 @include originTran(50% 50%);
                 @include Transition(all 0.2s ease-in 0s);
 
                 &:hover {
                   color: $textcolor;
-                  background-color: $color1;
+                  background-color: $colorwhite;
                 }
               }
             }
@@ -1107,26 +1115,24 @@ desktop 1920px*/
 
       /*post image*/
       a.post-thumbnail {
-        margin: 0 auto;
+        margin: 0.5em auto;
         width: 100%;
-        background-color: unset;
+        background-color: $blackcolor;
         img {
           display: block;
-          margin: auto;
         }
       }
 
       /*featured image*/
       .featuredImage {
-        clear: both;
         height: auto;
         width: 80%;
-        margin: 1em auto;
+        margin: 0.5em auto;
         display: block;
 
         a {
           display: block;
-          background-color: unset;
+          background-color: $blackcolor;
         }
 
         img {
@@ -1159,7 +1165,7 @@ desktop 1920px*/
         width: 100%;
         margin-bottom: 0.5em;
         height: auto;
-        background-color: $color1 ;       
+        background-color: $colorwhite ;       
         text-align: left;
         padding: 0.25em;
         @include box-sizing($type: border-box);
@@ -1181,8 +1187,8 @@ desktop 1920px*/
             font-family: "FontAwesome", ($FontStyle);
             font-size: 0.9em;
             letter-spacing: 0.055em;
-            color: $color1;
-            background-color: $wbg;
+            color: $colorwhite;
+            background-color: $blackcolor;
             margin-bottom: 0.2em;
             display: inline-block;
             padding: 0 0.25em;
@@ -1221,12 +1227,12 @@ desktop 1920px*/
               font-family: "FontAwesome", $FontStyle;
               font-size: 0.9em;
               letter-spacing: 0.055em;
-              color: $color1;
-              background-color: $wbg;
+              color: $colorwhite;
+              background-color: $blackcolor;
               margin-bottom: 0.2em;
 
               a {
-                color: $color1;
+                color: $colorwhite;
                 margin: 0 auto;
                 width: auto;
                 display: inline-block;
@@ -1246,7 +1252,7 @@ desktop 1920px*/
             span.byline,
             span.comments-link {
               width: 100%;
-              background-color: $wbg;
+              background-color: $blackcolor;
             }
           }
         }
@@ -1259,10 +1265,10 @@ desktop 1920px*/
         height: 40px;
         line-height: 40px;
         list-style: none;
-        background-color: $color3;
+        
         font-family: $FontStyleHeader;
         width: 80%;
-        color: $color1;
+        color: $colorwhite;
         @include originTran(50% 50%);
         @include Transition(all 0.2s ease-in 0s);
         letter-spacing: 0.05em;
@@ -1275,21 +1281,20 @@ desktop 1920px*/
           display: block;
           height: 100%;
           width: 100%;
-          color: $wbg;
-          background-color: $color1;
+          color: $blackcolor;
+          background-color: $colorwhite;
+          border:2px solid $blackcolor;
 
           &:hover {
-            color: $wbg;
-            background-color: $color1;
+            color: $blackcolor;
             font-weight: bold;
           }
 
           span.screen-reader-text {
-            color: $color1;
+            color: $blackcolor;
 
             &:hover {
               font-weight: bold;
-              color: $color1;
             }
           }
         }
@@ -1336,10 +1341,10 @@ desktop 1920px*/
               padding: 0;
               margin: 0 1em 0 0;
               height: 100%;
-              color: $wbg;
+              color: $blackcolor;
 
               a {
-                background-color: $color1;
+                background-color: $colorwhite;
                 display: block;
                 margin: 0;
                 height: 100%;
@@ -1347,15 +1352,15 @@ desktop 1920px*/
                 @include Transition(all 0.2s ease-in 0s);
 
                 &:hover {
-                  color: $wbg;
-                  background-color: $color1;
+                  color: $blackcolor;
+                  background-color: $colorwhite;
                   width: 100%;
                 }
 
                 &:before {
                   display: block;
                   width: 100%;
-                  color: $wbg;
+                  color: $blackcolor;
                 }
 
                 span {
@@ -1375,7 +1380,7 @@ desktop 1920px*/
         height: auto;
         width: 100%;
         margin: 0 auto;
-        background-color: $wbg;
+        background-color: $colorwhite;
       }
 
       /*attachment page image*/
@@ -1398,11 +1403,11 @@ desktop 1920px*/
         height: auto;
         display: inline-block;
         clear: both;
-        background-color: $color1;
+        background-color: $colorwhite;
 
         p {
           margin: 0;
-          color:$wbg;
+          color:$blackcolor;
           display: inline-block;
           padding: 0 0.5em;
           width: auto;
@@ -1419,14 +1424,14 @@ desktop 1920px*/
 
           a {
             font-size: 0.9em;
-            color: $wbg;
+            color: $blackcolor;
             margin: 0;
             width: auto;
             display: inline-block;
             padding: 0.5%;
 
             &:hover {
-              color: $btnhover;
+              color: $blackcolor;
             }
           }
         }
@@ -1447,12 +1452,12 @@ desktop 1920px*/
             line-height: 65px;
             width: 100%;
             font-size: 1.5em;
-            background-color: $color1;
-            color: $wbg;
+            background-color: $colorwhite;
+            color: $blackcolor;
 
             &:hover {
-              color: $wbg;
-              background-color: $color1;
+              color: $blackcolor;
+              background-color: $colorwhite;
               font-weight: bold;
               line-height: 65px;
             }
@@ -1467,10 +1472,10 @@ desktop 1920px*/
           padding: 0 0.5em;
           line-height: 50px;
           font-size: 1em;
-          color: $wbg;
+          color: $blackcolor;
 
           a {
-            color: $wbg;
+            color: $blackcolor;
             margin: auto;
             width: auto;
             display: inline-block;
@@ -1569,7 +1574,7 @@ desktop 1920px*/
         display: block;
         line-height: 60px;
         background-color: $headercolor;
-        color: $textcolor;
+        color: $colorwhite;
         text-indent: 0.5em;
         font-size: 1.2em;
       }
@@ -1586,7 +1591,7 @@ desktop 1920px*/
             text-align: center;
             font-size: 1.3em;
             background-color: $color3;
-            color: $color1;
+            color: $colorwhite;
             padding: 1.1%;
             display: block;
             float: right;
@@ -1613,12 +1618,12 @@ desktop 1920px*/
             margin: 0;
             width: 100%;
             text-indent: 0.5em;
-            background-color: $color1;
-            color: $textcolor;
+            background-color: $blackcolor;
+            color: $colorwhite;
 
             &:hover {
-              background-color: $textcolor;
-              color: $color1;
+              background-color: $colorwhite;
+              color: $blackcolor;
               font-weight: bold;
             }
 
@@ -1643,7 +1648,7 @@ desktop 1920px*/
       margin: 1em 0;
       width: 100%;
       height: auto;
-      background-color: $wbg;
+      background-color: $colorwhite;
 
       h1 {
         width: 100%;
@@ -1653,7 +1658,7 @@ desktop 1920px*/
         font-size: 1.3em;
         line-height: 60px;
         background-color: $headercolor;
-        color: $textcolor;
+        color: $colorwhite;
         text-indent: 1%;
         letter-spacing: 0.1em;
         font-weight: bold;
@@ -1668,7 +1673,7 @@ desktop 1920px*/
 
         h1 {
           margin: 0 auto;
-          color: $wbg;
+          color: $blackcolor;
           font-size: 1.3em;
           width: 96%;
         }
@@ -1682,7 +1687,7 @@ desktop 1920px*/
             height: 40px;
             margin: 0;
             &:hover {
-              color: $wbg;
+              color: $blackcolor;
             }
           }
         }
@@ -1735,7 +1740,7 @@ desktop 1920px*/
               width: auto;
               font-size: 0.9em;
               background-color: $headercolor;
-              color: $headercolor;
+              color: $colorwhite;
               padding: 0.25em;
 
               img {
@@ -1754,9 +1759,9 @@ desktop 1920px*/
                 padding: 0;
                 text-align: left;
                 line-height: 1.5;
-                color: $textcolor;
+                color: $colorwhite;
                 a {
-                  background-color: unset;
+                  background-color: $headercolor;
                 }
               }
 
@@ -1777,10 +1782,11 @@ desktop 1920px*/
               display: block;
               background-color: $headercolor;
               font-size: 0.8em;
+              color: $colorwhite;
 
               a {
-                color: $wbg;
-                background-color: unset;
+                color: $colorwhite;
+
               }
             }
 
@@ -1791,13 +1797,13 @@ desktop 1920px*/
                 line-height: 1.5em;
                 margin: 0 auto;
                 min-height: 100px;
-
-                background-color: $wbg;
+                color: $blackcolor;
+                background-color: $colorwhite;
                 text-align: left;
                 a {
-                  background-color: unset;
+                  background-color: $colorwhite;
                   &:hover {
-                    color: $color1;
+                    color: $colorwhite;
                     font-weight: bold;
                   }
                 }
@@ -1823,19 +1829,17 @@ desktop 1920px*/
             height: 35px;
             list-style: none;
             width: 25%;
-            background-color: $color1;
+            background-color: $blackcolor;
             padding: 0;
             border: none;
-            color: $textcolor;
+            color: $colorwhite;
             font-family: ($FontStyle);
             line-height: 35px;
             text-align: center;
             font-size: 1em;
-            @include boredrady(10px);
 
             &:hover {
-              background-color: $textcolor;
-              color: $color1;
+              color: $colorwhite;
               font-weight: bold;
             }
           }
@@ -1852,7 +1856,7 @@ desktop 1920px*/
           padding: 0;
           font-size: 1em;
           background-color: $headercolor;
-          color: $textcolor;
+          color: $colorwhite;
 
           line-height: 35px;
           text-indent: 0.5em;
@@ -1866,7 +1870,7 @@ desktop 1920px*/
 
               &:hover {
                 font-weight: bold;
-                color: $wbg;
+                color: $blackcolor;
               }
             }
           }
@@ -1984,19 +1988,17 @@ desktop 1920px*/
             input[type="submit"] {
               height: 35px;
               list-style: none;
-              background-color: $color1;
+              background-color: $blackcolor;
               @include Transition(all 0.2s ease-in 0s);
               padding: 0;
               border: none;
-              color: $textcolor;
+              color: $colorwhite;
               font-family: $FontStyle;
               width: 15%;
 
               &:hover {
-                background-color: $textcolor;
-                color: $color1;
+                color: $colorwhite;
                 font-weight: bold;
-                width: 15%;
                 cursor: pointer;
               }
             }
@@ -2010,7 +2012,7 @@ desktop 1920px*/
           background-color: unset;
 
           &:hover {
-            color: $color1;
+            color: $colorwhite;
             font-weight: bold;
           }
         }
@@ -2020,7 +2022,7 @@ desktop 1920px*/
         
         text-align: center;
         a {
-          background-color: $color1;
+          background-color: $colorwhite;
           line-height: 40px;
           display: inline-block;
           width: auto;
@@ -2029,7 +2031,7 @@ desktop 1920px*/
 
           &:hover {
             background-color: $textcolor;
-            color: $color1;
+            color: $colorwhite;
             font-weight: bold;
           }
         }
@@ -2041,7 +2043,7 @@ desktop 1920px*/
         line-height: 35px;
         margin: 1em auto;
         text-align: center;
-        background-color: $wbg;
+        background-color: $blackcolor;
 
         a {
           display: inline-block;
@@ -2051,7 +2053,7 @@ desktop 1920px*/
 
           &:hover {
             font-weight: bold;
-            color: $color1;
+            color: $colorwhite;
           }
         }
       }
@@ -2105,8 +2107,8 @@ desktop 1920px*/
           letter-spacing: 0.025em;
           margin-bottom: 0.25em;
           padding: 0.25em;
-          color:$wbg;
-          background:$color1;
+          color:$blackcolor;
+          background:$colorwhite;
         }
 
         /*skills table*/
@@ -2138,7 +2140,7 @@ desktop 1920px*/
             margin: 0 0 0.5em 0;
             width: 100%;
             font-size: 1.1em;
-            color: $wbg;
+            color: $blackcolor;
           }
 
           section.frntpgbox {
@@ -2147,7 +2149,7 @@ desktop 1920px*/
             flex: 1 0 auto;
             width: 24%;
             display: inline-block;
-            background-color:$wbg;
+            background-color:$blackcolor;
             height: auto;
             margin: 0.1em;
             padding: 0 0 0.5em 0;
@@ -2160,7 +2162,7 @@ desktop 1920px*/
                 line-height: 100px;
                 height: 100px;
                 display: block;
-                color: $color1;
+                color: $colorwhite;
                 text-align: center;
                 width: 96%;
                 font-size: 4em;
@@ -2175,7 +2177,7 @@ desktop 1920px*/
               }
 
               i.fa-photo-video{
-                background-color:#DEC928;
+                background-color:$yellowcolor;
 
               }
 
@@ -2197,8 +2199,8 @@ desktop 1920px*/
               font-size: 1em;
               height: auto;
               text-align: center;
-              color: $color1;
-              background-color: $wbg;
+              color: $colorwhite;
+              background-color: $blackcolor;
               font-weight: bold;
               width:96%;
             }
@@ -2207,7 +2209,7 @@ desktop 1920px*/
               display: block;
               width: 96%;
               line-height: 30px;
-              color: $wbg;
+              color: $blackcolor;
               font-size: 0.9em;
               margin: auto;
               text-align: center;
@@ -2226,7 +2228,7 @@ desktop 1920px*/
 
           li {
             margin: 0;
-            color: $color1;
+            color: $colorwhite;
             font-style: italic;
             font-weight: bold;
             text-indent: 0;
@@ -2312,21 +2314,21 @@ desktop 1920px*/
 
         h1 {
           font-size: 3em;
-          color: $wbg;
+          color: $blackcolor;
           margin: 0;
           padding: 0;
           line-height: 60px;
           display: block;
           text-align: left;
-          text-shadow: 1px 1px $color1;
+          text-shadow: 1px 1px $colorwhite;
         }
         h2 {
           font-size: 2em;
-          color: $wbg;
+          color: $blackcolor;
           margin: 0 0 1em 0;
           padding: 0;
           text-align: left;
-          text-shadow: 1px 1px $color1;
+          text-shadow: 1px 1px $colorwhite;
           line-height: 40px;
         }
 
@@ -2336,23 +2338,24 @@ desktop 1920px*/
           padding: 1em;
           font-size: 1em;
           background-color:rgba(244, 247, 247, 0.7);
-          color:$wbg;
+          color:$blackcolor;
         }
 
         a#projectLink {
           line-height: 60px;
           display: block;
           height: auto;
-          border: 2px solid $color1;
+          border: 2px solid $blackcolor;
           width: 28%;
           float: right;
           text-align: center;
           font-size: 1.2em;
-          background-color: $wbg;
-          color: $color1;
+          background-color: $yellowcolor;
+          color: $blackcolor;
           &:hover {
             font-weight:bold;   
             cursor: pointer;
+            color: $colorwhite;
             background-color: none;
           }
         }
@@ -2418,7 +2421,7 @@ desktop 1920px*/
             display: inline-block;
             a {
               font-weight: bold;
-              color: $wbg;
+              color: $blackcolor;
               &:hover {
                 text-decoration:underline;
               }
@@ -2470,7 +2473,7 @@ desktop 1920px*/
             a {
               font-weight: bold;
               width: auto;
-              color:$wbg;
+              color:$blackcolor;
               &:hover {
                 text-decoration:underline;
               }
@@ -2505,7 +2508,7 @@ desktop 1920px*/
             a {
               font-weight: bold;
               width: auto;
-              color:$wbg;
+              color:$blackcolor;
               &:hover {
                 text-decoration:underline;
               }
@@ -2526,10 +2529,8 @@ desktop 1920px*/
         flex: 0 1 auto;
         width: 50%;
         height: auto;
-        display: inline-block;
-        box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+        display: inline-block;        
         padding: 0 0.5em;
-        background-color: $wbg;
         margin: 0;
 
         h1 {
@@ -2538,7 +2539,7 @@ desktop 1920px*/
           line-height: 50px;
           text-indent: 1.5%;
           letter-spacing: 0.05em;
-          color: $color1;
+          color: $blackcolor;
         }
 
         #social {
@@ -2633,12 +2634,12 @@ desktop 1920px*/
                 font-family: ($FontStyle);
                 width: 100%;
                 height: 420px;
-                background-color: $color1;
+                background-color: $colorwhite;
 
                 h2 {
                   text-transform: uppercase;
                   padding: 0;
-                  color: $color1;
+                  color: $colorwhite;
                   line-height: 40px;
                   height: 40px;
                   background-color: $headercolor;
@@ -2678,7 +2679,7 @@ desktop 1920px*/
                       font-weight: normal;
                       font-size: 1em;
                       background-color: $headercolor;
-                      color: $color1;
+                      color: $colorwhite;
                       text-indent: 0;
                       margin: 0;
                       letter-spacing: 0.01em;
@@ -2689,8 +2690,8 @@ desktop 1920px*/
                       font-weight: normal;
                       margin: 0;
                       padding: 0;
-                      background-color: $wbg;
-                      color: $color1;
+                      background-color: $blackcolor;
+                      color: $colorwhite;
                       letter-spacing: 0.01em;
                       padding: 0;
                       line-height: 30px;
@@ -2707,10 +2708,10 @@ desktop 1920px*/
 
                       li {
                         width: 100%;
-                        background-color: $color1;
+                        background-color: $colorwhite;
                         font-weight: normal;
                         font-size: 0.8em;
-                        color: $wbg;
+                        color: $blackcolor;
                         display: block;
                         height: auto;
                         line-height: 25px;
@@ -2720,7 +2721,7 @@ desktop 1920px*/
                         &:before {
                           font-family: "Font Awesome 5 Free";
                           font-size: 0.95em;
-                          color: $wbg;
+                          color: $blackcolor;
                           content: "\f005";
                           margin: 0 1%;
                           line-height: 1.5em;
@@ -2744,23 +2745,23 @@ desktop 1920px*/
             li {
               height: 44px;
               margin-bottom: 0.2em;
-              border: 1px solid $wbg;
+              border: 1px solid $blackcolor;
 
               a {
                 text-align: center;
                 display: block;
                 font-size: 0.8em;
-                line-height: 40px;
-                background-color: $color1;
-                color: $wbg;
+                line-height: 41px;
+                background-color: $colorwhite;
+                color: $blackcolor;
                 height: 100%;
               }
 
               a:hover {
-                background-color: $btnhover;
-                color: $wbg;
+                background-color: $blackcolor;
+                color: $yellowcolor;
                 font-weight: bold;
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -2783,7 +2784,7 @@ desktop 1920px*/
         height: auto;
         display: inline-block;
         box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-        background-color: $wbg;
+        background-color: $blackcolor;
         margin-bottom: 1em;
 
         h1 {
@@ -2792,7 +2793,7 @@ desktop 1920px*/
           line-height: 50px;
           text-indent: 1.5%;
           letter-spacing: 0.05em;
-          color:$color1;
+          color:$colorwhite;
         }
 
         #social {
@@ -2809,7 +2810,7 @@ desktop 1920px*/
 
         /*chart*/
         #chart {
-          width: 95%;
+          width: 96%;
           height: auto;
           margin: 2.5% auto;
           display: block;
@@ -2823,7 +2824,7 @@ desktop 1920px*/
             -webkit-flex-flow: column;
             -ms-flex-flow: column;
             flex-flow: column;
-            background: $wbg;
+            background: $blackcolor;
             width: 100%;
             height: 100%;
             list-style: none;
@@ -2838,7 +2839,7 @@ desktop 1920px*/
               .bar {
                 display: block;
                 margin-left: 0;
-                background: $color1;
+                background: $colorwhite;
                 position: absolute;
                 left: 16.5%;
                 height: 100%;
@@ -2846,19 +2847,19 @@ desktop 1920px*/
                 @include Transition(all 0.2s ease-in 0s);
 
                 &:hover {
-                  background: $btnhover;
+                  background: $blackcolor;
                   cursor: pointer;
                 }
 
                 &:hover:after {
                   content: attr(data-skill);
                   position: relative;
-                  left: 65%;
+                  left:76%;
                   display: block;
                   line-height: 60px;
                   font-size: 1em;
-                  color: $wbg;
-                  width: 15%;
+                  color: $blackcolor;
+                  width: 24%;
                   text-align: center;
                 }
               }
@@ -2875,8 +2876,8 @@ desktop 1920px*/
               text-align: left;
               line-height: 40px;
               font-size: 0.9em;
-              background-color: $wbg;
-              color:$color1;
+              background-color: $blackcolor;
+              color:$colorwhite;
               z-index: 3;
             }
           }
@@ -2928,7 +2929,7 @@ desktop 1920px*/
               padding: 10px 20px;
               cursor: pointer;
               background-color: $color3;
-              color: $color1;
+              color: $colorwhite;
               @include Transition(all 0.2s ease-in 0s);
               font-size: 1em;
               width: 12%;
@@ -2940,13 +2941,13 @@ desktop 1920px*/
             }
 
             li:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
               color: $textcolor;
               font-weight: bold;
             }
 
             li.cat-active {
-              background-color: $color1;
+              background-color: $colorwhite;
               color: $textcolor;
             }
           }
@@ -2993,10 +2994,11 @@ desktop 1920px*/
               position: absolute;
               bottom: -100%;
               height: 50%;
-              padding: 1em 0;
-              border: 1px $wbg solid;
+              padding:0;
               width: 100%;
               @include Transition(all 0.2s ease-in 0s);
+              background-color:rgba(0,0,0,0.5);
+              
 
               h1 {
                 text-indent: 0;
@@ -3005,18 +3007,17 @@ desktop 1920px*/
                 margin: 0 auto;
                 height: 40px;
                 text-align: center;
-                width: 90%;
-                background-color: $textcolor;
-                color: $color1;
+                width: 98%;
+                background-color: $blackcolor;
+                color: $yellowcolor;
               }
 
               a {
                 height: 35px;
-                background-color: $color1;
+                background-color: $colorwhite;
                 width: 80%;
                 color: $textcolor;
                 letter-spacing: 0.1em;
-                border: none;
                 font-size: 0.9em;
                 line-height: 35px;
                 margin: 0.5em auto;
@@ -3026,7 +3027,7 @@ desktop 1920px*/
                 @include Transition(all 0.2s ease-in 0s);
 
                 &:hover {
-                  color: $color1;
+                  color: $colorwhite;
                   background-color: $textcolor;
                   font-weight: bold;
                 }
@@ -3065,11 +3066,9 @@ desktop 1920px*/
         @include originTran(50% 50%);
         @include Transition(all 0.2s ease-in 0s);
         height: 100%;
-
         float: left;
         display: block;
         &:hover {
-          background-color: $color1;
           color: $textcolor;
           cursor: pointer;
         }
@@ -3089,6 +3088,7 @@ desktop 1920px*/
           font-size: 1.9em;
           line-height: 45px;
           display: block;
+          color:$blackcolor;
         }
       }
     }
@@ -3116,7 +3116,8 @@ desktop 1920px*/
 
         a {
           text-decoration: none;
-          color: $color1;
+          color: $blackcolor;
+          background-color: $colorwhite;
           margin: 0;
           padding: 0;
           font-size: 0.9em;
@@ -3126,13 +3127,15 @@ desktop 1920px*/
           @include originTran(50% 50%);
           @include Transition(all 0.2s ease-in 0s);
           &:visited {
-            background-color: unset;
+            color: $blackcolor;
+            font-weight: bold;
+            
           }
 
           &:hover {
             margin: 0;
             font-weight: bold;
-            background-color: unset;
+            background-color: $colorwhite;
           }
         }
       }
@@ -3140,7 +3143,7 @@ desktop 1920px*/
   }
 
   p#copyr {
-    color: $color1;
+    color: $colorwhite;
     font-size: 10px;
     width: 100%;
     margin: 0;
@@ -3278,7 +3281,7 @@ desktop 1440px*/
       width: 8em;
 
       &:hover {
-        color: $btntexthover;
+        color: $yellowcolor;
       }
     }
 
@@ -3443,7 +3446,7 @@ desktop 1440px*/
               a {
                 &:hover {
                   font-weight: bold;
-                  color: $color1;
+                  color: $colorwhite;
                 }
               }
             }
@@ -3555,7 +3558,7 @@ desktop 1440px*/
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -3773,7 +3776,7 @@ desktop 1440px*/
             font-size: 1.4em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
               cursor: pointer;
             }
           }
@@ -3959,11 +3962,10 @@ desktop 1440px*/
             }
 
             .comment-metadata {
-              padding: 0 0.5em;
               font-size: 0.8em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -4352,7 +4354,7 @@ desktop 1440px*/
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -4381,13 +4383,13 @@ desktop 1440px*/
 
         
         #chart {
-          width: 95%;
+          width: 96%;
 
           #bars {
             li {
               .bar {
                 &:hover {
-                  background: $graphcolor;
+                  background: $yellowcolor;
                   cursor: pointer;
                 }
 
@@ -4453,11 +4455,11 @@ desktop 1440px*/
             }
 
             figcaption.showcase-content {
-              height: 60%;
+              height: 50%;
 
               h1 {
                 font-size: 0.9em;
-                line-height: 25px;
+                line-height: 30px;
                 height: auto;
               }
 
@@ -4549,7 +4551,7 @@ desktop 1280px*/
       width: 48%;
       h1#logo,
       h1#logo-blog {
-        font-size: 1.5em;
+        font-size: 1.4em;
 
         span {
           padding: 0;
@@ -4893,7 +4895,7 @@ desktop 1280px*/
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -5103,7 +5105,7 @@ desktop 1280px*/
             font-size: 1.3em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -5286,7 +5288,7 @@ desktop 1280px*/
               font-size: 0.8em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -5447,7 +5449,7 @@ desktop 1280px*/
               font-size: 0.8em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -5737,7 +5739,7 @@ desktop 1280px*/
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -5766,7 +5768,7 @@ desktop 1280px*/
 
         
         #chart {
-          width: 95%;
+          width: 96%;
 
           #bars {
             li {
@@ -5780,6 +5782,10 @@ desktop 1280px*/
                 &:hover:after {
    
                   font-size: 0.9em;
+                }
+                &:hover:after {                  
+                  line-height: 50px;                  
+                  width: 24%;
                 }
               }
             }
@@ -5918,7 +5924,7 @@ desktop 1024px*/
       .screen-reader-text {
         &:focus {
           border-radius: 3px;
-          /* Above WP toolbar. */
+
         }
       }
 
@@ -6261,7 +6267,7 @@ desktop 1024px*/
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -6655,7 +6661,7 @@ desktop 1024px*/
               font-size: 0.8em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -6946,7 +6952,7 @@ desktop 1024px*/
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -6975,7 +6981,7 @@ desktop 1024px*/
 
         
         #chart {
-          width: 95%;
+          width: 96%;
 
           #bars {
             li {
@@ -7048,7 +7054,7 @@ desktop 1024px*/
             }
 
             figcaption.showcase-content {
-              padding: 0.5em 0;
+              padding: 0;
 
               h1 {
                 font-size: 0.85em;
@@ -7132,7 +7138,7 @@ desktop 980px*/
 
         &:focus {
           border-radius: 3px;
-          /* Above WP toolbar. */
+
         }
       }
 
@@ -7146,7 +7152,7 @@ desktop 980px*/
       height: 3.5em;
       h1#logo,
       h1#logo-blog {
-        font-size: 1.4em;
+        font-size: 1.35em;
 
         span {
           padding: 0;
@@ -7310,7 +7316,7 @@ desktop 980px*/
               font-size: 1em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -7489,8 +7495,7 @@ desktop 980px*/
           display: block;
         }
 
-        h1.post-meta-key {
-          margin-bottom: 0.5em;
+        h1.post-meta-key {          
           font-size: 1.1em;
         }
 
@@ -7856,7 +7861,7 @@ desktop 980px*/
 
             .comment-metadata {
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -8201,7 +8206,7 @@ desktop 980px*/
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -8231,7 +8236,7 @@ desktop 980px*/
 
         
         #chart {
-          width: 95%;
+          width: 96%;
 
           #bars {
             li {
@@ -8243,7 +8248,7 @@ desktop 980px*/
 
                 &:hover:after {
 
-                  font-size: 0.9em;
+                  font-size: 0.85em;
                 }
               }
             }
@@ -8303,7 +8308,7 @@ desktop 980px*/
             }
 
             figcaption.showcase-content {
-              height: 60%;
+              height: 50%;
 
               h1 {
                 font-size: 0.75em;
@@ -8382,7 +8387,7 @@ tablet 800px */
 
         &:focus {
           border-radius: 3px;
-          /* Above WP toolbar. */
+          
         }
       }
 
@@ -8396,7 +8401,7 @@ tablet 800px */
 
       h1#logo,
       h1#logo-blog {
-        font-size: 1.4em;
+        font-size: 1.3em;
         line-height: 30px;
         height: 27px;
         span {
@@ -8567,7 +8572,7 @@ tablet 800px */
               font-size: 1em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -8754,7 +8759,7 @@ tablet 800px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -9141,7 +9146,7 @@ tablet 800px */
 
             .comment-metadata {
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -9464,7 +9469,7 @@ tablet 800px */
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -9518,7 +9523,7 @@ tablet 800px */
 
         
         #chart {
-          width: 95%;
+          width: 96%;
 
 
           #bars {
@@ -9531,14 +9536,14 @@ tablet 800px */
 
                 &:hover:after {
       
-                  font-size: 1em;
+                  font-size: 0.85em;
                 }
               }
             }
 
             span {
 
-              font-size: 0.8em;
+              font-size: 0.9em;
             }
           }
         }
@@ -9666,7 +9671,7 @@ tablet 667px */
       .screen-reader-text {
         &:focus {
           border-radius: 3px;
-          /* Above WP toolbar. */
+          
         }
       }
 
@@ -9882,7 +9887,7 @@ tablet 667px */
               font-size: 1.2em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -9963,12 +9968,11 @@ tablet 667px */
     article.search-results {
       width: 98%;
       display: block;
-      margin:auto;
     }
 
     /*regular Posts*/
     .post {
-      margin:auto;
+      margin:0.5em auto;
       width: 98%;
       hr.blog-spacer {
         margin: 2% auto;
@@ -10039,7 +10043,7 @@ tablet 667px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -10442,7 +10446,7 @@ tablet 667px */
 
             .comment-metadata {
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -10726,7 +10730,7 @@ tablet 667px */
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -10755,7 +10759,7 @@ tablet 667px */
 
         
         #chart {
-          width: 95%;
+          width: 96%;
 
 
           #bars {
@@ -10769,9 +10773,10 @@ tablet 667px */
                 }
 
                 &:hover:after {
-  
-                  font-size: 1em;
-                }
+                  line-height: 40px;                  
+                  width: 24%;
+                  font-size: 0.8em;
+                }                
               }
             }
 
@@ -10909,7 +10914,7 @@ tablet 600px */
       .screen-reader-text {
         &:focus {
           border-radius: 3px;
-          /* Above WP toolbar. */
+          
         }
       }
 
@@ -11055,7 +11060,7 @@ tablet 600px */
               font-size: 1.2em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -11565,7 +11570,7 @@ tablet 600px */
 
             .comment-metadata {
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -11672,8 +11677,8 @@ tablet 536px */
     padding: 0.7em;
     font-size: 1em;
     text-transform: uppercase;
-    background-color: $wbg;
-    color: $color1;
+    background-color: $blackcolor;
+    color: $colorwhite;
     border: none;
     transition: all ease-out 400ms;
     line-height: 60px;
@@ -11689,7 +11694,7 @@ tablet 536px */
   .menu-toggle:hover,
   .menu-toggle:focus {
     text-decoration: underline;
-    border: solid 2px $wbg;
+    border: solid 2px $blackcolor;
     cursor: pointer;
   }
 
@@ -11710,7 +11715,7 @@ tablet 536px */
       .screen-reader-text {
         &:focus {
           border-radius: 3px;
-          /* Above WP toolbar. */
+          
         }
       }
 
@@ -11766,7 +11771,6 @@ tablet 536px */
           list-style: none;
           width: 100%;
           display: block;
-          background-color: $wbg;
           margin-bottom: 0em;
 
           a {
@@ -11776,12 +11780,13 @@ tablet 536px */
             font-size: 1em;
             text-align: center;
             display: block;
+            color: $colorwhite;
+            background-color: $blackcolor;
 
             &:hover {
               letter-spacing: 0.2em;
               font-weight: bold;
-              background-color: $color1;
-              color: $textcolor;
+              color: $colorwhite;
             }
           }
         }
@@ -11886,7 +11891,7 @@ tablet 536px */
               font-size: 1.2em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -11954,7 +11959,7 @@ tablet 536px */
 
     /*regular Posts*/
     .post {
-      margin: 0 auto;
+      
 
       hr.blog-spacer {
         margin: 2% auto;
@@ -12024,7 +12029,7 @@ tablet 536px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -12235,7 +12240,7 @@ tablet 536px */
             font-size: 0.85em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -12383,7 +12388,7 @@ tablet 536px */
               font-size: 0.75em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -12666,7 +12671,7 @@ tablet 536px */
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -12695,7 +12700,7 @@ tablet 536px */
 
         
         #chart {
-          width: 90%;
+          width: 96%;
 
           #bars {
             li {
@@ -12706,15 +12711,15 @@ tablet 536px */
                 }
 
                 &:hover:after {
-  
-                  font-size: 1em;
+                  left: 72%;
+                  font-size: 0.75em;
+                  width: 28%;
                 }
               }
             }
 
             span {
               width: 18.5%;
-
               font-size: 0.85em;
             }
           }
@@ -13044,7 +13049,7 @@ mobile 480px */
               font-size: 1.2em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -13210,7 +13215,7 @@ mobile 480px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -13598,7 +13603,7 @@ mobile 480px */
               padding: 0;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -13925,7 +13930,7 @@ mobile 480px */
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -13954,7 +13959,7 @@ mobile 480px */
 
         
         #chart {
-          width: 90%;
+          width: 96%;
 
 
           #bars {
@@ -13967,7 +13972,7 @@ mobile 480px */
 
                 &:hover:after {
 
-                  font-size: 0.9em;
+                  font-size: 0.7em;
                 }
               }
             }
@@ -14288,7 +14293,7 @@ mobile 414px */
               font-size: 1.2em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -14406,7 +14411,7 @@ mobile 414px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+
           font-size: 0.9em;
         }
 
@@ -14632,7 +14637,7 @@ mobile 414px */
             font-size: 1.1em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -14683,7 +14688,7 @@ mobile 414px */
             font-size: 0.8em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -14708,7 +14713,7 @@ mobile 414px */
             font-size: 0.8em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -14800,7 +14805,7 @@ mobile 414px */
               font-size: 0.55em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -15066,7 +15071,7 @@ mobile 360px */
               font-size: 1.2em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
                 color: $textcolor;
               }
             }
@@ -15229,7 +15234,7 @@ mobile 360px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -15439,7 +15444,7 @@ mobile 360px */
             font-size: 1em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -15487,7 +15492,7 @@ mobile 360px */
             font-size: 0.9em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -15512,7 +15517,7 @@ mobile 360px */
             font-size: 0.8em;
 
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -15600,7 +15605,7 @@ mobile 360px */
               font-size: 0.5em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -15917,7 +15922,7 @@ mobile 360px */
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -15947,7 +15952,7 @@ mobile 360px */
 
         
         #chart {
-          width: 90%;
+          width: 96%;
 
           #bars {
             li {
@@ -15960,8 +15965,9 @@ mobile 360px */
                 }
 
                 &:hover:after {
-
-                  font-size: 0.9em;
+                  left: 68%;
+                  font-size: 0.65em;
+                  width: 32%;
                 }
               }
             }
@@ -16270,7 +16276,7 @@ mobile 320px */
               font-size: 1.1em;
 
               &:hover {
-                background-color: $color1;
+                background-color: $colorwhite;
               }
             }
           }
@@ -16427,7 +16433,7 @@ mobile 320px */
         }
 
         h1.post-meta-key {
-          margin-bottom: 0.5em;
+          display: block;
         }
 
         p.websitetext {
@@ -16646,7 +16652,7 @@ mobile 320px */
 
           a.comments-count {
             &:hover {
-              background-color: $color1;
+              background-color: $colorwhite;
             }
           }
         }
@@ -16809,7 +16815,7 @@ mobile 320px */
               font-size: 0.5em;
 
               a {
-                color: $textcolor;
+                color: $colorwhite;
               }
             }
 
@@ -17115,7 +17121,7 @@ mobile 320px */
               }
 
               a:hover {
-                line-height: 40px;
+                line-height: 41px;
               }
             }
 
@@ -17153,7 +17159,7 @@ mobile 320px */
                 
                 &:hover:after {
 
-                  font-size: 0.85m;
+                  font-size: 0.6m;
                 }
               }
             }
