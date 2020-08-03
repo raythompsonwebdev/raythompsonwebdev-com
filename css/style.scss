@@ -319,11 +319,12 @@ desktop 1920px*/
         width: auto;
         display: inline-block;
         line-height: 30px;
-        height: 30px;
+        height: 32px;
         padding: 0;
         color: $colorwhite;
         text-align: left;
         width: 73%;
+        border: 1px solid $blackcolor;
 
         span.screen-reader-text {
           width: auto;
@@ -760,6 +761,7 @@ desktop 1920px*/
                 width: 100%;
                 display: block;
                 line-height: 45px;
+                background-color: $colorwhite;
                 color: $blackcolor;
                 letter-spacing: 0.02em;
                 @include originTran(50% 50%);
@@ -779,17 +781,22 @@ desktop 1920px*/
               border:2px solid $blackcolor;
               color: $blackcolor;
               span.comment-author-link {                
-                a {
+                a.url {
                   color: $blackcolor;
                   background-color: $colorwhite;
                   line-height: 25px;
                   &:hover{
-                    background-color: $colorwhite;
-                    color: $blackcolor;
                     font-weight:bold;                    
                     cursor:pointer;
+                    background-color: $blackcolor;
+                    background-color: $colorwhite;
                   }
                 }
+              }
+              &:hover{
+                color: $colorwhite;
+                background-color: $blackcolor;
+
               }
             }
           }
@@ -822,7 +829,8 @@ desktop 1920px*/
     article.search-results {
       width: 49%;
       display: inline-block;
-      background-color: $blackcolor;
+      background-color: $colorwhite2;
+      box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
     }
 
     /*regular Posts*/
@@ -832,8 +840,7 @@ desktop 1920px*/
       width: 100%;
       margin: 0.5em 0;
       clear: both;
-      //border: 1px solid #ccc;
-      box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+           
 
       /*seperators*/
       hr.blog-spacer {
@@ -2341,8 +2348,9 @@ desktop 1920px*/
           float: left;
           padding: 1em;
           font-size: 1em;
-          background-color:rgba(244, 247, 247, 0.7);
-          color:$blackcolor;
+          background-color:$blackcolor;
+          color:$colorwhite2;
+          
         }
 
         a#projectLink {
@@ -2418,16 +2426,17 @@ desktop 1920px*/
           line-height: 1.9em;
           font-size: 1em;
           margin-bottom: 0.25em;
-          background-color:rgba(244, 247, 247, 0.7);
+          background-color:$textcolor;
           padding: 0.5em;
-          color:$textcolor;
+          color:$colorwhite2;
           strong {
             display: inline-block;
             a {
               font-weight: bold;
-              color: $blackcolor;
+              color: $colorwhite2;
               &:hover {
                 text-decoration:underline;
+                color:$yellowcolor2;
               }
             }
           }
@@ -2469,17 +2478,19 @@ desktop 1920px*/
           font-size: 1em;
           margin-bottom: 0.25em;
           padding: 0.5em;
-          background-color:rgba(244, 247, 247, 0.7);
-          color:$textcolor;
+          background-color:$textcolor;
+          color:$colorwhite2;
+          
           strong {
             display: inline-block;
             width: auto;
             a {
               font-weight: bold;
-              width: auto;
-              color:$blackcolor;
+              width: auto;              
+              color:$colorwhite2;
               &:hover {
                 text-decoration:underline;
+                color:$yellowcolor2;
               }
             }
           }
@@ -2504,8 +2515,9 @@ desktop 1920px*/
           font-size: 1em;
           margin-bottom: 0.25em;
           padding: 0.5em;
-          background-color:rgba(244, 247, 247, 0.7);
-          color:$textcolor;
+          background-color:$textcolor;
+          color:$colorwhite2;
+          
           strong {
             display: inline-block;
             width: auto;
@@ -2515,6 +2527,7 @@ desktop 1920px*/
               color:$blackcolor;
               &:hover {
                 text-decoration:underline;
+                color:$yellowcolor2;
               }
             }
           }
