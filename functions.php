@@ -309,11 +309,11 @@ if ( ! is_admin() ) {
  *
  * @return void
  */
-// function my_jquery_enqueue() {
-// 	wp_deregister_script( 'jquery' );
-// 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
-// 	wp_enqueue_script( 'jquery' );
-// }
+function my_jquery_enqueue() {
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
+	wp_enqueue_script( 'jquery' );
+}
 
 /**
  * Enqueue style sheets.
@@ -403,7 +403,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
  *  Raythompsonwebdev lightbox code.
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'project' === get_post_type() || is_page( 'about-page' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
@@ -418,7 +418,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about-page' ) ) {
+	if ( is_page( 'about' ) ) {
 		// scrollto script.
 		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
 		// easing script.
