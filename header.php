@@ -74,7 +74,7 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy', 'archives' ) ) ) : ?>
+				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archives' ) ) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 

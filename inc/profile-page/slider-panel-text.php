@@ -11,7 +11,7 @@ $slider_panel_text = '[
     "task4": "Manipulating Images",
     "task5": "Evaluating Digital Images",
     "buttonname": "Adobe",
-    "bgimage": "wp-content/uploads/2020/07/Large-Photoshop-Certicate-.jpg"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Large-Photoshop-Certicate.jpg"
   }, {
     "id": "2",
     "title": "ELATT",
@@ -23,7 +23,7 @@ $slider_panel_text = '[
     "task4": "IT User fundementals",
     "task5": "Organizing Content",
     "buttonname": "ELATT",
-    "bgimage": "wp-content/uploads/2020/07/ITQ-USERS-LEVEL1-LARGE.jpg"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/ITQ-USERS-LEVEL3-LARGE.jpg"
   }, {
     "id": "3",
     "title": "Codepen",
@@ -35,7 +35,7 @@ $slider_panel_text = '[
     "task4": "Random Quote Generator",
     "task5": "Personal Portfolio",
     "buttonname": "Codepen",
-    "bgimage": "wp-content/uploads/2020/07/Large-Udemy-Certicate-.jpg"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codepen-io-your-work-2020-10-17-22.png"
   }, {
     "id": "4",
     "title": "FreeCodeCamp",
@@ -47,7 +47,7 @@ $slider_panel_text = '[
     "task4": "Javascript Projects",
     "task5": "Responsive Web Design Projects",
     "buttonname": "FreeCodeCamp",
-    "bgimage": "wp-content/uploads/2020/07/freecodecamp-org-certification-raythompsonwebdev-responsive-web-design.png"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.png"
   }, {
     "id": "5",
     "title": "Lynda.com",
@@ -59,7 +59,7 @@ $slider_panel_text = '[
     "task4": "CSS Fundementals",
     "task5": "Javascript Essentials",
     "buttonname": "Lynda.com",
-    "bgimage": "wp-content/uploads/2020/07/lynda_logo1r-d_72x72.png"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.png"
   }, {
     "id": "6",
     "title": "Python for Everybody (PY4E)",
@@ -67,11 +67,8 @@ $slider_panel_text = '[
     "subheader": "Topics",
     "task1": "Introduction to Python",
     "task2": "Python Data Structures",
-    "task3": "",
-    "task4": "",
-    "task5": "",
     "buttonname": "PY4E",
-    "bgimage": "wp-content/uploads/2020/07/Mobile-web-applications-Certificate-Foundation-large.jpg"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.png"
   }, {
     "id": "7",
     "title": "Code Academy",
@@ -81,9 +78,8 @@ $slider_panel_text = '[
     "task2": "Learn HTML",
     "task3": "Learn Javascript",
     "task4": "Learn PHP",
-    "task5": "",
     "buttonname": "Code Academy",
-    "bgimage": "wp-content/uploads/2020/07/codecademy-users-raythompsonwebdev-achievements-.png"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.png"
   }, {
     "id": "8",
     "title": "Udacity",
@@ -95,7 +91,7 @@ $slider_panel_text = '[
     "task4": "Website Performance Optimisation",
     "task5": "Version Control with Git",
     "buttonname": "Udacity",
-    "bgimage": "wp-content/uploads/2020/07/Udacity_logo.png"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Udacity_logo.png"
   }, {
     "id": "9",
     "title": "Digital Futures 2017",
@@ -107,6 +103,6 @@ $slider_panel_text = '[
     "task4": "Negotiation skills with CitizenUK.",
     "task5": "Music creation using Sonic Pi",
     "buttonname": "Digital Futures",
-    "bgimage": "wp-content/uploads/2020/07/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
+    "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg"
   }
 ]';
