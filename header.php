@@ -26,9 +26,6 @@
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com/css?family=Cabin|PT+Sans&display=swap" >
-
-
 		<?php wp_head(); ?>
 	</head>
 
@@ -77,7 +74,7 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archives' ) ) ) : ?>
+				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy', 'archives' ) ) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 
@@ -123,11 +120,10 @@
 
 
 			</header>
- <!--search form -->
  <?php if ( is_home() || is_archive() ) : ?>
 	<span class="social-1"><?php get_search_form(); ?></span>
-  <?php else : ?>
-	<span class="social-1"></span>
   <?php endif; ?>
 			<!--Main content -->
 <main id="main-content" class="group" role="main">
+   <!--search form -->
+

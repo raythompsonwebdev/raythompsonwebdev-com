@@ -301,28 +301,31 @@ function raythompsonwebdev_remove_change_myheaders( $headers ) {
 }
 add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
 
-if ( ! is_admin() ) {
-	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
-}
+// if ( ! is_admin() ) {
+// 	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
+// }
+
 /**
  * Undocumented function
  *
  * @return void
  */
-function my_jquery_enqueue() {
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
-	wp_enqueue_script( 'jquery' );
-}
+// function my_jquery_enqueue() {
+// 	wp_deregister_script( 'jquery' );
+// 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
+// 	wp_enqueue_script( 'jquery' );
+// }
 
 /**
  * Enqueue style sheets.
  */
 function raythompsonwebdev_com_register_styles() {
 
-	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_template_directory_uri() . '/css/normalize.css', array(), '1.0', false );
+  wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_template_directory_uri() . '/css/normalize.css', array(), '1.0', false );
+
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fontawesome/css/all.css', array(), '1.0', false );
+
+  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fontawesome/css/all.min.css', array(), '1.0', false );
 
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
@@ -439,6 +442,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	function raythompsonwebdev_com_google_script() {
 
 		?>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86655310-1"></script>
 		<script>
 
 			window.dataLayer = window.dataLayer || [];
@@ -451,7 +457,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 
 		<?php
 	}
-	add_action( 'wp_head', 'raythompsonwebdev_com_google_script' );
+	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
 endif;
 
 

@@ -41,10 +41,10 @@ module.exports = function(grunt) {
       },
       my_target: {
         files: {
-          
+
           "js/minified/customizer.min.js": ["js/customizer.js"],
-          "js/minified/master.min.js": ["js/master.js"],          
-          "js/minified/profile.min.js": ["js/profile.js"],          
+          "js/minified/master.min.js": ["js/master.js"],
+          "js/minified/profile.min.js": ["js/profile.js"],
           "js/minified/websites.min.js": ["js/websites.js"]
         }
       }

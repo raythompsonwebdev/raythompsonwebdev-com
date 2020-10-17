@@ -43,52 +43,52 @@
 			</header>
 
 			<!--featured Image-->
-		
+
 
 				<?php if ( has_post_thumbnail() ) : ?>
-					
+
 					<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
 					<?php else : ?>
 
 						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-							
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/06/nothing.jpg"
+
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/09/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-							
+
 					</a>
-												
+
 				<?php endif; ?>
-		
+
 			<!--featured Image end-->
 
-			
+
 
 				<div class="entry">
 
 					<?php
 
 						the_excerpt();
-						
-												
+
+
 					?>
 
 				</div>
-				
+
 				<div class="continue-reading">
 					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-						<?php												
-							esc_html(the_title("Continue Reading : "), 'raythompsonwebdev-com');						
+						<?php
+							esc_html(the_title("Continue Reading : "), 'raythompsonwebdev-com');
 						?>
 					</a>
 				</div>
 
 				<!--Post entry footer-->
 				<footer class="byline">
-														
-					
+
+
 					<?php raythompsonwebdev_com_entry_footer(); ?>
-					
+
 					<p>
 					<?php
 						$lastmodified = get_the_modified_time( 'U' );
@@ -100,13 +100,13 @@
 					</p>
 
 				</footer>
-			
+
 		</article>
 
 		<?php
 
 	endwhile;
-	
+
 	?>
 <?php else : ?>
 

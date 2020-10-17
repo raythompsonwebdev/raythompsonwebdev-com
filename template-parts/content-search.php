@@ -20,7 +20,7 @@ $classess = array(
 
 	<header class="byline">
 
-		
+
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<!-- .entry-meta -->
 		<div class="entry-meta">
@@ -29,25 +29,25 @@ $classess = array(
 
 		</div>
 		<?php endif; ?>
-		
-	<!-- .entry-header -->	
+
+	<!-- .entry-header -->
 	</header>
 
 	<!--featured Image-->
-	
+
 	<?php if ( has_post_thumbnail() ) : ?>
-					
+
 					<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
 					<?php else : ?>
 
 						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-							
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/nothing.jpg"
+
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/09/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-							
+
 					</a>
-												
+
 				<?php endif; ?>
 	</a>
 

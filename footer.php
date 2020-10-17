@@ -60,7 +60,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 				<i class="fab fa-github"></i>
 			</span>
 		</a>
-		
+
 
 	</aside>
 
@@ -69,11 +69,11 @@ if ( has_nav_menu( 'Secondary' ) ) {
 <p id="copyr" > <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
 	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
 		<span class="sep"> | </span>
-		
+
 	<?php
-	
+
 	sprintf(
-		
+
 		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
 	?>
 <br/>
@@ -93,6 +93,15 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 
 <?php wp_footer(); ?>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Cabin', 'PT Sans']
+    }
+  });
+</script>
 
 </body>
 

@@ -2,14 +2,14 @@
 
 $slider_buttons = '[
   {
-    "id": "1",    
+    "id": "1",
     "buttonname": "Adobe"
   }, {
-    "id": "2",    
-    "buttonname": "ELATT" 
+    "id": "2",
+    "buttonname": "ELATT"
   }, {
-    "id": "3",    
-    "buttonname": "Udemy"
+    "id": "3",
+    "buttonname": "Codepen"
   }, {
     "id": "4",
     "buttonname": "FreeCodeCamp"
@@ -18,7 +18,7 @@ $slider_buttons = '[
     "buttonname": "Lynda.com"
   }, {
     "id": "6",
-    "buttonname": "Shaw Academy"
+    "buttonname": "PY4E"
   }, {
     "id": "7",
     "buttonname": "Code Academy"
