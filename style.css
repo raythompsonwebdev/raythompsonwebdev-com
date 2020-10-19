@@ -273,6 +273,35 @@ blockquote::before {
   color: #ededed; }
 
 /*
+desktop 1920px - 1440px
+@media screen and (max-width: 1920px) and (min-width: 1441px)
+/*
+desktop 1440px - 1243px
+@media screen and (max-width: 1440px) and (min-width: 1243px)
+/*
+desktop 1242px - 1080px
+@media screen and (max-width: 1242px) and (min-width: 1079px)
+/*
+desktop 1080px - 961px
+@media screen and (max-width: 1080px) and (min-width: 961px)
+/*
+desktop 960px - 769px
+@media screen and (max-width: 960px) and (min-width: 769px)
+/*
+desktop 768px - 641px
+@media screen and (max-width: 768px) and (min-width: 641px)
+/*
+desktop 640px - 481px
+@media screen and (max-width: 640px) and (min-width: 481px)
+/*
+desktop 480px - 321px
+@media screen and (max-width: 480px) and (min-width: 321px)
+/*
+desktop 320px
+@media screen and (max-width: 320px) and (min-width: 250px)
+
+*/
+/*
 desktop 1920px*/
 @media only screen and (max-width: 1920px) {
   .cookie-notice-container {
@@ -1125,32 +1154,34 @@ desktop 1920px*/
         display: inline-block;
         padding: 0.5em;
         display: grid;
-        grid-gap: 10px;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, auto);
+        grid-gap: 5px;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(3, auto);
         grid-auto-flow: dense;
         /*gallery page styles*/ }
         #main-content .post .website-text .item1 {
-          grid-row: 1 / span 5; }
+          grid-row: 1 / span 3;
+          grid-column: 1 / span 2; }
         #main-content .post .website-text .item2 {
-          grid-column: 2 / span 3; }
+          grid-column: 3 / span 6;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(4, auto);
+          display: grid;
+          grid-gap: 5px; }
+          #main-content .post .website-text .item2 #project-title,
+          #main-content .post .website-text .item2 #project-code,
+          #main-content .post .website-text .item2 #project-url,
+          #main-content .post .website-text .item2 #project-github {
+            width: 100%; }
         #main-content .post .website-text .item3 {
-          grid-column: 2 / span 3; }
-        #main-content .post .website-text .item4 {
-          grid-column: 2 / span 3; }
-        #main-content .post .website-text .item5 {
-          grid-column: 1 / span 4;
-          grid-auto-rows: 50px; }
-        #main-content .post .website-text .item6 {
-          grid-column: 1 / span 4;
-          grid-auto-rows: 50px; }
+          grid-column: 3 / span 8; }
         #main-content .post .website-text .websiteImage {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
           height: auto;
-          width: 96%;
-          margin: 2% 0;
+          width: 100%;
+          margin: 0;
           padding: 0;
           -webkit-transition: all 0.2s ease-in 0s;
           -moz-transition: all 0.2s ease-in 0s;
@@ -1161,24 +1192,24 @@ desktop 1920px*/
           display: block;
           border-bottom: 1px solid #F2f2f2;
           color: #0d0d0d;
-          line-height: 40px;
-          height: 40px;
+          line-height: 30px;
+          height: 30px;
           text-align: left;
           font-size: 1.2em; }
         #main-content .post .website-text p.websitetext {
           width: 100%;
           display: block;
           height: auto;
-          margin-bottom: 0.5em;
-          color: #0d0d0d; }
+          color: #0d0d0d;
+          padding: 0; }
         #main-content .post .website-text a.webformats {
           font-family: "PT Sans", verdana, helvetica, sans-serif;
           text-indent: 0;
           text-align: left;
           display: block;
+          line-height: 30px;
           height: auto;
           color: #0d0d0d;
-          margin-bottom: 1em;
           -webkit-transform-origin: 50% 50%;
           -moz-transform-origin: 50% 50%;
           -o-transform-origin: 50% 50%;
@@ -1189,7 +1220,6 @@ desktop 1920px*/
           -o-transition: all 0.2s ease-in 0s;
           -ms-transition: all 0.2s ease-in 0s;
           transition: all 0.2s ease-in 0s;
-          line-height: 40px;
           background-color: unset; }
           #main-content .post .website-text a.webformats:hover {
             color: #65686B;
@@ -3206,11 +3236,11 @@ desktop 1440px*/
       #main-content .post .website-text {
         width: 100%; }
         #main-content .post .website-text .websiteImage {
-          width: 96%; }
+          width: 100%; }
         #main-content .post .website-text h1.post-meta-key {
           display: block; }
         #main-content .post .website-text p.websitetext {
-          margin-bottom: 0.5em; }
+          margin-bottom: 0; }
         #main-content .post .website-text a.webformats {
           font-size: 0.95em; }
           #main-content .post .website-text a.webformats:hover {
@@ -3981,11 +4011,11 @@ desktop 1280px*/
       #main-content .post .website-text {
         width: 100%; }
         #main-content .post .website-text .websiteImage {
-          width: 96%; }
+          width: 100%; }
         #main-content .post .website-text h1.post-meta-key {
           display: block; }
         #main-content .post .website-text p.websitetext {
-          margin-bottom: 0.5em; }
+          margin-bottom: 0; }
         #main-content .post .website-text .links {
           height: 50px;
           margin: 0;
@@ -4748,12 +4778,26 @@ desktop 1024px*/
           font-size: 0.85em; }
           #main-content .post ul li a {
             line-height: 35px; }
+      #main-content .post .website-text .item1 {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 2; }
+      #main-content .post .website-text .item2 {
+        grid-column: 3 / span 6;
+        grid-template-columns: repeat(1, 1fr); }
+        #main-content .post .website-text .item2 #project-title,
+        #main-content .post .website-text .item2 #project-code,
+        #main-content .post .website-text .item2 #project-url,
+        #main-content .post .website-text .item2 #project-github {
+          width: 100%; }
+      #main-content .post .website-text .item3 {
+        grid-column: 1 / span 8; }
       #main-content .post .website-text .websiteImage {
-        width: 96%; }
+        width: 100%; }
       #main-content .post .website-text h1.post-meta-key {
-        display: block; }
+        display: block;
+        font-size: 1.1em; }
       #main-content .post .website-text p.websitetext {
-        margin-bottom: 0.5em; }
+        margin-bottom: 0; }
       #main-content .post .website-text a.webformats {
         font-size: 0.95em; }
         #main-content .post .website-text a.webformats:hover {
@@ -5496,36 +5540,47 @@ tablet 800px */
           font-size: 0.8em; }
           #main-content .post ul li a {
             font-size: 100%; }
-      #main-content .post .website-text {
-        width: 100%; }
-        #main-content .post .website-text .websiteImage {
-          width: 35%; }
-        #main-content .post .website-text h1.post-meta-key {
-          display: block; }
-        #main-content .post .website-text p.websitetext {
-          margin-bottom: 0.5em;
-          font-size: 0.9em; }
-        #main-content .post .website-text a.webformats {
-          font-size: 0.85em; }
-          #main-content .post .website-text a.webformats:hover {
-            color: #65686B; }
-        #main-content .post .website-text .links {
-          height: 50px;
-          margin: 0;
-          display: block; }
-          #main-content .post .website-text .links span {
-            width: 33%; }
-            #main-content .post .website-text .links span a {
-              width: 100%;
-              display: block; }
-              #main-content .post .website-text .links span a i.fa-desktop,
-              #main-content .post .website-text .links span a i.fa-mobile,
-              #main-content .post .website-text .links span a i.fa-tablet {
-                font-size: 2em; }
-                #main-content .post .website-text .links span a i.fa-desktop:hover,
-                #main-content .post .website-text .links span a i.fa-mobile:hover,
-                #main-content .post .website-text .links span a i.fa-tablet:hover {
-                  color: #0d0d0d; }
+      #main-content .post .website-text .item1 {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 8; }
+      #main-content .post .website-text .item2 {
+        grid-column: 1 / span 8;
+        grid-template-columns: repeat(1, 1fr); }
+        #main-content .post .website-text .item2 #project-title,
+        #main-content .post .website-text .item2 #project-code,
+        #main-content .post .website-text .item2 #project-url,
+        #main-content .post .website-text .item2 #project-github {
+          width: 100%; }
+      #main-content .post .website-text .item3 {
+        grid-column: 1 / span 8; }
+      #main-content .post .website-text .websiteImage {
+        width: 45%;
+        margin: auto; }
+      #main-content .post .website-text h1.post-meta-key {
+        display: block; }
+      #main-content .post .website-text p.websitetext {
+        font-size: 0.9em; }
+      #main-content .post .website-text a.webformats {
+        font-size: 0.85em; }
+        #main-content .post .website-text a.webformats:hover {
+          color: #65686B; }
+      #main-content .post .website-text .links {
+        height: 50px;
+        margin: 0;
+        display: block; }
+        #main-content .post .website-text .links span {
+          width: 33%; }
+          #main-content .post .website-text .links span a {
+            width: 100%;
+            display: block; }
+            #main-content .post .website-text .links span a i.fa-desktop,
+            #main-content .post .website-text .links span a i.fa-mobile,
+            #main-content .post .website-text .links span a i.fa-tablet {
+              font-size: 2em; }
+              #main-content .post .website-text .links span a i.fa-desktop:hover,
+              #main-content .post .website-text .links span a i.fa-mobile:hover,
+              #main-content .post .website-text .links span a i.fa-tablet:hover {
+                color: #0d0d0d; }
       #main-content .post a.post-thumbnail {
         display: block; }
         #main-content .post a.post-thumbnail img {
@@ -6274,12 +6329,26 @@ tablet 600px */
             font-size: 100%; }
       #main-content .post .website-text {
         width: 100%; }
+        #main-content .post .website-text .item1 {
+          grid-row: 1 / span 3;
+          grid-column: 1 / span 8; }
+        #main-content .post .website-text .item2 {
+          grid-column: 1 / span 8;
+          grid-template-columns: repeat(1, 1fr); }
+          #main-content .post .website-text .item2 #project-title,
+          #main-content .post .website-text .item2 #project-code,
+          #main-content .post .website-text .item2 #project-url,
+          #main-content .post .website-text .item2 #project-github {
+            width: 100%; }
+        #main-content .post .website-text .item3 {
+          grid-column: 1 / span 8; }
         #main-content .post .website-text .websiteImage {
-          width: 55%; }
+          width: 45%;
+          margin: auto; }
         #main-content .post .website-text h1.post-meta-key {
           display: block; }
         #main-content .post .website-text p.websitetext {
-          margin-bottom: 0.5em; }
+          margin-bottom: 0em; }
         #main-content .post .website-text .links {
           height: 50px;
           margin: 0;
@@ -6975,7 +7044,7 @@ mobile 480px */
         #main-content .post .website-text h1.post-meta-key {
           display: block; }
         #main-content .post .website-text p.websitetext {
-          margin-bottom: 0.5em; }
+          margin-bottom: 0em; }
         #main-content .post .website-text .links {
           height: 50px;
           margin: 0;
@@ -7695,7 +7764,7 @@ mobile 360px */
         #main-content .post .website-text h1.post-meta-key {
           display: block; }
         #main-content .post .website-text p.websitetext {
-          margin-bottom: 0.5em; }
+          margin-bottom: 0em; }
         #main-content .post .website-text .links {
           height: 50px;
           margin: 0;
