@@ -35,12 +35,12 @@ if ( have_posts() ) :
 	<div class="item item1">
 
 	  <figure class="websiteImage">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/06/www-
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/www-
 							<?php
 							$post_slug = $post->post_name;
 							esc_html_e( $post_slug, 'raythompsonwebdev-com' );
 							?>
-		-home-page-large.png" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+		-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
 
 		<?php the_post_thumbnail( 'website-image' ); ?>
 
@@ -70,7 +70,7 @@ if ( have_posts() ) :
         <h1 class="post-meta-key">
         <?php esc_html_e( 'URL', 'raythompsonwebdev-com' ); ?>
       </h1>
-      <a class="webformats" href="<?php esc_html_e( $project_url ); ?>" target="blank"><?php esc_html_e( $project_url ); ?></a>
+      <a class="webformats" href="<?php esc_html_e( $project_url ); ?>" target="blank" title="<?php esc_attr_e( 'See Website', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( $project_url ); ?> </a>
     </div>
 
     <div id="project-github">
@@ -80,7 +80,7 @@ if ( have_posts() ) :
 
       <?php $url_mp = site_url( 'github.com', 'https' ); ?>
 
-      <a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php esc_html_e( $post_slug ); ?>" title="<?php esc_attr_e( 'See Code on Github', 'raythompsonwebdev-com' ); ?>">See Code on Github	</a>
+      <a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php esc_html_e( $post_slug ); ?>" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>">See Code on Github	</a>
     </div>
 
 

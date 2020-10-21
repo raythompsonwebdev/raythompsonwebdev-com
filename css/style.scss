@@ -937,11 +937,11 @@ desktop 1920px*/
         margin: 0 auto;
         height: auto;
         line-height: 40px;
-        font-size: 1.15em;
+        font-size: 1.1em;
         text-indent: 0;
-        width: 100%;
+        width: 98%;
         text-align: left;
-        color: $colorwhite;
+        color: $blackcolor;
 
         a {
           padding-left: 0;
@@ -978,16 +978,14 @@ desktop 1920px*/
 
           a {
             width: 100%;
-            margin-left: 0;
-            text-align: center;
+
             background-color: $colorwhite;
             color: $blackcolor;
 
             &:hover {
-              margin-left: 0;
-              display: block;
+
               background-color: $colorwhite;
-              font-weight: bold;
+
             }
           }
         }
@@ -1023,7 +1021,7 @@ desktop 1920px*/
               margin-left: 0;
               display: block;
               background-color: $colorwhite;
-              font-weight: bold;
+
             }
           }
         }
@@ -1033,9 +1031,8 @@ desktop 1920px*/
         width: 100%;
         display: inline-block;
         padding: 0.5em;
-
         display: grid;
-        grid-gap: 5px;
+        grid-gap: 10px;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(3, auto);
         grid-auto-flow: dense;
@@ -1185,23 +1182,24 @@ desktop 1920px*/
       }
 
       /*code*/
-      pre {
+      pre.wp-block-code {
         border: solid 1px blue;
         font-size: 1em;
-        color: blue;
+        color: $colorwhite;
         margin: 10px;
         padding: 10px;
-        background: #ffffb3;
+        background: $blackcolor;
         direction: ltr;
         text-align: left;
+        .code {
+          width: 90%;
+          margin: 5% auto;
+          display: block;
+
+        }
       }
 
-      .code {
-        width: 80%;
-        margin: 5% auto;
-        display: block;
-        font-size: 0.85em;
-      }
+
 
       /*post header*/
       header.byline {
@@ -3578,6 +3576,14 @@ desktop 1440px*/
         font-size: 0.95em;
       }
 
+      /*code*/
+      pre.wp-block-code {
+
+        font-size: 0.95em;
+
+
+      }
+
 
       ul.post-list {
         width: 94%;
@@ -4904,7 +4910,7 @@ desktop 1280px*/
       }
 
       p {
-        font-size: 0.9em;
+        font-size: 0.95em;
       }
 
 
@@ -6272,7 +6278,7 @@ desktop 1024px*/
       }
 
       p {
-        font-size: 0.85em;
+        font-size: 0.95em;
       }
 
 
@@ -6280,7 +6286,7 @@ desktop 1024px*/
         width: 94%;
 
         li {
-          font-size: 0.85em;
+          font-size: 0.95em;
         }
       }
 
@@ -7543,13 +7549,13 @@ tablet 800px */
       }
 
       p {
-        font-size: 0.8em;
+        font-size: 0.9em;
       }
 
 
       ul.post-list {
         li {
-          font-size: 0.8em;
+          font-size: 0.9em;
         }
       }
 
@@ -9696,7 +9702,7 @@ tablet 600px */
 mobile 480px */
 @media only screen and (max-width: 30em) {
   .menu-toggle {
-    top: 4.5vh;
+    top: 6.5vh;
     line-height: 50px;
     font-size: 1.15em;
   }
@@ -10960,7 +10966,7 @@ mobile 360px */
   .menu-toggle {
 
     font-size: 1.1em;
-    top: 4.5vh;
+    top: 6.5vh;
     line-height:40px;
 
   }

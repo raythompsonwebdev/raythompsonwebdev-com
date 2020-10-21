@@ -42,7 +42,7 @@
 			</header>
 
 			<!--featured Image-->
-		
+
 				<?php if ( has_post_thumbnail() ) : ?>
 
 					<?php raythompsonwebdev_com_post_thumbnail(); ?>
@@ -50,16 +50,16 @@
 					<?php else : ?>
 
 						<figure class="featuredImage">
-							
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/06/nothing.jpg"
+
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-							
+
 						</figure>
 
-				
+
 				<?php endif; ?>
 
-		
+
 			<!--featured Image end-->
 
 			<!--Post entry-->
@@ -68,12 +68,12 @@
 				<?php	the_content(); ?>
 
 			</div>
-		   
+
 			<!--Post entry footer-->
 			<footer class="byline">
-											
+
 				<?php raythompsonwebdev_com_entry_footer(); ?>
-				
+
 				<p>
 					<?php
 						$lastmodified = get_the_modified_time( 'U' );
@@ -92,7 +92,7 @@
 		<?php	endwhile;	?>
 
 		<nav class="navigation">
-			
+
 			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
 			<div class="nav-links">
 
@@ -107,7 +107,7 @@
 			</div>
 
 		</nav>
-		
+
 <?php else : ?>
 
 	<?php get_template_part( 'template-part/content', 'none' ); ?>

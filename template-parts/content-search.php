@@ -43,7 +43,7 @@ $classess = array(
 
 						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/09/nothing.jpg"
+								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 
 					</a>
