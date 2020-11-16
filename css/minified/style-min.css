@@ -25,7 +25,6 @@ License: GNU General Public License v2 or later
   box-sizing: border-box; }
 
 * html {
-  font-size: 1em;
   margin: 0;
   padding: 0;
   outline: none;
@@ -39,7 +38,6 @@ License: GNU General Public License v2 or later
 html[xmlns] .clearfix {
   display: block; }
 
-/*Clearfix*/
 *.float-divider {
   clear: both;
   display: block;
@@ -55,22 +53,14 @@ html[xmlns] .clearfix {
 .group:after {
   clear: both; }
 
-.clearfix {
-  clear: both; }
-  .clearfix:before, .clearfix:after {
-    content: '';
-    display: table; }
-  .clearfix:after {
-    clear: both; }
+body {
+  background: #F2f2f2;
+  margin: 0;
+  padding: 0; }
 
-/* end of Clearfix*/
-.sticky {
-  font-size: 1em; }
-
-/*images*/
-img#wpstats {
-  display: none;
-  width: 2px; }
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section {
+  display: block; }
 
 img {
   max-width: 100%;
@@ -78,36 +68,54 @@ img {
   border: 0;
   vertical-align: top; }
 
-.post img {
-  max-width: 100%;
-  vertical-align: top;
-  height: auto; }
-
-/*end of images*/
-/*Global Wordpress Styles*/
-.menu-toggle {
-  display: none;
-  font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif; }
-
 a {
-  text-decoration: none;
   margin: 0;
   padding: 0;
-  font-size: 1em;
-  -webkit-transition: all 0.2s ease-in 0s;
-  -moz-transition: all 0.2s ease-in 0s;
-  -o-transition: all 0.2s ease-in 0s;
-  -ms-transition: all 0.2s ease-in 0s;
-  transition: all 0.2s ease-in 0s; }
-  a img {
-    border: 0;
-    outline: none; }
+  font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
+  text-decoration: none; }
+  a:hover {
+    font-weight: bold;
+    cursor: pointer; }
   a:visited {
-    background-color: #F2f2f2;
-    color: #DEC928; }
-  a:active {
-    background-color: #F2f2f2;
-    color: #DEC928; }
+    font-weight: bold; }
+
+a img {
+  border: 0;
+  outline: none; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+
+p {
+  font-family: "PT Sans", verdana, helvetica, sans-serif;
+  padding: 0;
+  margin: 0; }
+
+ul {
+  font-family: "PT Sans", verdana, helvetica, sans-serif;
+  padding: 0;
+  margin: 0; }
+
+li {
+  padding: 0;
+  margin: 0; }
+
+input {
+  margin: 0;
+  padding: 0; }
+
+figure {
+  margin: 0;
+  padding: 0; }
+
+.sticky {
+  font-size: 1em; }
 
 img.centered {
   display: block;
@@ -152,48 +160,6 @@ div.aligncenter {
 
 .bypostauthor {
   font-size: 0.9em; }
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
-  padding: 0;
-  margin: 0;
-  width: 100%; }
-
-p {
-  font-family: "PT Sans", verdana, helvetica, sans-serif;
-  font-size: 1em;
-  padding: 0;
-  margin: 0; }
-
-ul {
-  font-family: "PT Sans", verdana, helvetica, sans-serif;
-  padding: 0;
-  margin: 0; }
-
-li {
-  font-size: 1em;
-  padding: 0;
-  margin: 0; }
-
-input {
-  margin: 0;
-  padding: 0; }
-
-figure {
-  margin: 0;
-  padding: 0; }
-
-article, aside, details, figcaption, figure, footer, header,
-hgroup, menu, nav, section {
-  display: block; }
-
-.browserupgrade {
-  font-family: "PT Sans", verdana, helvetica, sans-serif;
-  margin: 0.2em 0;
-  padding: 0.2em 0; }
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -244,8 +210,8 @@ div.textwidget {
 
 .newExcerpt {
   display: block;
-  padding: 0.5em 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 blockquote:before,
 blockquote:after,
@@ -304,6 +270,15 @@ desktop 320px
 /*
 desktop 1920px*/
 @media only screen and (max-width: 1920px) {
+  .browserupgrade {
+    font-family: "PT Sans", verdana, helvetica, sans-serif;
+    margin: 0.2em 0;
+    padding: 0.2em 0; }
+  .menu-toggle {
+    display: none; }
+  img#wpstats {
+    display: none;
+    width: 2px; }
   .cookie-notice-container {
     font-size: 0.9em;
     font-family: "PT Sans", verdana, helvetica, sans-serif; }
@@ -326,10 +301,6 @@ desktop 1920px*/
     border: none; }
   .fixed-side-social-container {
     display: none; }
-  body {
-    background: #F2f2f2;
-    margin: 0;
-    padding: 0; }
   #wrapper_container {
     background: #F2f2f2;
     width: 90%;
@@ -513,13 +484,11 @@ desktop 1920px*/
           border: 1px solid #0d0d0d; }
           header nav.menu-main-container ul#menu-main li.menu-item a {
             background-color: #F2f2f2;
-            font-family: "Cabin", Bitstream Vera Sans, verdana, helvetica, sans-serif;
             width: 100%;
             height: 100%;
             text-decoration: none;
             line-height: 33px;
             color: #0d0d0d;
-            margin: 0;
             font-size: 0.9em;
             display: block;
             letter-spacing: 0.1em;
@@ -544,8 +513,7 @@ desktop 1920px*/
               background-color: #0d0d0d; }
             header nav.menu-main-container ul#menu-main li.menu-item a:hover {
               background-color: #0d0d0d;
-              color: #F2f2f2;
-              font-weight: bold; }
+              color: #F2f2f2; }
     header nav#mobile-nav {
       display: none; }
   /*Search Box*/
@@ -711,11 +679,8 @@ desktop 1920px*/
             display: inline-block;
             line-height: 40px;
             color: #0d0d0d; }
-            #main-content section.main-text ul li a:visited {
-              font-weight: bold; }
             #main-content section.main-text ul li a:hover {
-              color: #0d0d0d;
-              font-weight: bold; }
+              color: #0d0d0d; }
       #main-content section.main-text hr {
         background-color: #F2f2f2;
         height: 1px;
@@ -818,7 +783,6 @@ desktop 1920px*/
       display: block;
       float: left; }
       #main-content address#contact-details li {
-        font-family: "PT Sans", verdana, helvetica, sans-serif;
         list-style: none;
         line-height: 40px; }
         #main-content address#contact-details li a {
@@ -828,52 +792,16 @@ desktop 1920px*/
           line-height: 40px;
           font-family: "Font Awesome 5 Free", "PT Sans", verdana, helvetica, sans-serif;
           color: #0d0d0d; }
+          #main-content address#contact-details li a svg.fa-linkedin,
+          #main-content address#contact-details li a svg.fa-twitter,
+          #main-content address#contact-details li a svg.fa-envelope-square,
+          #main-content address#contact-details li a svg.fa-github {
+            display: inline-block;
+            margin-right: 0.5em; }
           #main-content address#contact-details li a:visited {
-            font-weight: bold;
             color: #0d0d0d; }
           #main-content address#contact-details li a:hover {
-            font-weight: bold;
             color: #0d0d0d; }
-        #main-content address#contact-details li a[href^="mailto"]:before {
-          content: "\f0e0";
-          font-style: normal;
-          display: block;
-          line-height: 40px;
-          height: 40px;
-          width: 45px;
-          text-align: center;
-          font-size: 1.4em;
-          float: left; }
-        #main-content address#contact-details li a[href^="https://twitter.com"]:before {
-          content: "\f39e";
-          font-style: normal;
-          display: block;
-          line-height: 40px;
-          height: 40px;
-          width: 45px;
-          text-align: center;
-          font-size: 1.4em;
-          float: left; }
-        #main-content address#contact-details li a[href^="https://www.linkedin.com"]:before {
-          content: "\f0e1";
-          font-style: normal;
-          display: block;
-          line-height: 40px;
-          height: 40px;
-          width: 45px;
-          text-align: center;
-          font-size: 1.4em;
-          float: left; }
-        #main-content address#contact-details li a[href^="https://github.com"]:before {
-          content: "\f09b";
-          font-style: normal;
-          display: block;
-          line-height: 40px;
-          height: 40px;
-          width: 45px;
-          text-align: center;
-          font-size: 1.4em;
-          float: left; }
     #main-content aside#side-bar {
       padding-top: 0;
       height: auto;
@@ -962,10 +890,8 @@ desktop 1920px*/
                 transition: all 0.2s ease-in 0s; }
                 #main-content aside#side-bar .side-bar-box section.widget ul li a:hover,
                 #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li a:hover {
-                  font-weight: bold;
                   background-color: #0d0d0d;
-                  color: #0d0d0d;
-                  cursor: pointer; }
+                  color: #0d0d0d; }
             #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments,
             #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments {
               display: block;
@@ -979,10 +905,8 @@ desktop 1920px*/
                 line-height: 25px; }
                 #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments span.comment-author-link a.url:hover,
                 #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments span.comment-author-link a.url:hover {
-                  font-weight: bold;
-                  cursor: pointer;
                   background-color: #0d0d0d;
-                  background-color: #F2f2f2; }
+                  color: #F2f2f2; }
               #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments:hover,
               #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments:hover {
                 color: #F2f2f2;
@@ -1044,9 +968,6 @@ desktop 1920px*/
         #main-content .post h1.page-title a {
           color: #0d0d0d;
           background-color: unset; }
-          #main-content .post h1 a:hover,
-          #main-content .post h1.page-title a:hover {
-            font-weight: bold; }
       #main-content .post h2,
       #main-content .post h2.entry-title {
         text-indent: 0;
@@ -1089,7 +1010,6 @@ desktop 1920px*/
         background-color: #F2f2f2;
         width: 100%;
         margin: 0;
-        font-size: 1em;
         color: #0d0d0d;
         font-weight: normal;
         line-height: 2.1em;
@@ -1281,6 +1201,10 @@ desktop 1920px*/
         #main-content .post .featuredImage img {
           margin: 0 auto;
           display: block; }
+      #main-content .post img {
+        max-width: 100%;
+        vertical-align: top;
+        height: auto; }
       #main-content .post pre.wp-block-code {
         border: solid 1px blue;
         font-size: 1em;
@@ -1293,7 +1217,9 @@ desktop 1920px*/
         #main-content .post pre.wp-block-code .code {
           width: 90%;
           margin: 5% auto;
-          display: block; }
+          display: block;
+          font-style: normal;
+          color: #f2ae2e; }
       #main-content .post header.byline {
         width: 100%;
         margin-bottom: 0.5em;
@@ -1412,7 +1338,6 @@ desktop 1920px*/
                 #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
                 #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
                 #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-                  font-weight: bold;
                   margin: 0 auto;
                   width: auto;
                   display: inline-block; }
@@ -1459,8 +1384,7 @@ desktop 1920px*/
           border: 1px solid #0d0d0d; }
           #main-content .post div.continue-reading a:hover {
             background-color: #0d0d0d;
-            color: #F2f2f2;
-            font-weight: bold; }
+            color: #F2f2f2; }
           #main-content .post div.continue-reading a span.screen-reader-text {
             color: #0d0d0d; }
             #main-content .post div.continue-reading a span.screen-reader-text:hover {
@@ -1568,8 +1492,7 @@ desktop 1920px*/
             display: inline-block;
             padding: 0.5%; }
             #main-content .post footer.byline .bylinecat a:hover {
-              color: #F2f2f2;
-              font-weight: bold; }
+              color: #F2f2f2; }
         #main-content .post footer.byline p.right {
           width: 6%;
           padding: 0;
@@ -1598,7 +1521,6 @@ desktop 1920px*/
             #main-content .post footer.byline p.right a.comments-count:hover {
               color: #0d0d0d;
               background-color: #F2f2f2;
-              font-weight: bold;
               line-height: 65px; }
         #main-content .post footer.byline .cat-links,
         #main-content .post footer.byline .tags-links,
@@ -1618,12 +1540,6 @@ desktop 1920px*/
             width: auto;
             display: inline-block;
             padding: 0 0.25em; }
-            #main-content .post footer.byline .cat-links a:hover,
-            #main-content .post footer.byline .tags-links a:hover,
-            #main-content .post footer.byline .edit-link a:hover,
-            #main-content .post footer.byline .comments-link a:hover {
-              font-weight: bold;
-              cursor: pointer; }
     #main-content .gallery {
       /*custom post image*/ }
       #main-content .gallery a.post-thumbnail {
@@ -1651,14 +1567,11 @@ desktop 1920px*/
             font-size: 0.9em;
             padding: 0.5%; }
             #main-content .gallery footer.byline .bylinecat a:hover {
-              font-weight: bold;
               padding: 0.5%; }
         #main-content .gallery footer.byline p.right {
           width: 6%; }
           #main-content .gallery footer.byline p.right a.comments-count {
             font-size: 1.5em; }
-            #main-content .gallery footer.byline p.right a.comments-count:hover {
-              font-weight: bold; }
         #main-content .gallery footer.byline .cat-links,
         #main-content .gallery footer.byline .tags-links,
         #main-content .gallery footer.byline .edit-link,
@@ -1669,11 +1582,6 @@ desktop 1920px*/
           #main-content .gallery footer.byline .edit-link a,
           #main-content .gallery footer.byline .comments-link a {
             font-size: 0.95em; }
-            #main-content .gallery footer.byline .cat-links a:hover,
-            #main-content .gallery footer.byline .tags-links a:hover,
-            #main-content .gallery footer.byline .edit-link a:hover,
-            #main-content .gallery footer.byline .comments-link a:hover {
-              cursor: pointer; }
     #main-content nav.navigation {
       height: auto; }
       #main-content nav.navigation h2 {
@@ -1730,8 +1638,7 @@ desktop 1920px*/
             #main-content nav.navigation .nav-links div.nav-previous a:hover,
             #main-content nav.navigation .nav-links div.nav-next a:hover {
               background-color: #F2f2f2;
-              color: #0d0d0d;
-              font-weight: bold; }
+              color: #0d0d0d; }
             #main-content nav.navigation .nav-links div.nav-previous a:after,
             #main-content nav.navigation .nav-links div.nav-next a:after {
               font-family: "Font Awesome 5 Free";
@@ -1868,8 +1775,7 @@ desktop 1920px*/
               #main-content section.contact-wide ol.commentlist li .comment-body .comment-content p a {
                 background-color: #F2f2f2; }
                 #main-content section.contact-wide ol.commentlist li .comment-body .comment-content p a:hover {
-                  color: #F2f2f2;
-                  font-weight: bold; }
+                  color: #F2f2f2; }
             #main-content section.contact-wide ol.commentlist li .comment-body ul.children {
               width: 100%;
               margin-left: 0; }
@@ -1893,8 +1799,7 @@ desktop 1920px*/
             text-align: center;
             font-size: 1em; }
             #main-content section.contact-wide ol.commentlist .reply a:hover {
-              color: #F2f2f2;
-              font-weight: bold; }
+              color: #F2f2f2; }
       #main-content section.contact-wide #respond {
         display: block;
         clear: both; }
@@ -1917,7 +1822,6 @@ desktop 1920px*/
             display: inline-block;
             padding: 0 2%; }
             #main-content section.contact-wide #respond h3#reply-title small a:hover {
-              font-weight: bold;
               color: #0d0d0d; }
         #main-content section.contact-wide #respond .comment-form {
           width: 82%;
@@ -2037,8 +1941,7 @@ desktop 1920px*/
         #main-content section.contact-wide p a {
           background-color: unset; }
           #main-content section.contact-wide p a:hover {
-            color: #F2f2f2;
-            font-weight: bold; }
+            color: #F2f2f2; }
       #main-content section.contact-wide p:last-of-type {
         text-align: center; }
         #main-content section.contact-wide p:last-of-type a {
@@ -2050,8 +1953,7 @@ desktop 1920px*/
           color: #0d0d0d; }
           #main-content section.contact-wide p:last-of-type a:hover {
             background-color: #0d0d0d;
-            color: #F2f2f2;
-            font-weight: bold; }
+            color: #F2f2f2; }
       #main-content section.contact-wide p.must-log-in {
         width: 90%;
         display: block;
@@ -2065,7 +1967,6 @@ desktop 1920px*/
           background-color: unset;
           width: auto; }
           #main-content section.contact-wide p.must-log-in a:hover {
-            font-weight: bold;
             color: #F2f2f2; }
       #main-content section.contact-wide p.nocomments {
         display: block;
@@ -2156,23 +2057,25 @@ desktop 1920px*/
             #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span {
               height: auto;
               width: 100%;
-              display: block; }
-              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span i {
-                line-height: 100px;
-                height: 100px;
+              display: block;
+              padding: 0.2em; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span .svg-inline--fa {
                 display: block;
-                color: #F2f2f2;
-                text-align: center;
-                width: 98%;
+                margin: auto;
+                padding: 0.25em 0;
+                font-size: inherit;
+                height: 100px;
+                overflow: visible;
+                color: #fff;
                 font-size: 4em;
-                margin: 0.05em auto; }
-              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span i.fa-code {
+                width: 100%; }
+              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span svg.fa-code {
                 background-color: #d91424; }
-              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span i.fa-photo-video {
+              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span svg.fa-photo-video {
                 background-color: #f2ae2e; }
-              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span i.fa-wordpress {
+              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span svg.fa-wordpress-simple {
                 background-color: #88a61c; }
-              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span i.fa-wrench {
+              #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox span svg.fa-wrench {
                 background-color: #0a0a0a; }
             #main-content #frontpage_container div#text-box-front section#calltoaction section.frntpgbox h1 {
               line-height: 40px;
@@ -2300,8 +2203,6 @@ desktop 1920px*/
           background-color: #0d0d0d;
           color: #F2f2f2; }
           #main-content #frontpage_container section#fntpage_banner a#projectLink:hover {
-            font-weight: bold;
-            cursor: pointer;
             color: #ccb33b;
             background-color: none; }
         #main-content #frontpage_container section#fntpage_banner figure#image-6 {
@@ -2920,13 +2821,24 @@ desktop 1920px*/
     font-family: "PT Sans", verdana, helvetica, sans-serif;
     margin-top: 1%; }
     footer aside.social-icons {
-      display: block;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: space;
+      justify-content: space-between;
+      -webkit-align-content: flex-start;
+      -ms-flex-content: start;
+      align-content: flex-start;
       float: right;
       margin: 0;
-      width: 30%;
+      width: 20%;
       height: auto; }
       footer aside.social-icons .social-icon {
-        width: 50%;
+        width: 15%;
         -webkit-transform-origin: 50% 50%;
         -moz-transform-origin: 50% 50%;
         -o-transform-origin: 50% 50%;
@@ -2938,8 +2850,9 @@ desktop 1920px*/
         -ms-transition: all 0.2s ease-in 0s;
         transition: all 0.2s ease-in 0s;
         height: 100%;
-        float: left;
-        display: block; }
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto; }
         footer aside.social-icons .social-icon:hover {
           color: #0d0d0d;
           cursor: pointer; }
@@ -3100,8 +3013,6 @@ desktop 1440px*/
             width: 3%; }
           #main-content section.main-text ul li a {
             display: inline-block; }
-            #main-content section.main-text ul li a:hover {
-              font-weight: bold; }
       #main-content section.main-text hr {
         height: 1px; }
     #main-content #map_container {
@@ -3140,20 +3051,6 @@ desktop 1440px*/
       font-family: "PT Sans", verdana, helvetica, sans-serif; }
       #main-content address#contact-details li a {
         font-size: 1em; }
-        #main-content address#contact-details li a:hover {
-          font-weight: bold; }
-      #main-content address#contact-details li a[href^="mailto"]:before {
-        content: "\f0e0";
-        font-size: 1.4em; }
-      #main-content address#contact-details li a[href^="https://twitter.com"]:before {
-        content: "\f099";
-        font-size: 1.4em; }
-      #main-content address#contact-details li a[href^="https://www.linkedin.com"]:before {
-        content: "\f0e1";
-        font-size: 1.4em; }
-      #main-content address#contact-details li a[href^="https://github.com"]:before {
-        content: "\f09b";
-        font-size: 1.4em; }
     #main-content aside#side-bar {
       padding-top: 0; }
       #main-content aside#side-bar .side-bar-box h2 {
@@ -3168,7 +3065,6 @@ desktop 1440px*/
           font-size: 0.9em; }
           #main-content aside#side-bar .side-bar-box section.widget ul li a:hover,
           #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li a:hover {
-            font-weight: bold;
             color: #F2f2f2; }
         #main-content aside#side-bar .side-bar-box section.widget ul li.recentcomments,
         #main-content aside#side-bar .side-bar-box section.widget ul#recentcomments li.recentcomments {
@@ -3336,8 +3232,6 @@ desktop 1440px*/
             width: 100%; }
       #main-content .post div.continue-reading a {
         display: block; }
-        #main-content .post div.continue-reading a:hover {
-          font-weight: bold; }
         #main-content .post div.continue-reading a span.screen-reader-text:hover {
           color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -3374,8 +3268,6 @@ desktop 1440px*/
         #main-content .post footer.byline .bylinecat a {
           font-size: 0.85em;
           padding: 0.5%; }
-          #main-content .post footer.byline .bylinecat a:hover {
-            font-weight: bold; }
       #main-content .post footer.byline p.right {
         width: 8%; }
         #main-content .post footer.byline p.right a.comments-count {
@@ -3408,18 +3300,11 @@ desktop 1440px*/
         width: 6%; }
         #main-content .gallery footer.byline p.right a.comments-count {
           font-size: 1.3em; }
-          #main-content .gallery footer.byline p.right a.comments-count:hover {
-            cursor: pointer; }
       #main-content .gallery footer.byline .cat-links a,
       #main-content .gallery footer.byline .tags-links a,
       #main-content .gallery footer.byline .edit-link a,
       #main-content .gallery footer.byline .comments-link a {
         font-size: 0.9em; }
-        #main-content .gallery footer.byline .cat-links a:hover,
-        #main-content .gallery footer.byline .tags-links a:hover,
-        #main-content .gallery footer.byline .edit-link a:hover,
-        #main-content .gallery footer.byline .comments-link a:hover {
-          cursor: pointer; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -3430,9 +3315,6 @@ desktop 1440px*/
       #main-content nav.navigation .nav-links div.nav-previous a,
       #main-content nav.navigation .nav-links div.nav-next a {
         line-height: 40px; }
-        #main-content nav.navigation .nav-links div.nav-previous a:hover,
-        #main-content nav.navigation .nav-links div.nav-next a:hover {
-          font-weight: bold; }
         #main-content nav.navigation .nav-links div.nav-previous a:after,
         #main-content nav.navigation .nav-links div.nav-next a:after {
           font-size: 1.5em;
@@ -3683,8 +3565,7 @@ desktop 1440px*/
         #main-content div#profile_container section#prof_cont #chart {
           width: 96%; }
           #main-content div#profile_container section#prof_cont #chart #bars li .bar:hover {
-            background: #f2ae2e;
-            cursor: pointer; }
+            background: #f2ae2e; }
           #main-content div#profile_container section#prof_cont #chart #bars li .bar:hover:after {
             font-size: 1em; }
           #main-content div#profile_container section#prof_cont #chart #bars span {
@@ -3791,10 +3672,8 @@ desktop 1440px*/
   /*Footer*/
   footer {
     margin-top: 1%; }
-    footer aside.social-icons .social-icon {
-      width: 50%; }
-      footer aside.social-icons .social-icon:hover {
-        cursor: pointer; }
+    footer aside.social-icons .social-icon:hover {
+      cursor: pointer; }
     footer aside.social-icons span .fa-linkedin,
     footer aside.social-icons span .fa-twitter,
     footer aside.social-icons span .fa-google,
@@ -3880,8 +3759,6 @@ desktop 1280px*/
           width: 4%; }
         #main-content section.main-text ul li a {
           display: inline-block; }
-          #main-content section.main-text ul li a:hover {
-            font-weight: bold; }
     #main-content section.main-text hr {
       height: 1px; }
     #main-content blockquote {
@@ -3929,18 +3806,6 @@ desktop 1280px*/
           font-size: 0.9em; }
           #main-content address#contact-details li a:hover {
             font-weight: bold; }
-        #main-content address#contact-details li a[href^="mailto"]:before {
-          content: "\f0e0";
-          font-size: 1.3em; }
-        #main-content address#contact-details li a[href^="https://twitter.com"]:before {
-          content: "\f099";
-          font-size: 1.3em; }
-        #main-content address#contact-details li a[href^="https://www.linkedin.com"]:before {
-          content: "\f0e1";
-          font-size: 1.3em; }
-        #main-content address#contact-details li a[href^="https://github.com"]:before {
-          content: "\f09b";
-          font-size: 1.4em; }
     #main-content aside#side-bar {
       padding-top: 0; }
       #main-content aside#side-bar .side-bar-box {
@@ -4085,21 +3950,6 @@ desktop 1280px*/
             #main-content .post header.byline .index-entry-meta .meta-content .date a,
             #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
               margin: 0 auto; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-              font-weight: bold; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
           #main-content .post header.byline .index-entry-meta .meta-content span.byline,
@@ -4109,8 +3959,6 @@ desktop 1280px*/
         font-size: 0.8em; }
         #main-content .post div.continue-reading a {
           display: block; }
-          #main-content .post div.continue-reading a:hover {
-            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text:hover {
             color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -4184,11 +4032,6 @@ desktop 1280px*/
       #main-content .gallery footer.byline .edit-link a,
       #main-content .gallery footer.byline .comments-link a {
         font-size: 0.9em; }
-        #main-content .gallery footer.byline .cat-links a:hover,
-        #main-content .gallery footer.byline .tags-links a:hover,
-        #main-content .gallery footer.byline .edit-link a:hover,
-        #main-content .gallery footer.byline .comments-link a:hover {
-          font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -4575,10 +4418,8 @@ desktop 1280px*/
           bottom: 0; }
   footer {
     margin-top: 1%; }
-    footer aside.social-icons .social-icon {
-      width: 50%; }
-      footer aside.social-icons .social-icon:hover {
-        cursor: pointer; }
+    footer aside.social-icons .social-icon:hover {
+      cursor: pointer; }
     footer aside.social-icons span .fa-linkedin,
     footer aside.social-icons span .fa-twitter,
     footer aside.social-icons span .fa-google,
@@ -4896,8 +4737,6 @@ desktop 1024px*/
         width: 90%; }
         #main-content .post div.continue-reading a {
           display: block; }
-          #main-content .post div.continue-reading a:hover {
-            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text:hover {
             color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -4947,11 +4786,6 @@ desktop 1024px*/
       #main-content .post footer.byline .comments-link {
         line-height: 40px;
         font-size: 0.85em; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          font-weight: bold; }
     #main-content .gallery {
       /*post image*/ }
       #main-content .gallery a.post-thumbnail {
@@ -4977,11 +4811,6 @@ desktop 1024px*/
       #main-content .gallery footer.byline .edit-link,
       #main-content .gallery footer.byline .comments-link {
         line-height: 40px; }
-        #main-content .gallery footer.byline .cat-links:hover,
-        #main-content .gallery footer.byline .tags-links:hover,
-        #main-content .gallery footer.byline .edit-link:hover,
-        #main-content .gallery footer.byline .comments-link:hover {
-          font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -5294,10 +5123,8 @@ desktop 1024px*/
     margin-top: 3%; }
     footer aside.social-icons {
       width: 35%; }
-      footer aside.social-icons .social-icon {
-        width: 50%; }
-        footer aside.social-icons .social-icon:hover {
-          cursor: pointer; }
+      footer aside.social-icons .social-icon:hover {
+        cursor: pointer; }
       footer aside.social-icons span .fa-linkedin,
       footer aside.social-icons span .fa-twitter,
       footer aside.social-icons span .fa-google,
@@ -5633,21 +5460,6 @@ tablet 800px */
             #main-content .post header.byline .index-entry-meta .meta-content .date a,
             #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
               margin: 0 auto; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-              font-weight: bold; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
           #main-content .post header.byline .index-entry-meta .meta-content span.byline,
@@ -5657,8 +5469,6 @@ tablet 800px */
         width: 100%; }
         #main-content .post div.continue-reading a {
           display: block; }
-          #main-content .post div.continue-reading a:hover {
-            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text:hover {
             color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -5714,11 +5524,6 @@ tablet 800px */
         #main-content .post footer.byline .edit-link a,
         #main-content .post footer.byline .comments-link a {
           font-size: 0.8em; }
-          #main-content .post footer.byline .cat-links a:hover,
-          #main-content .post footer.byline .tags-links a:hover,
-          #main-content .post footer.byline .edit-link a:hover,
-          #main-content .post footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content .gallery {
       /*post image*/ }
       #main-content .gallery a.post-thumbnail img {
@@ -5750,11 +5555,6 @@ tablet 800px */
         #main-content .gallery footer.byline .edit-link a,
         #main-content .gallery footer.byline .comments-link a {
           font-size: 0.85em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -6101,10 +5901,8 @@ tablet 800px */
           bottom: 0; }
   footer aside.social-icons {
     width: 40%; }
-    footer aside.social-icons .social-icon {
-      width: 50%; }
-      footer aside.social-icons .social-icon:hover {
-        cursor: pointer; }
+    footer aside.social-icons .social-icon:hover {
+      cursor: pointer; }
     footer aside.social-icons span .fa-linkedin,
     footer aside.social-icons span .fa-twitter,
     footer aside.social-icons span .fa-google,
@@ -6403,36 +6201,6 @@ tablet 600px */
           #main-content .post header.byline .index-entry-meta .meta-content .date,
           #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
             font-size: 0.8em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .entry-meta .meta-content .date a,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-              margin: 0 auto; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-              font-weight: bold; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
           #main-content .post header.byline .index-entry-meta .meta-content span.byline,
@@ -6442,8 +6210,6 @@ tablet 600px */
         width: 100%; }
         #main-content .post div.continue-reading a {
           display: block; }
-          #main-content .post div.continue-reading a:hover {
-            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text:hover {
             color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -6524,11 +6290,6 @@ tablet 600px */
         #main-content .gallery footer.byline .edit-link a,
         #main-content .gallery footer.byline .comments-link a {
           font-size: 0.9em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -6814,10 +6575,8 @@ h2 {
         #main-content div#showcaseContainer div.content div#panel7 figure.showcase-container:hover figcaption.showcase-content,
         #main-content div#showcaseContainer div.content div#panel8 figure.showcase-container:hover figcaption.showcase-content {
           bottom: 0; }
-  footer aside.social-icons .social-icon {
-    width: 50%; }
-    footer aside.social-icons .social-icon:hover {
-      cursor: pointer; }
+  footer aside.social-icons .social-icon:hover {
+    cursor: pointer; }
   footer aside.social-icons span .fa-linkedin,
   footer aside.social-icons span .fa-twitter,
   footer aside.social-icons span .fa-google,
@@ -7099,36 +6858,6 @@ mobile 480px */
           #main-content .post header.byline .index-entry-meta .meta-content .date,
           #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
             font-size: 0.75em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .entry-meta .meta-content .date a,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-              margin: 0 auto; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-              font-weight: bold; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
           #main-content .post header.byline .index-entry-meta .meta-content span.byline,
@@ -7139,8 +6868,6 @@ mobile 480px */
         width: 100%; }
         #main-content .post div.continue-reading a {
           display: block; }
-          #main-content .post div.continue-reading a:hover {
-            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text:hover {
             color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -7197,11 +6924,6 @@ mobile 480px */
         #main-content .post footer.byline .edit-link,
         #main-content .post footer.byline .comments-link {
           width: auto; }
-          #main-content .post footer.byline .cat-links a:hover,
-          #main-content .post footer.byline .tags-links a:hover,
-          #main-content .post footer.byline .edit-link a:hover,
-          #main-content .post footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content .gallery {
       /*post image*/ }
       #main-content .gallery a.post-thumbnail img {
@@ -7232,11 +6954,6 @@ mobile 480px */
         #main-content .gallery footer.byline .edit-link a,
         #main-content .gallery footer.byline .comments-link a {
           font-size: 0.8em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -7559,10 +7276,8 @@ mobile 480px */
           bottom: 0; }
   footer aside.social-icons {
     width: 50%; }
-    footer aside.social-icons .social-icon {
-      width: 50%; }
-      footer aside.social-icons .social-icon:hover {
-        cursor: pointer; }
+    footer aside.social-icons .social-icon:hover {
+      cursor: pointer; }
     footer aside.social-icons span .fa-linkedin,
     footer aside.social-icons span .fa-twitter,
     footer aside.social-icons span .fa-google,
@@ -7822,36 +7537,6 @@ mobile 360px */
             #main-content .post header.byline .index-entry-meta .meta-content .date,
             #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
               font-size: 0.75em; }
-              #main-content .post header.byline .entry-meta .meta-content .byline a,
-              #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-              #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-              #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-              #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-              #main-content .post header.byline .entry-meta .meta-content .date a,
-              #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-              #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-              #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-              #main-content .post header.byline .index-entry-meta .meta-content .date a,
-              #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-                margin: 0 auto; }
-              #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-                font-weight: bold; }
             #main-content .post header.byline .entry-meta .meta-content span.byline,
             #main-content .post header.byline .entry-meta .meta-content span.comments-link,
             #main-content .post header.byline .index-entry-meta .meta-content span.byline,
@@ -7859,8 +7544,6 @@ mobile 360px */
               width: 100%; }
       #main-content .post div.continue-reading a {
         display: block; }
-        #main-content .post div.continue-reading a:hover {
-          font-weight: bold; }
         #main-content .post div.continue-reading a span.screen-reader-text:hover {
           color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -7911,11 +7594,6 @@ mobile 360px */
       #main-content .post footer.byline .comments-link {
         width: 79%;
         font-size: 0.7em; }
-        #main-content .post footer.byline .cat-links a:hover,
-        #main-content .post footer.byline .tags-links a:hover,
-        #main-content .post footer.byline .edit-link a:hover,
-        #main-content .post footer.byline .comments-link a:hover {
-          font-weight: bold; }
     #main-content .gallery {
       /*post image*/ }
       #main-content .gallery a.post-thumbnail img {
@@ -8261,10 +7939,8 @@ mobile 360px */
           bottom: 0; }
   footer aside.social-icons {
     width: 45%; }
-    footer aside.social-icons .social-icon {
-      width: 50%; }
-      footer aside.social-icons .social-icon:hover {
-        cursor: pointer; }
+    footer aside.social-icons .social-icon:hover {
+      cursor: pointer; }
     footer aside.social-icons span .fa-linkedin,
     footer aside.social-icons span .fa-twitter,
     footer aside.social-icons span .fa-google,
@@ -8526,36 +8202,6 @@ mobile 320px */
             #main-content .post header.byline .index-entry-meta .meta-content .date,
             #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
               font-size: 0.7em; }
-              #main-content .post header.byline .entry-meta .meta-content .byline a,
-              #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-              #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-              #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-              #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-              #main-content .post header.byline .entry-meta .meta-content .date a,
-              #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-              #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-              #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-              #main-content .post header.byline .index-entry-meta .meta-content .date a,
-              #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-                margin: 0 auto; }
-              #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-              #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-              #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-                font-weight: bold; }
             #main-content .post header.byline .entry-meta .meta-content span.byline,
             #main-content .post header.byline .entry-meta .meta-content span.comments-link,
             #main-content .post header.byline .index-entry-meta .meta-content span.byline,
@@ -8565,8 +8211,6 @@ mobile 320px */
         font-size: 0.75em; }
         #main-content .post div.continue-reading a {
           display: block; }
-          #main-content .post div.continue-reading a:hover {
-            font-weight: bold; }
           #main-content .post div.continue-reading a span.screen-reader-text:hover {
             color: #0d0d0d; }
       #main-content .post div.sharedaddy h3.sd-title {
@@ -8620,11 +8264,6 @@ mobile 320px */
         #main-content .post footer.byline .edit-link a,
         #main-content .post footer.byline .comments-link a {
           font-size: 0.85em; }
-          #main-content .post footer.byline .cat-links a:hover,
-          #main-content .post footer.byline .tags-links a:hover,
-          #main-content .post footer.byline .edit-link a:hover,
-          #main-content .post footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content .gallery {
       /*post image*/ }
       #main-content .gallery a.post-thumbnail {
@@ -8657,11 +8296,6 @@ mobile 320px */
         #main-content .gallery footer.byline .edit-link a,
         #main-content .gallery footer.byline .comments-link a {
           font-size: 0.75em; }
-          #main-content .gallery footer.byline .cat-links a:hover,
-          #main-content .gallery footer.byline .tags-links a:hover,
-          #main-content .gallery footer.byline .edit-link a:hover,
-          #main-content .gallery footer.byline .comments-link a:hover {
-            font-weight: bold; }
     #main-content nav.navigation h2 {
       text-indent: 0.5em; }
     #main-content nav.navigation .nav-links span i {
@@ -8953,10 +8587,8 @@ mobile 320px */
       #main-content div#showcaseContainer div.content div#panel7 figure.showcase-container:hover figcaption.showcase-content,
       #main-content div#showcaseContainer div.content div#panel8 figure.showcase-container:hover figcaption.showcase-content {
         bottom: 0; }
-  footer aside.social-icons .social-icon {
-    width: 50%; }
-    footer aside.social-icons .social-icon:hover {
-      cursor: pointer; }
+  footer aside.social-icons .social-icon:hover {
+    cursor: pointer; }
   footer aside.social-icons span .fa-linkedin,
   footer aside.social-icons span .fa-twitter,
   footer aside.social-icons span .fa-google,

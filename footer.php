@@ -94,14 +94,16 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 <?php wp_footer(); ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 <script>
   WebFont.load({
     google: {
       families: ['Cabin', 'PT Sans']
     }
   });
-</script>
+</script> -->
 
 </body>
 

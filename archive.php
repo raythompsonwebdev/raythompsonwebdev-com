@@ -95,7 +95,7 @@ while ( have_posts() ) :
 		<div class="continue-reading">
 				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 				<?php
-				printf(
+				sprintf(
 					/* Translators: %s = Name of the current post. */
 					wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -104,7 +104,7 @@ while ( have_posts() ) :
 				</a>
 			</div>
 
-		
+
 
 	</article>
 
@@ -113,11 +113,11 @@ while ( have_posts() ) :
 <section class="contact-wide">
 
 <h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
-  
+
 </section>
 
 
-<?php get_sidebar( 'archive' ); ?> 
+<?php get_sidebar( 'archive' ); ?>
 
 
 <?php get_footer(); ?>

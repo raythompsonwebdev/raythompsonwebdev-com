@@ -1,8 +1,6 @@
 <?php
 /**
- * *PHP version 7.2
- *
- * Functions | core/functions.php.
+ * Functions | core/functions.php
  *
  * @category   Functions
  * @package    Raythompsonwebdev-com
@@ -17,7 +15,7 @@
 require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
 
 
-add_filter( 'login_errors', 'cwpl_error_message');
+add_filter( 'login_errors', 'cwpl_error_message' );
 /**
  * Returns a custom login error message.
  */
@@ -65,12 +63,6 @@ add_filter( 'wp_title', 'raythompsonwebdev_com_filter_wp_title', 10, 2 );
 */
 load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
-$locale      = get_locale();
-$locale_file = get_template_directory() . "/languages/$locale.php";
-if ( is_readable( $locale_file ) ) {
-	require_once $locale_file;
-}
-
 
 if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 
@@ -78,9 +70,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 	 *  Description theme set up.
 	 *
 	 *  @since 4.0.0
-         *
 	 */
 	function raythompsonwebdev_com_theme_setup() {
+
+		$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
 
 		register_meta(
 			'post',
@@ -151,7 +144,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		add_image_size( 'website-image', 400, 650 );
 
 		// Link pages.
-		$defaults = array(
+		$link_defaults = array(
 			'before'           => '<p>' . __( 'Pages:', 'raythompsonwebdev-com' ),
 			'after'            => '</p>',
 			'link_before'      => '',
@@ -163,10 +156,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			'pagelink'         => '%',
 			'echo'             => 1,
 		);
-		wp_link_pages( $defaults );
+		wp_link_pages( $link_defaults );
 
 		// nav- menus.
-		$defaults = array(
+		$nav_defaults = array(
 			'default-image'          => '',
 			'random-default'         => false,
 			'width'                  => 0,
@@ -180,7 +173,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
 		);
-		add_theme_support( 'nav-menus', $defaults );
+		add_theme_support( 'nav-menus', $nav_defaults );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -208,22 +201,6 @@ endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function clashvibes_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'clashvibes_content_width', 0 );
-
-
-/**
  * Remove Query Strings – Optional Step.
  *
  * @param array $src parameter.
@@ -237,7 +214,6 @@ add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_script_version', 
 
 /**
  * Disable the emoji's
- *
  */
 function raythompsonwebdev_com_disable_emojis() {
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
@@ -289,43 +265,50 @@ add_action( 'init', 'comments_clean_header_hook' );
  */
 remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
 
+// remove version from head.
+remove_action( 'wp_head', 'wp_generator' );
+
+// remove version from rss.
+add_filter( 'the_generator', '__return_empty_string' );
+
 /**
- *  Remove WordPress.
+ *  Remove version from scripts and styles.
  *
- *  @param array $headers remove WordPress headers.
+ *  @param array $src array of.
+ *  @var array $src array of.
  */
-function raythompsonwebdev_remove_change_myheaders( $headers ) {
-	unset( $headers['X-Pingback'] );
-	$headers['X-Powered-By'] = 'PHP/7';
-	return $headers;
+function shape_space_remove_version_scripts_styles( $src ) {
+	if ( strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
+	}
+	return $src;
 }
-add_filter( 'wp_headers', 'raythompsonwebdev_remove_change_myheaders' );
+add_filter( 'style_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
+add_filter( 'script_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
 
-// if ( ! is_admin() ) {
-// 	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
-// }
+if ( ! is_admin() ) {
+	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
+}
 
 /**
- * Undocumented function
+ * Undocumented function.
  *
  * @return void
  */
-// function my_jquery_enqueue() {
-// 	wp_deregister_script( 'jquery' );
-// 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
-// 	wp_enqueue_script( 'jquery' );
-// }
+function my_jquery_enqueue() {
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
+	wp_enqueue_script( 'jquery' );
+}
 
 /**
  * Enqueue style sheets.
  */
 function raythompsonwebdev_com_register_styles() {
 
-  wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_template_directory_uri() . '/css/normalize.css', array(), '1.0', false );
+	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_template_directory_uri() . '/css/normalize.css', array(), '1.0', false );
 
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
-
-  wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/fontawesome/css/all.min.css', array(), '1.0', false );
 
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
@@ -362,6 +345,7 @@ add_action(
 	11
 );
 
+add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 /**
  * Enqueue IE8 style sheets.
  */
@@ -373,7 +357,7 @@ function ie_style_sheets() {
 	wp_enqueue_style( 'ie8' );
 
 }
-add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
+
 
 
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
@@ -387,9 +371,9 @@ function raythompsonwebdev_com_scripts_own() {
 	// master.
 	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array(), '1.0', true );
 
-	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
 
-	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -406,7 +390,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
  *  Raythompsonwebdev lightbox code.
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about-page' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
@@ -421,13 +405,13 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about' ) ) {
+	if ( is_page( 'about-page' ) ) {
 		// scrollto script.
-		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '1.0', true );
 		// easing script.
-		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), '1.0', true );
 		// profile page scripts.
-		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), '20161110', true );
+		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), '1.0', true );
 
 	}
 }
@@ -441,10 +425,12 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	 */
 	function raythompsonwebdev_com_google_script() {
 
+		wp_enqueue_script( 'google-script', 'https://www.googletagmanager.com/gtag/js?id=UA-86655310-1', array(), '1.0', true );
+
 		?>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-86655310-1"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
 		<script>
 
 			window.dataLayer = window.dataLayer || [];
@@ -458,6 +444,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 		<?php
 	}
 	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
+
 endif;
 
 
@@ -549,11 +536,10 @@ function raythompsonwebdev_com_categoree_widgets_init() {
 add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
 
 
-
 /**
  * Summary Custom template tags for this theme.
  */
- require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Summary Custom template tags for this theme.
@@ -576,3 +562,5 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	include get_template_directory() . '/inc/jetpack.php';
 }
+
+

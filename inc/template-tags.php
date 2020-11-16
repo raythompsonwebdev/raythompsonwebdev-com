@@ -38,7 +38,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 
 		// Display the author avatar if the author has a Gravatar.
 		$author_id = get_the_author_meta( 'ID' );
-
 		if ( raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
 			echo '<div class="meta-content has-avatar">';
 			echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
@@ -90,6 +89,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 		);
 
 		if ( raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
+
 			echo '<div class="meta-content has-avatar">';
 			echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
 		} else {
@@ -183,18 +183,18 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 		if ( is_singular() ) :   ?>
 
 			<figure class="featuredImage">
-			
+
 					<?php the_post_thumbnail( 'featured-image' ); ?>
-				
+
 		</figure><!-- .post-thumbnail -->
 
-		
-	<?php	else : ?> 
+
+	<?php	else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
-	
+
 			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
-	
+
 		</a>
 
 		<?php

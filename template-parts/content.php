@@ -78,7 +78,7 @@
 				<div class="continue-reading">
 					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 						<?php
-							esc_html(the_title("Continue Reading : "), 'raythompsonwebdev-com');
+							esc_html( the_title( 'Continue Reading : ' ), 'raythompsonwebdev-com' );
 						?>
 					</a>
 				</div>

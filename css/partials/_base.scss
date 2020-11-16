@@ -9,7 +9,6 @@
 }
 
 * html {
-    font-size: 1em;
     margin: 0;
     padding: 0;
     outline: none;
@@ -23,8 +22,6 @@
 html[xmlns] .clearfix {
     display: block;
 }
-
-/*Clearfix*/
 
 *.float-divider {
     clear: both;
@@ -44,71 +41,83 @@ html[xmlns] .clearfix {
     clear: both;
 }
 
-.clearfix {
-    clear: both;
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
-/* end of Clearfix*/
-
-.sticky {
-    font-size: 1em;
+body {
+  background: $colorwhite;
+  margin: 0;
+  padding: 0;
 }
 
-/*images*/
-
-img#wpstats {
-    display: none;
-    width: 2px;
-}
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section { display: block; }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border: 0;
-    vertical-align: top;
-}
-
-.post img {
-    max-width:100%;
-    vertical-align: top;
-    height: auto;
-}
-
-/*end of images*/
-
-
-/*Global Wordpress Styles*/
-.menu-toggle {
-    display: none;
-    font-family: $FontStyleHeader;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: top;
 }
 
 a {
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: ($FontStyleHeader);
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+    cursor:pointer;
+  }
+  &:visited {
+    font-weight:bold;
+  }
+
+}
+
+a img {
+  border: 0;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $FontStyleHeader;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+p {
+    font-family: $FontStyle;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    font-family: $FontStyle;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+
+    padding: 0;
+    margin: 0;
+}
+
+input{
+    margin:0;
+    padding:0;
+}
+
+figure {
     margin: 0;
     padding: 0;
-    font-size: 1em;
-    @include Transition(all 0.2s ease-in 0s);
-    img {
-        border: 0;
-        outline: none;
-    }
-    &:visited {
-        background-color: $colorwhite;
-        color: #DEC928;
-    }    
-    &:active {
-        background-color: $colorwhite;
-        color: #DEC928;
-    }
+}
 
+
+.sticky {
+    font-size: 1em;
 }
 
 img.centered {
@@ -165,56 +174,6 @@ div.aligncenter {
     font-size: 0.9em;
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: $FontStyleHeader;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-p {
-    font-family: $FontStyle;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-}
-
-ul {
-    font-family: $FontStyle;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
-}
-
-input{
-    margin:0;
-    padding:0;
-}
-
-figure {
-    margin: 0;
-    padding: 0;
-}
-
-article, aside, details, figcaption, figure, footer, header,
-hgroup, menu, nav, section { display: block; }
-
-.browserupgrade {
-    font-family: $FontStyle;
-    margin: 0.2em 0;
-    padding: 0.2em 0;
-}
-
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
     border: 0;
@@ -266,13 +225,13 @@ div.textwidget {
 }
 
 .bypostauthor {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .newExcerpt {
-    display: block;
-    padding: 0.5em 0;
-    margin: 0;
+  display: block;
+  margin: 0;
+  padding:0;
 }
 
 blockquote:before,

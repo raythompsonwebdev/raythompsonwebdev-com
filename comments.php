@@ -24,8 +24,8 @@
 // ##########  Do not delete these lines
 
 
-if ( isset( $_SERVER['SCRIPT_FILENAME']) && 'comments.php' === basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
-		
+if ( isset( $_SERVER['SCRIPT_FILENAME'] ) && 'comments.php' === basename( $_SERVER['SCRIPT_FILENAME'] ) ) {
+
 	die( 'Please do not load this page directly. Thanks!' );
 }
 if ( post_password_required() ) { ?>
@@ -41,30 +41,41 @@ if ( have_comments() ) :
 	<!--Comment List Header-->
 	<h3 id="comments">
 	<?php
-		printf( _nx( 'One comment on "%2$s"', '%1$s comments on "%2$s"', get_comments_number(), 'comments title'),
-			number_format_i18n( get_comments_number() ), get_the_title() );
-		?>
+	printf(
+		esc_html(
+		  /* translators: %1$d: number of comments, %2$s: current page title */
+			_nx(
+				'One comment on "%2$s"',
+				'%1$d comments on "%2$s"',
+				get_comments_number(),
+				'comments title'
+			),
+			number_format_i18n( get_comments_number() ),
+			get_the_title()
+		)
+	);
+	?>
 	</h3>
 
-	<!--Comment List-->	
-	<ol class="commentlist">	
+	<!--Comment List-->
+	<ol class="commentlist">
 		<?php
 			wp_list_comments(
-				array(			
-				//  See http://codex.wordpress.org/Function_Reference/wp_list_comments.
-				'short_ping'  => true,
-				'avatar_size'       => 74,								
-				
+				array(
+					// See http://codex.wordpress.org/Function_Reference/wp_list_comments.
+					'short_ping'  => true,
+					'avatar_size' => 74,
+
 				)
 			);
 		?>
 	</ol>
 	<?php
-    // Are there comments to navigate through?
-    if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-?>
-	<!--Comment Navigation-->	
-					
+	// Are there comments to navigate through?
+	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+		?>
+	<!--Comment Navigation-->
+
 	<nav class="navigation">
 	<h3 class="section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h3>
 		<div class="nav-links">
@@ -72,8 +83,8 @@ if ( have_comments() ) :
 			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompsonwebdev-com' ) ); ?></div>
 		</div>
 	</nav>
-	<?php endif; // Check for comment navigation ?>
-	
+	<?php endif; // Check for comment navigation. ?>
+
 
 	<?php
 	if ( ! comments_open() ) : // There are comments but comments are now closed.
@@ -89,18 +100,18 @@ if ( have_comments() ) :
 		endif;
 	endif;
 
-// Display Form/Login info Section.
-// the comment_form() function handles this and can be used without any paramaters simply as "comment_form()".
-comment_form(
-	array(
-		// see codex http://codex.wordpress.org/Function_Reference/comment_form for default values.
-		// tutorial here http://blogaliving.com/wordpress-adding-comment_form-theme/.
-		'comment_field'       => '<p><textarea name="comment" id="comment" cols="58" rows="7" tabindex="4" aria-required="true"></textarea></p>',
-		'label_submit'        => 'Submit Comment',
-		'comment_notes_after' => '',
-	)
-);
+	// Display Form/Login info Section.
+	// the comment_form() function handles this and can be used without any paramaters simply as "comment_form()".
+	comment_form(
+		array(
+			// see codex http://codex.wordpress.org/Function_Reference/comment_form for default values.
+			// tutorial here http://blogaliving.com/wordpress-adding-comment_form-theme/.
+			'comment_field'       => '<p><textarea name="comment" id="comment" cols="58" rows="7" tabindex="4" aria-required="true"></textarea></p>',
+			'label_submit'        => 'Submit Comment',
+			'comment_notes_after' => '',
+		)
+	);
 
 
 
-?>
+	?>

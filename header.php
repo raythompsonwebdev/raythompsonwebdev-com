@@ -23,6 +23,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" >
 		<link rel="profile" href="http://gmpg.org/xfn/11" >
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
@@ -74,7 +76,7 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archives' ) ) ) : ?>
+				<?php if ( is_front_page() || is_page( array( 'about-page', 'contact-page', 'privacy-policy-2', 'archives' ) ) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 
