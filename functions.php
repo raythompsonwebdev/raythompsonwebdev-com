@@ -14,14 +14,13 @@
 
 require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
 
-
-add_filter( 'login_errors', 'cwpl_error_message' );
 /**
  * Returns a custom login error message.
  */
 function cwpl_error_message() {
 	return 'Well, that was not it!';
 }
+add_filter( 'login_errors', 'cwpl_error_message' );
 
 /**
  * Creates a nicely formatted and more specific title element text
@@ -345,7 +344,7 @@ add_action(
 	11
 );
 
-add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
+
 /**
  * Enqueue IE8 style sheets.
  */
@@ -357,10 +356,10 @@ function ie_style_sheets() {
 	wp_enqueue_style( 'ie8' );
 
 }
+add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
 
 
 
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 /**
  * Master Scripts
  *
@@ -380,10 +379,10 @@ function raythompsonwebdev_com_scripts_own() {
 	}
 
 }
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
 
 
 
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
 /**
  *  Enqueue lightbox script.
  *
@@ -396,10 +395,8 @@ function raythompsonwebdev_com_add_lightbox() {
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
 	}
 }
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
 
-
-
-add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
 /**
  * Enqueue profile page scripts.
  */
@@ -415,7 +412,10 @@ function raythompsonwebdev_com_about_page_scripts() {
 
 	}
 }
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
 
+
+//google analytics.
 if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 
 	/**

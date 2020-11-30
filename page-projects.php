@@ -21,7 +21,7 @@ get_header();
 
 <h1><?php the_title(); ?></h1>
 <section class="main-text">
-	
+
 <p><?php esc_html_e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
 </section>
 
@@ -48,13 +48,14 @@ get_header();
 			<!-- display slugs for custom post categories.-->
 			<div id="panel" class="prod-cnt
 					<?php
-						$customterms = get_the_terms( $post->ID, 'project-category' );
+            $customterms = get_the_terms( $post->ID, 'project-category' );
+
 					foreach ( $customterms as $customterm ) {
 						$pic = $customterm->slug . ' ';
 						echo esc_html( $pic );
 					}
 					?>
-			"<?php post_class(); ?><?php the_ID(); ?> >
+			"<?php post_class(); ?>--<?php the_ID(); ?> >
 
 				<figure class="showcase-container " id="showcaseimg1">
 					<div class="showcase-img">
@@ -76,7 +77,7 @@ get_header();
 				<?php	endwhile; ?>
 
 			<?php	endif; ?>
-			
+
 			<?php wp_reset_postdata(); ?>
 
 		<div class="clearfix"></div>
