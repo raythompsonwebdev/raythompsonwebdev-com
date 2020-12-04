@@ -66,43 +66,43 @@ while ( have_posts() ) :
 <!--featured Image end-->
 		<div class="entry">
 
-	<?php
-		the_excerpt(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
-				'after'  => '</div>',
-			)
-		);
-	?>
+      <?php
+        the_excerpt(
+          sprintf(
+            wp_kses(
+              /* translators: %s: Name of current post. Only visible to screen readers */
+              __( 'Continue reading: <span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+              array(
+                'span' => array(
+                  'class' => array(),
+                ),
+              )
+            ),
+            get_the_title()
+          )
+        );
+      ?>
 
 		</div>
 
 		<div class="continue-reading">
-				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-				<?php
-				sprintf(
-					/* Translators: %s = Name of the current post. */
-					wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				);
-				?>
-				</a>
-			</div>
+      <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+        <?php
+          printf(
+            wp_kses(
+              /* Translators: %s = Name of the current post. */
+              __( 'Continue reading: %s', 'raythompsonwebdev-com' ),
+              array(
+                'span' => array(
+                  'class' => array(),
+                )
+              )
+            ),
+            get_the_title()
+          );
+        ?>
+      </a>
+		</div>
 
 
 

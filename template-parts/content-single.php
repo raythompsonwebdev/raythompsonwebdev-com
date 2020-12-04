@@ -78,9 +78,9 @@
 					<?php
 						$lastmodified = get_the_modified_time( 'U' );
 						$posted       = get_the_time( 'U' );
-					if ( $lastmodified > $posted ) {
-						echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-					}
+            if ( $lastmodified > $posted ) {
+              echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+            }
 					?>
 				</p>
 

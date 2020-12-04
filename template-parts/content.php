@@ -66,37 +66,24 @@
 
 				<div class="entry">
 
-					<?php
-
-						the_excerpt();
-
-
-					?>
+					<?php the_excerpt(); ?>
 
 				</div>
 
-				<div class="continue-reading">
-					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-						<?php
-							esc_html( the_title( 'Continue Reading : ' ), 'raythompsonwebdev-com' );
-						?>
-					</a>
-				</div>
 
 				<!--Post entry footer-->
 				<footer class="byline">
 
-
 					<?php raythompsonwebdev_com_entry_footer(); ?>
 
 					<p>
-					<?php
-						$lastmodified = get_the_modified_time( 'U' );
-						$posted       = get_the_time( 'U' );
-					if ( $lastmodified > $posted ) {
-						echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-					}
-					?>
+            <?php
+              $lastmodified = get_the_modified_time( 'U' );
+              $posted       = get_the_time( 'U' );
+              if ( $lastmodified > $posted ) {
+                echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+              }
+            ?>
 					</p>
 
 				</footer>

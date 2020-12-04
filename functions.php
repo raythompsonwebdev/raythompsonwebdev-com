@@ -139,7 +139,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 
 		// Create new image sizes.
 		add_image_size( 'featured-image', 1200, 630 );
-
 		add_image_size( 'website-image', 400, 650 );
 
 		// Link pages.
@@ -446,6 +445,22 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
 
 endif;
+
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+  return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more', 21 );
+
+function the_excerpt_more_link( $excerpt ){
+  $post = get_post();
+  $excerpt .= '<div class="continue-reading"><a href="'. get_permalink($post->ID) . '">continue reading : '. get_the_title($post->ID) .'</a></div>';
+  return $excerpt;
+}
+add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
+
+
+
 
 
 /**
