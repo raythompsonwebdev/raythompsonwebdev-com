@@ -76,10 +76,10 @@ if ( have_posts() ) :
 				<?php else : ?>
 
 					<figure class="featuredImage">
-						
+
 					<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1-1.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-						
+
 					</figure>
 
 				<?php endif; ?>
@@ -93,17 +93,6 @@ if ( have_posts() ) :
 
 			</div>
 
-			<div class="continue-reading">
-				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-					<?php
-					printf(
-						/* Translators: %s = Name of the current post. */
-						wp_kses( __( 'Continue reading %s', 'raythompsonwebdev-com' ), array( 'span' => array( 'class' => array() ) ) ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					);
-					?>
-				</a>
-			</div>
 
 			<footer class="byline">
 
@@ -124,7 +113,7 @@ if ( have_posts() ) :
 <section class="contact-wide">
 
 	<h1><?php esc_html_e( 'Category Menu', 'raythompsonwebdev-com' ); ?></h1>
-  
+
 </section>
 <!--end of Comment box-->
 <div class="clearfix"></div>

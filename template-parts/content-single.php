@@ -67,6 +67,8 @@
 
 				<?php	the_content(); ?>
 
+
+
 			</div>
 
 			<!--Post entry footer-->

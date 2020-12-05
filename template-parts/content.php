@@ -68,6 +68,8 @@
 
 					<?php the_excerpt(); ?>
 
+
+
 				</div>
 
 
