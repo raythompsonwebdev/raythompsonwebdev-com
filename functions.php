@@ -12,7 +12,7 @@
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
-require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
+// require_once get_stylesheet_directory() . '/raythompsonwebdev-customv2/raythompsonwebdev-customv2.php';
 
 /**
  * Returns a custom login error message.
@@ -22,47 +22,10 @@ function cwpl_error_message() {
 }
 add_filter( 'login_errors', 'cwpl_error_message' );
 
-/**
- * Creates a nicely formatted and more specific title element text
- * for output in head of document, based on current view.
- *
- * @param string $title Default title text for current view.
- * @param string $sep   Optional separator.
- * @return string Filtered title.
- */
-function raythompsonwebdev_com_filter_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() ) {
-		return $title;
-	}
-
-	// Add the site name.
-	$title .= esc_html( get_bloginfo( 'name' ) );
-
-	// Add the site description for the home/front page.
-	$site_description = esc_html( get_bloginfo( 'description', 'display' ) );
-
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title = "$title $sep $site_description";
-	}
-
-	// Add a page number if necessary.
-	if ( $paged >= 2 || $page >= 2 ) {
-		/* translators: %s: search term */
-		$title = "$title $sep " . sprintf( esc_attr_e( 'Page %s', 'raythompsonwebdev-com' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-add_filter( 'wp_title', 'raythompsonwebdev_com_filter_wp_title', 10, 2 );
-
-/**
- * Text domain.
- */
-load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
 if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
+
+
 
 	/**
 	 *  Description theme set up.
@@ -71,8 +34,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 	 */
 	function raythompsonwebdev_com_theme_setup() {
 
+		// load text domain
+		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
+
+		// content width
 		$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
 
+		// register meta data for graph ql
 		register_meta(
 			'post',
 			'project_name',
@@ -113,9 +81,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		add_theme_support( 'align-wide' );
 
 		/**
-		*  Add editor styles to posts and pages
-		*/
-		add_editor_style( 'css/custom-editor-style.css' );
+		 * Add editor styles
+		 */
+		add_editor_style( array( 'inc/editor-style.css', 'css/custom-editor-style.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' ) );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -151,6 +119,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		// Create new image sizes.
 		add_image_size( 'featured-image', 1200, 630 );
 		add_image_size( 'website-image', 400, 650 );
+		add_image_size( 'search-image', 600, 250, true );
+		add_image_size( 'projectpage-image', 230, 480 );
 
 		// nav- menus.
 		$nav_defaults = array(
@@ -183,144 +153,23 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			)
 		);
 
-		/**
-		*  Remove stuff.
-	  */
-		// 1 removes the “generator” meta tag from the document header (we definitely don’t need to let the world know that we are using WordPress and actually we are rather ashamed about it).
-		remove_action( 'wp_head', 'wp_generator' );
-
-		// 2 removes the “wlwmanifest” link. wlwmanifest.xml is the resource file needed to enable support for Windows Live Writer. Nobody on Earth needs that. Note that this command simply removes the link, if you want to completely disable the functionality you need to deny access to the file /wp-includes/wlwmanifest.xml probably from your .htaccess (but that’s not strictly needed).
-		remove_action( 'wp_head', 'wlwmanifest_link' );
-
-		// 3 The RSD is an API to edit your blog from external services and clients. If you edit your blog exclusively from the WP admin console, you don’t need this.
-		remove_action( 'wp_head', 'rsd_link' );
-
-		// 4 “wp_shortlink_wp_head” adds a “shortlink” into your document head that will look like http://example.com/?p=ID. No need, thanks.
-		remove_action( 'wp_head', 'wp_shortlink_wp_head' );
-
-		// 5 Removes a link to the next and previous post from the document header. This could be theoretically beneficial, but to my experience it introduces more problems than it solves. Please note that this has nothing to deal with the “next/previous” post that you may want to add at the end of each post.
-		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
-
-		// remove version from rss.
-		// add_filter( 'the_generator', '__return_empty_string' );.
-
-		// 6 Removes the generator name from the RSS feeds.
-		add_filter( 'the_generator', '__return_false' );
-
-		// 7 Removes the administrator’s bar and also the associated CSS styles. Especially during the development phase I find it very annoying.
-		// add_filter('show_admin_bar','__return_false');
-
-		// 8 Removes WP 4.2 emoji styles and JS. Nasty stuff.
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-		// Allowed tags
-		// How many times your users used the del or abbr tag? Yeah, exactly, zero. Let’s remove some of the allowed tags in comments.
-		// We can just add to the setup function the following.
-		global $allowedtags;
-		unset( $allowedtags['cite'] );
-		unset( $allowedtags['q'] );
-		unset( $allowedtags['del'] );
-		unset( $allowedtags['abbr'] );
-		unset( $allowedtags['acronym'] );
+		// Set up the WordPress core custom background feature.
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'raythompsonwebdev_com_custom_background_args',
+				array(
+					'default-color' => 'F2f2f2',
+					'default-image' => '',
+				)
+			)
+		);
 
 	}
 
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
-/**
- * Disable the emoji's
- */
-function raythompsonwebdev_com_disable_emojis() {
-	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-	remove_action( 'admin_print_styles', 'print_emoji_styles' );
-	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-
-}
-add_action( 'init', 'raythompsonwebdev_com_disable_emojis' );
-
-/**
- * Filter function used to remove the tinymce emoji plugin.
- *
- * @param    array $plugins plugins array.
- * @return   array Difference betwen the two arrays.
- */
-function raythompsonwebdev_com_disable_emojis_tinymce( $plugins ) {
-	if ( is_array( $plugins ) ) {
-		return array_diff( $plugins, array( 'wpemoji' ) );
-	} else {
-		return array();
-	}
-}
-add_filter( 'tiny_mce_plugins', 'raythompsonwebdev_com_disable_emojis_tinymce' );
-
-/**
- * Remove Query Strings – Optional Step.
- *
- * @param array $src parameter.
- */
-function raythompsonwebdev_com_remove_script_version( $src ) {
-	$parts = explode( '?ver', $src );
-	return $parts[0];
-}
-add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_script_version', 15, 1 );
-
-/**
- * Remove WP embed script.
- */
-function speed_stop_loading_wp_embed() {
-	if ( ! is_admin() ) {
-		wp_deregister_script( 'wp-embed' );
-	}
-}
-add_action( 'init', 'speed_stop_loading_wp_embed' );
-
-/**
- * Remove comment-reply.min.js from footer.
- *  */
-function comments_clean_header_hook() {
-	wp_deregister_script( 'comment-reply' );
-}
-add_action( 'init', 'comments_clean_header_hook' );
-
-/**
- *  Remove comment cookies.
- */
-remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
-
-
-/**
- *  Remove version from scripts and styles.
- *
- *  @param array $src array of.
- *  @var array $src array of.
- */
-function shape_space_remove_version_scripts_styles( $src ) {
-	if ( strpos( $src, 'ver=' ) ) {
-		$src = remove_query_arg( 'ver', $src );
-	}
-	return $src;
-}
-add_filter( 'style_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
-add_filter( 'script_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
-
-
-/**
- * Enqueue Jquery.
- *
- * @return void
- */
-function my_jquery_enqueue() {
-	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js', array(), 1.0, true );
-	wp_enqueue_script( 'jquery' );
-}
-if ( ! is_admin() ) {
-	add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue', 11 );
-}
 
 /**
  * Enqueue style sheets.
@@ -466,32 +315,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 
 		<?php
 	}
-	add_action( 'wp_footer', 'raythompsonwebdev_com_google_script' );
+	add_action( 'wp_head', 'raythompsonwebdev_com_google_script' );
 
 endif;
-
-/**
- * Replaces the excerpt "Read More" text by a link.
- *
- * @param mixed $more variable added.
- * @return $more
- */
-function new_excerpt_more( $more ) {
-	return '';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
-/**
- * Replaces the excerpt more "Read More" text by a link.
- *
- * @param mixed $excerpt variable added.
- * @return $excerpt
- */
-function the_excerpt_more_link( $excerpt ) {
-	$post     = get_post();
-	$excerpt .= '<div class="continue-reading"><a href="' . get_permalink( $post->ID ) . '">continue reading : ' . get_the_title( $post->ID ) . '</a></div>';
-	return $excerpt;
-}
-add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
 
 
 /**
@@ -512,23 +338,6 @@ function raythompsonwebdev_com_widgets_init() {
 }
 add_action( 'widgets_init', 'raythompsonwebdev_com_widgets_init' );
 
-/**
- *  Video widget area.
- */
-function raythompsonwebdev_com_video_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'video-widget-area', 'raythompsonwebdev-com' ),
-			'id'            => 'video-widget-area',
-			'description'   => esc_html__( 'The video widget area', 'raythompsonwebdev-com' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'raythompsonwebdev_com_video_widgets_init' );
 
 /**
  *  Media widget area.

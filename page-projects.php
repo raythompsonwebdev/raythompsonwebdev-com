@@ -59,13 +59,13 @@ get_header();
 
 				<figure class="showcase-container " id="showcaseimg1">
 					<div class="showcase-img">
-						<?php the_post_thumbnail( 'websites' ); ?>
+						<?php the_post_thumbnail( 'projectpage-image' ); ?>
 					</div>
 					<figcaption class="showcase-content showcase">
 						<h1> <?php the_title(); ?></h1>
 
 							<a href="<?php the_permalink(); ?>">
-								<?php esc_html_e( 'See More..', 'raythompsonwebdev-com' ); ?>
+								<?php esc_html_e( 'See Project..', 'raythompsonwebdev-com' ); ?>
 							</a>
 
 					</figcaption>

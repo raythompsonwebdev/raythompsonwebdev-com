@@ -41,7 +41,7 @@ $classess = array(
 
 					<?php else : ?>
 
-						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+						<a class="no-post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 
 								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/nothing.jpg"
 									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
@@ -55,7 +55,7 @@ $classess = array(
 	<div class="entry">
 		<?php
 
-		if ( 'gallery' === get_post_type() ) :
+		if ( 'project' === get_post_type() || 'post' === get_post_type() ) :
 
 			the_excerpt();
 
@@ -80,25 +80,6 @@ $classess = array(
 			?>
 
 
-	</div>
-
-	<div class="continue-reading">
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-			<?php
-				sprintf(
-					wp_kses(
-						/* Translators: %s = Name of the current post. */
-						__( 'Continue reading %s', 'raythompsonwebdev-com' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				);
-				?>
-		</a>
 	</div>
 
 </article>

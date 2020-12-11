@@ -38,6 +38,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 
 		// Display the author avatar if the author has a Gravatar.
 		$author_id = get_the_author_meta( 'ID' );
+
 		if ( raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
 			echo '<div class="meta-content has-avatar">';
 			echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
@@ -45,7 +46,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			echo '<div class="meta-content">';
 		}
 
-		echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+		echo '<span class="byline"> ' .  $byline . '</span><span class="posted-on">' . $posted_on . '</span>' ;
 
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
@@ -97,7 +98,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 		}
 
 		echo '<div class="meta-content">';
-		echo '<span class="byline">' . $byline . ' </span><span class="posted-on">' . $posted_on . ' </span>'; // WPCS: XSS OK.
+		echo  '<span class="byline">' . $byline . ' </span><span class="posted-on">' . $posted_on . ' </span>' ;
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-com' ) );
@@ -118,14 +119,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'raythompsonwebdev-com' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'raythompsonwebdev-com' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'raythompsonwebdev-com' ) . '</span>', $categories_list );
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'raythompsonwebdev-com' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'raythompsonwebdev-com' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'raythompsonwebdev-com' ) . '</span>', $tags_list );
 			}
 		}
 
@@ -186,15 +187,19 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 
 					<?php the_post_thumbnail( 'featured-image' ); ?>
 
-		</figure><!-- .post-thumbnail -->
+	</figure><!-- .post-thumbnail -->
+
+	<?php	elseif ( is_search() ) : ?>
+
+	<a class="search-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
+			<?php the_post_thumbnail( 'search-image' ); ?>
+	</a>
 
 
 	<?php	else : ?>
 
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
-
 			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
-
 		</a>
 
 		<?php
@@ -210,7 +215,8 @@ endif;
  * @return bool
  */
 function raythompsonwebdev_com_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'raythompsonwebdev_com_categories' ) ) ) {
+	$all_the_cool_cats = get_transient( 'raythompsonwebdev_com_categories' );
+	if ( false === ( $all_the_cool_cats ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories(
 			array(
@@ -240,7 +246,7 @@ function raythompsonwebdev_com_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
-	// Like, beat it. Dig?
+	// ?
 	delete_transient( 'raythompsonwebdev_com_categories' );
 }
 add_action( 'edit_category', 'raythompsonwebdev_com_category_transient_flusher' );
@@ -265,9 +271,15 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 	} elseif ( is_object( $id_or_email ) ) {
 		// No avatar for pingbacks or trackbacks.
 		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
-		if ( ! empty( $id_or_email->comment_type ) && ! in_array( $id_or_email->comment_type, (array) $allowed_comment_types ) ) {
+
+		if ( ! empty( $id_or_email->comment_type ) && ! in_array(
+			$id_or_email->comment_type,
+			(array) $allowed_comment_types,
+			true
+		) ) {
 			return false;
 		}
+
 		if ( ! empty( $id_or_email->user_id ) ) {
 			$id   = (int) $id_or_email->user_id;
 			$user = get_userdata( $id );
@@ -298,5 +310,29 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 		return false;
 	}
 }
+
+/**
+ * Replaces the excerpt "Read More" text by a link.
+ *
+ * @param mixed $more variable added.
+ * @return $more
+ */
+function new_excerpt_more( $more ) {
+	return '';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
+
+/**
+ * Replaces the excerpt more "Read More" text by a link.
+ *
+ * @param mixed $excerpt variable added.
+ * @return $excerpt
+ */
+function the_excerpt_more_link( $excerpt ) {
+	$post     = get_post();
+	$excerpt .= '<div class="continue-reading"><a href="' . get_permalink( $post->ID ) . '">continue reading : ' . get_the_title( $post->ID ) . '</a></div>';
+	return $excerpt;
+}
+add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
 
 

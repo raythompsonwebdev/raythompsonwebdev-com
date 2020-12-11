@@ -49,6 +49,7 @@
 			<header class="group" role="banner">
 
 				<?php // Display site icon or first letter as logo. ?>
+
 				<div class="site-logo">
 
 					<?php $site_title = get_bloginfo( 'name' ); ?>
@@ -106,18 +107,18 @@
 
 				<?php
 					// Checking if there's anything in Top Menu.
-				if ( has_nav_menu( 'main' ) ) {
-					// If there is, adds the Top Menu area.
-					wp_nav_menu(
-						array(
-							'menu'         => 'Main',
-							'container'    => 'nav',
-							'container_id' => 'main-menu',
-							'menu_class'   => 'nav-menu',
+          if ( has_nav_menu( 'main' ) ) {
+            // If there is, adds the Top Menu area.
+            wp_nav_menu(
+              array(
+                'menu'         => 'Main',
+                'container'    => 'nav',
+                'container_id' => 'main-menu',
+                'menu_class'   => 'nav-menu',
 
-						)
-					);
-				}
+              )
+            );
+          }
 				?>
 
 

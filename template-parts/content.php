@@ -31,7 +31,8 @@
 			<!--Post entry Header-->
 			<header class="byline">
 				<div class="entry-meta">
-					<?php if ( 'post' === get_post_type() ) : ?>
+          <?php if ( 'post' === get_post_type() ) : ?>
+
 
 							<?php
 								raythompsonwebdev_com_posted_on();
