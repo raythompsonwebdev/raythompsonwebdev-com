@@ -64,7 +64,7 @@ get_header();
 					<figcaption class="showcase-content showcase">
 						<h1> <?php the_title(); ?></h1>
 
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php echo esc_url( get_permalink() ); ?>">
 								<?php esc_html_e( 'See Project..', 'raythompsonwebdev-com' ); ?>
 							</a>
 

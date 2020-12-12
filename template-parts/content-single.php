@@ -33,9 +33,8 @@
 				<div class="entry-meta">
 					<?php if ( 'post' === get_post_type() ) : ?>
 
-							<?php
-								raythompsonwebdev_com_posted_by();
-							?>
+							<?php raythompsonwebdev_com_posted_by(); ?>
+              <?php raythompsonwebdev_com_posted_on(); ?>
 
 					<?php endif; ?>
 				</div>
@@ -51,8 +50,7 @@
 
 						<figure class="featuredImage">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/nothing.jpg"
-									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+								<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 
 						</figure>
 
@@ -98,13 +96,9 @@
 			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
 			<div class="nav-links">
 
-			<div class="nav-previous">
-				<?php previous_post_link( '%link' ); ?>
-			</div>
+        <div class="nav-previous"><?php previous_post_link( '%link' ); ?></div>
 
-			<div class="nav-next">
-				<?php next_post_link( '%link' ); ?>
-			</div>
+        <div class="nav-next"><?php next_post_link( '%link' ); ?></div>
 
 			</div>
 

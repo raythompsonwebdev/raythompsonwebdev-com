@@ -48,7 +48,7 @@ if ( have_posts() ) :
 		<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
 			<h1>
-				<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
+				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 					<?php the_title(); ?>
 				</a>
 			</h1>
@@ -57,17 +57,16 @@ if ( have_posts() ) :
 			<header class="byline">
 				<div class="entry-meta">
 					<?php if ( 'post' === get_post_type() ) : ?>
-					<div class="meta-content">
 
+            <?php	raythompsonwebdev_com_posted_by(); ?>
 						<?php raythompsonwebdev_com_posted_on(); ?>
 
-					</div>
 					<?php endif; ?>
 				</div>
 			</header>
 
 			<!--featured Image-->
-			<a href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+			<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
 
 				<?php if ( has_post_thumbnail() ) : ?>
 
@@ -77,8 +76,7 @@ if ( have_posts() ) :
 
 					<figure class="featuredImage">
 
-					<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/03/placeholder-1-1.jpg"
-									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+					<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 
 					</figure>
 

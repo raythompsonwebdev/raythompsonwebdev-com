@@ -11,8 +11,6 @@ jQuery(document).ready(function($) {
     //disable click event
     return false;
   });
-
-
 });
 
 

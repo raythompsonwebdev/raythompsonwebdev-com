@@ -31,7 +31,7 @@ while ( have_posts() ) :
 <article class="post group <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
 
 	<h1>
-		<a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 	</h1>
 
 	<!--Post entry Header-->

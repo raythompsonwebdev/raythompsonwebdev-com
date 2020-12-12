@@ -29,7 +29,7 @@ get_header(); ?>
 
 		<p><?php esc_html_e( ' Whether its website interface or a full web application I can create elegant and maintainable solutions. To see some of my past work click button on the right', 'raythompsonwebdev-com' ); ?></p>
 
-		<a id="projectLink" href="<?php echo esc_url( home_url( '/' ) ); ?>projects"><?php esc_html_e( 'See Current Projects', 'raythompsonwebdev-com' ); ?></a>
+		<a id="projectLink" href="<?php echo esc_url( home_url( '/' ) . 'projects' ); ?>"><?php esc_html_e( 'See Current Projects', 'raythompsonwebdev-com' ); ?></a>
 
 		<figure id="image-7"></figure>
 

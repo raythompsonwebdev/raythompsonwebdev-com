@@ -55,7 +55,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 			</span>
 		</a>
 
-		<a class="social-icon" href="<?php echo esc_url( 'http://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
+		<a class="social-icon" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
 			<span>
 				<i class="fab fa-github"></i>
 			</span>
@@ -74,7 +74,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 	sprintf(
 
-		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="http://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
+		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="https://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
 	?>
 <br/>
 
@@ -96,14 +96,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {
-      families: ['Cabin', 'PT Sans']
-    }
-  });
-</script> -->
+
 
 </body>
 

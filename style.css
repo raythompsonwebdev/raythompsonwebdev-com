@@ -652,12 +652,11 @@ desktop 1920px*/
         width: 100%;
         font-family: "PT Sans", verdana, helvetica, sans-serif; }
         #main-content section.main-text ul li {
-          font-family: "FontAwesome", "PT Sans", verdana, helvetica, sans-serif;
+          font-family: "PT Sans", verdana, helvetica, sans-serif;
           line-height: 40px;
           color: #0d0d0d; }
           #main-content section.main-text ul li::before {
-            font-family: "FontAwesome";
-            content: "\f15b";
+            content: "*";
             font-style: normal;
             display: inline-block;
             line-height: 40px;
@@ -1230,18 +1229,14 @@ desktop 1920px*/
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box; }
-        #main-content .post header.byline .entry-meta,
-        #main-content .post header.byline .index-entry-meta {
+        #main-content .post header.byline .entry-meta {
           height: auto;
           width: 100%;
           display: block;
-          margin: 0 auto; }
+          margin: 0; }
           #main-content .post header.byline .entry-meta .parent-post-link,
           #main-content .post header.byline .entry-meta .full-size-link,
-          #main-content .post header.byline .entry-meta .edit-link,
-          #main-content .post header.byline .index-entry-meta .parent-post-link,
-          #main-content .post header.byline .index-entry-meta .full-size-link,
-          #main-content .post header.byline .index-entry-meta .edit-link {
+          #main-content .post header.byline .entry-meta .edit-link {
             width: auto;
             height: auto;
             line-height: 30px;
@@ -1254,61 +1249,35 @@ desktop 1920px*/
             margin-bottom: 0.2em;
             display: inline-block;
             padding: 0 0.25em; }
-          #main-content .post header.byline .entry-meta .has-avatar,
-          #main-content .post header.byline .index-entry-meta .has-avatar {
-            display: inline-block;
-            text-align: left;
-            width: 20%; }
-          #main-content .post header.byline .entry-meta .meta-content,
-          #main-content .post header.byline .index-entry-meta .meta-content {
-            height: auto;
-            width: 100%; }
-            #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-            #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-              width: 4.5em;
+          #main-content .post header.byline .entry-meta .has-avatar {
+            width: 100%;
+            background-color: #000; }
+            #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+              width: 20%;
               display: block;
-              float: none;
               margin: 1em auto;
               border: 1px solid #0d0d0d; }
-            #main-content .post header.byline .entry-meta .meta-content .byline,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link,
-            #main-content .post header.byline .entry-meta .meta-content .date,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-            #main-content .post header.byline .index-entry-meta .meta-content .date,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
+          #main-content .post header.byline .entry-meta .meta-content {
+            height: auto;
+            width: 100%; }
+            #main-content .post header.byline .entry-meta .meta-content span.byline,
+            #main-content .post header.byline .entry-meta .meta-content span.comments-link,
+            #main-content .post header.byline .entry-meta .meta-content span.posted-on {
               width: 100%;
+              background-color: #0d0d0d;
+              letter-spacing: 0.055em;
+              color: #F2f2f2;
               display: block;
               height: auto;
               line-height: 30px;
               text-align: center;
-              font-family: "FontAwesome", "PT Sans", verdana, helvetica, sans-serif;
-              font-size: 0.9em;
-              letter-spacing: 0.055em;
-              color: #F2f2f2;
-              background-color: #0d0d0d;
-              margin-bottom: 0.2em; }
-              #main-content .post header.byline .entry-meta .meta-content .byline a,
-              #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-              #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-              #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-              #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-              #main-content .post header.byline .entry-meta .meta-content .date a,
-              #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-              #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-              #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-              #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-              #main-content .post header.byline .index-entry-meta .meta-content .date a,
-              #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
+              margin-bottom: 0.2em;
+              font-size: 1em;
+              text-align: center;
+              font-family: "FontAwesome", "PT Sans", verdana, helvetica, sans-serif; }
+              #main-content .post header.byline .entry-meta .meta-content span.byline a,
+              #main-content .post header.byline .entry-meta .meta-content span.comments-link a,
+              #main-content .post header.byline .entry-meta .meta-content span.posted-on a {
                 color: #F2f2f2;
                 margin: 0 auto;
                 width: auto;
@@ -1324,29 +1293,12 @@ desktop 1920px*/
                 -o-transition: all 0.2s ease-in 0s;
                 -ms-transition: all 0.2s ease-in 0s;
                 transition: all 0.2s ease-in 0s; }
-                #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-                #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-                #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-                #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-                #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-                #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-                #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-                #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
+                #main-content .post header.byline .entry-meta .meta-content span.byline a:hover,
+                #main-content .post header.byline .entry-meta .meta-content span.comments-link a:hover,
+                #main-content .post header.byline .entry-meta .meta-content span.posted-on a:hover {
                   margin: 0 auto;
                   width: auto;
                   display: inline-block; }
-            #main-content .post header.byline .entry-meta .meta-content span.byline,
-            #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-            #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-            #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-              width: 100%;
-              background-color: #0d0d0d; }
       #main-content .post div.continue-reading {
         font-size: 0.9em;
         padding: 0;
@@ -1637,7 +1589,7 @@ desktop 1920px*/
             #main-content nav.navigation .nav-links div.nav-previous a:after,
             #main-content nav.navigation .nav-links div.nav-next a:after {
               font-family: "Font Awesome 5 Free";
-              content: "\f187";
+              content: ">>";
               font-size: 1.6em;
               line-height: 40px;
               float: right;
@@ -1650,7 +1602,7 @@ desktop 1920px*/
       width: 100%;
       height: auto;
       background-color: #F2f2f2;
-      /*Comment Form*/ }
+      /*Comment title */ }
       #main-content section.contact-wide h1 {
         width: 100%;
         height: 60px;
@@ -1684,7 +1636,7 @@ desktop 1920px*/
             #main-content section.contact-wide .navigation div.nav-previous a:hover,
             #main-content section.contact-wide .navigation div.nav-next a:hover {
               color: #0d0d0d; }
-      #main-content section.contact-wide h3#comments {
+      #main-content section.contact-wide h3.comments-title {
         height: 35px;
         min-height: 35px;
         line-height: 35px;
@@ -1822,6 +1774,7 @@ desktop 1920px*/
           width: 82%;
           height: auto;
           margin: 2% auto;
+          padding: 1em;
           font-family: "PT Sans", verdana, helvetica, sans-serif;
           padding: 0; }
           #main-content section.contact-wide #respond .comment-form p.comment-notes {
@@ -3158,64 +3111,15 @@ desktop 1440px*/
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta .has-avatar,
-        #main-content .post header.byline .index-entry-meta .has-avatar {
-          width: 20%; }
-        #main-content .post header.byline .entry-meta .meta-content,
-        #main-content .post header.byline .index-entry-meta .meta-content {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-          #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-            width: 4.5em; }
-          #main-content .post header.byline .entry-meta .meta-content .byline,
-          #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .entry-meta .meta-content .date,
-          #main-content .post header.byline .entry-meta .meta-content .posted-on,
-          #main-content .post header.byline .index-entry-meta .meta-content .byline,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content .date,
-          #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-            font-size: 0.9em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .entry-meta .meta-content .date a,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-              margin: 0 auto; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-              font-weight: bold; }
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+            width: 20%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-          #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
             width: 100%; }
       #main-content .post div.continue-reading a {
         display: block; }
@@ -3323,7 +3227,7 @@ desktop 1440px*/
             #main-content section.contact-wide .navigation div.nav-previous a:hover,
             #main-content section.contact-wide .navigation div.nav-next a:hover {
               color: #0d0d0d; }
-      #main-content section.contact-wide h3#comments {
+      #main-content section.contact-wide h3.comments-title {
         width: 96%;
         font-size: 1em; }
       #main-content section.contact-wide ol.commentlist {
@@ -3372,8 +3276,7 @@ desktop 1440px*/
           #main-content section.contact-wide #respond h3#reply-title small a:hover {
             font-size: 1em; }
       #main-content section.contact-wide #respond .comment-form {
-        width: 82%;
-        padding: 1.8% 0; }
+        width: 82%; }
         #main-content section.contact-wide #respond .comment-form p.comment-notes {
           font-size: 0.9em;
           width: 95%; }
@@ -3885,50 +3788,16 @@ desktop 1280px*/
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta .has-avatar,
-        #main-content .post header.byline .index-entry-meta .has-avatar {
-          width: 20%; }
-        #main-content .post header.byline .entry-meta .meta-content,
-        #main-content .post header.byline .index-entry-meta .meta-content {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-          #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-            width: 4.5em; }
-          #main-content .post header.byline .entry-meta .meta-content .byline,
-          #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .entry-meta .meta-content .date,
-          #main-content .post header.byline .entry-meta .meta-content .posted-on,
-          #main-content .post header.byline .index-entry-meta .meta-content .byline,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content .date,
-          #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-            font-size: 0.85em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .entry-meta .meta-content .date a,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-              margin: 0 auto; }
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+            width: 20%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-          #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-            width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.9em; }
       #main-content .post div.continue-reading {
         font-size: 0.8em; }
         #main-content .post div.continue-reading a {
@@ -4043,7 +3912,7 @@ desktop 1280px*/
             #main-content section.contact-wide .navigation div.nav-previous a:hover,
             #main-content section.contact-wide .navigation div.nav-next a:hover {
               color: #0d0d0d; }
-      #main-content section.contact-wide h3#comments {
+      #main-content section.contact-wide h3.comments-title {
         width: 96%;
         font-size: 1em; }
       #main-content section.contact-wide ol.commentlist {
@@ -4643,65 +4512,16 @@ desktop 1024px*/
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta .has-avatar,
-        #main-content .post header.byline .index-entry-meta .has-avatar {
-          width: 20%; }
-        #main-content .post header.byline .entry-meta .meta-content,
-        #main-content .post header.byline .index-entry-meta .meta-content {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-          #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-            width: 4.5em; }
-          #main-content .post header.byline .entry-meta .meta-content .byline,
-          #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .entry-meta .meta-content .date,
-          #main-content .post header.byline .entry-meta .meta-content .posted-on,
-          #main-content .post header.byline .index-entry-meta .meta-content .byline,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content .date,
-          #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-            font-size: 0.8em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .entry-meta .meta-content .date a,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-              margin: 0 auto; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a:hover,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a:hover {
-              font-weight: bold; }
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+            width: 20%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-          #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-            width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.9em; }
       #main-content .post div.continue-reading {
         width: 90%; }
         #main-content .post div.continue-reading a {
@@ -5188,8 +5008,6 @@ tablet 800px */
             display: inline-block; }
             #main-content section.main-text ul li a:hover {
               font-weight: bold; }
-      #main-content section.main-text hr {
-        height: 1px; }
     #main-content #map_container {
       width: 90%;
       min-height: 198px;
@@ -5382,50 +5200,16 @@ tablet 800px */
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta .has-avatar,
-        #main-content .post header.byline .index-entry-meta .has-avatar {
-          width: 20%; }
-        #main-content .post header.byline .entry-meta .meta-content,
-        #main-content .post header.byline .index-entry-meta .meta-content {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-          #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-            width: 4.5em; }
-          #main-content .post header.byline .entry-meta .meta-content .byline,
-          #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .entry-meta .meta-content .date,
-          #main-content .post header.byline .entry-meta .meta-content .posted-on,
-          #main-content .post header.byline .index-entry-meta .meta-content .byline,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content .date,
-          #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-            font-size: 0.75em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline a,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .entry-meta .meta-content .date a,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on a,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat a,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag a,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link a,
-            #main-content .post header.byline .index-entry-meta .meta-content .date a,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on a {
-              margin: 0 auto; }
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+            width: 20%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-          #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-            width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.85em; }
       #main-content .post div.continue-reading {
         width: 100%; }
         #main-content .post div.continue-reading a {
@@ -5530,7 +5314,7 @@ tablet 800px */
           width: 5%; }
     #main-content section.contact-wide h1 {
       font-size: 1.15em; }
-    #main-content section.contact-wide h3 {
+    #main-content section.contact-wide h3.comments-title {
       width: 94%;
       font-size: 1em;
       margin: 1% auto; }
@@ -5570,10 +5354,10 @@ tablet 800px */
       font-size: 0.8em; }
     #main-content section.contact-wide #respond .comment-form p {
       font-size: 0.85em; }
-    #main-content section.contact-wide #respond .comment-form input[type="submit"] {
-      width: 25%; }
     #main-content section.contact-wide #respond .comment-form p.comment-notes {
       font-size: 0.85em; }
+    #main-content section.contact-wide #respond .comment-form input[type="submit"] {
+      width: 25%; }
     #main-content #frontpage_container {
       background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.webp"); }
       #main-content #frontpage_container div#text-box-front {
@@ -6010,8 +5794,8 @@ tablet 600px */
               width: 25%; }
               #main-content #contactform div.wpcf7 form p input[type="submit"]:hover {
                 color: #F2f2f2; }
-    #main-content section.main-text hr {
-      height: 1px; }
+    #main-content section.main-text {
+      padding: 0.25em; }
     #main-content aside#side-bar {
       height: auto;
       width: 100%; }
@@ -6128,35 +5912,16 @@ tablet 600px */
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta .has-avatar,
-        #main-content .post header.byline .index-entry-meta .has-avatar {
-          width: 20%; }
-        #main-content .post header.byline .entry-meta .meta-content,
-        #main-content .post header.byline .index-entry-meta .meta-content {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-          #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-            width: 4.5em; }
-          #main-content .post header.byline .entry-meta .meta-content .byline,
-          #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .entry-meta .meta-content .date,
-          #main-content .post header.byline .entry-meta .meta-content .posted-on,
-          #main-content .post header.byline .index-entry-meta .meta-content .byline,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content .date,
-          #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-            font-size: 0.8em; }
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+            width: 20%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-          #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-            width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.85em; }
       #main-content .post div.continue-reading {
         width: 100%; }
         #main-content .post div.continue-reading a {
@@ -6619,8 +6384,6 @@ mobile 480px */
           display: inline-block; }
           #main-content section.main-text ul li a:hover {
             font-weight: bold; }
-    #main-content section.main-text hr {
-      height: 1px; }
     #main-content #map_container {
       float: none;
       width: 85%; }
@@ -6770,35 +6533,16 @@ mobile 480px */
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta .has-avatar,
-        #main-content .post header.byline .index-entry-meta .has-avatar {
-          width: 20%; }
-        #main-content .post header.byline .entry-meta .meta-content,
-        #main-content .post header.byline .index-entry-meta .meta-content {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-          #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-            width: 4.5em; }
-          #main-content .post header.byline .entry-meta .meta-content .byline,
-          #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .entry-meta .meta-content .date,
-          #main-content .post header.byline .entry-meta .meta-content .posted-on,
-          #main-content .post header.byline .index-entry-meta .meta-content .byline,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-          #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-          #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content .date,
-          #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-            font-size: 0.75em; }
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
+            width: 20%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
           #main-content .post header.byline .entry-meta .meta-content span.byline,
           #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-          #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-          #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-            width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.8em; }
       #main-content .post div.continue-reading {
         font-size: 0.8em;
         width: 100%; }
@@ -6908,9 +6652,7 @@ mobile 480px */
       margin: auto; }
       #main-content section.contact-wide h1 {
         font-size: 1.1em; }
-      #main-content section.contact-wide h2 {
-        text-align: center; }
-      #main-content section.contact-wide h3#comments {
+      #main-content section.contact-wide h3.comments-title {
         font-size: 0.8em; }
       #main-content section.contact-wide ol.commentlist {
         padding-left: 0; }
@@ -7287,8 +7029,6 @@ mobile 360px */
           display: inline-block; }
           #main-content section.main-text ul li a:hover {
             font-weight: bold; }
-    #main-content section.main-text hr {
-      height: 1px; }
     #main-content #map_container {
       min-height: 165px; }
     #main-content #contactform {
@@ -7434,38 +7174,16 @@ mobile 360px */
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta,
-        #main-content .post header.byline .index-entry-meta {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .has-avatar,
-          #main-content .post header.byline .index-entry-meta .has-avatar {
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
             width: 20%; }
-          #main-content .post header.byline .entry-meta .meta-content,
-          #main-content .post header.byline .index-entry-meta .meta-content {
-            width: 100%; }
-            #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-            #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-              width: 4.5em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link,
-            #main-content .post header.byline .entry-meta .meta-content .date,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-            #main-content .post header.byline .index-entry-meta .meta-content .date,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-              font-size: 0.75em; }
-            #main-content .post header.byline .entry-meta .meta-content span.byline,
-            #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-            #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-            #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-              width: 100%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.byline,
+          #main-content .post header.byline .entry-meta .meta-content span.comments-link,
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.75em; }
       #main-content .post div.continue-reading a {
         display: block; }
         #main-content .post div.continue-reading a span.screen-reader-text:hover {
@@ -7567,7 +7285,7 @@ mobile 360px */
       width: 99%; }
       #main-content section.contact-wide h1 {
         font-size: 1em; }
-      #main-content section.contact-wide h3#comments {
+      #main-content section.contact-wide h3.comments-title {
         font-size: 0.75em; }
       #main-content section.contact-wide ol.commentlist {
         padding-left: 0; }
@@ -7936,8 +7654,6 @@ mobile 320px */
           display: inline-block; }
           #main-content section.main-text ul li a:hover {
             font-weight: bold; }
-    #main-content section.main-text hr {
-      height: 1px; }
     #main-content #map_container {
       width: 85%;
       min-height: 148px; }
@@ -8089,38 +7805,16 @@ mobile 320px */
         font-size: 0.8em; }
       #main-content .post header.byline {
         padding: 0.25em; }
-        #main-content .post header.byline .entry-meta,
-        #main-content .post header.byline .index-entry-meta {
+        #main-content .post header.byline .entry-meta .has-avatar {
           width: 100%; }
-          #main-content .post header.byline .entry-meta .has-avatar,
-          #main-content .post header.byline .index-entry-meta .has-avatar {
+          #main-content .post header.byline .entry-meta .has-avatar .author-avatar {
             width: 20%; }
-          #main-content .post header.byline .entry-meta .meta-content,
-          #main-content .post header.byline .index-entry-meta .meta-content {
-            width: 100%; }
-            #main-content .post header.byline .entry-meta .meta-content .author-avatar,
-            #main-content .post header.byline .index-entry-meta .meta-content .author-avatar {
-              width: 4.5em; }
-            #main-content .post header.byline .entry-meta .meta-content .byline,
-            #main-content .post header.byline .entry-meta .meta-content .bylineauthor,
-            #main-content .post header.byline .entry-meta .meta-content .bylinecat,
-            #main-content .post header.byline .entry-meta .meta-content .bylinetag,
-            #main-content .post header.byline .entry-meta .meta-content .comments-link,
-            #main-content .post header.byline .entry-meta .meta-content .date,
-            #main-content .post header.byline .entry-meta .meta-content .posted-on,
-            #main-content .post header.byline .index-entry-meta .meta-content .byline,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylineauthor,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinecat,
-            #main-content .post header.byline .index-entry-meta .meta-content .bylinetag,
-            #main-content .post header.byline .index-entry-meta .meta-content .comments-link,
-            #main-content .post header.byline .index-entry-meta .meta-content .date,
-            #main-content .post header.byline .index-entry-meta .meta-content .posted-on {
-              font-size: 0.7em; }
-            #main-content .post header.byline .entry-meta .meta-content span.byline,
-            #main-content .post header.byline .entry-meta .meta-content span.comments-link,
-            #main-content .post header.byline .index-entry-meta .meta-content span.byline,
-            #main-content .post header.byline .index-entry-meta .meta-content span.comments-link {
-              width: 100%; }
+        #main-content .post header.byline .entry-meta .meta-content {
+          width: 100%; }
+          #main-content .post header.byline .entry-meta .meta-content span.byline,
+          #main-content .post header.byline .entry-meta .meta-content span.comments-link,
+          #main-content .post header.byline .entry-meta .meta-content span.posted-on {
+            font-size: 0.7em; }
       #main-content .post div.continue-reading {
         font-size: 0.75em; }
         #main-content .post div.continue-reading a {
@@ -8230,7 +7924,7 @@ mobile 320px */
       width: 99%; }
       #main-content section.contact-wide h1 {
         font-size: 0.9em; }
-      #main-content section.contact-wide h3#comments {
+      #main-content section.contact-wide h3.comments-title {
         font-size: 0.7em; }
       #main-content section.contact-wide ol.commentlist {
         padding-left: 0; }

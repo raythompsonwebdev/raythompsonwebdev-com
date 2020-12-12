@@ -33,10 +33,10 @@
 				<div class="entry-meta">
           <?php if ( 'post' === get_post_type() ) : ?>
 
+            <?php //echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?>
 
-							<?php
-								raythompsonwebdev_com_posted_on();
-							?>
+              <?php	raythompsonwebdev_com_posted_by(); ?>
+							<?php	raythompsonwebdev_com_posted_on(); ?>
 
 
 					<?php endif; ?>
@@ -52,10 +52,9 @@
 
 					<?php else : ?>
 
-						<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+						<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/nothing.jpg"
-									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+								<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 
 					</a>
 

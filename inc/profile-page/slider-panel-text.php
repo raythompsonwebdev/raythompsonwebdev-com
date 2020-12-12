@@ -67,6 +67,9 @@ $slider_panel_text = '[
     "subheader": "Topics",
     "task1": "Introduction to Python",
     "task2": "Python Data Structures",
+    "task3": " ",
+    "task4": " ",
+    "task5": " ",
     "buttonname": "PY4E",
     "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.png"
   }, {
@@ -78,6 +81,7 @@ $slider_panel_text = '[
     "task2": "Learn HTML",
     "task3": "Learn Javascript",
     "task4": "Learn PHP",
+    "task5": " ",
     "buttonname": "Code Academy",
     "bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/codecademy-profiles-raythompsonwebdev-certificates.png"
   }, {

@@ -26,6 +26,7 @@ $classess = array(
 		<div class="entry-meta">
 
 			<?php raythompsonwebdev_com_posted_by(); ?>
+      <?php	raythompsonwebdev_com_posted_on(); ?>
 
 		</div>
 		<?php endif; ?>
@@ -41,10 +42,9 @@ $classess = array(
 
 					<?php else : ?>
 
-						<a class="no-post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+						<a class="no-post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
 
-								<img src="<?php echo esc_url( home_url( '/' ) ); ?>wp-content/uploads/2020/10/nothing.jpg"
-									alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+								<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
 
 					</a>
 

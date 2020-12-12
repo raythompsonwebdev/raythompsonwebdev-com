@@ -39,22 +39,24 @@ if ( have_comments() ) :
 	?>
 
 	<!--Comment List Header-->
-	<h3 id="comments">
-	<?php
-	printf(
-		esc_html(
-		  /* translators: %1$d: number of comments, %2$s: current page title */
-			_nx(
-				'One comment on "%2$s"',
-				'%1$d comments on "%2$s"',
-				get_comments_number(),
-				'comments title'
-			),
-			number_format_i18n( get_comments_number() ),
-			get_the_title()
-		)
-	);
-	?>
+	<h3 class="comments-title">
+  <?php
+			$raythompsonwebdev_com_comment_count = get_comments_number();
+			if ( '1' === $raythompsonwebdev_com_comment_count ) {
+				printf(
+					/* translators: 1: title. */
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'raythompsonwebdev-com' ),
+					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+				);
+			} else {
+				printf(
+					/* translators: 1: comment count number, 2: title. */
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $raythompsonwebdev_com_comment_count, 'comments title', 'raythompsonwebdev-com' ) ),
+					number_format_i18n( $raythompsonwebdev_com_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
+				);
+			}
+			?>
 	</h3>
 
 	<!--Comment List-->
@@ -64,7 +66,8 @@ if ( have_comments() ) :
 				array(
 					// See http://codex.wordpress.org/Function_Reference/wp_list_comments.
 					'short_ping'  => true,
-					'avatar_size' => 74,
+          'avatar_size' => 74,
+          'style'      => 'ol',
 
 				)
 			);
@@ -77,7 +80,7 @@ if ( have_comments() ) :
 	<!--Comment Navigation-->
 
 	<nav class="navigation">
-	<h3 class="section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h3>
+	  <h3 class="section-heading"><?php esc_html_e( 'Comment navigation', 'raythompsonwebdev-com' ); ?></h3>
 		<div class="nav-links">
 			<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'raythompsonwebdev-com' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'raythompsonwebdev-com' ) ); ?></div>

@@ -490,12 +490,11 @@ desktop 1920px*/
         font-family: $FontStyle;
 
         li {
-          font-family: "FontAwesome", $FontStyle;
+          font-family: $FontStyle;
           line-height: 40px;
           color: $blackcolor;
           &::before {
-            font-family: "FontAwesome";
-            content: "\f15b";
+            content: "*";
             font-style: normal;
             display: inline-block;
             line-height: 40px;
@@ -1189,14 +1188,11 @@ desktop 1920px*/
         text-align: left;
         padding: 0.25em;
         @include box-sizing($type: border-box);
-
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
           height: auto;
           width: 100%;
           display: block;
-          margin: 0 auto;
-
+          margin: 0;
           .parent-post-link,
           .full-size-link,
           .edit-link {
@@ -1215,42 +1211,35 @@ desktop 1920px*/
           }
 
           .has-avatar {
-            display: inline-block;
-            text-align: left;
-            width: 20%;
+            width: 100%;
+            background-color:#000;
+            .author-avatar {
+              width: 20%;
+              display: block;
+              margin: 1em auto;
+              border: 1px solid $blackcolor;
+            }
           }
 
           .meta-content {
             height: auto;
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-              display: block;
-              float: none;
-              margin: 1em auto;
-              border: 1px solid $blackcolor;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
+            span.byline,
+            span.comments-link,
+            span.posted-on {
               width: 100%;
+              background-color: $blackcolor;
+              letter-spacing: 0.055em;
+              color: $colorwhite;
               display: block;
               height: auto;
               line-height: 30px;
               text-align: center;
-              font-family: "FontAwesome", $FontStyle;
-              font-size: 0.9em;
-              letter-spacing: 0.055em;
-              color: $colorwhite;
-              background-color: $blackcolor;
               margin-bottom: 0.2em;
-
+              font-size: 1em;
+              text-align: center;
+              font-family: "FontAwesome", $FontStyle;
               a {
                 color: $colorwhite;
                 margin: 0 auto;
@@ -1265,12 +1254,6 @@ desktop 1920px*/
                   display: inline-block;
                 }
               }
-            }
-
-            span.byline,
-            span.comments-link {
-              width: 100%;
-              background-color: $blackcolor;
             }
           }
         }
@@ -1621,6 +1604,7 @@ desktop 1920px*/
             background-color: $blackcolor;
             color: $colorwhite;
 
+
             &:hover {
               background-color: $colorwhite;
               color: $blackcolor;
@@ -1629,7 +1613,7 @@ desktop 1920px*/
 
             &:after {
               font-family: "Font Awesome 5 Free";
-              content: "\f187";
+              content: ">>";
               font-size: 1.6em;
               line-height: 40px;
               float: right;
@@ -1693,8 +1677,8 @@ desktop 1920px*/
         }
       }
 
-      /*Comment Form*/
-      h3#comments {
+      /*Comment title */
+      h3.comments-title {
         height: 35px;
         min-height: 35px;
         line-height: 35px;
@@ -1880,6 +1864,7 @@ desktop 1920px*/
           width: 82%;
           height: auto;
           margin: 2% auto;
+          padding: 1em;
           font-family: ($FontStyle);
           padding: 0;
 
@@ -3624,40 +3609,25 @@ desktop 1440px*/
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
+
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.9em;
-
-              a {
-                margin: 0 auto;
-              }
-
-              a:hover {
-                font-weight: bold;
-              }
-            }
-
             span.byline,
-            span.comments-link {
+            span.comments-link,
+            span.posted-on {
               width: 100%;
+
             }
           }
         }
@@ -3887,7 +3857,7 @@ desktop 1440px*/
       }
 
       /*Comment Form*/
-      h3#comments {
+      h3.comments-title {
         width: 96%;
         font-size: 1em;
       }
@@ -3982,7 +3952,6 @@ desktop 1440px*/
 
         .comment-form {
           width: 82%;
-          padding: 1.8% 0;
 
           p.comment-notes {
             font-size: 0.9em;
@@ -4884,37 +4853,24 @@ desktop 1280px*/
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
+
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
-
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.85em;
-
-              a {
-                margin: 0 auto;
-              }
-
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on {
+              font-size: 0.9em;
+
             }
           }
         }
@@ -5157,7 +5113,7 @@ desktop 1280px*/
       }
 
       /*Comment Form*/
-      h3#comments {
+      h3.comments-title {
         width: 96%;
         font-size: 1em;
       }
@@ -6260,40 +6216,24 @@ desktop 1024px*/
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
+
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.8em;
-
-              a {
-                margin: 0 auto;
-              }
-
-              a:hover {
-                font-weight: bold;
-              }
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on  {
+              font-size: 0.9em;
             }
           }
         }
@@ -7154,10 +7094,6 @@ tablet 800px */
           }
         }
       }
-
-      hr {
-        height: 1px;
-      }
     }
 
     /*contact page*/
@@ -7505,38 +7441,23 @@ tablet 800px */
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
+
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.75em;
-
-              a {
-                margin: 0 auto;
-              }
-
-
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on  {
+              font-size: 0.85em;
             }
           }
         }
@@ -7751,7 +7672,7 @@ tablet 800px */
         font-size: 1.15em;
       }
 
-      h3 {
+      h3.comments-title {
         width: 94%;
         font-size: 1em;
         margin: 1% auto;
@@ -7831,14 +7752,16 @@ tablet 800px */
             font-size: 0.85em;
           }
 
+          p.comment-notes {
+            font-size: 0.85em;
+          }
+
           input[type="submit"] {
             width: 25%;
           }
         }
 
-        .comment-form p.comment-notes {
-          font-size: 0.85em;
-        }
+
       }
     }
 
@@ -8546,9 +8469,7 @@ tablet 600px */
     }
 
     section.main-text {
-      hr {
-        height: 1px;
-      }
+      padding: 0.25em;
     }
 
     aside#side-bar {
@@ -8763,33 +8684,24 @@ tablet 600px */
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
+
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.8em;
-
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on  {
+              font-size: 0.85em;
             }
           }
         }
@@ -9629,9 +9541,6 @@ mobile 480px */
         }
       }
 
-      hr {
-        height: 1px;
-      }
     }
 
     #map_container {
@@ -9917,33 +9826,25 @@ mobile 480px */
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
+        .entry-meta{
+
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.75em;
-
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on  {
+
+              font-size: 0.8em;
             }
           }
         }
@@ -10165,11 +10066,7 @@ mobile 480px */
         font-size: 1.1em;
       }
 
-      h2 {
-        text-align: center;
-      }
-
-      h3#comments {
+      h3.comments-title {
         font-size: 0.8em;
       }
 
@@ -10820,10 +10717,6 @@ mobile 360px */
           }
         }
       }
-
-      hr {
-        height: 1px;
-      }
     }
 
     #map_container {
@@ -11107,35 +11000,24 @@ mobile 360px */
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
-          width: 100%;
+        .entry-meta{
 
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.75em;
-
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on  {
+              font-size: 0.75em;
             }
           }
         }
@@ -11344,7 +11226,7 @@ mobile 360px */
         font-size: 1em;
       }
 
-      h3#comments {
+      h3.comments-title {
         font-size: 0.75em;
       }
 
@@ -11985,10 +11867,6 @@ mobile 320px */
           }
         }
       }
-
-      hr {
-        height: 1px;
-      }
     }
 
     #map_container {
@@ -12275,35 +12153,25 @@ mobile 320px */
       header.byline {
         padding: 0.25em;
 
-        .entry-meta,
-        .index-entry-meta {
-          width: 100%;
+        .entry-meta{
 
           .has-avatar {
-            width: 20%;
+            width: 100%;
+
+            .author-avatar {
+              width: 20%;
+
+            }
           }
 
           .meta-content {
             width: 100%;
 
-            .author-avatar {
-              width: 4.5em;
-            }
-
-            .byline,
-            .bylineauthor,
-            .bylinecat,
-            .bylinetag,
-            .comments-link,
-            .date,
-            .posted-on {
-              font-size: 0.7em;
-
-            }
-
             span.byline,
-            span.comments-link {
-              width: 100%;
+            span.comments-link,
+            span.posted-on {
+
+              font-size: 0.7em;
             }
           }
         }
@@ -12531,7 +12399,7 @@ mobile 320px */
         font-size: 0.9em;
       }
 
-      h3#comments {
+      h3.comments-title {
         font-size: 0.7em;
       }
 
