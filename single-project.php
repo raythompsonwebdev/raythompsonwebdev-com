@@ -55,7 +55,7 @@ if ( have_posts() ) :
       <h1 class="post-meta-key">
         <?php esc_html_e( 'Name', 'raythompsonwebdev-com' ); ?>
       </h1>
-      <p class="websitetext"><?php esc_html_e( $project_name ); ?></p>
+      <p class="websitetext"><?php esc_html_e( $project_name, 'raythompsonwebdev-com' ); ?></p>
     </div>
     <?php $project_code = get_post_meta( get_the_ID(), 'project_code', true ); ?>
     <div id="project-code">
@@ -63,14 +63,14 @@ if ( have_posts() ) :
         <?php esc_html_e( 'Code', 'raythompsonwebdev-com' ); ?>
       </h1>
 
-      <p class="websitetext"><?php esc_html_e( $project_code ); ?></p>
+      <p class="websitetext"><?php esc_html_e( $project_code, 'raythompsonwebdev-com' ); ?></p>
     </div>
     <?php $project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
     <div id="project-url">
         <h1 class="post-meta-key">
         <?php esc_html_e( 'URL', 'raythompsonwebdev-com' ); ?>
       </h1>
-      <a class="webformats" href="<?php esc_html_e( $project_url ); ?>" target="blank" title="<?php esc_attr_e( 'See Website', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( $project_url ); ?> </a>
+      <a class="webformats" href="<?php esc_html_e( $project_url, 'raythompsonwebdev-com' ); ?>" target="blank" title="<?php esc_attr_e( 'See Website', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( $project_url, 'raythompsonwebdev-com' ); ?> </a>
     </div>
 
     <div id="project-github">
@@ -80,7 +80,7 @@ if ( have_posts() ) :
 
       <?php $url_mp = site_url( 'github.com', 'https' ); ?>
 
-      <a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php esc_html_e( $post_slug ); ?>" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>">See Code on Github	</a>
+      <a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php esc_html_e( $post_slug, 'raythompsonwebdev-com' ); ?>" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>">See Code on Github	</a>
     </div>
 
 
@@ -94,7 +94,7 @@ if ( have_posts() ) :
 
 	  </h1>
 
-	  <p class="websitetext"><?php esc_html_e( $project_description ); ?></p>
+	  <p class="websitetext"><?php esc_html_e( $project_description, 'raythompsonwebdev-com' ); ?></p>
 
 	</div>
 

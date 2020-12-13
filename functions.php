@@ -164,7 +164,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			'flex-width'             => false,
 			'default-text-color'     => '',
 			'header-text'            => true,
-			'uploads'                => true,
+			'uploads'                => false,
 			'wp-head-callback'       => '',
 			'admin-head-callback'    => '',
 			'admin-preview-callback' => '',
@@ -179,9 +179,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		*/
 		register_nav_menus(
 			array(
-				'main'      => esc_html__( 'Main nav', 'raythompsonwebdev-com' ),
-				'Secondary' => esc_html__( 'Secondary', 'raythompsonwebdev-com' ),
-				'mobile'    => esc_html__( 'mobile', 'raythompsonwebdev-com' ),
+				'main'      => esc_html__( 'Main', 'raythompsonwebdev-com' ),
+				'secondary' => esc_html__( 'Secondary', 'raythompsonwebdev-com' ),
+				'mobile'    => esc_html__( 'Mobile', 'raythompsonwebdev-com' ),
 			)
 		);
 
@@ -400,7 +400,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts_own' );
  *  @return void
  */
 function raythompsonwebdev_com_add_lightbox() {
-	if ( 'project' === get_post_type() || is_page( 'about-page' ) ) {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
 		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', false, '1.0', 'all' );
 		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), '1.0', true );
 		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), '1.0', true );
@@ -415,7 +415,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
  */
 function raythompsonwebdev_com_about_page_scripts() {
 
-	if ( is_page( 'about-page' ) ) {
+	if ( is_page( 'about' ) ) {
 		// scrollto script.
 		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), '1.0', true );
 		// easing script.

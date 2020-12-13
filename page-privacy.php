@@ -152,25 +152,25 @@ get_header(); ?>
 	<p><?php esc_html_e( 'Resources &amp; Further Information', 'raythompsonwebdev-com' ); ?></p>
 
 	<ul>
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display' ); ?>" alt="<?php esc_attr_e('Overview of the GDPR - General Data Protection Regulation' ); ?>" target="new"><?php esc_html_e( 'Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?></a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display' ); ?>" alt="<?php esc_attr_e('Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?>" target="new"><?php esc_html_e( 'Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.gov.uk/data-protection', 'display' ); ?>" alt="<?php esc_attr_e( 'Data Protection Act 1998' ); ?>" target="new">Data Protection Act 1998</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.gov.uk/data-protection', 'display' ); ?>" alt="<?php esc_attr_e( 'Data Protection Act 1998', 'raythompsonwebdev-com' ); ?>" target="new">Data Protection Act 1998</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/for-organisations/guide-to-pecr/', 'display' ); ?>" alt="<?php esc_attr_e( 'Privacy and Electronic Communications Regulations 2003' ); ?>" target="new">Privacy and Electronic Communications Regulations 2003</a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/for-organisations/guide-to-pecr/', 'display' ); ?>" alt="<?php esc_attr_e( 'Privacy and Electronic Communications Regulations 2003', 'raythompsonwebdev-com' ); ?>" target="new">Privacy and Electronic Communications Regulations 2003</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/guide-to-pecr-2-3.pdf', 'display' ); ?>" alt="<?php esc_attr_e( 'The Guide to the PECR 2003' ); ?>" target="new" >The Guide to the PECR 2003</a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/guide-to-pecr-2-3.pdf', 'display' ); ?>" alt="<?php esc_attr_e( 'The Guide to the PECR 2003', 'raythompsonwebdev-com' ); ?>" target="new" >The Guide to the PECR 2003</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://twitter.com/en/privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Twitter Privacy Policy' ); ?>" target="new">Twitter Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://twitter.com/en/privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Twitter Privacy Policy', 'raythompsonwebdev-com' ); ?>" target="new">Twitter Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.facebook.com/legal/FB_Work_Privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Facebook Privacy Policy' ); ?>" target="new"> Facebook Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.facebook.com/legal/FB_Work_Privacy', 'display' ); ?>" alt="<?php esc_attr_e( 'Facebook Privacy Policy', 'raythompsonwebdev-com' ); ?>" target="new"> Facebook Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.google.com/policies/privacy/', 'display' ); ?>" alt="<?php esc_attr_e( 'Google Privacy Policy' ); ?>" target="new">Google Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.google.com/policies/privacy/', 'display' ); ?>" alt="<?php esc_attr_e( 'Google Privacy Policy', 'raythompsonwebdev-com' ); ?>" target="new">Google Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/legal/privacy-policy', 'display' ); ?>" alt="<?php esc_attr_e( 'Linkedin Privacy Policy' ); ?>" target="new">Linkedin Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/legal/privacy-policy', 'display' ); ?>" alt="<?php esc_attr_e( 'Linkedin Privacy Policy', 'raythompsonwebdev-com' ); ?>" target="new">Linkedin Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://help.github.com/articles/github-privacy-statement/', 'display' ); ?>" alt="<?php esc_attr_e( 'GitHub Privacy Policy' ); ?>" target="new">GitHub Privacy Policy</a></li>
+	<li><a href="<?php echo esc_url( 'https://help.github.com/articles/github-privacy-statement/', 'display' ); ?>" alt="<?php esc_attr_e( 'GitHub Privacy Policy', 'raythompsonwebdev-com' ); ?>" target="new">GitHub Privacy Policy</a></li>
 
-	<li><a href="<?php echo esc_url( 'https://jamieking.co.uk/blog/cyber-security/policies/free-sample-privacy-policy.php', 'display' ); ?>" alt="<?php esc_attr_e( 'Website Privacy Policy Template' ); ?>" target="new">Website Privacy Policy Template</a></li>
+	<li><a href="<?php echo esc_url( 'https://jamieking.co.uk/blog/cyber-security/policies/free-sample-privacy-policy.php', 'display' ); ?>" alt="<?php esc_attr_e( 'Website Privacy Policy Template', 'raythompsonwebdev-com' ); ?>" target="new">Website Privacy Policy Template</a></li>
 
 	</ul>
 

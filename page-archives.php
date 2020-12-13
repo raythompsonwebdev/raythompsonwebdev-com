@@ -48,8 +48,7 @@ while ( have_posts() ) :
 		</ul>
 		<div class="clear"></div>
 
-		<h2><strong><?php esc_html_e( 'Tags Cloud:', 'raythompsonwebdev-com' ); ?></strong></h2>
-	<?php wp_tag_cloud( 'smallest=10&largest=24unit=px&orderby=count&order=RAND' ); ?>
+
 
 	</div>
 

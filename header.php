@@ -41,7 +41,7 @@
 
 		<?php if ( get_header_image() ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?php esc_attr_e( get_custom_header()->width ); ?>" height="<?php esc_attr_e( get_custom_header()->height ); ?>" alt="">
+				<img src="<?php header_image(); ?>" width="<?php esc_attr_e( get_custom_header()->width, 'raythompsonwebdev-com' ); ?>" height="<?php esc_attr_e( get_custom_header()->height, 'raythompsonwebdev-com' ); ?>" alt="">
 
 			</a>
 		<?php endif; // End header image check. ?>
@@ -69,7 +69,7 @@
 							?>
 							<div class="site-firstletter" aria-hidden="true">
 
-								<?php esc_html_e( substr( $site_title, 0, 1 ) ); ?>
+								<?php esc_html_e( substr( $site_title, 0, 1 ), 'raythompsonwebdev-com' ); ?>
 
 							</div>
 						<?php } ?>
@@ -77,7 +77,7 @@
 				</div>
 
 
-				<?php if ( is_front_page() || is_page( array( 'about-page', 'contact-page', 'privacy-policy-2', 'archives' ) ) ) : ?>
+				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archive-page' ) ) ) : ?>
 					<hgroup>
 						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 
@@ -98,7 +98,7 @@
 							?>
 
 							<h2 class="site-description">
-								<?php esc_html_e( $description ); ?>
+								<?php esc_html_e( $description, 'raythompsonwebdev-com' ); ?>
 							</h2>
 					</hgroup>
 				<?php endif; ?>
@@ -106,15 +106,15 @@
 				<button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
 
 				<?php
-					// Checking if there's anything in Top Menu.
+					// Checking if there's anything in Main Menu.
           if ( has_nav_menu( 'main' ) ) {
-            // If there is, adds the Top Menu area.
             wp_nav_menu(
               array(
-                'menu'         => 'Main',
+                'menu'         => 'main',
                 'container'    => 'nav',
                 'container_id' => 'main-menu',
                 'menu_class'   => 'nav-menu',
+                'theme_location' => 'Main'
 
               )
             );

@@ -23,12 +23,13 @@
 <footer role="contentinfo">
 
 <?php
-if ( has_nav_menu( 'Secondary' ) ) {
+if ( has_nav_menu( 'secondary' ) ) {
 
 	wp_nav_menu(
 		array(
-			'menu'      => 'Secondary',
-			'container' => 'footer',
+			'menu'      => 'secondary',
+      'container' => 'footer',
+      'theme_location' => 'Secondary'
 		)
 	);
 }
@@ -66,9 +67,15 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 
 </footer>
-<p id="copyr" > <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/"></a>
-		<span class="sep"> | </span>
+
+<p id="copyr" >
+
+  <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
+
+  <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/">
+  </a>
+
+  <span class="sep"> | </span>
 
 	<?php
 
@@ -83,7 +90,7 @@ if ( has_nav_menu( 'Secondary' ) ) {
 
 	$dt             = time();
 	$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
-	printf( esc_html_e( 'Page was last updated :', 'raythompsonwebdev-com' ), esc_html( $mysql_datetime, 'raythompsonwebdev-com' ), 'raythompsonwebdev-com' );
+	printf( _e( 'Page was last updated :', 'raythompsonwebdev-com' ), __( $mysql_datetime, 'raythompsonwebdev-com' ), 'raythompsonwebdev-com' );
 
 	?>
 

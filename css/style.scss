@@ -9,7 +9,6 @@ License: GNU General Public License v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:left-sidebar, two-columns, editor-style, custom-logo, featured-images, custom-menu, portfolio, post-formats, align-wide
 Text Domain: raythompsonwebdev-com
-Domain Path: /language
 
 raythompsonwebdev-com WordPress Theme, Copyright 2016 WordPress.org
 raythompsonwebdev-com is based on Underscores http://underscores.me/,
@@ -942,34 +941,30 @@ desktop 1920px*/
       ul.post-list {
         text-indent: 0;
         width: 94%;
-        margin: 1em auto;
-        display: block;
+        margin: 0 auto;
+        display:flex;
+        font-family: $FontStyle;
 
         li {
-          font-size: 0.9em;
-          font-family: $FontStyle;
+          font-size: 1em;
           height: auto;
           padding: 0.5em;
           background-color: $colorwhite;
+          width:50%;
 
           a {
             width: 100%;
-            margin-left: 0;
+            margin: 0;
             text-align: center;
-            display: inline-block;
-            font-size: 0.9em;
-            height: 100%;
-            background-color: $colorwhite;
+            display:block;
+            background-color: $blackcolor;
             line-height: 35px;
-            color: $blackcolor;
+            color: $colorwhite;
             @include originTran(50% 50%);
             @include Transition(all 0.2s ease-in 0s);
 
             &:hover {
-              margin-left: 0;
-              display: block;
-              background-color: $colorwhite;
-
+              font-weight:bold;
             }
           }
         }
@@ -3149,7 +3144,7 @@ desktop 1920px*/
   }
 
   p#copyr {
-    color: $colorwhite;
+    color: $blackcolor;
     font-size: 10px;
     width: 100%;
     margin: 0;
@@ -4752,9 +4747,6 @@ desktop 1280px*/
       ul.post-list {
         width: 94%;
 
-        li {
-          font-size: 0.9em;
-        }
       }
 
       ul {
@@ -6089,9 +6081,6 @@ desktop 1024px*/
       ul.post-list {
         width: 94%;
 
-        li {
-          font-size: 0.95em;
-        }
       }
 
       ul {
@@ -7316,6 +7305,7 @@ tablet 800px */
 
 
       ul.post-list {
+
         li {
           font-size: 0.9em;
         }
@@ -8569,6 +8559,7 @@ tablet 600px */
 
 
       ul.post-list {
+
         li {
           font-size: 0.85em;
         }
@@ -9732,6 +9723,7 @@ mobile 480px */
 
 
       ul.post-list {
+
         li {
           font-size: 0.8em;
         }
@@ -10904,9 +10896,6 @@ mobile 360px */
       ul.post-list {
         width: 80%;
 
-        li {
-          font-size: 0.8em;
-        }
       }
 
       ul {
@@ -12048,7 +12037,6 @@ mobile 320px */
 
       ul.post-list {
         width: 85%;
-
         li {
           font-size: 0.75em;
         }
