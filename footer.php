@@ -13,6 +13,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
+
 ?>
 
 </main>
@@ -27,9 +28,9 @@ if ( has_nav_menu( 'secondary' ) ) {
 
 	wp_nav_menu(
 		array(
-			'menu'      => 'secondary',
-      'container' => 'footer',
-      'theme_location' => 'Secondary'
+			'menu'           => 'secondary',
+			'container'      => 'footer',
+			'theme_location' => 'Secondary',
 		)
 	);
 }
@@ -70,29 +71,25 @@ if ( has_nav_menu( 'secondary' ) ) {
 
 <p id="copyr" >
 
-  <?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
+	<?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
 
-  <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/">
-  </a>
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/">
+	</a>
 
-  <span class="sep"> | </span>
+	<span class="sep"> | </span>
 
 	<?php
 
 	sprintf(
-
-		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="https://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>' );
+		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ),
+		'raythompsonwebdev-com',
+		'<a href="https://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>'
+	);
 	?>
 <br/>
 
 
-	<?php
 
-	$dt             = time();
-	$mysql_datetime = strftime( '%Y-%m-%d %H:%M:%S', $dt );
-	printf( _e( 'Page was last updated :', 'raythompsonwebdev-com' ), __( $mysql_datetime, 'raythompsonwebdev-com' ), 'raythompsonwebdev-com' );
-
-	?>
 
 </p>
 </div>
@@ -100,8 +97,6 @@ if ( has_nav_menu( 'secondary' ) ) {
 
 
 <?php wp_footer(); ?>
-
-<script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
 
 
 

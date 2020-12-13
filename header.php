@@ -13,6 +13,7 @@
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
+
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +24,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" >
 		<link rel="profile" href="http://gmpg.org/xfn/11" >
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
@@ -39,12 +39,6 @@
 
 		<div id="wrapper_container">
 
-		<?php if ( get_header_image() ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?php esc_attr_e( get_custom_header()->width, 'raythompsonwebdev-com' ); ?>" height="<?php esc_attr_e( get_custom_header()->height, 'raythompsonwebdev-com' ); ?>" alt="">
-
-			</a>
-		<?php endif; // End header image check. ?>
 
 			<header class="group" role="banner">
 
@@ -52,27 +46,21 @@
 
 				<div class="site-logo">
 
-					<?php $site_title = get_bloginfo( 'name' ); ?>
+        <?php $site_title = get_bloginfo( 'name' ); ?>
 
 					<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<div class="screen-reader-text">
-
 							<?php
-							/* translators: %1$s:, CMSname: WordPress. */
-							printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html( $site_title ) );
+								/* translators: %1$s:, CMSname: WordPress. */
+								printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html( $site_title ) );
 							?>
 						</div>
 						<?php
-						if ( has_custom_logo() ) {
-							the_custom_logo();
-						} else {
-							?>
-							<div class="site-firstletter" aria-hidden="true">
+							if ( has_custom_logo() ) {
+								the_custom_logo();
+							}
+						?>
 
-								<?php esc_html_e( substr( $site_title, 0, 1 ), 'raythompsonwebdev-com' ); ?>
-
-							</div>
-						<?php } ?>
 					</a>
 				</div>
 
@@ -93,40 +81,41 @@
 							<?php
 						endif;
 
-						$description = get_bloginfo( 'description', 'display' );
-						if ( esc_html( $description ) || is_customize_preview() ) :
+						$raythompsonwebdev_com_description = get_bloginfo( 'description', 'display' );
+						if ( $raythompsonwebdev_com_description || is_customize_preview() ) :
 							?>
 
 							<h2 class="site-description">
-								<?php esc_html_e( $description, 'raythompsonwebdev-com' ); ?>
+							<?php echo $raythompsonwebdev_com_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							</h2>
-					</hgroup>
 				<?php endif; ?>
+					</hgroup>
+
 
 				<button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
 
 				<?php
 					// Checking if there's anything in Main Menu.
-          if ( has_nav_menu( 'main' ) ) {
-            wp_nav_menu(
-              array(
-                'menu'         => 'main',
-                'container'    => 'nav',
-                'container_id' => 'main-menu',
-                'menu_class'   => 'nav-menu',
-                'theme_location' => 'Main'
+				if ( has_nav_menu( 'main' ) ) {
+					wp_nav_menu(
+						array(
+							'menu'           => 'main',
+							'container'      => 'nav',
+							'container_id'   => 'main-menu',
+							'menu_class'     => 'nav-menu',
+							'theme_location' => 'Main',
 
-              )
-            );
-          }
+						)
+					);
+				}
 				?>
 
 
 			</header>
- <?php if ( is_home() || is_archive() ) : ?>
+	<?php if ( is_home() || is_archive() ) : ?>
 	<span class="social-1"><?php get_search_form(); ?></span>
-  <?php endif; ?>
-			<!--Main content -->
+	<?php endif; ?>
+		<!--Main content -->
 <main id="main-content" class="group" role="main">
-   <!--search form -->
+	<!--search form -->
 

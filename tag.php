@@ -14,18 +14,18 @@
  * @link       https:www.raythompsonwebdev.co.uk
  */
 
- get_header(); ?>
-		
+	get_header(); ?>
+
 
 	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
-		
+
 		<!-- Display optional tag description-->
 		<?php if ( tag_description() ) : ?>
 
 				<div class="archive-meta"><?php echo tag_description(); ?></div>
-		
+
 			<?php endif; ?>
- 
+
 		<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
 <?php get_sidebar( 'archive' ); ?>

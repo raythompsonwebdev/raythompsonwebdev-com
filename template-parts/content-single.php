@@ -34,7 +34,7 @@
 					<?php if ( 'post' === get_post_type() ) : ?>
 
 							<?php raythompsonwebdev_com_posted_by(); ?>
-              <?php raythompsonwebdev_com_posted_on(); ?>
+						<?php raythompsonwebdev_com_posted_on(); ?>
 
 					<?php endif; ?>
 				</div>
@@ -78,9 +78,9 @@
 					<?php
 						$lastmodified = get_the_modified_time( 'U' );
 						$posted       = get_the_time( 'U' );
-            if ( $lastmodified > $posted ) {
-              echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-            }
+					if ( $lastmodified > $posted ) {
+						echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+					}
 					?>
 				</p>
 
@@ -89,16 +89,16 @@
 
 		</article>
 
-		<?php	endwhile;	?>
+		<?php	endwhile; ?>
 
 		<nav class="navigation">
 
 			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
 			<div class="nav-links">
 
-        <div class="nav-previous"><?php previous_post_link( '%link' ); ?></div>
+		<div class="nav-previous"><?php previous_post_link( '%link' ); ?></div>
 
-        <div class="nav-next"><?php next_post_link( '%link' ); ?></div>
+		<div class="nav-next"><?php next_post_link( '%link' ); ?></div>
 
 			</div>
 

@@ -15,13 +15,14 @@
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
+
 get_header(); ?>
 
 <h1><?php esc_html_e( 'Contact Page', 'raythompsonwebdev-com' ); ?></h1>
 
 <div id="contactform">
 
-	<?php the_content() ?>
+	<?php the_content(); ?>
 
 </div>
 

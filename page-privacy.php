@@ -152,7 +152,7 @@ get_header(); ?>
 	<p><?php esc_html_e( 'Resources &amp; Further Information', 'raythompsonwebdev-com' ); ?></p>
 
 	<ul>
-	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display' ); ?>" alt="<?php esc_attr_e('Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?>" target="new"><?php esc_html_e( 'Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?></a></li>
+	<li><a href="<?php echo esc_url( 'https://ico.org.uk/media/for-organisations/data-protection-reform/overview-of-the-gdpr-1-13.pdf', 'display' ); ?>" alt="<?php esc_attr_e( 'Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?>" target="new"><?php esc_html_e( 'Overview of the GDPR - General Data Protection Regulation', 'raythompsonwebdev-com' ); ?></a></li>
 
 	<li><a href="<?php echo esc_url( 'https://www.gov.uk/data-protection', 'display' ); ?>" alt="<?php esc_attr_e( 'Data Protection Act 1998', 'raythompsonwebdev-com' ); ?>" target="new">Data Protection Act 1998</a></li>
 

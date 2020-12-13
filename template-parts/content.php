@@ -31,11 +31,10 @@
 			<!--Post entry Header-->
 			<header class="byline">
 				<div class="entry-meta">
-          <?php if ( 'post' === get_post_type() ) : ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
 
-            <?php //echo get_avatar( get_the_author_meta( 'ID' ), 96 ); ?>
 
-              <?php	raythompsonwebdev_com_posted_by(); ?>
+				<?php	raythompsonwebdev_com_posted_by(); ?>
 							<?php	raythompsonwebdev_com_posted_on(); ?>
 
 
@@ -79,13 +78,13 @@
 					<?php raythompsonwebdev_com_entry_footer(); ?>
 
 					<p>
-            <?php
-              $lastmodified = get_the_modified_time( 'U' );
-              $posted       = get_the_time( 'U' );
-              if ( $lastmodified > $posted ) {
-                echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-              }
-            ?>
+			<?php
+				$lastmodified = get_the_modified_time( 'U' );
+				$posted       = get_the_time( 'U' );
+			if ( $lastmodified > $posted ) {
+				echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+			}
+			?>
 					</p>
 
 				</footer>

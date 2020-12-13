@@ -63,22 +63,22 @@ get_header(); ?>
 			</section>
 
 			<section class="frntpgbox">
-			  <span><i class="fab fa-wordpress-simple"></i></span>
+				<span><i class="fab fa-wordpress-simple"></i></span>
 					<h1><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 
-		  <p><?php esc_html_e( 'Set Up & Installation', 'raythompsonwebdev-com' ); ?></p>
-		  <p><?php esc_html_e( 'Themes & Plugins', 'raythompsonwebdev-com' ); ?></p>
-		  <p><?php esc_html_e( 'Gutenberg Blocks', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Set Up & Installation', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Themes & Plugins', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Gutenberg Blocks', 'raythompsonwebdev-com' ); ?></p>
 
 			</section>
 
 			<section class="frntpgbox">
-		  <span><i class="fas fa-wrench"></i></span>
-				  <h1><?php esc_html_e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
+			<span><i class="fas fa-wrench"></i></span>
+					<h1><?php esc_html_e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
 
-		  <p><?php esc_html_e( 'Web Security', 'raythompsonwebdev-com' ); ?></p>
-		  <p><?php esc_html_e( 'Database', 'raythompsonwebdev-com' ); ?></p>
-		  <p><?php esc_html_e( 'Code Debugging', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Web Security', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Database', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Code Debugging', 'raythompsonwebdev-com' ); ?></p>
 
 			</section>
 

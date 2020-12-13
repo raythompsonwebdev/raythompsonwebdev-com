@@ -16,9 +16,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
-    if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> - Updated: <time class="updated" datetime="%3$s">%4$s</time>';
-    }
+		}
 
 		$time_string = sprintf(
 			$time_string,
@@ -26,20 +26,20 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
 			esc_html( get_the_modified_date() )
-    );
+		);
 
-		$posted_on   = sprintf(
+		$posted_on = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'published %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-    echo '<div class="meta-content">';
+		echo '<div class="meta-content">';
 
-		echo '<span class="posted-on">' . $posted_on . '</span>' ;
+		echo '<span class="posted-on">' . $posted_on . '</span>';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		echo '</div><!-- .meta-content -->';
-  }
+	}
 
 endif;
 
@@ -53,26 +53,25 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-    );
+		);
 
-    $author_id = get_the_author_meta( 'ID' );
+		$author_id = get_the_author_meta( 'ID' );
 
 		if ( raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
 
 			echo '<div class="meta-content has-avatar">';
-			echo '<div class="author-avatar">' . get_avatar( get_the_author_meta( 'ID' )) . '</div>';
+			echo '<div class="author-avatar">' . get_avatar( get_the_author_meta( 'ID' ) ) . '</div>';
 		} else {
 			echo '<div class="meta-content">';
 		}
 
-
-    echo  '<span class="byline">' . $byline . ' </span>' ;
+		echo '<span class="byline">' . $byline . ' </span>';// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
 			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-com' ) );
 			echo '</span>';
-    }
+		}
 
 		echo '</div><!-- .meta-content -->';
 	}
@@ -89,14 +88,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'raythompsonwebdev-com' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'raythompsonwebdev-com' ) . '</span>', $categories_list );
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'raythompsonwebdev-com' ) . '</span>', $categories_list );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'raythompsonwebdev-com' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'raythompsonwebdev-com' ) . '</span>', $tags_list );
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'raythompsonwebdev-com' ) . '</span>', $tags_list );// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -274,7 +273,7 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 		}
 		wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
 	}
-	if ( $data === '200' ) {
+	if ( '200' === $data ) {
 		return true;
 	} else {
 		return false;

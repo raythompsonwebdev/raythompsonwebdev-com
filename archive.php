@@ -32,10 +32,10 @@ while ( have_posts() ) :
 		<!--Post entry Header-->
 		<header class="byline">
 			<div class="entry-meta">
-      <?php if ( 'post' === get_post_type() ) : ?>
+		<?php if ( 'post' === get_post_type() ) : ?>
 
-				<?php	raythompsonwebdev_com_posted_by();  ?>
-        <?php	raythompsonwebdev_com_posted_on();  ?>
+				<?php	raythompsonwebdev_com_posted_by(); ?>
+			<?php	raythompsonwebdev_com_posted_on(); ?>
 
 			<?php endif; ?>
 			</div>
@@ -63,7 +63,7 @@ while ( have_posts() ) :
 <!--featured Image end-->
 		<div class="entry">
 
-      <?php the_excerpt(); ?>
+		<?php the_excerpt(); ?>
 
 		</div>
 
@@ -82,8 +82,3 @@ while ( have_posts() ) :
 
 
 <?php get_footer(); ?>
-
-
-
-
-

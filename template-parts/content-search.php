@@ -26,7 +26,7 @@ $classess = array(
 		<div class="entry-meta">
 
 			<?php raythompsonwebdev_com_posted_by(); ?>
-      <?php	raythompsonwebdev_com_posted_on(); ?>
+			<?php	raythompsonwebdev_com_posted_on(); ?>
 
 		</div>
 		<?php endif; ?>

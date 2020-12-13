@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7.2.
+ * PHP version 7.2.
  *
  * Profile Page Courses Slider | inc/profile-chart.php.
  *
@@ -13,7 +13,6 @@
  * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3 *
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
- * 
  */
 
 	require 'slider-panel-text.php';
@@ -29,23 +28,20 @@
 
 	<!-- #hero-slider -->
 	<article class="hero-slider">
+		<ul id="list">
+			<?php foreach ( $courses_tabs as $courses_tab ) : ?>
+		<li>
+			<a href="#" rel="#panel-<?php echo esc_html( $courses_tab['id'] ); ?>" class="hero-btn active" title="<?php echo esc_html( $courses_tab['buttonname'] ); ?>" ><?php echo esc_html( $courses_tab['buttonname'] ); ?></a>
+		</li>
+			<?php endforeach; ?>
 
-	  <ul id="list">
-			<?php foreach ( $courses_tabs as $courses_tab ) : ?>   
-			  
-		  <li>
-			  <a href="#" rel="#panel-<?php echo esc_html( $courses_tab['id'] ); ?>" class="hero-btn active" title="<?php echo esc_html( $courses_tab['buttonname'] ); ?>" ><?php echo esc_html( $courses_tab['buttonname'] ); ?></a>
-		  </li>             
-			  
-		<?php endforeach; ?>
+		</ul>
+		<!--mask-->
+		<div class="mask">
+			<!--slider body -->
+			<div class="slider-body">
 
-	  </ul>
-	  <!--mask-->
-	  <div class="mask">
-		  <!--slider body -->
-		  <div class="slider-body">
-
-			  <?php foreach ( $slider_panels as $slider_panel ) : ?> 
+				<?php foreach ( $slider_panels as $slider_panel ) : ?>
 
 				<article class="panel" id="panel-<?php echo esc_html( $slider_panel['id'] ); ?>">
 
@@ -53,11 +49,11 @@
 
 					<figure class="slider-panel">
 
-						<a 
-						  href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo esc_html( $slider_panel['bgimage'] ); ?>" 
-						  class="fancybox" 
-						  title="<?php echo esc_attr( $slider_panel['title'], 'raythompsonwebdev-com' ); ?>">
-						  <span></span>                                  
+						<a
+							href="<?php echo esc_url( home_url( '/' ) ); ?><?php echo esc_html( $slider_panel['bgimage'] ); ?>"
+							class="fancybox"
+							title="<?php echo esc_attr( $slider_panel['title'], 'raythompsonwebdev-com' ); ?>">
+							<span></span>
 						</a>
 
 						<figcaption>
@@ -79,17 +75,17 @@
 					</figure>
 
 				</article>
-			  <?php endforeach; ?>
+				<?php endforeach; ?>
 
-		  </div>
-		  <!--slider body end-->
-	  </div>
-	  <!-- .mask end -->
+			</div>
+			<!--slider body end-->
+		</div>
+		<!-- .mask end -->
 
 	</article>
 	<!-- hero-slider end -->
 
-  </section>
+	</section>
 <?php
 
 

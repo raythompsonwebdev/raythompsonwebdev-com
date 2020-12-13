@@ -58,7 +58,7 @@ if ( have_posts() ) :
 				<div class="entry-meta">
 					<?php if ( 'post' === get_post_type() ) : ?>
 
-            <?php	raythompsonwebdev_com_posted_by(); ?>
+						<?php	raythompsonwebdev_com_posted_by(); ?>
 						<?php raythompsonwebdev_com_posted_on(); ?>
 
 					<?php endif; ?>

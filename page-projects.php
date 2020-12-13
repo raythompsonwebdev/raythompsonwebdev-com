@@ -48,7 +48,7 @@ get_header();
 			<!-- display slugs for custom post categories.-->
 			<div id="panel" class="prod-cnt
 					<?php
-            $customterms = get_the_terms( $post->ID, 'project-category' );
+					$customterms = get_the_terms( $post->ID, 'project-category' );
 
 					foreach ( $customterms as $customterm ) {
 						$pic = $customterm->slug . ' ';

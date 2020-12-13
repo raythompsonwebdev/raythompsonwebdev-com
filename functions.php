@@ -12,7 +12,6 @@
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
-
 /**
  * Returns a custom login error message.
  */
@@ -66,13 +65,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 	 */
 	function raythompsonwebdev_com_theme_setup() {
 
-		// load text domain
+		// load text domain.
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
-		// content width
+		// content width.
 		$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
 
-		// register meta data for graph ql
+		// register meta data for graph ql.
 		register_meta(
 			'post',
 			'project_name',
@@ -195,47 +194,32 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 					'default-image' => '',
 				)
 			)
-    );
+		);
 
-    // 2 removes the “wlwmanifest” link. wlwmanifest.xml is the resource file needed to enable support for Windows Live Writer. Nobody on Earth needs that. Note that this command simply removes the link, if you want to completely disable the functionality you need to deny access to the file /wp-includes/wlwmanifest.xml probably from your .htaccess (but that’s not strictly needed).
-		remove_action( 'wp_head', 'wlwmanifest_link' );
-
-		// 3 The RSD is an API to edit your blog from external services and clients. If you edit your blog exclusively from the WP admin console, you don’t need this.
-		remove_action( 'wp_head', 'rsd_link' );
-
-		// 4 “wp_shortlink_wp_head” adds a “shortlink” into your document head that will look like http://example.com/?p=ID. No need, thanks.
-		remove_action( 'wp_head', 'wp_shortlink_wp_head' );
-
-		// 5 Removes a link to the next and previous post from the document header. This could be theoretically beneficial, but to my experience it introduces more problems than it solves. Please note that this has nothing to deal with the “next/previous” post that you may want to add at the end of each post.
-		remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10 );
+		// remove version from head.
+		remove_action( 'wp_head', 'wp_generator' );
 
 		// remove version from rss.
-		// add_filter( 'the_generator', '__return_empty_string' );.
-
-		// 6 Removes the generator name from the RSS feeds.
-		add_filter( 'the_generator', '__return_false' );
-
-		// 7 Removes the administrator’s bar and also the associated CSS styles. Especially during the development phase I find it very annoying.
-		// add_filter('show_admin_bar','__return_false');
-
-		// 8 Removes WP 4.2 emoji styles and JS. Nasty stuff.
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
-		// Allowed tags
-		// How many times your users used the del or abbr tag? Yeah, exactly, zero. Let’s remove some of the allowed tags in comments.
-		// We can just add to the setup function the following.
-		global $allowedtags;
-		unset( $allowedtags['cite'] );
-		unset( $allowedtags['q'] );
-		unset( $allowedtags['del'] );
-		unset( $allowedtags['abbr'] );
-		unset( $allowedtags['acronym'] );
+		add_filter( 'the_generator', '__return_empty_string' );
 
 	}
 
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
+
+/**
+ * Remove version from scripts and styles.
+ *
+ * @param array $src array of styles and scripts.
+ */
+function raythompsonwebdev_com_remove_version_scripts_styles( $src ) {
+	if ( strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
+	}
+	return $src;
+}
+add_filter( 'style_loader_src', 'raythompsonwebdev_com_remove_version_scripts_styles', 9999 );
+add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_version_scripts_styles', 9999 );
 
 
 /**
@@ -267,35 +251,10 @@ function raythompsonwebdev_com_disable_emojis_tinymce( $plugins ) {
 add_filter( 'tiny_mce_plugins', 'raythompsonwebdev_com_disable_emojis_tinymce' );
 
 /**
- * Remove Query Strings – Optional Step.
- *
- * @param array $src parameter.
- */
-function raythompsonwebdev_com_remove_script_version( $src ) {
-	$parts = explode( '?ver', $src );
-	return $parts[0];
-}
-add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_script_version', 15, 1 );
-
-/**
  *  Remove comment cookies.
  */
 remove_action( 'set_comment_cookies', 'wp_set_comment_cookies' );
 
-/**
- *  Remove version from scripts and styles.
- *
- *  @param array $src array of.
- *  @var array $src array of.
- */
-function shape_space_remove_version_scripts_styles( $src ) {
-	if ( strpos( $src, 'ver=' ) ) {
-		$src = remove_query_arg( 'ver', $src );
-	}
-	return $src;
-}
-add_filter( 'style_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
-add_filter( 'script_loader_src', 'shape_space_remove_version_scripts_styles', 9999 );
 
 /**
  * Enqueue Jquery.
@@ -317,10 +276,22 @@ if ( ! is_admin() ) {
 function raythompsonwebdev_com_register_styles() {
 
 	wp_enqueue_style( 'raythompsonwebdev-com-normalise', get_template_directory_uri() . '/css/normalize.css', array(), '1.0', false );
-	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
+  wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), '1.0', false );
 
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
+
+
+/**
+ * Load the ie8 scripts.
+ *
+ * @return void
+ *  */
+function wpb_add_google_fonts() {
+  wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=PT+Sans:wght@400;700&display=swap', false );
+  }
+
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
 /**
  * Load the ie8 scripts.
@@ -384,7 +355,9 @@ function raythompsonwebdev_com_scripts_own() {
 
 	wp_enqueue_script( 'navigation', get_template_directory_uri() . '/js/navigation.js', array(), '1.0', true );
 
-	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
+  wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '1.0', true );
+
+  wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), '1.0', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
