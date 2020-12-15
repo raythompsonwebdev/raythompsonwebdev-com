@@ -59,11 +59,11 @@ while ( have_posts() ) :
 		<?php
 	}
 	?>
-</a>
-<!--featured Image end-->
+
+    <!--featured Image end-->
 		<div class="entry">
 
-		<?php the_excerpt(); ?>
+		  <?php the_excerpt(); ?>
 
 		</div>
 

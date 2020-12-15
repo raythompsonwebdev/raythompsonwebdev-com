@@ -230,7 +230,7 @@ add_action( 'save_post', 'raythompsonwebdev_com_category_transient_flusher' );
  */
 function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 	// id or email code borrowed from wp-includes/pluggable.php.
-	$email = '';
+
 	if ( is_numeric( $id_or_email ) ) {
 		$id   = (int) $id_or_email;
 		$user = get_userdata( $id );

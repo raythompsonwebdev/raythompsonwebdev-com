@@ -818,6 +818,14 @@ desktop 1920px*/
       box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
     }
 
+    article.single-post{
+
+      .entry{
+        padding:2em;
+      }
+    }
+
+
     /*regular Posts*/
     .post {
       background-color: $colorwhite;
@@ -1159,11 +1167,12 @@ desktop 1920px*/
         border: solid 1px blue;
         font-size: 1em;
         color: $colorwhite;
-        margin: 10px;
+        margin: 0;
         padding: 10px;
         background: $blackcolor;
         direction: ltr;
         text-align: left;
+        line-height: 30px;
         .code {
           width: 90%;
           margin: 5% auto;
@@ -1586,6 +1595,7 @@ desktop 1920px*/
           line-height: 40px;
           color: $blackcolor;
           margin-top: 0.25em;
+          display:flex;
 
           a {
             font-family: ($FontStyle);
@@ -1598,17 +1608,14 @@ desktop 1920px*/
             text-indent: 0.5em;
             background-color: $blackcolor;
             color: $colorwhite;
-
-
             &:hover {
               background-color: $colorwhite;
               color: $blackcolor;
-
             }
 
-            &:after {
+            &::after {
               font-family: "Font Awesome 5 Free";
-              content: ">>";
+              content: "\f099";
               font-size: 1.6em;
               line-height: 40px;
               float: right;
@@ -1692,6 +1699,24 @@ desktop 1920px*/
         li {
           padding: 0;
 
+          ol.children{
+            margin:auto;
+            padding: 0;
+            width:90%;
+
+            li.odd{
+              margin:0;
+
+              article.comment-body{
+
+                background-color:#000;
+
+
+              }
+
+            }
+          }
+
           .comment-body {
             letter-spacing: 0.1em;
             padding: 0.5em;
@@ -1699,7 +1724,7 @@ desktop 1920px*/
             background-color: $headercolor;
             height: auto;
             text-indent: 0;
-            width: 96%;
+            width: 100%;
             margin: 0.5em auto;
 
             footer.comment-meta {
@@ -3865,7 +3890,7 @@ desktop 1440px*/
           padding: 0;
 
           .comment-body {
-            width: 96%;
+            width: 100%;
 
             footer.comment-meta {
               height: 50px;
@@ -5116,9 +5141,10 @@ desktop 1280px*/
 
         li {
           padding: 0;
+          list-style: none;
 
           .comment-body {
-            width: 96%;
+            width: 100%;
 
             footer.comment-meta {
               height: 55px;

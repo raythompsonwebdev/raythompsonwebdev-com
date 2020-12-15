@@ -42,8 +42,6 @@
 
 			<header class="group" role="banner">
 
-				<?php // Display site icon or first letter as logo. ?>
-
 				<div class="site-logo">
 
         <?php $site_title = get_bloginfo( 'name' ); ?>

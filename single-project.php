@@ -35,17 +35,17 @@ if ( have_posts() ) :
 	<div class="item item1">
 
 		<figure class="websiteImage">
-		<a href="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/www-' ); ?>
-							<?php
-							$post_slug = $post->post_name;
-							esc_html_e( $post_slug, 'raythompsonwebdev-com' );
-							?>
-		-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+      <a href="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/www-' ); ?>
+                <?php
+                $post_slug = $post->post_name;
+                esc_html_e( $post_slug, 'raythompsonwebdev-com' );
+                ?>
+      -home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
 
-		<?php the_post_thumbnail( 'website-image' ); ?>
+      <?php the_post_thumbnail( 'website-image' ); ?>
 
 
-		</a>
+      </a>
 		</figure>
 	</div>
 

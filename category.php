@@ -100,10 +100,10 @@ if ( have_posts() ) :
 		</article>
 
 			<?php
-	endwhile;
+      endwhile;
 
-	else :
-		?>
+      else :
+		  ?>
 
 		<?php get_template_part( 'template-part/content', 'none' ); ?>
 
@@ -114,7 +114,7 @@ if ( have_posts() ) :
 
 </section>
 <!--end of Comment box-->
-<div class="clearfix"></div>
+
 
 <?php get_sidebar( 'archive' ); ?>
 

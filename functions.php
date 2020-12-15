@@ -68,9 +68,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 		// load text domain.
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
-		// content width.
-		$GLOBALS['content_width'] = apply_filters( 'clashvibes_content_width', 640 );
-
 		// register meta data for graph ql.
 		register_meta(
 			'post',
@@ -207,6 +204,19 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function raythompsonwebdev_com_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'raythompsonwebdev_com_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
+
 /**
  * Remove version from scripts and styles.
  *
@@ -283,7 +293,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_register_styles' );
 
 
 /**
- * Load the ie8 scripts.
+ * Load the google fonts.
  *
  * @return void
  *  */

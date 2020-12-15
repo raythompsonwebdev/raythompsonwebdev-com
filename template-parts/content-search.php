@@ -49,7 +49,7 @@ $classess = array(
 					</a>
 
 				<?php endif; ?>
-	</a>
+
 
 	<!-- .entry-summary -->
 	<div class="entry">

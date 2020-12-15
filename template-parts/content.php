@@ -78,13 +78,13 @@
 					<?php raythompsonwebdev_com_entry_footer(); ?>
 
 					<p>
-			<?php
-				$lastmodified = get_the_modified_time( 'U' );
-				$posted       = get_the_time( 'U' );
-			if ( $lastmodified > $posted ) {
-				echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-			}
-			?>
+            <?php
+              $lastmodified = get_the_modified_time( 'U' );
+              $posted       = get_the_time( 'U' );
+            if ( $lastmodified > $posted ) {
+              echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
+            }
+            ?>
 					</p>
 
 				</footer>
@@ -96,6 +96,7 @@
 	endwhile;
 
 	?>
+
 <?php else : ?>
 
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>

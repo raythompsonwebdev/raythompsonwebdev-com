@@ -24,16 +24,16 @@
 <footer role="contentinfo">
 
 <?php
-if ( has_nav_menu( 'secondary' ) ) {
+  if ( has_nav_menu( 'secondary' ) ) {
 
-	wp_nav_menu(
-		array(
-			'menu'           => 'secondary',
-			'container'      => 'footer',
-			'theme_location' => 'Secondary',
-		)
-	);
-}
+    wp_nav_menu(
+      array(
+        'menu'           => 'secondary',
+        'container'      => 'footer',
+        'theme_location' => 'Secondary',
+      )
+    );
+  }
 ?>
 
 	<aside class="social-icons">
@@ -73,23 +73,17 @@ if ( has_nav_menu( 'secondary' ) ) {
 
 	<?php echo esc_attr( '&copy; 2016 - Raymond Thompson - UK :', 'raythompsonwebdev-com' ); ?>
 
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>" alt="wordpress.org" aria-label="https://wordpress.org/">
-	</a>
-
-	<span class="sep"> | </span>
-
-	<?php
-
-	sprintf(
-		esc_html_e( 'Theme: raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ),
-		'raythompsonwebdev-com',
-		'<a href="https://www.raythompsonwebdev.co.uk" rel="designer">Raymond Thompson</a>'
-	);
-	?>
-<br/>
-
-
-
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'raythompsonwebdev-com' ) ); ?>">
+  <?php
+  /* translators: %s: CMS name, i.e. WordPress. */
+  printf( esc_html__( 'Proudly powered by %s', 'raythompsonwebdev-com' ), 'WordPress' );
+  ?>
+  </a>
+  <span class="sep"> | </span>
+  <?php
+  /* translators: 1: Theme name, 2: Theme author. */
+  printf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="https://raythompsonwebdev.co.uk">raythompsonwebdev</a>' );
+  ?>
 
 </p>
 </div>

@@ -920,6 +920,8 @@ desktop 1920px*/
       display: inline-block;
       background-color: #f5f2e4;
       box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.1); }
+    #main-content article.single-post .entry {
+      padding: 2em; }
     #main-content .post {
       background-color: #F2f2f2;
       padding: 0 1%;
@@ -1204,11 +1206,12 @@ desktop 1920px*/
         border: solid 1px blue;
         font-size: 1em;
         color: #F2f2f2;
-        margin: 10px;
+        margin: 0;
         padding: 10px;
         background: #0d0d0d;
         direction: ltr;
-        text-align: left; }
+        text-align: left;
+        line-height: 30px; }
         #main-content .post pre.wp-block-code .code {
           width: 90%;
           margin: 5% auto;
@@ -1557,7 +1560,8 @@ desktop 1920px*/
           font-weight: bold;
           line-height: 40px;
           color: #0d0d0d;
-          margin-top: 0.25em; }
+          margin-top: 0.25em;
+          display: flex; }
           #main-content nav.navigation .nav-links div.nav-previous a,
           #main-content nav.navigation .nav-links div.nav-next a {
             font-family: "PT Sans", verdana, helvetica, sans-serif;
@@ -1582,10 +1586,10 @@ desktop 1920px*/
             #main-content nav.navigation .nav-links div.nav-next a:hover {
               background-color: #F2f2f2;
               color: #0d0d0d; }
-            #main-content nav.navigation .nav-links div.nav-previous a:after,
-            #main-content nav.navigation .nav-links div.nav-next a:after {
+            #main-content nav.navigation .nav-links div.nav-previous a::after,
+            #main-content nav.navigation .nav-links div.nav-next a::after {
               font-family: "Font Awesome 5 Free";
-              content: ">>";
+              content: "\f099";
               font-size: 1.6em;
               line-height: 40px;
               float: right;
@@ -1647,6 +1651,14 @@ desktop 1920px*/
         margin: 0; }
         #main-content section.contact-wide ol.commentlist li {
           padding: 0; }
+          #main-content section.contact-wide ol.commentlist li ol.children {
+            margin: auto;
+            padding: 0;
+            width: 90%; }
+            #main-content section.contact-wide ol.commentlist li ol.children li.odd {
+              margin: 0; }
+              #main-content section.contact-wide ol.commentlist li ol.children li.odd article.comment-body {
+                background-color: #000; }
           #main-content section.contact-wide ol.commentlist li .comment-body {
             letter-spacing: 0.1em;
             padding: 0.5em;
@@ -1654,7 +1666,7 @@ desktop 1920px*/
             background-color: #65686B;
             height: auto;
             text-indent: 0;
-            width: 96%;
+            width: 100%;
             margin: 0.5em auto; }
             #main-content section.contact-wide ol.commentlist li .comment-body footer.comment-meta {
               height: 60px;
@@ -3232,7 +3244,7 @@ desktop 1440px*/
         #main-content section.contact-wide ol.commentlist li {
           padding: 0; }
           #main-content section.contact-wide ol.commentlist li .comment-body {
-            width: 96%; }
+            width: 100%; }
             #main-content section.contact-wide ol.commentlist li .comment-body footer.comment-meta {
               height: 50px; }
             #main-content section.contact-wide ol.commentlist li .comment-body .edit-link {
@@ -3913,9 +3925,10 @@ desktop 1280px*/
         padding-left: 0;
         margin: 0; }
         #main-content section.contact-wide ol.commentlist li {
-          padding: 0; }
+          padding: 0;
+          list-style: none; }
           #main-content section.contact-wide ol.commentlist li .comment-body {
-            width: 96%; }
+            width: 100%; }
             #main-content section.contact-wide ol.commentlist li .comment-body footer.comment-meta {
               height: 55px; }
             #main-content section.contact-wide ol.commentlist li .comment-body .edit-link {
