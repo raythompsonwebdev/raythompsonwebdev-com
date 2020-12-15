@@ -4,102 +4,60 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package    WordPress
- * @subpackage Raythompsonwebdev-com
+ * @package raythompsonwebdev-com
  */
 
 ?>
 
-<!--Post loop start -->
-<?php if ( have_posts() ) : ?>
-
-	<?php
-	while ( have_posts() ) :
-		the_post();
-		?>
-
-		<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
-
-			<?php
-			if ( is_singular() ) :
-						the_title( '<h1 class="page-title" >', '</h1>' );
-					else :
-						the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					endif;
-					?>
-
-			<!--Post entry Header-->
-			<header class="byline">
-				<div class="entry-meta">
-			<?php if ( 'post' === get_post_type() ) : ?>
-
-
-				<?php	raythompsonwebdev_com_posted_by(); ?>
-							<?php	raythompsonwebdev_com_posted_on(); ?>
-
-
-					<?php endif; ?>
-				</div>
-			</header>
-
-			<!--featured Image-->
-
-
-				<?php if ( has_post_thumbnail() ) : ?>
-
-					<?php raythompsonwebdev_com_post_thumbnail(); ?>
-
-					<?php else : ?>
-
-						<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" aria-hidden="true">
-
-								<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-
-					</a>
-
-				<?php endif; ?>
-
-			<!--featured Image end-->
-
-
-
-				<div class="entry">
-
-					<?php the_excerpt(); ?>
-
-
-
-				</div>
-
-
-				<!--Post entry footer-->
-				<footer class="byline">
-
-					<?php raythompsonwebdev_com_entry_footer(); ?>
-
-					<p>
-            <?php
-              $lastmodified = get_the_modified_time( 'U' );
-              $posted       = get_the_time( 'U' );
-            if ( $lastmodified > $posted ) {
-              echo 'Edited ' . esc_html( human_time_diff( get_the_time( 'U' ) ), esc_html( get_the_modified_time( 'U' ) ) ) . ' later';
-            }
-            ?>
-					</p>
-
-				</footer>
-
-		</article>
-
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
 		<?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
 
-	endwhile;
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				raythompsonwebdev_com_posted_on();
+				raythompsonwebdev_com_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
 
-	?>
+	<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
-<?php else : ?>
+	<div class="entry-content">
+		<?php
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				wp_kses_post( get_the_title() )
+			)
+		);
 
-	<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
+				'after'  => '</div>',
+			)
+		);
+		?>
+	</div><!-- .entry-content -->
 
-<?php endif; ?>
-<!--Post loop end -->
+	<footer class="entry-footer">
+		<?php raythompsonwebdev_com_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-<?php the_ID(); ?> -->

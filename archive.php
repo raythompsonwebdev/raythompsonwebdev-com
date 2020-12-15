@@ -1,84 +1,51 @@
 <?php
 /**
- * PHP version 7.2
+ * The template for displaying archive pages
  *
- * Archive page | core/archive.php.
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @category   Archive
- * @package    WordPress
- * @subpackage Raythompsonwebdev-com
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       https:www.raythompsonwebdev.co.uk custom template
+ * @package raythompsonwebdev-com
  */
 
 get_header();
+?>
 
-	the_archive_title( '<h1 class="page-title">', '</h1>' );
-	the_archive_description( '<div class="taxonomy-description">', '</div>' );
+	<main id="primary" class="site-main">
 
-while ( have_posts() ) :
-	the_post();
-	?>
+		<?php if ( have_posts() ) : ?>
 
-	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
+			<header class="page-header">
+				<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
 
-		<h1>
-			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-		</h1>
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
-		<!--Post entry Header-->
-		<header class="byline">
-			<div class="entry-meta">
-		<?php if ( 'post' === get_post_type() ) : ?>
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', get_post_type() );
 
-				<?php	raythompsonwebdev_com_posted_by(); ?>
-			<?php	raythompsonwebdev_com_posted_on(); ?>
+			endwhile;
 
-			<?php endif; ?>
-			</div>
-		</header>
-		<!--featured Image-->
-		<a href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;">
+			the_posts_navigation();
 
-	<?php if ( has_post_thumbnail() ) { ?>
+		else :
 
-		<?php raythompsonwebdev_com_post_thumbnail(); ?>
+			get_template_part( 'template-parts/content', 'none' );
 
-	<?php } else { ?>
+		endif;
+		?>
 
-	<figure class="featuredImage">
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"
-				alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-		</a>
-	</figure>
+	</main><!-- #main -->
 
-		<?php
-	}
-	?>
-
-    <!--featured Image end-->
-		<div class="entry">
-
-		  <?php the_excerpt(); ?>
-
-		</div>
-
-	</article>
-
-<?php endwhile; ?>
-
-<section class="contact-wide">
-
-<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
-
-</section>
-
-
-<?php get_sidebar( 'archive' ); ?>
-
-
-<?php get_footer(); ?>
+<?php
+get_sidebar();
+get_footer();

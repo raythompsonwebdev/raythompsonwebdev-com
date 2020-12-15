@@ -1,42 +1,17 @@
 <?php
 /**
- * *PHP version 5
+ * The sidebar containing the main widget area
  *
- * Sidebar | core/sidebar.php.
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @category   Sidebar
- * @package    WordPress
- * @subpackage Raythompsonwebdev-com
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       https:www.raythompsonwebdev.co.uk custom template
+ * @package raythompsonwebdev-com
  */
 
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
 ?>
 
-<aside id="side-bar" class="group" role="complementary">
-
-	<article class="side-bar-box">
-		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'categoree-widget-area' ) ) : ?>
-
-		<?php endif; ?>
-
-	</article>
-
-	<article class="side-bar-box">
-
-		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) : ?>
-
-		<?php endif; ?>
-
-	</article>
-	
-	<article class="side-bar-box">
-		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'archives-widget-area' ) ) : ?>
-
-		<?php endif; ?>
-	</article>
-
-</aside>
+<aside id="secondary" class="widget-area">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
