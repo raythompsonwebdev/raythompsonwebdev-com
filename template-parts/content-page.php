@@ -10,26 +10,26 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+    <header class="entry-header">
+      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+    </header><!-- .entry-header -->
 
-	<?php raythompsonwebdev_com_post_thumbnail(); ?>
+    <?php raythompsonwebdev_com_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+    <div class="entry-content">
+      <?php
+      the_content();
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+      wp_link_pages(
+        array(
+          'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
+          'after'  => '</div>',
+        )
+      );
+      ?>
+    </div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+	  <?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
 			edit_post_link(
@@ -50,5 +50,5 @@
 			);
 			?>
 		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+	  <?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

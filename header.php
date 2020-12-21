@@ -27,33 +27,68 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
+      <div class="site-logo">
+
+        <?php $site_title = get_bloginfo( 'name' ); ?>
+
+        <a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+          <div class="screen-reader-text">
+            <?php
+              /* translators: %1$s:, CMSname: WordPress. */
+              printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html( $site_title ) );
+            ?>
+          </div>
+          <?php
+            if ( has_custom_logo() ) {
+              the_custom_logo();
+            }
+          ?>
+
+        </a>
+      </div>
 			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+        if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archive-page' ) ) ) : ?>
+        <hgroup>
+				<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
+
+        <?php elseif ( is_page( 'projects' ) || 'project' === get_post_type() ) : ?>
+
+          <hgroup>
+          <h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
+
 				<?php
 			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+        ?>
+        <hgroup>
+				<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
 				<?php
 			endif;
 			$raythompsonwebdev_com_description = get_bloginfo( 'description', 'display' );
 			if ( $raythompsonwebdev_com_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $raythompsonwebdev_com_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+				<h2 class="site-description"><?php echo $raythompsonwebdev_com_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+      <?php endif; ?>
+      </hgroup>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'raythompsonwebdev-com' ); ?></button>
 			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+
+      if ( has_nav_menu( 'main' ) ) {
+					wp_nav_menu(
+						array(
+							'menu'           => 'main',
+							'container'      => 'nav',
+							'container_id'   => 'main-menu',
+							'menu_class'     => 'nav-menu',
+							'theme_location' => 'Main',
+
+						)
+					);
+        }
+      ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+  <div id="main-content">

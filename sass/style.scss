@@ -118,216 +118,224 @@ desktop 1920px*/
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
 
-    /*Site Logo*/
-    .site-logo {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 3.4em;
-      height: 100%;
+
+    .site-branding{
+      margin:0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
       -webkit-flex: 1 0 auto;
       -ms-flex: 1 0 auto;
       flex: 1 0 auto;
-
-      a.custom-logo-link {
-        position: absolute;
-        z-index: 1;
+      width: 50%;
+      /*Site Logo*/
+      .site-logo {
         top: 0;
         left: 0;
-        display: block;
-        background: $colorwhite;
-        color: $blackcolor;
-        text-decoration: none;
-        @include originTran(50% 50%);
-        @include Transition(all 0.2s ease-out 0s);
-        height: auto;
-        margin: 0.2em;
-        img.custom-logo {
-          vertical-align: middle;
+        width: 3.4em;
+
+        a.custom-logo-link {
+
+          z-index: 1;
+          top: 0;
+          left: 0;
+          display: block;
+          background: $colorwhite;
+          color: $blackcolor;
+          text-decoration: none;
+          @include originTran(50% 50%);
+          @include Transition(all 0.2s ease-out 0s);
+          height: auto;
+          margin: 0.2em;
+          img.custom-logo {
+            vertical-align: middle;
+          }
+
+          /* Text meant only for screen readers. */
+          div.screen-reader-text {
+            clip: rect(1px, 1px, 1px, 1px);
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+
+            &:focus {
+              background-color: #f1f1f1;
+              border-radius: 3px;
+              box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+              clip: auto !important;
+              color: #21759b;
+              display: block;
+              font-size: 14px;
+              font-size: 0.875rem;
+              font-weight: bold;
+              height: auto;
+              left: 5px;
+              line-height: normal;
+              padding: 15px 23px 14px;
+              text-decoration: none;
+              top: 5px;
+              width: auto;
+              z-index: 100000;
+            }
+          }
+
+          div.site-firstletter {
+            font-family: $FontStyleHeader;
+            font-size: 1.8em;
+            font-weight: normal;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+          }
         }
+      }
 
-        /* Text meant only for screen readers. */
-        div.screen-reader-text {
-          clip: rect(1px, 1px, 1px, 1px);
-          position: absolute !important;
-          height: 1px;
-          width: 1px;
-          overflow: hidden;
+      .site-logo a:focus,
+      .site-logo a:hover {
+        outline: 2px solid $colorwhite;
+      }
 
-          &:focus {
-            background-color: #f1f1f1;
-            border-radius: 3px;
-            box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-            clip: auto !important;
-            color: #21759b;
-            display: block;
-            font-size: 14px;
-            font-size: 0.875rem;
-            font-weight: bold;
-            height: auto;
-            left: 5px;
-            line-height: normal;
-            padding: 15px 23px 14px;
-            text-decoration: none;
-            top: 5px;
-            width: auto;
-            z-index: 100000;
+      /*Header*/
+      .site-logo a:focus .site-firstletter,
+      .site-logo a:hover .site-firstletter {
+        background: $blackcolor;
+        color: $colorwhite;
+        font-weight: bold;
+      }
+      /*Header Title*/
+      hgroup {
+        width: 50%;
+        display: block;
+        float: left;
+        height: 4em;
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        font-family: $FontStyleHeader;
+        h1#logo,
+        h1#logo-blog {
+          font-size: 1.6em;
+          width: 100%;
+          height: 35px;
+          line-height: 35px;
+          color: $greencolor;
+          font-family: $FontStyleHeader;
+          display: block;
+          letter-spacing: 0.01em;
+          margin: 0;
+
+          span {
+            height: 100%;
+            margin: 0;
+            color: $blackcolor;
+            text-align: left;
+            display: inline-block;
+          }
+
+          span:last-of-type {
+            height: 100%;
+            color: $redcolor2;
+            display: inline-block;
+            margin: 0 0.1em;
           }
         }
 
-        div.site-firstletter {
-          font-family: $FontStyleHeader;
-          font-size: 1.8em;
+        h2 {
+          display: block;
+          width: 100%;
+          letter-spacing: 0.1em;
+          line-height: 20px;
+          font-size: 0.75em;
           font-weight: normal;
-          text-align: center;
-          margin: 0;
           padding: 0;
-          height: 100%;
-        }
-      }
-    }
-
-    .site-logo a:focus,
-    .site-logo a:hover {
-      outline: 2px solid $colorwhite;
-    }
-
-    /*Header*/
-    .site-logo a:focus .site-firstletter,
-    .site-logo a:hover .site-firstletter {
-      background: $blackcolor;
-      color: $colorwhite;
-      font-weight: bold;
-    }
-    /*Header Title*/
-    hgroup {
-      width: 50%;
-      display: block;
-      float: left;
-      height: 4em;
-      -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
-      font-family: $FontStyleHeader;
-      h1#logo,
-      h1#logo-blog {
-        font-size: 1.6em;
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        color: $greencolor;
-        font-family: $FontStyleHeader;
-        display: block;
-        letter-spacing: 0.01em;
-
-        span {
-          height: 100%;
-          margin: 0;
           color: $blackcolor;
-          text-align: left;
-          display: inline-block;
         }
-
-        span:last-of-type {
-          height: 100%;
-          color: $redcolor2;
-          display: inline-block;
-          margin: 0 0.1em;
-        }
-      }
-
-      h2 {
-        display: block;
-        width: 100%;
-        letter-spacing: 0.1em;
-        line-height: 20px;
-        font-size: 0.75em;
-        font-weight: normal;
-        padding: 0;
-        color: $blackcolor;
       }
     }
 
     /*Navigation*/
-    nav.menu-main-container {
-      padding: 0;
-      font-family: ($FontStyle);
-      display: block;
-      width: 45%;
-      float: right;
-      margin: 0.5em 0 0 0;
-      height: 35px;
-      -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-      flex: 1 0 auto;
 
-      ul#menu-main {
+    .main-navigation{
+      width:50%;
+      nav.menu-main-container {
         padding: 0;
-        margin: 0;
+        font-family: ($FontStyle);
+        display: block;
+        width: 80%;
+        margin: 0.5em;
         height: 35px;
-        width: 100%;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-flow: row;
-        -ms-flex-flow: row;
-        flex-flow: row;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+        float:right;
 
-        li.menu-item {
-          height: 35px;
-          width: 19.5%;
-          list-style: none;
+
+        ul#menu-main {
           padding: 0;
-          display: inline-block;
-          text-align: center;
-          -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-          border: 1px solid $blackcolor;
+          margin: 0;
+          height: 35px;
+          width: 100%;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-flow: row;
+          -ms-flex-flow: row;
+          flex-flow: row;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
 
-          a {
-            background-color: $colorwhite;
-            width: 100%;
-            height: 100%;
-            text-decoration: none;
-            line-height: 33px;
-            color: $blackcolor;
-            font-size: 0.9em;
-            display: block;
-            letter-spacing: 0.1em;
-            font-weight: normal;
-            @include box-sizing($type: border-box);
-            @include originTran(50% 50%);
-            @include Transition(all 0.2s ease-in 0s);
-            &:focus {
-              outline: 1px solid $yellowcolor;
-            }
-            &:active {
-              color: $yellowcolor;
-              background-color: $blackcolor;
-            }
-            &:hover {
-              background-color: $blackcolor;
-              color: $colorwhite;
+          li.menu-item {
+            height: 35px;
+            width: 19.5%;
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            text-align: center;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            border: 1px solid $blackcolor;
+
+            a {
+              background-color: $colorwhite;
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              line-height: 33px;
+              color: $blackcolor;
+              font-size: 0.9em;
+              display: block;
+              letter-spacing: 0.1em;
+              font-weight: normal;
+              @include box-sizing($type: border-box);
+              @include originTran(50% 50%);
+              @include Transition(all 0.2s ease-in 0s);
+              &:focus {
+                outline: 1px solid $yellowcolor;
+              }
+              &:active {
+                color: $yellowcolor;
+                background-color: $blackcolor;
+              }
+              &:hover {
+                background-color: $blackcolor;
+                color: $colorwhite;
+              }
             }
           }
         }
       }
-    }
-
-    /*Mobile-Navigation*/
-    nav#mobile-nav {
-      display: none;
+      /*Mobile-Navigation*/
+      nav#mobile-nav {
+        display: none;
+      }
     }
   }
 

@@ -45,12 +45,19 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-		add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'post-thumbnails' );
+    // Create new image sizes.
+		add_image_size( 'featured-image', 1200, 630 );
+		add_image_size( 'website-image', 400, 650 );
+		add_image_size( 'search-image', 600, 250, true );
+		add_image_size( 'projectpage-image', 230, 480 );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'raythompsonwebdev-com' ),
+				'main'      => esc_html__( 'Main', 'raythompsonwebdev-com' ),
+				'secondary' => esc_html__( 'Secondary', 'raythompsonwebdev-com' ),
+				'mobile'    => esc_html__( 'Mobile', 'raythompsonwebdev-com' ),
 			)
 		);
 
@@ -69,19 +76,38 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 				'style',
 				'script',
 			)
-		);
+    );
+
+    $defaults = array(
+      'default-image'          => '',
+      'width'                  => 0,
+      'height'                 => 0,
+      'flex-height'            => false,
+      'flex-width'             => false,
+      'uploads'                => true,
+      'random-default'         => false,
+      'header-text'            => true,
+      'default-text-color'     => '',
+      'wp-head-callback'       => '',
+      'admin-head-callback'    => '',
+      'admin-preview-callback' => '',
+    );
+    add_theme_support( 'custom-header', $defaults );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'raythompsonwebdev_com_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
+		$defaults = array(
+      'default-color'          => '',
+      'default-image'          => '',
+      'default-repeat'         => 'repeat',
+      'default-position-x'     => 'left',
+            'default-position-y'     => 'top',
+            'default-size'           => 'auto',
+      'default-attachment'     => 'scroll',
+      'wp-head-callback'       => '_custom_background_cb',
+      'admin-head-callback'    => '',
+      'admin-preview-callback' => ''
+    );
+    add_theme_support( 'custom-background', $defaults );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -94,8 +120,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 90,
+				'width'       => 90,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
@@ -115,7 +141,13 @@ function raythompsonwebdev_com_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'raythompsonwebdev_com_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
-
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function raythompsonwebdev_com_add_editor_styles() {
+  add_editor_style( '/css/custom-editor-style.css' );
+}
+add_action( 'admin_init', 'raythompsonwebdev_com_add_editor_styles' );
 /**
  * Register widget area.
  *
@@ -178,3 +210,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//exclude node modules from theme check.
+// add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
+//   $exclude_filters[] = 'themes/<YOUR-THEME-NAME>/node_modules';
+//   return $exclude_filters;
+// });
