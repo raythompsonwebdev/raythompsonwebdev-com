@@ -1,6 +1,6 @@
 <?php
 /**
- * raythompsonwebdev-com functions and definitions
+ * Functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
@@ -45,8 +45,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 		 *
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
-    add_theme_support( 'post-thumbnails' );
-    // Create new image sizes.
+		add_theme_support( 'post-thumbnails' );
+		// Create new image sizes.
 		add_image_size( 'featured-image', 1200, 630 );
 		add_image_size( 'website-image', 400, 650 );
 		add_image_size( 'search-image', 600, 250, true );
@@ -76,38 +76,38 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 				'style',
 				'script',
 			)
-    );
+		);
 
-    $defaults = array(
-      'default-image'          => '',
-      'width'                  => 0,
-      'height'                 => 0,
-      'flex-height'            => false,
-      'flex-width'             => false,
-      'uploads'                => true,
-      'random-default'         => false,
-      'header-text'            => true,
-      'default-text-color'     => '',
-      'wp-head-callback'       => '',
-      'admin-head-callback'    => '',
-      'admin-preview-callback' => '',
-    );
-    add_theme_support( 'custom-header', $defaults );
+		$defaults = array(
+			'default-image'          => '',
+			'width'                  => 0,
+			'height'                 => 0,
+			'flex-height'            => false,
+			'flex-width'             => false,
+			'uploads'                => true,
+			'random-default'         => false,
+			'header-text'            => true,
+			'default-text-color'     => '',
+			'wp-head-callback'       => '',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => '',
+		);
+		add_theme_support( 'custom-header', $defaults );
 
 		// Set up the WordPress core custom background feature.
 		$defaults = array(
-      'default-color'          => '',
-      'default-image'          => '',
-      'default-repeat'         => 'repeat',
-      'default-position-x'     => 'left',
-            'default-position-y'     => 'top',
-            'default-size'           => 'auto',
-      'default-attachment'     => 'scroll',
-      'wp-head-callback'       => '_custom_background_cb',
-      'admin-head-callback'    => '',
-      'admin-preview-callback' => ''
-    );
-    add_theme_support( 'custom-background', $defaults );
+			'default-color'          => '',
+			'default-image'          => '',
+			'default-repeat'         => 'repeat',
+			'default-position-x'     => 'left',
+			'default-position-y'     => 'top',
+			'default-size'           => 'auto',
+			'default-attachment'     => 'scroll',
+			'wp-head-callback'       => '_custom_background_cb',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => '',
+		);
+		add_theme_support( 'custom-background', $defaults );
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -145,7 +145,7 @@ add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
  * Registers an editor stylesheet for the theme.
  */
 function raythompsonwebdev_com_add_editor_styles() {
-  add_editor_style( '/css/custom-editor-style.css' );
+	add_editor_style( '/css/custom-editor-style.css' );
 }
 add_action( 'admin_init', 'raythompsonwebdev_com_add_editor_styles' );
 /**
@@ -156,9 +156,9 @@ add_action( 'admin_init', 'raythompsonwebdev_com_add_editor_styles' );
 function raythompsonwebdev_com_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'raythompsonwebdev-com' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'raythompsonwebdev-com' ),
+			'name'          => esc_html__( 'Primary Sidebar', 'raythompsonwebdev-com' ),
+			'id'            => 'primary-widget-area',
+			'description'   => esc_html__( 'The primary widget area', 'raythompsonwebdev-com' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -169,6 +169,57 @@ function raythompsonwebdev_com_widgets_init() {
 add_action( 'widgets_init', 'raythompsonwebdev_com_widgets_init' );
 
 /**
+ *  Media widget area.
+ */
+function raythompsonwebdev_com_media_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'media-widget-area', 'raythompsonwebdev-com' ),
+			'id'            => 'media-widget-area',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'raythompsonwebdev_com_media_widgets_init' );
+
+/**
+ *  Archives widget area.
+ */
+function raythompsonwebdev_com_archives_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'archives-widget-area', 'raythompsonwebdev-com' ),
+			'id'            => 'archives-widget-area',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'raythompsonwebdev_com_archives_widgets_init' );
+
+/**
+ *  Categories widget area.
+ */
+function raythompsonwebdev_com_categoree_widgets_init() {
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Category-widget-area', 'raythompsonwebdev-com' ),
+			'id'            => 'categoree-widget-area',
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+}
+add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
+
+/**
  * Enqueue scripts and styles.
  */
 function raythompsonwebdev_com_scripts() {
@@ -177,11 +228,48 @@ function raythompsonwebdev_com_scripts() {
 
 	wp_enqueue_script( 'raythompsonwebdev-com-navigation', get_template_directory_uri() . '/js/navigation.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
+	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+
+	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, false );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts' );
+
+/**
+ *  Enqueue lightbox script.
+ *
+ *  @return void
+ */
+function raythompsonwebdev_com_add_lightbox() {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
+		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
+
+/**
+ * Enqueue profile page scripts.
+ *
+ * @return void
+ */
+function raythompsonwebdev_com_about_page_scripts() {
+
+	if ( is_page( 'about' ) ) {
+		// scrollto script.
+		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		// easing script.
+		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		// profile page scripts.
+		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+
+	}
+}
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -210,8 +298,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-//exclude node modules from theme check.
-// add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {
-//   $exclude_filters[] = 'themes/<YOUR-THEME-NAME>/node_modules';
-//   return $exclude_filters;
-// });
+// exclude node modules from theme check.
+// add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {.
+// $exclude_filters[] = 'themes/<YOUR-THEME-NAME>/node_modules';.
+// return $exclude_filters;.
+// });.

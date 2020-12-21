@@ -1,6 +1,6 @@
 <?php
 /**
- * raythompsonwebdev-com Theme Customizer
+ * Theme Customizer
  *
  * @package raythompsonwebdev-com
  */
@@ -13,10 +13,10 @@
 function raythompsonwebdev_com_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-  $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-  $wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 
-  // Create header background color setting.
+	// Create header background color setting.
 	$wp_customize->add_setting(
 		'header_color',
 		array(

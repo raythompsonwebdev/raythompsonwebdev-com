@@ -47,6 +47,18 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
+		$author_id = get_the_author_meta( 'ID' );
+
+		if ( ! raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
+
+			echo '<div class="meta-content has-avatar">';
+			echo '<div class="author-avatar">' . get_avatar( get_the_author_meta( 'ID' ) ) . '</div>';
+		} else {
+			echo '<div class="meta-content">';
+		}
+
+	echo '</div><!-- .meta-content -->';
+
 		echo '<span class="byline"> ' . $raythompsonwebdev_com_byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 	}
@@ -153,13 +165,129 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'wp_body_open' ) ) :
+if ( ! function_exists( 'raythompsonwebdev_com_body_open' ) ) :
 	/**
 	 * Shim for sites older than 5.2.
 	 *
 	 * @link https://core.trac.wordpress.org/ticket/12563
 	 */
-	function wp_body_open() {
-		do_action( 'wp_body_open' );
+	function raythompsonwebdev_com_body_open() {
+		do_action( 'raythompsonwebdev_com_body_open' );
 	}
 endif;
+
+/**
+ * Utility function to check if a gravatar exists for a given email or id
+ *
+ * @param  int|string|object $id_or_email A user ID,  email address, or comment object.
+ * @return bool if the gravatar exists or not.
+ * Original found at https://gist.github.com/justinph/5197810.
+ */
+function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
+	// id or email code borrowed from wp-includes/pluggable.php.
+
+	if ( is_numeric( $id_or_email ) ) {
+		$id   = (int) $id_or_email;
+		$user = get_userdata( $id );
+		if ( $user ) {
+			$email = $user->user_email;
+		}
+	} elseif ( is_object( $id_or_email ) ) {
+		// No avatar for pingbacks or trackbacks.
+		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
+		/**
+		 * Utility function to check if a gravatar exists for a given email or id
+		 *
+		 * @param  int|string|object $id_or_email A user ID,  email address, or comment object.
+		 * @return bool if the gravatar exists or not.
+		 * Original found at https://gist.github.com/justinph/5197810.
+		 */
+		function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
+			// id or email code borrowed from wp-includes/pluggable.php.
+
+			if ( is_numeric( $id_or_email ) ) {
+				$id   = (int) $id_or_email;
+				$user = get_userdata( $id );
+				if ( $user ) {
+					$email = $user->user_email;
+				}
+			} elseif ( is_object( $id_or_email ) ) {
+				// No avatar for pingbacks or trackbacks.
+				$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
+
+				if ( ! empty( $id_or_email->comment_type ) && ! in_array(
+					$id_or_email->comment_type,
+					(array) $allowed_comment_types,
+					true
+				) ) {
+					return false;
+				}
+
+				if ( ! empty( $id_or_email->user_id ) ) {
+					$id   = (int) $id_or_email->user_id;
+					$user = get_userdata( $id );
+					if ( $user ) {
+						$email = $user->user_email;
+					}
+				} elseif ( ! empty( $id_or_email->comment_author_email ) ) {
+					$email = $id_or_email->comment_author_email;
+				}
+			} else {
+				$email = $id_or_email;
+			}
+			$hashkey = md5( strtolower( trim( $email ) ) );
+			$uri     = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
+			$data    = wp_cache_get( $hashkey );
+			if ( false === $data ) {
+				$response = wp_remote_head( $uri );
+				if ( is_wp_error( $response ) ) {
+					$data = 'not200';
+				} else {
+					$data = $response['response']['code'];
+				}
+				wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
+			}
+			if ( '200' === $data ) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+		if ( ! empty( $id_or_email->comment_type ) && ! in_array(
+			$id_or_email->comment_type,
+			(array) $allowed_comment_types,
+			true
+		) ) {
+			return false;
+		}
+
+		if ( ! empty( $id_or_email->user_id ) ) {
+			$id   = (int) $id_or_email->user_id;
+			$user = get_userdata( $id );
+			if ( $user ) {
+				$email = $user->user_email;
+			}
+		} elseif ( ! empty( $id_or_email->comment_author_email ) ) {
+			$email = $id_or_email->comment_author_email;
+		}
+	} else {
+		$email = $id_or_email;
+	}
+	$hashkey = md5( strtolower( trim( $email ) ) );
+	$uri     = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
+	$data    = wp_cache_get( $hashkey );
+	if ( false === $data ) {
+		$response = wp_remote_head( $uri );
+		if ( is_wp_error( $response ) ) {
+			$data = 'not200';
+		} else {
+			$data = $response['response']['code'];
+		}
+		wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
+	}
+	if ( '200' === $data ) {
+		return true;
+	} else {
+		return false;
+	}
+}

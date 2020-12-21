@@ -26,6 +26,6 @@ get_header(); ?>
 
 </section>
 
-<?php ///get_sidebar( 'archive' ); ?>
+<?php get_sidebar( 'archive' ); ?>
 
 <?php get_footer(); ?>
