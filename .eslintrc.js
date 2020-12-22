@@ -1,38 +1,23 @@
 module.exports = {
-    "root": true,
     "env": {
         "browser": true,
-        "commonjs": true,
-        "es6": true,
-        "jquery": true
+        "es6": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:jquery/deprecated"
-
-    ],
+    "extends": "eslint:recommended",
     "globals": {
-      "document": "readonly",
-      "navigator": "readonly",
-      "window": "readonly",
-      "$": true
-
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
-        "ecmaVersion": 2019,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
         "sourceType": "module"
-
     },
     "plugins": [
-      "dollar-sign",
-      "jquery"
+        "react"
     ],
     "rules": {
-      "no-console": 1,
-      "dollar-sign/dollar-sign": [
-        2,
-        "ignoreProperties"
-      ]
-
     }
-  };
+};
