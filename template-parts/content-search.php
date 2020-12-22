@@ -17,7 +17,6 @@
 		<div class="entry-meta">
 			<?php
 			raythompsonwebdev_com_posted_on();
-			raythompsonwebdev_com_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

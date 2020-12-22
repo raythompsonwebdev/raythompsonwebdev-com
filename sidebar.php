@@ -13,6 +13,7 @@
 <!-- #secondary -->
 
 <aside id="side-bar" class="group widget-area" role="complementary">
+	<h1>Banner</h1>
 
 <?php
 if ( ! is_active_sidebar( 'categoree-widget-area' ) ) {

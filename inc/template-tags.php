@@ -13,6 +13,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 	 */
 	function raythompsonwebdev_com_posted_on() {
 		$raythompsonwebdev_com_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$raythompsonwebdev_com_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
@@ -25,13 +26,35 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$raythompsonwebdev_com_posted_on = sprintf(
+		$raythompsonwebdev_com_posted = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'Posted on %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_time_string . '</a>'
 		);
 
-		echo '<span class="posted-on">' . $raythompsonwebdev_com_posted_on . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		$raythompsonwebdev_com_byline = sprintf(
+			/* translators: %s: post author. */
+			esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
+
+		// Display the author avatar if the author has a Gravatar.
+		$raythompsonwebdev_com_author_id = get_the_author_meta( 'ID' );
+		if ( raythompsonwebdev_com_validate_gravatar( $raythompsonwebdev_com_author_id ) ) {
+			echo '<div class="meta-content has-avatar">';
+			echo '<div class="author-avatar">' . get_avatar( $raythompsonwebdev_com_author_id ) . '</div>';
+		} else {
+			echo '<div class="meta-content">';
+		}
+
+		echo '<span class="byline"> ' . $raythompsonwebdev_com_byline . '</span><span class="posted-on">' . $raythompsonwebdev_com_posted . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<span class="comments-link">';
+			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-com' ) );
+			echo '</span>';
+		}
+		echo '</div><!-- .meta-content -->';
 
 	}
 endif;
@@ -40,28 +63,45 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function raythompsonwebdev_com_posted_by() {
-		$raythompsonwebdev_com_byline = sprintf(
+	function raythompsonwebdev_com_index_posted_on() {
+
+		$raythompsonwebdev_com_index_author_id = get_the_author_meta( 'ID' );
+
+		$raythompsonwebdev_com_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$raythompsonwebdev_com_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+		}
+		$raythompsonwebdev_com_index_time_string = sprintf(
+			$raythompsonwebdev_com_index_time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$raythompsonwebdev_com_index_posted = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Published %s', 'post date', 'raythompsonwebdev-com' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_index_time_string . '</a>'
+		);
+
+		$raythompsonwebdev_com_index_byline = sprintf(
 			/* translators: %s: post author. */
 			esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		$author_id = get_the_author_meta( 'ID' );
+		echo '<div class="meta-content">';
 
-		if ( ! raythompsonwebdev_com_validate_gravatar( $author_id ) ) {
-
-			echo '<div class="meta-content has-avatar">';
-			echo '<div class="author-avatar">' . get_avatar( get_the_author_meta( 'ID' ) ) . '</div>';
-		} else {
-			echo '<div class="meta-content">';
+		echo '<span class="byline">' . $raythompsonwebdev_com_index_byline . ' </span><span class="posted-on"> ' . $raythompsonwebdev_com_index_posted . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<span class="comments-link">';
+			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-comr' ) );
+			echo '</span>';
 		}
-
-	echo '</div><!-- .meta-content -->';
-
-		echo '<span class="byline"> ' . $raythompsonwebdev_com_byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-
+		echo '</div><!-- .meta-content -->';
 	}
+
 endif;
 
 if ( ! function_exists( 'raythompsonwebdev_com_entry_footer' ) ) :

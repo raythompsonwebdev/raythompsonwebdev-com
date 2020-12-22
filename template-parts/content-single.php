@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'rtwd-post' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
 		if ( is_singular() ) :
@@ -22,7 +22,7 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				raythompsonwebdev_com_index_posted_on();
+				raythompsonwebdev_com_posted_on();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -32,7 +32,7 @@
 
 	<div class="entry-content">
 		<?php
-		the_excerpt(
+		the_content(
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */

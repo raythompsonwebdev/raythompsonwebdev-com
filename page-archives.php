@@ -18,14 +18,15 @@
 
 get_header(); ?>
 
+<main id="primary" class="site-main">
+<?php
+	the_archive_title( '<h1 class="page-title">', '</h1>' );
+	the_archive_description( '<div class="taxonomy-description">', '</div>' );
+?>
+
 <?php get_template_part( 'template-parts/content', 'archives' ); ?>
 
-<section class="contact-wide">
-
-	<h1><?php esc_html_e( 'Archive Menu', 'raythompsonwebdev-com' ); ?></h1>
-
-</section>
-
+</main>
 <?php get_sidebar( 'archive' ); ?>
 
 <?php get_footer(); ?>
