@@ -38,8 +38,11 @@
   },
   "scripts": {
     "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../raythompsonwebdev-com.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .babelrc .editorconfig .eslintrc.js .travis.yml phpcs.xml.dist sass style.css.map .sass-cache"
