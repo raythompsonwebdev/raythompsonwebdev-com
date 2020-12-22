@@ -61,48 +61,28 @@ section {
 	display: block;
 }
 
+
 img {
 	max-width: 100%;
 	height: auto;
 	border: 0;
 	vertical-align: baseline;
 	outline: none;
-}
-
-a {
-	margin: 0;
-	padding: 0;
-	font-family: $FontStyleHeader;
-	text-decoration: none;
-	&:hover {
-		font-weight: bold;
-		cursor: pointer;
-	}
-	&:visited {
-		font-weight: bold;
-	}
-}
-
-h1,
-h2,
-h3,
-h4 {
-	font-family: $FontStyleHeader;
-	padding: 0;
-	margin: 0;
-	width: 100%;
+	border-style: none;
 }
 
 p {
 	font-family: $FontStyle;
 	padding: 0;
 	margin: 0;
+	/* margin-bottom: 1.5em;*/
 }
 
 ul {
 	font-family: $FontStyle;
 	padding: 0;
 	margin: 0;
+	list-style: disc;
 }
 
 li {
@@ -113,6 +93,11 @@ li {
 input {
 	margin: 0;
 	padding: 0;
+}
+
+textarea {
+	width: 100%;
+	overflow: auto;
 }
 
 figure {
@@ -164,9 +149,11 @@ figure {
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
 }
 
 /* Sections
@@ -179,6 +166,7 @@ html {
 /**
  * Render the `main` element consistently in IE.
  */
+
 main {
 	display: block;
 }
@@ -187,6 +175,7 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
+
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
@@ -199,20 +188,12 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
+
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
 
 /* Text-level semantics
 	 ========================================================================== */
@@ -220,14 +201,12 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-a {
-	background-color: transparent;
-}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
+
 abbr[title] {
 	border-bottom: none;
 	text-decoration: underline;
@@ -237,6 +216,7 @@ abbr[title] {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
+
 b,
 strong {
 	font-weight: bolder;
@@ -246,16 +226,18 @@ strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: monospace;
 	font-size: 1em;
 }
 
 /**
  * Add the correct font size in all browsers.
  */
+
 small {
 	font-size: 80%;
 }
@@ -286,9 +268,7 @@ sup {
 /**
  * Remove the border on images inside links in IE 10.
  */
-img {
-	border-style: none;
-}
+
 
 /* Forms
 	 ========================================================================== */
@@ -389,9 +369,6 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-textarea {
-	overflow: auto;
-}
 
 /**
  * 1. Add the correct box sizing in IE 10.
@@ -453,8 +430,7 @@ summary {
 	display: list-item;
 }
 
-/* Misc
-	 ========================================================================== */
+/* Misc */
 
 /**
  * Add the correct display in IE 10+.
@@ -470,27 +446,14 @@ template {
 	display: none;
 }
 
-/* Box sizing
---------------------------------------------- */
+/* Box sizing */
 
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
 
-html {
-	box-sizing: border-box;
-}
+/* Base */
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-
-/* Typography
---------------------------------------------- */
+/* Typography */
 body,
 button,
 input,
@@ -511,10 +474,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
+	font-family: $FontStyleHeader;
+	padding: 0;
 }
 
 dfn,
@@ -565,23 +526,20 @@ big {
 	font-size: 125%;
 }
 
-/* Elements
---------------------------------------------- */
+/* Elements */
 
 hr {
+	box-sizing: content-box;
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+	overflow: visible;
 }
 
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
 }
 
 ol {
@@ -609,47 +567,40 @@ object {
 	max-width: 100%;
 }
 
-img {
-	height: auto;
-	max-width: 100%;
-}
-
-figure {
-	margin: 1em 0;
-}
 
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
 
-/* Links
---------------------------------------------- */
 a {
-	color: #4169e1;
+	margin: 0;
+	padding: 0;
+	font-family: $FontStyleHeader;
+	text-decoration: none;
+	background-color: transparent;
+
+	&:hover {
+		font-weight: bold;
+		cursor: pointer;
+		outline: 0;
+	}
+	&:visited {
+		font-weight: bold;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:active {
+		outline: 0;
+	}
 }
 
-a:visited {
-	color: #800080;
-}
+/* Links */
 
-a:hover,
-a:focus,
-a:active {
-	color: #191970;
-}
 
-a:focus {
-	outline: thin dotted;
-}
 
-a:hover,
-a:active {
-	outline: 0;
-}
-
-/* Forms
---------------------------------------------- */
+/* Forms */
 button,
 input[type="button"],
 input[type="reset"],
@@ -726,9 +677,6 @@ select {
 	border: 1px solid #ccc;
 }
 
-textarea {
-	width: 100%;
-}
 
 /*--------------------------------------------------------------
 # Layouts

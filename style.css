@@ -67,6 +67,7 @@ html[xmlns] .clearfix {
 body {
 	background: #f2f2f2;
 	padding: 0;
+	margin: 0;
 }
 
 article,
@@ -89,44 +90,22 @@ img {
 	border: 0;
 	vertical-align: baseline;
 	outline: none;
-}
-
-a {
-	margin: 0;
-	padding: 0;
-	font-family: "Cabin", bitstream vera sans, verdana, helvetica, sans-serif;
-	text-decoration: none;
-}
-
-a:hover {
-	font-weight: bold;
-	cursor: pointer;
-}
-
-a:visited {
-	font-weight: bold;
-}
-
-h1,
-h2,
-h3,
-h4 {
-	font-family: "Cabin", bitstream vera sans, verdana, helvetica, sans-serif;
-	padding: 0;
-	margin: 0;
-	width: 100%;
+	border-style: none;
 }
 
 p {
 	font-family: "PT Sans", verdana, helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
+
+	/* margin-bottom: 1.5em; */
 }
 
 ul {
 	font-family: "PT Sans", verdana, helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
+	list-style: disc;
 }
 
 li {
@@ -137,6 +116,11 @@ li {
 input {
 	margin: 0;
 	padding: 0;
+}
+
+textarea {
+	width: 100%;
+	overflow: auto;
 }
 
 figure {
@@ -191,6 +175,7 @@ figure {
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
 }
 
 /* Sections
@@ -199,9 +184,6 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-body {
-	margin: 0;
-}
 
 /**
  * Render the `main` element consistently in IE.
@@ -226,20 +208,11 @@ h1 {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-pre {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
 
 /* Text-level semantics
 	 ========================================================================== */
@@ -247,9 +220,6 @@ pre {
 /**
  * Remove the gray background on active links in IE 10.
  */
-a {
-	background-color: transparent;
-}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -276,7 +246,7 @@ strong {
 code,
 kbd,
 samp {
-	font-family: monospace, monospace;
+	font-family: monospace;
 	font-size: 1em;
 }
 
@@ -313,9 +283,6 @@ sup {
 /**
  * Remove the border on images inside links in IE 10.
  */
-img {
-	border-style: none;
-}
 
 /* Forms
 	 ========================================================================== */
@@ -416,9 +383,6 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-textarea {
-	overflow: auto;
-}
 
 /**
  * 1. Add the correct box sizing in IE 10.
@@ -480,8 +444,7 @@ summary {
 	display: list-item;
 }
 
-/* Misc
-	 ========================================================================== */
+/* Misc */
 
 /**
  * Add the correct display in IE 10+.
@@ -497,27 +460,14 @@ template {
 	display: none;
 }
 
-/* Box sizing
---------------------------------------------- */
+/* Box sizing */
 
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-}
 
-html {
-	box-sizing: border-box;
-}
+/* Base */
 
-/* --------------------------------------------------------------
-# Base
--------------------------------------------------------------- */
-
-/* Typography
---------------------------------------------- */
+/* Typography */
 body,
 button,
 input,
@@ -537,10 +487,8 @@ h4,
 h5,
 h6 {
 	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
+	font-family: "Cabin", bitstream vera sans, verdana, helvetica, sans-serif;
+	padding: 0;
 }
 
 dfn,
@@ -591,26 +539,19 @@ big {
 	font-size: 125%;
 }
 
-/* Elements
---------------------------------------------- */
-body {
-	background: #fff;
-}
-
+/* Elements */
 hr {
+	box-sizing: content-box;
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+	overflow: visible;
 }
 
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
-}
-
-ul {
-	list-style: disc;
 }
 
 ol {
@@ -638,47 +579,40 @@ object {
 	max-width: 100%;
 }
 
-img {
-	height: auto;
-	max-width: 100%;
-}
-
-figure {
-	margin: 1em 0;
-}
-
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
 
-/* Links
---------------------------------------------- */
 a {
-	color: #4169e1;
+	margin: 0;
+	padding: 0;
+	font-family: "Cabin", bitstream vera sans, verdana, helvetica, sans-serif;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+a:hover {
+	font-weight: bold;
+	cursor: pointer;
+	outline: 0;
 }
 
 a:visited {
-	color: #800080;
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: #191970;
+	font-weight: bold;
 }
 
 a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
 a:active {
 	outline: 0;
 }
 
-/* Forms
---------------------------------------------- */
+/* Links */
+
+/* Forms */
 button,
 input[type="button"],
 input[type="reset"],
@@ -753,10 +687,6 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
-}
-
-textarea {
-	width: 100%;
 }
 
 /* --------------------------------------------------------------
@@ -1424,10 +1354,7 @@ desktop 1920px */
 		height: 35px;
 		margin: 0;
 		width: 100%;
-		display: block;
 		font-family: "PT Sans", verdana, helvetica, sans-serif;
-		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 		-webkit-justify-content: flex-end;
 		-ms-flex-pack: end;
@@ -1446,7 +1373,6 @@ desktop 1920px */
 	}
 
 	#wrapper .social-1 form.search-form label {
-		width: auto;
 		display: inline-block;
 		line-height: 30px;
 		height: 32px;
@@ -1630,7 +1556,6 @@ desktop 1920px */
 
 	#wrapper div#page article.main-text hr {
 		background-color: #f2f2f2;
-		height: 1px;
 		margin: 5% auto;
 		width: 80%;
 	}
@@ -2145,7 +2070,6 @@ desktop 1920px */
 		text-align: center;
 		margin-bottom: 0.2em;
 		font-size: 1em;
-		text-align: center;
 		font-family: "FontAwesome", "PT Sans", verdana, helvetica, sans-serif;
 	}
 
@@ -2440,7 +2364,6 @@ desktop 1920px */
 
 	#wrapper div#page main#primary article.gallery .website-text {
 		width: 100%;
-		display: inline-block;
 		padding: 0.5em;
 		display: grid;
 		grid-gap: 10px;
@@ -2625,7 +2548,6 @@ desktop 1920px */
 
 	#wrapper div#page main#primary nav.navigation .nav-links div.nav-previous {
 		width: 100%;
-		display: inline-block;
 		font-size: 1em;
 		font-weight: bold;
 		line-height: 40px;
@@ -2678,7 +2600,6 @@ desktop 1920px */
 
 	#wrapper div#page main#primary nav.navigation .nav-links div.nav-next {
 		width: 100%;
-		display: inline-block;
 		font-size: 1em;
 		font-weight: bold;
 		line-height: 40px;
@@ -2787,7 +2708,6 @@ desktop 1920px */
 	}
 
 	#wrapper div#page main#primary section.contact-wide #comments h2.comments-title {
-		height: 35px;
 		min-height: 35px;
 		line-height: 35px;
 		text-indent: 1%;
@@ -2830,7 +2750,6 @@ desktop 1920px */
 	#wrapper div#page main#primary section.contact-wide #comments ol.comment-list li.comment ol.children li.odd article.comment-body footer.comment-meta .comment-author {
 		display: inline-block;
 		height: auto;
-		padding: 0;
 		width: auto;
 		font-size: 0.9em;
 		background-color: #65686b;
@@ -2928,7 +2847,6 @@ desktop 1920px */
 	#wrapper div#page main#primary section.contact-wide #comments ol.comment-list li.comment article.comment-body footer.comment-meta .comment-author {
 		display: inline-block;
 		height: auto;
-		padding: 0;
 		width: auto;
 		font-size: 0.9em;
 		background-color: #65686b;
@@ -3074,7 +2992,6 @@ desktop 1920px */
 		width: 82%;
 		height: auto;
 		margin: 2% auto;
-		padding: 1em;
 		font-family: "PT Sans", verdana, helvetica, sans-serif;
 		padding: 0;
 	}
@@ -3116,7 +3033,6 @@ desktop 1920px */
 		padding: 3px 0 3px 3px;
 		margin: 5px 1px 3px 0;
 		border: 1px solid #ddd;
-		width: 100%;
 		width: 100%;
 		height: 35px;
 	}
@@ -3289,7 +3205,7 @@ desktop 1920px */
 		background-repeat: no-repeat;
 		background-size: 100% auto;
 
-		/* homepage container */
+		/* Homepage container */
 
 		/* front-page image container */
 	}
@@ -3306,9 +3222,9 @@ desktop 1920px */
 		margin: 0;
 		height: auto;
 
-		/* skills table */
+		/* Skills Table */
 
-		/* skills list - not using */
+		/* Skills List - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -3860,7 +3776,6 @@ desktop 1920px */
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
 		text-transform: uppercase;
 		padding: 0;
-		color: #f2f2f2;
 		line-height: 40px;
 		height: 40px;
 		background-color: #88a61c;
@@ -3915,7 +3830,6 @@ desktop 1920px */
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
 		font-weight: normal;
 		margin: 0;
-		padding: 0;
 		background-color: #88a61c;
 		color: #0d0d0d;
 		letter-spacing: 0.01em;
@@ -3947,7 +3861,7 @@ desktop 1920px */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-family: "Font Awesome 5 Free";
+		font-family: "Font Awesome 5 Free", "PT Sans", verdana, helvetica, sans-serif;
 		font-size: 0.95em;
 		color: #0a0a0a;
 		content: "\f005";
@@ -3962,8 +3876,6 @@ desktop 1920px */
 		width: 24%;
 		padding: 0;
 		float: left;
-
-		/* style */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
@@ -4121,14 +4033,11 @@ desktop 1920px */
 		padding: 0;
 		overflow: hidden;
 		width: 100%;
-		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
 		-ms-flex-flow: row wrap;
 		flex-flow: row wrap;
 		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
 		justify-content: flex-start;
 	}
 
@@ -4356,8 +4265,6 @@ desktop 1920px */
 		font-family: "PT Sans", verdana, helvetica, sans-serif;
 		margin: 0;
 		clear: both;
-		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 		-webkit-flex-flow: row wrap;
 		-ms-flex-flow: row wrap;
@@ -4381,7 +4288,6 @@ desktop 1920px */
 		color: #0d0d0d;
 		letter-spacing: 0.1em;
 		text-align: center;
-		margin: 0 auto;
 		font-weight: bold;
 		-webkit-align-self: center;
 		-ms-flex-item-align: center;
@@ -4401,7 +4307,6 @@ desktop 1920px */
 	#wrapper aside#side-bar .side-bar-box h2 {
 		width: 100%;
 		height: 40px;
-		margin: 0;
 		padding: 0;
 		font-size: 1.2em;
 		line-height: 40px;
@@ -4799,10 +4704,6 @@ desktop 1440px */
 
 	#wrapper div#page article.main-text ul li a {
 		display: inline-block;
-	}
-
-	#wrapper div#page article.main-text hr {
-		height: 1px;
 	}
 
 	#wrapper div#page #map_container {
@@ -5505,8 +5406,6 @@ desktop 1440px */
 		width: 100%;
 
 		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -5568,10 +5467,6 @@ desktop 1440px */
 
 	#wrapper div#page main#frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
 		font-size: 1.6em;
-	}
-
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
 	}
 
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
@@ -5660,10 +5555,6 @@ desktop 1440px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 50%;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -5725,10 +5616,6 @@ desktop 1440px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
 		font-size: 0.9em;
-	}
-
-	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
-		/* style */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
@@ -6073,10 +5960,6 @@ desktop 1280px */
 
 	#wrapper div#page article.main-text ul li a {
 		display: inline-block;
-	}
-
-	#wrapper div#page article.main-text hr {
-		height: 1px;
 	}
 
 	#wrapper div#page blockquote {
@@ -6768,8 +6651,6 @@ desktop 1280px */
 		width: 100%;
 
 		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -6831,10 +6712,6 @@ desktop 1280px */
 
 	#wrapper div#page main#frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
 		font-size: 1.6em;
-	}
-
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
 	}
 
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
@@ -6925,10 +6802,6 @@ desktop 1280px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 50%;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -6988,10 +6861,6 @@ desktop 1280px */
 		font-size: 0.85em;
 	}
 
-	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
-		/* style */
-	}
-
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
 		height: 44px;
 	}
@@ -7034,9 +6903,6 @@ desktop 1280px */
 
 	#wrapper div#page main#profile_container section#prof_cont #chart #bars li .bar:hover::after {
 		font-size: 0.9em;
-	}
-
-	#wrapper div#page main#profile_container section#prof_cont #chart #bars li .bar:hover::after {
 		line-height: 50px;
 		width: 24%;
 	}
@@ -7326,10 +7192,6 @@ desktop 1024px */
 
 	#wrapper div#page article.main-text ul li a:hover {
 		font-weight: bold;
-	}
-
-	#wrapper div#page article.main-text hr {
-		height: 1px;
 	}
 
 	#wrapper div#page blockquote {
@@ -8062,8 +7924,6 @@ desktop 1024px */
 		width: 100%;
 
 		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -8125,10 +7985,6 @@ desktop 1024px */
 
 	#wrapper div#page main#frontpage_container div#text-box-front ul.webskills li#fa-mobile::before {
 		font-size: 1.6em;
-	}
-
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
 	}
 
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
@@ -8216,10 +8072,6 @@ desktop 1024px */
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 50%;
 		padding: 0.5em;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -8281,10 +8133,6 @@ desktop 1024px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
 		font-size: 0.85em;
-	}
-
-	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
-		/* style */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
@@ -9404,10 +9252,6 @@ tablet 800px */
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-
-		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -9486,8 +9330,6 @@ tablet 800px */
 		order: 0;
 		width: 100%;
 		margin: 0;
-
-		/* PNG for IE8 */
 	}
 
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
@@ -9536,8 +9378,6 @@ tablet 800px */
 		-ms-flex-pack: center;
 		align-items: center;
 		padding: 0;
-
-		/* first text block */
 	}
 
 	#wrapper div#page main#profile_container #text-box-profile {
@@ -9604,10 +9444,6 @@ tablet 800px */
 		order: 3;
 		width: 90%;
 		margin: 1em;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -9666,10 +9502,6 @@ tablet 800px */
 		font-size: 0.9em;
 	}
 
-	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
-		/* style */
-	}
-
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
 		height: 44px;
 	}
@@ -9680,26 +9512,6 @@ tablet 800px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li a:hover {
 		line-height: 41px;
-	}
-
-	#wrapper div#page main#profile_container #text-box-profile-b {
-		height: auto;
-	}
-
-	#wrapper div#page main#profile_container #text-box-profile-b p {
-		font-size: 0.9em;
-	}
-
-	#wrapper div#page main#profile_container #text-box-profile-b p strong {
-		width: auto;
-	}
-
-	#wrapper div#page main#profile_container #text-box-profile-b p strong a {
-		font-weight: bold;
-	}
-
-	#wrapper div#page main#profile_container #text-box-profile-b p strong a:hover {
-		text-decoration: underline;
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont {
@@ -10793,10 +10605,6 @@ tablet 600px */
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-
-		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -10860,10 +10668,6 @@ tablet 600px */
 		font-size: 1.6em;
 	}
 
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
-	}
-
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
 		font-size: 2.1em;
 		width: 96%;
@@ -10898,8 +10702,6 @@ tablet 600px */
 
 	#wrapper div#page main#profile_container {
 		padding: 0;
-
-		/* first text block */
 	}
 
 	#wrapper div#page main#profile_container #text-box-profile {
@@ -10957,10 +10759,6 @@ tablet 600px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 98%;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -11017,10 +10815,6 @@ tablet 600px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
 		font-size: 0.9em;
-	}
-
-	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
-		/* style */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
@@ -12100,10 +11894,6 @@ mobile 480px */
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-
-		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -12172,10 +11962,6 @@ mobile 480px */
 		font-size: 1.6em;
 	}
 
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
-	}
-
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
 		font-size: 2em;
 		line-height: 50px;
@@ -12211,8 +11997,6 @@ mobile 480px */
 
 	#wrapper div#page main#profile_container {
 		padding: 0;
-
-		/* first text block */
 	}
 
 	#wrapper div#page main#profile_container #text-box-profile {
@@ -12266,10 +12050,6 @@ mobile 480px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 98%;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -12330,8 +12110,6 @@ mobile 480px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
 		width: 26%;
-
-		/* style */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {
@@ -13357,10 +13135,6 @@ mobile 360px */
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-
-		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -13427,10 +13201,6 @@ mobile 360px */
 		font-size: 1.6em;
 	}
 
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
-	}
-
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
 		font-size: 1.8em;
 	}
@@ -13459,8 +13229,6 @@ mobile 360px */
 
 	#wrapper div#page main#profile_container {
 		padding: 0;
-
-		/* first text block */
 	}
 
 	#wrapper div#page main#profile_container #text-box-profile {
@@ -13519,10 +13287,6 @@ mobile 360px */
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 98%;
 		margin: 0.5em;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -14623,10 +14387,6 @@ mobile 320px */
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-
-		/* skills table */
-
-		/* skills list - not using */
 	}
 
 	#wrapper div#page main#frontpage_container div#text-box-front p {
@@ -14697,10 +14457,6 @@ mobile 320px */
 		font-size: 1.6em;
 	}
 
-	#wrapper div#page main#frontpage_container section#fntpage_banner {
-		/* PNG for IE8 */
-	}
-
 	#wrapper div#page main#frontpage_container section#fntpage_banner h1 {
 		font-size: 1.6em;
 	}
@@ -14729,8 +14485,6 @@ mobile 320px */
 
 	#wrapper div#page main#profile_container {
 		padding: 0;
-
-		/* first text block */
 	}
 
 	#wrapper div#page main#profile_container #text-box-profile {
@@ -14779,10 +14533,6 @@ mobile 320px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a {
 		width: 98%;
-
-		/* Hero Slider */
-
-		/* END OF Hero Slider */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a h1 {
@@ -14839,10 +14589,6 @@ mobile 320px */
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
 		font-size: 0.7em;
-	}
-
-	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list {
-		/* style */
 	}
 
 	#wrapper div#page main#profile_container section#prof_cont-a .hero-slider ul#list li {

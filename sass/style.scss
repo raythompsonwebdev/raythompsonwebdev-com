@@ -29,7 +29,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*
 desktop 1920px */
 @media only screen and (max-width: 1920px) {
-
 	/* IE8 and below upgrade banner */
 	.browserupgrade {
 		font-family: $FontStyle;
@@ -127,7 +126,9 @@ desktop 1920px */
 						background: $colorwhite;
 						color: $blackcolor;
 						text-decoration: none;
+
 						@include originTran(50% 50%);
+
 						@include Transition(all 0.2s ease-out 0s);
 						height: auto;
 						margin: 0.2em;
@@ -321,10 +322,7 @@ desktop 1920px */
 			height: 35px;
 			margin: 0;
 			width: 100%;
-			display: block;
 			font-family: $FontStyle;
-			display: -webkit-flex;
-			display: -ms-flexbox;
 			display: flex;
 			-webkit-justify-content: flex-end;
 			-ms-flex-pack: end;
@@ -341,7 +339,6 @@ desktop 1920px */
 				font-size: 0.9em;
 
 				label {
-					width: auto;
 					display: inline-block;
 					line-height: 30px;
 					height: 32px;
@@ -452,11 +449,11 @@ desktop 1920px */
 				font-size: 0.9em;
 				font-family: $FontStyle;
 
-				&:before {
+				&::before {
 					content: "\f10d";
 				}
 
-				&:after {
+				&::after {
 					content: "\f10e";
 				}
 			}
@@ -504,7 +501,6 @@ desktop 1920px */
 
 				hr {
 					background-color: $colorwhite;
-					height: 1px;
 					margin: 5% auto;
 					width: 80%;
 				}
@@ -955,7 +951,7 @@ desktop 1920px */
 									text-align: center;
 									margin-bottom: 0.2em;
 									font-size: 1em;
-									text-align: center;
+
 									font-family: "FontAwesome", $FontStyle;
 									a {
 										color: $colorwhite;
@@ -1211,7 +1207,6 @@ desktop 1920px */
 
 					.website-text {
 						width: 100%;
-						display: inline-block;
 						padding: 0.5em;
 						display: grid;
 						grid-gap: 10px;
@@ -1366,7 +1361,6 @@ desktop 1920px */
 
 						div.nav-previous {
 							width: 100%;
-							display: inline-block;
 							font-size: 1em;
 							font-weight: bold;
 							line-height: 40px;
@@ -1408,7 +1402,6 @@ desktop 1920px */
 
 						div.nav-next {
 							width: 100%;
-							display: inline-block;
 							font-size: 1em;
 							font-weight: bold;
 							line-height: 40px;
@@ -1503,7 +1496,6 @@ desktop 1920px */
 
 						/*Comment title */
 						h2.comments-title {
-							height: 35px;
 							min-height: 35px;
 							line-height: 35px;
 							text-indent: 1%;
@@ -1538,7 +1530,6 @@ desktop 1920px */
 												.comment-author {
 													display: inline-block;
 													height: auto;
-													padding: 0;
 													width: auto;
 													font-size: 0.9em;
 													background-color: $headercolor;
@@ -1632,7 +1623,6 @@ desktop 1920px */
 										.comment-author {
 											display: inline-block;
 											height: auto;
-											padding: 0;
 											width: auto;
 											font-size: 0.9em;
 											background-color: $headercolor;
@@ -1776,7 +1766,6 @@ desktop 1920px */
 								width: 82%;
 								height: auto;
 								margin: 2% auto;
-								padding: 1em;
 								font-family: ($FontStyle);
 								padding: 0;
 
@@ -1810,7 +1799,6 @@ desktop 1920px */
 										padding: 3px 0 3px 3px;
 										margin: 5px 1px 3px 0;
 										border: 1px solid #ddd;
-										width: 100%;
 										width: 100%;
 										height: 35px;
 									}
@@ -1980,7 +1968,7 @@ desktop 1920px */
 				background-repeat: no-repeat;
 				background-size: 100% auto;
 
-				/*homepage container*/
+				/* Homepage container */
 				div#text-box-front {
 					-webkit-flex: 1 0 auto;
 					-ms-flex: 1 0 auto;
@@ -2004,7 +1992,7 @@ desktop 1920px */
 						background: $colorwhite;
 					}
 
-					/*skills table*/
+					/* Skills Table */
 					section#calltoaction {
 						height: auto;
 						margin: 0;
@@ -2105,7 +2093,7 @@ desktop 1920px */
 						}
 					}
 
-					/*skills list - not using*/
+					/* Skills List - not using*/
 					ul.webskills {
 						list-style: none;
 						font-family: ($FontStyle);
@@ -2142,7 +2130,7 @@ desktop 1920px */
 						}
 
 						li#fa-desktop::before {
-							font-family: "FontAwesome" , $FontStyle ;
+							font-family: "FontAwesome" ,$FontStyle ;
 							content: "\f108";
 							font-style: normal;
 							display: inline-block;
@@ -2159,7 +2147,7 @@ desktop 1920px */
 						}
 
 						li#fa-wordpress::before {
-							font-family: "FontAwesome" , $FontStyle;
+							font-family: "FontAwesome" ,$FontStyle;
 							content: "\f19a";
 							display: inline-block;
 							height: 35px;
@@ -2175,7 +2163,7 @@ desktop 1920px */
 						}
 
 						li#fa-mobile::before {
-							font-family: "FontAwesome" , $FontStyle;
+							font-family: "FontAwesome" ,$FontStyle;
 							content: "\f05a";
 							font-style: normal;
 							display: inline-block;
@@ -2246,7 +2234,7 @@ desktop 1920px */
 						}
 					}
 
-					/*PNG for IE8*/
+					/* PNG for IE8 */
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -2442,7 +2430,7 @@ desktop 1920px */
 						}
 					}
 
-					/*Hero Slider*/
+					/* Hero Slider */
 					.hero-slider {
 						margin: 0;
 						padding: 0.2em;
@@ -2464,14 +2452,14 @@ desktop 1920px */
 									background-image: url("images/certificates/Large-Photoshop-Certicate.jpg");
 									background-repeat: no-repeat;
 									background-position: 50% 40%;
-									//background-size: cover;
+
 								}
 
 								#panel-2 {
 									background-image: url("images/certificates/ITQ-USERS-LEVEL1-LARGE.jpg");
 									background-repeat: no-repeat;
 									background-position: 50% 22%;
-									//background-size: cover;
+
 								}
 
 								#panel-3 {
@@ -2514,11 +2502,11 @@ desktop 1920px */
 									background-image: url("images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.jpg");
 									background-repeat: no-repeat;
 									background-position: 50% 61%;
-									//background-size: cover;
+
 								}
 
 								.panel {
-									font-family: ($FontStyle);
+									font-family: $FontStyle;
 									width: 100%;
 									height: 420px;
 									background-color: $colorwhite2;
@@ -2526,7 +2514,6 @@ desktop 1920px */
 									h2 {
 										text-transform: uppercase;
 										padding: 0;
-										color: $colorwhite;
 										line-height: 40px;
 										height: 40px;
 										background-color: $greencolor;
@@ -2577,7 +2564,6 @@ desktop 1920px */
 											h4 {
 												font-weight: normal;
 												margin: 0;
-												padding: 0;
 												background-color: $greencolor;
 												color: $blackcolor;
 												letter-spacing: 0.01em;
@@ -2607,7 +2593,7 @@ desktop 1920px */
 													margin-bottom: 0.1em;
 
 													&:before {
-														font-family: "Font Awesome 5 Free";
+														font-family: "Font Awesome 5 Free" ,$FontStyle;
 														font-size: 0.95em;
 														color: $blackcolor2;
 														content: "\f005";
@@ -2653,11 +2639,11 @@ desktop 1920px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+					/* END OF Hero Slider */
 				}
 
 				/* Animated Chart */
@@ -2788,14 +2774,11 @@ desktop 1920px */
 					padding: 0;
 					overflow: hidden;
 					width: 100%;
-					display: -webkit-flex;
-					display: -ms-flexbox;
 					display: flex;
 					-webkit-flex-flow: row wrap;
 					-ms-flex-flow: row wrap;
 					flex-flow: row wrap;
 					-webkit-justify-content: flex-start;
-					-ms-flex-pack: start;
 					justify-content: flex-start;
 
 					nav.menuSwitch {
@@ -2943,8 +2926,6 @@ desktop 1920px */
 			font-family: $FontStyle;
 			margin: 0;
 			clear: both;
-			display: -webkit-flex;
-			display: -ms-flexbox;
 			display: flex;
 			-webkit-flex-flow: row wrap;
 			-ms-flex-flow: row wrap;
@@ -2967,7 +2948,6 @@ desktop 1920px */
 				color: $blackcolor;
 				letter-spacing: 0.1em;
 				text-align: center;
-				margin: 0 auto;
 				font-weight: bold;
 				-webkit-align-self: center;
 				-ms-flex-item-align: center;
@@ -2986,7 +2966,6 @@ desktop 1920px */
 				h2 {
 					width: 100%;
 					height: 40px;
-					margin: 0;
 					padding: 0;
 					font-size: 1.2em;
 					line-height: 40px;
@@ -3365,9 +3344,7 @@ desktop 1440px */
 					}
 				}
 
-				hr {
-					height: 1px;
-				}
+
 			}
 
 
@@ -4115,7 +4092,7 @@ desktop 1440px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -4154,7 +4131,7 @@ desktop 1440px */
 				}
 
 				section#fntpage_banner {
-					//background-color:$blackcolor;
+
 
 					h1 {
 						font-size: 2.9em;
@@ -4171,7 +4148,7 @@ desktop 1440px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -4254,7 +4231,7 @@ desktop 1440px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -4320,11 +4297,11 @@ desktop 1440px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {
@@ -4440,6 +4417,7 @@ desktop 1440px */
 			padding-top: 0;
 
 			.side-bar-box {
+
 				h2 {
 					font-size: 1.15em;
 				}
@@ -4630,9 +4608,6 @@ desktop 1280px */
 					}
 				}
 
-				hr {
-					height: 1px;
-				}
 			}
 
 			blockquote {
@@ -5374,7 +5349,7 @@ desktop 1280px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -5432,7 +5407,7 @@ desktop 1280px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -5514,7 +5489,7 @@ desktop 1280px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -5578,11 +5553,11 @@ desktop 1280px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {
@@ -5613,8 +5588,6 @@ desktop 1280px */
 
 									&:hover:after {
 										font-size: 0.9em;
-									}
-									&:hover:after {
 										line-height: 50px;
 										width: 24%;
 									}
@@ -5890,9 +5863,6 @@ desktop 1024px */
 					}
 				}
 
-				hr {
-					height: 1px;
-				}
 			}
 
 			blockquote {
@@ -6673,7 +6643,7 @@ desktop 1024px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -6727,7 +6697,7 @@ desktop 1024px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -6810,7 +6780,7 @@ desktop 1024px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -6876,11 +6846,11 @@ desktop 1024px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {
@@ -7971,7 +7941,7 @@ tablet 800px */
 						font-size: 0.8em;
 					}
 
-					/*skills table*/
+
 					section#calltoaction {
 						width: 100%;
 
@@ -8004,7 +7974,7 @@ tablet 800px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -8049,7 +8019,6 @@ tablet 800px */
 					width: 100%;
 					margin: 0;
 
-					//background-color:$blackcolor;
 
 					h1 {
 						font-size: 2.5em;
@@ -8078,7 +8047,7 @@ tablet 800px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -8100,7 +8069,6 @@ tablet 800px */
 				align-items: center;
 				padding: 0;
 
-				/*first text block*/
 
 				#text-box-profile {
 					-webkit-order: 0;
@@ -8178,7 +8146,7 @@ tablet 800px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -8241,30 +8209,11 @@ tablet 800px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
-				}
 
-				#text-box-profile-b {
-					height: auto;
-
-					p {
-						font-size: 0.9em;
-
-						strong {
-							width: auto;
-							a {
-								font-weight: bold;
-
-								&:hover {
-									text-decoration: underline;
-								}
-							}
-						}
-					}
 				}
 
 				section#prof_cont {
@@ -9346,7 +9295,7 @@ tablet 600px */
 						font-size: 0.8em;
 					}
 
-					/*skills table*/
+
 					section#calltoaction {
 						width: 100%;
 
@@ -9371,7 +9320,7 @@ tablet 600px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -9431,7 +9380,7 @@ tablet 600px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -9447,7 +9396,7 @@ tablet 600px */
 			main#profile_container {
 				padding: 0;
 
-				/*first text block*/
+
 
 				#text-box-profile {
 					width: 98%;
@@ -9516,7 +9465,7 @@ tablet 600px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -9579,11 +9528,11 @@ tablet 600px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {
@@ -10662,7 +10611,7 @@ mobile 480px */
 						font-size: 0.75em;
 					}
 
-					/*skills table*/
+
 					section#calltoaction {
 						width: 100%;
 
@@ -10692,7 +10641,7 @@ mobile 480px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -10753,7 +10702,7 @@ mobile 480px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -10769,7 +10718,7 @@ mobile 480px */
 			main#profile_container {
 				padding: 0;
 
-				/*first text block*/
+
 
 				#text-box-profile {
 					width: 98%;
@@ -10834,7 +10783,7 @@ mobile 480px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -10899,11 +10848,11 @@ mobile 480px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {
@@ -11933,7 +11882,7 @@ mobile 360px */
 						font-size: 0.75em;
 					}
 
-					/*skills table*/
+
 					section#calltoaction {
 						-webkit-flex-flow: row wrap;
 						-ms-flex-flow: row wrap;
@@ -11962,7 +11911,7 @@ mobile 360px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -12016,7 +11965,7 @@ mobile 360px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -12032,7 +11981,7 @@ mobile 360px */
 			main#profile_container {
 				padding: 0;
 
-				/*first text block*/
+
 
 				#text-box-profile {
 					width: 100%;
@@ -12102,7 +12051,7 @@ mobile 360px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -12167,7 +12116,7 @@ mobile 360px */
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {
@@ -13214,7 +13163,7 @@ mobile 320px */
 						font-size: 0.75em;
 					}
 
-					/*skills table*/
+
 					section#calltoaction {
 						-webkit-flex-flow: row wrap;
 						-ms-flex-flow: row wrap;
@@ -13247,7 +13196,7 @@ mobile 320px */
 						}
 					}
 
-					/*skills list - not using*/
+
 					ul.webskills {
 						li {
 							a {
@@ -13301,7 +13250,7 @@ mobile 320px */
 						}
 					}
 
-					/*PNG for IE8*/
+
 					figure#image-6 {
 						margin: 0;
 						padding: 0;
@@ -13317,7 +13266,7 @@ mobile 320px */
 			main#profile_container {
 				padding: 0;
 
-				/*first text block*/
+
 
 				#text-box-profile {
 					width: 100%;
@@ -13377,7 +13326,7 @@ mobile 320px */
 						}
 					}
 
-					/*Hero Slider*/
+
 					.hero-slider {
 						width: 100%;
 
@@ -13440,11 +13389,11 @@ mobile 320px */
 								}
 							}
 
-							/* style */
+
 						}
 					}
 
-					/* END OF Hero Slider*/
+
 				}
 
 				section#prof_cont {

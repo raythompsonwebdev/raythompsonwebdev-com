@@ -7,6 +7,6 @@ module.exports = {
 		"no-descending-specificity": null,
 		"indentation": "tab",
     "number-leading-zero": null,
-    "unit-allowed-list": ["em", "rem", "%", "px" , "fr"]
+    "unit-allowed-list": ["em", "rem", "%", "px" , "fr", "vh", "s" ,"vw"]
   },
 }
