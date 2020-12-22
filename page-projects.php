@@ -46,7 +46,14 @@ get_header();
 
 					?>
 			<!-- display slugs for custom post categories.-->
-			<div id="panel" class="prod-cnt-<?php $raythompsonwebdev_com_customterms = get_the_terms( $post->ID, 'project-category' ); foreach ( $raythompsonwebdev_com_customterms as $raythompsonwebdev_com_customterm ) {$raythompsonwebdev_com_pic = $raythompsonwebdev_com_customterm->slug . ' ';	printf( '%s', esc_html( $raythompsonwebdev_com_pic ), 'raythompsonwebdev-com' );}?><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_name ), 'raythompsonwebdev-com' ); ?>"<?php post_class(); ?>--<?php the_ID(); ?> >
+			<div id="panel" class="prod-cnt-
+					<?php
+					$raythompsonwebdev_com_customterms = get_the_terms( $post->ID, 'project-category' );
+					foreach ( $raythompsonwebdev_com_customterms as $raythompsonwebdev_com_customterm ) {
+						$raythompsonwebdev_com_pic = $raythompsonwebdev_com_customterm->slug . ' ';
+						printf( '%s', esc_html( $raythompsonwebdev_com_pic ), 'raythompsonwebdev-com' );}
+					?>
+					<?php printf( '%s', esc_html( $raythompsonwebdev_com_project_name ), 'raythompsonwebdev-com' ); ?>"<?php post_class(); ?>--<?php the_ID(); ?> >
 
 				<figure class="showcase-container " id="showcaseimg1">
 					<div class="showcase-img">

@@ -96,7 +96,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 		echo '<span class="byline">' . $raythompsonwebdev_com_index_byline . ' </span><span class="posted-on"> ' . $raythompsonwebdev_com_index_posted . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-comr' ) );
+			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-com' ) );
 			echo '</span>';
 		}
 		echo '</div><!-- .meta-content -->';
@@ -234,7 +234,7 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 		}
 	} elseif ( is_object( $id_or_email ) ) {
 		// No avatar for pingbacks or trackbacks.
-		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
+		$raythompsonwebdev_com_allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
 		/**
 		 * Utility function to check if a gravatar exists for a given email or id
 		 *
@@ -253,11 +253,11 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 				}
 			} elseif ( is_object( $id_or_email ) ) {
 				// No avatar for pingbacks or trackbacks.
-				$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
+				$raythompsonwebdev_com_allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
 
 				if ( ! empty( $id_or_email->comment_type ) && ! in_array(
 					$id_or_email->comment_type,
-					(array) $allowed_comment_types,
+					(array) $raythompsonwebdev_com_allowed_comment_types,
 					true
 				) ) {
 					return false;
@@ -295,7 +295,7 @@ function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 		}
 		if ( ! empty( $id_or_email->comment_type ) && ! in_array(
 			$id_or_email->comment_type,
-			(array) $allowed_comment_types,
+			(array) $raythompsonwebdev_com_allowed_comment_types,
 			true
 		) ) {
 			return false;

@@ -23,7 +23,8 @@ get_header();
  * Check if there are any posts to display.
  */
 
-if ( have_posts() ) :	?>
+if ( have_posts() ) :
+	?>
 
 	<h1 class="archive-title">
 		Category: <?php single_cat_title( '', true ); ?>
@@ -33,34 +34,35 @@ if ( have_posts() ) :	?>
 	/**
 	 * Display optional category description.
 	 */
-	if ( category_description() ) :?>
+	if ( category_description() ) :
+		?>
 
 		<div class="archive-meta"><?php echo category_description(); ?></div>
 
 	<?php endif; ?>
 
 	<?php
-		while ( have_posts() ) :
+	while ( have_posts() ) :
 		the_post();
-	?>
+		?>
 
 	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
-				<?php
-				if ( is_singular() ) :
-						the_title( '<h1 class="entry-title">', '</h1>' );
-					else :
-						the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			<?php
+			if ( is_singular() ) :
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				else :
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 					endif;
-			?>
+				?>
 
 				<header class="entry-header">
-					<?php
+				<?php
 
-					if ( 'post' === get_post_type() ) :
-						?>
+				if ( 'post' === get_post_type() ) :
+					?>
 						<div class="entry-meta">
-							<?php	raythompsonwebdev_com_posted_on();	?>
+						<?php	raythompsonwebdev_com_posted_on(); ?>
 						</div><!-- .entry-meta -->
 					<?php endif; ?>
 				</header><!-- .entry-header -->
@@ -87,7 +89,7 @@ if ( have_posts() ) :	?>
 					the_excerpt(
 						sprintf(
 							wp_kses(
-								/* translators: %s: Name of current post. Only visible to screen readers */
+							/* translators: %s: Name of current post. Only visible to screen readers */
 								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
 								array(
 									'span' => array(
@@ -110,17 +112,17 @@ if ( have_posts() ) :	?>
 
 				<footer class="entry-footer">
 
-					<?php raythompsonwebdev_com_entry_footer(); ?>
+				<?php raythompsonwebdev_com_entry_footer(); ?>
 				</footer>
 
 	</article><!-- #post-<?php the_ID(); ?> -->
 
-	<?php
+		<?php
 		endwhile;
 		else :
-	?>
+			?>
 
-	<?php get_template_part( 'template-part/content', 'none' ); ?>
+			<?php get_template_part( 'template-part/content', 'none' ); ?>
 
 	<?php endif; ?>
 

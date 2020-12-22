@@ -21,10 +21,10 @@ get_header();
 
 <main id="primary" class="site-main">
 	<?php
-		if ( have_posts() ) :
+	if ( have_posts() ) :
 		while ( have_posts() ) :
-		the_post();
-	?>
+			the_post();
+			?>
 
 	<article class="gallery" <?php post_class(); ?> <?php the_ID(); ?> >
 
@@ -34,7 +34,12 @@ get_header();
 
 			<div class="item item1">
 				<figure class="websiteImage">
-					<a href="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/www-' ); ?><?php	$raythompsonwebdev_com_post_slug = $post->post_name;printf( '%s', esc_html( $raythompsonwebdev_com_post_slug ), 'raythompsonwebdev-com' );?>-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+					<a href="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/www-' ); ?>
+										<?php
+										$raythompsonwebdev_com_post_slug = $post->post_name;
+										printf( '%s', esc_html( $raythompsonwebdev_com_post_slug ), 'raythompsonwebdev-com' );
+										?>
+					-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
 					<?php the_post_thumbnail( 'website-image' ); ?>
 					</a>
 				</figure>
@@ -89,22 +94,24 @@ get_header();
 
 	</article><!--end of post group-->
 
-		<?php
+			<?php
 			endwhile;
-			if ( is_singular( 'project' ) ) :
-		?>
+		if ( is_singular( 'project' ) ) :
+			?>
 
 		<nav class="navigation">
 
 			<h2 ><?php esc_html_e( 'Navigation', 'raythompsonwebdev-com' ); ?></h2>
 			<div class="nav-links">
 
-			<?php the_post_navigation(
+			<?php
+			the_post_navigation(
 				array(
 					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
 					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
 				)
-			); ?>
+			);
+			?>
 
 			</div>
 

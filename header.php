@@ -52,7 +52,7 @@
 
 			</div>
 
-			<?php	if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archive-page' ) ) ) :	?>
+			<?php	if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archive-page' ) ) ) : ?>
 
 			<hgroup>
 				<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
@@ -62,12 +62,14 @@
 			<hgroup>
 				<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
 
-				<?php	else :	?>
+				<?php	else : ?>
 			<hgroup>
 				<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
-				<?php endif; $raythompsonwebdev_com_description = get_bloginfo( 'description', 'display' );
-					if ( $raythompsonwebdev_com_description || is_customize_preview() ) :
-				?>
+					<?php
+				endif;
+				$raythompsonwebdev_com_description = get_bloginfo( 'description', 'display' );
+				if ( $raythompsonwebdev_com_description || is_customize_preview() ) :
+					?>
 				<h2 class="site-description"><?php echo $raythompsonwebdev_com_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
 				<?php endif; ?>
 			</hgroup>
