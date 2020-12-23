@@ -104,9 +104,9 @@ desktop 1920px */
 				-webkit-justify-content: flex-start;
 				-ms-flex-pack: start;
 				justify-content: flex-start;
-				-webkit-flex: 1 0 auto;
-				-ms-flex: 1 0 auto;
-				flex: 1 0 auto;
+				-webkit-flex: 0 0 auto;
+				-ms-flex: 0 0 auto;
+				flex: 0 0 auto;
 				width: 50%;
 
 				/* Site Logo */
@@ -114,9 +114,9 @@ desktop 1920px */
 					top: 0;
 					left: 0;
 					width: 12%;
-					-webkit-flex: 1 0 auto;
-					-ms-flex: 1 0 auto;
-					flex: 1 0 auto;
+					-webkit-flex: 0 0 auto;
+					-ms-flex: 0 0 auto;
+					flex: 0 0 auto;
 
 					a.custom-logo-link {
 						z-index: 1;
@@ -191,17 +191,17 @@ desktop 1920px */
 					width: 88%;
 					display: block;
 					float: left;
-					height: 4em;
-					-webkit-flex: 1 0 auto;
-					-ms-flex: 1 0 auto;
-					flex: 1 0 auto;
+					height: auto;
+					-webkit-flex: 0 0 auto;
+					-ms-flex: 0 0 auto;
+					flex: 0 0 auto;
 					font-family: $FontStyleHeader;
 
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.6em;
+						font-size: 1.5em;
 						width: 100%;
-						height: 35px;
+						height: 30px;
 						line-height: 35px;
 						color: $greencolor;
 						font-family: $FontStyleHeader;
@@ -241,13 +241,13 @@ desktop 1920px */
 			/* Navigation */
 			.main-navigation {
 				width: 50%;
+				padding: 0.5em 0 0 0;
 
 				nav.menu-main-container {
 					padding: 0;
 					font-family: $FontStyle;
 					display: block;
-					width: 80%;
-					margin: 0.5em;
+					width: 90%;
 					height: 35px;
 					float: right;
 
@@ -948,13 +948,14 @@ desktop 1920px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 8%;
 									display: block;
 									margin: 0;
 									border: none;
 									float:left;
 									img{
-										margin:0 0.5em;
+										margin:0 2% 0 0;
+										width:98%;
 									}
 								}
 							}
@@ -962,6 +963,17 @@ desktop 1920px */
 							.meta-content {
 								min-height: 120px;
 								width: 100%;
+								.no-author-avatar {
+									width: 8%;
+									display: block;
+									margin: 0;
+									border: none;
+									float:left;
+									img{
+										margin:0 2% 0 0;
+										width:98%;
+									}
+								}
 
 								span.byline,
 								span.comments-link,
@@ -1366,7 +1378,7 @@ desktop 1920px */
 
 				/* Single Page Post Navigation */
 				nav.navigation {
-					min-height: 200px;
+					min-height: 85px;
 
 					h2 {
 						display: block;
@@ -3185,7 +3197,8 @@ desktop 1920px */
 		}
 
 		/* Copy */
-		p#copyr {
+		div.site-info {
+			font-family: $FontStyle;
 			color: $blackcolor;
 			font-size: 10px;
 			width: 100%;
@@ -3244,7 +3257,7 @@ desktop 1440px */
 				hgroup {
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.5em;
+						font-size: 1.4em;
 
 						span {
 							height: 100%;
@@ -3543,7 +3556,7 @@ desktop 1440px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 8%;
 								}
 							}
 
@@ -4503,7 +4516,7 @@ desktop 1280px */
 
 			.site-branding {
 				.site-logo {
-					width: 3.4em;
+
 					a.custom-logo-link {
 						top: 0;
 
@@ -4516,7 +4529,7 @@ desktop 1280px */
 				hgroup {
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.4em;
+						font-size: 1.3em;
 
 						span {
 							padding: 0;
@@ -4810,7 +4823,7 @@ desktop 1280px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 8%;
 								}
 							}
 
@@ -5759,9 +5772,11 @@ desktop 1024px */
 		width: 96%;
 
 		header.site-header {
+
 			height: auto;
 			.site-branding {
 				.site-logo {
+					width: 15%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -5772,9 +5787,11 @@ desktop 1024px */
 				}
 
 				hgroup {
+					width: 85%;
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.4em;
+						font-size: 1.2em;
+
 
 						span {
 							padding: 0;
@@ -5968,6 +5985,10 @@ desktop 1024px */
 							}
 						}
 					}
+					/* code */
+					pre.wp-block-code {
+						font-size: 0.85em;
+					}
 
 					h3 {
 						font-size: 1.1em;
@@ -6032,7 +6053,7 @@ desktop 1024px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 8%;
 								}
 							}
 
@@ -7008,9 +7029,11 @@ tablet 800px */
 
 		header.site-header {
 			height: auto;
+			flex-flow: row wrap;
 			.site-branding {
+				width:80%;
 				.site-logo {
-					width: 15%;
+					width: 10%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -7025,9 +7048,8 @@ tablet 800px */
 
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.3em;
-						height: 30px;
-						line-height: 35px;
+						font-size: 1.2em;
+
 						span {
 							padding: 0;
 						}
@@ -7044,15 +7066,17 @@ tablet 800px */
 			}
 
 			.main-navigation {
+				width: 100%;
 				nav.menu-main-container {
-					width: 100%;
-					margin: 0.5em 0 0 0;
+					width: 90%;
+					float:none;
+					margin:0;
 					ul#menu-main {
 						height: 35px;
 
 						li.menu-item {
 							a {
-								font-size: 0.85em;
+								font-size: 0.8em;
 							}
 						}
 					}
@@ -7227,7 +7251,6 @@ tablet 800px */
 				}
 
 				article.post {
-					margin-top: 3em;
 
 					h1,
 					h1.page-title {
@@ -7311,7 +7334,7 @@ tablet 800px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 13%;
 								}
 							}
 
@@ -7321,7 +7344,8 @@ tablet 800px */
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									font-size: 0.85em;
+									font-size: 0.8em;
+									width: 85%;
 								}
 							}
 						}
@@ -8341,7 +8365,7 @@ tablet 600px */
 		display: block;
 		top: 1vh;
 		left: calc(80% - 0.2em);
-		font-size: 1.3em;
+		font-size: 1em;
 		text-transform: uppercase;
 		background-color: $blackcolor;
 		color: $colorwhite;
@@ -8349,6 +8373,8 @@ tablet 600px */
 		transition: all ease-out 0.4s;
 		line-height: 50px;
 		width: 20%;
+		text-align:center;
+		padding: 0;
 	}
 	.menu-toggle.hide {
 		left: 110vw;
@@ -8373,7 +8399,9 @@ tablet 600px */
 			height: auto;
 			margin-bottom: 0.5em;
 			.site-branding {
+				width: 100%;
 				.site-logo {
+					width: 10%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -8386,7 +8414,7 @@ tablet 600px */
 				hgroup {
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.2em;
+						font-size: 1.1em;
 
 						span {
 							padding: 0;
@@ -8662,7 +8690,7 @@ tablet 600px */
 							width: 100%;
 
 							.author-avatar {
-								width: 10%;
+								width: 8%;
 							}
 						}
 
@@ -8672,7 +8700,7 @@ tablet 600px */
 							span.byline,
 							span.comments-link,
 							span.posted-on {
-								font-size: 0.85em;
+								font-size: 0.8em;
 							}
 						}
 					}
@@ -9626,8 +9654,8 @@ tablet 600px */
 mobile 480px */
 @media only screen and (max-width: 30em) {
 	.menu-toggle {
-		top: 6.5vh;
-		font-size: 1.15em;
+		top: 8.5vh;
+		font-size: 1em;
 	}
 
 	#wrapper {
@@ -9638,6 +9666,7 @@ mobile 480px */
 
 			.site-branding {
 				.site-logo {
+					width: 12%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -9648,9 +9677,10 @@ mobile 480px */
 				}
 
 				hgroup {
+					width: 84%;
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.2em;
+						font-size: 1em;
 
 						span {
 							padding: 0;
@@ -9662,8 +9692,9 @@ mobile 480px */
 					}
 
 					h2 {
-						font-size: 0.75em;
+						font-size: 0.65em;
 						padding-left: 0;
+						line-height: 15px;
 					}
 				}
 			}
@@ -9818,6 +9849,9 @@ mobile 480px */
 			}
 
 			address#contact-details {
+				float: none;
+				width: 96%;
+				margin: auto;
 				li {
 					font-family: $FontStyle;
 				}
@@ -9866,6 +9900,11 @@ mobile 480px */
 						a {
 							padding-left: 0;
 						}
+					}
+
+					/* code */
+					pre.wp-block-code {
+						font-size: 0.75em;
 					}
 
 					p {
@@ -9923,19 +9962,24 @@ mobile 480px */
 						.entry-meta {
 							.has-avatar {
 								width: 100%;
+								min-height: unset;
+								height:auto;
 
 								.author-avatar {
-									width: 10%;
+									width: 15%;
 								}
 							}
 
 							.meta-content {
 								width: 100%;
+								height:auto;
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									font-size: 0.8em;
+									width: 84%;
+									font-size: 0.75em;
+									line-height: 25px;
 								}
 							}
 						}
@@ -10899,7 +10943,7 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 	.menu-toggle {
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 40px;
 	}
 
@@ -10909,6 +10953,7 @@ mobile 360px */
 		header.site-header {
 			.site-branding {
 				.site-logo {
+					width:14%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -10921,7 +10966,7 @@ mobile 360px */
 				hgroup {
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1.05em;
+						font-size: 1em;
 					}
 
 					h2 {
@@ -11178,7 +11223,7 @@ mobile 360px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 17%;
 								}
 							}
 
@@ -11188,7 +11233,8 @@ mobile 360px */
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									font-size: 0.75em;
+									width: 82%;
+									font-size: 0.7em;
 								}
 							}
 						}
@@ -12132,7 +12178,7 @@ mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
 		font-size: 1em;
-		top: 5vh;
+		top: 9vh;
 	}
 
 	#wrapper {
@@ -12142,7 +12188,9 @@ mobile 320px */
 			height: auto;
 
 			.site-branding {
+
 				.site-logo {
+					width:16%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -12153,9 +12201,10 @@ mobile 320px */
 				}
 
 				hgroup {
+					width: 83%;
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1em;
+						font-size: 0.9em;
 
 						span {
 							padding: 0;
@@ -12408,7 +12457,7 @@ mobile 320px */
 								width: 100%;
 
 								.author-avatar {
-									width: 10%;
+									width: 17%;
 								}
 							}
 
@@ -12418,7 +12467,7 @@ mobile 320px */
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									font-size: 0.7em;
+									font-size: 0.65em;
 								}
 							}
 						}

@@ -76,8 +76,11 @@
 
 		</div>
 		<!-- #site-navigation -->
+
+		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( ' Menu', 'raythompsonwebdev-com' ); ?></button>
+
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'raythompsonwebdev-com' ); ?></button>
+
 			<?php
 
 			if ( has_nav_menu( 'main' ) ) {

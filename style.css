@@ -1080,9 +1080,9 @@ desktop 1920px */
 		-webkit-justify-content: flex-start;
 		-ms-flex-pack: start;
 		justify-content: flex-start;
-		-webkit-flex: 1 0 auto;
-		-ms-flex: 1 0 auto;
-		flex: 1 0 auto;
+		-webkit-flex: 0 0 auto;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
 		width: 50%;
 		/* Site Logo */
 		/* Header Title */
@@ -1091,9 +1091,9 @@ desktop 1920px */
 		top: 0;
 		left: 0;
 		width: 12%;
-		-webkit-flex: 1 0 auto;
-		-ms-flex: 1 0 auto;
-		flex: 1 0 auto;
+		-webkit-flex: 0 0 auto;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
 	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		z-index: 1;
@@ -1169,17 +1169,17 @@ desktop 1920px */
 		width: 88%;
 		display: block;
 		float: left;
-		height: 4em;
-		-webkit-flex: 1 0 auto;
-		-ms-flex: 1 0 auto;
-		flex: 1 0 auto;
+		height: auto;
+		-webkit-flex: 0 0 auto;
+		-ms-flex: 0 0 auto;
+		flex: 0 0 auto;
 		font-family: "Cabin", arial, sans-serif, verdana, tahoma;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.6em;
+		font-size: 1.5em;
 		width: 100%;
-		height: 35px;
+		height: 30px;
 		line-height: 35px;
 		color: #88a61c;
 		font-family: "Cabin", arial, sans-serif, verdana, tahoma;
@@ -1214,14 +1214,14 @@ desktop 1920px */
 	}
 	#wrapper header.site-header .main-navigation {
 		width: 50%;
+		padding: 0.5em 0 0 0;
 		/* Mobile-Navigation */
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container {
 		padding: 0;
 		font-family: "PT Sans", arial, sans-serif, verdana, tahoma;
 		display: block;
-		width: 80%;
-		margin: 0.5em;
+		width: 90%;
 		height: 35px;
 		float: right;
 	}
@@ -1893,7 +1893,7 @@ desktop 1920px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 8%;
 		display: block;
 		margin: 0;
 		border: none;
@@ -1901,12 +1901,26 @@ desktop 1920px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar img,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar img {
-		margin: 0 0.5em;
+		margin: 0 2% 0 0;
+		width: 98%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		min-height: 120px;
 		width: 100%;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content .no-author-avatar,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .no-author-avatar {
+		width: 8%;
+		display: block;
+		margin: 0;
+		border: none;
+		float: left;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content .no-author-avatar img,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .no-author-avatar img {
+		margin: 0 2% 0 0;
+		width: 98%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
@@ -2329,7 +2343,7 @@ desktop 1920px */
 		background-color: #f2f2f2;
 	}
 	#wrapper div#page main#primary nav.navigation {
-		min-height: 200px;
+		min-height: 85px;
 	}
 	#wrapper div#page main#primary nav.navigation h2 {
 		display: block;
@@ -4106,7 +4120,8 @@ desktop 1920px */
 		font-weight: bold;
 		background-color: #f2f2f2;
 	}
-	#wrapper p#copyr {
+	#wrapper div.site-info {
+		font-family: "PT Sans", arial, sans-serif, verdana, tahoma;
 		color: #0d0d0d;
 		font-size: 10px;
 		width: 100%;
@@ -4114,10 +4129,10 @@ desktop 1920px */
 		display: inline-block;
 		padding-top: 0.5em;
 	}
-	#wrapper p#copyr a {
+	#wrapper div.site-info a {
 		display: inline-block;
 	}
-	#wrapper p#copyr span.sep {
+	#wrapper div.site-info span.sep {
 		display: inline-block;
 	}
 }
@@ -4156,7 +4171,7 @@ desktop 1440px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.5em;
+		font-size: 1.4em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -4384,7 +4399,7 @@ desktop 1440px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 8%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -5143,9 +5158,6 @@ desktop 1280px */
 	#wrapper header.site-header {
 		height: auto;
 	}
-	#wrapper header.site-header .site-branding .site-logo {
-		width: 3.4em;
-	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
 	}
@@ -5154,7 +5166,7 @@ desktop 1280px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.4em;
+		font-size: 1.3em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -5370,7 +5382,7 @@ desktop 1280px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 8%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -6115,15 +6127,21 @@ desktop 1024px */
 	#wrapper header.site-header {
 		height: auto;
 	}
+	#wrapper header.site-header .site-branding .site-logo {
+		width: 15%;
+	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
 	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link div.site-firstletter {
 		font-size: 1.7em;
 	}
+	#wrapper header.site-header .site-branding hgroup {
+		width: 85%;
+	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -6244,6 +6262,9 @@ desktop 1024px */
 	#wrapper div#page main#primary article.single-post .entry {
 		padding: 2em;
 	}
+	#wrapper div#page main#primary article.post {
+		/* code */
+	}
 	#wrapper div#page main#primary article.post hr.blog-spacer {
 		margin: 1% auto;
 	}
@@ -6262,6 +6283,9 @@ desktop 1024px */
 	#wrapper div#page main#primary article.post h2 a:hover,
 	#wrapper div#page main#primary article.post h2.entry-title a:hover {
 		font-weight: normal;
+	}
+	#wrapper div#page main#primary article.post pre.wp-block-code {
+		font-size: 0.85em;
 	}
 	#wrapper div#page main#primary article.post h3 {
 		font-size: 1.1em;
@@ -6314,7 +6338,7 @@ desktop 1024px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 8%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -7089,9 +7113,13 @@ tablet 800px */
 	}
 	#wrapper header.site-header {
 		height: auto;
+		flex-flow: row wrap;
+	}
+	#wrapper header.site-header .site-branding {
+		width: 80%;
 	}
 	#wrapper header.site-header .site-branding .site-logo {
-		width: 15%;
+		width: 10%;
 	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
@@ -7104,9 +7132,7 @@ tablet 800px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.3em;
-		height: 30px;
-		line-height: 35px;
+		font-size: 1.2em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -7119,15 +7145,19 @@ tablet 800px */
 	#wrapper header.site-header .site-branding hgroup h2 {
 		font-size: 0.7em;
 	}
-	#wrapper header.site-header .main-navigation nav.menu-main-container {
+	#wrapper header.site-header .main-navigation {
 		width: 100%;
-		margin: 0.5em 0 0 0;
+	}
+	#wrapper header.site-header .main-navigation nav.menu-main-container {
+		width: 90%;
+		float: none;
+		margin: 0;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main {
 		height: 35px;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main li.menu-item a {
-		font-size: 0.85em;
+		font-size: 0.8em;
 	}
 	#wrapper .social-1 {
 		margin-top: 2.25em;
@@ -7256,9 +7286,6 @@ tablet 800px */
 	#wrapper div#page main#primary article.single-post .entry {
 		padding: 1.5em;
 	}
-	#wrapper div#page main#primary article.post {
-		margin-top: 3em;
-	}
 	#wrapper div#page main#primary article.post h1,
 	#wrapper div#page main#primary article.post h1.page-title {
 		font-size: 1.2em;
@@ -7326,7 +7353,7 @@ tablet 800px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 13%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -7338,7 +7365,8 @@ tablet 800px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
-		font-size: 0.85em;
+		font-size: 0.8em;
+		width: 85%;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
 		width: 100%;
@@ -8157,7 +8185,7 @@ tablet 600px */
 		display: block;
 		top: 1vh;
 		left: calc(80% - 0.2em);
-		font-size: 1.3em;
+		font-size: 1em;
 		text-transform: uppercase;
 		background-color: #0d0d0d;
 		color: #f2f2f2;
@@ -8165,6 +8193,8 @@ tablet 600px */
 		transition: all ease-out 0.4s;
 		line-height: 50px;
 		width: 20%;
+		text-align: center;
+		padding: 0;
 	}
 	.menu-toggle.hide {
 		left: 110vw;
@@ -8186,6 +8216,12 @@ tablet 600px */
 		height: auto;
 		margin-bottom: 0.5em;
 	}
+	#wrapper header.site-header .site-branding {
+		width: 100%;
+	}
+	#wrapper header.site-header .site-branding .site-logo {
+		width: 10%;
+	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
 	}
@@ -8194,7 +8230,7 @@ tablet 600px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.2em;
+		font-size: 1.1em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -8414,7 +8450,7 @@ tablet 600px */
 	}
 	#wrapper div#page .post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page .post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 8%;
 	}
 	#wrapper div#page .post header.page-header .entry-meta .meta-content,
 	#wrapper div#page .post header.entry-header .entry-meta .meta-content {
@@ -8426,7 +8462,7 @@ tablet 600px */
 	#wrapper div#page .post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page .post header.entry-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page .post header.entry-header .entry-meta .meta-content span.posted-on {
-		font-size: 0.85em;
+		font-size: 0.8em;
 	}
 	#wrapper div#page .post div.continue-reading {
 		width: 100%;
@@ -9170,8 +9206,8 @@ tablet 600px */
 mobile 480px */
 @media only screen and (max-width: 30em) {
 	.menu-toggle {
-		top: 6.5vh;
-		font-size: 1.15em;
+		top: 8.5vh;
+		font-size: 1em;
 	}
 	#wrapper {
 		width: 100%;
@@ -9179,15 +9215,21 @@ mobile 480px */
 	#wrapper header.site-header {
 		height: auto;
 	}
+	#wrapper header.site-header .site-branding .site-logo {
+		width: 12%;
+	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
 	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link div.site-firstletter {
 		font-size: 1.6em;
 	}
+	#wrapper header.site-header .site-branding hgroup {
+		width: 84%;
+	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.2em;
+		font-size: 1em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -9198,8 +9240,9 @@ mobile 480px */
 		padding: 0;
 	}
 	#wrapper header.site-header .site-branding hgroup h2 {
-		font-size: 0.75em;
+		font-size: 0.65em;
 		padding-left: 0;
+		line-height: 15px;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main {
 		height: 100%;
@@ -9310,6 +9353,11 @@ mobile 480px */
 	#wrapper div#page #contactform div.wpcf7 form p input[type="submit"]:hover {
 		color: #f2f2f2;
 	}
+	#wrapper div#page address#contact-details {
+		float: none;
+		width: 96%;
+		margin: auto;
+	}
 	#wrapper div#page address#contact-details li {
 		font-family: "PT Sans", arial, sans-serif, verdana, tahoma;
 	}
@@ -9322,6 +9370,9 @@ mobile 480px */
 	}
 	#wrapper div#page main#primary article.single-post .entry {
 		padding: 1.5em;
+	}
+	#wrapper div#page main#primary article.post {
+		/* code */
 	}
 	#wrapper div#page main#primary article.post h1,
 	#wrapper div#page main#primary article.post h1.page-title {
@@ -9347,6 +9398,9 @@ mobile 480px */
 	}
 	#wrapper div#page main#primary article.post h3 a {
 		padding-left: 0;
+	}
+	#wrapper div#page main#primary article.post pre.wp-block-code {
+		font-size: 0.75em;
 	}
 	#wrapper div#page main#primary article.post p {
 		font-size: 0.8em;
@@ -9390,14 +9444,17 @@ mobile 480px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar {
 		width: 100%;
+		min-height: unset;
+		height: auto;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 15%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		width: 100%;
+		height: auto;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
@@ -9405,7 +9462,9 @@ mobile 480px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
-		font-size: 0.8em;
+		width: 84%;
+		font-size: 0.75em;
+		line-height: 25px;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
 		font-size: 0.8em;
@@ -10165,11 +10224,14 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 	.menu-toggle {
-		font-size: 1.1em;
+		font-size: 1em;
 		line-height: 40px;
 	}
 	#wrapper {
 		width: 100%;
+	}
+	#wrapper header.site-header .site-branding .site-logo {
+		width: 14%;
 	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
@@ -10179,7 +10241,7 @@ mobile 360px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.05em;
+		font-size: 1em;
 	}
 	#wrapper header.site-header .site-branding hgroup h2 {
 		font-size: 0.6em;
@@ -10368,7 +10430,7 @@ mobile 360px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 17%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -10380,7 +10442,8 @@ mobile 360px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
-		font-size: 0.75em;
+		width: 82%;
+		font-size: 0.7em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading a {
 		display: block;
@@ -11117,7 +11180,7 @@ mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
 		font-size: 1em;
-		top: 5vh;
+		top: 9vh;
 	}
 	#wrapper {
 		width: 100%;
@@ -11125,15 +11188,21 @@ mobile 320px */
 	#wrapper header.site-header {
 		height: auto;
 	}
+	#wrapper header.site-header .site-branding .site-logo {
+		width: 16%;
+	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link {
 		top: 0;
 	}
 	#wrapper header.site-header .site-branding .site-logo a.custom-logo-link div.site-firstletter {
 		font-size: 1.6em;
 	}
+	#wrapper header.site-header .site-branding hgroup {
+		width: 83%;
+	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -11318,7 +11387,7 @@ mobile 320px */
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
-		width: 10%;
+		width: 17%;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -11330,7 +11399,7 @@ mobile 320px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
-		font-size: 0.7em;
+		font-size: 0.65em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
 		font-size: 0.75em;

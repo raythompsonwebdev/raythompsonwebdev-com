@@ -40,11 +40,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 
 		// Display the author avatar if the author has a Gravatar.
 		$raythompsonwebdev_com_author_id = get_the_author_meta( 'ID' );
+
 		if ( raythompsonwebdev_com_validate_gravatar( $raythompsonwebdev_com_author_id ) ) {
 			echo '<div class="meta-content has-avatar">';
 			echo '<div class="author-avatar">' . get_avatar( $raythompsonwebdev_com_author_id ) . '</div>';
 		} else {
 			echo '<div class="meta-content">';
+			//echo '<div class="no-author-avatar"> <img src="'. esc_url (get_template_directory_uri() . '/images/raythompsonwebdev.jpg') .'" /></div>';
 		}
 
 		echo '<span class="posted-on">' . $raythompsonwebdev_com_posted . '</span><span class="byline"> ' . $raythompsonwebdev_com_byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -65,7 +67,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 	 */
 	function raythompsonwebdev_com_index_posted_on() {
 
-		$raythompsonwebdev_com_index_author_id = get_the_author_meta( 'ID' );
+		//$raythompsonwebdev_com_index_author_id = get_the_author_meta( 'ID' );
 
 		$raythompsonwebdev_com_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -268,7 +270,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_validate_gravatar' ) ) :
 						wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
 
 		}
-		if ( $data === '200' ) {
+		if ( $data == '200' ) {
 			return true;
 		} else {
 			return false;

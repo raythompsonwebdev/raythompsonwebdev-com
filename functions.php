@@ -40,6 +40,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
+		//add_theme_support('editor-styles');
+
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
 		 *
@@ -77,6 +79,9 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 				'script',
 			)
 		);
+
+		//block styles
+		add_theme_support('wp-block-styles');
 
 		$defaults = array(
 			'default-image'          => '',
@@ -126,6 +131,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 				'flex-height' => true,
 			)
 		);
+
+		// alignment
+		//add_theme_support('align-wide');
+
 	}
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_setup' );
@@ -225,6 +234,8 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
 function raythompsonwebdev_com_scripts() {
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), RAYTHOMPSONWEBDEV_COM_VERSION );
 	wp_style_add_data( 'raythompsonwebdev-com-style', 'rtl', 'replace' );
+
+	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
 	wp_enqueue_script( 'raythompsonwebdev-com-navigation', get_template_directory_uri() . '/js/navigation.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
