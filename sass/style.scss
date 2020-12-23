@@ -946,16 +946,15 @@ desktop 1920px */
 
 							.has-avatar {
 								width: 100%;
-								background-color: $blackcolor;
 
 								.author-avatar {
 									width: 10%;
 									display: block;
 									margin: 0;
-									border: 1px solid $blackcolor;
+									border: none;
 									float:left;
 									img{
-										margin:0.5em;
+										margin:0 0.5em;
 									}
 								}
 							}
@@ -967,6 +966,7 @@ desktop 1920px */
 								span.byline,
 								span.comments-link,
 								span.posted-on {
+									text-indent:0.5em;
 									width: 90%;
 									background-color: $blackcolor;
 									letter-spacing: 0.055em;
@@ -974,13 +974,14 @@ desktop 1920px */
 									display: inline-block;
 									height: auto;
 									line-height: 30px;
-									text-align: center;
+									text-align: left;
 									margin-bottom: 0.2em;
 									font-size: 1em;
 									font-family: "Font Awesome 5 Free", $FontStyle;
 
 									a {
 										color: $colorwhite;
+										text-indent:0;
 										margin: 0 auto;
 										width: auto;
 										display: inline-block;
@@ -3504,6 +3505,10 @@ desktop 1440px */
 					/* post image */
 					a.post-thumbnail {
 						padding: 0;
+						img{
+							margin:auto;
+							display:block;
+						}
 					}
 
 					.featured-image {
@@ -3511,6 +3516,7 @@ desktop 1440px */
 
 						a {
 							display: block;
+							margin:auto;
 						}
 
 						img {

@@ -1890,19 +1890,18 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar {
 		width: 100%;
-		background-color: #0d0d0d;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
 		width: 10%;
 		display: block;
 		margin: 0;
-		border: 1px solid #0d0d0d;
+		border: none;
 		float: left;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .has-avatar .author-avatar img,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar img {
-		margin: 0.5em;
+		margin: 0 0.5em;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -1915,6 +1914,7 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+		text-indent: 0.5em;
 		width: 90%;
 		background-color: #0d0d0d;
 		letter-spacing: 0.055em;
@@ -1922,7 +1922,7 @@ desktop 1920px */
 		display: inline-block;
 		height: auto;
 		line-height: 30px;
-		text-align: center;
+		text-align: left;
 		margin-bottom: 0.2em;
 		font-size: 1em;
 		font-family: "Font Awesome 5 Free", "PT Sans", arial, sans-serif, verdana, tahoma;
@@ -1934,6 +1934,7 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link a,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on a {
 		color: #f2f2f2;
+		text-indent: 0;
 		margin: 0 auto;
 		width: auto;
 		display: inline-block;
@@ -4352,11 +4353,16 @@ desktop 1440px */
 	#wrapper div#page main#primary article.post a.post-thumbnail {
 		padding: 0;
 	}
+	#wrapper div#page main#primary article.post a.post-thumbnail img {
+		margin: auto;
+		display: block;
+	}
 	#wrapper div#page main#primary article.post .featured-image {
 		width: 80%;
 	}
 	#wrapper div#page main#primary article.post .featured-image a {
 		display: block;
+		margin: auto;
 	}
 	#wrapper div#page main#primary article.post .featured-image img {
 		margin: 0 auto;

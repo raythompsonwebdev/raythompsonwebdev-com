@@ -47,7 +47,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			echo '<div class="meta-content">';
 		}
 
-		echo '<span class="byline"> ' . $raythompsonwebdev_com_byline . '</span><span class="posted-on">' . $raythompsonwebdev_com_posted . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		echo '<span class="posted-on">' . $raythompsonwebdev_com_posted . '</span><span class="byline"> ' . $raythompsonwebdev_com_byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
@@ -172,35 +172,34 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function raythompsonwebdev_com_post_thumbnail() {
+
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
 		}
 
-		if ( is_singular() ) :
-			?>
+		if ( is_singular() ) :   ?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+			<figure class="featured-image">
 
-		<?php else : ?>
+					<?php the_post_thumbnail( 'featured-image' ); ?>
 
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-				<?php
-					the_post_thumbnail(
-						'post-thumbnail',
-						array(
-							'alt' => the_title_attribute(
-								array(
-									'echo' => false,
-								)
-							),
-						)
-					);
-				?>
-			</a>
+	</figure><!-- .post-thumbnail -->
 
-			<?php
+	<?php	elseif ( is_search() ) : ?>
+
+	<a class="search-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
+			<?php the_post_thumbnail( 'search-image' ); ?>
+	</a>
+
+
+	<?php	else : ?>
+
+		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
+			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
+		</a>
+
+		<?php
+
 		endif; // End is_singular().
 	}
 endif;
@@ -216,59 +215,64 @@ if ( ! function_exists( 'raythompsonwebdev_com_body_open' ) ) :
 	}
 endif;
 
-/**
- * Utility function to check if a gravatar exists for a given email or id
- *
- * @param  int|string|object $id_or_email A user ID,  email address, or comment object.
- * @return bool if the gravatar exists or not.
- * Original found at https://gist.github.com/justinph/5197810.
- */
 
+if ( ! function_exists( 'raythompsonwebdev_com_validate_gravatar' ) ) :
+	/**
+	 * Utility function to check if a gravatar exists for a given email or id
+	 *
+	 * @param  int|string|object $id_or_email A user ID,  email address, or comment object.
+	 * @return bool if the gravatar exists or not.
+	 * Original found at https://gist.github.com/justinph/5197810.
+	 */
+	function raythompsonwebdev_com_validate_gravatar( $id_or_email ) {
 
-function raythompsonwebdev_com_validate_gravatar($id_or_email) {
-	//id or email code borrowed from wp-includes/pluggable.php
-	$email = '';
-	if ( is_numeric($id_or_email) ) {
-		$id = (int) $id_or_email;
-		$user = get_userdata($id);
-		if ( $user )
-			$email = $user->user_email;
-	} elseif ( is_object($id_or_email) ) {
-		// No avatar for pingbacks or trackbacks
-		$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
-		if ( ! empty( $id_or_email->comment_type ) && ! in_array( $id_or_email->comment_type, (array) $allowed_comment_types ) )
-			return false;
-
-		if ( !empty($id_or_email->user_id) ) {
-			$id = (int) $id_or_email->user_id;
-			$user = get_userdata($id);
-			if ( $user)
+			// id or email code borrowed from wp-includes/pluggable.php.
+			$email = '';
+		if ( is_numeric( $id_or_email ) ) {
+			$id   = (int) $id_or_email;
+			$user = get_userdata( $id );
+			if ( $user ) {
 				$email = $user->user_email;
-		} elseif ( !empty($id_or_email->comment_author_email) ) {
-			$email = $id_or_email->comment_author_email;
-		}
-	} else {
-		$email = $id_or_email;
-	}
+			}
+		} elseif ( is_object( $id_or_email ) ) {
+			// No avatar for pingbacks or trackbacks.
+			$allowed_comment_types = apply_filters( 'get_avatar_comment_types', array( 'comment' ) );
+			if ( ! empty( $id_or_email->comment_type ) && ! in_array( $id_or_email->comment_type, (array) $allowed_comment_types, true ) ) {
+				return false;
+			}
 
-	$hashkey = md5(strtolower(trim($email)));
-	$uri = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
-
-	$data = wp_cache_get($hashkey);
-	if (false === $data) {
-		$response = wp_remote_head($uri);
-		if( is_wp_error($response) ) {
-			$data = 'not200';
+			if ( ! empty( $id_or_email->user_id ) ) {
+				$id   = (int) $id_or_email->user_id;
+				$user = get_userdata( $id );
+				if ( $user ) {
+					$email = $user->user_email;
+				}
+			} elseif ( ! empty( $id_or_email->comment_author_email ) ) {
+				$email = $id_or_email->comment_author_email;
+			}
 		} else {
-			$data = $response['response']['code'];
+			$email = $id_or_email;
 		}
-					wp_cache_set($hashkey, $data, $group = '', $expire = 60*5);
 
-	}
-	if ($data == '200'){
-		return true;
-	} else {
-		return false;
-	}
+			$hashkey = md5( strtolower( trim( $email ) ) );
+			$uri     = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
+
+			$data = wp_cache_get( $hashkey );
+		if ( false === $data ) {
+			$response = wp_remote_head( $uri );
+			if ( is_wp_error( $response ) ) {
+				$data = 'not200';
+			} else {
+				$data = $response['response']['code'];
+			}
+						wp_cache_set( $hashkey, $data, $group = '', $expire = 60 * 5 );
+
+		}
+		if ( $data === '200' ) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
+endif;
