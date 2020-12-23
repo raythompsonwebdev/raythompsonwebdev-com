@@ -65,6 +65,7 @@ desktop 1920px */
 		font-family: $FontStyleHeader;
 		font-size: 1em;
 	}
+
 	/* End of Wp-Cookie Notice */
 
 	.fixed-side-social-container {
@@ -125,9 +126,7 @@ desktop 1920px */
 						background: $colorwhite;
 						color: $blackcolor;
 						text-decoration: none;
-
 						@include originTran(50% 50%);
-
 						@include Transition(all 0.2s ease-out 0s);
 						height: auto;
 						margin: 0.2em;
@@ -558,6 +557,7 @@ desktop 1920px */
 
 								textarea {
 									@include Transition(all 0.2s ease-in 0s);
+
 									outline: none;
 									padding: 3px 0 3px 3px;
 									margin: 5px 1px 3px 0;
@@ -946,34 +946,39 @@ desktop 1920px */
 
 							.has-avatar {
 								width: 100%;
-								background-color: #000;
+								background-color: $blackcolor;
+
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 									display: block;
-									margin: 1em auto;
+									margin: 0;
 									border: 1px solid $blackcolor;
+									float:left;
+									img{
+										margin:0.5em;
+									}
 								}
 							}
 
 							.meta-content {
-								height: auto;
+								min-height: 120px;
 								width: 100%;
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									width: 100%;
+									width: 90%;
 									background-color: $blackcolor;
 									letter-spacing: 0.055em;
 									color: $colorwhite;
-									display: block;
+									display: inline-block;
 									height: auto;
 									line-height: 30px;
 									text-align: center;
 									margin-bottom: 0.2em;
 									font-size: 1em;
-
 									font-family: "Font Awesome 5 Free", $FontStyle;
+
 									a {
 										color: $colorwhite;
 										margin: 0 auto;
@@ -1004,7 +1009,9 @@ desktop 1920px */
 						font-family: $FontStyleHeader;
 						width: 80%;
 						color: $colorwhite;
+
 						@include originTran(50% 50%);
+
 						@include Transition(all 0.2s ease-in 0s);
 						letter-spacing: 0.05em;
 						display: block;
@@ -1258,7 +1265,6 @@ desktop 1920px */
 						}
 
 						/* gallery page styles */
-
 						.websiteImage {
 							@include box-sizing($type: border-box);
 							height: auto;
@@ -1545,7 +1551,7 @@ desktop 1920px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -1773,6 +1779,7 @@ desktop 1920px */
 								small {
 									a {
 										font-size: 0.9em;
+
 										@include Transition(all 0.2s ease-in 0s);
 										display: inline-block;
 										padding: 0 2%;
@@ -2115,7 +2122,7 @@ desktop 1920px */
 						}
 					}
 
-					/* Skills List - not using*/
+					/* Skills List - not using */
 					ul.webskills {
 						list-style: none;
 						font-family: $FontStyle;
@@ -2657,8 +2664,6 @@ desktop 1920px */
 							}
 						}
 					}
-
-					/* END OF Hero Slider */
 				}
 
 				/* Animated Chart */
@@ -2771,7 +2776,6 @@ desktop 1920px */
 							}
 						}
 					}
-					/* End of chart*/
 				}
 			}
 
@@ -2785,7 +2789,7 @@ desktop 1920px */
 				div.content {
 					clear: both;
 					position: relative;
-					top: 0px;
+					top: 0;
 					padding: 0;
 					overflow: hidden;
 					width: 100%;
@@ -3178,6 +3182,7 @@ desktop 1920px */
 				}
 			}
 		}
+
 		/* Copy */
 		p#copyr {
 			color: $blackcolor;
@@ -3195,6 +3200,7 @@ desktop 1920px */
 		}
 	}
 }
+
 /*
 desktop 1440px */
 @media only screen and (max-width: 90em) {
@@ -3531,7 +3537,7 @@ desktop 1440px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -3541,7 +3547,7 @@ desktop 1440px */
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									width: 100%;
+									width: 90%;
 								}
 							}
 						}
@@ -3755,7 +3761,7 @@ desktop 1440px */
 					}
 				}
 
-				/*vcontent wide containers */
+				/* content wide containers */
 				section.contact-wide {
 					margin: 1em 0;
 
@@ -3801,7 +3807,7 @@ desktop 1440px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -4479,6 +4485,7 @@ desktop 1440px */
 		}
 	}
 }
+
 /*
 desktop 1280px */
 @media only screen and (max-width: 80em) {
@@ -4604,7 +4611,7 @@ desktop 1280px */
 					content: "\f10d";
 				}
 
-				&:after {
+				&::after {
 					content: "\f10e";
 				}
 			}
@@ -4797,7 +4804,7 @@ desktop 1280px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -5058,7 +5065,7 @@ desktop 1280px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -6019,7 +6026,7 @@ desktop 1024px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -6306,7 +6313,7 @@ desktop 1024px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -6986,6 +6993,7 @@ desktop 1024px */
 		}
 	}
 }
+
 /*
 tablet 800px */
 @media only screen and (max-width: 50em) {
@@ -7297,7 +7305,7 @@ tablet 800px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -7587,7 +7595,7 @@ tablet 800px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -8317,6 +8325,7 @@ tablet 800px */
 		}
 	}
 }
+
 /*
 tablet 600px */
 @media only screen and (max-width: 37.5em) {
@@ -8338,6 +8347,7 @@ tablet 600px */
 	.menu-toggle.hide {
 		left: 110vw;
 	}
+
 	/* Make sure the button doesn't hide when menu is open. */
 	.menu-toggle:hover,
 	.menu-toggle:focus {
@@ -8646,7 +8656,7 @@ tablet 600px */
 							width: 100%;
 
 							.author-avatar {
-								width: 20%;
+								width: 10%;
 							}
 						}
 
@@ -8924,7 +8934,7 @@ tablet 600px */
 									margin: 0;
 
 									article.comment-body {
-										background-color: #000;
+										background-color: $blackcolor;
 										footer.comment-meta {
 											height: 60px;
 											margin-top: 0;
@@ -9605,6 +9615,7 @@ tablet 600px */
 		}
 	}
 }
+
 /*
 mobile 480px */
 @media only screen and (max-width: 30em) {
@@ -9908,7 +9919,7 @@ mobile 480px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -10181,7 +10192,7 @@ mobile 480px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -10877,6 +10888,7 @@ mobile 480px */
 		}
 	}
 }
+
 /*
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
@@ -11160,7 +11172,7 @@ mobile 360px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -11420,7 +11432,7 @@ mobile 360px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -12108,6 +12120,7 @@ mobile 360px */
 		}
 	}
 }
+
 /*
 mobile 320px */
 @media only screen and (max-width: 20em) {
@@ -12389,7 +12402,7 @@ mobile 320px */
 								width: 100%;
 
 								.author-avatar {
-									width: 20%;
+									width: 10%;
 								}
 							}
 
@@ -12663,7 +12676,7 @@ mobile 320px */
 										margin: 0;
 
 										article.comment-body {
-											background-color: #000;
+											background-color: $blackcolor;
 											footer.comment-meta {
 												height: 60px;
 												margin-top: 0;
@@ -13174,7 +13187,7 @@ mobile 320px */
 						#bars {
 							li {
 								.bar {
-									&:hover:after {
+									&:hover::after {
 										font-size: 0.6em;
 									}
 								}
