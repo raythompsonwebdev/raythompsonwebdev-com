@@ -18,7 +18,7 @@
 
 <aside id="side-bar" class="group" role="complementary">
 
-
+	
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'categoree-widget-area' ) ) : ?>
 
@@ -26,7 +26,7 @@
 
 	</article>
 
-
+	   
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'archives-widget-area' ) ) : ?>
 
@@ -41,6 +41,6 @@
 
 </article>
 
+  
 
-
-</aside>
+</aside>    

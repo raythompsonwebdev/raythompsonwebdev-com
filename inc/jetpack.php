@@ -4,7 +4,8 @@
  *
  * @link https://jetpack.com/
  *
- * @package raythompsonwebdev-com
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
  */
 
 /**
@@ -32,7 +33,7 @@ function raythompsonwebdev_com_jetpack_setup() {
 	add_theme_support(
 		'jetpack-content-options',
 		array(
-			'post-details' => array(
+			'post-details'    => array(
 				'stylesheet' => 'raythompsonwebdev-com-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',

@@ -1,0 +1,261 @@
+@import "mixins";
+@import "variables";
+
+
+*,
+*:after,
+*:before {
+    @include box-sizing($type: border-box);
+}
+
+* html {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    @include box-sizing($type: border-box);
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+*.float-divider {
+    clear: both;
+    display: block;
+    height: 1px;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+.group:after,
+.group:before {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+body {
+  background: $colorwhite;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section { display: block; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: baseline;
+  outline: none;
+}
+
+
+a {
+  margin: 0;
+  padding: 0;
+  font-family: ($FontStyleHeader);
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+    cursor:pointer;
+  }
+  &:visited {
+    font-weight:bold;
+  }
+
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $FontStyleHeader;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+p {
+    font-family: $FontStyle;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    font-family: $FontStyle;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+
+    padding: 0;
+    margin: 0;
+}
+
+input{
+    margin:0;
+    padding:0;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+.sticky {
+    font-size: 1em;
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.alignright {
+    float: right;
+}
+
+.alignleft {
+    float: left;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    border: 1px solid #fff;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 4px;
+}
+
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    max-width:100%;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    line-height: 1.214em;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+.gallery-caption {
+    font-size: 0.9em;
+}
+
+.bypostauthor {
+    font-size: 0.9em;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar. */
+}
+
+.gallery-caption {
+    font-size: 1em;
+}
+
+//avatar
+.avatar-26 .photo {
+    left: 0px;
+}
+
+.container {
+    width: 38.729257%;
+    float: right;
+    margin: 0 1% 1% 2%;
+}
+
+div.textwidget {
+    height: auto;
+}
+
+.bypostauthor {
+  font-size: 1em;
+}
+
+.newExcerpt {
+  display: block;
+  margin: 0;
+  padding:0;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+blockquote {
+	position: relative;
+	margin: 1.5em 0 1.5em 2em;
+	padding: 0 1em;
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1.4em;
+}
+
+blockquote::before {
+	position: absolute;
+	left: -2em;
+	font-family: "icons";
+	content: "\e906";
+	color: #ededed;
+}
+
+

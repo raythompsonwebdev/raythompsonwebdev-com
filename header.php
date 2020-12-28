@@ -1,89 +1,100 @@
 <?php
 /**
- * The header for our theme
+ * *PHP version 7.2.
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * Header | core/header.php.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package raythompsonwebdev-com
+ * @category   Header
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
 ?>
-<!doctype html>
-<html <?php language_attributes(); ?>>
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
-</head>
+<!DOCTYPE html>
+<html class="no-js" <?php language_attributes(); ?>>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" >
+		<meta charset="<?php bloginfo( 'charset' ); ?>" >
+		<meta name="viewport" content="width=device-width, initial-scale=1" >
+		<link rel="profile" href="http://gmpg.org/xfn/11" >
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
+	<link rel="preconnect" href="https://fonts.gstatic.com">
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
 
-<div id="wrapper" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'raythompsonwebdev-com' ); ?></a>
+		<?php wp_head(); ?>
+	</head>
+
+	<!--[if lt IE 9]>
+	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<body <?php body_class(); ?>>
+
+		<div id="wrapper_container">
 
 
-	<header id="masthead" class="site-header">
+			<header class="group" role="banner">
 
-		<!-- .site-branding -->
-		<div class="site-branding">
+				<div class="site-logo">
 
-			<div class="site-logo">
+        <?php $site_title = get_bloginfo( 'name' ); ?>
 
-				<?php $raythompsonwebdev_com_site_title = get_bloginfo( 'name' ); ?>
-
-				<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<div class="screen-reader-text">
+					<a href=" <?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<div class="screen-reader-text">
+							<?php
+								/* translators: %1$s:, CMSname: WordPress. */
+								printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html( $site_title ) );
+							?>
+						</div>
 						<?php
-							/* translators: %1$s:, CMSname: WordPress. */
-							printf( esc_html_e( 'Go to the home page of %1$s', 'raythompsonwebdev-com' ), esc_html( $raythompsonwebdev_com_site_title ) );
+							if ( has_custom_logo() ) {
+								the_custom_logo();
+							}
 						?>
-					</div>
-						<?php
-						if ( has_custom_logo() ) {
-							the_custom_logo();
-						}
-						?>
-				</a>
 
-			</div>
+					</a>
+				</div>
 
-			<?php	if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archive-page' ) ) ) : ?>
 
-			<hgroup>
-				<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
+				<?php if ( is_front_page() || is_page( array( 'about', 'contact', 'privacy-policy-2', 'archive-page' ) ) ) : ?>
+					<hgroup>
+						<h1 id="logo"><span>RAYTHOMPSON</span><span>WEBDEV</span>.CO.UK</h1>
 
-				<?php elseif ( is_page( 'projects' ) || 'project' === get_post_type() ) : ?>
+						<?php elseif ( is_page( 'projects' ) || 'project' === get_post_type() ) : ?>
 
-			<hgroup>
-				<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
+						<hgroup>
+						<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>PROJECTS</h1>
 
-				<?php	else : ?>
-			<hgroup>
-				<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
-					<?php
-				endif;
-				$raythompsonwebdev_com_description = get_bloginfo( 'description', 'display' );
-				if ( $raythompsonwebdev_com_description || is_customize_preview() ) :
-					?>
-				<h2 class="site-description"><?php echo $raythompsonwebdev_com_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h2>
+						<?php else : ?>
+						<hgroup>
+							<h1 id="logo-blog"><span>RAYTHOMPSON</span><span >WEBDEV</span>BLOG</h1>
+
+							<?php
+						endif;
+
+						$raythompsonwebdev_com_description = get_bloginfo( 'description', 'display' );
+						if ( $raythompsonwebdev_com_description || is_customize_preview() ) :
+							?>
+
+							<h2 class="site-description">
+							<?php echo $raythompsonwebdev_com_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							</h2>
 				<?php endif; ?>
-			</hgroup>
+					</hgroup>
 
-		</div>
-		<!-- #site-navigation -->
 
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( ' Menu', 'raythompsonwebdev-com' ); ?></button>
+				<button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'raythompsonwebdev-com' ); ?></button>
 
-		<nav id="site-navigation" class="main-navigation">
-
-			<?php
-
-			if ( has_nav_menu( 'main' ) ) {
+				<?php
+					// Checking if there's anything in Main Menu.
+				if ( has_nav_menu( 'main' ) ) {
 					wp_nav_menu(
 						array(
 							'menu'           => 'main',
@@ -94,13 +105,15 @@
 
 						)
 					);
-			}
-			?>
-		</nav>
-
-	</header><!-- #masthead -->
+				}
+				?>
 
 
+			</header>
+	<?php if ( is_home() || is_archive() ) : ?>
+	<span class="social-1"><?php get_search_form(); ?></span>
+	<?php endif; ?>
+		<!--Main content -->
+<main id="main-content" class="group" role="main">
+	<!--search form -->
 
-	<!-- #page start -->
-	<div id="page">

@@ -15,7 +15,7 @@
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
-$raythompsonwebdev_com_chart_bars = '[
+$chart_bars = '[
 	{
 		"id": "1",
 		"language":"HTML",
@@ -44,7 +44,7 @@ $raythompsonwebdev_com_chart_bars = '[
 	}
 ]';
 
-$raythompsonwebdev_com_bars = json_decode( $raythompsonwebdev_com_chart_bars, true );
+$bars = json_decode( $chart_bars, true );
 
 ?>
 
@@ -58,14 +58,13 @@ $raythompsonwebdev_com_bars = json_decode( $raythompsonwebdev_com_chart_bars, tr
 
 			<?php
 
-			foreach ( $raythompsonwebdev_com_bars as $raythompsonwebdev_com_bar ) :
+			foreach ( $bars as $bar ) :
 
 				?>
 
 				<li>
-					<div
-						data-percentage="<?php	printf( '%s', esc_html( $raythompsonwebdev_com_bar['datapercentage'] ), 'raythompsonwebdev-com' ); ?>"	class="bar"	data-skill="<?php printf( '%s', esc_html( $raythompsonwebdev_com_bar['dataskill'] ), 'raythompsonwebdev-com' ); ?>" ></div>
-					<span><?php printf( '%s', esc_html( $raythompsonwebdev_com_bar['language'] ), 'raythompsonwebdev-com' ); ?></span>
+					<div data-percentage="<?php echo esc_html( $bar['datapercentage'], 'raythompsonwebdev-com' ); ?>" class="bar" data-skill="<?php echo esc_html( $bar['dataskill'], 'raythompsonwebdev-com' ); ?>" ></div>
+					<span><?php echo esc_html( $bar['language'], 'raythompsonwebdev-com' ); ?></span>
 				</li>
 
 			<?php endforeach; ?>

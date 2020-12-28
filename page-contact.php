@@ -20,11 +20,11 @@ get_header(); ?>
 
 <h1><?php esc_html_e( 'Contact Page', 'raythompsonwebdev-com' ); ?></h1>
 
-<section id="contactform">
+<div id="contactform">
 
 	<?php the_content(); ?>
 
-</section>
+</div>
 
 <br>
 

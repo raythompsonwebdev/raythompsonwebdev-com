@@ -1,28 +1,35 @@
 <?php
 /**
- * The template for displaying search results pages
+ * *PHP version 5
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * Search page | core/search.php.
  *
- * @package raythompsonwebdev-com
+ * @category   Search_Page
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       https:www.raythompsonwebdev.co.uk custom template
  */
 
-get_header();
-?>
+ get_header(); ?>
 
-	<main id="primary" class="site-main">
+<?php
+if ( have_posts() ) :
+	?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+			<header class="byline">
 				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'raythompsonwebdev-com' ), '<span>' . get_search_query() . '</span>' );
-					?>
+				<?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', 'raythompsonwebdev-com' ), '<span>' . get_search_query() . '</span>' );
+				?>
 				</h1>
 			</header><!-- .page-header -->
 
+			
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -46,8 +53,12 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+<br/>
 
-<?php
-get_sidebar();
-get_footer();
+
+
+<?php get_sidebar(); ?>
+
+
+
+<?php get_footer(); ?>

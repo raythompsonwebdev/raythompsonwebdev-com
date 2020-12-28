@@ -13,7 +13,6 @@
  * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
  * @link       https:www.raythompsonwebdev.co.uk custom template
  */
-
 ?>
 
 <form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -28,4 +27,4 @@
 			<input type="submit" class="search-submit" value="Find" />
 	</div>
 </form>
-
+		  

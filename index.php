@@ -1,57 +1,34 @@
 <?php
 /**
- * The main template file
+ * *PHP version 7.2
  *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
+ * Index page | core/index.php.
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package raythompsonwebdev-com
+ * @category   Index_Page
+ * @package    WordPress
+ * @subpackage Raythompsonwebdev-com
+ * @author     Raymond Thompson <ray_thomp@hushmail.com>
+ * @copyright  2017 Raymond Thompson
+ * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
+ * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
+ * @link       https:www.raythompsonwebdev.co.uk custom template.
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<main id="primary" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
+	<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+	<div class="clearfix"></div>
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+	<!--Related Items -->
+	<section class="contact-wide">
+	<h1><?php esc_html_e( 'Related Items', 'raythompsonwebdev-com' ); ?></h1>
+	</section>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+<!--Side bar -->
+<?php get_sidebar(); ?>
 
-			endwhile;
 
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<!--footer -->
+<?php get_footer(); ?>
