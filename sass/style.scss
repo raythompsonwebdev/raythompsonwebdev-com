@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: raythompsonwebdev-com
 Theme URI: https://raythompsonwebdev.co.uk
 Author: raythompsonwebdev
@@ -15,13 +15,8 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-raythompsonwebdev-com is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+raythompsonwebdev-com is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc..site-logo
 */
-
 @import "partials/base";
 @import "partials/variables";
 @import "partials/mixins";
@@ -113,10 +108,10 @@ desktop 1920px */
 				.site-logo {
 					top: 0;
 					left: 0;
-					width: 12%;
-					-webkit-flex: 0 0 auto;
-					-ms-flex: 0 0 auto;
-					flex: 0 0 auto;
+					width: 6%;
+					-webkit-flex: 1 0 auto;
+					-ms-flex: 1 0 auto;
+					flex: 1 0 auto;
 
 					a.custom-logo-link {
 						z-index: 1;
@@ -188,7 +183,7 @@ desktop 1920px */
 
 				/* Header Title */
 				hgroup {
-					width: 88%;
+					width: 93%;
 					display: block;
 					float: left;
 					height: auto;
@@ -948,14 +943,13 @@ desktop 1920px */
 								width: 100%;
 
 								.author-avatar {
-									width: 8%;
-									display: block;
+									width:auto;
 									margin: 0;
 									border: none;
-									float:left;
+
 									img{
-										margin:0 2% 0 0;
-										width:98%;
+										margin:0;
+										width:100%;
 									}
 								}
 							}
@@ -963,23 +957,36 @@ desktop 1920px */
 							.meta-content {
 								min-height: 120px;
 								width: 100%;
-								.no-author-avatar {
-									width: 8%;
-									display: block;
-									margin: 0;
-									border: none;
-									float:left;
-									img{
-										margin:0 2% 0 0;
-										width:98%;
-									}
+								height:auto;
+								display: grid;
+								grid-template-columns: 6% 2fr;
+								grid-template-rows: 30px 30px 30px 30px;
+								gap: 2px 2px;
+								grid-template-areas:
+										"Image posted-on"
+										"Image byline"
+										"Image comments-link"
+										"Image spare";
+
+								.posted-on { grid-area: posted-on; }
+								.byline { grid-area: byline; }
+								.comments-link { grid-area: comments-link; }
+								.spare { grid-area: spare; }
+								.author-avatar {
+									display: grid;
+									grid-template-columns: 1fr;
+									grid-template-rows: 4fr;
+									gap: 0px 0px;
+									grid-template-areas:
+											".";
+									grid-area: Image;
 								}
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
 									text-indent:0.5em;
-									width: 90%;
+									width: 93%;
 									background-color: $blackcolor;
 									letter-spacing: 0.055em;
 									color: $colorwhite;
@@ -3226,6 +3233,7 @@ desktop 1440px */
 
 			.site-branding {
 				.site-logo {
+					width:6%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -3255,6 +3263,7 @@ desktop 1440px */
 				}
 
 				hgroup {
+					width: 92%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1.4em;
@@ -3556,7 +3565,7 @@ desktop 1440px */
 								width: 100%;
 
 								.author-avatar {
-									width: 8%;
+									width: 100%;
 								}
 							}
 
@@ -3566,7 +3575,7 @@ desktop 1440px */
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									width: 90%;
+									width: 99%;
 								}
 							}
 						}
@@ -4516,7 +4525,7 @@ desktop 1280px */
 
 			.site-branding {
 				.site-logo {
-
+					width:9%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -4527,9 +4536,12 @@ desktop 1280px */
 				}
 
 				hgroup {
+					width: 91%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1.3em;
+						height: 25px;
+						line-height: 30px;
 
 						span {
 							padding: 0;
@@ -4823,12 +4835,14 @@ desktop 1280px */
 								width: 100%;
 
 								.author-avatar {
-									width: 8%;
+									width: 100%;
 								}
 							}
 
 							.meta-content {
 								width: 100%;
+								grid-template-columns: 9% 2fr;
+								grid-template-rows: 30px 30px 30px 30px;
 								span.byline,
 								span.comments-link,
 								span.posted-on {
@@ -5776,7 +5790,7 @@ desktop 1024px */
 			height: auto;
 			.site-branding {
 				.site-logo {
-					width: 15%;
+					width: 10%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -5787,7 +5801,7 @@ desktop 1024px */
 				}
 
 				hgroup {
-					width: 85%;
+					width: 89%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1.2em;
@@ -6053,17 +6067,20 @@ desktop 1024px */
 								width: 100%;
 
 								.author-avatar {
-									width: 8%;
+									width: 100%;
 								}
 							}
 
 							.meta-content {
 								width: 100%;
+								grid-template-rows: 25px 25px 25px 25px;
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
 									font-size: 0.9em;
+									height:25px;
+									line-height:25px;
 								}
 							}
 						}
@@ -7033,7 +7050,7 @@ tablet 800px */
 			.site-branding {
 				width:80%;
 				.site-logo {
-					width: 10%;
+					width: 7%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -7044,11 +7061,12 @@ tablet 800px */
 				}
 
 				hgroup {
-					width: 85%;
+					width: 91%;
 
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1.2em;
+
 
 						span {
 							padding: 0;
@@ -7068,9 +7086,9 @@ tablet 800px */
 			.main-navigation {
 				width: 100%;
 				nav.menu-main-container {
-					width: 90%;
+					width: 100%;
 					float:none;
-					margin:0;
+					margin:0 auto;
 					ul#menu-main {
 						height: 35px;
 
@@ -7334,18 +7352,19 @@ tablet 800px */
 								width: 100%;
 
 								.author-avatar {
-									width: 13%;
+									width: 100%;
 								}
 							}
 
 							.meta-content {
 								width: 100%;
+								grid-template-columns: 13% 2fr;
+
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
 									font-size: 0.8em;
-									width: 85%;
 								}
 							}
 						}
@@ -8356,6 +8375,653 @@ tablet 800px */
 	}
 }
 
+@media only screen and (max-width: 640px){
+
+	#wrapper{
+		div#page{
+			main#primary {
+				article.rtwd-post,
+				article.search-results {
+					width: 100%;
+				}
+
+				article.single-post {
+					.entry {
+						padding: 1.5em;
+					}
+				}
+
+				article.post {
+
+					h1,
+					h1.page-title {
+						font-size: 1.2em;
+					}
+
+					h2,
+					h2.entry-title {
+						font-size: 1em;
+
+						a {
+							display: block;
+
+							&:hover {
+								font-weight: normal;
+							}
+						}
+					}
+
+					h3 {
+						font-size: 1.1em;
+
+						a {
+							padding-left: 0;
+						}
+					}
+
+					p {
+						font-size: 0.9em;
+					}
+
+					ul.post-list {
+						li {
+							font-size: 0.9em;
+						}
+					}
+
+					ul {
+						width: 94%;
+
+						li {
+							margin: 0.5em auto;
+							font-size: 0.8em;
+							a {
+								font-size: 100%;
+							}
+						}
+					}
+
+					a.post-thumbnail {
+						display: block;
+					}
+
+					.featured-image {
+						width: 90%;
+
+						a {
+							display: block;
+						}
+
+						img {
+							margin: 0 auto;
+						}
+					}
+
+					pre {
+						font-size: 0.85em;
+					}
+
+					.code {
+						width: 80%;
+						font-size: 0.8em;
+					}
+
+					header.page-header,
+					header.entry-header {
+						padding: 0.25em;
+
+						.entry-meta {
+							.has-avatar {
+								width: 100%;
+
+								.author-avatar {
+									width: 100%;
+								}
+							}
+
+							.meta-content {
+								width: 100%;
+								grid-template-columns: 16% 2fr;
+
+
+								span.byline,
+								span.comments-link,
+								span.posted-on {
+									font-size: 0.8em;
+								}
+							}
+						}
+					}
+
+					div.continue-reading {
+						width: 100%;
+
+						a {
+							display: block;
+
+							span.screen-reader-text:hover {
+								color: $blackcolor;
+							}
+						}
+					}
+
+					div.sharedaddy {
+						h3.sd-title {
+							width: 16%;
+						}
+
+						.sd-title::before {
+							width: 10%;
+						}
+
+						div.sd-content {
+							width: 83%;
+
+							ul {
+								height: auto;
+								margin: 0;
+
+								li {
+									width: 15%;
+									font-size: 0.9em;
+
+									a {
+										display: block;
+										margin: 0;
+
+										&:hover {
+											width: 100%;
+										}
+
+										&::before {
+											width: 100%;
+										}
+
+										span {
+											display: block;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.entry,
+					.entry-content {
+						padding: 1%;
+					}
+
+					.entry-attachment {
+						width: 25%;
+
+						figure.attachment {
+							a {
+								display: block;
+							}
+						}
+					}
+
+					footer.entry-footer {
+						p {
+							padding: 0 1em;
+						}
+
+						.bylinecat {
+							width: 10%;
+							line-height: 20px;
+
+							a {
+								padding: 0.5%;
+
+								&:hover {
+									font-weight: bold;
+								}
+							}
+						}
+
+						p.right {
+							width: 10%;
+							line-height: 55px;
+
+							a.comments-count {
+								font-size: 1.3em;
+
+								&:hover {
+									font-weight: bold;
+								}
+							}
+						}
+
+						.cat-links,
+						.tags-links,
+						.edit-link,
+						.comments-link {
+							line-height: 35px;
+
+							a {
+								font-size: 0.8em;
+							}
+						}
+					}
+				}
+				article.gallery {
+					margin: 0;
+					.website-text {
+						.item1 {
+							grid-row: 1 / span 3;
+							grid-column: 1 / span 8;
+						}
+						.item2 {
+							grid-column: 1 / span 8;
+							grid-template-columns: repeat(1, 1fr);
+							#project-title,
+							#project-code,
+							#project-url,
+							#project-github {
+								width: 100%;
+							}
+						}
+						.item3 {
+							grid-column: 1 / span 8;
+						}
+
+						.websiteImage {
+							width: 45%;
+							margin: auto;
+						}
+
+						h1.post-meta-key {
+							display: block;
+						}
+
+						p.websitetext {
+							font-size: 0.9em;
+						}
+
+						a.webformats {
+							font-size: 0.85em;
+
+							&:hover {
+								color: $headercolor;
+							}
+						}
+
+						.links {
+							height: 50px;
+							margin: 0;
+							display: block;
+
+							span {
+								width: 33%;
+
+								a {
+									width: 100%;
+									display: block;
+
+									i.fa-desktop,
+									i.fa-mobile,
+									i.fa-tablet {
+										font-size: 2em;
+
+										&:hover {
+											color: $blackcolor;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				nav.navigation {
+					min-height: 100px;
+					h2 {
+						text-indent: 0.5em;
+					}
+
+					.nav-links {
+						span {
+							i {
+								width: 4%;
+							}
+						}
+
+						div.nav-previous {
+							font-size: 1em;
+							line-height: 40px;
+
+							a {
+								line-height: 40px;
+
+								&:hover {
+									background-color: $colorwhite;
+								}
+
+								&::before {
+									font-size: 1.6em;
+									line-height: 40px;
+								}
+							}
+						}
+
+						div.nav-next {
+							font-size: 1em;
+							line-height: 40px;
+
+							a {
+								line-height: 40px;
+
+								&:hover {
+									color: $blackcolor;
+								}
+
+								&::after {
+									font-size: 1.6em;
+									line-height: 40px;
+								}
+							}
+						}
+					}
+				}
+
+				section.contact-wide {
+					h1 {
+						font-size: 1.15em;
+					}
+
+					#comments {
+						.navigation {
+							width: 100%;
+
+							h1 {
+								font-size: 1.3em;
+							}
+
+							div.nav-previous,
+							div.nav-next {
+								width: 100%;
+
+								a {
+									margin: 0;
+									&:hover {
+										color: $blackcolor;
+									}
+								}
+							}
+						}
+
+						h2.comments-title {
+							font-size: 1em;
+						}
+
+						ol.comment-list {
+							padding-left: 0;
+
+							li.comment {
+								padding: 0;
+
+								ol.children {
+									margin: auto;
+
+									li.odd {
+										margin: 0;
+
+										article.comment-body {
+											background-color: $blackcolor;
+											footer.comment-meta {
+												height: 60px;
+												margin-top: 0;
+												.comment-author {
+													font-size: 0.9em;
+
+													img {
+														width: 16%;
+													}
+
+													b.fn,
+													cite.fn {
+														line-height: 1.5;
+
+														a {
+															background-color: $headercolor;
+														}
+													}
+
+													span.says {
+														display: inline-block;
+													}
+												}
+
+												.comment-metadata {
+													font-size: 0.8em;
+
+													a {
+														color: $colorwhite;
+													}
+													span.edit-link {
+														display: inline;
+													}
+												}
+											}
+											.comment-content {
+												p {
+													font-size: 0.9em;
+
+													a {
+														background-color: $colorwhite;
+														&:hover {
+															color: $colorwhite;
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+
+								article.comment-body {
+									padding: 0.5em;
+
+									footer.comment-meta {
+										height: 60px;
+
+										.comment-author {
+											font-size: 0.9em;
+
+											img {
+												width: 16%;
+											}
+
+											b.fn,
+											cite.fn {
+												display: inline-block;
+
+												a {
+													background-color: $headercolor;
+												}
+											}
+
+											span.says {
+												display: inline-block;
+											}
+										}
+
+										.comment-metadata {
+											font-size: 0.8em;
+
+											a {
+												color: $colorwhite;
+											}
+											span.edit-link {
+												display: inline;
+											}
+										}
+									}
+
+									.comment-content {
+										p {
+											font-size: 0.9em;
+
+											a {
+												&:hover {
+													color: $colorwhite;
+												}
+											}
+										}
+									}
+
+									ul.children {
+										margin-left: 0;
+									}
+								}
+							}
+
+							.reply {
+								width: 96%;
+
+								a {
+									font-size: 1em;
+
+									&:hover {
+										color: $colorwhite;
+									}
+								}
+							}
+						}
+
+						#respond {
+							display: block;
+							clear: both;
+
+							h3#reply-title {
+								font-size: 1em;
+
+								small {
+									a {
+										font-size: 0.9em;
+
+										&:hover {
+											color: $blackcolor;
+										}
+									}
+								}
+							}
+
+							.comment-form {
+								padding: 1em;
+
+								p.comment-notes {
+									font-size: 0.9em;
+								}
+
+								textarea#comment {
+									width: 100%;
+								}
+
+								p.comment-form-author {
+									label {
+										height: 30px;
+									}
+
+									input {
+										height: 35px;
+									}
+
+									input:focus,
+									textarea#comment:focus {
+										box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+									}
+								}
+
+								p.comment-form-email {
+									label {
+										height: 30px;
+									}
+
+									input {
+										height: 35px;
+									}
+
+									input:focus,
+									textarea#comment:focus {
+										border: 1px solid rgba(81, 203, 238, 1);
+									}
+								}
+
+								p.comment-form-url {
+									label {
+										height: 30px;
+									}
+
+									input {
+										height: 35px;
+									}
+
+									input:focus,
+									textarea#comment:focus {
+										border: 1px solid rgba(81, 203, 238, 1);
+									}
+								}
+
+								p.form-submit {
+									margin: 2% 0;
+									width: 100%;
+
+									input[type="submit"] {
+										width: 15%;
+
+										&:hover {
+											cursor: pointer;
+										}
+									}
+								}
+							}
+						}
+
+						p {
+							padding: 0.5em;
+							a {
+								background-color: unset;
+
+								&:hover {
+									color: $colorwhite;
+								}
+							}
+						}
+
+						p:last-of-type {
+							text-align: center;
+							a {
+								margin: 0 0.25em;
+
+								&:hover {
+									background-color: $blackcolor;
+								}
+							}
+						}
+
+						p.must-log-in {
+							width: 90%;
+
+							a {
+								display: inline-block;
+
+								&:hover {
+									color: $colorwhite;
+								}
+							}
+						}
+
+						p.nocomments {
+							font-size: 1.1em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 /*
 tablet 600px */
 @media only screen and (max-width: 37.5em) {
@@ -8401,7 +9067,7 @@ tablet 600px */
 			.site-branding {
 				width: 100%;
 				.site-logo {
-					width: 10%;
+					width: 8%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -8412,6 +9078,7 @@ tablet 600px */
 				}
 
 				hgroup {
+					width:91%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1.1em;
@@ -8690,12 +9357,13 @@ tablet 600px */
 							width: 100%;
 
 							.author-avatar {
-								width: 8%;
+								width: 100%;
 							}
 						}
 
 						.meta-content {
 							width: 100%;
+							grid-template-columns: 16% 2fr;
 
 							span.byline,
 							span.comments-link,
@@ -9666,7 +10334,7 @@ mobile 480px */
 
 			.site-branding {
 				.site-logo {
-					width: 12%;
+					width: 9%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -9677,7 +10345,7 @@ mobile 480px */
 				}
 
 				hgroup {
-					width: 84%;
+					width: 90%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1em;
@@ -9966,20 +10634,21 @@ mobile 480px */
 								height:auto;
 
 								.author-avatar {
-									width: 15%;
+									width: 100%;
 								}
 							}
 
 							.meta-content {
 								width: 100%;
 								height:auto;
+								grid-template-rows: 20px 20px 20px 20px;
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									width: 84%;
 									font-size: 0.75em;
-									line-height: 25px;
+									line-height: 20px;
+									height:20px;
 								}
 							}
 						}
@@ -10953,7 +11622,7 @@ mobile 360px */
 		header.site-header {
 			.site-branding {
 				.site-logo {
-					width:14%;
+					width:13%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -10964,6 +11633,7 @@ mobile 360px */
 				}
 
 				hgroup {
+					width: 87%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 1em;
@@ -11223,17 +11893,17 @@ mobile 360px */
 								width: 100%;
 
 								.author-avatar {
-									width: 17%;
+									width: 100%;
 								}
 							}
 
 							.meta-content {
 								width: 100%;
+								grid-template-columns: 20% 2fr;
 
 								span.byline,
 								span.comments-link,
 								span.posted-on {
-									width: 82%;
 									font-size: 0.7em;
 								}
 							}
@@ -12190,7 +12860,7 @@ mobile 320px */
 			.site-branding {
 
 				.site-logo {
-					width:16%;
+					width:13%;
 					a.custom-logo-link {
 						top: 0;
 
@@ -12201,7 +12871,7 @@ mobile 320px */
 				}
 
 				hgroup {
-					width: 83%;
+					width: 87%;
 					h1#logo,
 					h1#logo-blog {
 						font-size: 0.9em;
@@ -12457,7 +13127,7 @@ mobile 320px */
 								width: 100%;
 
 								.author-avatar {
-									width: 17%;
+									width: 100%;
 								}
 							}
 
