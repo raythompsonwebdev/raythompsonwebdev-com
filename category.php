@@ -62,7 +62,7 @@ if ( have_posts() ) :
 				if ( 'post' === get_post_type() ) :
 					?>
 						<div class="entry-meta">
-						<?php	raythompsonwebdev_com_posted_on(); ?>
+						<?php	raythompsonwebdev_com_index_posted_on(); ?>
 						</div><!-- .entry-meta -->
 					<?php endif; ?>
 				</header><!-- .entry-header -->

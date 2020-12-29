@@ -953,35 +953,6 @@ desktop 1920px */
 									}
 								}
 							}
-
-							.meta-content {
-								min-height: 120px;
-								width: 100%;
-								height:auto;
-								display: grid;
-								grid-template-columns: 6% 2fr;
-								grid-template-rows: 30px 30px 30px 30px;
-								gap: 2px 2px;
-								grid-template-areas:
-										"Image posted-on"
-										"Image byline"
-										"Image comments-link"
-										"Image spare";
-
-								.posted-on { grid-area: posted-on; }
-								.byline { grid-area: byline; }
-								.comments-link { grid-area: comments-link; }
-								.spare { grid-area: spare; }
-								.author-avatar {
-									display: grid;
-									grid-template-columns: 1fr;
-									grid-template-rows: 4fr;
-									gap: 0px 0px;
-									grid-template-areas:
-											".";
-									grid-area: Image;
-								}
-
 								span.byline,
 								span.comments-link,
 								span.posted-on {
@@ -1013,6 +984,54 @@ desktop 1920px */
 											display: inline-block;
 										}
 									}
+								}
+
+								.meta-content-index{
+									span.byline,
+									span.comments-link,
+									span.posted-on {
+										text-indent:unset;
+										width: 100%;
+										text-align: center;
+
+										a {
+
+											text-align: center;
+
+											&:hover {
+												margin: 0 auto;
+												width: auto;
+												display: inline-block;
+											}
+										}
+									}
+								}
+
+							.meta-content {
+								min-height: 120px;
+								width: 100%;
+								height:auto;
+								display: grid;
+								grid-template-columns: 6% 2fr;
+								grid-template-rows: 30px 30px 30px 30px;
+								gap: 2px 2px;
+								grid-template-areas:
+										"Image posted-on"
+										"Image byline"
+										"Image comments-link"
+										"Image spare";
+								.posted-on { grid-area: posted-on; }
+								.byline { grid-area: byline; }
+								.comments-link { grid-area: comments-link; }
+								.spare { grid-area: spare; }
+								.author-avatar {
+									display: grid;
+									grid-template-columns: 1fr;
+									grid-template-rows: 4fr;
+									gap: 0px 0px;
+									grid-template-areas:
+											".";
+									grid-area: Image;
 								}
 							}
 						}
@@ -1168,6 +1187,7 @@ desktop 1920px */
 						display: inline-block;
 						clear: both;
 						background-color: $blackcolor;
+						font-family: $FontStyle;
 
 						p {
 							margin: 0;
@@ -4032,7 +4052,6 @@ desktop 1440px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
 									width: 100%;
 
 									input[type="submit"] {
@@ -5295,11 +5314,10 @@ desktop 1280px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
-									width: 100%;
+																	width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 25%;
 
 										&:hover {
 											cursor: pointer;
@@ -6554,11 +6572,11 @@ desktop 1024px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
+
 									width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 25%;
 
 										&:hover {
 											cursor: pointer;
@@ -6957,7 +6975,7 @@ desktop 1024px */
 		}
 
 		aside#side-bar {
-			h2 {
+			h1 {
 				font-size: 1.05em;
 			}
 
@@ -7841,11 +7859,11 @@ tablet 800px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
+
 									width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 35%;
 
 										&:hover {
 											cursor: pointer;
@@ -8293,9 +8311,10 @@ tablet 800px */
 			-ms-flex-flow: column;
 			flex-flow: column;
 
-			h2 {
+			h1 {
 				width: 100%;
 				font-size: 1.05em;
+				line-height:40px;
 			}
 
 			.side-bar-box {
@@ -8964,11 +8983,11 @@ tablet 800px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
+
 									width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 45%;
 
 										&:hover {
 											cursor: pointer;
@@ -9833,11 +9852,11 @@ tablet 600px */
 							}
 
 							p.form-submit {
-								margin: 2% 0;
+								margin: 1% 0;
 								width: 100%;
 
 								input[type="submit"] {
-									width: 15%;
+									width: 50%;
 
 									&:hover {
 										cursor: pointer;
@@ -10243,7 +10262,7 @@ tablet 600px */
 			height: auto;
 			width: 100%;
 
-			h2 {
+			h1 {
 				font-size: 1.1em;
 			}
 
@@ -11108,11 +11127,11 @@ mobile 480px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
+
 									width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 55%;
 
 										&:hover {
 											cursor: pointer;
@@ -11533,7 +11552,7 @@ mobile 480px */
 		aside#side-bar {
 			width: 100%;
 
-			h2 {
+			h1 {
 				font-size: 1.1em;
 			}
 
@@ -12351,11 +12370,11 @@ mobile 360px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
+
 									width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 60%;
 
 										&:hover {
 											cursor: pointer;
@@ -12769,7 +12788,7 @@ mobile 360px */
 			}
 		}
 
-		#aside#side-bar {
+		aside#side-bar {
 			.side-bar-box {
 				h2 {
 					font-size: 1.15em;
@@ -13598,11 +13617,11 @@ mobile 320px */
 								}
 
 								p.form-submit {
-									margin: 2% 0;
+
 									width: 100%;
 
 									input[type="submit"] {
-										width: 15%;
+										width: 60%;
 
 										&:hover {
 											cursor: pointer;
@@ -13994,7 +14013,7 @@ mobile 320px */
 			}
 		}
 
-		#aside#side-bar {
+		aside#side-bar {
 			.side-bar-box {
 				h2 {
 					font-size: 1.15em;
