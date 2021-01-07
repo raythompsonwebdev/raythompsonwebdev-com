@@ -21,7 +21,6 @@ get_header();
 
 <h1><?php the_title(); ?></h1>
 <article class="main-text">
-
 <p><?php esc_html_e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
 </article>
 

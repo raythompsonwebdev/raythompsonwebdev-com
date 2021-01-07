@@ -95,8 +95,9 @@ get_header();
 	</article><!--end of post group-->
 
 			<?php
-			endwhile;
-		if ( is_singular( 'project' ) ) :
+				endwhile;
+
+				if ( is_singular( 'project' ) ) :
 			?>
 
 		<nav class="navigation">
@@ -122,5 +123,6 @@ get_header();
 <?php endif; ?>
 </main><!-- #main -->
 
-
+<br/>
+<br/>
 <?php get_footer(); ?>

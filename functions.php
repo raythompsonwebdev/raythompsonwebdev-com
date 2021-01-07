@@ -12,6 +12,14 @@ if ( ! defined( 'RAYTHOMPSONWEBDEV_COM_VERSION' ) ) {
 	define( 'RAYTHOMPSONWEBDEV_COM_VERSION', '1.0.0' );
 }
 
+/**
+ * Returns a custom login error message.
+ */
+function clashvibes__error_message() {
+	return 'Well, that was not it, hmmm!';
+}
+add_filter( 'login_errors', 'clashvibes__error_message' );
+
 if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -31,6 +39,11 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
+
+			// Add block editor  styles.
+			$font_url = '//https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap';
+			add_editor_style( array( 'css/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+			add_theme_support( 'editor-styles' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -132,8 +145,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 			)
 		);
 
-		// alignment
-		//add_theme_support('align-wide');
+		// Enable block editor styles to match the front end.
+		add_theme_support( 'wp-block-styles' );
+
+		// Enable wide alignments in block editor.
+		add_theme_support( 'align-wide' );
+
+		// allow embeds to be responsive.
+		add_theme_support( 'responsive_embeds' );
 
 	}
 endif;
@@ -154,9 +173,24 @@ add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
  * Registers an editor stylesheet for the theme.
  */
 function raythompsonwebdev_com_add_editor_styles() {
-	add_editor_style( '/css/custom-editor-style.css' );
+	add_editor_style( '/css/editor-style.css' );
 }
 add_action( 'admin_init', 'raythompsonwebdev_com_add_editor_styles' );
+
+/**
+ * Block Editor Styling.
+ */
+function raythompsonwebdev_com_block_editor_fonts() {
+	wp_enqueue_style( 'raythompsonwebdev-com-block-editor-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+
+}
+add_action( 'enqueue_block_editor_assets', 'raythompsonwebdev_com_block_editor_fonts' );
+
+function raythompsonwebdev_com_add_block_style() {
+	wp_enqueue_script( 'raythompsonwebdev-com-block-variations', get_template_directory_uri() . '/js/custom-block-settings.js', array( 'wp-blocks' ), RAYTHOMPSONWEBDEV_COM_VERSION, false );
+}
+add_action( 'enqueue_block_editor_assets', 'raythompsonwebdev_com_add_block_style' );
+
 /**
  * Register widget area.
  *
@@ -234,6 +268,8 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
 function raythompsonwebdev_com_scripts() {
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), RAYTHOMPSONWEBDEV_COM_VERSION );
 	wp_style_add_data( 'raythompsonwebdev-com-style', 'rtl', 'replace' );
+
+	wp_enqueue_style( 'raythompsonwebdev-com-fonts', 'https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
 
 	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 

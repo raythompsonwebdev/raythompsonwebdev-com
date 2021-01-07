@@ -28,8 +28,22 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php raythompsonwebdev_com_post_thumbnail(); ?>
+	<!--featured Image-->
+	<?php if ( has_post_thumbnail() ) : ?>
 
+<?php raythompsonwebdev_com_post_thumbnail(); ?>
+
+<?php else : ?>
+
+<figure class="featured-image">
+
+<a href="#" aria-hidden="true">
+
+	<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>" alt="<?php esc_attr_e( 'No image Available', 'clashvibes' ); ?>" rel="prefetch" />
+
+</a>
+</figure><!-- featured-image -->
+<?php endif;?>
 	<div class="entry-content">
 		<?php
 		the_content(

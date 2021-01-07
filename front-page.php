@@ -42,7 +42,7 @@ get_header(); ?>
 		<h1 id="front-title"><?php esc_html_e( 'I do..', 'raythompsonwebdev-com' ); ?></h1>
 
 				<section class="frntpgbox">
-				<span><i class="fa fa-code"></i></span>
+				<span><i class="fa fa-code" aria-hidden="true"></i></span>
 					<h1><?php esc_html_e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
 
 			<p><?php esc_html_e( 'HTML & CSS', 'raythompsonwebdev-com' ); ?></p>
@@ -53,7 +53,7 @@ get_header(); ?>
 				</section>
 
 				<section class="frntpgbox">
-					<span><i class="fas fa-photo-video"></i></span>
+					<span><i class="fas fa-photo-video" aria-hidden="true"></i></span>
 						<h1><?php esc_html_e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
 
 							<p><?php esc_html_e( 'Video, Audio & Image', 'raythompsonwebdev-com' ); ?></p>
@@ -63,7 +63,7 @@ get_header(); ?>
 				</section>
 
 				<section class="frntpgbox">
-					<span><i class="fab fa-wordpress-simple"></i></span>
+					<span><i class="fab fa-wordpress-simple" aria-hidden="true"></i></span>
 						<h1><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 
 				<p><?php esc_html_e( 'Set Up & Installation', 'raythompsonwebdev-com' ); ?></p>
@@ -73,7 +73,7 @@ get_header(); ?>
 				</section>
 
 				<section class="frntpgbox">
-				<span><i class="fas fa-wrench"></i></span>
+				<span><i class="fas fa-wrench" aria-hidden="true"></i></span>
 						<h1><?php esc_html_e( 'Maintenance', 'raythompsonwebdev-com' ); ?></h1>
 
 				<p><?php esc_html_e( 'Web Security', 'raythompsonwebdev-com' ); ?></p>

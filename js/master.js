@@ -1,17 +1,17 @@
 
 // sliding menu mobile
 
-var menuToggle = document.querySelector('.menu-toggle');
+const menuToggle = document.querySelector('.menu-toggle');
 
 menuToggle.addEventListener('click', function(event){
 
 	event.preventDefault();
 
 	// create menu variables
-	var slideoutMenu = document.querySelector('.menu-main-container ');
+	let slideoutMenu = document.querySelector('.menu-main-container ');
 
-	var slideoutMenuHeight = slideoutMenu.offsetHeight;
-	
+	let slideoutMenuHeight = slideoutMenu.offsetHeight;
+
 	// toggle open class
 	slideoutMenu.classList.toggle("open");
 
@@ -21,11 +21,11 @@ menuToggle.addEventListener('click', function(event){
 	if (slideoutMenu.classList.contains("open")) {
 
 		slideoutMenu.style.top = "0px";
-		
+
 
 	} else {
 
-		
+
 		slideoutMenu.style.transition = 'all 0.3s ease-in 0s';
 		slideoutMenu.style.top = -slideoutMenuHeight + 'px';
 	}
@@ -35,11 +35,11 @@ menuToggle.addEventListener('click', function(event){
 
 // Hide/show toggle button on scroll
 
-var prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
 
-	var currentScrollPos = window.pageYOffset;
+	let currentScrollPos = window.pageYOffset;
 
 	if (prevScrollpos > currentScrollPos) {
 

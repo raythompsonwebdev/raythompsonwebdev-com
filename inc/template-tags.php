@@ -278,3 +278,27 @@ if ( ! function_exists( 'raythompsonwebdev_com_validate_gravatar' ) ) :
 	}
 
 endif;
+
+/**
+ * Replaces the excerpt "Read More" text by a link.
+ *
+ * @param mixed $more variable added.
+ * @return $more
+ */
+function new_excerpt_more( $more ) {
+	return '';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
+
+/**
+ * Replaces the excerpt more "Read More" text by a link.
+ *
+ * @param mixed $excerpt variable added.
+ * @return $excerpt
+ */
+function the_excerpt_more_link( $excerpt ) {
+	$post     = get_post();
+	$excerpt .= '<div class="continue-reading"><a href="' . get_permalink( $post->ID ) . '">continue reading : ' . get_the_title( $post->ID ) . '</a></div>';
+	return $excerpt;
+}
+add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
