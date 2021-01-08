@@ -28,13 +28,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 
 		$raythompsonwebdev_com_posted = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'raythompsonwebdev-com' ),
+			esc_html_x( 'Posted on : %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
+			esc_html_x( 'by : %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -83,13 +83,13 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 
 		$raythompsonwebdev_com_index_posted = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Published %s', 'post date', 'raythompsonwebdev-com' ),
+			esc_html_x( 'Published : %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_index_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_index_byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'raythompsonwebdev-com' ),
+			esc_html_x( 'by : %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 

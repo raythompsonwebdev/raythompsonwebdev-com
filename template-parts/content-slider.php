@@ -78,15 +78,15 @@
 			"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.png"
 		}, {
 			"id": "6",
-			"title": "Python for Everybody (PY4E)",
-			"header": "PY4E",
+			"title": "Codewars",
+			"header": "Codewars",
 			"subheader": "Topics",
 			"task1": "Introduction to Python",
 			"task2": "Python Data Structures",
 			"task3": " ",
 			"task4": " ",
 			"task5": " ",
-			"buttonname": "PY4E",
+			"buttonname": "Codewars",
 			"bgimage": "wp-content/themes/raythompsonwebdev-com/images/certificates/py4e-badges.png"
 		}, {
 			"id": "7",
@@ -145,7 +145,7 @@
 			"buttonname": "Lynda.com"
 		}, {
 			"id": "6",
-			"buttonname": "PY4E"
+			"buttonname": "Codewars"
 		}, {
 			"id": "7",
 			"buttonname": "Code Academy"

@@ -779,7 +779,7 @@ desktop 1920px */
 
 					ul {
 						text-indent: 0;
-						width: 94%;
+						width: 100%;
 						margin: 1em auto;
 						display: block;
 
@@ -803,17 +803,16 @@ desktop 1920px */
 
 					ul.post-list {
 						text-indent: 0;
-						width: 94%;
+						width: 100%;
 						margin: 0 auto;
-						display: flex;
 						font-family: $FontStyle;
+
 
 						li {
 							font-size: 1em;
 							height: auto;
 							padding: 0.5em;
 							background-color: $colorwhite;
-							width: 50%;
 
 							a {
 								width: 100%;
@@ -1082,69 +1081,73 @@ desktop 1920px */
 					div.sharedaddy {
 						width: 100%;
 						margin: 3% auto;
-						display: block;
 						font-family: $FontStyleHeader;
 
-						h3.sd-title {
-							display: block;
-							font-size: 0.95em;
-							margin: 0;
-							outline: none;
-							line-height: 40px;
-							width: 100%;
-							height: auto;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							display:flex;
 
-						h3.sd-title::before {
-							border: none;
-							width: 10%;
-						}
-
-						div.sd-content {
-							margin: 0;
-							width: 100%;
-							display: inline-block;
-
-							ul {
-								font-size: 1em;
-								text-indent: 0;
-								width: 100%;
-								height: auto;
-								display: inline-block;
+							h3.sd-title {
+								display: block;
+								font-size: 0.95em;
 								margin: 0;
+								outline: none;
+								line-height: unset;
+								width: 11%;
+								height: auto;
+							}
 
-								li {
-									width: 10%;
-									display: inline-block;
-									padding: 0;
-									margin: 0 1em 0 0;
-									height: 100%;
-									color: $blackcolor;
+							h3.sd-title::before {
+								border: none;
+								width: 10%;
+							}
 
-									a {
-										background-color: $colorwhite;
-										display: block;
-										margin: 0;
-										height: 100%;
-										@include originTran(50% 50%);
-										@include Transition(all 0.2s ease-in 0s);
+							div.sd-content {
+								margin: 0;
+								width: 80%;
+								line-height: 40px;
 
-										&:hover {
-											color: $blackcolor;
+								ul {
+									font-size: 1em;
+									text-indent: 0;
+									width: 100%;
+									height: auto;
+									margin: 0;
+									line-height: 40px;
+
+									li {
+										width: 15%;
+										display: inline-block;
+										padding: 0;
+										margin: 0 1em 0 0;
+										height: auto;
+										a {
 											background-color: $colorwhite;
-											width: 100%;
-										}
-
-										&::before {
 											display: block;
-											width: 100%;
-											color: $blackcolor;
-										}
+											margin: 0;
+											line-height: 40px;
+											@include originTran(50% 50%);
+											@include Transition(all 0.2s ease-in 0s);
+											text-align:center;
 
-										span {
-											display: block;
-											color: $blackcolor;
-											width: 100%;
+											&:hover {
+												color: $blackcolor;
+												background-color: $colorwhite;
+												width: 100%;
+											}
+
+											&::before {
+												display: block;
+												width: 100%;
+												color: $blackcolor;
+											}
+
+											span {
+												display: block;
+												color: $blackcolor;
+												width: 100%;
+												font-size: 1.1em;
+											}
 										}
 									}
 								}
@@ -1313,11 +1316,11 @@ desktop 1920px */
 									color: $blackcolor;
 								}
 								&::before {
-									content: "<<";
-									font-size: 1.6em;
+									content: "<";
+									font-size: 1.5em;
 									line-height: 40px;
 									float: left;
-									width: 3%;
+									width: 5%;
 									display: block;
 									text-align: center;
 									text-indent: 0;
@@ -1355,11 +1358,11 @@ desktop 1920px */
 								}
 
 								&::after {
-									content: ">>";
-									font-size: 1.6em;
+									content: ">";
+									font-size: 1.5em;
 									line-height: 40px;
 									float: right;
-									width: 3%;
+									width: 5%;
 									display: block;
 									text-align: center;
 									text-indent: 0;
@@ -1367,7 +1370,6 @@ desktop 1920px */
 								span.nav-subtitle,
 								span.nav-title {
 									display: inline-block;
-									margin-right: 1em;
 								}
 							}
 						}
@@ -3208,7 +3210,7 @@ desktop 1440px */
 		}
 
 		div#page {
-			min-height: 700px;
+			min-height: 900px;
 
 			h1 {
 				font-size: 1.4em;
@@ -3385,7 +3387,7 @@ desktop 1440px */
 					}
 
 					ul.post-list {
-						width: 94%;
+						width: 100%;
 
 						li {
 							font-size: 0.95em;
@@ -3393,7 +3395,7 @@ desktop 1440px */
 					}
 
 					ul {
-						width: 94%;
+						width: 100%;
 
 						li {
 							font-size: 0.9em;
@@ -3477,39 +3479,42 @@ desktop 1440px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							width: 10%;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								width: 12%;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 85%;
+							div.sd-content {
+								width: 85%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 11%;
-									margin: 0 1em 0 0;
+									li {
+										width: 15%;
 
-									a {
-										display: block;
-										margin: 0;
 
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -3597,8 +3602,8 @@ desktop 1440px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
 							}
 						}
@@ -3615,8 +3620,8 @@ desktop 1440px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
 							}
 						}
@@ -4430,7 +4435,7 @@ desktop 1280px */
 		}
 
 		div#page {
-			min-height: 580px;
+			min-height: 1080px;
 
 			h1 {
 				font-size: 1.2em;
@@ -4613,11 +4618,11 @@ desktop 1280px */
 					}
 
 					ul.post-list {
-						width: 94%;
+						width: 100%;
 					}
 
 					ul {
-						width: 94%;
+						width: 100%;
 
 						li {
 							margin: 0.5em auto;
@@ -4697,38 +4702,41 @@ desktop 1280px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							width: 10%;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								width: 10%;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 85%;
+							div.sd-content {
+								width: 85%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 12%;
+									li {
+										width: 15%;
 
-									a {
-										display: block;
-										margin: 0;
-
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -4818,8 +4826,8 @@ desktop 1280px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
 							}
 						}
@@ -4836,8 +4844,8 @@ desktop 1280px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
 							}
 						}
@@ -5804,11 +5812,11 @@ desktop 1024px */
 					}
 
 					ul.post-list {
-						width: 94%;
+						width: 100%;
 					}
 
 					ul {
-						width: 94%;
+						width: 100%;
 
 						li {
 							margin: 0.5em auto;
@@ -5886,38 +5894,41 @@ desktop 1024px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							width: 12%;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								width: 12%;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 83%;
+							div.sd-content {
+								width: 83%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 13%;
+									li {
+										width: 15%;
 
-									a {
-										display: block;
-										margin: 0;
-
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -6005,8 +6016,8 @@ desktop 1024px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
 							}
 						}
@@ -6023,8 +6034,8 @@ desktop 1024px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
 							}
 						}
@@ -7025,7 +7036,7 @@ tablet 800px */
 					}
 
 					ul {
-						width: 94%;
+						width: 100%;
 
 						li {
 							margin: 0.5em auto;
@@ -7101,39 +7112,43 @@ tablet 800px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							width: 16%;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								width: 14%;
+								font-size: 0.9em;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 83%;
+							div.sd-content {
+								width: 83%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 15%;
-									font-size: 0.9em;
+									li {
+										width: 20%;
 
-									a {
-										display: block;
-										margin: 0;
 
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -7225,10 +7240,17 @@ tablet 800px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.5em;
+
 								}
+								span.nav-subtitle,
+								span.nav-title {
+									font-size:0.9em;
+								}
+
+
 							}
+
 						}
 
 						div.nav-next {
@@ -7237,14 +7259,18 @@ tablet 800px */
 
 							a {
 								line-height: 40px;
-
+								div.nav-previous
 								&:hover {
 									color: $blackcolor;
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
+								}
+								span.nav-subtitle,
+								span.nav-title {
+									font-size:0.9em;
 								}
 							}
 						}
@@ -8156,39 +8182,42 @@ tablet 800px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							width: 16%;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								width: 15%;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 83%;
+							div.sd-content {
+								width: 83%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 15%;
-									font-size: 0.9em;
+									li {
+										width: 25%;
+										font-size: 0.8em;
 
-									a {
-										display: block;
-										margin: 0;
-
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -8280,8 +8309,8 @@ tablet 800px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
 								}
 							}
 						}
@@ -8298,8 +8327,8 @@ tablet 800px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
 								}
 							}
 						}
@@ -8968,38 +8997,42 @@ tablet 600px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							font-size: 0.8em;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								font-size: 0.85em;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 79%;
+							div.sd-content {
+								width: 79%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 20%;
+									li {
+										width: 25%;
+										font-size: 0.75em;
 
-									a {
-										display: block;
-										margin: 0;
-
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -9091,8 +9124,11 @@ tablet 600px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+								}
+								span.nav-subtitle,
+								span.nav-title {
+									font-size:0.85em;
 								}
 							}
 						}
@@ -9109,8 +9145,12 @@ tablet 600px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
+								}
+								span.nav-subtitle,
+								span.nav-title {
+									font-size:0.85em;
 								}
 							}
 						}
@@ -10188,41 +10228,43 @@ mobile 480px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							width: 100%;
-							float: none;
-							font-size: 1em;
-							text-align: center;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
 
-						.sd-title::before {
-							width: 10%;
-						}
+								width: 30%;
 
-						div.sd-content {
-							width: 100%;
+							}
 
-							ul {
-								height: auto;
-								margin: 0;
+							.sd-title::before {
+								width: 10%;
+							}
 
-								li {
-									width: 22%;
+							div.sd-content {
+								width: 100%;
 
-									a {
-										display: block;
-										margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-										&:hover {
-											width: 100%;
-										}
+									li {
+										width: 30%;
 
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -10315,8 +10357,11 @@ mobile 480px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+								}
+								span.nav-subtitle,
+								span.nav-title {
+									font-size:0.8em;
 								}
 							}
 						}
@@ -10333,8 +10378,12 @@ mobile 480px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
+								}
+								span.nav-subtitle,
+								span.nav-title {
+									font-size:0.8em;
 								}
 							}
 						}
@@ -11397,37 +11446,41 @@ mobile 360px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							font-size: 0.9em;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								font-size: 0.8em;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 100%;
+							div.sd-content {
+								width: 100%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 23%;
-									a {
-										display: block;
-										margin: 0;
+									li {
+										width: 35%;
+										font-size: 0.7em;
+										a {
 
-										&:hover {
-											width: 100%;
-										}
+											margin: 0;
 
-										&::before {
-											width: 100%;
-										}
+											&:hover {
+												width: 100%;
+											}
 
-										span {
-											display: block;
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -11516,8 +11569,7 @@ mobile 360px */
 								}
 
 								&::before {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
 								}
 							}
 						}
@@ -11534,8 +11586,8 @@ mobile 360px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
 								}
 							}
 						}
@@ -12588,38 +12640,42 @@ mobile 320px */
 					}
 
 					div.sharedaddy {
-						h3.sd-title {
-							font-size: 0.9em;
-						}
+						.sd-social-icon-text{
+							width:100%;
+							h3.sd-title {
+								font-size: 0.8em;
+								width: 30%;
+							}
 
-						.sd-title::before {
-							width: 10%;
-						}
+							.sd-title::before {
+								width: 10%;
+							}
 
-						div.sd-content {
-							width: 100%;
+							div.sd-content {
+								width: 100%;
 
-							ul {
-								height: auto;
-								margin: 0;
+								ul {
+									height: auto;
+									margin: 0;
 
-								li {
-									width: 25%;
+									li {
+										width: 35%;
 
-									a {
-										display: block;
-										margin: 0;
-
-										&:hover {
-											width: 100%;
-										}
-
-										&::before {
-											width: 100%;
-										}
-
-										span {
+										a {
 											display: block;
+											margin: 0;
+
+											&:hover {
+												width: 100%;
+											}
+
+											&::before {
+												width: 100%;
+											}
+
+											span {
+												display: block;
+											}
 										}
 									}
 								}
@@ -12727,8 +12783,8 @@ mobile 320px */
 								}
 
 								&::after {
-									font-size: 1.6em;
-									line-height: 40px;
+									font-size: 1.4em;
+
 								}
 							}
 						}
