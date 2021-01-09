@@ -14,8 +14,11 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 	function raythompsonwebdev_com_posted_on() {
 		$raythompsonwebdev_com_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
+		$raythompsonwebdev_com_updated_time_string = '<time class="updated" datetime="%3$s">Not Updated</time>';
+
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$raythompsonwebdev_com_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$raythompsonwebdev_com_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$raythompsonwebdev_com_updated_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$raythompsonwebdev_com_time_string = sprintf(
@@ -26,10 +29,24 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
+		$raythompsonwebdev_com_updated_time_string = sprintf(
+			$raythompsonwebdev_com_updated_time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
+		);
+
 		$raythompsonwebdev_com_posted = sprintf(
 			/* translators: %s: post date. */
 			esc_html_x( 'Posted on : %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_time_string . '</a>'
+		);
+
+		$raythompsonwebdev_com_updated_post = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Updated : %s', 'post date', 'raythompsonwebdev-com' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_updated_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_byline = sprintf(
@@ -56,6 +73,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-com' ) );
 			echo '</span>';
 		}
+
+		echo '<span class="updated-on">' . $raythompsonwebdev_com_updated_post . '</span> ';
 		echo '</div><!-- .meta-content -->';
 
 	}
@@ -70,11 +89,21 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 		//$raythompsonwebdev_com_index_author_id = get_the_author_meta( 'ID' );
 
 		$raythompsonwebdev_com_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		$raythompsonwebdev_com_index_update_time_string = '<time class="updated" datetime="%3$s">Not Updated</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$raythompsonwebdev_com_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$raythompsonwebdev_com_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$raythompsonwebdev_com_index_update_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 		$raythompsonwebdev_com_index_time_string = sprintf(
 			$raythompsonwebdev_com_index_time_string,
+			esc_attr( get_the_date( DATE_W3C ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( DATE_W3C ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$raythompsonwebdev_com_index_update_time_string = sprintf(
+			$raythompsonwebdev_com_index_update_time_string,
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( DATE_W3C ) ),
@@ -85,6 +114,12 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 			/* translators: %s: post date. */
 			esc_html_x( 'Published : %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_index_time_string . '</a>'
+		);
+
+		$raythompsonwebdev_com_index_update_index_post = sprintf(
+			/* translators: %s: post date. */
+			esc_html_x( 'Updated : %s', 'post date', 'raythompsonwebdev-com' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_index_update_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_index_byline = sprintf(
@@ -101,6 +136,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 			comments_popup_link( esc_html__( 'Leave a comment', 'raythompsonwebdev-com' ), esc_html__( '1 Comment', 'raythompsonwebdev-com' ), esc_html__( '% Comments', 'raythompsonwebdev-com' ) );
 			echo '</span>';
 		}
+		echo '<span class="updated-on">' . $raythompsonwebdev_com_index_update_index_post . ' </span>';
 		echo '</div><!-- .meta-content -->';
 	}
 
@@ -302,3 +338,10 @@ function the_excerpt_more_link( $excerpt ) {
 	return $excerpt;
 }
 add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
+
+// Filter except length to 35 words.
+// tn custom excerpt length
+function tn_custom_excerpt_length( $length ) {
+	return 60;
+	}
+	add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );

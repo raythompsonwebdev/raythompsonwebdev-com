@@ -101,7 +101,9 @@
 
 	</header><!-- #masthead -->
 
-
+	<?php if ( is_home() || is_archive() ) : ?>
+	<span class="social-1"><?php get_search_form(); ?></span>
+	<?php endif; ?>
 
 	<!-- #page start -->
 	<div id="page">

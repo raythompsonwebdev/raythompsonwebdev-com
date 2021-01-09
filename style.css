@@ -1286,45 +1286,43 @@ desktop 1920px */
 	}
 	#wrapper .social-1 {
 		height: 35px;
-		margin: 0;
-		width: 100%;
+		margin: 2% 0;
+		width: auto;
 		font-family: "PT Sans", arial, sans-serif, verdana, tahoma;
-		display: flex;
-		-webkit-justify-content: flex-end;
-		-ms-flex-pack: end;
-		justify-content: flex-end;
+		display: block;
+		float: right;
 	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
-		max-width: 30%;
+		max-width: 100%;
 		margin: 0;
 		padding: 0;
 		height: 100%;
-		display: block;
-		width: 100%;
 		font-size: 0.9em;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
 	}
 	#wrapper .social-1 form.search-form label {
-		display: inline-block;
-		line-height: 30px;
-		height: 32px;
 		padding: 0;
 		color: #f2f2f2;
 		text-align: left;
-		width: 73%;
-		border: 1px solid #0d0d0d;
+		width: 75%;
+		-webkit-flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
+		flex: 1 0 auto;
 	}
-	#wrapper .social-1 form.search-form label span.screen-reader-text {
-		width: auto;
-	}
-	#wrapper .social-1 form.search-form input[type="search"] {
+	#wrapper .social-1 form.search-form label input[type="search"] {
 		width: 100%;
 		margin: 0;
 		padding: 0;
 		border: none;
-		line-height: 30px;
-		height: 30px;
+		height: 100%;
+		line-height: 35px;
 		font-size: 1em;
+	}
+	#wrapper .social-1 form.search-form label span.screen-reader-text {
+		width: auto;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
 		display: inline-block;
@@ -1345,8 +1343,6 @@ desktop 1920px */
 		letter-spacing: 0.1em;
 		font-size: 0.9em;
 		border: none;
-		line-height: 30px;
-		height: 30px;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"]:hover {
 		color: #f2f2f2;
@@ -1739,11 +1735,9 @@ desktop 1920px */
 		display: block;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		width: 100%;
 		display: block;
 	}
 	#wrapper div#page main#primary article.post ul li a {
-		width: 100%;
 		background-color: #f2f2f2;
 		color: #0d0d0d;
 	}
@@ -1895,9 +1889,11 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.updated-on {
 		text-indent: 0.5em;
 		width: 93%;
 		background-color: #0d0d0d;
@@ -1914,9 +1910,11 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.byline a,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.comments-link a,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.updated-on a,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.byline a,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.comments-link a,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on a {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.updated-on a {
 		color: #f2f2f2;
 		text-indent: 0;
 		margin: 0 auto;
@@ -1934,12 +1932,25 @@ desktop 1920px */
 		-ms-transition: all 0.2s ease-in 0s;
 		transition: all 0.2s ease-in 0s;
 	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.byline a time.updated,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.comments-link a time.updated,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.posted-on a time.updated,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.updated-on a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.byline a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.comments-link a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.updated-on a time.updated {
+		color: #f2f2f2;
+		display: block;
+	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.byline a:hover,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.comments-link a:hover,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta span.updated-on a:hover,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.byline a:hover,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.comments-link a:hover,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on a:hover {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta span.updated-on a:hover {
 		margin: 0 auto;
 		width: auto;
 		display: inline-block;
@@ -1947,30 +1958,48 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on {
 		text-indent: unset;
 		width: 100%;
 		text-align: center;
+		color: #f2f2f2;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a {
 		text-align: center;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a:hover,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a:hover,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a:hover,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a:hover,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a:hover,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a:hover {
 		margin: 0 auto;
 		width: auto;
 		display: inline-block;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a time.updated,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a time.updated,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a time.updated,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a time.updated,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a time.updated {
+		color: #f2f2f2;
+		display: block;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
@@ -1981,7 +2010,7 @@ desktop 1920px */
 		grid-template-columns: 6% 2fr;
 		grid-template-rows: 30px 30px 30px 30px;
 		gap: 2px 2px;
-		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image spare";
+		grid-template-areas: "Image posted-on" "Image byline" "Image comments-link" "Image updated-on";
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content .posted-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .posted-on {
@@ -1995,9 +2024,9 @@ desktop 1920px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .comments-link {
 		grid-area: comments-link;
 	}
-	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content .spare,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .spare {
-		grid-area: spare;
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content .updated-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .updated-on {
+		grid-area: updated-on;
 	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content .author-avatar,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content .author-avatar {
@@ -2072,36 +2101,37 @@ desktop 1920px */
 		line-height: unset;
 		width: 11%;
 		height: auto;
+		line-height: 40px;
 	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text h3.sd-title::before {
 		border: none;
 		width: 10%;
+		float: left;
 	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
 		margin: 0;
-		width: 80%;
-		line-height: 40px;
 	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		font-size: 1em;
 		text-indent: 0;
 		width: 100%;
-		height: auto;
+		height: 100%;
 		margin: 0;
-		line-height: 40px;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 15%;
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
 		display: inline-block;
 		padding: 0;
 		margin: 0 1em 0 0;
-		height: auto;
+		background-color: #0d0d0d;
+		width: auto;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
-		background-color: #f2f2f2;
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
+		color: #f2f2f2;
 		display: block;
 		margin: 0;
-		line-height: 40px;
+		height: auto;
 		-webkit-transform-origin: 50% 50%;
 		-moz-transform-origin: 50% 50%;
 		-o-transform-origin: 50% 50%;
@@ -2113,22 +2143,26 @@ desktop 1920px */
 		-ms-transition: all 0.2s ease-in 0s;
 		transition: all 0.2s ease-in 0s;
 		text-align: center;
+		padding: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
 		color: #0d0d0d;
 		background-color: #f2f2f2;
-		width: 100%;
+		font-weight: bold;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		display: block;
 		width: 100%;
 		color: #0d0d0d;
+		line-height: 40px;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 		color: #0d0d0d;
 		width: 100%;
-		font-size: 1.1em;
 	}
 	#wrapper div#page main#primary article.post .entry,
 	#wrapper div#page main#primary article.post .entry-content {
@@ -4099,9 +4133,6 @@ desktop 1440px */
 	#wrapper .social-1 form.search-form label span.screen-reader-text {
 		width: auto;
 	}
-	#wrapper .social-1 form.search-form input[type="search"] {
-		margin: 0;
-	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
 		font-size: 1em;
 	}
@@ -4262,9 +4293,6 @@ desktop 1440px */
 		font-size: 0.9em;
 		margin: 0.5em auto;
 	}
-	#wrapper div#page main#primary article.post ul li a {
-		line-height: 35px;
-	}
 	#wrapper div#page main#primary article.post ul li a:hover {
 		display: block;
 	}
@@ -4304,6 +4332,40 @@ desktop 1440px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
 		width: 100%;
 	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on {
+		text-indent: unset;
+		width: 100%;
+		text-align: center;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a {
+		text-align: center;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a:hover {
+		margin: 0 auto;
+		width: auto;
+		display: inline-block;
+	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		width: 100%;
@@ -4311,9 +4373,11 @@ desktop 1440px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		width: 99%;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading a {
@@ -4330,28 +4394,26 @@ desktop 1440px */
 	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 85%;
+		float: left;
 	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 15%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -5058,13 +5120,10 @@ desktop 1280px */
 	}
 	#wrapper .social-1 form.search-form label {
 		font-size: 0.9em;
-		width: 55%;
-	}
-	#wrapper .social-1 form.search-form input[type="search"] {
-		margin: 0;
+		width: 70%;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
-		width: 42%;
+		width: 30%;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"]:hover {
 		font-weight: bold;
@@ -5211,14 +5270,7 @@ desktop 1280px */
 		width: 100%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.9em;
-	}
-	#wrapper div#page main#primary article.post ul li a {
-		line-height: 35px;
-	}
-	#wrapper div#page main#primary article.post ul li a:hover {
-		font-size: 1em;
 	}
 	#wrapper div#page main#primary article.post a.post-thumbnail {
 		display: block;
@@ -5251,6 +5303,41 @@ desktop 1280px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
 		width: 100%;
 	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on {
+		text-indent: unset;
+		width: 100%;
+		text-align: center;
+		font-size: 0.9em;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a {
+		text-align: center;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a:hover {
+		margin: 0 auto;
+		width: auto;
+		display: inline-block;
+	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		width: 100%;
@@ -5260,9 +5347,11 @@ desktop 1280px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.9em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
@@ -5283,27 +5372,28 @@ desktop 1280px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 85%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 15%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook
+a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook
+a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook
+a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook
+a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -5994,7 +6084,6 @@ desktop 1024px */
 	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
-		max-width: 35%;
 	}
 	#wrapper .social-1 form.search-form label {
 		font-size: 1em;
@@ -6135,11 +6224,7 @@ desktop 1024px */
 		width: 100%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.85em;
-	}
-	#wrapper div#page main#primary article.post ul li a {
-		line-height: 35px;
 	}
 	#wrapper div#page main#primary article.post a.post-thumbnail {
 		display: block;
@@ -6180,9 +6265,11 @@ desktop 1024px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.9em;
 		height: 25px;
 		line-height: 25px;
@@ -6205,27 +6292,24 @@ desktop 1024px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 83%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 15%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -6941,13 +7025,12 @@ tablet 800px */
 	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
-		max-width: 40%;
 	}
 	#wrapper .social-1 form.search-form label {
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
-		font-size: 1em;
+		font-size: 0.9em;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"]:hover {
 		font-weight: bold;
@@ -7095,11 +7178,7 @@ tablet 800px */
 		width: 100%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.8em;
-	}
-	#wrapper div#page main#primary article.post ul li a {
-		font-size: 100%;
 	}
 	#wrapper div#page main#primary article.post a.post-thumbnail {
 		display: block;
@@ -7132,6 +7211,41 @@ tablet 800px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
 		width: 100%;
 	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on {
+		text-indent: unset;
+		width: 100%;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a {
+		text-align: center;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a:hover {
+		margin: 0 auto;
+		width: auto;
+		display: inline-block;
+	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		width: 100%;
@@ -7140,9 +7254,11 @@ tablet 800px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.8em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
@@ -7164,27 +7280,24 @@ tablet 800px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 83%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 20%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -7945,7 +8058,6 @@ tablet 800px */
 		width: 94%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.8em;
 	}
 	#wrapper div#page main#primary article.post ul li a {
@@ -7990,9 +8102,11 @@ tablet 800px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.8em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
@@ -8013,28 +8127,28 @@ tablet 800px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 83%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 25%;
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
 		font-size: 0.8em;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -8346,7 +8460,7 @@ tablet 600px */
 		z-index: 105;
 		display: block;
 		top: 1vh;
-		left: calc(80% - 0.2em);
+		left: calc(75% - 0.2em);
 		font-size: 1em;
 		text-transform: uppercase;
 		background-color: #0d0d0d;
@@ -8354,7 +8468,7 @@ tablet 600px */
 		border: none;
 		transition: all ease-out 0.4s;
 		line-height: 50px;
-		width: 20%;
+		width: 25%;
 		text-align: center;
 		padding: 0;
 	}
@@ -8455,21 +8569,16 @@ tablet 600px */
 	}
 	#wrapper .social-1 {
 		margin-top: 1em;
-		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
+		float: left;
 	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
 	}
 	#wrapper .social-1 form.search-form label {
-		font-size: 0.9em;
-	}
-	#wrapper .social-1 form.search-form input[type="search"] {
-		margin: 0;
+		font-size: 0.85em;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"]:hover {
 		font-weight: bold;
@@ -8580,7 +8689,6 @@ tablet 600px */
 		width: 94%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.85em;
 	}
 	#wrapper div#page main#primary article.post ul li a {
@@ -8617,6 +8725,41 @@ tablet 600px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
 		width: 100%;
 	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on {
+		text-indent: unset;
+		width: 100%;
+		text-align: center;
+		font-size: 0.85em;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a {
+		text-align: center;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a:hover {
+		margin: 0 auto;
+		width: auto;
+		display: inline-block;
+	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		width: 100%;
@@ -8625,9 +8768,11 @@ tablet 600px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.8em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
@@ -8648,28 +8793,28 @@ tablet 600px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 79%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 25%;
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
 		font-size: 0.75em;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -9327,7 +9472,6 @@ tablet 600px */
 mobile 480px */
 @media only screen and (max-width: 30em) {
 	.menu-toggle {
-		top: 8.5vh;
 		font-size: 1em;
 	}
 	#wrapper {
@@ -9381,15 +9525,14 @@ mobile 480px */
 		padding: 1em;
 		margin-bottom: 3em;
 	}
+	#wrapper .social-1 {
+		width: 50%;
+	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
-		max-width: 45%;
 	}
 	#wrapper .social-1 form.search-form label {
 		width: 55%;
-	}
-	#wrapper .social-1 form.search-form input[type="search"] {
-		margin: 0;
 	}
 	#wrapper div#page {
 		padding: 0;
@@ -9533,7 +9676,6 @@ mobile 480px */
 		width: 94%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.8em;
 	}
 	#wrapper div#page main#primary article.post ul li a {
@@ -9572,6 +9714,41 @@ mobile 480px */
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .has-avatar .author-avatar {
 		width: 100%;
 	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on {
+		text-indent: unset;
+		width: 100%;
+		text-align: center;
+		font-size: 0.75em;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a {
+		text-align: center;
+	}
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content-index span.updated-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.byline a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.comments-link a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.posted-on a:hover,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content-index span.updated-on a:hover {
+		margin: 0 auto;
+		width: auto;
+		display: inline-block;
+	}
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content {
 		width: 100%;
@@ -9581,9 +9758,11 @@ mobile 480px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.75em;
 		line-height: 20px;
 		height: 20px;
@@ -9607,27 +9786,24 @@ mobile 480px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 100%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 30%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -10316,6 +10492,8 @@ mobile 360px */
 	.menu-toggle {
 		font-size: 1em;
 		line-height: 40px;
+		top: 6vh;
+		left: calc(74% - 0.2em);
 	}
 	#wrapper {
 		width: 100%;
@@ -10347,18 +10525,17 @@ mobile 360px */
 	#wrapper header.site-header .main-navigation nav.menu-main-container .nav-menu {
 		padding: 1em;
 	}
+	#wrapper .social-1 {
+		width: 70%;
+	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
-		max-width: 50%;
 	}
 	#wrapper .social-1 form.search-form label {
-		font-size: 0.9em;
-	}
-	#wrapper .social-1 form.search-form input[type="search"] {
-		margin: 0;
+		font-size: 0.75em;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
-		font-size: 0.9em;
+		font-size: 0.75em;
 	}
 	#wrapper div#page h1 {
 		line-height: 40px;
@@ -10488,7 +10665,6 @@ mobile 360px */
 		width: 94%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.8em;
 	}
 	#wrapper div#page main#primary article.post ul li a {
@@ -10533,9 +10709,11 @@ mobile 360px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.7em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading a {
@@ -10553,27 +10731,27 @@ mobile 360px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 100%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 35%;
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
 		font-size: 0.7em;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
@@ -11236,7 +11414,7 @@ mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
 		font-size: 1em;
-		top: 9vh;
+		top: 6vh;
 	}
 	#wrapper {
 		width: 100%;
@@ -11282,13 +11460,10 @@ mobile 320px */
 		text-align: left;
 	}
 	#wrapper .social-1 form.search-form label {
-		font-size: 0.9em;
-	}
-	#wrapper .social-1 form.search-form input[type="search"] {
-		margin: 0;
+		font-size: 0.7em;
 	}
 	#wrapper .social-1 form.search-form input[type="submit"] {
-		font-size: 0.9em;
+		font-size: 0.75em;
 	}
 	#wrapper div#page h1 {
 		font-size: 1em;
@@ -11408,7 +11583,6 @@ mobile 320px */
 		width: 94%;
 	}
 	#wrapper div#page main#primary article.post ul li {
-		margin: 0.5em auto;
 		font-size: 0.75em;
 	}
 	#wrapper div#page main#primary article.post ul li a {
@@ -11452,9 +11626,11 @@ mobile 320px */
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.comments-link,
 	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.page-header .entry-meta .meta-content span.updated-on,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.byline,
 	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.comments-link,
-	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on {
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.posted-on,
+	#wrapper div#page main#primary article.post header.entry-header .entry-meta .meta-content span.updated-on {
 		font-size: 0.65em;
 	}
 	#wrapper div#page main#primary article.post div.continue-reading {
@@ -11476,27 +11652,24 @@ mobile 320px */
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text .sd-title::before {
 		width: 10%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content {
-		width: 100%;
-	}
 	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		height: auto;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li {
-		width: 35%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
 		display: block;
 		margin: 0;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a:hover {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
+		font-weight: bold;
+	}
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
 		width: 100%;
 	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a::before {
-		width: 100%;
-	}
-	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li a span {
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
+	#wrapper div#page main#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
 		display: block;
 	}
 	#wrapper div#page main#primary article.post .entry,
