@@ -225,14 +225,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_post_thumbnail' ) ) :
 
 	<?php	elseif ( is_search() ) : ?>
 
-	<a class="search-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
+	<a class="search-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
 			<?php the_post_thumbnail( 'search-image' ); ?>
 	</a>
 
 
 	<?php	else : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
+		<a class="post-thumbnail" href="<?php echo esc_url( get_permalink() ); ?>" title="Permanent Link to <?php the_title_attribute(); ?>;" aria-hidden="true">
 			<?php the_post_thumbnail( 'post-thumbnail' ); ?>
 		</a>
 
