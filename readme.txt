@@ -54,3 +54,8 @@ This version fixes a security related bug.  Upgrade immediately.
 * CC BY 4.0 License (https://creativecommons.org/licenses/by/4.0/) In the Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as SVG and JS file types.
 MIT License (https://opensource.org/licenses/MIT) In the Font Awesome Free download, the MIT license applies to all non-font and non-icon files.
 
+* selectivizr v1.0.2 - (c) Keith Clark, freely distributable under the terms of the MIT license.
+
+* Fancybox ,Licensed GPLv3 for open source use , [GPLv3],Copyright 2017 fancyApps,http://fancyapps.com/fancybox/
+
+* HTML5 Shiv 3.7.3 (C) @afarkas (C) @jdalton (C)@jon_neal @rem | MIT/GPL2 Licensed,https://github.com/aFarkas/html5shiv

@@ -15,10 +15,7 @@
 <aside id="side-bar" class="group widget-area" role="complementary">
 	<h1>Post Categrories</h1>
 
-<?php
-if ( ! is_active_sidebar( 'categoree-widget-area' ) ) {
-	return; }
-?>
+
 
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'categoree-widget-area' ) ) : ?>
@@ -27,11 +24,9 @@ if ( ! is_active_sidebar( 'categoree-widget-area' ) ) {
 
 	</article>
 
+
 	<article class="side-bar-box">
-	<?php
-	if ( ! is_active_sidebar( 'Primary Sidebar' ) ) {
-		return; }
-	?>
+
 
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) : ?>
 
@@ -40,11 +35,6 @@ if ( ! is_active_sidebar( 'categoree-widget-area' ) ) {
 	</article>
 
 	<article class="side-bar-box">
-
-	<?php
-	if ( ! is_active_sidebar( 'archives-widget-area' ) ) {
-		return; }
-	?>
 
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'archives-widget-area' ) ) : ?>
 

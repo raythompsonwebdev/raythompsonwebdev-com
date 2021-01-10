@@ -35,11 +35,11 @@
 
 	<article class="side-bar-box">
 
-<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'media-widget-area' ) ) : ?>
+		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'media-widget-area' ) ) : ?>
 
-<?php endif; ?>
+		<?php endif; ?>
 
-</article>
+	</article>
 
 
 
