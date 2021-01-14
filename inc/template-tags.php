@@ -39,19 +39,19 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 
 		$raythompsonwebdev_com_posted = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on : %s', 'post date', 'raythompsonwebdev-com' ),
+			esc_html_x( 'Posted on&#58; %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_updated_post = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Updated : %s', 'post date', 'raythompsonwebdev-com' ),
+			esc_html_x( 'Updated&#58; %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_updated_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by : %s', 'post author', 'raythompsonwebdev-com' ),
+			esc_html_x( 'by&#58; %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -63,7 +63,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 			echo '<div class="author-avatar">' . get_avatar( $raythompsonwebdev_com_author_id ) . '</div>';
 		} else {
 			echo '<div class="meta-content">';
-			//echo '<div class="no-author-avatar"> <img src="'. esc_url (get_template_directory_uri() . '/images/raythompsonwebdev.jpg') .'" /></div>';
 		}
 
 		echo '<span class="posted-on">' . $raythompsonwebdev_com_posted . '</span><span class="byline"> ' . $raythompsonwebdev_com_byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -85,8 +84,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function raythompsonwebdev_com_index_posted_on() {
-
-		//$raythompsonwebdev_com_index_author_id = get_the_author_meta( 'ID' );
 
 		$raythompsonwebdev_com_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		$raythompsonwebdev_com_index_update_time_string = '<time class="updated" datetime="%3$s">Not Updated</time>';
@@ -112,19 +109,19 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 
 		$raythompsonwebdev_com_index_posted = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Published : %s', 'post date', 'raythompsonwebdev-com' ),
+			esc_html_x( 'Published&#58; %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_index_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_index_update_index_post = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Updated : %s', 'post date', 'raythompsonwebdev-com' ),
+			esc_html_x( 'Updated&#58; %s', 'post date', 'raythompsonwebdev-com' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $raythompsonwebdev_com_index_update_time_string . '</a>'
 		);
 
 		$raythompsonwebdev_com_index_byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by : %s', 'post author', 'raythompsonwebdev-com' ),
+			esc_html_x( 'by&#58; %s', 'post author', 'raythompsonwebdev-com' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
@@ -153,14 +150,14 @@ if ( ! function_exists( 'raythompsonwebdev_com_entry_footer' ) ) :
 			$raythompsonwebdev_com_categories_list = get_the_category_list( esc_html__( ', ', 'raythompsonwebdev-com' ) );
 			if ( $raythompsonwebdev_com_categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'raythompsonwebdev-com' ) . '</span>', $raythompsonwebdev_com_categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in&#58; %1$s', 'raythompsonwebdev-com' ) . '</span>', $raythompsonwebdev_com_categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$raythompsonwebdev_com_tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'raythompsonwebdev-com' ) );
 			if ( $raythompsonwebdev_com_tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'raythompsonwebdev-com' ) . '</span>', $raythompsonwebdev_com_tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged&#58; %1$s', 'raythompsonwebdev-com' ) . '</span>', $raythompsonwebdev_com_tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -339,8 +336,13 @@ function the_excerpt_more_link( $excerpt ) {
 }
 add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
 
-// Filter except length to 35 words.
-// tn custom excerpt length
+/**
+	* Filter except length to 35 words.
+	* tn custom excerpt length
+	*
+	* @param [type] $length
+	* @return void
+	*/
 function tn_custom_excerpt_length( $length ) {
 	return 60;
 	}

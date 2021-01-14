@@ -22,10 +22,10 @@ get_header(); ?>
 
 	<section id="fntpage_banner">
 
-		<h1><?php esc_html_e( 'Hello, I\'m Raymond', 'raythompsonwebdev-com' ); ?></h1>
-		<h2><?php esc_html_e( 'I\'m a web developer. I enjoy coding and the challenges it brings.  ', 'raythompsonwebdev-com' ); ?></h2>
+		<h1><?php esc_html_e( 'Hello, I&#39;m Raymond', 'raythompsonwebdev-com' ); ?></h1>
+		<h2><?php esc_html_e( 'I&#39;m a web developer. I enjoy coding and the challenges it brings.  ', 'raythompsonwebdev-com' ); ?></h2>
 
-			<p><?php esc_html_e( 'I create web applications and website interfaces that provide effective solutions to meet your on-line needs. I use clean semantic code and follow the latest web standards compliances and best practices. That ensures that websites can be found by most search engines, viewed within in most modern browsers and have speedy page loading for a better user experience.', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'I create web applications and website interfaces that provide effective solutions to meet your on&#45;line needs. I use clean semantic code and follow the latest web standards compliances and best practices. That ensures that websites can be found by most search engines, viewed within in most modern browsers and have speedy page loading for a better user experience.', 'raythompsonwebdev-com' ); ?></p>
 
 			<p><?php esc_html_e( ' Whether its website interface or a full web application I can create elegant and maintainable solutions. To see some of my past work click button on the right', 'raythompsonwebdev-com' ); ?></p>
 
@@ -45,9 +45,9 @@ get_header(); ?>
 				<span><i class="fa fa-code" aria-hidden="true"></i></span>
 					<h1><?php esc_html_e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
 
-			<p><?php esc_html_e( 'HTML & CSS', 'raythompsonwebdev-com' ); ?></p>
-			<p><?php esc_html_e( 'PHP & MYSQL', 'raythompsonwebdev-com' ); ?></p>
-			<p><?php esc_html_e( 'Javascript ES5/ES6', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'HTML &#38; CSS', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'PHP &#38; MYSQL', 'raythompsonwebdev-com' ); ?></p>
+			<p><?php esc_html_e( 'Javascript ES5&#47;ES6', 'raythompsonwebdev-com' ); ?></p>
 
 
 				</section>
@@ -56,7 +56,7 @@ get_header(); ?>
 					<span><i class="fas fa-photo-video" aria-hidden="true"></i></span>
 						<h1><?php esc_html_e( 'Optimisation', 'raythompsonwebdev-com' ); ?></h1>
 
-							<p><?php esc_html_e( 'Video, Audio & Image', 'raythompsonwebdev-com' ); ?></p>
+							<p><?php esc_html_e( 'Video, Audio &#38; Image', 'raythompsonwebdev-com' ); ?></p>
 							<p><?php esc_html_e( 'SQL Database', 'raythompsonwebdev-com' ); ?></p>
 							<p><?php esc_html_e( 'On-Site SEO', 'raythompsonwebdev-com' ); ?></p>
 
@@ -66,8 +66,8 @@ get_header(); ?>
 					<span><i class="fab fa-wordpress-simple" aria-hidden="true"></i></span>
 						<h1><?php esc_html_e( 'WordPress', 'raythompsonwebdev-com' ); ?></h1>
 
-				<p><?php esc_html_e( 'Set Up & Installation', 'raythompsonwebdev-com' ); ?></p>
-				<p><?php esc_html_e( 'Themes & Plugins', 'raythompsonwebdev-com' ); ?></p>
+				<p><?php esc_html_e( 'Set Up &#38; Installation', 'raythompsonwebdev-com' ); ?></p>
+				<p><?php esc_html_e( 'Themes &#38; Plugins', 'raythompsonwebdev-com' ); ?></p>
 				<p><?php esc_html_e( 'Gutenberg Blocks', 'raythompsonwebdev-com' ); ?></p>
 
 				</section>

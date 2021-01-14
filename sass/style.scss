@@ -4,16 +4,16 @@ Theme URI: https://raythompsonwebdev.co.uk
 Author: raythompsonwebdev
 Author URI: http://www.custom.co.uk
 Description: Custom portfolio website
+Requires at least: 5.3
+Tested up to: 5.6
+Requires PHP: 5.6
 Version: 1.0.0
-Tested up to: 5.4
-Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: raythompsonwebdev-com
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
 
 raythompsonwebdev-com is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc..site-logo
 */
@@ -382,7 +382,7 @@ desktop 1920px */
 			margin: 0;
 			padding: 0;
 			font-size: 1em;
-			min-height: 800px;
+			min-height: 100vh;
 			clear: both;
 
 			h1 {
@@ -674,7 +674,9 @@ desktop 1920px */
 				}
 
 				/* Regular Posts */
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					background-color: $colorwhite;
 					padding: 0 1%;
 					width: 100%;
@@ -1103,7 +1105,6 @@ desktop 1920px */
 								line-height: unset;
 								width: 11%;
 								height: auto;
-								line-height: 40px;
 							}
 
 							h3.sd-title::before {
@@ -1114,7 +1115,7 @@ desktop 1920px */
 
 							div.sd-content {
 								margin: 0;
-								width:20%;
+								width: 20%;
 
 								ul {
 									font-size: 1em;
@@ -2169,7 +2170,7 @@ desktop 1920px */
 
 			/* Profile Page Container */
 			main#profile_container {
-				margin: 0 0 1em 0;
+				margin: 0;
 				padding: 0;
 				display: -webkit-flex;
 				display: -ms-flexbox;
@@ -2747,7 +2748,7 @@ desktop 1920px */
 									width: 96%;
 									background-color: $blackcolor;
 									color: $colorwhite;
-									letter-spacing:0.05em;
+									letter-spacing: 0.05em;
 								}
 
 								a {
@@ -3145,8 +3146,6 @@ desktop 1440px */
 		}
 
 		div#page {
-			min-height: 900px;
-
 			h1 {
 				font-size: 1.4em;
 			}
@@ -3284,7 +3283,9 @@ desktop 1440px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					h1,
 					h1.page-title {
 						font-size: 1.3em;
@@ -3968,7 +3969,6 @@ desktop 1440px */
 			}
 
 			main#profile_container {
-				margin: 0 0 1em 0;
 				padding: 0;
 
 				#text-box-profile {
@@ -4352,8 +4352,6 @@ desktop 1280px */
 		}
 
 		div#page {
-			min-height: 1080px;
-
 			h1 {
 				font-size: 1.2em;
 			}
@@ -4503,7 +4501,9 @@ desktop 1280px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					h1,
 					h1.page-title {
 						font-size: 1.3em;
@@ -5350,7 +5350,6 @@ desktop 1280px */
 				div.content {
 					clear: both;
 
-
 					div#panel,
 					div#panel2,
 					div#panel3,
@@ -5668,7 +5667,9 @@ desktop 1024px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					hr.blog-spacer {
 						margin: 1% auto;
 					}
@@ -6710,6 +6711,8 @@ tablet 800px */
 		}
 
 		div#page {
+			min-height: unset;
+			height: auto;
 			h1 {
 				font-size: 1.2em;
 				line-height: 55px;
@@ -6854,7 +6857,9 @@ tablet 800px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					h1,
 					h1.page-title {
 						font-size: 1.2em;
@@ -6997,7 +7002,7 @@ tablet 800px */
 							}
 
 							div.sd-content {
-								width:30%;
+								width: 30%;
 								ul {
 									margin: 0;
 
@@ -7078,7 +7083,7 @@ tablet 800px */
 							line-height: 35px;
 
 							a {
-								font-size: 0.8em;
+								font-size: 0.9em;
 							}
 						}
 					}
@@ -7904,7 +7909,9 @@ tablet 800px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					h1,
 					h1.page-title {
 						font-size: 1.2em;
@@ -8028,7 +8035,7 @@ tablet 800px */
 							}
 
 							div.sd-content {
-								width:35%;
+								width: 35%;
 								ul {
 									margin: 0;
 
@@ -8111,7 +8118,7 @@ tablet 800px */
 							line-height: 35px;
 
 							a {
-								font-size: 0.8em;
+								font-size: 0.9em;
 							}
 						}
 					}
@@ -8691,7 +8698,9 @@ tablet 600px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					margin-top: 1.5em;
 
 					.seperator {
@@ -8837,7 +8846,7 @@ tablet 600px */
 							width: 100%;
 							h3.sd-title {
 								font-size: 0.85em;
-								width:25%;
+								width: 25%;
 							}
 
 							.sd-title::before {
@@ -9904,7 +9913,9 @@ mobile 480px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					h1,
 					h1.page-title {
 						font-size: 1.1em;
@@ -10801,7 +10812,6 @@ mobile 480px */
 				div.content {
 					clear: both;
 
-
 					div#panel,
 					div#panel2,
 					div#panel3,
@@ -11122,7 +11132,9 @@ mobile 360px */
 					}
 				}
 
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					padding: 0;
 
 					h1,
@@ -11324,7 +11336,7 @@ mobile 360px */
 						.edit-link,
 						.comments-link {
 							width: 79%;
-							font-size: 0.7em;
+							font-size: 0.8em;
 						}
 					}
 				}
@@ -11963,7 +11975,6 @@ mobile 360px */
 					-ms-flex-align: center;
 					align-items: center;
 
-
 					div#panel,
 					div#panel2,
 					div#panel3,
@@ -12275,7 +12286,9 @@ mobile 320px */
 			}
 
 			main#primary {
-				article.post {
+				article.post,
+				article.project,
+				article.page {
 					h1,
 					h1.page-title {
 						font-size: 1em;
@@ -12401,7 +12414,7 @@ mobile 320px */
 							}
 
 							div.sd-content {
-								width:50%;
+								width: 50%;
 								ul {
 									margin: 0;
 
@@ -13099,8 +13112,6 @@ mobile 320px */
 
 			main#showcaseContainer {
 				div.content {
-
-
 					div#panel,
 					div#panel2,
 					div#panel3,
