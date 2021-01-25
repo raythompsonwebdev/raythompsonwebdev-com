@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7.2.
+ * *PHP version 7.4.
  *
  * Template Name: Projects
  *
@@ -21,7 +21,7 @@ get_header();
 
 <h1><?php the_title(); ?></h1>
 <article class="main-text">
-<p><?php esc_html_e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
+<p><?php esc_html_e( 'Check out web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
 </article>
 
 

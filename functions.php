@@ -12,6 +12,43 @@ if ( ! defined( 'RAYTHOMPSONWEBDEV_COM_VERSION' ) ) {
 	define( 'RAYTHOMPSONWEBDEV_COM_VERSION', '1.0.0' );
 }
 
+// register meta data for graph ql.
+register_meta(
+	'post',
+	'project_name',
+	[
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	]
+);
+
+register_meta(
+	'post',
+	'project_description',
+	[
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	]
+);
+
+register_meta(
+	'post',
+	'project_code',
+	[
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	]
+);
+
+register_meta(
+	'post',
+	'project_url',
+	[
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	]
+);
+
 /**
  * Returns a custom login error message.
  */
@@ -21,19 +58,16 @@ function clashvibes__error_message() {
 add_filter( 'login_errors', 'clashvibes__error_message' );
 
 if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
+
+
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
 	 */
 	function raythompsonwebdev_com_setup() {
 		/*
 		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on raythompsonwebdev-com, use a find and replace
-		 * to change 'raythompsonwebdev-com' to the name of your theme in all the template files.
+		 *
 		 */
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
@@ -47,9 +81,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 
 		/*
 		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
+		 *
 		 */
 		add_theme_support( 'title-tag' );
 
@@ -317,6 +349,39 @@ function raythompsonwebdev_com_about_page_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
+
+// google analytics.
+if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
+
+	/**
+	 * Google analytics function.
+	 *
+	 * @return void
+	 */
+	function raythompsonwebdev_com_google_script() {
+
+		wp_enqueue_script( 'google-script', 'https://www.googletagmanager.com/gtag/js?id=UA-86655310-1', array(), '1.0', true );
+
+		?>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+		<script>
+
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-86655310-1');
+
+		</script>
+
+		<?php
+	}
+	add_action( 'wp_head', 'raythompsonwebdev_com_google_script' );
+
+endif;
+
 
 /**
  * Implement the Custom Header feature.

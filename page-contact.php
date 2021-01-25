@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7.2.
+ * *PHP version 7.4.
  *
  * Template Name: Contact
  *
@@ -32,13 +32,13 @@ get_header(); ?>
 
 <address id="contact-details">
 
-	<li><a href="mailto:name@mydomain.com"><i class="fas fa-envelope-square"></i>raymond.thompson@raythompsonwebdev.co.uk</a></li>
+	<li><a href="mailto:name@mydomain.com"><i class="fas fa-envelope-square"></i><?php esc_html_e( 'raymond.thompson@raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-twitter" aria-hidden="true"></i>@RayThompWeb</a></li>
+	<li><a href="<?php echo esc_url( 'https://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-twitter" aria-hidden="true"></i><?php esc_html_e( '@RayThompWeb', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-linkedin" aria-hidden="true"></i>www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
+	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-linkedin" aria-hidden="true"></i><?php esc_html_e( 'www.linkedin.com/in/raymond-t-1b42b7b8/', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-github" aria-hidden="true"></i>github.com/raythompsonwebdev</a></li>
+	<li><a href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-github" aria-hidden="true"></i><?php esc_html_e( 'github.com/raythompsonwebdev', 'raythompsonwebdev-com' ); ?></a></li>
 </address>
 
 <div class="clearfix"></div>
