@@ -1,5 +1,5 @@
 /* eslint-disable space-in-parens */
-jQuery(document).ready(function ($) {
+(function ($) {
 	//Hero Slider
 	$('.hero-slider ul a').click(function () {
 		//reset all the items
@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
 		//disable click event
 		return false;
 	});
-});
+})(jQuery);
 
 //Responsive chart
 function responsiveGraph() {
@@ -29,7 +29,6 @@ function responsiveGraph() {
 				clearInterval(id);
 			} else {
 				percentage++;
-
 				//key.style.width = `${percentageMaxWidth}%`;
 				key.style.width = ''.concat(percentageMaxWidth, '%');
 			}

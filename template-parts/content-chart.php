@@ -20,27 +20,27 @@ $raythompsonwebdev_com_chart_bars = '[
 		"id": "1",
 		"language":"HTML",
 		"datapercentage": "75",
-		"dataskill":"Intermediate"
+		"dataskill":"INTERMEDIATE"
 	}, {
 		"id": "2",
 		"language":"CSS",
 		"datapercentage": "75",
-		"dataskill":"Intermediate"
+		"dataskill":"INTERMEDIATE"
 	}, {
 		"id": "3",
-		"language":"Javascript",
+		"language":"JAVASCRIPT",
 		"datapercentage": "80",
-		"dataskill":"Intermediate"
+		"dataskill":"INTERMEDIATE"
 	}, {
 		"id": "4",
 		"language":"PHP",
 		"datapercentage": "80",
-		"dataskill":"Intermediate"
+		"dataskill":"INTERMEDIATE"
 	}, {
 		"id": "5",
 		"language":"MYSQL",
 		"datapercentage": "70",
-		"dataskill":"Intermediate"
+		"dataskill":"INTERMEDIATE"
 	}
 ]';
 

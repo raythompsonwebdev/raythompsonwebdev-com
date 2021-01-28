@@ -388,6 +388,8 @@ desktop 1920px */
 				clear: both;
 				height: auto;
 				color: $blackcolor;
+				-ms-word-wrap: break-word;
+				word-wrap: break-word;
 			}
 
 			h2 {
@@ -414,6 +416,8 @@ desktop 1920px */
 				padding: 0.5em;
 				color: $blackcolor;
 				font-family: $FontStyle;
+				-ms-word-wrap: break-word;
+				word-wrap: break-word;
 			}
 
 			button#find-search {
@@ -656,6 +660,7 @@ desktop 1920px */
 
 			main#primary {
 				min-height: 780px;
+				font-family: $FontStyle;
 				article.rtwd-post,
 				article.search-results {
 					width: 49%;
@@ -723,7 +728,7 @@ desktop 1920px */
 						width: 100%;
 						color: $blackcolor;
 						background: $colorwhite;
-						line-height: 50px;
+						line-height: 55px;
 						height: auto;
 						text-align: left;
 
@@ -743,10 +748,9 @@ desktop 1920px */
 					h3 {
 						margin: 0 auto;
 						height: auto;
-						line-height: 40px;
+						line-height: 45px;
 						font-size: 1.1em;
 						text-indent: 0;
-						width: 98%;
 						text-align: left;
 						color: $blackcolor;
 
@@ -770,46 +774,43 @@ desktop 1920px */
 						font-weight: normal;
 						line-height: 2.1em;
 						letter-spacing: 0.02em;
-					}
-
-					ul {
-						text-indent: 0;
-						width: 100%;
-						margin: 1em auto;
-						display: block;
-
-						li {
-							display: block;
-
-							a {
-								background-color: $colorwhite;
-								color: $blackcolor;
-
-								&:hover {
-									background-color: $colorwhite;
-								}
+						a {
+							color: $blackcolor;
+							font-weight: bold;
+							&:hover {
+								text-decoration: underline;
+								cursor: pointer;
 							}
 						}
 					}
 
-					ul.post-list {
+					ul,
+					ol {
 						text-indent: 0;
 						width: 100%;
-						margin: 0 auto;
+						margin: 1em auto;
+						display: block;
 						font-family: $FontStyle;
+						padding: 0;
 
 						li {
+							display: block;
 							font-size: 1em;
 							height: auto;
 							padding: 0.5em;
 							background-color: $colorwhite;
+							ul,
+							ol {
+								margin-bottom: 0;
+								margin-left: 1.5em;
+							}
 
 							a {
 								width: 100%;
 								margin: 0;
 								text-align: center;
 								display: block;
-								background-color: $blackcolor;
+								//background-color: $blackcolor;
 								line-height: 35px;
 								color: $colorwhite;
 								@include originTran(50% 50%);
@@ -864,32 +865,11 @@ desktop 1920px */
 
 						a {
 							display: block;
-							background-color: $blackcolor;
 						}
 
 						img {
 							margin: 0 auto;
 							display: block;
-						}
-					}
-
-					/* Code Block */
-					pre.wp-block-code {
-						border: solid 1px blue;
-						font-size: 1em;
-						color: $colorwhite;
-						margin: 0;
-						padding: 10px;
-						background: $blackcolor;
-						direction: ltr;
-						text-align: left;
-						line-height: 30px;
-						.code {
-							width: 90%;
-							margin: 5% auto;
-							display: block;
-							font-style: normal;
-							color: $yellowcolor;
 						}
 					}
 
@@ -1126,7 +1106,7 @@ desktop 1920px */
 										display: inline-block;
 										padding: 0;
 										margin: 0 0.25em 0 0;
-										background-color: $blackcolor;
+										//background-color: $blackcolor;
 										width: 47%;
 
 										a {
@@ -1172,6 +1152,25 @@ desktop 1920px */
 						margin: 0 auto;
 						background-color: $colorwhite;
 						min-height: 145px;
+						/* Code Block */
+						pre.wp-block-code {
+							border: solid 1px blue;
+							font-size: 1em;
+							color: $colorwhite;
+							margin: 0;
+							padding: 10px;
+							background: $blackcolor;
+							direction: ltr;
+							text-align: left;
+							line-height: 30px;
+							.code {
+								width: 90%;
+								margin: 5% auto;
+								display: block;
+								font-style: normal;
+								color: $yellowcolor;
+							}
+						}
 					}
 
 					/* Attachment Page Image */
@@ -1423,20 +1422,22 @@ desktop 1920px */
 							margin: 0;
 							list-style: none;
 
-							li.comment {
+							li.comment,
+							li.even {
 								padding: 0;
 
 								ol.children {
 									margin: auto;
 									padding: 0;
-									width: 100%;
+									width: 96%;
+									list-style: none;
 
 									li.odd {
 										margin: 0;
-
 										article.comment-body {
 											font-family: $FontStyle;
 											background-color: $blackcolor;
+
 											footer.comment-meta {
 												font-family: $FontStyle;
 												height: 60px;
@@ -1505,7 +1506,6 @@ desktop 1920px */
 													font-size: 0.9em;
 													line-height: 1.5em;
 													margin: 0 auto;
-													min-height: 100px;
 													color: $blackcolor;
 													background-color: $colorwhite;
 													text-align: left;
@@ -1517,6 +1517,16 @@ desktop 1920px */
 													}
 												}
 											}
+											.reply {
+												a {
+													background-color: $colorwhite;
+													color: $blackcolor;
+
+													&:hover {
+														font-weight: bold;
+													}
+												}
+											}
 										}
 									}
 								}
@@ -1525,11 +1535,11 @@ desktop 1920px */
 									letter-spacing: 0.1em;
 									padding: 0.5em;
 									display: block;
-									background-color: $headercolor;
 									height: auto;
 									text-indent: 0;
 									width: 100%;
 									margin: 0.5em auto;
+									background-color: $headercolor;
 
 									footer.comment-meta {
 										font-family: $FontStyle;
@@ -1564,6 +1574,7 @@ desktop 1920px */
 												color: $colorwhite;
 												a {
 													background-color: $headercolor;
+													color: $colorwhite;
 												}
 											}
 
@@ -1597,19 +1608,30 @@ desktop 1920px */
 									}
 
 									.comment-content {
+										h1 {
+											text-indent: 0;
+										}
+
+										address {
+											line-height: 25px;
+										}
+
 										p {
 											width: 100%;
 											font-size: 0.9em;
 											line-height: 1.5em;
 											margin: 0 auto;
-											min-height: 100px;
+											//min-height: 100px;
 											color: $blackcolor;
 											background-color: $colorwhite;
 											text-align: left;
 											a {
 												background-color: $colorwhite;
+												color: $blackcolor;
 												&:hover {
-													color: $colorwhite;
+													color: $blackcolor;
+													font-weight: bold;
+													text-decoration: underline;
 												}
 											}
 										}
@@ -1644,7 +1666,7 @@ desktop 1920px */
 									font-size: 1em;
 
 									&:hover {
-										color: $colorwhite;
+										font-weight: bold;
 									}
 								}
 							}
@@ -1681,16 +1703,22 @@ desktop 1920px */
 							}
 
 							.comment-form {
-								width: 82%;
+								width: 85%;
 								height: auto;
 								margin: 2% auto;
 								font-family: $FontStyle;
 								padding: 0;
 
+								label {
+									height: 30px;
+									line-height: 30px;
+									width: auto;
+								}
+
 								p.comment-notes {
-									font-size: 0.9em;
-									width: 95%;
-									letter-spacing: 0.095em;
+									font-size: 1em;
+									width: 100%;
+									letter-spacing: 0.05em;
 									line-height: 1.7em;
 									margin: 0;
 								}
@@ -1705,12 +1733,6 @@ desktop 1920px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-										line-height: 30px;
-										width: 30px;
-									}
-
 									input {
 										@include Transition(all 0.2s ease-in 0s);
 										outline: none;
@@ -1731,12 +1753,6 @@ desktop 1920px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-										line-height: 30px;
-										width: 30px;
-									}
-
 									input {
 										@include Transition(all 0.2s ease-in 0s);
 										outline: none;
@@ -1757,12 +1773,6 @@ desktop 1920px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-										line-height: 30px;
-										width: 30px;
-									}
-
 									input {
 										@include Transition(all 0.2s ease-in 0s);
 										outline: none;
@@ -1813,7 +1823,7 @@ desktop 1920px */
 								background-color: unset;
 
 								&:hover {
-									color: $colorwhite;
+									font-weight: bold;
 								}
 							}
 						}
@@ -2255,7 +2265,7 @@ desktop 1920px */
 						width: 100%;
 						line-height: 1.9em;
 						font-size: 1em;
-						margin-bottom: 0.25em;
+						margin-bottom: 0;
 						padding: 0.5em;
 						color: $blackcolor;
 						background-color: $colorwhite2;
@@ -2292,7 +2302,7 @@ desktop 1920px */
 						width: 100%;
 						line-height: 1.9em;
 						font-size: 1em;
-						margin-bottom: 0.25em;
+						margin-bottom: 0;
 						padding: 0.5em;
 						color: $blackcolor;
 						background-color: $colorwhite2;
@@ -2537,7 +2547,7 @@ desktop 1920px */
 								a {
 									text-align: center;
 									display: block;
-									font-size: 1em;
+									font-size: 0.9em;
 									line-height: 41px;
 									background-color: $colorwhite;
 									color: $blackcolor;
@@ -2567,7 +2577,6 @@ desktop 1920px */
 					height: auto;
 					display: inline-block;
 					box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-					background-color: $blackcolor;
 					margin-bottom: 1em;
 
 					h1 {
@@ -2577,6 +2586,7 @@ desktop 1920px */
 						text-indent: 1.5%;
 						letter-spacing: 0.05em;
 						color: $colorwhite;
+						background: $blackcolor;
 					}
 
 					#social {
@@ -2593,11 +2603,13 @@ desktop 1920px */
 
 					/* chart */
 					#chart {
-						width: 96%;
+						width: 100%;
 						height: auto;
-						margin: 2.5% auto;
+						margin: 0;
 						display: block;
 						font-family: $FontStyle;
+						background: $blackcolor;
+						padding: 0.25em;
 
 						#bars {
 							display: -webkit-flex;
@@ -2606,7 +2618,6 @@ desktop 1920px */
 							-webkit-flex-flow: column;
 							-ms-flex-flow: column;
 							flex-flow: column;
-							background: $blackcolor;
 							width: 100%;
 							height: 100%;
 							list-style: none;
@@ -2614,7 +2625,7 @@ desktop 1920px */
 
 							li {
 								width: 100%;
-								height: 60px;
+								height: 65px;
 								margin: 0 0 0.5em 0;
 								text-align: center;
 								position: relative;
@@ -2637,9 +2648,9 @@ desktop 1920px */
 									&:hover::after {
 										content: attr(data-skill);
 										position: relative;
-										left: 76%;
+										left: calc(76% - 15%);
 										display: block;
-										line-height: 60px;
+										line-height: 65px;
 										font-size: 1em;
 										color: $blackcolor;
 										width: 24%;
@@ -2657,10 +2668,11 @@ desktop 1920px */
 								left: 0;
 								height: auto;
 								text-align: left;
-								line-height: 60px;
+								line-height: 65px;
 								font-size: 0.9em;
-								background-color: $blackcolor;
-								color: $colorwhite;
+								text-indent: 0.25em;
+								background-color: $colorwhite;
+								color: $blackcolor;
 								z-index: 3;
 							}
 						}
@@ -2859,19 +2871,19 @@ desktop 1920px */
 						color: $colorwhite;
 					}
 
-					ul,
-					ul#recentcomments {
+					ul {
 						width: 100%;
 						height: auto;
 						display: block;
 						margin: 0;
-
 						li {
 							list-style: none;
 							width: 96%;
 							margin: 0.5em auto;
 							text-align: center;
 							font-size: 1em;
+							display: block;
+							color: $blackcolor;
 							border: 2px solid $blackcolor;
 							a {
 								width: 100%;
@@ -2885,29 +2897,35 @@ desktop 1920px */
 								&:hover {
 									background-color: $blackcolor;
 									color: $blackcolor;
+									cursor: pointer;
 								}
 							}
 						}
+					}
 
+					ul#recentcomments {
 						li.recentcomments {
-							display: block;
-							margin: 0.5em auto;
-							border: 2px solid $blackcolor;
-							color: $blackcolor;
-							span.comment-author-link {
-								a.url {
-									color: $blackcolor;
+							a {
+								display: block;
+								color: $blackcolor;
+								@include originTran(50% 50%);
+								@include Transition(all 0.2s ease-in 0s);
+								&:hover {
 									background-color: $colorwhite;
-									line-height: 25px;
-									&:hover {
-										background-color: $blackcolor;
-										color: $colorwhite;
-									}
+									color: $blackcolor;
+									cursor: pointer;
 								}
 							}
-							&:hover {
-								color: $colorwhite;
-								background-color: $blackcolor;
+							a.url {
+								background-color: $colorwhite;
+								line-height: 25px;
+								&:hover {
+									font-weight: bold;
+								}
+							}
+
+							span.comment-author-link {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -3315,19 +3333,6 @@ desktop 1440px */
 						font-size: 0.95em;
 					}
 
-					/* code */
-					pre.wp-block-code {
-						font-size: 0.95em;
-					}
-
-					ul.post-list {
-						width: 100%;
-
-						li {
-							font-size: 0.95em;
-						}
-					}
-
 					ul {
 						width: 100%;
 
@@ -3363,15 +3368,6 @@ desktop 1440px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 1em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					/* blog post header */
@@ -3474,6 +3470,10 @@ desktop 1440px */
 					.entry,
 					.entry-content {
 						padding: 1%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.95em;
+						}
 					}
 
 					.entry-attachment {
@@ -3628,7 +3628,7 @@ desktop 1440px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -3756,7 +3756,7 @@ desktop 1440px */
 								padding: 1em;
 
 								p.comment-notes {
-									font-size: 0.9em;
+									font-size: 1em;
 								}
 
 								textarea#comment {
@@ -3764,10 +3764,6 @@ desktop 1440px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -3779,10 +3775,6 @@ desktop 1440px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -3794,10 +3786,6 @@ desktop 1440px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -4092,7 +4080,7 @@ desktop 1440px */
 								height: 44px;
 
 								a {
-									font-size: 0.9em;
+									font-size: 0.85em;
 								}
 
 								a:hover {
@@ -4119,7 +4107,7 @@ desktop 1440px */
 					}
 
 					#chart {
-						width: 96%;
+						width: 100%;
 
 						#bars {
 							li {
@@ -4207,26 +4195,23 @@ desktop 1440px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
-							font-size: 0.9em;
+							font-size: 1em;
 							a {
 								&:hover {
 									color: $colorwhite;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -4533,10 +4518,6 @@ desktop 1280px */
 						font-size: 0.95em;
 					}
 
-					ul.post-list {
-						width: 100%;
-					}
-
 					ul {
 						width: 100%;
 
@@ -4559,15 +4540,6 @@ desktop 1280px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.9em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -4672,6 +4644,10 @@ desktop 1280px */
 					.entry,
 					.entry-content {
 						padding: 1%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.9em;
+						}
 					}
 
 					.entry-attachment {
@@ -4825,7 +4801,7 @@ desktop 1280px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -4953,7 +4929,7 @@ desktop 1280px */
 								padding: 1em;
 
 								p.comment-notes {
-									font-size: 0.9em;
+									font-size: 1em;
 								}
 
 								textarea#comment {
@@ -4961,10 +4937,6 @@ desktop 1280px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -4976,10 +4948,6 @@ desktop 1280px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -4991,10 +4959,6 @@ desktop 1280px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -5291,7 +5255,7 @@ desktop 1280px */
 								height: 44px;
 
 								a {
-									font-size: 0.9em;
+									font-size: 0.8em;
 								}
 
 								a:hover {
@@ -5318,11 +5282,11 @@ desktop 1280px */
 					}
 
 					#chart {
-						width: 96%;
+						width: 100%;
 
 						#bars {
 							li {
-								height: 50px;
+								height: 65px;
 								.bar {
 									&:hover {
 										cursor: pointer;
@@ -5330,7 +5294,7 @@ desktop 1280px */
 
 									&:hover::after {
 										font-size: 0.9em;
-										line-height: 50px;
+										line-height: 65px;
 										width: 24%;
 									}
 								}
@@ -5338,7 +5302,7 @@ desktop 1280px */
 
 							span {
 								font-size: 0.85em;
-								line-height: 50px;
+								line-height: 65px;
 							}
 						}
 					}
@@ -5408,12 +5372,9 @@ desktop 1280px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
-							font-size: 0.9em;
+							font-size: 1em;
 
 							a {
 								&:hover {
@@ -5421,14 +5382,14 @@ desktop 1280px */
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -5709,10 +5670,6 @@ desktop 1024px */
 						font-size: 0.95em;
 					}
 
-					ul.post-list {
-						width: 100%;
-					}
-
 					ul {
 						width: 100%;
 
@@ -5735,15 +5692,6 @@ desktop 1024px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.85em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -5830,6 +5778,10 @@ desktop 1024px */
 					.entry,
 					.entry-content {
 						padding: 1%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.85em;
+						}
 					}
 
 					.entry-attachment {
@@ -5983,7 +5935,7 @@ desktop 1024px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -6111,7 +6063,7 @@ desktop 1024px */
 								padding: 1em;
 
 								p.comment-notes {
-									font-size: 0.9em;
+									font-size: 1em;
 								}
 
 								textarea#comment {
@@ -6119,10 +6071,6 @@ desktop 1024px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -6134,10 +6082,6 @@ desktop 1024px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -6149,10 +6093,6 @@ desktop 1024px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -6331,7 +6271,7 @@ desktop 1024px */
 					}
 
 					p {
-						font-size: 0.95em;
+						font-size: 0.9em;
 					}
 
 					.introimg {
@@ -6347,7 +6287,7 @@ desktop 1024px */
 					}
 
 					p {
-						font-size: 1em;
+						font-size: 0.9em;
 					}
 
 					.introimg {
@@ -6418,7 +6358,7 @@ desktop 1024px */
 											margin: auto;
 
 											h3 {
-												font-size: 0.9em;
+												font-size: 0.85em;
 											}
 
 											h4 {
@@ -6447,7 +6387,7 @@ desktop 1024px */
 								height: 44px;
 
 								a {
-									font-size: 0.85em;
+									font-size: 0.75em;
 								}
 
 								a:hover {
@@ -6474,7 +6414,7 @@ desktop 1024px */
 					}
 
 					#chart {
-						width: 96%;
+						width: 100%;
 
 						#bars {
 							li {
@@ -6491,6 +6431,7 @@ desktop 1024px */
 
 							span {
 								font-size: 0.85em;
+								width: 19.5%;
 							}
 						}
 					}
@@ -6564,25 +6505,24 @@ desktop 1024px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
+							font-size: 1em;
+
 							a {
 								&:hover {
 									font-weight: bold;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -6892,12 +6832,6 @@ tablet 800px */
 						font-size: 0.9em;
 					}
 
-					ul.post-list {
-						li {
-							font-size: 0.9em;
-						}
-					}
-
 					ul {
 						width: 100%;
 
@@ -6920,15 +6854,6 @@ tablet 800px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.85em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -7035,6 +6960,10 @@ tablet 800px */
 					.entry,
 					.entry-content {
 						padding: 1%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.8em;
+						}
 					}
 
 					.entry-attachment {
@@ -7200,7 +7129,7 @@ tablet 800px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -7336,10 +7265,6 @@ tablet 800px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -7351,10 +7276,6 @@ tablet 800px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -7366,10 +7287,6 @@ tablet 800px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -7584,7 +7501,7 @@ tablet 800px */
 					}
 
 					p {
-						font-size: 1em;
+						font-size: 0.9em;
 					}
 
 					.introimg {
@@ -7603,7 +7520,7 @@ tablet 800px */
 					}
 
 					p {
-						font-size: 1em;
+						font-size: 0.9em;
 					}
 
 					.introimg {
@@ -7703,7 +7620,7 @@ tablet 800px */
 								height: 44px;
 
 								a {
-									font-size: 1em;
+									font-size: 0.85em;
 								}
 
 								a:hover {
@@ -7734,7 +7651,7 @@ tablet 800px */
 					}
 
 					#chart {
-						width: 96%;
+						width: 100%;
 
 						#bars {
 							li {
@@ -7751,6 +7668,7 @@ tablet 800px */
 
 							span {
 								font-size: 1em;
+								width: 16.5%;
 							}
 						}
 					}
@@ -7832,29 +7750,27 @@ tablet 800px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
+							font-size: 1em;
 							line-height: 40px;
-							font-size: 0.9em;
 
 							a {
-								line-height: 40px;
 								&:hover {
 									font-weight: bold;
+									line-height: 40px;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							line-height: 40px;
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -7944,12 +7860,6 @@ tablet 800px */
 						font-size: 0.9em;
 					}
 
-					ul.post-list {
-						li {
-							font-size: 0.9em;
-						}
-					}
-
 					ul {
 						width: 94%;
 
@@ -7975,15 +7885,6 @@ tablet 800px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.85em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -8070,6 +7971,10 @@ tablet 800px */
 					.entry,
 					.entry-content {
 						padding: 1%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.8em;
+						}
 					}
 
 					.entry-attachment {
@@ -8226,7 +8131,7 @@ tablet 800px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -8362,10 +8267,6 @@ tablet 800px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -8377,10 +8278,6 @@ tablet 800px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -8392,10 +8289,6 @@ tablet 800px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -8706,14 +8599,10 @@ tablet 600px */
 				article.page {
 					margin-top: 1.5em;
 
-					.seperator {
-						height: 1%;
-					}
-
 					h1,
 					h1.page-title {
 						font-size: 1.1em;
-						line-height: 60px;
+						line-height: 50px;
 					}
 
 					h2,
@@ -8742,12 +8631,6 @@ tablet 600px */
 						font-size: 0.85em;
 					}
 
-					ul.post-list {
-						li {
-							font-size: 0.85em;
-						}
-					}
-
 					ul {
 						width: 94%;
 
@@ -8774,15 +8657,6 @@ tablet 600px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.85em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -8889,7 +8763,11 @@ tablet 600px */
 
 					.entry,
 					.entry-content {
-						padding: 1%;
+						padding: 0.5%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.8em;
+						}
 					}
 
 					.entry-attachment {
@@ -9051,7 +8929,7 @@ tablet 600px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -9187,10 +9065,6 @@ tablet 600px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -9202,10 +9076,6 @@ tablet 600px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -9217,10 +9087,6 @@ tablet 600px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -9423,7 +9289,7 @@ tablet 600px */
 					}
 
 					p {
-						font-size: 0.85em;
+						font-size: 0.9em;
 					}
 
 					.introimg {
@@ -9520,7 +9386,7 @@ tablet 600px */
 								height: 44px;
 
 								a {
-									font-size: 0.75em;
+									font-size: 0.85em;
 								}
 
 								a:hover {
@@ -9641,25 +9507,24 @@ tablet 600px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
+							font-size: 1em;
+
 							a {
 								&:hover {
 									font-weight: bold;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -9922,13 +9787,14 @@ mobile 480px */
 				article.page {
 					h1,
 					h1.page-title {
-						font-size: 1.1em;
-						line-height: 55px;
+						font-size: 1em;
+						line-height: 45px;
 					}
 
 					h2,
 					h2.entry-title {
-						font-size: 1em;
+						font-size: 0.9em;
+						line-height: 30px;
 
 						a {
 							display: block;
@@ -9940,7 +9806,7 @@ mobile 480px */
 					}
 
 					h3 {
-						font-size: 0.95em;
+						font-size: 0.85em;
 						line-height: 45px;
 
 						a {
@@ -9948,19 +9814,8 @@ mobile 480px */
 						}
 					}
 
-					/* code */
-					pre.wp-block-code {
-						font-size: 0.75em;
-					}
-
 					p {
 						font-size: 0.8em;
-					}
-
-					ul.post-list {
-						li {
-							font-size: 0.8em;
-						}
 					}
 
 					ul {
@@ -9989,15 +9844,6 @@ mobile 480px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.85em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -10108,7 +9954,11 @@ mobile 480px */
 
 					.entry,
 					.entry-content {
-						padding: 1%;
+						padding: 0.5%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.75em;
+						}
 					}
 
 					.entry-attachment {
@@ -10279,7 +10129,7 @@ mobile 480px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -10415,10 +10265,6 @@ mobile 480px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -10430,10 +10276,6 @@ mobile 480px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -10445,10 +10287,6 @@ mobile 480px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -10760,7 +10598,7 @@ mobile 480px */
 								height: 44px;
 
 								a {
-									font-size: 0.7em;
+									font-size: 0.8em;
 								}
 
 								a:hover {
@@ -10877,24 +10715,24 @@ mobile 480px */
 						font-size: 0.9em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
+							font-size: 1em;
+
 							a {
 								&:hover {
 									font-weight: bold;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -11144,12 +10982,12 @@ mobile 360px */
 
 					h1,
 					h1.page-title {
-						font-size: 1em;
+						font-size: 0.9em;
 					}
 
 					h2,
 					h2.entry-title {
-						font-size: 0.9em;
+						font-size: 0.85em;
 
 						a {
 							display: block;
@@ -11161,7 +10999,7 @@ mobile 360px */
 					}
 
 					h3 {
-						font-size: 1em;
+						font-size: 0.85em;
 
 						a {
 							padding-left: 0;
@@ -11170,10 +11008,6 @@ mobile 360px */
 
 					p {
 						font-size: 0.8em;
-					}
-
-					ul.post-list {
-						width: 80%;
 					}
 
 					ul {
@@ -11202,15 +11036,6 @@ mobile 360px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.8em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -11292,7 +11117,11 @@ mobile 360px */
 
 					.entry,
 					.entry-content {
-						padding: 1%;
+						padding: 0.5%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.75em;
+						}
 					}
 
 					.entry-attachment {
@@ -11447,7 +11276,7 @@ mobile 360px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -11583,10 +11412,6 @@ mobile 360px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -11598,10 +11423,6 @@ mobile 360px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -11613,10 +11434,6 @@ mobile 360px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -11800,7 +11617,7 @@ mobile 360px */
 					}
 
 					p {
-						font-size: 0.85em;
+						font-size: 0.8em;
 					}
 
 					.introimg {
@@ -11817,7 +11634,7 @@ mobile 360px */
 					}
 
 					p {
-						font-size: 0.85em;
+						font-size: 0.8em;
 					}
 
 					.introimg {
@@ -11829,7 +11646,7 @@ mobile 360px */
 					height: auto;
 
 					p {
-						font-size: 0.85em;
+						font-size: 0.8em;
 
 						strong {
 							width: auto;
@@ -11871,7 +11688,7 @@ mobile 360px */
 
 								.panel {
 									h2 {
-										font-size: 0.8em;
+										font-size: 0.75em;
 									}
 
 									figure.slider-panel {
@@ -11885,11 +11702,11 @@ mobile 360px */
 
 										figcaption {
 											h3 {
-												font-size: 0.7em;
+												font-size: 0.8em;
 											}
 
 											h4 {
-												font-size: 0.7em;
+												font-size: 0.8em;
 											}
 
 											ul {
@@ -11914,7 +11731,7 @@ mobile 360px */
 								height: 44px;
 
 								a {
-									font-size: 0.65em;
+									font-size: 0.7em;
 								}
 
 								a:hover {
@@ -12035,25 +11852,24 @@ mobile 360px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
+							font-size: 1em;
+
 							a {
 								&:hover {
 									font-weight: bold;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
@@ -12297,12 +12113,12 @@ mobile 320px */
 				article.page {
 					h1,
 					h1.page-title {
-						font-size: 1em;
+						font-size: 0.9em;
 					}
 
 					h2,
 					h2.entry-title {
-						font-size: 0.9em;
+						font-size: 0.85em;
 
 						a {
 							display: block;
@@ -12314,7 +12130,7 @@ mobile 320px */
 					}
 
 					h3 {
-						font-size: 0.85em;
+						font-size: 0.8em;
 						line-height: 25px;
 
 						a {
@@ -12324,13 +12140,6 @@ mobile 320px */
 
 					p {
 						font-size: 0.75em;
-					}
-
-					ul.post-list {
-						width: 85%;
-						li {
-							font-size: 0.75em;
-						}
 					}
 
 					ul {
@@ -12358,15 +12167,6 @@ mobile 320px */
 						img {
 							margin: 0 auto;
 						}
-					}
-
-					pre {
-						font-size: 0.85em;
-					}
-
-					.code {
-						width: 80%;
-						font-size: 0.8em;
 					}
 
 					header.page-header,
@@ -12451,6 +12251,10 @@ mobile 320px */
 					.entry,
 					.entry-content {
 						padding: 1%;
+						/* code */
+						pre.wp-block-code {
+							font-size: 0.75em;
+						}
 					}
 
 					.entry-attachment {
@@ -12607,7 +12411,7 @@ mobile 320px */
 														line-height: 1.5;
 
 														a {
-															background-color: $headercolor;
+															background-color: $blackcolor;
 														}
 													}
 
@@ -12743,10 +12547,6 @@ mobile 320px */
 								}
 
 								p.comment-form-author {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -12758,10 +12558,6 @@ mobile 320px */
 								}
 
 								p.comment-form-email {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -12773,10 +12569,6 @@ mobile 320px */
 								}
 
 								p.comment-form-url {
-									label {
-										height: 30px;
-									}
-
 									input {
 										height: 35px;
 									}
@@ -13025,7 +12817,7 @@ mobile 320px */
 
 								.panel {
 									h2 {
-										font-size: 0.8em;
+										font-size: 0.7em;
 									}
 
 									figure.slider-panel {
@@ -13039,18 +12831,18 @@ mobile 320px */
 
 										figcaption {
 											h3 {
-												font-size: 0.7em;
+												font-size: 0.8em;
 											}
 
 											h4 {
-												font-size: 0.7em;
+												font-size: 0.8em;
 											}
 
 											ul {
 												padding: 0.1em;
 
 												li {
-													font-size: 0.65em;
+													font-size: 0.7em;
 
 													&::before {
 														font-size: 0.7em;
@@ -13068,7 +12860,7 @@ mobile 320px */
 								height: 44px;
 
 								a {
-									font-size: 0.6em;
+									font-size: 0.65em;
 								}
 
 								a:hover {
@@ -13173,25 +12965,24 @@ mobile 320px */
 						font-size: 1em;
 					}
 
-					ul,
-					ul#recentcomments {
-						width: 100%;
-
+					ul {
 						li {
-							font-size: 0.8em;
+							font-size: 1em;
+
 							a {
 								&:hover {
 									font-weight: bold;
 								}
 							}
 						}
+					}
+					ul#recentcomments {
+						width: 100%;
 
 						li.recentcomments {
 							display: block;
-							span.comment-author-link {
-								a {
-									color: $blackcolor;
-								}
+							a {
+								color: $blackcolor;
 							}
 						}
 					}
