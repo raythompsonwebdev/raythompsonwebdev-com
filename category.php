@@ -17,13 +17,14 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
-<?php
-/**
- * Check if there are any posts to display.
- */
+<div id="primary" class="site-main">
 
-if ( have_posts() ) :
+	<?php
+		/**
+		* Check if there are any posts to display.
+		*/
+
+		if ( have_posts() ) :
 	?>
 
 	<h1 class="archive-title">
@@ -42,87 +43,81 @@ if ( have_posts() ) :
 	<?php endif; ?>
 
 	<?php
-	while ( have_posts() ) :
+		while ( have_posts() ) :
 		the_post();
-		?>
+	?>
 
 	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
-			<?php
+		<?php
 			if ( is_singular() ) :
-					the_title( '<h1 class="entry-title">', '</h1>' );
-				else :
-					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-					endif;
-				?>
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			endif;
+		?>
 
-				<header class="entry-header">
-				<?php
-
+		<header class="entry-header"><!-- .entry-header -->
+			<?php
 				if ( 'post' === get_post_type() ) :
-					?>
-						<div class="entry-meta">
-						<?php	raythompsonwebdev_com_index_posted_on(); ?>
-						</div><!-- .entry-meta -->
-					<?php endif; ?>
-				</header><!-- .entry-header -->
+			?>
+			<div class="entry-meta"><!-- .entry-meta -->
+				<?php	raythompsonwebdev_com_index_posted_on(); ?>
+			</div>
+			<?php endif; ?>
+		</header>
 
-				<!--featured Image-->
+		<!--featured Image-->
+		<?php if ( has_post_thumbnail() ) : ?>
 
-					<?php if ( has_post_thumbnail() ) : ?>
+			<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
-						<?php raythompsonwebdev_com_post_thumbnail(); ?>
+			<?php else : ?>
 
-					<?php else : ?>
+			<figure class="featuredImage">
+				<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
+			</figure>
 
-						<figure class="featuredImage">
+		<?php endif; ?>
 
-						<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"	alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-						</figure>
+		<div class="entry-content"><!-- .entry-content -->
 
-					<?php endif; ?>
+			<?php
+				the_excerpt(
+					sprintf(
+						wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
+						),
+						wp_kses_post( get_the_title() )
+					)
+				);
 
-				<!--featured Image end-->
-
-				<div class="entry-content">
-					<?php
-					the_excerpt(
-						sprintf(
-							wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'raythompsonwebdev-com' ),
-								array(
-									'span' => array(
-										'class' => array(),
-									),
-								)
-							),
-							wp_kses_post( get_the_title() )
-						)
-					);
-
-					wp_link_pages(
-						array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
-							'after'  => '</div>',
-						)
-					);
-					?>
-			</div><!-- .entry-content -->
-
-				<footer class="entry-footer">
-
-				<?php raythompsonwebdev_com_entry_footer(); ?>
-				</footer>
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'raythompsonwebdev-com' ),
+						'after'  => '</div>',
+					)
+				);
+			?>
+		</div>
+		<footer class="entry-footer">
+			<?php raythompsonwebdev_com_entry_footer(); ?>
+		</footer>
 
 	</article><!-- #post-<?php the_ID(); ?> -->
 
-		<?php
+	<?php
 		endwhile;
 		else :
-			?>
+	?>
 
-			<?php get_template_part( 'template-part/content', 'none' ); ?>
+	<?php get_template_part( 'template-part/content', 'none' ); ?>
 
 	<?php endif; ?>
 
@@ -131,9 +126,8 @@ if ( have_posts() ) :
 		<h1><?php esc_html_e( 'Category Menu', 'raythompsonwebdev-com' ); ?></h1>
 
 	</section>
-	<!--end of Comment box-->
 
-</main>
+</div>
 
 <?php get_sidebar( 'archive' ); ?>
 

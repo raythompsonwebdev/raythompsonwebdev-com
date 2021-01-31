@@ -13,7 +13,7 @@
 <!-- #secondary -->
 
 <aside id="side-bar" class="group widget-area" role="complementary">
-	<h1>Post Categrories</h1>
+	<h1>Side Menu</h1>
 
 
 

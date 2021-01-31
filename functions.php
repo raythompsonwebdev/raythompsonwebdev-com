@@ -52,14 +52,12 @@ register_meta(
 /**
  * Returns a custom login error message.
  */
-function clashvibes__error_message() {
+function raythompsonwebdev_com_error_message() {
 	return 'Well, that was not it, hmmm!';
 }
-add_filter( 'login_errors', 'clashvibes__error_message' );
+add_filter( 'login_errors', 'raythompsonwebdev_com_error_message' );
 
 if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
-
-
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -84,8 +82,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 		 *
 		 */
 		add_theme_support( 'title-tag' );
-
-		//add_theme_support('editor-styles');
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -189,6 +185,28 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_setup' );
+
+// remove version from head
+remove_action('wp_head', 'wp_generator');
+
+// remove version from rss
+add_filter('the_generator', '__return_empty_string');
+
+// remove version from scripts and styles
+function raythompsonwebdev_com_remove_version_scripts_styles($src) {
+	if (strpos($src, 'ver=')) {
+		$src = remove_query_arg('ver', $src);
+	}
+	return $src;
+}
+add_filter('style_loader_src', 'raythompsonwebdev_com_remove_version_scripts_styles', 9999);
+add_filter('script_loader_src', 'raythompsonwebdev_com_remove_version_scripts_styles', 9999);
+
+//Enqueue the Dashicons script
+add_action( 'wp_enqueue_scripts', 'load_dashicons_front_end' );
+function load_dashicons_front_end() {
+	wp_enqueue_style( 'dashicons' );
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -410,8 +428,121 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// exclude node modules from theme check.
-// add_filter('ai1wm_exclude_content_from_export', function($exclude_filters) {.
-// $exclude_filters[] = 'themes/<YOUR-THEME-NAME>/node_modules';.
-// return $exclude_filters;.
-// });.
+register_block_pattern_category(
+		'profile-page-block-pattern', array(
+			'label' => __("Profile Page Pattern", 'raythompsonwebdev-com')
+		)
+);
+
+function raythompsonwebdev_com_register_block_patterns() {
+
+	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
+
+		register_block_pattern(
+			'raythompsonwebdev-com/profile-page-pattern',
+			array(
+				'title'       => __( 'Profile Page Pattern', 'raythompsonwebdev-com' ),
+				'description' => _x( 'A call to action with a beautiful two-column gallery below.', 'Block pattern description', 'raythompsonwebdev-com' ),
+				'content'     => '<!-- wp:group {"align":"wide"} -->
+
+				<div class="wp-block-group alignwide">
+					<div class="wp-block-group__inner-container">
+						<!-- wp:columns {"align":"wide"} -->
+
+						<div class="wp-block-columns alignwide">
+							<!-- wp:column -->
+
+							<div class="wp-block-column">
+								<span class="dashicons dashicons-html"></span>
+
+								<!-- wp:heading {"level":1} -->
+								<h1>Code</h1>
+								<!-- /wp:heading -->
+
+								<!-- wp:paragraph -->
+								<p>HTML & CSS</p>
+								<!-- /wp:paragraph -->
+								<!-- wp:paragraph -->
+								<p>PHP & MYSQL</p>
+								<!-- /wp:paragraph -->
+								<!-- wp:paragraph -->
+								<p>Javascript ES5/ES6</p>
+								<!-- /wp:paragraph -->
+							</div>
+							<!-- /wp:column -->
+
+							<!-- wp:column -->
+							<div class="wp-block-column">
+								<span class="dashicons dashicons-html"></span>
+
+								<!-- wp:heading {"level":1} -->
+								<h1>Code</h1>
+								<!-- /wp:heading -->
+
+								<!-- wp:paragraph -->
+								<p>HTML & CSS</p>
+								<!-- /wp:paragraph -->
+								<!-- wp:paragraph -->
+								<p>PHP & MYSQL</p>
+								<!-- /wp:paragraph -->
+								<!-- wp:paragraph -->
+								<p>Javascript ES5/ES6</p>
+								<!-- /wp:paragraph -->
+							</div>
+							<!-- /wp:column -->
+
+							<!-- wp:column -->
+							<div class="wp-block-column">
+								<span class="dashicons dashicons-html"></span>
+
+								<!-- wp:heading {"level":1} -->
+								<h1>Code</h1>
+								<!-- /wp:heading -->
+
+								<!-- wp:paragraph -->
+								<p>HTML & CSS</p>
+								<!-- /wp:paragraph -->
+								<!-- wp:paragraph -->
+								<p>PHP & MYSQL</p>
+								<!-- /wp:paragraph -->
+								<!-- wp:paragraph -->
+								<p>Javascript ES5/ES6</p>
+								<!-- /wp:paragraph -->
+							</div>
+							<!-- /wp:column -->
+
+							<!-- wp:column -->
+							<div class="wp-block-column">
+								<span class="dashicons dashicons-html"></span>
+
+								<!-- wp:heading {"level":1} -->
+								<h1>Code</h1>
+								<!-- /wp:heading -->
+
+								<!-- wp:paragraph -->
+								<p>HTML & CSS</p>
+								<!-- /wp:paragraph -->
+
+								<!-- wp:paragraph -->
+								<p>PHP & MYSQL</p>
+								<!-- /wp:paragraph -->
+
+								<!-- wp:paragraph -->
+								<p>Javascript ES5/ES6</p>
+								<!-- /wp:paragraph -->
+							</div>
+							<!-- /wp:column -->
+						</div>
+						<!-- /wp:columns -->
+					</div>
+				</div>
+				<!-- /wp:group -->
+				',
+				'categories'  => array( 'profile-page-block-pattern' ),
+			)
+		);
+
+	}
+
+}
+add_action( 'init', 'raythompsonwebdev_com_register_block_patterns' );

@@ -15,6 +15,10 @@
 get_header();
 ?>
 
+<header class="page-header">
+<h1 class="page-title"><?php esc_html_e( 'Blog', 'raythompsonwebdev-com' ); ?></h1>
+			</header><!-- .page-header -->
+
 	<main id="primary" class="site-main">
 
 		<?php

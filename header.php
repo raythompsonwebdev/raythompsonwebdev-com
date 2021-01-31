@@ -106,4 +106,4 @@
 	<?php endif; ?>
 
 	<!-- #page start -->
-	<div id="page">
+	<main id="page">

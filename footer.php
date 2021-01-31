@@ -11,34 +11,38 @@
 
 ?>
 
-</div><!-- #page end -->
+</main> <!-- #page end -->
 
 	<footer id="colophon" class="site-footer">
 	<aside class="social-icons">
 
 	<a class="social-icon" href="<?php echo esc_url( 'http://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>">
-		<span>
+		<!-- <span>
 		<i class="fab fa-linkedin" aria-hidden="true"></i>
-		</span>
+		</span> -->
+		<span class="dashicons dashicons-linkedin"></span>
 	</a>
 
 
 	<a class="social-icon" href="<?php echo esc_url( 'http://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>">
-		<span>
+		<!-- <span>
 		<i class="fab fa-twitter" aria-hidden="true"></i>
-		</span>
+		</span> -->
+		<span class="dashicons dashicons-twitter"></span>
 	</a>
 
 	<a class="social-icon" href="<?php echo esc_url( 'https://www.facebook.com/raythompsonwebdeveloper', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Facebook', 'raythompsonwebdev-com' ); ?>">
-		<span>
+		<!-- <span>
 		<i class="fab fa-facebook" aria-hidden="true"></i>
-		</span>
+		</span> -->
+		<span class="dashicons dashicons-facebook-alt"></span>
 	</a>
 
 	<a class="social-icon" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>">
-		<span>
+		<!-- <span>
 		<i class="fab fa-github" aria-hidden="true"></i>
-		</span>
+		</span> -->
+		<span class="dashicons dashicons-github"></span>
 	</a>
 </aside>
 
