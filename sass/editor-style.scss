@@ -231,6 +231,11 @@ blockquote.alignright {
 	margin: 0 auto;
 }
 
+.wp-block {
+	margin: 0;
+	//max-width: unset;
+}
+
 div.wp-block-group {
 	width: 100%;
 	margin: 0;
@@ -239,6 +244,18 @@ div.wp-block-group {
 		height: auto;
 		margin: 0;
 		padding: 0;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: flex-start;
+		align-items: flex-start;
+		.block-editor-block-list__block {
+			width: 49%;
+		}
 		div.wp-block-columns {
 			display: -webkit-flex;
 			display: -ms-flexbox;

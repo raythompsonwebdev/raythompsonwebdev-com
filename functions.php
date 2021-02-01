@@ -327,7 +327,7 @@ function raythompsonwebdev_com_scripts() {
 
 	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
-	wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, false );
+	//wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -358,9 +358,9 @@ function raythompsonwebdev_com_about_page_scripts() {
 
 	if ( is_page( 'about' ) ) {
 		// scrollto script.
-		wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		//wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 		// easing script.
-		wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		//wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 		// profile page scripts.
 		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
@@ -559,7 +559,7 @@ function raythompsonwebdev_com_register_block_patterns() {
 				'title'       => __( 'about Page Pattern', 'raythompsonwebdev-com' ),
 				'description' => _x( 'about page layout.', 'Block pattern description', 'raythompsonwebdev-com' ),
 				'content'     => '<!-- wp:group {"align":"wide"} -->
-				<div id="profile-container" class="wp-block-group alignwide">
+				<div class="wp-block-group alignwide" id="profile-container">
 					<div class="wp-block-group__inner-container">
 						<!-- wp:html -->
 						<article id="text-box-profile">
@@ -596,19 +596,55 @@ function raythompsonwebdev_com_register_block_patterns() {
 
 						<!-- wp:shortcode /-->
 
+						<!-- wp:shortcode /-->
+
 						<!-- wp:html -->
-						<article >
+						<article id="text-box-profile-a">
 							<!-- wp:paragraph -->
-							<p style="color:black;">
+							<p>
 								I have been inspired enough to continue learning and mastering new coding
 								techniques to solve problems I come across when coding.&nbsp;&nbsp;<strong
 								></strong>
 							</p>
 							<!-- /wp:paragraph -->
+
+							<!-- wp:paragraph -->
+							<p>
+								I have gained valuable knowledge and experience meeting others interested
+								in web development, online and at live events I have been able to attend.
+								Events like&nbsp;<strong
+									><a href="https://vimeo.com/232481032">Digital Futures 2017</a></strong
+								>&nbsp;in Waterloo, London. and&nbsp;<strong
+									><a href="https://2018.london.wordcamp.org/attendees/"
+										>WordCamp 2018</a
+									></strong
+								>&nbsp;in London and attending pair programming sessions to solve coding
+								problems like the one held by&nbsp;<strong
+									><a href="https://makers.tech/">Makers Academy.</a></strong
+								>
+							</p>
+							<!-- /wp:paragraph -->
+
+							<!-- wp:paragraph -->
+							<p>
+								This has helped me with the confidence to put into practice what I have
+								learned to create full stack web applications, wordpress themes and
+								plugins and other web programs.
+							</p>
+							<!-- /wp:paragraph -->
+
+							<!-- wp:paragraph -->
+							<p>
+								My aim is to continue improving my coding skills and workflow so that I am
+								able to help in the creation of well designed and maintainable web
+								applications and contribute towards improving the user experience,
+								security and accessibility of web application on the web for all users.
+							</p>
+							<!-- /wp:paragraph -->
 						</article>
 						<!-- /wp:html -->
 
-						<!-- wp:shortcode /-->
+
 					</div>
 				</div>
 				<!-- /wp:group -->',
