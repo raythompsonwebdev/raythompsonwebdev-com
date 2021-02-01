@@ -12,7 +12,9 @@
 ?>
 
 </main> <!-- #page end -->
-
+<br>
+<br>
+<br>
 	<footer id="colophon" class="site-footer">
 	<aside class="social-icons">
 

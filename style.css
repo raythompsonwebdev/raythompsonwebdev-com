@@ -786,7 +786,7 @@ select {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1em 0 0;
+	margin: 0.5em 0 0;
 }
 
 .page-content ul,
@@ -1192,7 +1192,7 @@ desktop 1920px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.5em;
+		font-size: 1.2em;
 		width: 100%;
 		height: 30px;
 		line-height: 35px;
@@ -1372,8 +1372,7 @@ desktop 1920px */
 	#wrapper main#page {
 		height: auto;
 		margin: 0;
-		padding: 0.5em;
-		font-size: 1em;
+		padding: 0;
 		min-height: 100vh;
 		clear: both;
 		/* Contact page map */
@@ -1384,7 +1383,7 @@ desktop 1920px */
 		/* Projects Page Container */
 	}
 	#wrapper main#page h1 {
-		font-size: 1.45em;
+		font-size: 1.3em;
 		line-height: 50px;
 		height: auto;
 		color: #262425;
@@ -1393,18 +1392,18 @@ desktop 1920px */
 		margin: 0;
 	}
 	#wrapper main#page header.page-header h1.page-title {
-		font-size: 1.4em;
+		font-size: 1.3em;
 	}
 	#wrapper main#page h2 {
 		font-family: "Cabin", helvetica, arial, verdana, tahoma, sans-serif;
-		font-size: 1.35em;
+		font-size: 1.2em;
 		line-height: 40px;
 		height: auto;
 		color: #262425;
 	}
 	#wrapper main#page h3 {
 		font-family: "Cabin", helvetica, arial, verdana, tahoma, sans-serif;
-		font-size: 1.25em;
+		font-size: 1.1em;
 		line-height: 30px;
 		height: auto;
 		color: #262425;
@@ -1566,33 +1565,20 @@ desktop 1920px */
 		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
 		color: #262425;
 	}
-	#wrapper main#page address#contact-details li a svg.dashicons-linkedin,
-	#wrapper main#page address#contact-details li a svg.dashicons-twitter,
-	#wrapper main#page address#contact-details li a svg.fa-envelope-square,
-	#wrapper main#page address#contact-details li a svg.fa-github {
-		display: inline-block;
-		margin-right: 0.5em;
-	}
-	#wrapper main#page address#contact-details li a:visited {
-		color: #262425;
-	}
-	#wrapper main#page address#contact-details li a:hover {
-		color: #262425;
-		font-weight: bold;
-	}
-	#wrapper main#page address#contact-details li a[href^='#']::before {
+	#wrapper main#page address#contact-details li a[href~='mailto:']::before {
+		content: '\f466';
 		font-size: 1.3em;
 	}
-	#wrapper main#page address#contact-details li a[href^='twitter.com']::before {
-		content: '\f099';
+	#wrapper main#page address#contact-details li a[title~='Follow me on Twitter']::before {
+		content: '\f301';
 		font-size: 1.4em;
 	}
-	#wrapper main#page address#contact-details li a[href^='www.linkedin.com']::before {
-		content: '\f0e1';
+	#wrapper main#page address#contact-details li a[href~='www.linkedin.com']::before {
+		content: '\f18d';
 		font-size: 1.4em;
 	}
-	#wrapper main#page address#contact-details li a[href^='github.com']::before {
-		content: '\f09b';
+	#wrapper main#page address#contact-details li a[href~='github.com']::before {
+		content: '\f237';
 		font-size: 1.4em;
 	}
 	#wrapper main#page div#primary {
@@ -1601,16 +1587,6 @@ desktop 1920px */
 		/* Regular Posts */
 		/* Single Page Post Navigation */
 		/* Comments & other Items Container */
-	}
-	#wrapper main#page div#primary article.rtwd-post,
-	#wrapper main#page div#primary article.search-results {
-		width: 49%;
-		display: inline-block;
-		background-color: #f5f2e4;
-		box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
-	}
-	#wrapper main#page div#primary article.single-post .entry {
-		padding: 2em;
 	}
 	#wrapper main#page div#primary article.post,
 	#wrapper main#page div#primary article.project,
@@ -1946,7 +1922,7 @@ desktop 1920px */
 	#wrapper main#page div#primary article.page header.entry-header .entry-meta span.posted-on,
 	#wrapper main#page div#primary article.page header.entry-header .entry-meta span.updated-on {
 		text-indent: 0.5em;
-		width: 93%;
+		width: 100%;
 		background-color: #262425;
 		letter-spacing: 0.055em;
 		color: #f2f2f2;
@@ -2199,8 +2175,7 @@ desktop 1920px */
 		font-size: 0.95em;
 		margin: 0;
 		outline: none;
-		line-height: unset;
-		width: 11%;
+		width: 8%;
 		height: auto;
 	}
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text h3.sd-title::before,
@@ -2235,7 +2210,7 @@ desktop 1920px */
 		display: inline-block;
 		padding: 0;
 		margin: 0 0.25em 0 0;
-		width: 32%;
+		width: 20%;
 		list-style: none;
 	}
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
@@ -2478,6 +2453,16 @@ desktop 1920px */
 		width: auto;
 		display: inline-block;
 		padding: 0 0.25em;
+	}
+	#wrapper main#page div#primary article.rtwd-post,
+	#wrapper main#page div#primary article.search-results {
+		width: 49%;
+		display: inline-block;
+		background-color: #f5f2e4;
+		box-shadow: 0.5px 0.5px 0.5px 0 rgba(0, 0, 0, 0.1);
+	}
+	#wrapper main#page div#primary article.single-post .entry {
+		padding: 2em;
 	}
 	#wrapper main#page div#primary nav.navigation {
 		min-height: 85px;
@@ -3105,7 +3090,7 @@ desktop 1920px */
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-		font-size: 3em;
+		font-size: 2.4em;
 		color: #262425;
 		margin: 0;
 		padding: 0;
@@ -3118,22 +3103,20 @@ desktop 1920px */
 		-webkit-order: 2;
 		-ms-flex-order: 2;
 		order: 2;
-		font-size: 2em;
+		font-size: 1.5em;
 		color: #262425;
-		margin: 0 0 0.5em 0;
 		padding: 0;
 		text-align: left;
 		text-shadow: 1px 1px #f2f2f2;
 		line-height: 40px;
+		margin: 0;
 	}
 	#wrapper main#page div#frontpage-container p {
 		-webkit-order: 3;
 		-ms-flex-order: 3;
 		order: 3;
 		width: 70%;
-		float: left;
-		padding: 1em;
-		font-size: 1em;
+		padding: 0.5em;
 		color: #262425;
 		background-color: rgba(255, 255, 255, 0.75);
 	}
@@ -3180,7 +3163,7 @@ desktop 1920px */
 		text-indent: 0.2em;
 		margin: 0.5em 0;
 		width: 100%;
-		font-size: 1.5em;
+		font-size: 1.25em;
 		color: #000;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group {
@@ -3198,9 +3181,10 @@ desktop 1920px */
 		padding: 0;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
-		background-color: #fff;
+		background-color: #f2f2f2;
 		height: auto;
 		padding: 0;
+		margin: 0;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
@@ -3215,35 +3199,32 @@ desktop 1920px */
 		margin-left: 0;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column {
-		-webkit-flex: 1 0 auto;
-		-ms-flex: 1 0 auto;
-		flex: 1 0 auto;
-		width: 24%;
-		margin: 0.5%;
+		margin: 0.5em;
+		padding: 0.25em;
+		background-color: #262425;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
 		height: auto;
 		width: 100%;
 		display: block;
-		padding: 0.2em;
 		margin: auto;
 		line-height: 100px;
 		overflow: visible;
-		color: #fff;
-		font-size: 8em;
+		color: #f2f2f2;
+		font-size: 5em;
 		text-shadow: 1px 1px #000;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span.dashicons-html {
-		background-color: red;
+		background-color: #d91424;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span.dashicons-images-alt {
-		background-color: yellow;
+		background-color: #f2ae2e;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span.dashicons-wordpress {
-		background-color: green;
+		background-color: #88a61c;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span.dashicons-admin-tools {
-		background-color: black;
+		background-color: #262425;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
 		line-height: 40px;
@@ -3262,9 +3243,10 @@ desktop 1920px */
 		line-height: 40px;
 		color: black;
 		font-size: 0.9em;
-		margin: auto;
+		margin-bottom: 0.1em;
 		text-align: center;
 		padding: 0;
+		background-color: #f2f2f2;
 	}
 	#wrapper main#page div#profile-container {
 		margin: 0;
@@ -4210,7 +4192,7 @@ desktop 1440px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.4em;
+		font-size: 1.2em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -4524,44 +4506,12 @@ desktop 1440px */
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text h3.sd-title,
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text h3.sd-title,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text h3.sd-title {
-		width: 12%;
+		width: 9%;
 	}
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
+		font-size: 1em;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -4877,52 +4827,52 @@ desktop 1440px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1280.webp");
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 2.3em;
+	}
+	#wrapper main#page div#frontpage-container h2 {
+		font-size: 1.5em;
+	}
+	#wrapper main#page div#frontpage-container p {
+		width: 70%;
+	}
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 28%;
+		font-size: 1.15em;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
+	}
+	#wrapper main#page div#frontpage-container h3 {
+		font-size: 1.25em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group {
 		width: 100%;
-		/* skills table */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.9em;
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
-		width: 100%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns h1 {
-		text-indent: 0.2em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
-		font-size: 0.85em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 5em;
+		text-shadow: 1px 1px #262425;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 2.9em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
+		font-size: 1em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
-		font-size: 1.8em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
@@ -5229,7 +5179,7 @@ desktop 1280px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.3em;
+		font-size: 1.2em;
 		height: 25px;
 		line-height: 30px;
 	}
@@ -5548,39 +5498,7 @@ desktop 1280px */
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-twitter span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li li.share-facebook a span {
-		display: block;
+		font-size: 1em;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -5896,55 +5814,52 @@ desktop 1280px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1024.webp");
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
-		width: 100%;
-		/* skills table */
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 2.2em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.9em;
-		font-size: 0.8em;
+	#wrapper main#page div#frontpage-container h2 {
+		font-size: 1.4em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
-		width: 100%;
+	#wrapper main#page div#frontpage-container p {
+		width: 70%;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns h1 {
-		text-indent: 0.2em;
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 28%;
+		font-size: 1.1em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
-		height: auto;
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 2.8em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
-		font-size: 1.8em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner p {
-		padding: 0.9em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
+	#wrapper main#page div#frontpage-container h3 {
 		font-size: 1.2em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
+	#wrapper main#page div#frontpage-container div.wp-block-group {
+		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
@@ -6503,39 +6418,7 @@ desktop 1024px */
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -6855,51 +6738,53 @@ desktop 1024px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-980.webp");
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 2em;
+		line-height: 50px;
+	}
+	#wrapper main#page div#frontpage-container h2 {
+		font-size: 1.3em;
+	}
+	#wrapper main#page div#frontpage-container p {
+		width: 70%;
+	}
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 27%;
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
+	}
+	#wrapper main#page div#frontpage-container h3 {
+		font-size: 1.15em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group {
 		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.9em;
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
-		width: 100%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns h1 {
-		text-indent: 0.2em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
 		font-size: 0.85em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 2.7em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
-		font-size: 1.7em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
@@ -7204,7 +7089,7 @@ tablet 800px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1.2em;
+		font-size: 1.15em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -7537,39 +7422,7 @@ tablet 800px */
 	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -7913,80 +7766,66 @@ tablet 800px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-667.webp");
+		-webkit-flex-flow: column;
+		-ms-flex-flow: column;
+		flex-flow: column;
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 1.8em;
+	}
+	#wrapper main#page div#frontpage-container h2 {
+		font-size: 1.2em;
+	}
+	#wrapper main#page div#frontpage-container p {
 		width: 100%;
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.9em;
-		font-size: 0.8em;
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 40%;
+		margin: 0.5em;
+		font-size: 1em;
+		-webkit-align-self: center;
+		-ms-flex-item-align: center;
+		align-self: center;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
+	}
+	#wrapper main#page div#frontpage-container h3 {
+		font-size: 1.1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group {
 		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns h1 {
-		text-indent: 0;
-		text-align: center;
-		font-size: 1.5em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column {
-		width: 55%;
-		margin: 1em auto;
-		display: block;
-		flex: 0 1 auto;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 5em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
+		-webkit-flex-flow: row wrap;
+		-ms-flex-flow: row wrap;
+		flex-flow: row wrap;
+		margin: 0;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		font-size: 1.3em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column:not(:only-child) {
+		flex-grow: 1;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column {
+		width: 47%;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
 		font-size: 1em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner {
-		-webkit-order: 0;
-		-ms-flex-order: 0;
-		order: 0;
-		width: 100%;
-		margin: 0;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 2.5em;
-		line-height: 60px;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
-		font-size: 1.5em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner p {
-		width: 98%;
-		float: none;
-		margin: auto;
-		padding: 0.5em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		width: 50%;
-		float: none;
-		text-align: center;
-		font-size: 1.3em;
-		margin: 1em auto;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container {
 		-webkit-flex-flow: column;
@@ -8262,7 +8101,7 @@ tablet 800px */
 		width: 90%;
 	}
 	#wrapper footer.site-footer aside.social-icons {
-		width: 40%;
+		width: 45%;
 	}
 	#wrapper footer.site-footer aside.social-icons a.social-icon {
 		width: 25%;
@@ -8451,46 +8290,7 @@ tablet 800px */
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
 		font-size: 0.85em;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -9232,46 +9032,7 @@ tablet 600px */
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
 		font-size: 0.8em;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -9595,60 +9356,58 @@ tablet 600px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.webp");
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 1.7em;
+		line-height: 40px;
+	}
+	#wrapper main#page div#frontpage-container h2 {
+		font-size: 1.1em;
+	}
+	#wrapper main#page div#frontpage-container p {
 		width: 100%;
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
+		padding: 0.25em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.9em;
-		font-size: 0.8em;
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 45%;
+		font-size: 1em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
+	}
+	#wrapper main#page div#frontpage-container h3 {
+		font-size: 1.1em;
+		width: 94%;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group {
 		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column {
-		width: 65%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column {
+		width: 24%;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
 		font-size: 0.9em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 2.1em;
-		width: 96%;
-		margin: auto;
-		line-height: 50px;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
-		font-size: 1.4em;
-		width: 96%;
-		margin: auto;
-		line-height: 30px;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
@@ -9995,7 +9754,6 @@ mobile 480px */
 	#wrapper main#page p {
 		letter-spacing: 0.02em;
 		font-size: 0.85em;
-		text-align: justify;
 	}
 	#wrapper main#page ul {
 		width: 100%;
@@ -10288,38 +10046,6 @@ mobile 480px */
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -10660,74 +10386,58 @@ mobile 480px */
 		font-size: 1.1em;
 	}
 	#wrapper main#page div#frontpage-container {
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		align-items: flex-start;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 1.6em;
+		line-height: 35px;
+	}
+	#wrapper main#page div#frontpage-container h2 {
+		font-size: 1em;
+		line-height: 25px;
+	}
+	#wrapper main#page div#frontpage-container p {
 		width: 100%;
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
+		padding: 0.2em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.8em;
-		font-size: 0.75em;
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 50%;
+		font-size: 1em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
+	}
+	#wrapper main#page div#frontpage-container h3 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group {
 		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns h1 {
-		margin-bottom: 0;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column {
-		width: 85%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
-		font-size: 1.2em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
-		font-size: 0.9em;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column {
+		width: 24%;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 2em;
-		line-height: 50px;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
 		font-size: 1em;
-		line-height: 30px;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner p {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		font-size: 1.3em;
-		width: 70%;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
@@ -10985,13 +10695,18 @@ mobile 480px */
 	}
 }
 
+@media only screen and (max-width: 414px) {
+	.menu-toggle {
+		font-size: 1em;
+		top: 8vh;
+		line-height: 40px;
+	}
+}
+
 /*
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 	.menu-toggle {
-		font-size: 1em;
-		line-height: 40px;
-		top: 6vh;
 		left: calc(74% - 0.2em);
 	}
 	#wrapper {
@@ -11011,7 +10726,7 @@ mobile 360px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 1em;
+		font-size: 0.95em;
 	}
 	#wrapper header.site-header .site-branding hgroup h2 {
 		font-size: 0.6em;
@@ -11276,46 +10991,7 @@ mobile 360px */
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook {
-		font-size: 0.7em;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
+		font-size: 0.75em;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -11637,57 +11313,55 @@ mobile 360px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-360.webp");
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
-		width: 100%;
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 1.5em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.8em;
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
-		-webkit-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		width: 100%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column {
-		width: 90%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
-		height: auto;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 1.8em;
-	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
+	#wrapper main#page div#frontpage-container h2 {
 		font-size: 1em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		font-size: 1.1em;
+	#wrapper main#page div#frontpage-container p {
+		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 60%;
+		font-size: 0.9em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
+	#wrapper main#page div#frontpage-container figure#image-6 {
 		margin: 0;
-		padding: 0;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
 		display: none;
-		opacity: 0;
+	}
+	#wrapper main#page div#frontpage-container h3 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group {
+		width: 100%;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
+		height: auto;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column {
+		width: 24%;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
@@ -11955,8 +11629,8 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
-		font-size: 1em;
-		top: 6vh;
+		font-size: 0.9em;
+		top: 8vh;
 	}
 	#wrapper {
 		width: 100%;
@@ -12242,38 +11916,6 @@ mobile 320px */
 	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul,
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a {
-		margin: 0;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a:hover,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a:hover {
-		font-weight: bold;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a::before,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a::before {
-		width: 100%;
-	}
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter a span,
-	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook a span {
-		display: block;
 	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
@@ -12604,60 +12246,55 @@ mobile 320px */
 	}
 	#wrapper main#page div#frontpage-container {
 		background-image: url("../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-320.webp");
+		/* PNG for IE8 */
+		/* Homepage container */
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front {
-		width: 100%;
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
+	#wrapper main#page div#frontpage-container h1 {
+		font-size: 1.4em;
 	}
-	#wrapper main#page div#frontpage-container div#text-box-front p {
-		line-height: 1.8em;
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns {
-		-webkit-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		width: 100%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns h1 {
-		font-size: 1.3em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column {
-		width: 85%;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span {
-		height: auto;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column span i {
-		font-size: 4em;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column h1 {
-		margin: 0 auto;
-	}
-	#wrapper main#page div#frontpage-container div#text-box-front .wp-block-columns .wp-block-column p {
+	#wrapper main#page div#frontpage-container h2 {
 		font-size: 0.9em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h1 {
-		font-size: 1.6em;
+	#wrapper main#page div#frontpage-container p {
+		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner h2 {
+	#wrapper main#page div#frontpage-container a#projectLink {
+		width: 65%;
+		font-size: 0.9em;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 {
+		margin: 0;
+	}
+	#wrapper main#page div#frontpage-container figure#image-6 img#image-5 {
+		display: none;
+	}
+	#wrapper main#page div#frontpage-container h3 {
 		font-size: 1em;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink {
-		font-size: 1.1em;
+	#wrapper main#page div#frontpage-container div.wp-block-group {
+		width: 100%;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner a#projectLink:hover {
-		background-color: #262425;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 {
-		margin: 0;
-		padding: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns {
+		height: auto;
 	}
-	#wrapper main#page div#frontpage-container article#fntpage-banner figure#image-6 img#image-5 {
-		display: none;
-		opacity: 0;
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column:not(:first-child) {
+		margin-left: 0;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column {
+		width: 24%;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column span {
+		font-size: 4.5em;
+		text-shadow: 1px 1px #000;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column h4 {
+		font-size: 1em;
+	}
+	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns .wp-block-column p {
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;

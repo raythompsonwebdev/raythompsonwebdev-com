@@ -434,6 +434,12 @@ register_block_pattern_category(
 		)
 );
 
+register_block_pattern_category(
+	'about-page-block-pattern', array(
+		'label' => __("About Page Pattern", 'raythompsonwebdev-com')
+	)
+);
+
 function raythompsonwebdev_com_register_block_patterns() {
 
 	if ( class_exists( 'WP_Block_Patterns_Registry' ) ) {
@@ -545,6 +551,68 @@ function raythompsonwebdev_com_register_block_patterns() {
 				<!-- /wp:group -->
 				',
 				'categories'  => array( 'profile-page-block-pattern' ),
+			)
+		);
+		register_block_pattern(
+			'raythompsonwebdev-com/about-page-pattern',
+			array(
+				'title'       => __( 'about Page Pattern', 'raythompsonwebdev-com' ),
+				'description' => _x( 'about page layout.', 'Block pattern description', 'raythompsonwebdev-com' ),
+				'content'     => '<!-- wp:group {"align":"wide"} -->
+				<div id="profile-container" class="wp-block-group alignwide">
+					<div class="wp-block-group__inner-container">
+						<!-- wp:html -->
+						<article id="text-box-profile">
+							<p>
+								I have had a passion for web development since 2012 after attending a course
+								in basic web design for beginners at a place called ELATT in Hackney,
+								London. The experience of taking part in the course, learning the process of
+								developing a website inspired me to learn more about web development.
+							</p>
+
+							<p>
+								Since then I spend lots of my spare time learning coding languages,
+								practising coding,&nbsp;<strong
+									><a href="https://raythompsonwebdev.co.uk/projects"
+										>building web applications</a
+									></strong
+								>, sharing what I have learned with friends, online and at events during my
+								spare time while working full-time. I became more interested in programming
+								around 2016 after completing online courses like&nbsp;<strong
+									><a href="https://www.freecodecamp.org/raythompsonwebdev"
+										>Free Code Camp</a
+									></strong
+								>&nbsp;that year and gained even more inspiration to learn more about coding
+								languages like Javascipt, PHP, Ruby and Python and continue coding and
+								building small applications.
+							</p>
+
+							<p>
+								Keeping up with changes that have happended over the past few years in web
+								development has been a challenge.
+							</p>
+						</article>
+						<!-- /wp:html -->
+
+						<!-- wp:shortcode /-->
+
+						<!-- wp:html -->
+						<article >
+							<!-- wp:paragraph -->
+							<p style="color:black;">
+								I have been inspired enough to continue learning and mastering new coding
+								techniques to solve problems I come across when coding.&nbsp;&nbsp;<strong
+								></strong>
+							</p>
+							<!-- /wp:paragraph -->
+						</article>
+						<!-- /wp:html -->
+
+						<!-- wp:shortcode /-->
+					</div>
+				</div>
+				<!-- /wp:group -->',
+				'categories'  => array( 'about-page-block-pattern' ),
 			)
 		);
 

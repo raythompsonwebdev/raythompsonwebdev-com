@@ -2,7 +2,9 @@
 Theme Name: Raythompsonwebdev-com
 Description: Used to style the content editor in posts and pages.
 */
-
+@import 'partials/base';
+@import 'partials/variables';
+@import 'partials/mixins';
 /* =Body
 ----------------------------------------------- */
 html .mceContentBody {
@@ -24,7 +26,7 @@ img {
 }
 
 a {
-	color: #000;
+	color: $blackcolor;
 	color: hsl(0, 0%, 0%);
 }
 
@@ -42,7 +44,7 @@ h6 {
 	clear: right;
 	font-family: 'Cabin', helvetica, arial, verdana, tahoma, sans-serif;
 	font-weight: 900;
-	color: #000;
+	color: $blackcolor;
 	color: hsl(0, 0%, 0%);
 	margin-bottom: 0.4em;
 }
@@ -133,7 +135,7 @@ blockquote.alignright {
 	max-width: 100%;
 	border: none;
 	text-align: center;
-	background-color: #fff;
+	background-color: $colorwhite;
 	padding-top: 0;
 	margin: 10px 0;
 	img[class*='wp-image-'] {
@@ -152,8 +154,8 @@ blockquote.alignright {
 	padding: 0.8075em 1em;
 	background: #e5e5e5;
 	background: hsl(0, 0%, 90%);
-	border-left: #fff solid 5px;
-	border-right: #fff solid 5px;
+	border-left: $colorwhite solid 5px;
+	border-right: $colorwhite solid 5px;
 	font-family: 'PT Sans', helvetica, arial, verdana, tahoma, sans-serif;
 	font-size: 14px;
 }
@@ -195,7 +197,7 @@ blockquote.alignright {
 
 .gallery-caption {
 	background-color: hsla(0, 0%, 0%, 0.8);
-	color: #fff;
+	color: $colorwhite;
 	font-size: 12px;
 	line-height: 1.5;
 	margin: 0 !important;
@@ -231,7 +233,6 @@ blockquote.alignright {
 
 div.wp-block-group {
 	width: 100%;
-	padding: 0.5em;
 	margin: 0;
 	height: auto;
 	div.wp-block-group__inner-container {
@@ -248,23 +249,24 @@ div.wp-block-group {
 			-webkit-align-items: flex-start;
 			-ms-flex-align: flex-start;
 			align-items: flex-start;
-			background-color: #fff;
+			background-color: $colorwhite;
 			height: auto;
+			margin: 0;
 			div.wp-block-column {
 				-webkit-flex: 1 0 auto;
 				-ms-flex: 1 0 auto;
 				flex: 1 0 auto;
+				margin: 0;
 				span {
 					height: auto;
 					width: 100%;
 					display: block;
-					padding: 0.2em;
 					margin: auto;
-					height: 100px;
+					line-height: 100px;
 					overflow: visible;
-					color: #fff;
-					font-size: 8em;
-					text-shadow: 1px 1px #000;
+					color: $colorwhite;
+					font-size: 5em;
+					text-shadow: 1px 1px $blackcolor;
 				}
 				h4 {
 					line-height: 40px;
@@ -272,7 +274,7 @@ div.wp-block-group {
 					height: auto;
 					text-align: center;
 					color: white;
-					background-color: black;
+					background-color: $blackcolor;
 					font-weight: bold;
 					width: 100%;
 				}
@@ -280,7 +282,7 @@ div.wp-block-group {
 					display: block;
 					width: 98%;
 					line-height: 30px;
-					color: black;
+					color: $blackcolor;
 					font-size: 0.9em;
 					margin: auto;
 					text-align: center;
@@ -291,15 +293,15 @@ div.wp-block-group {
 }
 
 span.dashicons-html {
-	background-color: red;
-	color: #fff;
+	background-color: $redcolor;
+	color: $colorwhite;
 }
 span.dashicons-images-alt {
-	background-color: yellow;
+	background-color: $yellowcolor;
 }
 span.dashicons-wordpress {
-	background-color: green;
+	background-color: $greencolor;
 }
 span.dashicons-admin-tools {
-	background-color: black;
+	background-color: $blackcolor;
 }
