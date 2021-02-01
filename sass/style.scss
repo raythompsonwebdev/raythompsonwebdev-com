@@ -67,8 +67,6 @@ desktop 1920px */
 		display: none;
 	}
 
-
-
 	#wrapper {
 		background: $colorwhite;
 		width: 90%;
@@ -401,6 +399,7 @@ desktop 1920px */
 			}
 
 			h2 {
+				font-family: $FontStyleHeader;
 				font-size: 1.35em;
 				line-height: 40px;
 				height: auto;
@@ -408,6 +407,7 @@ desktop 1920px */
 			}
 
 			h3 {
+				font-family: $FontStyleHeader;
 				font-size: 1.25em;
 				line-height: 30px;
 				height: auto;
@@ -1844,9 +1844,9 @@ desktop 1920px */
 				display: -webkit-flex;
 				display: -ms-flexbox;
 				display: flex;
-				-webkit-flex-flow: column;
-				-ms-flex-flow: column;
-				flex-flow: column;
+				-webkit-flex-flow: row wrap;
+				-ms-flex-flow: row wrap;
+				flex-flow: row wrap;
 				-webkit-align-items: center;
 				-ms-flex-align: center;
 				align-items: center;
@@ -1855,194 +1855,172 @@ desktop 1920px */
 				background-image: url('../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-1.0.1.webp');
 				background-repeat: no-repeat;
 				background-size: 100% auto;
-
-				/* Homepage container */
-				div#text-box-front {
-					-webkit-flex: 1 0 auto;
-					-ms-flex: 1 0 auto;
-					flex: 1 0 auto;
+				h1 {
 					-webkit-order: 1;
 					-ms-flex-order: 1;
 					order: 1;
-					width: 100%;
-					padding: 0.5em;
+					font-size: 3em;
+					color: $blackcolor;
 					margin: 0;
+					padding: 0;
+					line-height: 60px;
+					display: block;
+					text-align: left;
+					text-shadow: 1px 1px 1px $colorwhite;
+				}
+				h2 {
+					-webkit-order: 2;
+					-ms-flex-order: 2;
+					order: 2;
+					font-size: 2em;
+					color: $blackcolor;
+					margin: 0 0 0.5em 0;
+					padding: 0;
+					text-align: left;
+					text-shadow: 1px 1px $colorwhite;
+					line-height: 40px;
+				}
+				p {
+					-webkit-order: 3;
+					-ms-flex-order: 3;
+					order: 3;
+					width: 70%;
+					float: left;
+					padding: 1em;
+					font-size: 1em;
+					color: $blackcolor;
+					background-color: rgba(255, 255, 255, 0.75);
+				}
+				a#projectLink {
+					-webkit-order: 4;
+					-ms-flex-order: 4;
+					order: 4;
+					margin: 0 0.5em;
+					-webkit-align-self: flex-end;
+					-ms-flex-item-align: flex-end;
+					align-self: flex-end;
+					line-height: 60px;
+					display: block;
 					height: auto;
-
-					p {
-						line-height: 1.9em;
-						font-weight: normal;
-						font-size: 0.9em;
-						letter-spacing: 0.025em;
-						margin-bottom: 0.25em;
-						padding: 0.25em;
-						color: $blackcolor;
-						background: $colorwhite;
+					border: 2px solid $blackcolor2;
+					width: 28%;
+					text-align: center;
+					font-size: 1.2em;
+					background-color: $blackcolor;
+					color: $colorwhite;
+					&:hover {
+						color: $yellowcolor2;
+						background-color: none;
 					}
+				} /* PNG for IE8 */
+				figure#image-6 {
+					margin: 0;
+					padding: 0;
 
-					/* Skills Table */
-					section#calltoaction {
-						height: auto;
-						margin: 0;
-						padding: 0;
-						display: -webkit-flex;
-						display: -ms-flexbox;
-						display: flex;
-						-webkit-flex-flow: row wrap;
-						-ms-flex-flow: row wrap;
-						flex-flow: row wrap;
-						-webkit-align-items: flex-start;
-						-ms-flex-align: flex-start;
-						align-items: flex-start;
-
-						h1#front-title {
-							-webkit-flex: 1 0 auto;
-							-ms-flex: 1 0 auto;
-							flex: 1 0 auto;
-							-webkit-align-self: center;
-							-ms-flex-item-align: center;
-							align-self: center;
-							line-height: 40px;
-							text-align: left;
-							text-indent: 0.2em;
-							font-family: $FontStyleHeader;
-							margin: 0 0 0.5em 0;
-							width: 100%;
-							font-size: 1.1em;
-							color: $blackcolor;
-						}
-
-						section.frntpgbox {
-							-webkit-flex: 1 0 auto;
-							-ms-flex: 1 0 auto;
-							flex: 1 0 auto;
-							width: 24%;
-							display: inline-block;
-							background-color: $blackcolor;
-							height: auto;
-							margin: 0.1em;
-							padding: 0 0 0.25em 0;
-
-							span {
-								height: auto;
-								width: 100%;
-								display: block;
-								padding: 0.2em;
-								margin: auto;
-								height: 100px;
-								overflow: visible;
-								color: #fff;
-								font-size: 8em;
-								text-shadow: 1px 1px #000;
-							}
-							span.dashicons-html {
-								background-color: $redcolor;
-							}
-
-							span.dashicons-images-alt {
-								background-color: $yellowcolor;
-							}
-
-							span.dashicons-wordpress {
-								background-color: $greencolor;
-							}
-
-							span.dashicons-admin-tools {
-								background-color: $blackcolor2;
-							}
-
-							h1 {
-								line-height: 40px;
-								margin: 0 auto;
-								font-size: 1em;
-								height: auto;
-								text-align: center;
-								color: $colorwhite;
-								background-color: $blackcolor;
-								font-weight: bold;
-								width: 96%;
-							}
-
-							p {
-								display: block;
-								width: 98%;
-								line-height: 30px;
-								color: $blackcolor;
-								font-size: 0.9em;
-								margin: auto;
-								text-align: center;
-							}
-						}
+					img#image-5 {
+						display: none;
+						opacity: 0;
 					}
 				}
-
-				/* front-page image container */
-				article#fntpage-banner {
-					-webkit-flex: 1 0 auto;
-					-ms-flex: 1 0 auto;
-					flex: 1 0 auto;
-					-webkit-order: 0;
-					-ms-flex-order: 0;
-					order: 0;
-					width: 96%;
+				h3 {
+					-webkit-order: 5;
+					-ms-flex-order: 5;
+					order: 5;
+					-webkit-align-self: center;
+					-ms-flex-item-align: center;
+					font-family: $FontStyleHeader;
+					align-self: center;
+					line-height: 40px;
+					text-align: left;
+					text-indent: 0.2em;
+					margin: 0.5em 0;
+					width: 100%;
+					font-size: 1.5em;
+					color: #000;
+				}
+				/* Homepage container */
+				div.wp-block-group {
+					width: 100%;
+					padding: 0;
+					margin: 0;
 					height: auto;
-					font-family: $FontStyle;
-					padding-top: 1%;
-
-					h1 {
-						font-size: 3em;
-						color: $blackcolor;
-						margin: 0;
-						padding: 0;
-						line-height: 60px;
-						display: block;
-						text-align: left;
-						text-shadow: 1px 1px 1px $colorwhite;
-					}
-					h2 {
-						font-size: 2em;
-						color: $blackcolor;
-						margin: 0 0 0.5em 0;
-						padding: 0;
-						text-align: left;
-						text-shadow: 1px 1px $colorwhite;
-						line-height: 40px;
-					}
-
-					p {
-						width: 70%;
-						float: left;
-						padding: 1em;
-						font-size: 1em;
-						color: $blackcolor;
-						background-color: rgba(255, 255, 255, 0.75);
-					}
-
-					a#projectLink {
-						line-height: 60px;
-						display: block;
+					-webkit-order: 6;
+					-ms-flex-order: 6;
+					order: 6;
+					div.wp-block-group__inner-container {
 						height: auto;
-						border: 2px solid $blackcolor2;
-						width: 28%;
-						float: right;
-						text-align: center;
-						font-size: 1.2em;
-						background-color: $blackcolor;
-						color: $colorwhite;
-						&:hover {
-							color: $yellowcolor2;
-							background-color: none;
-						}
-					}
-
-					/* PNG for IE8 */
-					figure#image-6 {
 						margin: 0;
 						padding: 0;
+						div.wp-block-columns {
+							background-color: #fff;
+							height: auto;
+							padding: 0;
+							display: -webkit-flex;
+							display: -ms-flexbox;
+							display: flex;
+							-webkit-flex-flow: row;
+							-ms-flex-flow: row;
+							flex-flow: row;
+							-webkit-align-items: flex-start;
+							-ms-flex-align: flex-start;
+							align-items: flex-start;
 
-						img#image-5 {
-							display: none;
-							opacity: 0;
+							div.wp-block-column:not(:first-child) {
+								margin-left: 0;
+							}
+							.wp-block-column {
+								-webkit-flex: 1 0 auto;
+								-ms-flex: 1 0 auto;
+								flex: 1 0 auto;
+								width: 24%;
+								margin: 0.5%;
+
+								span {
+									height: auto;
+									width: 100%;
+									display: block;
+									padding: 0.2em;
+									margin: auto;
+									line-height: 100px;
+									overflow: visible;
+									color: #fff;
+									font-size: 8em;
+									text-shadow: 1px 1px #000;
+								}
+								span.dashicons-html {
+									background-color: red;
+								}
+								span.dashicons-images-alt {
+									background-color: yellow;
+								}
+								span.dashicons-wordpress {
+									background-color: green;
+								}
+								span.dashicons-admin-tools {
+									background-color: black;
+								}
+								h4 {
+									line-height: 40px;
+									margin: 0 auto;
+									font-size: 1em;
+									height: auto;
+									text-align: center;
+									color: white;
+									background-color: black;
+									font-weight: bold;
+									width: 100%;
+								}
+								p {
+									display: block;
+									width: 100%;
+									line-height: 40px;
+									color: black;
+									font-size: 0.9em;
+									margin: auto;
+									text-align: center;
+									padding: 0;
+								}
+							}
 						}
 					}
 				}
@@ -3706,14 +3684,14 @@ desktop 1440px */
 					}
 
 					/* skills table */
-					section#calltoaction {
+					.wp-block-columns {
 						width: 100%;
 
-						h1#front-title {
+						h1 {
 							text-indent: 0.2em;
 						}
 
-						section.frntpgbox {
+						.wp-block-column {
 							span {
 								height: auto;
 
@@ -4836,14 +4814,14 @@ desktop 1280px */
 					}
 
 					/* skills table */
-					section#calltoaction {
+					.wp-block-columns {
 						width: 100%;
 
-						h1#front-title {
+						h1 {
 							text-indent: 0.2em;
 						}
 
-						section.frntpgbox {
+						.wp-block-column {
 							span {
 								height: auto;
 
@@ -5915,14 +5893,14 @@ desktop 1024px */
 						font-size: 0.8em;
 					}
 
-					section#calltoaction {
+					.wp-block-columns {
 						width: 100%;
 
-						h1#front-title {
+						h1 {
 							text-indent: 0.2em;
 						}
 
-						section.frntpgbox {
+						.wp-block-column {
 							span {
 								height: auto;
 
@@ -7053,16 +7031,16 @@ tablet 800px */
 						font-size: 0.8em;
 					}
 
-					section#calltoaction {
+					.wp-block-columns {
 						width: 100%;
 
-						h1#front-title {
+						h1 {
 							text-indent: 0;
 							text-align: center;
 							font-size: 1.5em;
 						}
 
-						section.frntpgbox {
+						.wp-block-column {
 							width: 55%;
 							margin: 1em auto;
 							display: block;
@@ -8838,10 +8816,10 @@ tablet 600px */
 						font-size: 0.8em;
 					}
 
-					section#calltoaction {
+					.wp-block-columns {
 						width: 100%;
 
-						section.frntpgbox {
+						.wp-block-column {
 							width: 65%;
 
 							span {
@@ -10012,14 +9990,14 @@ mobile 480px */
 						font-size: 0.75em;
 					}
 
-					section#calltoaction {
+					.wp-block-columns {
 						width: 100%;
 
-						h1#front-title {
+						h1 {
 							margin-bottom: 0;
 						}
 
-						section.frntpgbox {
+						.wp-block-column {
 							width: 85%;
 
 							span {
@@ -11109,14 +11087,14 @@ mobile 360px */
 						font-size: 0.75em;
 					}
 
-					section#calltoaction {
+					.wp-block-columns {
 						-webkit-flex-flow: row wrap;
 						-ms-flex-flow: row wrap;
 						flex-flow: row wrap;
 
 						width: 100%;
 
-						section.frntpgbox {
+						.wp-block-column {
 							width: 90%;
 
 							span {
@@ -12208,18 +12186,18 @@ mobile 320px */
 						font-size: 0.75em;
 					}
 
-					section#calltoaction {
+					.wp-block-columns {
 						-webkit-flex-flow: row wrap;
 						-ms-flex-flow: row wrap;
 						flex-flow: row wrap;
 
 						width: 100%;
 
-						h1#front-title {
+						h1 {
 							font-size: 1.3em;
 						}
 
-						section.frntpgbox {
+						.wp-block-column {
 							width: 85%;
 
 							span {

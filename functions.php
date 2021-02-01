@@ -74,7 +74,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 
 			// Add block editor  styles.
 			$font_url = '//https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap';
-			add_editor_style( array( 'css/editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+			add_editor_style( array( 'editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
 			add_theme_support( 'editor-styles' );
 
 		/*
@@ -223,7 +223,7 @@ add_action( 'after_setup_theme', 'raythompsonwebdev_com_content_width', 0 );
  * Registers an editor stylesheet for the theme.
  */
 function raythompsonwebdev_com_add_editor_styles() {
-	add_editor_style( '/css/editor-style.css' );
+	add_editor_style( 'editor-style.css' );
 }
 add_action( 'admin_init', 'raythompsonwebdev_com_add_editor_styles' );
 
@@ -444,19 +444,19 @@ function raythompsonwebdev_com_register_block_patterns() {
 				'title'       => __( 'Profile Page Pattern', 'raythompsonwebdev-com' ),
 				'description' => _x( 'A call to action with a beautiful two-column gallery below.', 'Block pattern description', 'raythompsonwebdev-com' ),
 				'content'     => '<!-- wp:group {"align":"wide"} -->
-
 				<div class="wp-block-group alignwide">
 					<div class="wp-block-group__inner-container">
-						<!-- wp:columns {"align":"wide"} -->
 
+						<!-- wp:columns {"align":"wide"} -->
 						<div class="wp-block-columns alignwide">
 							<!-- wp:column -->
-
 							<div class="wp-block-column">
-								<span class="dashicons dashicons-html"></span>
+							<!-- wp:html -->
+							<span class="dashicons dashicons-html"></span>
+							<!-- /wp:html -->
 
-								<!-- wp:heading {"level":1} -->
-								<h1>Code</h1>
+								<!-- wp:heading {"level":4} -->
+								<h4>Code</h4>
 								<!-- /wp:heading -->
 
 								<!-- wp:paragraph -->
@@ -473,67 +473,73 @@ function raythompsonwebdev_com_register_block_patterns() {
 
 							<!-- wp:column -->
 							<div class="wp-block-column">
-								<span class="dashicons dashicons-html"></span>
+							<!-- wp:html -->
+							<span class="dashicons dashicons-images-alt"></span>
+							<!-- /wp:html -->
 
-								<!-- wp:heading {"level":1} -->
-								<h1>Code</h1>
+								<!-- wp:heading {"level":4} -->
+								<h4>Optimisation</h4>
 								<!-- /wp:heading -->
 
 								<!-- wp:paragraph -->
-								<p>HTML & CSS</p>
+								<p>Video, Audio & Image</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
-								<p>PHP & MYSQL</p>
+								<p>SQL Database</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
-								<p>Javascript ES5/ES6</p>
+								<p>On-Site SEO</p>
 								<!-- /wp:paragraph -->
 							</div>
 							<!-- /wp:column -->
 
 							<!-- wp:column -->
 							<div class="wp-block-column">
-								<span class="dashicons dashicons-html"></span>
+							<!-- wp:html -->
+							<span class="dashicons dashicons-wordpress"></span>
+							<!-- /wp:html -->
 
-								<!-- wp:heading {"level":1} -->
-								<h1>Code</h1>
+								<!-- wp:heading {"level":4} -->
+								<h4>WordPress</h4>
 								<!-- /wp:heading -->
 
 								<!-- wp:paragraph -->
-								<p>HTML & CSS</p>
+								<p>Set Up & Installation</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
-								<p>PHP & MYSQL</p>
+								<p>Themes & Plugins</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
-								<p>Javascript ES5/ES6</p>
+								<p>Gutenberg Blocks</p>
 								<!-- /wp:paragraph -->
 							</div>
 							<!-- /wp:column -->
 
 							<!-- wp:column -->
 							<div class="wp-block-column">
-								<span class="dashicons dashicons-html"></span>
 
-								<!-- wp:heading {"level":1} -->
-								<h1>Code</h1>
+							<!-- wp:html -->
+								<span class="dashicons dashicons-admin-tools"></span>
+								<!-- /wp:html -->
+
+								<!-- wp:heading {"level":4} -->
+								<h4>Maintenance</h4>
 								<!-- /wp:heading -->
 
 								<!-- wp:paragraph -->
-								<p>HTML & CSS</p>
+								<p>Web Security</p>
 								<!-- /wp:paragraph -->
-
 								<!-- wp:paragraph -->
-								<p>PHP & MYSQL</p>
+								<p>Database</p>
 								<!-- /wp:paragraph -->
-
 								<!-- wp:paragraph -->
-								<p>Javascript ES5/ES6</p>
+								<p>Code Debugging</p>
 								<!-- /wp:paragraph -->
 							</div>
 							<!-- /wp:column -->
 						</div>
 						<!-- /wp:columns -->
+
 					</div>
 				</div>
 				<!-- /wp:group -->
