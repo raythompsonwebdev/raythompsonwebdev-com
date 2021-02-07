@@ -327,8 +327,6 @@ function raythompsonwebdev_com_scripts() {
 
 	wp_enqueue_script( 'skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
-	//wp_enqueue_script( 'fontawesome', get_template_directory_uri() . '/fonts/fontawesome/js/all.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, false );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -357,13 +355,7 @@ add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
 function raythompsonwebdev_com_about_page_scripts() {
 
 	if ( is_page( 'about' ) ) {
-		// scrollto script.
-		//wp_enqueue_script( 'raythompsonwebdev-scrollto', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
-		// easing script.
-		//wp_enqueue_script( 'raythompsonwebdev-easing', get_template_directory_uri() . '/js/jquery.easing.1.3.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
-		// profile page scripts.
 		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
-
 	}
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
@@ -656,3 +648,5 @@ function raythompsonwebdev_com_register_block_patterns() {
 
 }
 add_action( 'init', 'raythompsonwebdev_com_register_block_patterns' );
+
+

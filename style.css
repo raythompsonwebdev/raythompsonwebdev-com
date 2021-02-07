@@ -1391,7 +1391,8 @@ desktop 1920px */
 		word-wrap: break-word;
 		margin: 0;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		font-size: 1.3em;
 	}
 	#wrapper main#page h2 {
@@ -1582,7 +1583,6 @@ desktop 1920px */
 		font-size: 1.4em;
 	}
 	#wrapper main#page div#primary {
-		min-height: 780px;
 		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
 		/* Regular Posts */
 		/* Single Page Post Navigation */
@@ -2463,6 +2463,155 @@ desktop 1920px */
 	}
 	#wrapper main#page div#primary article.single-post .entry {
 		padding: 2em;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+		grid-gap: 0.5em;
+	}
+	#wrapper main#page div#primary article.gallery h1 {
+		line-height: 40px;
+		height: auto;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+		padding: 0.5em;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(3, auto);
+		grid-auto-flow: dense;
+		/*gallery page styles*/
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item1 {
+		grid-row: 1 / span 3;
+		grid-column: 1 / span 2;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 {
+		grid-column: 3 / span 6;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, auto);
+		display: grid;
+		grid-gap: 5px;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-title,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-code,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-url,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-github {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item3 {
+		grid-column: 3 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		height: auto;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage a.fancybox {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage a.fancybox img.attachment-website-image {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+		border-bottom: 1px solid #f2f2f2;
+		color: #262425;
+		line-height: 30px;
+		height: 30px;
+		text-align: left;
+		font-size: 1.1em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		width: 100%;
+		display: block;
+		height: auto;
+		color: #262425;
+		padding: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats {
+		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
+		text-indent: 0;
+		text-align: left;
+		display: block;
+		line-height: 30px;
+		height: auto;
+		color: #262425;
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+		background-color: unset;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats:hover {
+		color: #65686b;
+		text-decoration: underline;
+		font-weight: normal;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		height: 50px;
+		margin: 0;
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+		display: inline-block;
+		text-align: left;
+		height: 48px;
+		line-height: 48px;
+		color: #262425;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		height: 48px;
+		line-height: 48px;
+		color: #f2f2f2;
+		background-color: #262425;
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform-origin: 50% 50%;
+		-o-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-webkit-transition: all 0.2s ease-in 0s;
+		-moz-transition: all 0.2s ease-in 0s;
+		-o-transition: all 0.2s ease-in 0s;
+		-ms-transition: all 0.2s ease-in 0s;
+		transition: all 0.2s ease-in 0s;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
+		background-color: #f2f2f2;
 	}
 	#wrapper main#page div#primary nav.navigation {
 		min-height: 85px;
@@ -3664,9 +3813,9 @@ desktop 1920px */
 		width: 16.5%;
 		position: absolute;
 		left: 0;
-		height: auto;
+		height: 100%;
 		text-align: left;
-		line-height: 65px;
+		line-height: 66px;
 		font-size: 0.9em;
 		text-indent: 0.25em;
 		background-color: #f2f2f2;
@@ -4191,7 +4340,8 @@ desktop 1440px */
 	#wrapper .social-1 form.search-form input[type='submit']:hover {
 		font-weight: bold;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		font-size: 1.4em;
 	}
 	#wrapper main#page h2 {
@@ -4553,6 +4703,49 @@ desktop 1440px */
 	#wrapper main#page div#primary article.page footer.entry-footer .edit-link a:hover,
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link a:hover {
 		cursor: pointer;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats {
+		font-size: 0.95em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats:hover {
+		color: #65686b;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
@@ -4923,10 +5116,7 @@ desktop 1440px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		width: 45%;
@@ -5167,7 +5357,8 @@ desktop 1280px */
 	#wrapper .social-1 form.search-form input[type='submit']:hover {
 		font-weight: bold;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		font-size: 1.2em;
 	}
 	#wrapper main#page h2 {
@@ -5528,6 +5719,46 @@ desktop 1280px */
 	#wrapper main#page div#primary article.page footer.entry-footer .edit-link a:hover,
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link a:hover {
 		font-weight: bold;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery h1 {
+		font-size: 1.2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
@@ -5891,10 +6122,7 @@ desktop 1280px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		width: 45%;
@@ -5924,7 +6152,6 @@ desktop 1280px */
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
 		font-size: 0.85em;
-		line-height: 65px;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
@@ -6117,7 +6344,11 @@ desktop 1024px */
 	#wrapper main#page {
 		padding: 0;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page h1 {
+		font-size: 1.2em;
+	}
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		font-size: 1.2em;
 	}
 	#wrapper main#page h2 {
@@ -6358,6 +6589,17 @@ desktop 1024px */
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		font-size: 0.9em;
 	}
+	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
+	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-end,
+	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
+	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-end,
+	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
+	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-end {
+		width: 25%;
+	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
 	#wrapper main#page div#primary article.project .entry,
@@ -6435,6 +6677,64 @@ desktop 1024px */
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link {
 		line-height: 40px;
 		font-size: 0.85em;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item1 {
+		grid-row: 1 / span 3;
+		grid-column: 1 / span 2;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 {
+		grid-column: 3 / span 6;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-title,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-code,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-url,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-github {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item3 {
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+		font-size: 1.1em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats {
+		font-size: 0.95em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats:hover {
+		color: #65686b;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
@@ -6805,10 +7105,7 @@ desktop 1024px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		width: 50%;
@@ -7059,7 +7356,8 @@ tablet 800px */
 		height: auto;
 		padding: 0.25em;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		font-size: 1.2em;
 		line-height: 55px;
 	}
@@ -7439,6 +7737,64 @@ tablet 800px */
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link a {
 		font-size: 0.9em;
 	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item1 {
+		grid-row: 1 / span 3;
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 {
+		grid-column: 1 / span 8;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-title,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-code,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-url,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-github {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item3 {
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 45%;
+		margin: auto;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		font-size: 0.9em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats {
+		font-size: 0.85em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats:hover {
+		color: #65686b;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
+	}
 	#wrapper main#page div#primary nav.navigation {
 		min-height: 100px;
 	}
@@ -7796,7 +8152,7 @@ tablet 800px */
 		-webkit-order: 3;
 		-ms-flex-order: 3;
 		order: 3;
-		width: 90%;
+		width: 96%;
 		margin: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
@@ -7845,16 +8201,13 @@ tablet 800px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		-webkit-order: 1;
 		-ms-flex-order: 1;
 		order: 1;
-		width: 90%;
+		width: 96%;
 		margin: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
@@ -8033,8 +8386,12 @@ tablet 800px */
 	.entry-summary ul {
 		font-size: 0.8em;
 	}
-	#wrapper main#page header.page-header h1.page-title {
-		font-size: 1.2em;
+	#wrapper main#page h1 {
+		font-size: 1.15em;
+	}
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
+		font-size: 1.15em;
 	}
 	#wrapper main#page div#primary h1.page-title {
 		font-size: 1.2em;
@@ -8049,7 +8406,7 @@ tablet 800px */
 	#wrapper main#page div#primary article.post h1,
 	#wrapper main#page div#primary article.project h1,
 	#wrapper main#page div#primary article.page h1 {
-		font-size: 1.1em;
+		font-size: 1.05em;
 	}
 	#wrapper main#page div#primary article.post h2,
 	#wrapper main#page div#primary article.project h2,
@@ -8293,6 +8650,61 @@ tablet 800px */
 	#wrapper main#page div#primary article.page footer.entry-footer .edit-link a,
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link a {
 		font-size: 0.85em;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item1 {
+		grid-row: 1 / span 3;
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 {
+		grid-column: 1 / span 8;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-title,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-code,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-url,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-github {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item3 {
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 45%;
+		margin: auto;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation {
 		min-height: 100px;
@@ -8669,8 +9081,9 @@ tablet 600px */
 	#wrapper main#page {
 		padding: 0;
 	}
-	#wrapper main#page header.page-header h1.page-title {
-		font-size: 1.2em;
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
+		font-size: 1.15em;
 		line-height: 45px;
 		text-align: center;
 	}
@@ -9022,6 +9435,61 @@ tablet 600px */
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link a:hover {
 		font-weight: bold;
 	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item1 {
+		grid-row: 1 / span 3;
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 {
+		grid-column: 1 / span 8;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-title,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-code,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-url,
+	#wrapper main#page div#primary article.gallery .website-text .item2 #project-github {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .item3 {
+		grid-column: 1 / span 8;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 45%;
+		margin: auto;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
+	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
 	}
@@ -9321,6 +9789,7 @@ tablet 600px */
 	}
 	#wrapper main#page div#profile-container {
 		padding: 0;
+		max-width: 100%;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile {
 		width: 98%;
@@ -9396,13 +9865,10 @@ tablet 600px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 90%;
+		width: 98%;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
 		font-size: 1em;
@@ -9523,10 +9989,10 @@ tablet 600px */
 		font-size: 1.1em;
 	}
 	#wrapper aside#side-bar .side-bar-box {
-		width: 97.5%;
+		width: 100%;
 	}
 	#wrapper aside#side-bar .side-bar-box h2 {
-		font-size: 1.15em;
+		font-size: 1.1em;
 	}
 	#wrapper aside#side-bar .side-bar-box section.widget h2.widget-title {
 		font-size: 1em;
@@ -9632,7 +10098,8 @@ mobile 480px */
 	#wrapper main#page {
 		padding: 0;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		width: 100%;
 		line-height: 45px;
 		text-align: center;
@@ -9740,7 +10207,7 @@ mobile 480px */
 	#wrapper main#page div#primary article.post h2,
 	#wrapper main#page div#primary article.project h2,
 	#wrapper main#page div#primary article.page h2 {
-		font-size: 0.9em;
+		font-size: 1em;
 		line-height: 30px;
 	}
 	#wrapper main#page div#primary article.post h2 a,
@@ -9942,6 +10409,17 @@ mobile 480px */
 	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul {
 		margin: 0;
 	}
+	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
+	#wrapper main#page div#primary article.post div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-end,
+	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
+	#wrapper main#page div#primary article.project div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-end,
+	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-twitter,
+	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-facebook,
+	#wrapper main#page div#primary article.page div.sharedaddy .sd-social-icon-text div.sd-content ul li.share-end {
+		width: 30%;
+	}
 	#wrapper main#page div#primary article.post .entry,
 	#wrapper main#page div#primary article.post .entry-content,
 	#wrapper main#page div#primary article.project .entry,
@@ -10029,6 +10507,43 @@ mobile 480px */
 	#wrapper main#page div#primary article.page footer.entry-footer .edit-link,
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link {
 		width: auto;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 70%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
@@ -10411,10 +10926,7 @@ mobile 480px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		width: 98%;
@@ -10535,7 +11047,7 @@ mobile 480px */
 		font-size: 1.1em;
 	}
 	#wrapper aside#side-bar .side-bar-box h2 {
-		font-size: 1.15em;
+		font-size: 1.1em;
 	}
 	#wrapper aside#side-bar .side-bar-box section.widget h2.widget-title {
 		font-size: 0.9em;
@@ -10631,15 +11143,19 @@ mobile 360px */
 	#wrapper .social-1 form.search-form input[type='submit'] {
 		font-size: 0.7em;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page h1 {
+		font-size: 1.05em;
+	}
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		line-height: 40px;
 	}
 	#wrapper main#page h2 {
-		font-size: 0.9em;
+		font-size: 0.95em;
 		line-height: 30px;
 	}
 	#wrapper main#page h3 {
-		font-size: 0.85em;
+		font-size: 0.9em;
 		line-height: 25px;
 	}
 	#wrapper main#page p {
@@ -10735,7 +11251,7 @@ mobile 360px */
 	#wrapper main#page div#primary article.post h2,
 	#wrapper main#page div#primary article.project h2,
 	#wrapper main#page div#primary article.page h2 {
-		font-size: 0.85em;
+		font-size: 1em;
 	}
 	#wrapper main#page div#primary article.post h2 a,
 	#wrapper main#page div#primary article.project h2 a,
@@ -10951,6 +11467,50 @@ mobile 360px */
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link {
 		width: 79%;
 		font-size: 0.8em;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 75%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0.5em;
+		font-size: 0.8em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats {
+		font-size: 0.8em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats:hover {
+		color: #65686b;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
@@ -11312,7 +11872,7 @@ mobile 360px */
 		padding: 0.1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.7em;
+		font-size: 0.75em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
 		font-size: 0.8em;
@@ -11321,10 +11881,7 @@ mobile 360px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.7em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.9em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		width: 98%;
@@ -11355,7 +11912,8 @@ mobile 360px */
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
 		width: 21.5%;
-		font-size: 0.8em;
+		font-size: 0.9em;
+		line-height: 40px;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		-webkit-flex-flow: column;
@@ -11450,7 +12008,7 @@ mobile 360px */
 		bottom: 0;
 	}
 	#wrapper aside#side-bar .side-bar-box h2 {
-		font-size: 1.15em;
+		font-size: 1.1em;
 	}
 	#wrapper aside#side-bar .side-bar-box section.widget h2.widget-title {
 		font-size: 1em;
@@ -11474,7 +12032,7 @@ mobile 360px */
 		width: 90%;
 	}
 	#wrapper footer.site-footer aside.social-icons {
-		width: 45%;
+		width: 55%;
 	}
 	#wrapper footer.site-footer aside.social-icons a.social-icon {
 		width: 25%;
@@ -11546,7 +12104,8 @@ mobile 320px */
 	#wrapper .social-1 form.search-form input[type='submit'] {
 		font-size: 0.75em;
 	}
-	#wrapper main#page header.page-header h1.page-title {
+	#wrapper main#page header.page-header h1.page-title,
+	#wrapper main#page header.page-header h1.archive-title {
 		font-size: 1em;
 	}
 	#wrapper main#page h2 {
@@ -11869,6 +12428,50 @@ mobile 320px */
 	#wrapper main#page div#primary article.page footer.entry-footer .edit-link a,
 	#wrapper main#page div#primary article.page footer.entry-footer .comments-link a {
 		font-size: 0.85em;
+	}
+	#wrapper main#page div#primary article.gallery {
+		margin: 0;
+	}
+	#wrapper main#page div#primary article.gallery .website-text {
+		width: 100%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .websiteImage {
+		width: 75%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text h1.post-meta-key {
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text p.websitetext {
+		margin-bottom: 0.5em;
+		font-size: 0.75em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats {
+		font-size: 0.8em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text a.webformats:hover {
+		color: #65686b;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links {
+		height: 50px;
+		margin: 0;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span {
+		width: 33%;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a {
+		width: 100%;
+		display: block;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet {
+		font-size: 2em;
+	}
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-desktop:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-mobile:hover,
+	#wrapper main#page div#primary article.gallery .website-text .links span a i.fa-tablet:hover {
+		color: #262425;
 	}
 	#wrapper main#page div#primary nav.navigation h2 {
 		text-indent: 0.5em;
@@ -12231,10 +12834,7 @@ mobile 320px */
 		height: 44px;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.65em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		line-height: 41px;
+		font-size: 0.85em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
 		width: 98%;
@@ -12344,7 +12944,7 @@ mobile 320px */
 		bottom: 0;
 	}
 	#wrapper aside#side-bar .side-bar-box h2 {
-		font-size: 1.15em;
+		font-size: 1.1em;
 	}
 	#wrapper aside#side-bar .side-bar-box section.widget h2.widget-title {
 		font-size: 1em;

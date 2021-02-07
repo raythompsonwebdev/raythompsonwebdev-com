@@ -29,19 +29,5 @@ module.exports = {
 		sourceType: 'module',
 	},
 	plugins: ['react', 'jquery'],
-	rules: {
-		'no-console': 1,
-		'array-bracket-spacing': ['error', 'never'],
-		semi: ['error', 'always'],
-		quotes: ['error', 'single'],
-		'no-shadow': ['error', { builtinGlobals: true }],
-		'space-before-function-paren': [
-			'error',
-			{
-				anonymous: 'never',
-				named: 'never',
-				asyncArrow: 'never',
-			},
-		],
-	},
+	rules: {},
 };
