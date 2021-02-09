@@ -21,10 +21,10 @@ get_header(); ?>
 <div id="frontpage-container">
 
 	<?php
-		while ( have_posts() ) :
-			the_post();
+	while ( have_posts() ) :
+		the_post();
 
-			the_content();
+		the_content();
 
 
 		endwhile; // End of the loop.

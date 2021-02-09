@@ -3,11 +3,11 @@
 	//Hero Slider
 	$('.hero-slider ul a').click(function () {
 		//reset all the items
-		$('.customBlock ul a').removeClass('active');
+		$('.customBlock ul a').classList.remove('active');
 		//set current item as active
-		$(this).addClass('active');
+		$(this).classList.add('active');
 		//scroll it to the right position
-		$('.hero-slider > .mask').scrollTo($(this).attr('rel'), 300);
+		$('.hero-slider > .mask').scrollTo($(this).getAttribute('rel'), 300);
 		//disable click event
 		return false;
 	});

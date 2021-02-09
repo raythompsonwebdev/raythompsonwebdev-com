@@ -1,0 +1,37 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"commonjs": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:@wordpress/eslint-plugin/esnext",
+		"plugin:jquery/deprecated"
+	],
+	"globals": {
+		"document": "readonly",
+		"navigator": "readonly",
+		"window": "readonly",
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2019,
+		"sourceType": "module"
+	},
+"plugins": ["react", "jquery"],
+	"rules": {
+		"space-in-parens": ["error", "never"],
+		"array-bracket-spacing": ["error", "never"],
+		"space-before-function-paren": ["error", {
+			"anonymous": "always",
+			"named": "never",
+			"asyncArrow": "always"
+		}],
+		"wrap-iife": ["error", "inside"]
+	}
+}

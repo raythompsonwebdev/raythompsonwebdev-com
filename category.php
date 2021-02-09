@@ -21,46 +21,46 @@ get_header();
 
 	<?php
 		/**
-		* Check if there are any posts to display.
-		*/
+		 * Check if there are any posts to display.
+		 */
 
-		if ( have_posts() ) :
-	?>
+	if ( have_posts() ) :
+		?>
 
 	<h1 class="archive-title">
 		Category: <?php single_cat_title( '', true ); ?>
 	</h1>
 
-	<?php
-	/**
-	 * Display optional category description.
-	 */
-	if ( category_description() ) :
-		?>
+		<?php
+		/**
+		 * Display optional category description.
+		 */
+		if ( category_description() ) :
+			?>
 
 		<div class="archive-meta"><?php echo category_description(); ?></div>
 
-	<?php endif; ?>
+		<?php endif; ?>
 
-	<?php
+		<?php
 		while ( have_posts() ) :
-		the_post();
-	?>
+			the_post();
+			?>
 
 	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
-		<?php
+			<?php
 			if ( is_singular() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
-		?>
+			?>
 
 		<header class="entry-header"><!-- .entry-header -->
 			<?php
-				if ( 'post' === get_post_type() ) :
-			?>
+			if ( 'post' === get_post_type() ) :
+				?>
 			<div class="entry-meta"><!-- .entry-meta -->
 				<?php	raythompsonwebdev_com_index_posted_on(); ?>
 			</div>
@@ -68,9 +68,9 @@ get_header();
 		</header>
 
 		<!--featured Image-->
-		<?php if ( has_post_thumbnail() ) : ?>
+			<?php if ( has_post_thumbnail() ) : ?>
 
-			<?php raythompsonwebdev_com_post_thumbnail(); ?>
+				<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
 			<?php else : ?>
 
@@ -112,12 +112,12 @@ get_header();
 
 	</article><!-- #post-<?php the_ID(); ?> -->
 
-	<?php
+			<?php
 		endwhile;
 		else :
-	?>
+			?>
 
-	<?php get_template_part( 'template-part/content', 'none' ); ?>
+			<?php get_template_part( 'template-part/content', 'none' ); ?>
 
 	<?php endif; ?>
 

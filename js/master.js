@@ -1,5 +1,3 @@
-// sliding menu mobile
-
 const menuToggle = document.querySelector('.menu-toggle');
 
 menuToggle.addEventListener('click', function (event) {

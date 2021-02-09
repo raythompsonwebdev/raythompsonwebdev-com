@@ -30,7 +30,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 
-<?php raythompsonwebdev_com_post_thumbnail(); ?>
+		<?php raythompsonwebdev_com_post_thumbnail(); ?>
 
 <?php else : ?>
 
@@ -42,7 +42,7 @@
 
 </a>
 </figure><!-- featured-image -->
-<?php endif;?>
+<?php endif; ?>
 
 	<div class="entry-content">
 		<?php

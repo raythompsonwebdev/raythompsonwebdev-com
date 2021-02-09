@@ -98,7 +98,7 @@ get_header();
 			<?php
 				endwhile;
 
-				if ( is_singular( 'project' ) ) :
+		if ( is_singular( 'project' ) ) :
 			?>
 
 		<nav class="navigation">
@@ -119,7 +119,7 @@ get_header();
 
 		</nav>
 
-		<?php endif; ?>
+<?php endif; ?>
 
 <?php endif; ?>
 </div><!-- #main -->

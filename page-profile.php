@@ -24,14 +24,14 @@ get_header();
 </header><!-- .page-header -->
 <div class="page-content">
 <?php
-		while ( have_posts() ) :
-			the_post();
+while ( have_posts() ) :
+	the_post();
 
-			the_content();
+	the_content();
 
 
 		endwhile; // End of the loop.
-	?>
+?>
 </div>
 <br/>
 <br/>

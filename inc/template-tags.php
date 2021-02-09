@@ -17,7 +17,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_on' ) ) :
 		$raythompsonwebdev_com_updated_time_string = '<time class="updated" datetime="%3$s">Not Updated</time>';
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$raythompsonwebdev_com_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$raythompsonwebdev_com_time_string         = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 			$raythompsonwebdev_com_updated_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
@@ -85,10 +85,10 @@ if ( ! function_exists( 'raythompsonwebdev_com_posted_by' ) ) :
 	 */
 	function raythompsonwebdev_com_index_posted_on() {
 
-		$raythompsonwebdev_com_index_time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		$raythompsonwebdev_com_index_time_string        = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		$raythompsonwebdev_com_index_update_time_string = '<time class="updated" datetime="%3$s">Not Updated</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$raythompsonwebdev_com_index_time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+			$raythompsonwebdev_com_index_time_string        = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 			$raythompsonwebdev_com_index_update_time_string = '<time class="updated" datetime="%3$s">%4$s</time>';
 		}
 		$raythompsonwebdev_com_index_time_string = sprintf(
@@ -318,10 +318,10 @@ endif;
  * @param mixed $more variable added.
  * @return $more
  */
-function new_excerpt_more( $more ) {
+function raythompsonwebdev_com_excerpt_more( $more ) {
 	return '';
 }
-add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
+add_filter( 'excerpt_more', 'raythompsonwebdev_com_excerpt_more', 21 );
 
 /**
  * Replaces the excerpt more "Read More" text by a link.
@@ -329,21 +329,21 @@ add_filter( 'excerpt_more', 'new_excerpt_more', 21 );
  * @param mixed $excerpt variable added.
  * @return $excerpt
  */
-function the_excerpt_more_link( $excerpt ) {
+function raythompsonwebdev_com_the_excerpt_more_link( $excerpt ) {
 	$post     = get_post();
 	$excerpt .= '<div class="continue-reading"><a href="' . get_permalink( $post->ID ) . '">continue reading : ' . get_the_title( $post->ID ) . '</a></div>';
 	return $excerpt;
 }
-add_filter( 'the_excerpt', 'the_excerpt_more_link', 21 );
+add_filter( 'the_excerpt', 'raythompsonwebdev_com_the_excerpt_more_link', 21 );
 
 /**
-	* Filter except length to 35 words.
-	* tn custom excerpt length
-	*
-	* @param [type] $length
-	* @return void
-	*/
-function tn_custom_excerpt_length( $length ) {
+ * Filter except length to 35 words.
+ * tn custom excerpt length
+ *
+ * @param [type] $length
+ * @return int
+ */
+function raythompsonwebdev_com_custom_excerpt_length( $length ) {
 	return 60;
-	}
-	add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
+}
+	add_filter( 'excerpt_length', 'raythompsonwebdev_com_custom_excerpt_length', 999 );
