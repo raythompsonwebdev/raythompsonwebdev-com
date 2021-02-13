@@ -1,13 +1,13 @@
 /* eslint-disable space-in-parens */
 (function ($) {
 	//Hero Slider
-	$('.hero-slider ul a').click(function () {
+	$('.hero-slider ul#list a').click(function () {
 		//reset all the items
-		$('.customBlock ul a').classList.remove('active');
+		$('.hero-slider ul#list a').removeClass('active');
 		//set current item as active
-		$(this).classList.add('active');
+		$(this).addClass('active');
 		//scroll it to the right position
-		$('.hero-slider > .mask').scrollTo($(this).getAttribute('rel'), 300);
+		$('.hero-slider > .mask').scrollTo($(this).attr('rel'), 300);
 		//disable click event
 		return false;
 	});

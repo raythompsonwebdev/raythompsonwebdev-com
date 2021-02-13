@@ -613,6 +613,7 @@ desktop 1920px */
 
 				/* Regular Posts */
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					background-color: $colorwhite;
@@ -1103,6 +1104,47 @@ desktop 1920px */
 								display: block;
 								font-style: normal;
 								color: $yellowcolor;
+							}
+						}
+
+						ul.post-list {
+							text-indent: 0;
+							width: 94%;
+							margin: 0 auto;
+							display: flex;
+							-webkit-flex-flow: row wrap;
+							-ms-flex-flow: row wrap;
+							flex-flow: row wrap;
+							-webkit-justify-content: flex-start;
+							-ms-flex-pack: start;
+							justify-content: flex-start;
+							font-family: $FontStyle;
+
+							li {
+								font-size: 1em;
+								height: auto;
+								padding: 0.5em;
+								background-color: $colorwhite;
+								width: 50%;
+								-webkit-flex: 0 0 auto;
+								-ms-flex: 0 0 auto;
+								flex: 0 0 auto;
+
+								a {
+									width: 100%;
+									margin: 0;
+									text-align: center;
+									display: block;
+									background-color: $blackcolor;
+									line-height: 35px;
+									color: $colorwhite;
+									@include originTran(50% 50%);
+									@include Transition(all 0.2s ease-in 0s);
+
+									&:hover {
+										font-weight: bold;
+									}
+								}
 							}
 						}
 					}
@@ -3105,7 +3147,7 @@ desktop 1440px */
 			}
 
 			p {
-				font-size: 0.9em;
+				font-size: 1em;
 			}
 
 			button#find-search {
@@ -3213,6 +3255,7 @@ desktop 1440px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					h2 {
@@ -3236,7 +3279,7 @@ desktop 1440px */
 					}
 
 					p {
-						font-size: 0.95em;
+						font-size: 1em;
 					}
 
 					ul {
@@ -3363,6 +3406,13 @@ desktop 1440px */
 						/* code */
 						pre.wp-block-code {
 							font-size: 0.95em;
+						}
+						ul.post-list {
+							width: 94%;
+
+							li {
+								font-size: 1em;
+							}
 						}
 					}
 
@@ -4233,7 +4283,7 @@ desktop 1280px */
 			}
 
 			p {
-				font-size: 0.9em;
+				font-size: 1em;
 			}
 
 			blockquote {
@@ -4355,6 +4405,7 @@ desktop 1280px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					h2 {
@@ -4378,7 +4429,7 @@ desktop 1280px */
 					}
 
 					p {
-						font-size: 0.9em;
+						font-size: 1em;
 					}
 
 					ul {
@@ -4496,6 +4547,13 @@ desktop 1280px */
 						/* code */
 						pre.wp-block-code {
 							font-size: 0.9em;
+						}
+						ul.post-list {
+							width: 94%;
+
+							li {
+								font-size: 1em;
+							}
 						}
 					}
 
@@ -5345,11 +5403,11 @@ desktop 1024px */
 			}
 
 			p {
-				font-size: 0.9em;
+				font-size: 1em;
 			}
 
 			blockquote {
-				font-size: 0.85em;
+				font-size: 0.95em;
 			}
 
 			#map_container {
@@ -5433,6 +5491,7 @@ desktop 1024px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					hr.blog-spacer {
@@ -5465,7 +5524,7 @@ desktop 1024px */
 					}
 
 					p {
-						font-size: 0.9em;
+						font-size: 0.95em;
 					}
 
 					ul {
@@ -6469,6 +6528,7 @@ tablet 800px */
 
 			p {
 				line-height: 1.7em;
+				font-size: 0.9em;
 			}
 
 			#map_container {
@@ -6573,6 +6633,7 @@ tablet 800px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					h2 {
@@ -6716,6 +6777,13 @@ tablet 800px */
 						/* code */
 						pre.wp-block-code {
 							font-size: 0.8em;
+						}
+						ul.post-list {
+							width: 96%;
+
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
 
@@ -7587,6 +7655,7 @@ tablet 800px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					h1 {
@@ -7716,6 +7785,13 @@ tablet 800px */
 						/* code */
 						pre.wp-block-code {
 							font-size: 0.85em;
+						}
+						ul.post-list {
+							width: 94%;
+
+							li {
+								font-size: 0.9em;
+							}
 						}
 					}
 
@@ -8325,7 +8401,7 @@ tablet 600px */
 			}
 
 			h2 {
-				font-size: 1em;
+				font-size: 1.05em;
 			}
 
 			h3 {
@@ -8406,6 +8482,7 @@ tablet 600px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					margin-top: 1.5em;
@@ -8559,6 +8636,13 @@ tablet 600px */
 						/* code */
 						pre.wp-block-code {
 							font-size: 0.8em;
+						}
+						ul.post-list {
+							width: 98%;
+
+							li {
+								font-size: 0.85em;
+							}
 						}
 					}
 
@@ -9445,7 +9529,7 @@ mobile 480px */
 			}
 
 			h2 {
-				font-size: 1.1em;
+				font-size: 1.05em;
 				text-indent: 0;
 				width: 100%;
 				margin: 0.5em auto;
@@ -9567,6 +9651,7 @@ mobile 480px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					h1 {
@@ -10502,7 +10587,7 @@ mobile 480px */
 @media only screen and (max-width: 414px) {
 	.menu-toggle {
 		font-size: 1em;
-		top: 8vh;
+		top: 4vh;
 		line-height: 40px;
 	}
 }
@@ -10711,6 +10796,7 @@ mobile 360px */
 				}
 
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					padding: 0;
@@ -10836,6 +10922,13 @@ mobile 360px */
 						/* code */
 						pre.wp-block-code {
 							font-size: 0.75em;
+						}
+						ul.post-list {
+							width: 94%;
+
+							li {
+								font-size: em;
+							}
 						}
 					}
 
@@ -11610,7 +11703,7 @@ mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
 		font-size: 0.9em;
-		top: 8vh;
+		top: 5vh;
 	}
 
 	#wrapper {
@@ -11806,6 +11899,7 @@ mobile 320px */
 					font-size: 0.9em;
 				}
 				article.post,
+				article.page,
 				article.project,
 				article.page {
 					h2 {

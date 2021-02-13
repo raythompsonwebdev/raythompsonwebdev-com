@@ -14,7 +14,7 @@ while ( have_posts() ) :
 	the_post();
 	?>
 
-<article class="post group <?php post_class( 'rtwd-post' ); ?>" id="post-<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class( array( ) ); ?>>
 
 	<header class="entry-header">
 	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

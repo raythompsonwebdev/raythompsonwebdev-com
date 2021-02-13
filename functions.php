@@ -359,6 +359,7 @@ function raythompsonwebdev_com_about_page_scripts() {
 
 	if ( is_page( 'about' ) ) {
 		wp_enqueue_script( 'raythompsonwebdev-profile', get_template_directory_uri() . '/js/profile.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		wp_enqueue_script( 'raythompsonwebdev-scroll', get_template_directory_uri() . '/js/scrollto.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_about_page_scripts' );
