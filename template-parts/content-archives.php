@@ -33,29 +33,8 @@ while ( have_posts() ) :
 		<ul class="post-list">
 		<?php wp_list_categories( 'title_li=' ); ?>
 		</ul>
-		<h2><strong><?php esc_html_e( 'Tags:', 'raythompsonwebdev-com' ); ?></strong></h2>
-	<?php
-		$raythompsonwebdev_com_tags = get_tags();
-	if ( $raythompsonwebdev_com_tags ) {
-		?>
-			<ul class="post-list">
-		<?php
-		foreach ( $raythompsonwebdev_com_tags as $raythompsonwebdev_com_tag ) {
 
-			// /* translators: %s: posts tags. */
-			// echo '<li><a href="' . get_tag_link( $raythompsonwebdev_com_tag->term_id ) . '" title="' . sprintf( __( 'View all posts in %s' ), esc_html( $raythompsonwebdev_com_tag->name, 'raythompsonwebdev-com' ) ) . '" ' . '>' . esc_html( $raythompsonwebdev_com_tag->name, 'raythompsonwebdev-com' ) . '</a></li>';
-			?>
-				<li><a href="<?php 	/* translators: %s: posts tags. */ get_tag_link( $raythompsonwebdev_com_tag->term_id ); ?>" title="<?php sprintf( __( 'View all posts in %s' ), esc_html( $raythompsonwebdev_com_tag->name ) ); ?>"> <?php esc_html( $raythompsonwebdev_com_tag->name ); ?></a></li>
-
-				<?php
-
-		}
-		?>
-			</ul>
-
-		<?php
-	}
-	?>
+<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 		<div class="clear"></div>
 

@@ -15,7 +15,7 @@
  */
 
 	get_header(); ?>
-<main id="primary" class="site-main">
+<div id="primary" class="site-main">
 
 	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
 
@@ -28,7 +28,7 @@
 
 		<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-</main>
+</div>
 
 <?php get_sidebar( 'archive' ); ?>
 
