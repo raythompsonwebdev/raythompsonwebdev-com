@@ -15,9 +15,7 @@
 get_header();
 ?>
 
-<header class="page-header">
-<h1 class="page-title"><?php esc_html_e( 'Blog', 'raythompsonwebdev-com' ); ?></h1>
-			</header><!-- .page-header -->
+
 
 	<div id="primary" class="site-main">
 
