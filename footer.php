@@ -73,7 +73,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="https://raythompsonwebdev.co.uk">raythompsonwebdev</a>' );
+				sprintf( esc_html__( 'Theme: %1$s by %2$s.', 'raythompsonwebdev-com' ), 'raythompsonwebdev-com', '<a href="https://raythompsonwebdev.co.uk">raythompsonwebdev</a>' );
 				?>
 	</div><!-- .site-info -->
 

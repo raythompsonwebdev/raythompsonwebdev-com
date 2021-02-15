@@ -44,7 +44,7 @@ get_header();
 				);
 				$raythompsonwebdev_com_loop = new WP_Query( $raythompsonwebdev_com_args );
 
-				// set transient to cache results for 12 hours
+				// set transient to cache results for 12 hours.
 				set_transient( 'raythompsonwebdev_com_wp_query', $raythompsonwebdev_com_loop, 12 * HOUR_IN_SECONDS );
 
 			}

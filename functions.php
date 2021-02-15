@@ -185,9 +185,6 @@ if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_setup' );
 
-// remove version from head.
-remove_action( 'wp_head', 'wp_generator' );
-
 // remove version from rss.
 add_filter( 'the_generator', '__return_empty_string' );
 
