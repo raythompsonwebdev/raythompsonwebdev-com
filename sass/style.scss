@@ -1556,7 +1556,7 @@ desktop 1920px */
 								ol.children {
 									margin: auto;
 									padding: 0;
-									width: 96%;
+									width: 100%;
 									list-style: none;
 
 									li.odd {
@@ -1567,7 +1567,7 @@ desktop 1920px */
 
 											footer.comment-meta {
 												font-family: $FontStyle;
-												height: 60px;
+												height: 50px;
 												margin-top: 0;
 												.comment-author {
 													display: inline-block;
@@ -1670,7 +1670,7 @@ desktop 1920px */
 
 									footer.comment-meta {
 										font-family: $FontStyle;
-										height: 60px;
+										height: 50px;
 										margin-top: 0;
 										.comment-author {
 											font-family: $FontStyle;
@@ -1680,7 +1680,6 @@ desktop 1920px */
 											font-size: 0.9em;
 											background-color: $headercolor;
 											color: $colorwhite;
-											padding: 0.25em;
 
 											img {
 												width: 16%;
@@ -1772,9 +1771,9 @@ desktop 1920px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 								min-height: 35px;
-								margin: 2% auto;
+								margin: 1em auto;
 
 								a {
 									display: block;
@@ -1782,7 +1781,7 @@ desktop 1920px */
 									margin: 0;
 									height: 35px;
 									list-style: none;
-									width: 25%;
+									width: 20%;
 									background-color: $blackcolor;
 									padding: 0;
 									border: none;
@@ -2501,7 +2500,7 @@ desktop 1920px */
 															font-family: $FontStyle;
 															font-size: 0.95em;
 															color: $blackcolor2;
-															content: '\f005';
+															content: '*';
 															margin: 0 1%;
 															line-height: 1.5em;
 														}
@@ -2653,9 +2652,10 @@ desktop 1920px */
 									line-height: 66px;
 									font-size: 0.9em;
 									text-indent: 0.25em;
-									background-color: $colorwhite;
-									color: $blackcolor;
+									background-color: $blackcolor;
+									color: $colorwhite;
 									z-index: 3;
+									border-right: 1px solid $colorwhite;
 								}
 							}
 						}
@@ -2719,6 +2719,10 @@ desktop 1920px */
 								width: 100%;
 								display: block;
 								@include Transition(all 0.2s ease-in 0s);
+								img,
+								img.wp-post-image {
+									width: 100%;
+								}
 							}
 
 							figcaption.showcase-content {
@@ -2728,26 +2732,27 @@ desktop 1920px */
 								padding: 0;
 								width: 100%;
 								@include Transition(all 0.2s ease-in 0s);
-								background-color: rgba(0, 0, 0, 0.3);
+								background-color: rgba(255, 255, 255, 0.7);
 
 								h1 {
 									text-indent: 0;
 									font-size: 1em;
-									line-height: 40px;
+									line-height: 25px;
 									margin: 0 auto;
-									height: 40px;
+									height: auto;
 									text-align: center;
 									width: 96%;
-									background-color: $blackcolor;
-									color: $colorwhite;
+									background-color: unset;
+									color: $blackcolor;
 									letter-spacing: 0.05em;
 								}
 
 								a {
 									height: 35px;
-									background-color: $colorwhite;
+									font-family: $FontStyle;
+									background-color: $blackcolor;
 									width: 80%;
-									color: $blackcolor;
+									color: $colorwhite;
 									letter-spacing: 0.1em;
 									font-size: 0.9em;
 									line-height: 35px;
@@ -3525,6 +3530,7 @@ desktop 1440px */
 				nav.navigation {
 					h2 {
 						text-indent: 0.5em;
+						line-height: 50px;
 					}
 
 					.nav-links {
@@ -3610,7 +3616,7 @@ desktop 1440px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 50px;
 												margin-top: 0;
 												.comment-author {
 													font-size: 0.9em;
@@ -3661,10 +3667,8 @@ desktop 1440px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 50px;
 
 										.comment-author {
 											font-size: 0.9em;
@@ -3718,7 +3722,7 @@ desktop 1440px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
 									font-size: 1em;
@@ -4090,7 +4094,6 @@ desktop 1440px */
 
 								h1 {
 									font-size: 0.9em;
-									line-height: 30px;
 									height: auto;
 								}
 
@@ -4189,7 +4192,7 @@ desktop 1280px */
 	.entry-content,
 	.entry-summary {
 		ul {
-			font-size: 0.9em;
+			font-size: 1em;
 			li {
 				display: block;
 				line-height: 30px;
@@ -4746,7 +4749,7 @@ desktop 1280px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 50px;
 												margin-top: 0;
 												.comment-author {
 													font-size: 0.9em;
@@ -4797,10 +4800,8 @@ desktop 1280px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 50px;
 
 										.comment-author {
 											font-size: 0.9em;
@@ -4854,7 +4855,7 @@ desktop 1280px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
 									font-size: 1em;
@@ -5081,7 +5082,7 @@ desktop 1280px */
 						width: 50%;
 
 						h1 {
-							font-size: 1.1em;
+							font-size: 1.2em;
 						}
 
 						#social {
@@ -5508,7 +5509,7 @@ desktop 1024px */
 					}
 
 					h2 {
-						font-size: 1.15em;
+						font-size: 1.1em;
 
 						a {
 							display: block;
@@ -5722,11 +5723,12 @@ desktop 1024px */
 
 						h1.post-meta-key {
 							display: block;
-							font-size: 1.1em;
+							font-size: 1.05em;
 						}
 
 						p.websitetext {
 							margin-bottom: 0;
+							font-size: 0.9em;
 						}
 
 						a.webformats {
@@ -5767,6 +5769,7 @@ desktop 1024px */
 				nav.navigation {
 					h2 {
 						text-indent: 0.5em;
+						line-height: 40px;
 					}
 
 					.nav-links {
@@ -5851,7 +5854,7 @@ desktop 1024px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 50px;
 												margin-top: 0;
 												.comment-author {
 													font-size: 0.9em;
@@ -5902,10 +5905,8 @@ desktop 1024px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 50px;
 
 										.comment-author {
 											font-size: 0.9em;
@@ -5959,7 +5960,7 @@ desktop 1024px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
 									font-size: 1em;
@@ -6103,7 +6104,6 @@ desktop 1024px */
 				}
 				a#projectLink {
 					width: 27%;
-					font-size: 1em;
 				}
 
 				/* PNG for IE8 */
@@ -6188,7 +6188,7 @@ desktop 1024px */
 						padding: 0.5em;
 
 						h1 {
-							font-size: 1em;
+							font-size: 1.1em;
 						}
 
 						#social {
@@ -6333,11 +6333,11 @@ desktop 1024px */
 								padding: 0;
 
 								h1 {
-									font-size: 0.9em;
+									font-size: 0.8em;
 								}
 
 								a {
-									font-size: 0.9em;
+									font-size: 0.8em;
 								}
 							}
 						}
@@ -6539,7 +6539,6 @@ tablet 800px */
 			}
 
 			p {
-				line-height: 1.7em;
 				font-size: 0.9em;
 			}
 
@@ -6649,7 +6648,7 @@ tablet 800px */
 				article.project,
 				div.page-content {
 					h2 {
-						font-size: 1em;
+						font-size: 1.05em;
 
 						a {
 							display: block;
@@ -6875,16 +6874,17 @@ tablet 800px */
 						}
 
 						.websiteImage {
-							width: 45%;
+							width: 50%;
 							margin: auto;
 						}
 
 						h1.post-meta-key {
 							display: block;
+							font-size: 1em;
 						}
 
 						p.websitetext {
-							font-size: 0.9em;
+							font-size: 0.85em;
 						}
 
 						a.webformats {
@@ -7018,7 +7018,7 @@ tablet 800px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 45px;
 												margin-top: 0;
 												.comment-author {
 													font-size: 0.9em;
@@ -7069,10 +7069,10 @@ tablet 800px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
+									padding: 0.25em;
 
 									footer.comment-meta {
-										height: 60px;
+										height: 45px;
 
 										.comment-author {
 											font-size: 0.9em;
@@ -7126,10 +7126,10 @@ tablet 800px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
-									font-size: 1em;
+									font-size: 0.9em;
 
 									&:hover {
 										color: $colorwhite;
@@ -7273,7 +7273,6 @@ tablet 800px */
 				a#projectLink {
 					width: 40%;
 					margin: 0.5em;
-					font-size: 1em;
 					-webkit-align-self: center;
 					-ms-flex-item-align: center;
 					align-self: center;
@@ -7384,7 +7383,7 @@ tablet 800px */
 						margin: 1em;
 
 						h1 {
-							font-size: 1.1em;
+							font-size: 1.2em;
 						}
 
 						#social {
@@ -7449,7 +7448,7 @@ tablet 800px */
 									height: 44px;
 
 									a {
-										font-size: 0.9em;
+										font-size: 0.85em;
 									}
 								}
 							}
@@ -7492,7 +7491,7 @@ tablet 800px */
 								}
 
 								span {
-									font-size: 1em;
+									font-size: 0.9em;
 									width: 16.5%;
 								}
 							}
@@ -7533,7 +7532,7 @@ tablet 800px */
 								}
 
 								a {
-									font-size: 0.9em;
+									font-size: 0.85em;
 								}
 							}
 						}
@@ -7616,7 +7615,7 @@ tablet 800px */
 					width: 25%;
 
 					span.dashicons {
-						font-size: 1.7em;
+						font-size: 1.8em;
 						&:hover {
 							background-color: $blackcolor;
 						}
@@ -7640,7 +7639,7 @@ tablet 800px */
 	.entry-content,
 	.entry-summary {
 		ul {
-			font-size: 0.8em;
+			font-size: 1em;
 		}
 	}
 	#wrapper {
@@ -7674,10 +7673,10 @@ tablet 800px */
 				article.project,
 				div.page-content {
 					h1 {
-						font-size: 1.05em;
+						font-size: 1.1em;
 					}
 					h2 {
-						font-size: 1em;
+						font-size: 1.05em;
 
 						a {
 							display: block;
@@ -7888,7 +7887,7 @@ tablet 800px */
 						}
 
 						.websiteImage {
-							width: 45%;
+							width: 50%;
 							margin: auto;
 						}
 
@@ -8013,7 +8012,7 @@ tablet 800px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 45px;
 												margin-top: 0;
 												.comment-author {
 													font-size: 0.85em;
@@ -8064,10 +8063,8 @@ tablet 800px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 45px;
 
 										.comment-author {
 											font-size: 0.85em;
@@ -8121,10 +8118,10 @@ tablet 800px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
-									font-size: 1em;
+									font-size: 0.9em;
 
 									&:hover {
 										color: $colorwhite;
@@ -8261,7 +8258,7 @@ tablet 600px */
 		z-index: 105;
 		display: block;
 		top: 1vh;
-		left: calc(75% - 0.2em);
+		left: calc(80% - 0.2em);
 		font-size: 1em;
 		text-transform: uppercase;
 		background-color: $blackcolor;
@@ -8269,9 +8266,10 @@ tablet 600px */
 		border: none;
 		transition: all ease-out 0.4s;
 		line-height: 50px;
-		width: 25%;
+		width: 20%;
 		text-align: center;
 		padding: 0;
+		font-weight: bold;
 	}
 	.menu-toggle.hide {
 		left: 110vw;
@@ -8386,6 +8384,7 @@ tablet 600px */
 		.social-1 {
 			margin-top: 1em;
 			float: left;
+			margin-left: 0.25em;
 
 			form.search-form {
 				text-align: left;
@@ -8394,7 +8393,7 @@ tablet 600px */
 					font-size: 0.8em;
 				}
 				input[type='submit'] {
-					font-size: 0.7em;
+					font-size: 0.8em;
 
 					&:hover {
 						font-weight: bold;
@@ -8503,7 +8502,7 @@ tablet 600px */
 					margin-top: 1.5em;
 
 					h2 {
-						font-size: 1em;
+						font-size: 1.05em;
 						line-height: 40px;
 
 						a {
@@ -8739,7 +8738,7 @@ tablet 600px */
 						}
 
 						.websiteImage {
-							width: 45%;
+							width: 55%;
 							margin: auto;
 						}
 
@@ -8749,6 +8748,7 @@ tablet 600px */
 
 						p.websitetext {
 							margin-bottom: 0em;
+							font-size: 0.8em;
 						}
 
 						.links {
@@ -8869,10 +8869,10 @@ tablet 600px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 45px;
 												margin-top: 0;
 												.comment-author {
-													font-size: 0.9em;
+													font-size: 0.85em;
 
 													img {
 														width: 16%;
@@ -8893,7 +8893,7 @@ tablet 600px */
 												}
 
 												.comment-metadata {
-													font-size: 0.8em;
+													font-size: 0.75em;
 
 													a {
 														color: $colorwhite;
@@ -8905,7 +8905,7 @@ tablet 600px */
 											}
 											.comment-content {
 												p {
-													font-size: 0.9em;
+													font-size: 0.85em;
 
 													a {
 														background-color: $colorwhite;
@@ -8920,16 +8920,15 @@ tablet 600px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 45px;
 
 										.comment-author {
-											font-size: 0.9em;
+											font-size: 0.85em;
 
 											img {
 												width: 16%;
+												margin-right: 0.25em;
 											}
 
 											b.fn,
@@ -8947,7 +8946,7 @@ tablet 600px */
 										}
 
 										.comment-metadata {
-											font-size: 0.8em;
+											font-size: 0.75em;
 
 											a {
 												color: $colorwhite;
@@ -8960,7 +8959,7 @@ tablet 600px */
 
 									.comment-content {
 										p {
-											font-size: 0.9em;
+											font-size: 0.85em;
 
 											a {
 												&:hover {
@@ -8977,10 +8976,10 @@ tablet 600px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
-									font-size: 1em;
+									font-size: 0.9em;
 
 									&:hover {
 										color: $colorwhite;
@@ -9109,7 +9108,7 @@ tablet 600px */
 
 			div#frontpage-container {
 				background-image: url('../raythompsonwebdev-com/images/front-page-banner/raythompsonwebdev_banner-536.webp');
-
+				padding: 0.25em 0.1em;
 				h1 {
 					font-size: 1.7em;
 					line-height: 40px;
@@ -9123,7 +9122,6 @@ tablet 600px */
 				}
 				a#projectLink {
 					width: 45%;
-					font-size: 1em;
 				}
 
 				figure#image-6 {
@@ -9135,11 +9133,12 @@ tablet 600px */
 				h3 {
 					font-size: 1.1em;
 					width: 94%;
+					text-align: center;
 				}
 
 				/* Homepage container */
 				div.wp-block-group {
-					width: 100%;
+					width: 80%;
 
 					div.wp-block-group__inner-container {
 						height: auto;
@@ -9211,7 +9210,7 @@ tablet 600px */
 						width: 98%;
 
 						h1 {
-							font-size: 1em;
+							font-size: 1.1em;
 						}
 
 						#social {
@@ -9276,7 +9275,7 @@ tablet 600px */
 									height: 44px;
 
 									a {
-										font-size: 0.9em;
+										font-size: 0.8em;
 									}
 								}
 							}
@@ -9287,7 +9286,7 @@ tablet 600px */
 						width: 98%;
 
 						h1 {
-							font-size: 1em;
+							font-size: 1.1em;
 						}
 
 						#social {
@@ -9318,7 +9317,7 @@ tablet 600px */
 
 								span {
 									width: 18.5%;
-									font-size: 0.9em;
+									font-size: 0.85em;
 								}
 							}
 						}
@@ -9357,7 +9356,7 @@ tablet 600px */
 								}
 
 								a {
-									font-size: 0.9em;
+									font-size: 0.85em;
 								}
 							}
 						}
@@ -9429,7 +9428,7 @@ tablet 600px */
 					width: 25%;
 
 					span.dashicons {
-						font-size: 1.6em;
+						font-size: 1.8em;
 						&:hover {
 							background-color: $blackcolor;
 						}
@@ -9477,7 +9476,7 @@ mobile 480px */
 					width: 90%;
 					h1#logo,
 					h1#logo-blog {
-						font-size: 1em;
+						font-size: 1.05em;
 
 						span {
 							padding: 0;
@@ -9565,8 +9564,6 @@ mobile 480px */
 				width: 100%;
 
 				li {
-					font-size: 0.75em;
-
 					&::before {
 						width: 5%;
 					}
@@ -9672,7 +9669,7 @@ mobile 480px */
 				article.project,
 				div.page-content {
 					h1 {
-						font-size: 1em;
+						font-size: 1.05em;
 					}
 					h2 {
 						font-size: 1em;
@@ -9896,7 +9893,7 @@ mobile 480px */
 						width: 100%;
 
 						.websiteImage {
-							width: 70%;
+							width: 60%;
 						}
 
 						h1.post-meta-key {
@@ -10016,7 +10013,7 @@ mobile 480px */
 						}
 
 						h2.comments-title {
-							font-size: 1em;
+							font-size: 0.9em;
 						}
 
 						ol.comment-list {
@@ -10034,10 +10031,10 @@ mobile 480px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 45px;
 												margin-top: 0;
 												.comment-author {
-													font-size: 0.9em;
+													font-size: 0.8em;
 
 													img {
 														width: 16%;
@@ -10053,12 +10050,12 @@ mobile 480px */
 													}
 
 													span.says {
-														display: inline-block;
+														display: block;
 													}
 												}
 
 												.comment-metadata {
-													font-size: 0.8em;
+													font-size: 0.7em;
 
 													a {
 														color: $colorwhite;
@@ -10070,7 +10067,7 @@ mobile 480px */
 											}
 											.comment-content {
 												p {
-													font-size: 0.9em;
+													font-size: 0.85em;
 
 													a {
 														background-color: $colorwhite;
@@ -10085,13 +10082,11 @@ mobile 480px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 45px;
 
 										.comment-author {
-											font-size: 0.9em;
+											font-size: 0.8em;
 
 											img {
 												width: 16%;
@@ -10107,12 +10102,12 @@ mobile 480px */
 											}
 
 											span.says {
-												display: inline-block;
+												display: block;
 											}
 										}
 
 										.comment-metadata {
-											font-size: 0.8em;
+											font-size: 0.7em;
 
 											a {
 												color: $colorwhite;
@@ -10142,10 +10137,10 @@ mobile 480px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
-									font-size: 1em;
+									font-size: 0.85em;
 
 									&:hover {
 										color: $colorwhite;
@@ -10286,7 +10281,6 @@ mobile 480px */
 				}
 				a#projectLink {
 					width: 50%;
-					font-size: 1em;
 				}
 
 				/* PNG for IE8 */
@@ -10302,7 +10296,7 @@ mobile 480px */
 
 				/* Homepage container */
 				div.wp-block-group {
-					width: 100%;
+					width: 80%;
 
 					div.wp-block-group__inner-container {
 						height: auto;
@@ -10369,7 +10363,7 @@ mobile 480px */
 						width: 98%;
 
 						h1 {
-							font-size: 0.9em;
+							font-size: 1em;
 						}
 
 						#social {
@@ -10436,7 +10430,7 @@ mobile 480px */
 									height: 44px;
 
 									a {
-										font-size: 0.9em;
+										font-size: 0.75em;
 									}
 								}
 							}
@@ -10469,15 +10463,14 @@ mobile 480px */
 										}
 
 										&:hover::after {
-											font-size: 0.7em;
+											font-size: 0.75em;
 										}
 									}
 								}
 
 								span {
 									width: 21.5%;
-
-									font-size: 0.9em;
+									font-size: 0.8em;
 								}
 							}
 						}
@@ -10516,7 +10509,7 @@ mobile 480px */
 								}
 
 								a {
-									font-size: 0.85em;
+									font-size: 0.8em;
 								}
 							}
 						}
@@ -10586,7 +10579,7 @@ mobile 480px */
 					width: 25%;
 
 					span.dashicons {
-						font-size: 1.5em;
+						font-size: 1.8em;
 					}
 				}
 			}
@@ -10606,8 +10599,10 @@ mobile 480px */
 
 @media only screen and (max-width: 414px) {
 	.menu-toggle {
-		font-size: 1em;
-		top: 4vh;
+		top: 7vh;
+		left: calc(80% - 1%);
+		width: 20%;
+		font-size: 0.9em;
 		line-height: 40px;
 	}
 }
@@ -10616,7 +10611,7 @@ mobile 480px */
 mobile 360px */
 @media only screen and (max-width: 22.5em) {
 	.menu-toggle {
-		left: calc(74% - 0.2em);
+		left: calc(80% - 1%);
 	}
 
 	#wrapper {
@@ -10668,7 +10663,7 @@ mobile 360px */
 		}
 
 		.social-1 {
-			width: 70%;
+			width: 60%;
 			form.search-form {
 				text-align: left;
 				label {
@@ -10676,7 +10671,7 @@ mobile 360px */
 				}
 
 				input[type='submit'] {
-					font-size: 0.7em;
+					font-size: 0.8em;
 				}
 			}
 		}
@@ -10703,7 +10698,7 @@ mobile 360px */
 			}
 
 			p {
-				font-size: 0.8em;
+				font-size: 0.85em;
 			}
 
 			ul {
@@ -11009,7 +11004,7 @@ mobile 360px */
 						width: 100%;
 
 						.websiteImage {
-							width: 75%;
+							width: 70%;
 						}
 
 						h1.post-meta-key {
@@ -11125,7 +11120,7 @@ mobile 360px */
 						}
 
 						h2.comments-title {
-							font-size: 1em;
+							font-size: 0.9em;
 						}
 
 						ol.comment-list {
@@ -11143,10 +11138,10 @@ mobile 360px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 40px;
 												margin-top: 0;
 												.comment-author {
-													font-size: 0.9em;
+													font-size: 0.7em;
 
 													img {
 														width: 16%;
@@ -11162,12 +11157,12 @@ mobile 360px */
 													}
 
 													span.says {
-														display: inline-block;
+														display: block;
 													}
 												}
 
 												.comment-metadata {
-													font-size: 0.8em;
+													font-size: 0.65em;
 
 													a {
 														color: $colorwhite;
@@ -11179,7 +11174,7 @@ mobile 360px */
 											}
 											.comment-content {
 												p {
-													font-size: 0.9em;
+													font-size: 0.75em;
 
 													a {
 														background-color: $colorwhite;
@@ -11194,13 +11189,13 @@ mobile 360px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
+									padding: 0.2em;
 
 									footer.comment-meta {
-										height: 60px;
+										height: 40px;
 
 										.comment-author {
-											font-size: 0.9em;
+											font-size: 0.7em;
 
 											img {
 												width: 16%;
@@ -11216,12 +11211,12 @@ mobile 360px */
 											}
 
 											span.says {
-												display: inline-block;
+												display: block;
 											}
 										}
 
 										.comment-metadata {
-											font-size: 0.8em;
+											font-size: 0.65em;
 
 											a {
 												color: $colorwhite;
@@ -11234,7 +11229,7 @@ mobile 360px */
 
 									.comment-content {
 										p {
-											font-size: 0.9em;
+											font-size: 0.75em;
 
 											a {
 												&:hover {
@@ -11251,10 +11246,10 @@ mobile 360px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
-									font-size: 1em;
+									font-size: 0.85em;
 
 									&:hover {
 										color: $colorwhite;
@@ -11393,8 +11388,7 @@ mobile 360px */
 					width: 100%;
 				}
 				a#projectLink {
-					width: 60%;
-					font-size: 0.9em;
+					width: 50%;
 				}
 
 				/* PNG for IE8 */
@@ -11410,7 +11404,7 @@ mobile 360px */
 
 				/* Homepage container */
 				div.wp-block-group {
-					width: 100%;
+					width: 90%;
 
 					div.wp-block-group__inner-container {
 						height: auto;
@@ -11482,7 +11476,7 @@ mobile 360px */
 						margin: 0.5em;
 
 						h1 {
-							font-size: 0.8em;
+							font-size: 0.95em;
 						}
 
 						#social {
@@ -11547,7 +11541,7 @@ mobile 360px */
 									height: 44px;
 
 									a {
-										font-size: 0.9em;
+										font-size: 0.75em;
 									}
 								}
 							}
@@ -11559,7 +11553,7 @@ mobile 360px */
 						margin: 0.5em;
 
 						h1 {
-							font-size: 0.9em;
+							font-size: 0.95em;
 						}
 
 						#social {
@@ -11592,8 +11586,7 @@ mobile 360px */
 
 								span {
 									width: 21.5%;
-
-									font-size: 0.9em;
+									font-size: 0.8em;
 									line-height: 40px;
 								}
 							}
@@ -11638,7 +11631,7 @@ mobile 360px */
 								}
 
 								a {
-									font-size: 0.85em;
+									font-size: 0.8em;
 								}
 							}
 						}
@@ -11703,7 +11696,7 @@ mobile 360px */
 					width: 25%;
 
 					span.dashicons {
-						font-size: 1.4em;
+						font-size: 1.7em;
 					}
 				}
 			}
@@ -11725,8 +11718,7 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
-		font-size: 0.9em;
-		top: 5vh;
+		top: 7vh;
 	}
 
 	#wrapper {
@@ -11795,7 +11787,7 @@ mobile 320px */
 				}
 
 				input[type='submit'] {
-					font-size: 0.75em;
+					font-size: 0.8em;
 				}
 			}
 		}
@@ -11817,7 +11809,7 @@ mobile 320px */
 			}
 
 			p {
-				font-size: 0.7em;
+				font-size: 0.8em;
 			}
 
 			article.main-text {
@@ -12113,7 +12105,7 @@ mobile 320px */
 						width: 100%;
 
 						.websiteImage {
-							width: 75%;
+							width: 80%;
 						}
 
 						h1.post-meta-key {
@@ -12229,7 +12221,7 @@ mobile 320px */
 						}
 
 						h2.comments-title {
-							font-size: 1em;
+							font-size: 0.9em;
 						}
 
 						ol.comment-list {
@@ -12247,10 +12239,10 @@ mobile 320px */
 										article.comment-body {
 											background-color: $blackcolor;
 											footer.comment-meta {
-												height: 60px;
+												height: 40px;
 												margin-top: 0;
 												.comment-author {
-													font-size: 0.9em;
+													font-size: 0.65em;
 
 													img {
 														width: 16%;
@@ -12266,12 +12258,12 @@ mobile 320px */
 													}
 
 													span.says {
-														display: inline-block;
+														display: block;
 													}
 												}
 
 												.comment-metadata {
-													font-size: 0.8em;
+													font-size: 0.6em;
 
 													a {
 														color: $colorwhite;
@@ -12283,7 +12275,7 @@ mobile 320px */
 											}
 											.comment-content {
 												p {
-													font-size: 0.9em;
+													font-size: 0.8em;
 
 													a {
 														background-color: $colorwhite;
@@ -12298,13 +12290,11 @@ mobile 320px */
 								}
 
 								article.comment-body {
-									padding: 0.5em;
-
 									footer.comment-meta {
-										height: 60px;
+										height: 40px;
 
 										.comment-author {
-											font-size: 0.9em;
+											font-size: 0.65em;
 
 											img {
 												width: 16%;
@@ -12320,12 +12310,12 @@ mobile 320px */
 											}
 
 											span.says {
-												display: inline-block;
+												display: block;
 											}
 										}
 
 										.comment-metadata {
-											font-size: 0.8em;
+											font-size: 0.6em;
 
 											a {
 												color: $colorwhite;
@@ -12338,7 +12328,7 @@ mobile 320px */
 
 									.comment-content {
 										p {
-											font-size: 0.9em;
+											font-size: 0.75em;
 
 											a {
 												&:hover {
@@ -12355,10 +12345,10 @@ mobile 320px */
 							}
 
 							.reply {
-								width: 96%;
+								width: 100%;
 
 								a {
-									font-size: 1em;
+									font-size: 0.85em;
 
 									&:hover {
 										color: $colorwhite;
@@ -12497,8 +12487,7 @@ mobile 320px */
 					width: 100%;
 				}
 				a#projectLink {
-					width: 65%;
-					font-size: 0.9em;
+					width: 55%;
 				}
 
 				/* PNG for IE8 */
@@ -12514,7 +12503,7 @@ mobile 320px */
 
 				/* Homepage container */
 				div.wp-block-group {
-					width: 100%;
+					width: 90%;
 
 					div.wp-block-group__inner-container {
 						height: auto;
@@ -12641,7 +12630,7 @@ mobile 320px */
 									height: 44px;
 
 									a {
-										font-size: 0.85em;
+										font-size: 0.75em;
 									}
 								}
 							}
@@ -12671,14 +12660,14 @@ mobile 320px */
 								li {
 									.bar {
 										&:hover::after {
-											font-size: 0.6em;
+											font-size: 0.75em;
 										}
 									}
 								}
 
 								span {
 									width: 23.5%;
-									font-size: 0.75em;
+									font-size: 0.85em;
 								}
 							}
 						}
@@ -12711,11 +12700,11 @@ mobile 320px */
 
 							figcaption.showcase-content {
 								h1 {
-									font-size: 0.85em;
+									font-size: 0.8em;
 								}
 
 								a {
-									font-size: 0.85em;
+									font-size: 0.75em;
 								}
 							}
 						}
@@ -12778,7 +12767,7 @@ mobile 320px */
 					width: 25%;
 
 					span.dashicons {
-						font-size: 1.3em;
+						font-size: 1.7em;
 					}
 				}
 			}
