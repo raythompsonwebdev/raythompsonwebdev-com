@@ -378,7 +378,7 @@ desktop 1920px */
 			height: auto;
 			margin: 0;
 			padding: 0;
-			min-height: 100vh;
+			min-height: 80vh;
 			clear: both;
 
 			h1 {
@@ -2622,20 +2622,21 @@ desktop 1920px */
 										@include Transition(all 0.2s ease-in 0s);
 
 										&:hover {
-											background: $blackcolor;
+											background: $yellowcolor;
 											cursor: pointer;
 										}
 
 										&:hover::after {
 											content: attr(data-skill);
 											position: relative;
-											left: calc(76% - 15%);
+											left: calc(76% - 5%);
 											display: block;
 											line-height: 65px;
 											font-size: 1em;
 											color: $blackcolor;
 											width: 24%;
 											text-align: center;
+											font-weight: bold;
 										}
 									}
 								}
@@ -2883,7 +2884,7 @@ desktop 1920px */
 								@include Transition(all 0.2s ease-in 0s);
 								&:hover {
 									background-color: $blackcolor;
-									color: $blackcolor;
+									color: $colorwhite;
 									cursor: pointer;
 								}
 							}
@@ -5190,7 +5191,7 @@ desktop 1280px */
 								}
 
 								span {
-									font-size: 0.85em;
+									font-size: 0.8em;
 								}
 							}
 						}
@@ -6290,12 +6291,13 @@ desktop 1024px */
 
 										&:hover::after {
 											font-size: 0.9em;
+											left: calc(76% - 10%);
 										}
 									}
 								}
 
 								span {
-									font-size: 0.85em;
+									font-size: 0.8em;
 									width: 19.5%;
 								}
 							}
@@ -7486,6 +7488,7 @@ tablet 800px */
 
 										&:hover::after {
 											font-size: 0.85em;
+											left: calc(76% - 2%);
 										}
 									}
 								}
@@ -10464,13 +10467,14 @@ mobile 480px */
 
 										&:hover::after {
 											font-size: 0.75em;
+											left: calc(76% - 6%);
 										}
 									}
 								}
 
 								span {
 									width: 21.5%;
-									font-size: 0.8em;
+									font-size: 0.85em;
 								}
 							}
 						}
@@ -11578,7 +11582,8 @@ mobile 360px */
 
 										&:hover::after {
 											left: 68%;
-											font-size: 0.65em;
+											font-size: 0.75em;
+											line-height: 40px;
 											width: 32%;
 										}
 									}
@@ -11586,7 +11591,7 @@ mobile 360px */
 
 								span {
 									width: 21.5%;
-									font-size: 0.8em;
+									font-size: 0.85em;
 									line-height: 40px;
 								}
 							}
