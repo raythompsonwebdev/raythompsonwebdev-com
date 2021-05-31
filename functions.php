@@ -319,8 +319,12 @@ function raythompsonwebdev_com_scripts() {
 	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), RAYTHOMPSONWEBDEV_COM_VERSION );
 	wp_style_add_data( 'raythompsonwebdev-com-style', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'raythompsonwebdev-com-fonts', 'https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+	/*
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 
+	wp_enqueue_style( 'raythompsonwebdev-com-fonts', 'https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+*/
 	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
 
 	wp_enqueue_script( 'raythompsonwebdev-com-navigation', get_template_directory_uri() . '/js/navigation.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
@@ -371,25 +375,25 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	 */
 	function raythompsonwebdev_com_google_script() {
 
-		wp_enqueue_script( 'google-script', 'https://www.googletagmanager.com/gtag/js?id=UA-86655310-1', array(), '1.0', true );
+		wp_enqueue_script( 'google-script', 'src=http://localhost/wordpress/wp-content/uploads/caos/95627c30.js', array(), '1.0', true );
 
 		?>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 
-		<script>
+	<script>
+    window.ga = window.ga || function() {
+        (ga.q = ga.q || []).push(arguments);
+    };
+    ga.l = +new Date;
 
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-86655310-1');
-
-		</script>
+    ga('create', 'UA-86655310-1', {"cookieName":"caosLocalGa","cookieDomain":"localhost","cookieExpires":2592000,"cookieFlags":"samesite=none;secure"});
+            ga('send', 'pageview');
+                </script>
 
 		<?php
 	}
-	add_action( 'wp_head', 'raythompsonwebdev_com_google_script' );
+	add_action( 'wp_foot', 'raythompsonwebdev_com_google_script' );
 
 endif;
 

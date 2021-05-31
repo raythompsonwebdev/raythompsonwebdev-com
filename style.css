@@ -47,6 +47,13 @@ html[xmlns] .clearfix {
 	display: block;
 }
 
+/* IE8 and below upgrade banner */
+.browserupgrade {
+	font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
+	margin: 0.2em 0;
+	padding: 0.2em 0;
+}
+
 *.float-divider {
 	clear: both;
 	display: block;
@@ -1017,11 +1024,12 @@ select {
 /*
 desktop 1920px */
 @media only screen and (max-width: 1920px) {
-	/* IE8 and below upgrade banner */
-	.browserupgrade {
-		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
-		margin: 0.2em 0;
-		padding: 0.2em 0;
+	.dashicons,
+	.dashicons-before:before {
+		height: 100%;
+		font-size: 1.5em;
+		line-height: 40px;
+		margin-right: 0.5em;
 	}
 	/* Mobile Navigation button */
 	.menu-toggle {
@@ -1059,7 +1067,7 @@ desktop 1920px */
 	}
 	#wrapper {
 		background: #f2f2f2;
-		width: 90%;
+		width: 80%;
 		height: auto;
 		margin-right: auto;
 		margin-left: auto;
@@ -1074,13 +1082,13 @@ desktop 1920px */
 	}
 	#wrapper header.site-header {
 		width: 100%;
-		height: auto;
 		margin: 0;
 		padding: 0;
 		background-color: #f2f2f2;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
+		height: 70px;
 		/* Logo & Header */
 		/* Navigation */
 	}
@@ -1185,9 +1193,9 @@ desktop 1920px */
 		display: block;
 		float: left;
 		height: auto;
-		-webkit-flex: 0 0 auto;
-		-ms-flex: 0 0 auto;
-		flex: 0 0 auto;
+		-webkit-flex: 1 0 auto;
+		-ms-flex: 1 0 auto;
+		flex: 1 0 auto;
 		font-family: "Cabin", helvetica, arial, verdana, tahoma, sans-serif;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
@@ -1565,22 +1573,6 @@ desktop 1920px */
 		line-height: 40px;
 		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
 		color: #262425;
-	}
-	#wrapper main#page address#contact-details li a[href~='mailto:']::before {
-		content: '\f466';
-		font-size: 1.3em;
-	}
-	#wrapper main#page address#contact-details li a[title~='Follow me on Twitter']::before {
-		content: '\f301';
-		font-size: 1.4em;
-	}
-	#wrapper main#page address#contact-details li a[href~='www.linkedin.com']::before {
-		content: '\f18d';
-		font-size: 1.4em;
-	}
-	#wrapper main#page address#contact-details li a[href~='github.com']::before {
-		content: '\f237';
-		font-size: 1.4em;
 	}
 	#wrapper main#page div#primary {
 		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
@@ -3645,7 +3637,6 @@ desktop 1920px */
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile p {
 		line-height: 1.9em;
 		font-size: 1em;
-		margin-bottom: 0.25em;
 		color: #262425;
 		padding: 0.5em;
 		background-color: #f5f2e4;
@@ -3705,329 +3696,6 @@ desktop 1920px */
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a p strong a:hover {
 		text-decoration: underline;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		-webkit-order: 3;
-		-ms-flex-order: 3;
-		order: 3;
-		-webkit-flex: 0 1 auto;
-		-ms-flex: 0 1 auto;
-		flex: 0 1 auto;
-		width: 50%;
-		height: auto;
-		display: inline-block;
-		padding: 0 0.5em;
-		margin: 0;
-		/* Hero Slider */
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		height: 50px;
-		font-size: 1.3em;
-		line-height: 50px;
-		text-indent: 1.5%;
-		letter-spacing: 0.05em;
-		background-color: #262425;
-		color: #f5f2e4;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-		display: block;
-		float: left;
-		margin-top: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-		margin: 2% 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		margin: 0;
-		padding: 0.2em;
-		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
-		width: 100%;
-		background-color: #262425;
-		display: flex;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		display: inline-block;
-		width: 76%;
-		height: 420px;
-		overflow: hidden;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-1 {
-		background-image: url("images/certificates/Large-Photoshop-Certicate.webp");
-		background-repeat: no-repeat;
-		background-position: 50% 40%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-2 {
-		background-image: url("images/certificates/ITQ-USERS-LEVEL1-LARGE.webp");
-		background-repeat: no-repeat;
-		background-position: 50% 22%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-3 {
-		background-image: url("images/certificates/codepen-io-your-work-2020-10-17-22.webp");
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-4 {
-		background-image: url("images/certificates/freecodecamp-org-certification-raythompsonwebdev-javascript-algorithms-and-data-structures-2020-09-30-13_44_12.webp");
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-5 {
-		background-image: url("images/certificates/CertificateOfCompletion_Javascript-Essential-Training-2011.webp");
-		background-repeat: no-repeat;
-		background-position: center;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-6 {
-		background-image: url("images/certificates/py4e-badges.webp");
-		background-repeat: no-repeat;
-		background-position: 50% 31%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-7 {
-		background-image: url("images/certificates/codecademy-profiles-raythompsonwebdev-certificates.webp");
-		background-repeat: no-repeat;
-		background-position: 50% 18%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-8 {
-		background-image: url("images/certificates/Udacity_logo.webp");
-		background-repeat: no-repeat;
-		background-position: 50% 18%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body #panel-9 {
-		background-image: url("images/certificates/Digital-Futures-2017-Certificate-of-Participation-large.webp");
-		background-repeat: no-repeat;
-		background-position: 50% 61%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel {
-		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
-		width: 100%;
-		height: 420px;
-		background-color: #f5f2e4;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		text-transform: uppercase;
-		padding: 0;
-		line-height: 40px;
-		height: 40px;
-		background-color: #88a61c;
-		color: #262425;
-		letter-spacing: 0.1em;
-		font-size: 1em;
-		width: 100%;
-		margin: 0;
-		text-align: center;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox {
-		-webkit-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
-		-moz-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
-		-o-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
-		-ms-transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
-		transition: all 0.2s cubic-bezier(0.86, 0, 0.07, 1) 0s;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		float: none;
-		display: block;
-		width: 100%;
-		height: 19vh;
-		margin: 0;
-		outline: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
-		clear: both;
-		width: 100%;
-		margin: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-weight: normal;
-		font-size: 1em;
-		background-color: #262425;
-		color: #f2f2f2;
-		text-indent: 0;
-		margin: 0;
-		letter-spacing: 0.01em;
-		text-align: center;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-weight: normal;
-		margin: 0;
-		background-color: #88a61c;
-		color: #262425;
-		letter-spacing: 0.01em;
-		padding: 0;
-		line-height: 30px;
-		font-size: 0.95em;
-		display: block;
-		text-indent: 2%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		width: 100%;
-		display: block;
-		margin: 0;
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		width: 100%;
-		background-color: #f2f2f2;
-		font-weight: normal;
-		font-size: 0.8em;
-		color: #262425;
-		display: block;
-		height: auto;
-		line-height: 25px;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		margin-bottom: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
-		font-size: 0.95em;
-		color: #0a0a0a;
-		content: '*';
-		margin: 0 1%;
-		line-height: 1.5em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list {
-		margin: 0;
-		list-style: outside none none;
-		height: 100%;
-		width: 24%;
-		padding: 0;
-		float: left;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-		margin-bottom: 0.2em;
-		border: 1px solid #262425;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		text-align: center;
-		display: block;
-		font-size: 0.9em;
-		line-height: 41px;
-		background-color: #f2f2f2;
-		color: #262425;
-		height: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a:hover {
-		background-color: #262425;
-		color: #f2f2f2;
-		font-weight: bold;
-		line-height: 41px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		-webkit-order: 2;
-		-ms-flex-order: 2;
-		order: 2;
-		-webkit-flex: 0 0 auto;
-		-ms-flex: 0 0 auto;
-		flex: 0 0 auto;
-		width: 45%;
-		height: auto;
-		display: inline-block;
-		box-shadow: 0 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-		margin-bottom: 1em;
-		/* chart */
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		height: 50px;
-		font-size: 1.3em;
-		line-height: 50px;
-		text-indent: 1.5%;
-		letter-spacing: 0.05em;
-		color: #f2f2f2;
-		background: #262425;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-		display: block;
-		float: left;
-		margin-top: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-		margin: 2% 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-		height: auto;
-		margin: 0;
-		display: block;
-		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
-		background: #262425;
-		padding: 0.25em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars {
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-flow: column;
-		-ms-flex-flow: column;
-		flex-flow: column;
-		width: 100%;
-		height: 100%;
-		list-style: none;
-		margin: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li {
-		width: 100%;
-		height: 65px;
-		margin: 0 0 0.5em 0;
-		text-align: center;
-		position: relative;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar {
-		display: block;
-		margin-left: 0;
-		background: #f2f2f2;
-		position: absolute;
-		left: 16.5%;
-		height: 100%;
-		width: 0%;
-		-webkit-transition: all 0.2s ease-in 0s;
-		-moz-transition: all 0.2s ease-in 0s;
-		-o-transition: all 0.2s ease-in 0s;
-		-ms-transition: all 0.2s ease-in 0s;
-		transition: all 0.2s ease-in 0s;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		background: #f2ae2e;
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		content: attr(data-skill);
-		position: relative;
-		left: calc(76% - 5%);
-		display: block;
-		line-height: 65px;
-		font-size: 1em;
-		color: #262425;
-		width: 24%;
-		text-align: center;
-		font-weight: bold;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		-webkit-align-self: flex-end;
-		-ms-flex-item-align: end;
-		align-self: flex-end;
-		width: 16.5%;
-		position: absolute;
-		left: 0;
-		height: 100%;
-		text-align: left;
-		line-height: 66px;
-		font-size: 0.9em;
-		text-indent: 0.25em;
-		background-color: #262425;
-		color: #f2f2f2;
-		z-index: 3;
-		border-right: 1px solid #f2f2f2;
 	}
 	#wrapper main#page section#gallery-container {
 		width: 100%;
@@ -4495,14 +4163,17 @@ desktop 1920px */
 	}
 }
 
+@media only screen and (max-width: 1680px) {
+	#wrapper {
+		width: 90%;
+	}
+}
+
 /*
 desktop 1440px */
 @media only screen and (max-width: 90em) {
 	#wrapper {
-		width: 92%;
-	}
-	#wrapper header.site-header {
-		height: auto;
+		width: 90%;
 	}
 	#wrapper header.site-header .site-branding .site-logo {
 		width: 6%;
@@ -5366,85 +5037,6 @@ desktop 1440px */
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 74px;
 	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 76%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
-		margin: auto;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.95em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 45%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		background: #f2ae2e;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		font-size: 1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		font-size: 0.85em;
-	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
 	}
@@ -5592,7 +5184,7 @@ desktop 1440px */
 
 /*
 desktop 1280px */
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 1260px) {
 	.page-content ul,
 	.entry-content ul,
 	.entry-summary ul {
@@ -5605,10 +5197,7 @@ desktop 1280px */
 		line-height: 30px;
 	}
 	#wrapper {
-		width: 96%;
-	}
-	#wrapper header.site-header {
-		height: auto;
+		width: 94%;
 	}
 	#wrapper header.site-header .site-branding .site-logo {
 		width: 9%;
@@ -5644,7 +5233,7 @@ desktop 1280px */
 		height: 35px;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main li.menu-item a {
-		font-size: 0.85em;
+		font-size: 0.8em;
 	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
@@ -6449,87 +6038,6 @@ desktop 1280px */
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 74px;
 	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 76%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 45%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li {
-		height: 65px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		font-size: 0.9em;
-		line-height: 65px;
-		width: 24%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		font-size: 0.8em;
-	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
 	}
@@ -6670,9 +6178,6 @@ desktop 1024px */
 	#wrapper {
 		width: 96%;
 	}
-	#wrapper header.site-header {
-		height: auto;
-	}
 	#wrapper header.site-header .site-branding .site-logo {
 		width: 10%;
 	}
@@ -6704,7 +6209,7 @@ desktop 1024px */
 		height: 35px;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main li.menu-item a {
-		font-size: 0.85em;
+		font-size: 0.75em;
 	}
 	#wrapper .social-1 form.search-form {
 		text-align: left;
@@ -7457,13 +6962,13 @@ desktop 1024px */
 		padding: 0;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile {
-		width: 48%;
+		width: 53%;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile h1 {
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile p {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile .introimg {
 		width: 70px;
@@ -7475,92 +6980,10 @@ desktop 1024px */
 		font-size: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a p {
-		font-size: 0.9em;
+		font-size: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 70px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 50%;
-		padding: 0.5em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 1.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 76%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		margin: 0;
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption {
-		margin: auto;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 1.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		font-size: 0.9em;
-		left: calc(76% - 10%);
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		font-size: 0.8em;
-		width: 19.5%;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
@@ -7719,8 +7142,8 @@ tablet 800px */
 		width: 96%;
 	}
 	#wrapper header.site-header {
-		height: auto;
 		flex-flow: row wrap;
+		height: 100px;
 	}
 	#wrapper header.site-header .site-branding {
 		width: 80%;
@@ -7764,7 +7187,7 @@ tablet 800px */
 		height: 35px;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main li.menu-item a {
-		font-size: 0.8em;
+		font-size: 0.85em;
 	}
 	#wrapper .social-1 {
 		margin-top: 2.25em;
@@ -7808,15 +7231,15 @@ tablet 800px */
 		width: 90%;
 		min-height: 198px;
 		float: none;
-		display: block;
+		display: none;
 		margin: 2em auto;
 	}
 	#wrapper main#page #contactform {
-		width: 90%;
+		width: 100%;
 		padding: 0.5em;
 		float: none;
 		display: block;
-		margin: 2em auto;
+		margin: 0 auto;
 	}
 	#wrapper main#page #contactform div.wpcf7 {
 		font-size: 1em;
@@ -7858,7 +7281,9 @@ tablet 800px */
 		color: #f2f2f2;
 	}
 	#wrapper main#page address#contact-details {
-		width: 100%;
+		width: 90%;
+		float: none;
+		margin: 1em auto;
 	}
 	#wrapper main#page address#contact-details li {
 		font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
@@ -8580,6 +8005,7 @@ tablet 800px */
 		-webkit-align-self: center;
 		-ms-flex-item-align: center;
 		align-self: center;
+		line-height: 50px;
 	}
 	#wrapper main#page div#frontpage-container figure#image-6 {
 		margin: 0;
@@ -8640,7 +8066,7 @@ tablet 800px */
 		font-size: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile p {
-		font-size: 0.9em;
+		font-size: 1em;
 		padding: 0.25em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile .introimg {
@@ -8656,95 +8082,11 @@ tablet 800px */
 		font-size: 1em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a p {
-		font-size: 0.9em;
+		font-size: 1em;
+		padding: 0.25em;
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 64px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		-webkit-order: 3;
-		-ms-flex-order: 3;
-		order: 3;
-		width: 96%;
-		margin: 1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 76%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		-webkit-order: 1;
-		-ms-flex-order: 1;
-		order: 1;
-		width: 96%;
-		margin: 1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 1.2em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		font-size: 0.85em;
-		left: calc(76% - 2%);
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		font-size: 0.9em;
-		width: 16.5%;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
@@ -9569,7 +8911,7 @@ tablet 600px */
 		width: 100%;
 	}
 	#wrapper header.site-header {
-		height: auto;
+		height: 55px;
 		margin-bottom: 0.5em;
 	}
 	#wrapper header.site-header .site-branding {
@@ -10416,7 +9758,7 @@ tablet 600px */
 		padding: 0.25em;
 	}
 	#wrapper main#page div#frontpage-container a#projectLink {
-		width: 45%;
+		width: 50%;
 	}
 	#wrapper main#page div#frontpage-container figure#image-6 {
 		margin: 0;
@@ -10430,7 +9772,7 @@ tablet 600px */
 		text-align: center;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group {
-		width: 80%;
+		width: 70%;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
@@ -10482,84 +9824,6 @@ tablet 600px */
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 70px;
 		height: 70px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 98%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 1.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 76%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 98%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 1.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		left: 72%;
-		font-size: 0.75em;
-		width: 28%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		width: 18.5%;
-		font-size: 0.85em;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
@@ -11539,7 +10803,8 @@ mobile 480px */
 		padding: 0.2em;
 	}
 	#wrapper main#page div#frontpage-container a#projectLink {
-		width: 50%;
+		width: 60%;
+		line-height: 45px;
 	}
 	#wrapper main#page div#frontpage-container figure#image-6 {
 		margin: 0;
@@ -11549,9 +10814,10 @@ mobile 480px */
 	}
 	#wrapper main#page div#frontpage-container h3 {
 		font-size: 1em;
+		line-height: 30px;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group {
-		width: 80%;
+		width: 75%;
 	}
 	#wrapper main#page div#frontpage-container div.wp-block-group div.wp-block-group__inner-container {
 		height: auto;
@@ -11599,86 +10865,6 @@ mobile 480px */
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 50px;
 		height: 50px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 98%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 74%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.85em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list {
-		width: 26%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 98%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		font-size: 0.75em;
-		left: calc(76% - 6%);
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		width: 21.5%;
-		font-size: 0.85em;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		clear: both;
@@ -11816,7 +11002,6 @@ mobile 480px */
 
 @media only screen and (max-width: 414px) {
 	.menu-toggle {
-		top: 7vh;
 		left: calc(80% - 1%);
 		width: 20%;
 		font-size: 0.9em;
@@ -11829,6 +11014,7 @@ mobile 360px */
 @media only screen and (max-width: 22.5em) {
 	.menu-toggle {
 		left: calc(80% - 1%);
+		top: 3.5vh;
 	}
 	#wrapper {
 		width: 100%;
@@ -11847,10 +11033,10 @@ mobile 360px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 0.95em;
+		font-size: 1em;
 	}
 	#wrapper header.site-header .site-branding hgroup h2 {
-		font-size: 0.6em;
+		font-size: 0.65em;
 		padding-left: 0;
 		line-height: 15px;
 	}
@@ -12562,7 +11748,7 @@ mobile 360px */
 		width: 100%;
 	}
 	#wrapper main#page div#frontpage-container a#projectLink {
-		width: 50%;
+		width: 70%;
 	}
 	#wrapper main#page div#frontpage-container figure#image-6 {
 		margin: 0;
@@ -12625,91 +11811,6 @@ mobile 360px */
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a .introimg {
 		width: 17%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 98%;
-		margin: 0.5em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 0.95em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 74%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 98%;
-		margin: 0.5em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 0.95em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li {
-		height: 40px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover {
-		cursor: pointer;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		left: 68%;
-		font-size: 0.75em;
-		line-height: 40px;
-		width: 32%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		width: 21.5%;
-		font-size: 0.85em;
-		line-height: 40px;
 	}
 	#wrapper main#page section#gallery-container div.content {
 		-webkit-flex-flow: column;
@@ -12848,13 +11949,15 @@ mobile 360px */
 mobile 320px */
 @media only screen and (max-width: 20em) {
 	.menu-toggle {
-		top: 7vh;
+		top: 3vh;
+		left: calc(80% - 3%);
+		width: 22%;
 	}
 	#wrapper {
 		width: 100%;
 	}
 	#wrapper header.site-header {
-		height: auto;
+		height: 50px;
 	}
 	#wrapper header.site-header .site-branding .site-logo {
 		width: 13%;
@@ -12870,7 +11973,7 @@ mobile 320px */
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog {
-		font-size: 0.9em;
+		font-size: 0.95em;
 	}
 	#wrapper header.site-header .site-branding hgroup h1#logo span,
 	#wrapper header.site-header .site-branding hgroup h1#logo-blog span {
@@ -12881,7 +11984,7 @@ mobile 320px */
 		padding: 0;
 	}
 	#wrapper header.site-header .site-branding hgroup h2 {
-		font-size: 0.5em;
+		font-size: 0.6em;
 		padding-left: 0;
 	}
 	#wrapper header.site-header .main-navigation nav.menu-main-container ul#menu-main li.menu-item a {
@@ -13570,7 +12673,7 @@ mobile 320px */
 		width: 100%;
 	}
 	#wrapper main#page div#frontpage-container a#projectLink {
-		width: 55%;
+		width: 75%;
 	}
 	#wrapper main#page div#frontpage-container figure#image-6 {
 		margin: 0;
@@ -13626,80 +12729,6 @@ mobile 320px */
 	}
 	#wrapper main#page div#profile-container div.wp-block-group__inner-container #text-box-profile-a p {
 		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a {
-		width: 98%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a h1 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask {
-		width: 74%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel h2 {
-		font-size: 0.7em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel {
-		padding: 0;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel a.fancybox span {
-		height: 17vh;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h3 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption h4 {
-		font-size: 0.8em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul {
-		padding: 0.1em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li {
-		font-size: 0.7em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider .mask div.slider-body .panel figure.slider-panel figcaption ul li::before {
-		font-size: 0.7em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li {
-		height: 44px;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont-a .hero-slider ul#list li a {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont {
-		width: 98%;
-		margin: 0.5em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont h1 {
-		font-size: 0.9em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social {
-		width: 50%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #social h3 {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart {
-		width: 100%;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars li .bar:hover::after {
-		font-size: 0.75em;
-	}
-	#wrapper main#page div#profile-container div.wp-block-group__inner-container section#prof_cont #chart #bars span {
-		width: 23.5%;
-		font-size: 0.85em;
 	}
 	#wrapper main#page section#gallery-container div.content div#panel,
 	#wrapper main#page section#gallery-container div.content div#panel2,

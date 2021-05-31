@@ -32,6 +32,13 @@ html[xmlns] .clearfix {
 	display: block;
 }
 
+/* IE8 and below upgrade banner */
+.browserupgrade {
+	font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
+	margin: 0.2em 0;
+	padding: 0.2em 0;
+}
+
 *.float-divider {
 	clear: both;
 	display: block;
@@ -169,31 +176,23 @@ figure {
 	- Accessibility
 	- Alignments
 -------------------------------------------------------------- */
-
 /* --------------------------------------------------------------
 # Generic
 -------------------------------------------------------------- */
-
 /* Normalize
 --------------------------------------------- */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
 	 ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
 /* Sections
 	 ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
-
 /**
  * Render the `main` element consistently in IE.
  */
@@ -212,7 +211,6 @@ h1 {
 
 /* Grouping content
 	 ========================================================================== */
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -230,14 +228,11 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
 /* Text-level semantics
 	 ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
  */
-
 /**
  * 1. Remove the bottom border in Chrome 57-
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -296,14 +291,11 @@ sup {
 
 /* Embedded content
 	 ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
-
 /* Forms
 	 ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -408,7 +400,6 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
-
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -454,7 +445,6 @@ progress {
 
 /* Interactive
 	 ========================================================================== */
-
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -471,7 +461,6 @@ summary {
 
 /* Misc
 	 ========================================================================== */
-
 /**
  * Add the correct display in IE 10+.
  */
@@ -488,14 +477,11 @@ template {
 
 /* Box sizing
 --------------------------------------------- */
-
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-
 /* --------------------------------------------------------------
 # Base
 -------------------------------------------------------------- */
-
 /* Typography
 --------------------------------------------- */
 button,
@@ -598,7 +584,6 @@ table {
 
 /* Links
 --------------------------------------------- */
-
 /* Forms
 --------------------------------------------- */
 button,
@@ -680,11 +665,9 @@ select {
 /* --------------------------------------------------------------
 # Layouts
 -------------------------------------------------------------- */
-
 /* --------------------------------------------------------------
 # Components
 -------------------------------------------------------------- */
-
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -742,6 +725,7 @@ select {
 .main-navigation.toggled ul {
 	display: block;
 }
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -927,10 +911,8 @@ select {
 /* --------------------------------------------------------------
 # Plugins
 -------------------------------------------------------------- */
-
 /* Jetpack infinite scroll
 --------------------------------------------- */
-
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -945,10 +927,8 @@ select {
 /* --------------------------------------------------------------
 # Utilities
 -------------------------------------------------------------- */
-
 /* Accessibility
 --------------------------------------------- */
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -993,7 +973,6 @@ select {
 .alignleft {
 	/* rtl:ignore */
 	float: left;
-
 	/* rtl:ignore */
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
@@ -1002,7 +981,6 @@ select {
 .alignright {
 	/* rtl:ignore */
 	float: right;
-
 	/* rtl:ignore */
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -1055,7 +1033,7 @@ a {
 
 a:visited {
 	color: #333;
-	color: #333;
+	color: #333333;
 }
 
 h1,
@@ -1109,8 +1087,8 @@ blockquote {
 	padding: 1em 1.5em 0;
 	margin-bottom: 1em;
 	font-style: italic;
-	border-top: solid 1px #ccc;
-	border-bottom: solid 1px #ccc;
+	border-top: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
 }
 
 blockquote p {
@@ -1262,6 +1240,52 @@ blockquote.alignright {
 	max-width: 100%;
 }
 
+.editor-styles-wrapper embed,
+.editor-styles-wrapper iframe,
+.editor-styles-wrapper object {
+	max-width: 100%;
+}
+
+.editor-styles-wrapper embed span,
+.editor-styles-wrapper iframe span,
+.editor-styles-wrapper object span {
+	height: auto;
+	width: 100%;
+	display: block;
+	margin: auto;
+	line-height: 100px;
+	overflow: visible;
+	color: #f2f2f2;
+	font-size: 5em;
+	text-shadow: 1px 1px #262425;
+}
+
+.editor-styles-wrapper embed h4,
+.editor-styles-wrapper iframe h4,
+.editor-styles-wrapper object h4 {
+	line-height: 40px;
+	margin: 0 auto;
+	height: auto;
+	text-align: center;
+	color: white;
+	background-color: #262425;
+	font-weight: bold;
+	width: 100%;
+}
+
+.editor-styles-wrapper embed p,
+.editor-styles-wrapper iframe p,
+.editor-styles-wrapper object p {
+	display: block;
+	font-family: "PT Sans", helvetica, arial, verdana, tahoma, sans-serif;
+	width: 98%;
+	line-height: 30px;
+	color: #262425;
+	font-size: 0.9em;
+	margin: auto;
+	text-align: center;
+}
+
 div.wp-block-group {
 	width: 100%;
 	margin: 0;
@@ -1309,39 +1333,6 @@ div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.
 	margin: 0;
 }
 
-div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column span {
-	height: auto;
-	width: 100%;
-	display: block;
-	margin: auto;
-	line-height: 100px;
-	overflow: visible;
-	color: #f2f2f2;
-	font-size: 5em;
-	text-shadow: 1px 1px #262425;
-}
-
-div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column h4 {
-	line-height: 40px;
-	margin: 0 auto;
-	height: auto;
-	text-align: center;
-	color: white;
-	background-color: #262425;
-	font-weight: bold;
-	width: 100%;
-}
-
-div.wp-block-group div.wp-block-group__inner-container div.wp-block-columns div.wp-block-column p {
-	display: block;
-	width: 98%;
-	line-height: 30px;
-	color: #262425;
-	font-size: 0.9em;
-	margin: auto;
-	text-align: center;
-}
-
 span.dashicons-html {
 	background-color: #d91424;
 	color: #f2f2f2;
@@ -1358,3 +1349,5 @@ span.dashicons-wordpress {
 span.dashicons-admin-tools {
 	background-color: #262425;
 }
+
+/*# sourceMappingURL=editor-style.css.map */

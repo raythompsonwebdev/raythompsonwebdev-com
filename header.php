@@ -17,6 +17,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+<!--Since Chrome 73, preloading can be used along with responsive images to combine both patterns for much faster image loading.-->
+<!-- <link
+  rel="preload"
+  as="image"
+  href="wolf.jpg"
+  imagesrcset="wolf_400px.jpg 400w, wolf_800px.jpg 800w, wolf_1600px.jpg 1600w"
+  imagesizes="50vw"
+/> -->
 
 	<?php wp_head(); ?>
 </head>
