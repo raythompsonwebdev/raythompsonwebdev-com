@@ -375,7 +375,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
 	 */
 	function raythompsonwebdev_com_google_script() {
 
-		wp_enqueue_script( 'google-script', 'src=http://localhost/wordpress/wp-content/uploads/caos/95627c30.js', array(), '1.0', true );
+		wp_enqueue_script( 'google-script', 'src=https://raythompsonwebdev.co.uk/wp-content/uploads/caos/c59a11b3.js', array(), '1.0', true );
 
 		?>
 
@@ -387,7 +387,7 @@ if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
     };
     ga.l = +new Date;
 
-    ga('create', 'UA-86655310-1', {"cookieName":"caosLocalGa","cookieDomain":"localhost","cookieExpires":2592000,"cookieFlags":"samesite=none;secure"});
+    ga('create', 'UA-86655310-1', {"cookieName":"caosLocalGa","cookieDomain":"raythompsonwebdev.co.uk","cookieExpires":2592000,"cookieFlags":"samesite=none;secure"});
             ga('send', 'pageview');
                 </script>
 

@@ -18,7 +18,7 @@
 
 get_header(); ?>
 
-<div id="frontpage-container">
+<section id="frontpage-container">
 
 	<?php
 	while ( have_posts() ) :
@@ -30,6 +30,6 @@ get_header(); ?>
 		endwhile; // End of the loop.
 	?>
 
-</div>
+</section>
 
 <?php get_footer(); ?>

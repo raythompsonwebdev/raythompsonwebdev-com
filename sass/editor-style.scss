@@ -233,104 +233,54 @@ blockquote.alignright {
 	margin: 0 auto;
 }
 
-.wp-block {
-	margin: 0;
-	max-width: 100%;
+/*Block editor styles*/
+.alignfull {
+	margin: 32px calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
 }
 
-.editor-styles-wrapper embed,
-.editor-styles-wrapper iframe,
-.editor-styles-wrapper object {
-	max-width: 100%;
-	span {
-		height: auto;
-		width: 100%;
-		display: block;
-		margin: auto;
-		line-height: 100px;
-		overflow: visible;
-		color: $colorwhite;
-		font-size: 5em;
-		text-shadow: 1px 1px $blackcolor;
-	}
-	h4 {
-		line-height: 40px;
-		margin: 0 auto;
-		height: auto;
-		text-align: center;
-		color: white;
-		background-color: $blackcolor;
-		font-weight: bold;
-		width: 100%;
-	}
-	p {
-		display: block;
-		font-family: $FontStyle;
-		width: 98%;
-		line-height: 30px;
-		color: $blackcolor;
-		font-size: 0.9em;
-		margin: auto;
-		text-align: center;
-	}
+.alignwide {
+	max-width: 80vw;
+	width: 80vw;
 }
 
-div.wp-block-group {
-	width: 100%;
-	margin: 0;
-	height: auto;
-	div.wp-block-group__inner-container {
-		height: auto;
-		margin: 0;
-		padding: 0;
-		display: -webkit-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		-ms-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-align-items: flex-start;
-		-ms-flex-align: flex-start;
-		align-items: flex-start;
-		.block-editor-block-list__block {
-			width: 49%;
-		}
-		div.wp-block-columns {
-			display: -webkit-flex;
-			display: -ms-flexbox;
-			display: flex;
-			-webkit-flex-flow: row;
-			-ms-flex-flow: row;
-			flex-flow: row;
-			-webkit-align-items: flex-start;
-			-ms-flex-align: flex-start;
-			align-items: flex-start;
-			background-color: $colorwhite;
-			height: auto;
-			margin: 0;
-			div.wp-block-column {
-				-webkit-flex: 1 0 auto;
-				-ms-flex: 1 0 auto;
-				flex: 1 0 auto;
-				margin: 0;
-			}
-		}
-	}
+.editor-styles-wrapper div.wp-block {
+	max-width: 80vw;
 }
 
-span.dashicons-html {
-	background-color: $redcolor;
-	color: $colorwhite;
-}
-
-span.dashicons-images-alt {
-	background-color: $yellowcolor;
-}
-
-span.dashicons-wordpress {
-	background-color: $greencolor;
-}
-
-span.dashicons-admin-tools {
+//column block
+.block-editor-block-list__block.wp-block-column.wp-block-column {
+	text-align: center;
 	background-color: $blackcolor;
+	padding: 0.25em;
+	.wp-block {
+		margin: 0;
+	}
+
+	.block-library-html__edit {
+		background: red;
+
+		.block-editor-plain-text {
+			height: 100px;
+		}
+	}
+
+	h4.block-editor-rich-text__editable {
+		font-size: 1em;
+		color: $colorwhite;
+		line-height: 45px;
+		height: auto;
+	}
+	ul.block-editor-rich-text__editable {
+		list-style: none;
+
+		li {
+			font-size: 0.9em;
+			background: $colorwhite;
+			line-height: 40px;
+			height: auto;
+			margin-bottom: 0.2em;
+		}
+	}
 }
