@@ -35,12 +35,10 @@ get_header();
 
 			<div class="item item1">
 				<figure class="websiteImage">
-					<a href="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/www-' ); ?>
-										<?php
+					<a href="<?php echo esc_url( site_url( '/' ) . 'wp-content/themes/raythompsonwebdev-com/images/large/webp/www-' ); ?><?php
 										$raythompsonwebdev_com_post_slug = $post->post_name;
 										printf( '%s', esc_html( $raythompsonwebdev_com_post_slug ), 'raythompsonwebdev-com' );
-										?>
-					-home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+										?>-home-page-large.webp" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
 					<?php the_post_thumbnail( 'website-image' ); ?>
 					</a>
 				</figure>
@@ -71,7 +69,7 @@ get_header();
 					<h1 class="post-meta-key"><?php esc_html_e( 'Github', 'raythompsonwebdev-com' ); ?></h1>
 
 					<?php $raythompsonwebdev_com_url_mp = site_url( 'github.com', 'https' ); ?>
-					<a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_post_slug ), 'raythompsonwebdev-com' ); ?>" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>">
+					<a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_name ), 'raythompsonwebdev-com' ); ?>" target="blank" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>" >
 						See Code on Github
 					</a>
 				</div>

@@ -45,11 +45,13 @@
 		"check-engines": "wp-scripts check-engines",
 		"watch": "sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
 		"packages-update": "wp-scripts packages-update",
-		"compile:css": "sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
 		"lint:scss:sass": "wp-scripts lint-style 'sass/**/*.scss'",
 		"lint:js": "wp-scripts lint-js 'js/*.js' --fix",
 		"bundle": "dir-archiver --src . --dest ../raythompsonwebdev-com.zip --exclude .DS_Store .stylelintrc.js .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .babelrc .editorconfig .eslintrc.json .travis.yml phpcs.xml.dist sass style.css.map style.min.css.map editor-style.css.map .sass-cache .prettierrc.json fonts .vscode"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"node-sass": "^6.0.1"
+	}
 }
