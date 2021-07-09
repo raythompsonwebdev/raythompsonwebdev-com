@@ -43,7 +43,7 @@
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",
 		"check-engines": "wp-scripts check-engines",
-		"watch": "sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+		"watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
 		"packages-update": "wp-scripts packages-update",
 		"compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
 		"compile:rtl": "rtlcss style.css style-rtl.css",
