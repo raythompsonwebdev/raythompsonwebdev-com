@@ -58,43 +58,87 @@ add_filter( 'wp_title', 'raythompsonwebdev_com_filter_wp_title', 10, 2 );
 
 if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 
+// register meta data for graph ql.
+register_meta(
+	'post',
+	'project_name',
+	array(
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	)
+);
+
+register_meta(
+	'post',
+	'project_description',
+	array(
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	)
+);
+
+register_meta(
+	'post',
+	'project_code',
+	array(
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	)
+);
+
+register_meta(
+	'post',
+	'project_url',
+	array(
+		'object_subtype' => 'project',
+		'show_in_rest'   => true,
+	)
+);
+
+/**
+ * Returns a custom login error message.
+ */
+function raythompsonwebdev_com_error_message() {
+	return 'Well, that was not it, hmmm!';
+}
+add_filter( 'login_errors', 'raythompsonwebdev_com_error_message' );
+
+if ( ! function_exists( 'raythompsonwebdev_com_setup' ) ) :
 	/**
-	 *  Description theme set up.
-	 *
-	 *  @since 4.0.0
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 */
-	function raythompsonwebdev_com_theme_setup() {
+	function raythompsonwebdev_com_setup() {
+		/*
+		 * Make theme available for translation.
+		 *
+		 */
+		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
 		// load text domain.
 		load_theme_textdomain( 'raythompsonwebdev-com', get_template_directory() . '/languages' );
 
-		// register meta data for graph ql.
-		register_meta(
-			'post',
-			'project_name',
-			[
-				'object_subtype' => 'project',
-				'show_in_rest'   => true,
-			]
-		);
+			// Add block editor  styles.
+			$font_url = '//https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap';
+			add_editor_style( array( 'editor-style.css', str_replace( ',', '%2C', $font_url ) ) );
+			add_theme_support( 'editor-styles' );
 
-		register_meta(
-			'post',
-			'project_description',
-			[
-				'object_subtype' => 'project',
-				'show_in_rest'   => true,
-			]
-		);
+		/*
+		 * Let WordPress manage the document title.
+		 *
+		 */
+		add_theme_support( 'title-tag' );
 
-		register_meta(
-			'post',
-			'project_code',
-			[
-				'object_subtype' => 'project',
-				'show_in_rest'   => true,
-			]
-		);
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
+		// Create new image sizes.
+		add_image_size( 'featured-image', 1200, 630 );
+		add_image_size( 'website-image', 400, 650 );
+		add_image_size( 'search-image', 600, 250, true );
+		add_image_size( 'projectpage-image', 230, 480 );
 
 		register_meta(
 			'post',
@@ -136,19 +180,8 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			)
 		);
 
-		/**
-		* Enable support for Post Thumbnails on posts and pages.
-		*
-		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		*/
-
-		add_theme_support( 'post-thumbnails' );
-
-		// Create new image sizes.
-		add_image_size( 'featured-image', 1200, 630 );
-		add_image_size( 'website-image', 400, 650 );
-		add_image_size( 'search-image', 600, 250, true );
-		add_image_size( 'projectpage-image', 230, 480 );
+		// block styles.
+		add_theme_support( 'wp-block-styles' );
 
 		// nav- menus.
 		$nav_defaults = array(
@@ -181,29 +214,43 @@ if ( ! function_exists( 'raythompsonwebdev_com_theme_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'raythompsonwebdev_com_custom_background_args',
-				array(
-					'default-color' => 'F2f2f2',
-					'default-image' => '',
-				)
-			)
-		);
+		// Enable block editor styles to match the front end.
+		add_theme_support( 'wp-block-styles' );
 
-		// remove version from head.
-		remove_action( 'wp_head', 'wp_generator' );
+		// Enable wide alignments in block editor.
+		add_theme_support( 'align-wide' );
 
-		// remove version from rss.
-		add_filter( 'the_generator', '__return_empty_string' );
+		// allow embeds to be responsive.
+		add_theme_support( 'responsive_embeds' );
 
 	}
 
 endif;
 add_action( 'after_setup_theme', 'raythompsonwebdev_com_theme_setup' );
 
+
+// remove version from rss.
+add_filter( 'the_generator', '__return_empty_string' );
+
+/**
+ * Remove version from scripts and styles.
+ *
+ * @param array $src
+ */
+function raythompsonwebdev_com_remove_version_scripts_styles( $src ) {
+	if ( strpos( $src, 'ver=' ) ) {
+		$src = remove_query_arg( 'ver', $src );
+	}
+	return $src;
+}
+add_filter( 'style_loader_src', 'raythompsonwebdev_com_remove_version_scripts_styles', 9999 );
+add_filter( 'script_loader_src', 'raythompsonwebdev_com_remove_version_scripts_styles', 9999 );
+
+// Enqueue the Dashicons script.
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_load_dashicons_front_end' );
+function raythompsonwebdev_com_load_dashicons_front_end() {
+	wp_enqueue_style( 'dashicons' );
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -341,17 +388,24 @@ add_action(
 /**
  * Enqueue IE8 style sheets.
  */
-function ie_style_sheets() {
-	// Load the Internet Explorer specific stylesheet.
-	wp_register_style( 'ie8', get_stylesheet_directory_uri() . '/ie.css', array(), '1.0' );
-	$GLOBALS['wp_styles']->add_data( 'ie8', 'conditional', 'lte IE 8' );
+function raythompsonwebdev_com_add_editor_styles() {
+	add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'raythompsonwebdev_com_add_editor_styles' );
 
-	wp_enqueue_style( 'ie8' );
+/**
+ * Block Editor Styling.
+ */
+function raythompsonwebdev_com_block_editor_fonts() {
+	wp_enqueue_style( 'raythompsonwebdev-com-block-editor-fonts', 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
 
 }
-add_action( 'wp_enqueue_scripts', 'ie_style_sheets' );
+add_action( 'enqueue_block_editor_assets', 'raythompsonwebdev_com_block_editor_fonts' );
 
-
+function raythompsonwebdev_com_add_block_style() {
+	wp_enqueue_script( 'raythompsonwebdev-com-block-variations', get_template_directory_uri() . '/js/custom-block-settings.js', array( 'wp-blocks' ), RAYTHOMPSONWEBDEV_COM_VERSION, false );
+}
+add_action( 'enqueue_block_editor_assets', 'raythompsonwebdev_com_add_block_style' );
 
 /**
  * Master Scripts
@@ -463,7 +517,7 @@ add_action( 'widgets_init', 'raythompsonwebdev_com_widgets_init' );
 
 
 /**
- *  Media widget area.
+ * Media widget area.
  */
 function raythompsonwebdev_com_media_widgets_init() {
 	register_sidebar(
@@ -513,9 +567,77 @@ function raythompsonwebdev_com_categoree_widgets_init() {
 }
 add_action( 'widgets_init', 'raythompsonwebdev_com_categoree_widgets_init' );
 
+/**
+ * Enqueue scripts and styles.
+ */
+function raythompsonwebdev_com_scripts() {
+	wp_enqueue_style( 'raythompsonwebdev-com-style', get_stylesheet_uri(), array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+	wp_style_add_data( 'raythompsonwebdev-com-style', 'rtl', 'replace' );
+/*
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+
+	<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+	wp_enqueue_style( 'raythompsonwebdev-com-fonts', 'https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&family=PT+Sans:wght@400;700&display=swap', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+*/
+	wp_enqueue_script( 'raythompsonwebdev-com-master', get_template_directory_uri() . '/js/master.js', array(), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_scripts' );
 
 /**
- * Summary Custom template tags for this theme.
+ *  Enqueue lightbox script.
+ *
+ *  @return void
+ */
+function raythompsonwebdev_com_add_lightbox() {
+	if ( 'project' === get_post_type() || is_page( 'about' ) ) {
+		wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/js/inc/lightbox/css/jquery.fancybox.css', array(), RAYTHOMPSONWEBDEV_COM_VERSION );
+		wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/inc/lightbox/js/jquery.fancybox.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+		wp_enqueue_script( 'lightbox-script', get_template_directory_uri() . '/js/inc/lightbox/js/lightbox.js', array( 'jquery' ), RAYTHOMPSONWEBDEV_COM_VERSION, true );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'raythompsonwebdev_com_add_lightbox' );
+
+
+// google analytics.
+if ( ! function_exists( 'raythompsonwebdev_com_google_script' ) ) :
+
+	/**
+	 * Google analytics function.
+	 *
+	 * @return void
+	 */
+	function raythompsonwebdev_com_google_script() {
+
+		// wp_enqueue_script( 'google-script', 'src=https://raythompsonwebdev.co.uk/wp-content/uploads/caos/c59a11b3.js', array(), '1.0', true );
+
+		?>
+
+	<!-- This site is running CAOS for Wordpress. -->
+	<script  src='https://raythompsonwebdev.co.uk/wp-content/uploads/caos/c59a11b3.js'></script>
+	<script>
+    window.ga = window.ga || function() {
+        (ga.q = ga.q || []).push(arguments);
+    };
+    ga.l = +new Date;
+
+    ga('create', 'UA-86655310-1', {"cookieName":"caosLocalGa","cookieDomain":"raythompsonwebdev.co.uk","cookieExpires":2592000,"cookieFlags":"samesite=none;secure"});
+            ga('send', 'pageview');
+                </script>
+
+		<?php
+	}
+	add_action( 'wp_head', 'raythompsonwebdev_com_google_script' );
+
+endif;
+
+
+/**
+ * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
 
@@ -540,5 +662,7 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	include get_template_directory() . '/inc/jetpack.php';
 }
+
+
 
 

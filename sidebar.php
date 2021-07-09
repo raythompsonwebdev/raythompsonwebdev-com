@@ -16,7 +16,13 @@
 
 ?>
 
-<aside id="side-bar" class="group" role="complementary">
+
+<!-- #secondary -->
+
+<aside id="side-bar" class="group widget-area" role="complementary">
+	<h1>Side Menu</h1>
+
+
 
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'categoree-widget-area' ) ) : ?>
@@ -25,6 +31,7 @@
 
 	</article>
 
+
 	<article class="side-bar-box">
 
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'Primary Sidebar' ) ) : ?>
@@ -32,7 +39,7 @@
 		<?php endif; ?>
 
 	</article>
-	
+
 	<article class="side-bar-box">
 		<?php if ( ! function_exists( 'dynamic_sidebar' ) || ! dynamic_sidebar( 'archives-widget-area' ) ) : ?>
 

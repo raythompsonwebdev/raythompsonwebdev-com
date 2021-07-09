@@ -16,14 +16,18 @@
 
 get_header();
 
-	the_archive_title( '<h1 class="page-title">', '</h1>' );
-	the_archive_description( '<div class="taxonomy-description">', '</div>' );
+	<div id="primary" class="site-main">
 
 while ( have_posts() ) :
 	the_post();
 	?>
 
-	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
+			<header class="page-header"><!-- .page-header -->
+				<?php
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header>
 
 		<h1>
 			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
@@ -49,12 +53,7 @@ while ( have_posts() ) :
 
 	<?php } else { ?>
 
-	<figure class="featuredImage">
-		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
-		<img src="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/nothing.jpg' ); ?>"
-				alt="<?php esc_attr_e( 'No image Available', 'raythompsonwebdev-com' ); ?>" rel="prefetch" />
-		</a>
-	</figure>
+	</div><!-- #main -->
 
 		<?php
 	}

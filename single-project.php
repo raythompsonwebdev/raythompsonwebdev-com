@@ -19,6 +19,30 @@ get_header();
 ?>
 
 
+<div id="primary" class="site-main">
+
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) :
+			the_post();
+			?>
+
+	<article class="gallery" <?php post_class(); ?> <?php the_ID(); ?> >
+
+		<h1><?php esc_html_e( 'Web Projects', 'raythompsonwebdev-com' ); ?></h1>
+
+		<div class="website-text">
+
+			<div class="item item1">
+				<figure class="websiteImage">
+					<a href="<?php echo esc_url( site_url( '/' ) . 'wp-content/themes/raythompsonwebdev-com/images/large/webp/www-' ); ?><?php
+										$raythompsonwebdev_com_post_slug = $post->post_name;
+										printf( '%s', esc_html( $raythompsonwebdev_com_post_slug ), 'raythompsonwebdev-com' );
+										?>-home-page-large.webp" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+					<?php the_post_thumbnail( 'website-image' ); ?>
+					</a>
+				</figure>
+			</div>
 
 <?php
 if ( have_posts() ) :
@@ -34,13 +58,11 @@ if ( have_posts() ) :
 
 	<div class="item item1">
 
-		<figure class="websiteImage">
-      <a href="<?php echo esc_url( home_url( '/' ) . 'wp-content/uploads/2020/10/www-' ); ?>
-                <?php
-                $post_slug = $post->post_name;
-                esc_html_e( $post_slug, 'raythompsonwebdev-com' );
-                ?>
-      -home-page-large.jpg" class="fancybox" title="<?php the_title_attribute(); ?> Website Image">
+					<?php $raythompsonwebdev_com_url_mp = site_url( 'github.com', 'https' ); ?>
+					<a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_name ), 'raythompsonwebdev-com' ); ?>" target="blank" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>" >
+						See Code on Github
+					</a>
+				</div>
 
       <?php the_post_thumbnail( 'website-image' ); ?>
 
@@ -99,43 +121,35 @@ if ( have_posts() ) :
 	</div>
 
 
-	</div>
+			<?php
+				endwhile;
 
-	<footer class="byline">
-
-	</footer>
-
-</article><!--end of post group-->
-
-		<?php
-
-		endwhile;
-
-	if ( is_singular( 'project' ) ) :
-
-		?>
+		if ( is_singular( 'project' ) ) :
+			?>
 
 		<nav class="navigation">
 
 			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
 			<div class="nav-links">
 
-			<div class="nav-previous">
-			<?php previous_post_link( '%link' ); ?>
-			</div>
-
-			<div class="nav-next">
-			<?php next_post_link( '%link' ); ?>
-			</div>
+			<?php
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous&#58;', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next&#58;', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+				)
+			);
+			?>
 
 			</div>
 
 		</nav>
 
-	<?php endif; ?>
-
 <?php endif; ?>
 
+<?php endif; ?>
+</div><!-- #main -->
 
-
+<br/>
+<br/>
 <?php get_footer(); ?>

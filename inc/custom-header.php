@@ -4,7 +4,7 @@
  *
  * You can add an optional custom header image to header.php like so ...
  *
- * @link http://codex.wordpress.org/Custom_Headers
+ * <?php the_header_image_tag(); ?>
  *
  * @package    WordPress
  * @subpackage Raythompsonwebdev-com

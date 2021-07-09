@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7.2
+ * *PHP version 7.4
  *
  * Tag Page | core/tag.php.
  *
@@ -15,7 +15,7 @@
  */
 
 	get_header(); ?>
-
+<div id="primary" class="site-main">
 
 	<h1 class="archive-title">Tag: <?php single_tag_title( '', true ); ?></h1>
 
@@ -27,6 +27,8 @@
 			<?php endif; ?>
 
 		<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+
+</div>
 
 <?php get_sidebar( 'archive' ); ?>
 

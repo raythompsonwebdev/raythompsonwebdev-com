@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7.2.
+ * *PHP version 7.4.
  *
  * Template Name: Contact
  *
@@ -18,31 +18,42 @@
 
 get_header(); ?>
 
-<h1><?php esc_html_e( 'Contact Page', 'raythompsonwebdev-com' ); ?></h1>
+<header class="page-header">
+				<h1 class="page-title"><?php the_title(); ?></h1>
+</header><!-- .page-header -->
 
+<<<<<<< HEAD
 <div id="contactform">
+=======
+<div class="page-content">
+	<section id="contactform">
+>>>>>>> underscores
 
-	<?php the_content(); ?>
+		<?php the_content(); ?>
 
+<<<<<<< HEAD
 </div>
+=======
+	</section>
+>>>>>>> underscores
 
-<br>
+	<br>
 
-<div id="map_container"></div>
+	<div id="map_container"></div>
 
-<address id="contact-details">
+	<address id="contact-details">
 
-	<li><a href="mailto:name@mydomain.com"><i class="fas fa-envelope-square"></i>raymond.thompson@raythompsonwebdev.co.uk</a></li>
+		<li class="dashicons-before dashicons-email"><a href="mailto:name@mydomain.com"><?php esc_html_e( 'raymond.thompson@raythompsonwebdev.co.uk', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-twitter"></i>@RayThompWeb</a></li>
+		<li class="dashicons-before dashicons-twitter"><a href="<?php echo esc_url( 'https://twitter.com/RayThompWeb', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on Twitter', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( '@RayThompWeb', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-linkedin"></i>www.linkedin.com/in/raymond-t-1b42b7b8/</a></li>
+		<li class="dashicons-before dashicons-linkedin"><a href="<?php echo esc_url( 'https://www.linkedin.com/in/raymond-thompson-1b42b7b8', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on LinkedIn', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( 'www.linkedin.com/in/raymond-t-1b42b7b8/', 'raythompsonwebdev-com' ); ?></a></li>
 
-	<li><a href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'display' ); ?>" target="new" title="<?php esc_attr_e( 'Follow me on GitHub', 'raythompsonwebdev-com' ); ?>"><i class="fab fa-github"></i>github.com/raythompsonwebdev</a></li>
-</address>
 
-<div class="clearfix"></div>
+	</address>
 
-<br><br>
+	<div class="clearfix"></div>
 
+	<br><br>
+</div>
 <?php get_footer(); ?>

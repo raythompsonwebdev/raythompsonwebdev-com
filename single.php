@@ -14,12 +14,23 @@
  * @link       https:www.raythompsonwebdev.co.uk.
  */
 
-get_header(); ?>
+get_header();
+?>
+
+	<div id="primary" class="site-main">
 
 		<?php
 
 			get_template_part( 'template-parts/content', 'single' );
 
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous&#58;', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next&#58;', 'raythompsonwebdev-com' ) . '</span> <span class="nav-title">%title</span>',
+				)
+			);
+
+		endwhile; // End of the loop.
 		?>
 
 			<section class='contact-wide'>

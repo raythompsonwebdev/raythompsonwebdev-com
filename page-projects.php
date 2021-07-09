@@ -1,6 +1,6 @@
 <?php
 /**
- * *PHP version 7.2.
+ * *PHP version 7.4.
  *
  * Template Name: Projects
  *
@@ -19,34 +19,45 @@
 get_header();
 ?>
 
-<h1><?php the_title(); ?></h1>
-<section class="main-text">
+<header class="page-header">
+				<h1 class="page-title"><?php the_title(); ?></h1>
+</header><!-- .page-header -->
 
-<p><?php esc_html_e( 'Check out websites and web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
-</section>
+<div class="page-content">
+	<p><?php esc_html_e( 'Check out web applications I am currently adding improvements to.', 'raythompsonwebdev-com' ); ?></p>
+
+	<!--PhotoContainer -->
+	<section id="gallery-container" >
+
+		<div class="content">
+
+			<br/>
+
+			<!-- Panel Container Starts Here -->
+			<?php
+
+			if ( false === ( $raythompsonwebdev_com_loop = get_transient( 'raythompsonwebdev_com_wp_query' ) ) ) {
+
+				$raythompsonwebdev_com_args = array(
+					'post_type'      => 'project',
+					'posts_per_page' => 10,
+				);
+				$raythompsonwebdev_com_loop = new WP_Query( $raythompsonwebdev_com_args );
+
+				// set transient to cache results for 12 hours.
+				set_transient( 'raythompsonwebdev_com_wp_query', $raythompsonwebdev_com_loop, 12 * HOUR_IN_SECONDS );
+
+			}
 
 
-<!--PhotoContainer -->
-<div id="showcaseContainer" >
-
-	<div class="content">
-
-		<br/>
-
-		<!-- Panel Container Starts Here -->
-		<?php
-			$args = array(
-				'post_type'      => 'project',
-				'posts_per_page' => 10,
-			);
-			$loop = new WP_Query( $args );
 			if ( have_posts() ) :
-				while ( $loop->have_posts() ) :
-					$loop->the_post();
+				while ( $raythompsonwebdev_com_loop->have_posts() ) :
+
+					$raythompsonwebdev_com_loop->the_post();
 
 					?>
-			<!-- display slugs for custom post categories.-->
-			<div id="panel" class="prod-cnt
+				<!-- display slugs for custom post categories.-->
+				<div id="panel" class="prod-cnt-
 					<?php
 					$customterms = get_the_terms( $post->ID, 'project-category' );
 
@@ -55,41 +66,37 @@ get_header();
 						echo esc_html( $pic );
 					}
 					?>
-			"<?php post_class(); ?>--<?php the_ID(); ?> >
+						"<?php post_class(); ?>--<?php the_ID(); ?> >
 
-				<figure class="showcase-container " id="showcaseimg1">
-					<div class="showcase-img">
+					<figure class="showcase-container " id="showcaseimg1">
+						<div class="showcase-img">
 						<?php the_post_thumbnail( 'projectpage-image' ); ?>
-					</div>
-					<figcaption class="showcase-content showcase">
-						<h1> <?php the_title(); ?></h1>
+						</div>
+						<figcaption class="showcase-content showcase">
+							<h1> <?php the_title(); ?></h1>
 
-							<a href="<?php echo esc_url( get_permalink() ); ?>">
+								<a href="<?php echo esc_url( get_permalink() ); ?>">
 								<?php esc_html_e( 'See Project..', 'raythompsonwebdev-com' ); ?>
-							</a>
+								</a>
 
-					</figcaption>
+						</figcaption>
 
-				</figure>
+					</figure>
 
-			</div>
-			<!-- Panel Container Ends Here -->
-				<?php	endwhile; ?>
+				</div>
+				<!-- Panel Container Ends Here -->
+					<?php	endwhile; ?>
 
-			<?php	endif; ?>
+				<?php	endif; ?>
 
-			<?php wp_reset_postdata(); ?>
+				<?php wp_reset_postdata(); ?>
 
-		<div class="clearfix"></div>
+			<div class="clearfix"></div>
 
-	</div><!-- End of Content -->
+		</div><!-- End of Content -->
 
-	<div class="clearfix"></div>
+	</section>
 
 </div>
-
-<div class="clearfix"></div>
-
-
 
 <?php get_footer(); ?>
