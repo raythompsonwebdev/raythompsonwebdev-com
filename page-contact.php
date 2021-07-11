@@ -22,20 +22,11 @@ get_header(); ?>
 				<h1 class="page-title"><?php the_title(); ?></h1>
 </header><!-- .page-header -->
 
-<<<<<<< HEAD
 <div id="contactform">
-=======
-<div class="page-content">
-	<section id="contactform">
->>>>>>> underscores
 
 		<?php the_content(); ?>
 
-<<<<<<< HEAD
 </div>
-=======
-	</section>
->>>>>>> underscores
 
 	<br>
 

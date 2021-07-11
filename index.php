@@ -1,22 +1,17 @@
 <?php
 /**
- * *PHP version 7.2
+ * The main template file
  *
- * Index page | core/index.php.
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
  *
- * @category   Index_Page
- * @package    WordPress
- * @subpackage Raythompsonwebdev-com
- * @author     Raymond Thompson <ray_thomp@hushmail.com>
- * @copyright  2017 Raymond Thompson
- * @license    http://www.gnu.org/licenses/gpl-3.0.en.html GPLv3
- * @version    GIT: https://github.com/raythompsonwebdev/raythompsonwebdev-com.git
- * @link       https:www.raythompsonwebdev.co.uk custom template.
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package raythompsonwebdev-com
  */
 
-<<<<<<< HEAD
-get_header(); ?>
-=======
 get_header();
 ?>
 
@@ -34,26 +29,26 @@ get_header();
 				</header>
 				<?php
 			endif;
->>>>>>> underscores
 
+			/* Start the Loop */
+			while ( have_posts() ) :
+				the_post();
 
-	<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				/*
+				 * Include the Post-Type-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', get_post_type() );
 
-	<div class="clearfix"></div>
+			endwhile;
 
-	<!--Related Items -->
-	<section class="contact-wide">
-	<h1><?php esc_html_e( 'Related Items', 'raythompsonwebdev-com' ); ?></h1>
-	</section>
+			the_posts_navigation();
 
-<!--Side bar -->
-<?php get_sidebar(); ?>
+		else :
 
+			get_template_part( 'template-parts/content', 'none' );
 
-<<<<<<< HEAD
-<!--footer -->
-<?php get_footer(); ?>
-=======
 		endif;
 		?>
 
@@ -62,4 +57,3 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
->>>>>>> underscores

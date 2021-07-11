@@ -44,19 +44,29 @@ get_header();
 				</figure>
 			</div>
 
-<?php
-if ( have_posts() ) :
-	while ( have_posts() ) :
-		the_post();
-		?>
+			<div class="item item2">
 
-<article class="post group" <?php post_class(); ?> <?php the_ID(); ?> >
+				<?php $raythompsonwebdev_com_project_name = get_post_meta( get_the_ID(), 'project_name', true ); ?>
+				<div id="project-title">
+					<h1 class="post-meta-key"><?php esc_html_e( 'Name', 'raythompsonwebdev-com' ); ?></h1>
+					<p class="websitetext"><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_name ), 'raythompsonwebdev-com' ); ?></p>
+				</div>
 
-	<h1><?php esc_html_e( 'Web Projects', 'raythompsonwebdev-com' ); ?></h1>
+				<?php $raythompsonwebdev_com_project_code = get_post_meta( get_the_ID(), 'project_code', true ); ?>
+				<div id="project-code">
+					<h1 class="post-meta-key"><?php esc_html_e( 'Code', 'raythompsonwebdev-com' ); ?></h1>
+					<p class="websitetext"><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_code ), 'raythompsonwebdev-com' ); ?></p>
+				</div>
 
-	<div class="website-text">
+					<?php $raythompsonwebdev_com_project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
+				<div id="project-url">
+					<h1 class="post-meta-key"><?php esc_html_e( 'URL', 'raythompsonwebdev-com' ); ?></h1>
+					<a class="webformats" href="<?php printf( '%s', esc_html( $raythompsonwebdev_com_project_url ), 'raythompsonwebdev-com' ); ?>" target="blank" title="<?php esc_attr_e( 'See Website', 'raythompsonwebdev-com' ); ?>"><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_url ), 'raythompsonwebdev-com' ); ?>
+					</a>
+				</div>
 
-	<div class="item item1">
+				<div id="project-github">
+					<h1 class="post-meta-key"><?php esc_html_e( 'Github', 'raythompsonwebdev-com' ); ?></h1>
 
 					<?php $raythompsonwebdev_com_url_mp = site_url( 'github.com', 'https' ); ?>
 					<a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_name ), 'raythompsonwebdev-com' ); ?>" target="blank" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>" >
@@ -64,62 +74,24 @@ if ( have_posts() ) :
 					</a>
 				</div>
 
-      <?php the_post_thumbnail( 'website-image' ); ?>
+			</div>
+
+				<?php $raythompsonwebdev_com_project_description = get_post_meta( get_the_ID(), 'project_description', true ); ?>
+
+			<div class="item item3">
+				<h1 class="post-meta-key">
+					<?php esc_html_e( 'Description', 'raythompsonwebdev-com' ); ?>
+				</h1>
+				<p class="websitetext"><?php printf( '%s', esc_html( $raythompsonwebdev_com_project_description ), 'raythompsonwebdev-com' ); ?></p>
+
+			</div>
 
 
-      </a>
-		</figure>
-	</div>
+		</div>
 
-	<div class="item item2">
-		<?php $project_name = get_post_meta( get_the_ID(), 'project_name', true ); ?>
-	<div id="project-title">
-		<h1 class="post-meta-key">
-		<?php esc_html_e( 'Name', 'raythompsonwebdev-com' ); ?>
-		</h1>
-		<p class="websitetext"><?php esc_html_e( $project_name, 'raythompsonwebdev-com' ); ?></p>
-	</div>
-		<?php $project_code = get_post_meta( get_the_ID(), 'project_code', true ); ?>
-	<div id="project-code">
-		<h1 class="post-meta-key">
-		<?php esc_html_e( 'Code', 'raythompsonwebdev-com' ); ?>
-		</h1>
+		<footer class="byline"></footer>
 
-		<p class="websitetext"><?php esc_html_e( $project_code, 'raythompsonwebdev-com' ); ?></p>
-	</div>
-		<?php $project_url = get_post_meta( get_the_ID(), 'project_url', true ); ?>
-	<div id="project-url">
-		<h1 class="post-meta-key">
-		<?php esc_html_e( 'URL', 'raythompsonwebdev-com' ); ?>
-		</h1>
-		<a class="webformats" href="<?php esc_html_e( $project_url, 'raythompsonwebdev-com' ); ?>" target="blank" title="<?php esc_attr_e( 'See Website', 'raythompsonwebdev-com' ); ?>"><?php esc_html_e( $project_url, 'raythompsonwebdev-com' ); ?> </a>
-	</div>
-
-	<div id="project-github">
-		<h1 class="post-meta-key">
-		<?php esc_html_e( 'Github', 'raythompsonwebdev-com' ); ?>
-		</h1>
-
-		<?php $url_mp = site_url( 'github.com', 'https' ); ?>
-
-		<a class="webformats" href="<?php echo esc_url( 'https://github.com/raythompsonwebdev/', 'raythompsonwebdev-com' ); ?><?php esc_html_e( $post_slug, 'raythompsonwebdev-com' ); ?>" title="<?php esc_attr_e( 'See github repository', 'raythompsonwebdev-com' ); ?>">See Code on Github	</a>
-	</div>
-
-
-	</div>
-
-		<?php $project_description = get_post_meta( get_the_ID(), 'project_description', true ); ?>
-
-	<div class="item item3">
-		<h1 class="post-meta-key">
-			<?php esc_html_e( 'Description', 'raythompsonwebdev-com' ); ?>
-
-		</h1>
-
-		<p class="websitetext"><?php esc_html_e( $project_description, 'raythompsonwebdev-com' ); ?></p>
-
-	</div>
-
+	</article><!--end of post group-->
 
 			<?php
 				endwhile;
@@ -129,7 +101,7 @@ if ( have_posts() ) :
 
 		<nav class="navigation">
 
-			<h2 ><?php esc_html_e( 'Navigation', 'rathompsonwebdev-com' ); ?></h2>
+			<h2 ><?php esc_html_e( 'Navigation', 'raythompsonwebdev-com' ); ?></h2>
 			<div class="nav-links">
 
 			<?php

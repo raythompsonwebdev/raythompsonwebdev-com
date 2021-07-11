@@ -18,10 +18,6 @@
 
 get_header(); ?>
 
-<<<<<<< HEAD
-=======
-<div id="primary" class="site-main">
->>>>>>> underscores
 <?php
 	the_archive_title( '<h1 class="page-title">', '</h1>' );
 	the_archive_description( '<div class="taxonomy-description">', '</div>' );
@@ -70,10 +66,6 @@ while ( have_posts() ) :
 
 </section>
 
-<<<<<<< HEAD
-=======
-</div>
->>>>>>> underscores
 <?php get_sidebar( 'archive' ); ?>
 
 <?php get_footer(); ?>

@@ -47,21 +47,7 @@ get_header();
 			the_post();
 			?>
 
-		<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
-
-			<h1>
-				<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
-					<?php the_title(); ?>
-				</a>
-			</h1>
-
-			<!--Post entry Header-->
-			<header class="byline">
-				<div class="entry-meta">
-					<?php if ( 'post' === get_post_type() ) : ?>
-
-						<?php	raythompsonwebdev_com_posted_by(); ?>
-						<?php raythompsonwebdev_com_posted_on(); ?>
+	<article <?php post_class( 'rtwd-post' ); ?> id="post-<?php the_ID(); ?>">
 
 			<?php
 			if ( is_singular() ) :
@@ -124,29 +110,25 @@ get_header();
 			<?php raythompsonwebdev_com_entry_footer(); ?>
 		</footer>
 
-		</article>
+	</article><!-- #post-<?php the_ID(); ?> -->
 
 			<?php
 		endwhile;
 		else :
 			?>
 
-      else :
-		  ?>
+			<?php get_template_part( 'template-part/content', 'none' ); ?>
 
-		<?php get_template_part( 'template-part/content', 'none' ); ?>
+	<?php endif; ?>
 
-<?php endif; ?>
-<section class="contact-wide">
+	<section class="contact-wide">
 
-	<h1><?php esc_html_e( 'Category Menu', 'raythompsonwebdev-com' ); ?></h1>
+		<h1><?php esc_html_e( 'Category Menu', 'raythompsonwebdev-com' ); ?></h1>
 
 	</section>
 
 </div>
 
 <?php get_sidebar( 'archive' ); ?>
-
-</section>
 
 <?php get_footer(); ?>
